@@ -1,7 +1,5 @@
 # Links
 
-
-
 ## Educational Resources
 
 ### General
@@ -40,6 +38,14 @@
 
 * An easy way to use Git
 
+[Visual Studio Code](https://code.visualstudio.com/)
+
+* Decent Lightweight Integrated Development Environment for {Python, JavaScript, HTML}
+
+[Visual Studio](https://visualstudio.microsoft.com/vs/community/)
+
+* Decent Heavyweight Integrated Development Environment for {C++, C#}
+
 [Oracle VM Virtual Box](https://www.virtualbox.org/)
 
 * Easy to use VM software
@@ -49,6 +55,10 @@
 * Easy to use Linux distribution
 
 ### Programming
+
+[Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
+
+* Essential for documentation
 
 [Python](https://www.python.org/)
 
@@ -84,6 +94,12 @@
 
 * share and reuse code for Node applications
 
+### Concepts
+
+[Set Theory](https://en.wikipedia.org/wiki/Set_theory)
+
+* Useful for description
+
 ### Life
 
 [sexplanations](https://www.youtube.com/user/sexplanations/videos)
@@ -99,4 +115,3 @@
 * Find out what government agencies are up to
 
 [US Department of Education Data](https://www2.ed.gov/rschstat/landing.jhtml)
-

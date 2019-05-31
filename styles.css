@@ -3,3 +3,13 @@ body {
     color: white;
     text-align: center;
 }
+
+#links {
+    color: white;
+    font-size: x-large;
+    padding: 1em
+}
+
+#links:hover {
+    color: lightskyblue;
+}

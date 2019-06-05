@@ -54,6 +54,17 @@
 
 * Easy to use Linux distribution
 
+
+### JavaScript Libraries
+
+[chart js](https://www.chartjs.org/)
+
+* Charts
+
+[D3 js](https://github.com/d3/d3/wiki/Gallery)
+
+* Graphs
+
 ### Programming
 
 [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
@@ -93,6 +104,18 @@
 [Node Package Manager](https://www.npmjs.com/)
 
 * share and reuse code for Node applications
+
+### Image Editing
+
+[Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+
+* Infinitely scalable image format
+
+[SVG edit](https://svg-edit.github.io/svgedit/releases/latest/editor/svg-editor-es.html)
+
+* Simple online SVG image editor
+
+[SVG Clipping and Masking](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
 
 ### Concepts
 

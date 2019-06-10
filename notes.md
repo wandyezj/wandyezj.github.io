@@ -28,3 +28,15 @@ What to host on the site?
 Purpose of the site.
 
 Projects - completed or in a good enough to be useful state
+
+## Books
+
+Can use the Open Library API to retrieve a link to the about page for the book and possibly the free version
+
+> http://openlibrary.org/api/books?bibkeys=ISBN:0553096095&format=json
+
+To prevent spamming the Open Library API it should only be called upon request, the main data set should remain static.
+
+https://en.wikipedia.org/wiki/International_Standard_Book_Number
+
+[NPR Top 100 Science Fiction](https://www.npr.org/2011/08/11/139085843/your-picks-top-100-science-fiction-fantasy-books)

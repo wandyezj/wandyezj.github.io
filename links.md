@@ -14,6 +14,11 @@
 
 [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 
+
+[Open Library](https://openlibrary.org/)
+
+* Access and read books for free
+
 ### History
 
 [Crash Course World History](https://www.youtube.com/watch?v=Yocja_N5s1I&list=PLBDA2E52FB1EF80C9)
@@ -104,6 +109,28 @@
 [Node Package Manager](https://www.npmjs.com/)
 
 * share and reuse code for Node applications
+
+### Information Technology
+
+[CompTIA](https://en.wikipedia.org/wiki/CompTIA)
+
+* Certification for IT professionals
+
+### Digital Security
+
+[Multi Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
+
+[Microsoft Authenticator](https://www.microsoft.com/en-us/account/authenticator)
+
+* Enable two factor authentication on your online accounts
+
+[KeePass](https://keepass.info/)
+
+* Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive.
+
+[BitLocker](https://en.wikipedia.org/wiki/BitLocker)
+
+* encrypt computer hard drives so data cannot be read from the drive without authentication
 
 ### Image Editing
 

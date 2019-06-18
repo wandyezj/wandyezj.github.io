@@ -172,7 +172,6 @@
 
 [Stonebraker, Michael, and Joey Hellerstein. "What goes around comes around." Readings in Database Systems 4 (2005): 1724-1735.](https://raw.github.com/wandyezj/reference/master/what-goes-around-comes-around.pdf)
 
-Relational model
 [Codd, Edgar F. "A relational model of data for large shared data banks." Communications of the ACM 13.6 (1970): 377-387.](https://raw.github.com/wandyezj/reference/master/a-relational-model-of-data-for-large-shared-data-banks.pdf)
 
 Norman, Don. The design of everyday things: Revised and expanded edition. Basic books, 2013.

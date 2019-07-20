@@ -39,6 +39,10 @@
 
 * An easy way to store, collaborate, and share projects
 
+[try GitHub ](http://try.github.io/)
+
+* learn Git
+
 [GitHub Desktop](https://desktop.github.com/)
 
 * An easy way to use Git

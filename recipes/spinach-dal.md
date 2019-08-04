@@ -16,7 +16,6 @@
 * 2 1/2 cups water
 * Salt to taste
 
-
 ## Directions
 
 1. Sauté all spices and vegetables, except spinach, until onions are clear.

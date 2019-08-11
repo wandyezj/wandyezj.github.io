@@ -14,6 +14,13 @@
 
 [Wikipedia](https://en.wikipedia.org/wiki/Main_Page)
 
+[Project Gutenberg](http://www.gutenberg.org/)
+
+* Books free from copyright
+
+[Internet Archive](https://archive.org/about)
+
+* digital library of internet content
 
 [Open Library](https://openlibrary.org/)
 

@@ -40,6 +40,10 @@ Samsung SSD 850 EVO 500GB X 3
 
 [ASUS NVIDIA GeForce GTX 1060 6 GB](https://www.asus.com/us/Graphics-Cards/TURBO-GTX1060-6G/)
 
+## Power Supply
+
+[CORSAIR RMx Series RM1000x - 1000 Watt 80 PLUS Gold Certified Fully Modular PSU](https://www.corsair.com/us/en/Categories/Products/Power-Supply-Units/Power-Supply-Units-Advanced/RMx-Series/p/CP-9020094-NA#tab-tech-specs)
+
 ## Router
 
 [ASUS ASUS Whole Home Dual-Band AiMesh Router AC1900](https://www.asus.com/us/Commercial-Networking/AiMesh-AC1900-WiFi-System-RT-AC68U-2-Pack/)

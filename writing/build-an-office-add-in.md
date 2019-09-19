@@ -69,4 +69,23 @@ Understanding the following enables many scenarios.
 
 ## Develop
 
+### User Interface Manifest.xml
+
+[manifest.xml](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests?tabs=tabid-1)
+
+[manifest.xml commands](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/create-addin-commands)
+
+Common Scenarios:
+
+- custom Tab
+- buttons
+- open task pane
+- call function in a file
+
 ## Publish
+
+## Update
+
+When updating the Add-In the manifest.xml version must be incremented along with the version of the Add-In on AppSource.
+
+__nit__: it would be nice if this were done automatically 

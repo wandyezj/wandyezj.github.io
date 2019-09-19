@@ -8,7 +8,7 @@
 
 [Crash Course](https://www.youtube.com/user/crashcourse)
 
-* World History
+- World History
 
 [Complexly](https://complexly.com/)
 
@@ -16,15 +16,15 @@
 
 [Project Gutenberg](http://www.gutenberg.org/)
 
-* Books free from copyright
+- Books free from copyright
 
 [Internet Archive](https://archive.org/about)
 
-* digital library of internet content
+- digital library of internet content
 
 [Open Library](https://openlibrary.org/)
 
-* Access and read books for free
+- Access and read books for free
 
 ### History
 
@@ -44,53 +44,56 @@
 
 [GitHub](https://github.com/)
 
-* An easy way to store, collaborate, and share projects
+- An easy way to store, collaborate, and share projects
 
 [try GitHub ](http://try.github.io/)
 
-* learn Git
+- learn Git
 
 [GitHub Desktop](https://desktop.github.com/)
 
-* An easy way to use Git
+- An easy way to use Git
 
 [Visual Studio Code](https://code.visualstudio.com/)
 
-* Decent Lightweight Integrated Development Environment for {Python, JavaScript, HTML}
+- Decent Lightweight Integrated Development Environment for {Python, JavaScript, HTML}
 
 [Visual Studio](https://visualstudio.microsoft.com/vs/community/)
 
-* Decent Heavyweight Integrated Development Environment for {C++, C#}
+- Decent Heavyweight Integrated Development Environment for {C++, C#}
 
 [Oracle VM Virtual Box](https://www.virtualbox.org/)
 
-* Easy to use VM software
+- Easy to use VM software
 
 [Linux Ubuntu](https://www.ubuntu.com/)
 
-* Easy to use Linux distribution
+- Easy to use Linux distribution
 
+[GNU](http://www.gnu.org/)
+
+- Free Software Foundation
 
 ### JavaScript Libraries
 
 [chart js](https://www.chartjs.org/)
 
-* Charts
+- Charts
 
 [D3 js](https://github.com/d3/d3/wiki/Gallery)
 
-* Graphs
+- Graphs
 
 ### Programming
 
 [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-* Essential for documentation
+- Essential for documentation
 
 [Python](https://www.python.org/)
 
-* A nice introductory programming language, to learn basic concepts
-* IDLE is great for basic things
+- A nice introductory programming language, to learn basic concepts
+- IDLE is great for basic things
 
 [Publish and share a website for free with GitHub](https://medium.com/@svinkle/publish-and-share-your-own-website-for-free-with-github-2eff049a1cb5)
 
@@ -99,33 +102,33 @@
 
 [W3 Schools](https://www.w3schools.com/)
 
-* Web Programming
+- Web Programming
 
 [Mozilla Developer Docs](https://developer.mozilla.org/en-US/docs/Web)
 
-* Web Programming
+- Web Programming
 
 [ss64](https://ss64.com/)
 
-* Command Line Reference
+- Command Line Reference
 
 [TypeScript](https://www.typescriptlang.org/)
 
-* JavaScript with Types
+- JavaScript with Types
 
 [Node](https://nodejs.org/en/)
 
-* JavaScript Runtime for server and command line applications
+- JavaScript Runtime for server and command line applications
 
 [Node Package Manager](https://www.npmjs.com/)
 
-* share and reuse code for Node applications
+- share and reuse code for Node applications
 
 ### Information Technology
 
 [CompTIA](https://en.wikipedia.org/wiki/CompTIA)
 
-* Certification for IT professionals
+- Certification for IT professionals
 
 ### Digital Security
 
@@ -133,25 +136,25 @@
 
 [Microsoft Authenticator](https://www.microsoft.com/en-us/account/authenticator)
 
-* Enable two factor authentication on your online accounts
+- Enable two factor authentication on your online accounts
 
 [KeePass](https://keepass.info/)
 
-* Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive.
+- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive.
 
 [BitLocker](https://en.wikipedia.org/wiki/BitLocker)
 
-* encrypt computer hard drives so data cannot be read from the drive without authentication
+- encrypt computer hard drives so data cannot be read from the drive without authentication
 
 ### Image Editing
 
 [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
 
-* Infinitely scalable image format
+- Infinitely scalable image format
 
 [SVG edit](https://svg-edit.github.io/svgedit/releases/latest/editor/svg-editor-es.html)
 
-* Simple online SVG image editor
+- Simple online SVG image editor
 
 [SVG Clipping and Masking](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
 
@@ -159,7 +162,7 @@
 
 [Set Theory](https://en.wikipedia.org/wiki/Set_theory)
 
-* Useful for description
+- Useful for description
 
 ### Life
 
@@ -169,11 +172,11 @@
 
 [USA Facts](https://usafacts.org/)
 
-* Find data about the United States
+- Find data about the United States
 
 [US Federal Government Register](https://www.federalregister.gov/)
 
-* Find out what government agencies are up to
+- Find out what government agencies are up to
 
 [US Department of Education Data](https://www2.ed.gov/rschstat/landing.jhtml)
 

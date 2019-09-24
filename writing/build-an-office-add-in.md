@@ -82,6 +82,8 @@ Common Scenarios:
 - open task pane
 - call function in a file
 
+__nit__: Outlook Add-Ins as of 2019 use a different manifest than Word, and Excel Add-Ins. If the Add-In us submitted to Word and Outlook, then there need to be two separate manifests and tow separate submission to the App Store.
+
 ## Publish
 
 ## Update

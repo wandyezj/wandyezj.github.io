@@ -20,6 +20,8 @@ Who do you want to be?
 
 Your identity is constructed by you, and those around you.
 
+Life is a journey of self construction and reinvention. Each day a new beginning and a new end.
+
 What would the person you want to be do?
 
 What would those around you expect of the person you want to be?
@@ -27,4 +29,3 @@ What would those around you expect of the person you want to be?
 What drives you to wake up every day?
 
 What is your purpose in the world?
-

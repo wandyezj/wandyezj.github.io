@@ -257,6 +257,8 @@ I've always desired, an artist I've always aspired, expressing myself.
 
 Be an engineer, fund your artistic career, profit everywhere.
 
+Only post the best, revise if possible, discard the others
+
 ### Commandments
 
 The ten commandments

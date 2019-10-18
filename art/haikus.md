@@ -4,6 +4,71 @@
 
 10 Commandment Haikus?
 
+## Draft
+
+Knowledge is the base
+understanding is nice
+power decides
+
+know to copy
+knowledge is basic
+
+knowledge to
+knowledge
+knowing imitates
+knowledge imitates
+unowledge substantuates
+
+understanding to predict
+understanding to foresee
+understand to estimate
+understanding estimates
+understanding assilimates
+
+power decides
+power to act
+power creates
+power fabricates
+power the world shapes
+power alone creates
+power wielded shapes
+power to create
+power implements
+power incorporates
+power procreates
+power integrates
+
+Introdusing
+it is my pleaseure
+pleaseure to 
+I hope you enjoy
+Netizens
+
+
+let me introduce 
+throughly enjoy
+a Haiku from me to you
+
+without futher ado
+throughly enjoy
+give it careful thought
+throughtfully 
+perhapse think it through
+poetry inspires
+
+thoughts 
+
+spark throught
+
+thoroughly enjoy
+a Haiku from me to you
+may it inspire
+
+knowledge imitates
+understanding estimates
+power integrates
+
+
 ## Revising
 
 Curb waste and conserve, use less for a big impact, keep recycling

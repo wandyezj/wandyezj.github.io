@@ -74,6 +74,16 @@
 
 - Free Software Foundation
 
+### Software Security
+
+[OWASP](https://www.owasp.org/)
+
+- Open Source Security Community
+
+[Juice Shop](https://github.com/bkimminich/juice-shop)
+
+- understand security with practice
+
 ### JavaScript Libraries
 
 [chart js](https://www.chartjs.org/)

@@ -2,16 +2,16 @@
 
 ## Ingredients
 
-* 1 pound  cremini mushrooms
-* 1/2 yellow or red onion, diced
-* 2 garlic cloves
-* 1-2 tablespoons paprika
-* 1 tablespoon cumin
-* 1/2  tablespoon cayenne
-* 1/4 cup cilantro
-* 2 tablespoons white vinegar
-* 1/4 cup olive oil
-* Salt and pepper, to taste
+- 1 pound  cremini mushrooms
+- 1/2 yellow or red onion, diced
+- 2 garlic cloves
+- 1-2 tablespoons paprika
+- 1 tablespoon cumin
+- 1/2  tablespoon cayenne
+- 1/4 cup cilantro
+- 2 tablespoons white vinegar
+- 1/4 cup olive oil
+- Salt and pepper, to taste
 
 ## Directions
 

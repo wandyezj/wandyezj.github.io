@@ -2,19 +2,19 @@
 
 ## Ingredients
 
-* 1 cup lentils
-* 1 teaspoon garam masala
-* 1 teaspoon turmeric
-* 1 teaspoon salt
-* 1 can (15 ounces) chopped tomatoes
-* 1/3 cup oil
-* 1 onion, chopped
-* 4 – 5 cloves garlic, separated, chopped finely
-* 1 inch ginger root, chopped
-* 1 teaspoon red pepper flakes
-* 1 cup spinach
-* 2 1/2 cups water
-* Salt to taste
+- 1 cup lentils
+- 1 teaspoon garam masala
+- 1 teaspoon turmeric
+- 1 teaspoon salt
+- 1 can (15 ounces) chopped tomatoes
+- 1/3 cup oil
+- 1 onion, chopped
+- 4 – 5 cloves garlic, separated, chopped finely
+- 1 inch ginger root, chopped
+- 1 teaspoon red pepper flakes
+- 1 cup spinach
+- 2 1/2 cups water
+- Salt to taste
 
 ## Directions
 

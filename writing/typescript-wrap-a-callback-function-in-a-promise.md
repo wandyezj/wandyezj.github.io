@@ -2,6 +2,7 @@
 
 ```typescript
 
+
 // Original Callback function
 
 /**
@@ -9,10 +10,10 @@
  * There could be many reasons for a function to take a callback
  * @param arguments 
  */
-function example(parameter: number[], callback: (value: string) => void) ) {
+function example(parameter: number[], callback: (value: string) => void): void {
 
     // complex logic
-    const value = parameter.length;
+    const value = parameter.length.toString();
 
     // at some point the callback is called with the computed value
     callback(value);
@@ -29,21 +30,22 @@ async function wrappedExample(parameter: number[]): Promise<string> {
     });
 }
 
-```
-
-## Why?
-
-Convenience of using await and promises in code over callbacks.
-
-- it can be hard to understand the flow of code with callbacks.
-
-```typescript
-async test() {
+async function test() {
     const initial = [0,1,2];
 
     // wrapped example
-    const calculated = await exampleWrapped(initial);
+    const calculated = await wrappedExample(initial);
+
+    console.log(calculated);
 }
 
+test();
 
 ```
+
+## Why
+
+- convenience
+- readability
+
+Promises are easier to use correctly than callbacks.

@@ -49,16 +49,17 @@ function register(message: string): Promise<void> {
 
 async function test() {
     console.log("test - start");
+
     ["1", "2", "3"].forEach((i) => {
         console.log(`before ${i}`);
         register(`queue ${i}`);
     });
-    console.log("await");
+
+    console.log("before await");
     await register("queue await");
 
-    console.log("await");
+    console.log("before queue await single");
     await register("queue await single");
-
 
     console.log("test - end");
 }
@@ -76,13 +77,13 @@ test - start
 before 1
 before 2
 before 3
-await
+before await
 trigger
 queue 1
 queue 2
 queue 3
 queue await
-await
+before queue await single
 trigger
 queue await single
 test - end

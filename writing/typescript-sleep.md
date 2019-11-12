@@ -32,3 +32,11 @@ main()
 
 ```
 
+
+## Output
+
+```text
+start
+end
+elapsed: 5001 ms
+```

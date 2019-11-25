@@ -27,3 +27,19 @@ reduce calls on the service by caching words once queried.
 do multiple calls at once, then resolve when completed.
 
 would be neat to to a visual breakdown of the syllables.
+
+## Color Alphabet
+
+Letter to Color
+Each letter on a background of that color
+
+Could attempt to go through the rainbow
+
+Some letters do not have official CSS colors
+
+A - Aqua
+B - blue
+C - cyan
+...
+R - red
+...

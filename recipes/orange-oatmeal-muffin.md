@@ -30,3 +30,8 @@
 1. Bake until golden brown (~ 20 minutes)
 1. cool on cooling rack
 
+## Notes
+
+- other fruit mixtures may be used for different flavors
+    - ensure fruits are pureed
+    - frozen fruit (blueberries, raspberries) may be microwaved

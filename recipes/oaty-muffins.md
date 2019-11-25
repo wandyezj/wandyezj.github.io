@@ -84,8 +84,7 @@ Really Good Oatmeal Muffins
 1. Let muffins cool in muffin tin on wire rack for 10 minutes.
 1. Remove muffins from muffin tin and serve or let cool completely before serving.
 
-
-## Notes:
+## Notes
 
 - Makes 12 muffins, which are good for about a week
 - Add nutmeg and cinnamon to muffin mix to give the muffins some flavor.

@@ -10,7 +10,7 @@
 - 4 1/2 teaspoons ground cumin
 - 1/4 teaspoon red pepper flakes
 - 4 cans (15 ounces each) black beans, rinsed and drained
-- 4 cups (32 ounces) low-sodium vegetable broth
+- 4 cups (32 ounces) water
 - 1/4 cup chopped fresh cilantro
 - 1 to 2 teaspoons sherry vinegar, to taste
 - 2 tablespoons fresh lime juice, to taste
@@ -23,6 +23,7 @@
 1. Add the onions, celery, carrot, and a light sprinkle of salt.
 1. Cook, stirring occasionally, until the vegetable are soft, about 10 to 15 minutes.
 1. Stir in the garlic, cumin and red pepper flakes and cook until fragrant, about 30 seconds.
-1. Pour in the beans and broth and bring to a simmer over medium-high heat.
+1. Pour in the beans and water and bring to a simmer over medium-high heat.
 1. Cook, reducing heat as necessary to maintain a gentle simmer, until the broth is flavorful and the beans are very tender, about 30 minutes.
-1. stir in the cilantro, vinegar/lime juice and salt and pepper, to taste. 
+1. stir in the cilantro, vinegar/lime juice and salt and pepper, to taste.
+

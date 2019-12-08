@@ -43,3 +43,37 @@ C - cyan
 ...
 R - red
 ...
+
+## API Development
+
+https://developers.google.com/style/word-list
+
+## Words
+
+Dictionary of everything about words
+
+Should it be limited to common words? Or should there be a frequency with the word associated?
+
+- Definitions
+- Part of Speech
+- Pronunciation
+    - https://en.wikipedia.org/wiki/ARPABET
+    - https://en.wikipedia.org/wiki/International_Phonetic_Alphabet
+- Rhyme Cluster
+- Synonyms
+- Antonyms
+
+
+Ideally in a purely JSON format
+
+### Existing Dictionaries
+
+http://gcide.gnu.org.ua/
+
+https://freedict.org/documentation/
+
+http://www.manythings.org/vocabulary/lists/l/words.php?f=ogden
+
+https://raw.githubusercontent.com/jonbcard/scrabble-bot/master/src/dictionary.txt
+
+http://wordlist.aspell.net/

@@ -1,12 +1,10 @@
 # Historical Events
 
-
 [1651 - Leviathan - Thomas Hobbes](https://en.wikipedia.org/wiki/Leviathan_(Hobbes_book))
 
 [1689 - Second Treatise of Government - John Locke](https://en.wikipedia.org/wiki/Two_Treatises_of_Government#Second_Treatise)
 
 [1775 - 1783 American Revolutionary War](https://en.wikipedia.org/wiki/American_Revolutionary_War)
-
 
 [1858 - Completion of the Suez Canal](https://en.wikipedia.org/wiki/Suez_Canal)
 
@@ -21,8 +19,6 @@
     - Atomic Bomb
     - Jet Engines
     - Rockets
-
-
 
 [1946 - 1991 Cold War](https://en.wikipedia.org/wiki/Cold_War)
     - Space Race

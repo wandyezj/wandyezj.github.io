@@ -4,7 +4,7 @@
 
 Run on a local users machine
 
-schedule specifc posts
+schedule specific posts
 
 node + typescript
 

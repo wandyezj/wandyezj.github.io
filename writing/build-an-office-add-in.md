@@ -69,6 +69,9 @@ Understanding the following enables many scenarios.
 
 ## Develop
 
+### Hosting a Static Website on Azure
+
+
 ### User Interface Manifest.xml
 
 [manifest.xml](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/add-in-manifests?tabs=tabid-1)

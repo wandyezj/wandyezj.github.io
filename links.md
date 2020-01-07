@@ -190,6 +190,14 @@
 
 [US Department of Education Data](https://www2.ed.gov/rschstat/landing.jhtml)
 
+### Law
+
+[Roberts Rules of Order](https://en.wikipedia.org/wiki/Robert%27s_Rules_of_Order)
+
+### Presentation
+
+[How To Speak by Patrick Winston](https://www.youtube.com/watch?v=Unzc731iCUY)
+
 ## Technical Reading
 
 Chicago Style Citations

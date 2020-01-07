@@ -6,6 +6,8 @@
 
 [1775 - 1783 American Revolutionary War](https://en.wikipedia.org/wiki/American_Revolutionary_War)
 
+[1848 - The Communist Manifesto - Karl Marx](https://en.wikipedia.org/wiki/The_Communist_Manifesto)
+
 [1858 - Completion of the Suez Canal](https://en.wikipedia.org/wiki/Suez_Canal)
 
 [1861 - 1865 American Civil War](https://en.wikipedia.org/wiki/American_Civil_War)
@@ -14,6 +16,8 @@
 
 [1814 - 1918 World War I](https://en.wikipedia.org/wiki/World_War_I)
     - League of Nations
+
+[1927 - Metropolis](https://en.wikipedia.org/wiki/Metropolis_(1927_film))
 
 [1939 - 1945 World War II](https://en.wikipedia.org/wiki/World_War_II)
     - Atomic Bomb

@@ -38,3 +38,17 @@ large scale calculations may happen on backend servers
 data references and summaries may be pulled from the backend servers
 it's important to cut down on data transfer on the client and server
 optional collaboration and syncing on the same sketch
+
+## API
+
+## Programming
+
+- Block Programming
+- Event Based Programming
+- Device Interaction Programming
+
+- Understanding and explaining Event Trigger interactions
+    - goal of ensuring that there is no feedback loop
+    - time based events have no feedback loop thus no danger of cycles
+    - manual trigger, since one off action no danger of a feedback loop
+    - single source of truth events (weather, time) that are not triggered by other events

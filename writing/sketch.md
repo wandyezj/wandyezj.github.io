@@ -84,6 +84,8 @@ Ideally there is only Client to Client communication and an intermediary server 
 
 A Server may be used for more computationally intensive tasks.
 
+[Idempotency Token](https://en.wikipedia.org/wiki/Idempotence)
+
 Any IOT device could be connected and expose a set of actions that can be utilized. The goal would be a programing model that can be instantly extended with new functionality.
 
 

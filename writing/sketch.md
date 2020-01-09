@@ -2,6 +2,8 @@
 
 Sketch presents a blank canvas on which to consider and express ideas.
 
+Sketch exposes a model to allow people to program their worlds.
+
 ## Actions
 
 - questions
@@ -82,6 +84,6 @@ Ideally there is only Client to Client communication and an intermediary server 
 
 A Server may be used for more computationally intensive tasks.
 
-
+Any IOT device could be connected and expose a set of actions that can be utilized. The goal would be a programing model that can be instantly extended with new functionality.
 
 

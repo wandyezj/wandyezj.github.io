@@ -61,6 +61,8 @@ optional collaboration and syncing on the same sketch
 
 - Block Programming
 - Event Based Programming
+- Appear Synchronous
+- Deterministic
 - Device Interaction Programming
     - Multiple Display Surfaces
 

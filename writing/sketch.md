@@ -55,6 +55,11 @@ data references and summaries may be pulled from the backend servers
 it's important to cut down on data transfer on the client and server
 optional collaboration and syncing on the same sketch
 
+Widgets on a canvas
+
+Any conceivable API available
+
+
 ## API
 
 ## Programming
@@ -89,5 +94,13 @@ A Server may be used for more computationally intensive tasks.
 [Idempotency Token](https://en.wikipedia.org/wiki/Idempotence)
 
 Any IOT device could be connected and expose a set of actions that can be utilized. The goal would be a programing model that can be instantly extended with new functionality.
+
+
+## References
+
+[Homer, Michael, and James Noble. "Lessons in combining block-based and textual programming." Journal of Visual Languages and Sentient Systems 3, no. 1 (2017): 22-39.](https://pdfs.semanticscholar.org/bc0a/79d16d20d9457eaa6f25f86c07a1abfee217.pdf)
+
+- Block to Text and back
+- Block good for early learning, but becomes annoying once understood
 
 

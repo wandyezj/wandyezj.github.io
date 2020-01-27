@@ -41,6 +41,8 @@ Sketch exposes a model to allow people to program their worlds.
 - Tables are strongly typed in each column
 - Tables can have infinite rows
 
+- new tables can be created from formulas of other tables
+
 ### Charts
 
 - Charts are built off of datasets

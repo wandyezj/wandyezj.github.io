@@ -29,6 +29,28 @@ Sketch exposes a model to allow people to program their worlds.
     - Could be generated off of table data
     - Could be a image or diagram
 
+### Tables
+
+- Tables are all views of underlying datasets
+    - The dataset for the table can be located on the client or a backend server
+    - this makes it possible to sell access to datasets, hosting and serving datasets of specific attributes could become a valuable business model, especially datasets that need to be frequently updated to be useful (datasets requiring updates serves as a way to keep the dataset from being copied)
+    - Table calculations can be done on the client if possible or pushed to the backend server if the view is too large to calculate on the client
+        - datasets of millions of rows for example may be best handled by the backend
+    - tables can be constructed from any dataset as long as the view follows the same protocol, and calculation protocols
+    - this allows table views to be built on top of any backend system, allowing the backend to be optimized for specific queries on the dataset
+- Tables are strongly typed in each column
+- Tables can have infinite rows
+
+### Charts
+
+- Charts are built off of datasets
+- there are lots of ways to project that data into a more understandable form
+- making it easy for users to understand the appropriate tool for the information they are attempting to discern can help users gain more insight into their data, plus make it easier for people to use the right chart at the right time
+- this also eliminates the need for users to completely remember what chart and calculations are important
+
+
+## Actions
+
 ## Interaction Models
 
 - Touch

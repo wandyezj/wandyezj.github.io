@@ -77,3 +77,19 @@ http://www.manythings.org/vocabulary/lists/l/words.php?f=ogden
 https://raw.githubusercontent.com/jonbcard/scrabble-bot/master/src/dictionary.txt
 
 http://wordlist.aspell.net/
+
+## Music Transpose
+
+Listen to any piece of music and write out the notes for all instruments
+
+Should be a standard EE Signal Processing problem of breaking apart signals
+
+
+
+## Teaching Writing
+
+Is is more effective to have students write their own stories with their own characters?
+
+Would that help them better analyze their characters in other stories?
+
+How does this kind of story thinking apply to real life situations?

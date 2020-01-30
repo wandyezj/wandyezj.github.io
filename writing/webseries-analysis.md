@@ -11,8 +11,14 @@ Catch Phrase
 
 Background
 
+## Developing a Webseries
 
-## Colbert Report
+Could use Microsoft Whiteboard and voice over
+
+
+## Investigated Series
+
+### Colbert Report
 
 "I'm your host Stephen Colbert"
 
@@ -23,12 +29,15 @@ Outro Music
 
 Transition "Now"
 
+Colbert Paces on stage talking and gesturing to the audience and props
+
+
 "When we return" X
 
 
-## Sexplanations
+### Sexplanations
 
-"I'm Dr. Lindsey Doe, a cinical sexologist and sex enthusiast. This episode of Sexplanations all about X"
+"I'm Dr. Lindsey Doe, a clinical sexologist and sex enthusiast. This episode of Sexplanations all about X"
 
 Intro sound and image
 
@@ -36,9 +45,45 @@ Consistent Message
 
 "Stay Curious"
 
-## John Green
+Doe has various backgrounds
+
+Doe changes her outfit for every episode
+
+Switches between Doe talking wide eyed and excited with text sometimes overlaying
+She is usually sitting
+
+
+### John Green
 
 Intro Sound and Logo
 
+John usually sits behind a desk, occasionally with a different prop, gestures with hands
+
+Thought Cafe art with cute figures termed "thought bubble" is used throughout
 
 
+### Khan Academy
+
+Talking Voice, always highly enthusiastic
+
+Has a single board that is written on the entire time as the voice speaks
+
+The board is usually prepared with images or other material of note before talking again
+
+Follows the: "tell them what you are going to tell them, tell them, tell them what you told them"
+
+
+"Hello P, Today we are going to talk about X"
+
+- Intro and overview
+- Explanation of points
+- Summary of points
+
+"P Out"
+
+
+Another Example
+
+"We are now going to talk about X"
+
+- sometimes has a timeline

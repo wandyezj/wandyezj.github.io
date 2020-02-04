@@ -10,7 +10,7 @@
 
 ## Motherboard
 
-> ASUS H170M-PLUS
+[ASUS H170M-PLUS](https://www.asus.com/Motherboards/H170M-PLUS/specifications/)
 
 [ASUS H170M-PLUS Driver Downloads](https://www.asus.com/Motherboards/H170M-PLUS/HelpDesk_Download/)
 

@@ -4,6 +4,10 @@
 
 [Corsair 350 D](https://www.corsair.com/us/en/Categories/Products/Cases/Obsidian-Series%E2%84%A2-350D-Micro-ATX-PC-Case/p/CC-9011028-WW)
 
+## Case Additions
+
+> Corsair Dual SSD Mounting Bracket 3.5" CSSD-BRKT2
+
 ## Case Fans
 
 [Noctua 120mm, Anti-Stall Knobs Design,SSO2 Bearing PWM Case Cooling Fan NF-S12A PWM](https://noctua.at/en/nf-s12a-pwm)
@@ -14,7 +18,7 @@
 
 [ASUS H170M-PLUS Driver Downloads](https://www.asus.com/Motherboards/H170M-PLUS/HelpDesk_Download/)
 
-* Note in order to get built in case audio is is necessary to install the motherboard audio driver
+- Note: built in case audio, requires installing the motherboard audio driver
 
 ## CPU
 
@@ -26,15 +30,19 @@
 
 ## RAM
 
-8 GB
+32 GB
 
-> G.SKILL Ripjaws 4 Series 8GB (2 x 4GB) 288-Pin DDR4 SDRAM DDR4 2133 (PC4 17000) Memory Kit Model F4-2133C15D-8GRR
+> G.SKILL Ripjaws V Series 32GB (2 x 16GB) 288-Pin DDR4 SDRAM DDR4 2133 (PC4 17000) Desktop Memory Model F4-2133C15D-32GVR
 
 ## Storage
 
 Samsung SSD 850 EVO 500GB X 3
 
 >SAMSUNG 850 EVO 2.5" 500GB SATA III 32 layer 3D V-NAND Internal Solid State Drive (SSD) MZ-75E500B/AM
+
+Samsung SSD 860 EVO 2TB X 1
+
+> Samsung SSD 860 EVO 2TB 2.5 Inch SATA III Internal SSD (MZ-76E2T0B/AM)
 
 ## Graphics Card
 
@@ -48,8 +56,6 @@ Samsung SSD 850 EVO 500GB X 3
 
 [ASUS Whole Home Dual-Band AiMesh Router AC1900](https://www.asus.com/us/Commercial-Networking/AiMesh-AC1900-WiFi-System-RT-AC68U-2-Pack/)
 
-[TRENDnet AC 1750 Dual Band Wireless Router](http://www.trendnet.com/products/wifi/AC-routers/AC1750/TEW-812DRU)
-
 ## Monitors
 
 [ASUS ProArt PA328Q](https://www.asus.com/us/Monitors/ProArt-PA328Q/)
@@ -60,7 +66,7 @@ Samsung SSD 850 EVO 500GB X 3
 
 ## Mouse
 
-[Microsoft Sculpt Egonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)
+[Microsoft Sculpt Ergonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)
 
 ## Keyboard
 

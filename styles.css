@@ -1,14 +1,19 @@
 body {
-    background-color: black;
-    color: white;
-    text-align: center;
+  background-color: black;
+  color: white;
+  text-align: center;
 }
 
 #links {
-    color: white;
-    font-size: x-large;
+  color: white;
+  font-size: x-large;
+}
+
+.link-logo {
+  max-width: 10%;
+  min-width: 5em;
 }
 
 #links:hover {
-    color: lightskyblue;
+  color: lightskyblue;
 }

@@ -19,6 +19,7 @@
 
 * number
 * string
+* tuple
 
 ## Operations
 
@@ -144,3 +145,4 @@ All programs should come with precise specifications and test harnesses for auto
 * Retrieve Data from an online source
     * [IMDB API](http://www.omdbapi.com/)
     * [Open Library API](https://openlibrary.org/developers/api)
+

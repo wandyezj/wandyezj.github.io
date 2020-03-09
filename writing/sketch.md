@@ -51,8 +51,6 @@ Sketch exposes a model to allow people to program their worlds.
 - this also eliminates the need for users to completely remember what chart and calculations are important
 
 
-## Actions
-
 ## Interaction Models
 
 - Touch

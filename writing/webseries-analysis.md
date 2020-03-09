@@ -10,10 +10,22 @@ Symbol
 Catch Phrase
 
 Background
+    - A consistent background is used in all videos
+    - Can be a set or as simple as a back backdrop
+
+Voice Matters,
+    - Calm
+    - Thoughtful
+    - Enthusiastic
+
 
 ## Developing a Webseries
 
 Could use Microsoft Whiteboard and voice over
+
+- Short focused videos less than 10 minutes
+- It's better to have a series of videos if explaining a complex topic
+- Clear voice
 
 
 ## Investigated Series
@@ -87,3 +99,23 @@ Another Example
 "We are now going to talk about X"
 
 - sometimes has a timeline
+
+
+### 3 Blue 1 Brown
+
+Q & A in the woods
+
+- Stable Camera
+
+General Videos
+
+Black Background with colorful lines
+
+Uses Pi Character with eyes
+
+Open with a Quote - calm classical music
+
+Introduce it together
+
+Speaks quickly but clearly has the images aligned with the topic.
+

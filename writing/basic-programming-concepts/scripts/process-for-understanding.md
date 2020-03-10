@@ -1,16 +1,29 @@
 # Process for Understanding
 
-# Outline
+Focus on using processes to understand.
+
+Save improvement for "Process for improvement"
+
+## Outline
 
 1. Hook
-    - "Processes surround us shaping our modern world."
-    - "Thinking in terms of processes can help you understand and change our world."
+    - "Processes surround us, shaping our modern world."
+    - "From theater productions to farming, processes ~~improve~~ influence our lives."
+    - "you too can harness the power of process to understand ~~, and improve~~ your every day life"
+
+    - ~~"Thinking in terms of processes can help you understand and change our world."~~
 
 1. Quote and Definition
+    - "What is a process?"
     - "A process is a series of steps to bring about a result."
 
-
 1. Give examples of processes
+    - "For example, take your every day morning routine"
+    - "What do you do each morning to prepare for your day ahead?"
+    - "wake"
+    - "eat"
+    - "clean"
+    - "dress"
     - lego sets
     - assembly line
     - theaters
@@ -18,6 +31,7 @@
 
 
 1. Introduce School Bus Example
+    - introduce getting ready for the day, improve the process
     - What is the end?
 
 1. Think more critically about the example

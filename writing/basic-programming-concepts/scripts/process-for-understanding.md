@@ -20,6 +20,11 @@ Save improvement for "Process for improvement"
 1. Give examples of processes
     - "For example, take your every day morning routine"
     - "What do you do each morning to prepare for your day ahead?"
+
+    - "I usually wake up, exercise, take a shower, dress, and eat breakfast"
+
+    - "Now that's an abstraction of my morning routine, many details are missing."
+
     - "wake"
     - "eat"
     - "clean"
@@ -28,7 +33,23 @@ Save improvement for "Process for improvement"
     - assembly line
     - theaters
 
+1. Refine
 
+    - "In order to better understand a process it can be helpful to write down high level steps and the fill in the details."
+
+    - Write Down the Steps
+        - wake
+        - shower
+        - dress
+        - eat
+    
+    - "Once we have the outline we can zoom in: asking and answering more specific question about each step and the transitions between each step"
+
+    "For example: What time do I wake up? What do I eat for breakfast? Do I do anything while I eat? How long does the morning routine take? Is the routine the same every day?"
+
+    "By asking, and answering ever more specific question and writing those answers down we can obtain a better picture of any process."
+    
+1. Tell them what you told them
 
 1. Introduce School Bus Example
     - introduce getting ready for the day, improve the process

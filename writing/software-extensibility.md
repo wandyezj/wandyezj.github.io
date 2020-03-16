@@ -22,6 +22,10 @@ All individual APIs should be semantically versioned.
 
 APIs should use the same paths that exist to carry out existing functionality.
 
+## Engine
+
+If APIs are promise based should they still execute in the order that they are called?
+
 ### Verification
 
 An extension should be written that exercises full capabilities of all APIs the host supports to ensure that no regressions in the API layer occur.
@@ -55,3 +59,25 @@ Use an [iframe](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe
 The iframe can also set a [Content Security Policy](https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP) to restrict web access.
 
 Use browser [localStorage](https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage) to store which extensions were added.
+
+Messages between the Host and client:
+
+Each operation is given a unique id.
+
+Each operation sends the following information to the Host:
+
+- operation id
+- operation name
+- arguments as key value pairs
+
+Each operation is given a result:
+
+- success or error message
+- optional return value
+
+Can results of operations be used to naturally build up a dependency graph of operations? This can then be used to auto queue operations in the right order until a value is finally needed
+
+
+
+
+

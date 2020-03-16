@@ -43,7 +43,7 @@ Save improvement for "Process for improvement"
         - dress
         - eat
     
-    - "Once we have the outline we can zoom in: asking and answering more specific question about each step and the transitions between each step"
+    - "Once we have the outline we can zoom in: asking and answering more specific question about each step and the transitions between them"
 
     "For example: What time do I wake up? What do I eat for breakfast? Do I do anything while I eat? How long does the morning routine take? Is the routine the same every day?"
 
@@ -72,7 +72,8 @@ Save improvement for "Process for improvement"
     - missing steps
     - more detailed steps
 
-1. 
+1. End with a question
+ "go forth and examine things more closely"
 
 
 ## Scratch

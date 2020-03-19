@@ -48,4 +48,4 @@ test();
 - convenience
 - readability
 
-Promises are easier to use correctly than callbacks.
+Promises may be easier to use correctly than callbacks.

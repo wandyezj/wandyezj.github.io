@@ -46,19 +46,19 @@ Netizens
 
 
 let me introduce 
-throughly enjoy
+thoroughly enjoy
 a Haiku from me to you
 
-without futher ado
-throughly enjoy
+without further ado
+thoroughly enjoy
 give it careful thought
-throughtfully 
-perhapse think it through
+thoughtfully 
+perhaps think it through
 poetry inspires
 
 thoughts 
 
-spark throught
+spark thought
 
 thoroughly enjoy
 a Haiku from me to you
@@ -105,7 +105,7 @@ Open your perspective, indulge in the offensive, make it the new norm
 
 Close your perspective, censor all thats offensive, enforce current norms
 
-poetry ignites, refecting our souls passions, guiding our actions
+poetry ignites, reflecting our souls passions, guiding our actions
 poetry ignites, awakening inner hearths, inspiring lives
 
 sodomy is fun, have you given it a try? possibilities...
@@ -116,7 +116,7 @@ a Haikus constraints, challenging complexity, yet simplicity
 
 prefer bread and cheese, incredibly delicious, maybe nutritious
 
-begin a buisness, feed people your lies instead, change everyones view
+begin a business, feed people your lies instead, change everyone's view
 
 Heroic Ayn Rand, wrote fantastic fallacies; warping realities.
 Heroic Ayn Rand, wrote fantastic fallacies; twists realities.
@@ -272,6 +272,21 @@ guide your life with them
 let them guide your life
 commandments guide lives
 
+I am the lord god
+worship me exclusively
+worship no idols
+
+please, no blasphemy
+keep the sabbath day holy
+honor your parents
+
+don't kill people
+don't do people's spouses x
+don't steal people's stuff
+
+don't lie to people
+don't covet people's 
+
 #### I am the LORD thy God
 
 I am the lord god
@@ -289,7 +304,7 @@ worship no idols
 
 #### Remember the sabbath day
 
-#### Honour thy father and thy mother
+#### Honor thy father and thy mother
 
 #### Thou shalt not kill
 

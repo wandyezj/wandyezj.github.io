@@ -15,3 +15,12 @@ Assertions
 
 
 What alternatives are there that would achieve the same goals?
+
+
+## Facts and Figures
+
+https://en.wikipedia.org/wiki/Literacy_in_the_United_States
+
+Studies suggest 10 -20% of American adults are illiterate or have low literacy skills.
+
+Would this make it 

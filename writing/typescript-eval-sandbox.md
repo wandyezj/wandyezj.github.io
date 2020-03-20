@@ -4,7 +4,9 @@ Generally runtime modifications and use of eval should be avoided when possible.
 
 In some cases runtime eval may be useful.
 
-It is also useful to be able to prevent evaled code from accessing arbitrary functionality.
+It is also useful to be able to prevent evaluated code from accessing arbitrary functionality.
+
+This technique can also be used to override built in browser functionality to restrict the set of functions available for use.
 
 ```typescript
 /*

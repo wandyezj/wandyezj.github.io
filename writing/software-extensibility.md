@@ -79,7 +79,81 @@ Each operation is given a result:
 - success or error message
 - optional return value
 
-Can results of operations be used to naturally build up a dependency graph of operations? This can then be used to auto queue operations in the right order until a value is finally needed
+Can results of operations be used to naturally build up a dependency graph of operations? This can then be used to auto queue operations in the right order until a value is finally needed.
+
+This could be done on the client side by having 'reference' values that reference the return of the another call. This would required the host to build the dependency graph between operations (although shouldn't in a sequential execution the operations already be in executable order?, The nice part about JavaScript is that operations can be guaranteed to be serial).
+
+For example the following two operations could be completed in one round of calls, if the call to two could immediately consume the value of one on the host side.
+
+```typescript
+interface o {
+    async one(): string;
+    async two(value: string | Promise<string>): string;
+}
+
+async function main() {
+    const value = o.one();
+    const final = await o.two(value);
+    console.log(final);
+}
+```
+
+
+Messages between the Host and application:
+
+```typescript
+
+/**
+ * Represents a call from the application to the host
+ */
+interface Call {
+    /**
+     * id to uniquely identify the call
+     */
+    id: string;
+
+    /**
+     * name of the API to call
+     */
+    name: string;
+
+    /**
+     * version of the API to call
+     */
+    version: string; // major.minor.revision
+    arguments: Arguments;
+}
+
+interface Arguments {
+    [string: key]: any; // link type to object
+}
+
+/**
+ * Represents a Response to a call
+ */
+interface Response {
+    /**
+     * id uniquely matches the response to the call
+     */
+    id: string;
+
+    /**
+     * Error code for the API. can be translated to an error message on the client side. Would it be better for this to be a string?
+     */
+    error: number;
+
+    /**
+     * return value from the call
+     */
+    value?: any;
+}
+
+```
+
+
+Sessions there needs to be a session in which a sequence of calls take place, that way the main webpage runtime knows where to redirect calls.
+
+Similarly this way the main webpage runtime can coordinate calls to make sure they do not interfere with each other.
 
 
 

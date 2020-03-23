@@ -78,6 +78,10 @@ Samsung SSD 860 EVO 2TB X 1
 
 [Blue Yeti USB Microphone - Blackout Edition](https://www.bluedesigns.com/products/yeti/)
 
+## Headphones
+
+[Bose Noise Canceling Headphones 700](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_black)
+
 ## Camera
 
 [Microsoft LifeCam HD-3000](https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011)

@@ -23,7 +23,9 @@ Federal organizations are best suited to gather experience across states and dev
 
 Federal organizations can also train emergency response teams for use across states and provide timely additional resources to take care of disasters quickly.
 
-State organizations 
+State organizations are best equipped to respond the disasters in their area. Most disasters should rely on state authority to mitigate them as they are closest to the ground.
+
+The role of the federal organization is to provide support to state organizations for preparedness and provide the level of support requested to states as needed. In the case disasters cross state boundaries or are beyond state responsibilities and resources to handle, the federal organization should take charge.
 
 
 ## Departments

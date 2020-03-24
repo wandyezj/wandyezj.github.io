@@ -212,3 +212,12 @@ Chicago Style Citations
 Norman, Don. The design of everyday things: Revised and expanded edition. Basic books, 2013.
 
 McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Learning, 2013.
+
+## Opportunities
+
+[Scouting](https://www.scouting.org/)
+    - Scouts
+    - Exploring
+
+[AmeriCorps](https://www.nationalservice.gov/programs/americorps)
+    - [AmeriCorps on Wikipedia](https://en.wikipedia.org/wiki/AmeriCorps)

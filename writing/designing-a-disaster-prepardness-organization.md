@@ -6,20 +6,27 @@ The objectives of the organization are to prepare and respond to disasters, in o
 
 Disasters {tornadoes, hurricanes, floods, storms, earthquakes, fires, volcanoes, famine, disease, oil spills, terrorism, etc...} require a coordinated response to mitigate potential damage. Failure to prepare for disaster can carry significant consequences for society.
 
+Historically, across societies the inability of a government to adequately handle disasters undermines governments legitimacy. In contrast a competent response to disaster often increases a governments legitimacy.
+
 Potential preparedness can include:
 
 - Disaster Assessment
-    - Understanding what disasters are likely in an area
+    - Understanding what disasters are likely in an area, both from areas historical precedent and from precedent in similar environments.
 - Building Codes
     - Designing physical structures to mitigate potential damages
     - Require buildings adhere to specific standards to mitigate potential damage. {Zoning ordnances for flood plains or fire zones, Fire prevention codes, tornado and hurricane requirements for roofs and safe rooms}
-- Training
+- Societal Norms
+    - Building societal norms and habits to mitigate potential disaster
+- Stockpiling necessary supplies
+    - Shelter, Food, Medicine
 - Emergency Response Coordination
-
+    - Building the necessary plans and networks to be activated in response to disaster.
+- Training
+    - Training of people in necessary skills for
 
 ## Difference in approach for National and State organizations
 
-Federal organizations are best suited to gather experience across states and develop standard best practices for other states to learn from and to coordinate responses to large scale events.
+Federal organizations are best suited to gather experience across states and develop standard best practices for other states to learn from. Federal organizations are best equipped to coordinate responses to large scale events across states.
 
 Federal organizations can also train emergency response teams for use across states and provide timely additional resources to take care of disasters quickly.
 
@@ -67,7 +74,15 @@ Each disaster type should have a corresponding department focused on mitigation 
 - Internet
     - Internet security
     - Fraud prevention
+    - Network outages
 - Grid
     - Electrical grid security
+    - Grid Outages
 - Water
     - Water security
+    - Water outages
+    - Ensuring supply
+- Sewage
+    - Sewage treatment
+    - Disruption plans
+    - Capacity overflow plans

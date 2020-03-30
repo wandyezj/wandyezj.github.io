@@ -221,3 +221,8 @@ McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Lea
 
 [AmeriCorps](https://www.nationalservice.gov/programs/americorps)
     - [AmeriCorps on Wikipedia](https://en.wikipedia.org/wiki/AmeriCorps)
+
+
+## English Grammar
+
+[Adjective Word Order](https://grammar.cl/english/adjectives-word-order.htm)

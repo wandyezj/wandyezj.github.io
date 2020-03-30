@@ -157,5 +157,102 @@ Similarly this way the main webpage runtime can coordinate calls to make sure th
 
 
 
+Streaming APIs in some cases the data set may be too large to parse at once. Example: loading an gigabyte file into memory before processing verses only loading the single line at a time that needs to be processed.
 
+A possible approach to streaming may be [JavaScript Iterators or Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)
+
+Issues with streaming include:
+
+- How is the state streamed from the host to the application?
+    - Best effort?
+    - If something on the host changes is that reflected in the stream or does it capture a single instance? Would the difference be visible to the user?
+    - Changes are not transactional and thus it's possible for an inconsistent state to emerge between the client and the host.
+
+
+```typescript
+
+/**
+ * Generator
+ * Can return items one at a time and can wait for new data to appear as needed
+ */
+function* streamOfPromises() {
+    // It's possible initial data was populated
+    yield "one";
+
+    // Can wait for bulk data to appear
+    // A small set of calls to get data may be slow.
+    // Calls that merely iterate through fetched data will be faster.
+    yield new Promise((resolve) => resolve("two"));
+
+    // Simulated fast call
+    yield "three";
+}
+
+async function main() {
+    // Cycle through all values in a streamed way awaiting each value
+    for (const item of streamOfPromises()) {
+        console.log(await item);
+    };
+}
+
+main();
+
+```
+
+
+Class based implementation of the stream which could allow a class to maintain an internally consistent state if required.
+
+```typescript
+function* streamOfPromises() {
+    yield "one";
+    const value: Promise<string> = new Promise((resolve) => resolve("two"));
+    yield value;
+    yield "three";
+}
+
+class IteratorClass<T> implements Iterator<T> {
+    public constructor(private promiseStream: Generator<T>) {
+    }
+
+    /**
+     * Implementation of Iterator, which simply cycles through generator instance
+     */
+    public next(): IteratorResult<T> {
+        const value = this.promiseStream.next();
+        return value;
+    }
+}
+
+class IterableClass implements Iterable<string |Promise<string>> {
+
+    /**
+     * Implemenation of iterable
+     * enables `for of`
+     */
+    public [Symbol.iterator]() {
+        // The generator could capture this instance so that values only have to be streamed once
+        const generator = streamOfPromises();
+        return new IteratorClass<string |Promise<string>>(generator);
+    }
+}
+
+async function main() {
+    // Instantiates the iterable
+    const items = new IterableClass();
+
+    // Cycle through all values in a streamed way awaiting
+    console.log("First Run");
+    for (const item of items) {
+        console.log(" " + await item);
+    };
+
+    console.log("Second Run");
+    for (const item of items) {
+        console.log(" " + await item);
+    };
+}
+
+main();
+
+```
 

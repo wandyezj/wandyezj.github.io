@@ -106,4 +106,69 @@ conclusion up front, then justification
 
 putting justifications up front has the audience start to form their own conclusions as they go along.
 
+Have audience focus on the big ideas
 
+Use secondary ideas to engage with them
+
+Having someone challenge you means that they are engaged
+
+Experience Arc
+
+"Experience drives feelings.
+"Belief drives behavior. Emotion drives belief."
+
+Drama: move from conflict to resolution
+
+Focus on the main message, redirect "red herrings" come back to it later, authority of the audience, where is the value to the audience.
+
+
+- Speak, don't write
+    - How you speak is different from how you right
+- Conversational Tone
+- Engage the sense
+    - talk in terms of picture and sound "snaps the laptop closed and walks away"
+- Clear and direct
+- Be unpredictable
+- Be bold
+
+
+Media
+
+"are your slides working for you or are you working for your slides?"
+
+- Add to experience
+- aspire to be art
+- rule of thirds
+- make headers conclusions
+- enhance and support not repeat
+
+Rehearsal Focus
+
+- internalize content and structure
+- nonlinear expression
+    - rehearse out of order
+    - do it backwards
+- conversation and recitation
+- audience engagement and focus
+    - having a contestation with multiple people at once
+- pushing boundaries
+    - confidence, pause and speak slowly, emotional response
+    - find a boundary and push it as you practice
+
+"pausing creates negative space around big ideas"
+"this is important verses This . . . . . is Important"
+
+metronome to internalize time
+
+- Pause
+- Purpose
+- Present
+- Focus
+
+
+- Grab & Go - pause look at notes, read what needed then continue
+- Balanced Stance - feet apart hands in front
+- Walk Talk Park - use sides of the room to represent different ideas
+- Share the Love -  give attention to whole audience
+
+Conclusion Driven

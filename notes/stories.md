@@ -172,3 +172,5 @@ metronome to internalize time
 - Share the Love -  give attention to whole audience
 
 Conclusion Driven
+
+For video with face, make sure there is enough space to show the upper body and hand gestures

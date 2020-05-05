@@ -119,3 +119,10 @@ Introduce it together
 
 Speaks quickly but clearly has the images aligned with the topic.
 
+## The Fitness Marshall
+
+- Signature face, haircut, and colors.
+- Gets to the routine immediately
+- Commentary throughout
+- Targets the same video at multiple levels of audience
+- Have to be careful with copyright music, and get permission

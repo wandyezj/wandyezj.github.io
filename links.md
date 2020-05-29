@@ -94,6 +94,10 @@
 
 - Graphs
 
+[QR Code Generator](https://www.the-qrcode-generator.com)
+
+- Generate QR codes to websites that can be scanned by a phone
+
 ### Programming
 
 [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)

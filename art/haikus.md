@@ -86,6 +86,8 @@ Sitting on the bus, so much time to write haikus, hope you like this one
 I made a haiku, about program managers, hope you find it fun
 
 Avoid Anarchy, rules are a necessity, order the chaos
+Avoid Anarchy; rules are a necessity to prevent chaos
+
 please follow the law
 obey the lawyers
 understand the law
@@ -108,9 +110,12 @@ Close your perspective, censor all thats offensive, enforce current norms
 poetry ignites, reflecting our souls passions, guiding our actions
 poetry ignites, awakening inner hearths, inspiring lives
 
+guiding our actions, reflecting our souls passions, poetry ignites
+
+
 sodomy is fun, have you given it a try? possibilities...
 
-too complicated for me, I would rather write haikus, they offer constrains
+too complicated for me, I would rather write haikus, they offer constraints
 
 a Haikus constraints, challenging complexity, yet simplicity
 
@@ -133,6 +138,7 @@ I have a Twitter, please consider following, more haikus for you
 Do you like Haikus?, Maybe Haikus annoy you?, Do you want to chat?
 
 Jesus preaches love, we are all siblings on earth, he died for our sins
+
 praise our lord and savior
 
 Understand nothing, everything is worth questioning, complicated world
@@ -149,6 +155,8 @@ Productive Masters
 
 excellent teachers
 are questioners, not preachers;
+make Socrates proud
+
 Socratic method
 
 Haiku obsession
@@ -179,14 +187,23 @@ sage composition
 beats minds into submission:
 words are powerful.
 
+links minds together
+leads minds toward composition
+
 WandyezjHaikus
 shares my work to all via tweet;
 poems are so sweet.
 
-
+Avoid distractions
+study in the library
+enhance learning
 
 Haiku's simple rule
 is easily learned at school
+knowing makes you cool
+
+Haiku's simple rules
+are easily learned in school
 knowing makes you cool
 
 five in the first line
@@ -258,6 +275,20 @@ I've always desired, an artist I've always aspired, expressing myself.
 Be an engineer, fund your artistic career, profit everywhere.
 
 Only post the best, revise if possible, discard the others
+
+the machinery
+of our capitalism
+is built on corpses
+brightens our future
+
+
+So many options to choose
+adventures await
+adventure awaits
+options twin and intersect
+Choose Your Own Haiku
+
+
 
 ### Commandments
 
@@ -338,6 +369,37 @@ the world is complicated
 wealth changes the game
 everyone has power
 try word rhyme today
+
+## Controversial
+
+
+Social Media
+fritters productivity:
+how do you spend time?
+
+Open your perspective
+indulge in the offensive
+make it the new norm
+
+Only post the best
+revise if possible
+discard the others
+
+Jesus preaches love
+we are all siblings on earth
+he died for our sins
+
+Heroic Ayn Rand
+wrote fantastic fallacies;
+warps reality.
+
+democracy works,
+people are represented;
+what do you vote for?
+
+labels destruction
+frees personal expression
+break labels bonds
 
 ## Posted
 

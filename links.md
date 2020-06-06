@@ -220,11 +220,13 @@ McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Lea
 ## Opportunities
 
 [Scouting](https://www.scouting.org/)
-    - Scouts
-    - Exploring
+
+- Scouts
+- Exploring
 
 [AmeriCorps](https://www.nationalservice.gov/programs/americorps)
-    - [AmeriCorps on Wikipedia](https://en.wikipedia.org/wiki/AmeriCorps)
+
+- [AmeriCorps on Wikipedia](https://en.wikipedia.org/wiki/AmeriCorps)
 
 
 ## English Grammar

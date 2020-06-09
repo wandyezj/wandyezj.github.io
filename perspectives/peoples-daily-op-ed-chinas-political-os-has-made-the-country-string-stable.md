@@ -41,25 +41,25 @@ Different operating systems produce different results. In the political realm, C
     - no freedom to express divergent ideas
     - widespread censorship
     - a police state that tracks citizens every word and action
-- how can one party really represent everyones interests?
+- how can one party really represent everyone's interests?
     - how can someone really represent other people if they cannot be held accountable to those people?
-- wests os "unable to adapt or upgrade in response to changes"
-    - The US constitutions many ammendments seems to be a counterpoint to this argument
-    - US societies derastic changes in 50 years seems to be another counter point
+- wests OS "unable to adapt or upgrade in response to changes"
+    - The US constitutions many amendments seems to be a counterpoint to this argument
+    - US societies drastic changes in 50 years seems to be another counter point
 - "nothing really moves forward due to fierce resistance from different interest groups"
     - perhaps those interest groups have concerns that need to be addressed?
-    - is it wise to blindly move forward wth major changes without carefully considering the consequences?
+    - is it wise to blindly move forward with major changes without carefully considering the consequences?
     - in effect different interest groups seem to enforce cooperation by ensuring that cooperation is the only way forward
 - the articles main point seems to be a justification of the Chinese Communist Parties rule
     - why does the party need to justify its rule?
     - justification seems to imply a sense of illegitimacy 
-    - in contrast western governments and papers spend very little time justifying the ligitimacy of the government
-- contrasting the americas constitution with chinas constitution
+    - in contrast western governments and papers spend very little time justifying the legitimacy of the government
+- contrasting the Americas constitution with Chinas constitution
     - the constitutions can be viewed as the design plan for a countries political os
-    - americas constitutions protects citizens rights without exception
-    - chinas constitutions has an exception for every right, guaranteeing none
-    - americas consitutions is about granting freedom to individuals and protecting them from state interference
-    - chinas constitutions is a list obligations citizens owe the state, and a list of ways the state may interfere in citizens lives
-    - americas constitutions is about protecting individual freedom
-    - chinas constitution is about protecting the states freedom
+    - Americas constitutions protects citizens rights without exception
+    - China's constitutions has an exception for every right, guaranteeing none
+    - Americas constitution is about granting freedom to individuals and protecting them from state interference
+    - China's constitutions is a list obligations citizens owe the state, and a list of ways the state may interfere in citizens lives
+    - America's constitutions is about protecting individual freedom
+    - China's constitution is about protecting the states freedom
 - the article makes broad generalizations but fails to provide specific examples and consider the opposing view.

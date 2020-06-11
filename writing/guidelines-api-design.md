@@ -9,4 +9,4 @@
 - names should never have two capitol letters in a row
 - names should only contain the letters `[A-Z][a-z]`
 
-- when it's possible to get an item in a collection by different properties {name, index, id, key, value} create separate methods for each unique way of retrieving the items.Did 
+- when it's possible to get an item in a collection by different properties {name, index, id, key, value} create separate methods for each unique way of retrieving the items.

@@ -3,6 +3,10 @@
 - Output a external command before calling it
     - makes it easy to tell what command failed, and to rerun it independently if possible
 
+- Do __NOT__ prompt while the script is running and wait for user input. Instead have the runner pass in all data to the script up front, possibly via a configuration file if necessary.
+
+- avoid not in method and variable names, instead describe what is.
+
 - Do __NOT__ hardcode array indices, instead assign indices to constants and use those to reference the array.
 
     ```typescript

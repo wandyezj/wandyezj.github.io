@@ -40,3 +40,19 @@
 
     ```
 
+- Do __NOT__ use the term _average_, use {mean, median, mode}
+    - average is an ambiguous word, instead specify the specific measure of average
+
+- Specify units in variable, parameter, and function names
+    - This helps ensure units are consistent throughout and helps prevent unit conversion bugs
+
+```typescript
+// BAD - DONT DO THIS!!!
+
+const startTime = getTimeSinceStart();
+
+// GOOD
+
+const startTimeMilliseconds = getMillisecondsSinceStart()
+
+```

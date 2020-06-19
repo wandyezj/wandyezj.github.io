@@ -7,6 +7,10 @@
 
 - avoid not in method and variable names, instead describe what is.
 
+- use standard data storage formats, {tsv, json, xml} custom file formats are a difficult for other people to understand and use. Consider using tsv over csv files as tsv files are significantly easier to parse correctly than csv files (csv files have all sorts of edge case rules). If writing csv files consider removing all "," from any data written as these will mess up the output text. When writing tsv make sure to replace all tabs in the data with four spaces. Overall tsv is significantly easier to get correct than csv.
+
+- writing log files while the script runs can be helpful to debug the script later especially if there are rare issues that occur. Take care if writing a daemon that log files do not build up over time.
+
 - Do __NOT__ hardcode array indices, instead assign indices to constants and use those to reference the array.
 
     ```typescript

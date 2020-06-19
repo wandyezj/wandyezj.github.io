@@ -74,6 +74,10 @@
 
 - Free Software Foundation
 
+[C++](https://www.stroustrup.com/)
+
+- Homepage of Bjarne Stroustrup (Designer of the C++ Programming Language)
+
 ### Software Security
 
 [OWASP](https://www.owasp.org/)

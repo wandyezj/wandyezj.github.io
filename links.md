@@ -104,6 +104,8 @@
 
 ### Programming
 
+[Elements Of Programming](http://elementsofprogramming.com/)
+
 [Markdown Cheat Sheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 - Essential for documentation

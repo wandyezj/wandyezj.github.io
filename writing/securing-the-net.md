@@ -1,6 +1,9 @@
 # Securing The Net - Securing Our Digital and Physical World
 
-Society is rapidly fulfilling Weiser's vision of ubiquitous computing [Weiser 1991](). Computers are increasingly becoming embedded into everyday devices. Many of these devices are increasingly connected devices. These connected devices further blur the lines between the digital and physical world.
+Society is rapidly fulfilling Weiser's vision (Weiser 1991) of ubiquitous computing. Computers are increasingly becoming embedded into everyday things. These things are frequently designed to be connected to the internet. These connected devices also termed IoT 
+
+
+Many of these devices are increasingly connected devices. These connected devices further blur the lines between the digital and physical world.
 
 Connected devices offer many advantages to companies including:
 
@@ -13,7 +16,7 @@ Connected devices offer many advantages to companies including:
 and many other features that promise significant societal benefits.
 
 
-With these increased benefits come increased risks that connected devices present to security and privacy. Risks to security and privacy can quickly turn into legal, brand, and financial liabilities.
+Connected devices increased benefits come increased risks.  that connected devices present to security and privacy. Risks to security and privacy can quickly turn into legal, brand, and financial liabilities.
 
 Connected devices are subject to new forms of abuse in terms of both physical and digital attacks.
 
@@ -33,10 +36,22 @@ Engineering -
 
 ## References
 
-1. [Weiser, Mark. "The Computer for the 21 st Century." Scientific american 265.3 (1991): 94-105.](https://raw.github.com/wandyezj/reference/master/the-computer-for-the-21st-century.pdf)
+(Weiser 1991) [Weiser, Mark. "The Computer for the 21 st Century." Scientific american 265.3 (1991): 94-105.](https://raw.github.com/wandyezj/reference/master/the-computer-for-the-21st-century.pdf)
 
-1. Bad Power - Attack to destroy a physical advice through firmware
+
+(Hunt 2017) [Hunt, Galen, George Letey, and Ed Nightingale. "The seven properties of highly secure devices." tech. report MSR-TR-2017-16 (2017).](https://www.microsoft.com/en-us/research/wp-content/uploads/2017/03/SevenPropertiesofHighlySecureDevices.pdf)
+
+(Nightingale 2020) [Nineteen cybersecurity best
+practices used to implement the
+seven properties of highly
+secured devices in Azure Sphere](https://azure.microsoft.com/mediahandler/files/resourcefiles/best-practices-for-implementing-seven-properties-in-azure-sphere/Best%20practices%20for%20implementing%20seven%20properties%20in%20Azure%20Sphere_updated.pdf)
+
+### Other
+
+https://en.wikipedia.org/wiki/Internet_of_things
+
+- Bad Power - Attack to destroy a physical advice through firmware
 https://xlab.tencent.com/cn/2020/07/16/badpower/
 
-1. JackPot ATMs through combined physical and software attack
+- JackPot ATMs through combined physical and software attack
 https://arstechnica.com/information-technology/2020/07/crooks-are-using-a-new-way-to-jackpot-atms-made-by-diebold/

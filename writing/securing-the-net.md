@@ -32,6 +32,20 @@ GDPR
 Engineering - 
 
 
+Trust comes from hardware. Software is not trustworthy.
+
+Is there a way to verify from hardware what software is loaded on a chip?
+
+For example have the hardware calculate a hash of whatever program is stored?
+
+Then only have to trust that the hardware is from the manufacturer that it says it is. 
+
+have a private key on the chip, have the public key accessible in the cloud and have that public key associated with the manufacturers database.
+
+Then only need to secure the cloud against untrustworthy additions.
+
+track the piece of hardware through the entire supply chain.
+
 
 
 ## References

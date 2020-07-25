@@ -22,13 +22,34 @@ What should the product achieve?
 - What features?
 - What colors?
 - Secure?
-
+- Open Source Design and Code as a feature?
+- What types of interaction with the light should be supported?
+- Sensors
+    - Temperature
+    - Light - Photovoltaic, Infrared
+    - Noise
+    - Thermal
+    - Motion - Ultrasonic, Vibration, Accelerometer
+    - Touch - Capacitive Touch
+    - Humidity
+    - Magnetic - Hall Sensor
+    - Air Quality
+    - GPS?
 
 What Technology exists?
 
 - Azure Sphere
-- Nordic Bluetooth
+- Nordic Bluetooth, BLE?
 - iOS, Android, PC?
+
+- WiFi verses Bluetooth
+
+
+- How can an Azure Sphere report what piece of code it runs?
+- How can it be assured that the code on an Azure Sphere device is the version it reports to be?
+
+- Azure Sphere would need a special function to show it's identity and report what version of it's OS and the version of the application it is running. This has to bypass the applications control.
+
 
 ## Sourcing
 

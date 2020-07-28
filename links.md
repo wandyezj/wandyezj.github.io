@@ -46,7 +46,7 @@
 
 - An easy way to store, collaborate, and share projects
 
-[try GitHub ](http://try.github.io/)
+[try GitHub](http://try.github.io/)
 
 - learn Git
 
@@ -101,6 +101,10 @@
 [QR Code Generator](https://www.the-qrcode-generator.com)
 
 - Generate QR codes to websites that can be scanned by a phone
+
+[remarkable](https://www.npmjs.com/package/remarkable)
+
+- Markdown to HTML library
 
 ### Programming
 
@@ -159,11 +163,15 @@
 
 [KeePass](https://keepass.info/)
 
-- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive.
+- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive. Store the keepass application on the file share as well to avoid having to download it again and to use the same version consistently. Do not allow automatic updates for keepass. 
+
+[Microsoft OneDrive Personal Vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)
+
+- Use Personal vault to store the keepass password database.
 
 [BitLocker](https://en.wikipedia.org/wiki/BitLocker)
 
-- encrypt computer hard drives so data cannot be read from the drive without authentication
+- encrypt computer hard drives so data cannot be read from the drive without authentication. This protects the data on your device when your computer leaves your physical presence.
 
 ### Image Editing
 

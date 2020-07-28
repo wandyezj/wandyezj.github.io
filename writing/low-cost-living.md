@@ -234,6 +234,7 @@ Total cost of laundry is about <~350
     - A new phone is thus at a fixed cost of ~852 a year for a single line or for a family of four lines ~1200/year or single ~300/year for four lines (family) (many people share their phone plans within a family)
     - The variable cost is in the model of phone, for a new high end phone like the iPhone this is about ~200/year on top if the phone lasts two years or, ~150 if the phone lasts three years
     - This means a single phone and plan can range from about 500/year to 1152/year depending on how cost and cooperative people are.
+    - note: some phone models can be turned into wifi hotspots 'teathering', thus an external laptop can be connected to the internet through a phone plan. That is a laptop could be used to do work offline to be synced later or to browse more comfortably. Would have to check what the data plan is for the phone, however most basic tasks should be doable.
 
 * Bed - a bed can last 10+ years
     - A comfy bed is potentially bad for physical health, recommendations are a pallet (like Japan) which can be less expensive,

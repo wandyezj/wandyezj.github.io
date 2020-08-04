@@ -60,3 +60,19 @@ const startTime = getTimeSinceStart();
 const startTimeMilliseconds = getMillisecondsSinceStart()
 
 ```
+
+- Always Use Unicode UTF-8 for all files
+
+- Write files to a folder, when possible delete the folder before running again
+
+- Avoid consuming the output of the script as the input for a new run of the script. Strongly prefer to have the input and outputs be separate.
+
+- It's possible to string scripting languages together, by having one script output another script and then running that script in its environment
+
+- Prefer TSV file format for any table based data for excel. Avoid CSV format as it has many exceptions and it much harder to parse correctly
+
+- prefer JSON format over XML where possible.
+
+- Prefer strongly typed scripting languages, it keeps you from making dumb mistakes
+
+- Within a team standardize on one scripting language, preference should be node TypeScript

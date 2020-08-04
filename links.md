@@ -4,6 +4,8 @@
 
 ### General
 
+[Prepared For Success](https://preparedforsuccess.org/)
+
 [Khan Academy](https://www.khanacademy.org/)
 
 [Crash Course](https://www.youtube.com/user/crashcourse)

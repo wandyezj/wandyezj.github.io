@@ -4,6 +4,8 @@
 
 ### General
 
+[Prepared For Success](https://preparedforsuccess.org/)
+
 [Khan Academy](https://www.khanacademy.org/)
 
 [Crash Course](https://www.youtube.com/user/crashcourse)
@@ -146,6 +148,10 @@
 [Node Package Manager](https://www.npmjs.com/)
 
 - share and reuse code for Node applications
+
+[Node Green](https://node.green/)
+
+- functionality available in specified node versions
 
 ### Information Technology
 

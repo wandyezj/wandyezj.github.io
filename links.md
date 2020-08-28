@@ -237,6 +237,9 @@ Norman, Don. The design of everyday things: Revised and expanded edition. Basic 
 
 McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Learning, 2013.
 
+
+Diane Tavenner. Prepared: What Kids Need for a Fulfilled Life. New York: Currency, 2019.
+
 ## Opportunities
 
 [Scouting](https://www.scouting.org/)

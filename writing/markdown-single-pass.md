@@ -16,6 +16,20 @@ Priorities
 
 https://marked.js.org/demo/
 
+[delimiters](https://en.wikipedia.org/wiki/Delimiter)
+
+- '``` ` ```' [backtick](https://en.wikipedia.org/wiki/Grave_accent)
+- '`\n`' [newline](https://en.wikipedia.org/wiki/Newline)
+- '`#`' [hash](https://en.wikipedia.org/wiki/Number_sign)
+- '` `' [space](https://en.wikipedia.org/wiki/Space_(punctuation))
+- '`-`' [dash](https://en.wikipedia.org/wiki/Dash)
+- '`[`' [open square bracket](https://en.wikipedia.org/wiki/Bracket)
+- '`]`' [close square bracket](https://en.wikipedia.org/wiki/Bracket)
+- '`(`' [open round bracket](https://en.wikipedia.org/wiki/Bracket)
+- '`)`' [close round bracket](https://en.wikipedia.org/wiki/Bracket)
+- '`.`' [dot](https://en.wikipedia.org/wiki/Full_stop)
+
+
 ## Features
 
 ### Paragraph
@@ -178,7 +192,14 @@ Same as Link, with an exclamation point to start with a different html block out
 <p><a href="linkthree">titlethree</a></p>
 ```
 
-### Code
+### Code Inline
+
+- Delimiter Open: backtick `
+- Delimiter Close: backtick `
+
+An open delimiter prompts a search to the next newline for a closing delimiter. If a closing delimiter is found before a newline character the text in between is placed between code blocks.
+
+### Code Multiline
 
 ```md
 

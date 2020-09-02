@@ -222,3 +222,9 @@ note: could also support single ` on a line, but this seems redundant.
 
 What about:
 ```test```
+
+## Algorithms
+
+### Delimiter search
+
+seek forward to the next delimiter while storing or outputting previous contents

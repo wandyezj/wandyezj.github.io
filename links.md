@@ -251,6 +251,11 @@ Diane Tavenner. Prepared: What Kids Need for a Fulfilled Life. New York: Currenc
 
 - [AmeriCorps on Wikipedia](https://en.wikipedia.org/wiki/AmeriCorps)
 
+## Rhetoric
+
+[American Rhetoric Top 100 Speeches](https://www.americanrhetoric.com/top100speechesall.html)
+
+[Duty, Honor, Country](https://www.americanrhetoric.com/speeches/douglasmacarthurthayeraward.html)
 
 ## English Grammar
 

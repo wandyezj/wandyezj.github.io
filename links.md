@@ -181,6 +181,14 @@
 
 - encrypt computer hard drives so data cannot be read from the drive without authentication. This protects the data on your device when your computer leaves your physical presence.
 
+[Panopticlick](https://panopticlick.eff.org/)
+
+- Check your browsers capability to prevent tracking
+
+[justdelete.me](justdelete.me)
+
+- How to delete accounts in different websites. For security only join websites that have easily deleted accounts. 
+
 ### Image Editing
 
 [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)

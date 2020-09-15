@@ -108,6 +108,8 @@
 
 - Markdown to HTML library
 
+[Fluid Framework](https://fluidframework.com/)
+
 ### Programming
 
 [Elements Of Programming](http://elementsofprogramming.com/)
@@ -179,6 +181,14 @@
 
 - encrypt computer hard drives so data cannot be read from the drive without authentication. This protects the data on your device when your computer leaves your physical presence.
 
+[Panopticlick](https://panopticlick.eff.org/)
+
+- Check your browsers capability to prevent tracking
+
+[justdelete.me](justdelete.me)
+
+- How to delete accounts in different websites. For security only join websites that have easily deleted accounts. 
+
 ### Image Editing
 
 [Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
@@ -237,6 +247,9 @@ Norman, Don. The design of everyday things: Revised and expanded edition. Basic 
 
 McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Learning, 2013.
 
+
+Diane Tavenner. Prepared: What Kids Need for a Fulfilled Life. New York: Currency, 2019.
+
 ## Opportunities
 
 [Scouting](https://www.scouting.org/)
@@ -248,6 +261,11 @@ McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Lea
 
 - [AmeriCorps on Wikipedia](https://en.wikipedia.org/wiki/AmeriCorps)
 
+## Rhetoric
+
+[American Rhetoric Top 100 Speeches](https://www.americanrhetoric.com/top100speechesall.html)
+
+[Duty, Honor, Country](https://www.americanrhetoric.com/speeches/douglasmacarthurthayeraward.html)
 
 ## English Grammar
 

@@ -24,3 +24,10 @@ https://en.wikipedia.org/wiki/Literacy_in_the_United_States
 Studies suggest 10 -20% of American adults are illiterate or have low literacy skills.
 
 Would this make it 
+
+## Statements
+
+Inefficient, breaking the market
+Unfair, requires those that work hard to subsidize those who choose not to.
+
+Why not Universal Basic Work?

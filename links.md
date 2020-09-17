@@ -250,6 +250,9 @@ McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Lea
 
 Diane Tavenner. Prepared: What Kids Need for a Fulfilled Life. New York: Currency, 2019.
 
+
+[W. Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming)
+
 ## Opportunities
 
 [Scouting](https://www.scouting.org/)

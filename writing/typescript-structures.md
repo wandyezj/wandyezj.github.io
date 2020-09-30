@@ -93,9 +93,32 @@ switch (selection) {
 
 note: cases fall though to the next case unless they follow a break.
 
+## TryStatement
+
+```typescript
+try {
+
+} catch (e) {
+
+}
+```
+
 ## BreakStatement
 
 ```typescript
 break;
 ```
 
+## ThrowStatement
+
+```typescript
+declare let value: string;
+throw value;
+```
+
+## ReturnStatement
+
+```typescript
+declare let value: string;
+return value;
+```

@@ -93,7 +93,7 @@ Employing a known __Mental Model__ and __Technical Model__  significantly reduce
 
 ##### Minimal
 
-Fewer concepts generally takes less time to understand. Employing a __Mental Model__ and __Technical Model__ have as few steps or pieces as possible will generally make it easier to grasp.
+Fewer concepts generally takes less time to understand. Employing a __Mental Model__ and __Technical Model__ that have as few steps or few pieces as possible will generally make it easier to grasp.
 
 ### Behavior
 

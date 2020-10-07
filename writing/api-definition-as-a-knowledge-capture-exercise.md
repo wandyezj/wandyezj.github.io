@@ -2,11 +2,11 @@
 
 The purpose of defining APIs is to capture as much information as possible as to how they should behave.
 
-API Designs that are useful, intuitive, and testable are time consuming to produce but the results are worth it.
+API Designs that are useful, intuitive, and testable are time consuming to produce but the results may be worth it.
 
 ## Vision
 
-Provide a process for API design to Maximize the benefit of the design process.
+Provide a process for API design to maximize the benefit of the design process.
 
 ### Universal API
 
@@ -16,7 +16,7 @@ Where possible APIs should be made abstract enough to apply across applications 
 
 Developers should only have to learn a pattern once for it to be widely applicable.
 
-Allowing the same API structure allows all the thought that went into the design, documentation, and tests to be taken to the new implementation. This frees developers to focus on the  specific implementation and to innovate in new areas.
+Allowing the same API structure allows all the thought that went into the design, documentation, and tests to be taken to the new implementation. This frees developers to focus on the specific implementation and to innovate in new areas.
 
 ## The Exercise
 
@@ -30,13 +30,13 @@ None of the design steps are do once, instead the design process goes between st
 
 First, API scenarios are defined: What should consumers of the API be able to do?
 
-Scenarios should
+Scenarios should:
 
 - define a real world use case where the API is immediately useful
 
 ### Shape
 
-Next, the API shape is defined: interfaces, classes, enums, methods.
+Second, the API shape is defined: interfaces, classes, enums, methods.
 
 Shape should:
 
@@ -44,7 +44,7 @@ Shape should:
 
 ### Documentation
 
-Next, the the various shapes are documented.
+Third, the the various shapes are documented.
 
 Documentation should:
 
@@ -53,7 +53,7 @@ Documentation should:
 
 ### Units
 
-Next, the documentation is turned into unit tests that should exercise all aspects of the API, including error conditions.
+Fourth, the shape, and documentation are used to define unit tests that should exercise all aspects of the API, including error conditions.
 
 Units should:
 
@@ -64,7 +64,7 @@ Units should:
 
 ### Mocks
 
-Next, the defined scenarios are mocked up with the API to show that the API meets the scenario requirements.
+Fifth, the defined scenarios are mocked up with the API to show how the API meets the scenario requirements.
 
 Mocks should:
 

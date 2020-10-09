@@ -529,6 +529,45 @@ Naming
 
 * It's possible that any exposed data can be correlated with the data sets and individual users revealed
 
+
+### Saltzer and Schroeder Design Principles
+
+[The protection of information in computer systems]: http://web.mit.edu/Saltzer/www/publications/protection/Basic.html "The protection of information in computer systems"
+
+[Saltzer, Jerome H., and Michael D. Schroeder. "The protection of information in computer systems." Proceedings of the IEEE 63, no. 9 (1975): 1278-1308.][The protection of information in computer systems]
+
+* Economy of mechanism: Keep the design as simple and small as possible.
+* Fail-safe defaults: Base access decisions on permission rather than exclusion.
+* Complete mediation: Every access to every object must be checked for authority.
+* Open design: The design should not be secret.
+* Separation of privilege: Where feasible, a protection mechanism that requires two keys to unlock it is more robust and flexible than one that allows access to the presenter of only a single key.
+* Least privilege: Every program and every user of the system should operate using the least set of privileges necessary to complete the job.
+* Least common mechanism: Minimize the amount of mechanism common to more than one user and depended on by all users.
+* Psychological acceptability: It is essential that the human interface be designed for ease of use, so that users routinely and automatically apply the protection mechanisms correctly.
+* Work factor: Compare the cost of circumventing the mechanism with the resources of a potential attacker.
+* Compromise recording: It is sometimes suggested that mechanisms that reliably record that a compromise of information has occurred can be used in place of more elaborate mechanisms that completely prevent loss.
+
+On fail safe defaults:
+
+"Base access decisions on permission rather than exclusion"
+
+"The alternative, in which mechanisms attempt to identify conditions under which access should be refused, presents the wrong psychological base for secure system design"
+
+
+## The Elements of Style
+
+
+[The elements of style]: https://gutenberg.org/ebooks/37134 "The elements of style"
+
+[Strunk, William. The elements of style.][The elements of style]
+
+
+* Put statements in positive form
+
+"Consciously or unconsciously, the reader is dissatisfied with being told what is not; he wishes to be told what is. Hence, as a rule, it is better to express even a negative in positive form"
+
+* use definitive, specific, concrete language
+
 ## Intent
 
 The intent of this paper is to build a mental model of the purpose and pieces of an API in the readers mind.

@@ -380,7 +380,18 @@ The relationship between housing and transportation is a function of where the w
 Adjusting to a healthier diet with less preprocessed, less prepackaged food, less meat, more beans, more vegetables, more fruits, more healthy homemade food is more nutritious 
 
 
+## Process for Assessment
 
+Consistent Expenses
+Year, Month, Day
 
+Consider all expenses yearly as the base value.
+For expenses that span across years consider a yearly contribution via financing options (no required down payment) or over the expected lifetime of the product.
+
+Could break it down in terms of number of hours going towards each item.
+
+Think of all work in terms of hours and total wages produced from those hours.
+
+One Time Expenses
 
 

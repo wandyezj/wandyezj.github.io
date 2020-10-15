@@ -392,6 +392,28 @@ Could break it down in terms of number of hours going towards each item.
 
 Think of all work in terms of hours and total wages produced from those hours.
 
+Can also break each item down in terms of the number of hours required.
+
+Show each expense in terms of:
+Total Cost, hours worked for that expense per year
+
 One Time Expenses
+
+How should these factor in?
+
+
+Budget Expense List
+
+Give specific options
+
+- housing
+- transportation
+- food
+- phone
+- phone plan
+- cloths
+- internet
+- healthcare
+
 
 

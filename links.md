@@ -201,6 +201,16 @@
 
 [SVG Clipping and Masking](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
 
+### Tools
+
+[YouTube DL](http://ytdl-org.github.io/youtube-dl/)
+
+- Download clips from YouTube to remix and create new art
+
+[FFmpeg](https://ffmpeg.org/)
+
+- A complete, cross-platform solution to record, convert and stream audio and video.
+
 ### Concepts
 
 [Set Theory](https://en.wikipedia.org/wiki/Set_theory)
@@ -209,7 +219,11 @@
 
 ### Life
 
+[Scarleteen](https://www.scarleteen.com/)
+
 [sexplanations](https://www.youtube.com/user/sexplanations/videos)
+
+[Hair Types](https://en.wikipedia.org/wiki/Hair)
 
 ### Data
 
@@ -226,6 +240,13 @@
 ### Law
 
 [Roberts Rules of Order](https://en.wikipedia.org/wiki/Robert%27s_Rules_of_Order)
+
+[Creative Commons](https://creativecommons.org/about/cclicenses/)
+    - CC0 release to public domain
+
+[Unlicense](https://unlicense.org/)
+    - Unlicense code
+
 
 ### Presentation
 

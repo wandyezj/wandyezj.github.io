@@ -203,7 +203,7 @@
 
 ### Tools
 
-[YouTube DL](http://ytdl-org.github.io/youtube-dl/)
+[YouTube DL](https://youtube-dl.org/)
 
 - Download clips from YouTube to remix and create new art
 

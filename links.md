@@ -217,13 +217,13 @@
 
 - Useful for description
 
-### Life
+### Code Puzzles
 
-[Scarleteen](https://www.scarleteen.com/)
+[Advent Of Code](https://adventofcode.com/)
 
-[sexplanations](https://www.youtube.com/user/sexplanations/videos)
+[Project Euler](https://projecteuler.net/)
 
-[Hair Types](https://en.wikipedia.org/wiki/Hair)
+[USACO](https://train.usaco.org/)
 
 ### Data
 
@@ -236,6 +236,15 @@
 - Find out what government agencies are up to
 
 [US Department of Education Data](https://www2.ed.gov/rschstat/landing.jhtml)
+
+### Life
+
+[Scarleteen](https://www.scarleteen.com/)
+
+[sexplanations](https://www.youtube.com/user/sexplanations/videos)
+
+[Hair Types](https://en.wikipedia.org/wiki/Hair)
+
 
 ### Law
 

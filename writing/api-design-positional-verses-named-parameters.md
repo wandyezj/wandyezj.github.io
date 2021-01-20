@@ -36,7 +36,9 @@ How frequently do we add new parameters?
 f(positional, options?)
 
 
+May think that it is not relevant to versioned APIs but that is not true because it creates a barrier to move to the updated version when new functionality or ongoing support is desired.
 
+Tightly tied to compatibility and the nature of breaking changes.
 
 
 # Adding additional parameters to published APIs

@@ -2,6 +2,10 @@
 
 What defines a community?
 
+What does the community look like?
+
+Where do interactions within the community take place?
+
 What holds a community together?
 
 Shared: beliefs, values, traditions, interpersonal connections
@@ -11,6 +15,8 @@ What challenges a community?
 A community is fundamentally challenged by threats to what binds them together. A community would be completely stable without some sort of change. So what change would threaten what holds the community together?
 
 How does the community respond to those threats?
+
+How does the community make decisions?
 
 What are the consequences on the community of those decisions?
 

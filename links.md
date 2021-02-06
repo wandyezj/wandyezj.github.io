@@ -110,6 +110,10 @@
 
 [Fluid Framework](https://fluidframework.com/)
 
+[jsonc parser](https://www.npmjs.com/package/jsonc-parser)
+
+- parse JSON with comments using `stripComments`
+
 ### Programming
 
 [Elements Of Programming](http://elementsofprogramming.com/)

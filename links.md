@@ -80,6 +80,10 @@
 
 - Homepage of Bjarne Stroustrup (Designer of the C++ Programming Language)
 
+[HTTrack](https://www.httrack.com/)
+
+- Website Copier
+
 ### Software Security
 
 [OWASP](https://www.owasp.org/)

@@ -40,5 +40,18 @@ Physical Security
 - Be Skeptical
 - Verify and Proceed
 
+- Be paranoid.
+- Do not friend people on social media that you have not met in person.
+- Do not approve any two factor authentication prompts if you did not just make a request
+- Do not install extensions
+- Do not open suspicious files
+- Do not install applications from unverified sources
+- Do not accept unsolicited emails
 
+Every application even legitimate ones on the machine is a potential source for supply chain attacks
+- Disable automatic updates for most applications, especially popular ones.
+- Disable remote access
 
+Be careful what you click ok.
+
+Don't click on links, instead go to the site directly.

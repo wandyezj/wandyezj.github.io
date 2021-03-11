@@ -42,6 +42,9 @@ Website is pretty simple:
 
 JSON file for each building `<number>.json` and a picture of the building. certificate can be looked up with`<url>?certificate=<number>`,  an QR code can be printed for a specific building (QR code can contain 4296 characters).
 
+## Building Nutrition Label
+
+- Could apply to a whole host of safety issues
 
 
 

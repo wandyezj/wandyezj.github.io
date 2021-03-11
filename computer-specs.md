@@ -14,11 +14,17 @@
 
 ## Motherboard
 
-[ASUS H170M-PLUS](https://www.asus.com/Motherboards/H170M-PLUS/specifications/)
+[ASUS H170M-PLUS](https://www.asus.com/Motherboards-Components/Motherboards/All-series/H170M-PLUS/)
+
+[ASUS H170M-PLUS Manual](https://dlcdnets.asus.com/pub/ASUS/mb/LGA1151/H170M-PLUS/E10763_H170M-PLUS_UM_WEB.pdf)
 
 [ASUS H170M-PLUS Driver Downloads](https://www.asus.com/Motherboards/H170M-PLUS/HelpDesk_Download/)
 
 - Note: built in case audio, requires installing the motherboard audio driver
+
+## TPM
+
+[ASUS TMP-M R2.0](https://www.asus.com/Motherboards-Components/Motherboards/Accessories/TPM-M-R2-0/)
 
 ## CPU
 

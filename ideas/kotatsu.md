@@ -60,11 +60,13 @@ Ipe
 SCAD
 
 ```scad
+
 // Kotatsu Design
 
 // Resolution Control
 $fa = 1;
 $fs = 0.4;
+
 
 table_top_diameter_cm = 100;
 table_top_thickness_cm = 2;
@@ -72,8 +74,14 @@ table_top_thickness_cm = 2;
 table_leg_diameter_cm = 4;
 table_leg_height_cm = 30;
 
+// Distance between table legs
+table_leg_distance_between = 50;
+
+// Top of the table top
+table_top_y = 100;
+
 // Table Top
-translate([0, 0, 100])
+translate([0, 0, table_top_y])
     cylinder(
     h=table_top_thickness_cm,
     r=table_top_diameter_cm,
@@ -86,10 +94,46 @@ cylinder(
     h=table_leg_height_cm,
     r=table_leg_diameter_cm,
     center=true);
+    
+    
+legs = [
+    [1, 1],
+    [1, -1],
+    [-1, 1],
+    [-1, -1]
+];
+
+for ( i = [ 0 : len(legs)]) {
+    //echo(i);
+    //echo(legs[i]);
+    leg = legs[i];
+    echo(leg);
+    d = table_leg_distance_between / 2;
+    dx = leg[0] * d;
+    dy = leg[1] * d;
+    echo(dx);
+    echo(dy);
+    
+    // Draw the leg
+    translate([dx, dy, table_top_y 
+    - table_leg_height_cm
+    - table_top_thickness_cm])
+        cylinder(
+        h=table_leg_height_cm,
+        r=table_leg_diameter_cm);
+    
+    
+}
+
+
 
 
 
 ```
+
+
+
+
 
 
 ## Techniques

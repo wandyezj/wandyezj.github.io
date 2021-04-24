@@ -76,3 +76,5 @@ const startTimeMilliseconds = getMillisecondsSinceStart()
 - Prefer strongly typed scripting languages, it keeps you from making dumb mistakes
 
 - Within a team standardize on one scripting language, preference should be node TypeScript
+
+- have most common code pathways come before less common pathways. In the case of doing something special for specific cases in a loop do the cases in order of occurance.

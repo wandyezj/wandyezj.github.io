@@ -60,3 +60,24 @@ Clients should keep all their data local and only send out data upon request. Po
 Like any piece of technology this one is subject to abuse. How can abuse be prevented? Well if it is well designed it cannot. Instead people would have to infiltrate the human network that makes up the social network and follow laws instead. This would increase expense and force enforcement to only the most egregious examples of abuse. This would also require more collaboration from enforcement agencies which is beneficial to everyone.
 
 IP address is traceable to a physical location even with a VPN since VPN providers can be compelled by law to provide logs upon request. This vastly eases enforcement to abuse as determined by law.
+
+## Technology
+
+Points and Channels.
+
+Android Phones are the most widely distributed computing element. So any system should allow these phones to be used as the base.
+
+Bluetooth 5 400m range is present on even low end phones.
+
+Low end hardware commodity hardware that can be flashed to serve as redistribution points and further increase the robustness of the network.
+
+## Control of Data
+
+Data once released to the network can not easily be removed from the network, this is simply a rule of any network. Good nodes could respect deletion requests, however a bad node could choose to archive any piece of data.
+
+One possibility is to only communicate with trusted nodes or to anonymize information.
+an node can choose which nodes it decides to trust. Trust goes both ways.
+
+Since infinite nodes can be added the transmission and prevalence of data or is up to who controls the codes.
+
+

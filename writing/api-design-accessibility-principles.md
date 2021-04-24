@@ -194,6 +194,14 @@ Following the principles outlined for each concept can help transfer the desired
     * [Show Intent](#show-intent)
 
 
+## Implications
+
+The concepts of Minimal and Employ Existing when combined support the API begin consistent within itself and with other APIs. To be Minimal an API must refrain from introducing new concepts instead it should Employ Existing concepts when possible.
+
+## Examples
+
+
+
 ## Reference
 
 ### McKeachie's Teaching Tips

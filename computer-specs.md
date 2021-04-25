@@ -26,6 +26,10 @@
 
 [ASUS TMP-M R2.0](https://www.asus.com/Motherboards-Components/Motherboards/Accessories/TPM-M-R2-0/)
 
+## WiFi and Bluetooth
+
+[ASUS PCE-AX58BT](https://www.asus.com/us/Networking-IoT-Servers/Adapters/All-series/PCE-AX58BT/)
+
 ## CPU
 
 [CORE I5-6500 FC-LGA14C](https://ark.intel.com/products/88184/Intel-Core-i5-6500-Processor-6M-Cache-up-to-3-60-GHz-)

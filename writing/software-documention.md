@@ -99,3 +99,57 @@ documetnation as knowledge pool
 documentation as a force multiplier for key architects.
 
 Generally knowledge lies in the heads of a few key technical people. These people are the goto people for their area. Many of the questions directed their way could be answered by documentation.
+
+Priority of Documentation
+
+- repository location
+- setup, build, test, run
+- intent
+- component overview
+- contribution to larger architecture
+
+## Papers
+
+### Laser 2021
+
+[Architectural Archipelagos: Technical Debt in Long-Lived Software Research Platforms](https://arxiv.org/pdf/2104.08432.pdf)
+
+Laser, Marcelo Schmitt, Duc Minh Le, Joshua Garcia, and Nenad Medvidović. "Architectural Archipelagos: Technical Debt in Long-Lived Software Research Platforms." arXiv preprint arXiv:2104.08432 (2021).
+
+- Incentive structure isn't to build reusable tools
+- Wide contributor base with lack of standards leads to islands of code that can't be recycled
+- "archipelagos fall into disuse as
+students perceive that building new capabilities from scratch
+is easier than trying to refactor and reuse existing capabilities"
+- temporary project contributors lack incentive to look over long term
+- funded projects limited in duration
+- no enforced architectural constrains except existing APIS
+    - "This leads to architectural dissimilarities between
+software islands that range from the code level, such as naming
+conventions and design patterns used, to the architectural level,
+such as architectural styles followed and connector types used."
+    - "Extensions may even be created using different technology,
+such as a new programming language, with little consideration
+given to the complexity of managing such a project."
+    - "Technical debt is accumulated
+rapidly, and the combined lack of (1) focus on development
+and (2) cohesion between team members means it is extremely
+difficult to repay it. Eventually, the amount of technical debt
+exceeds the benefits of extending the archipelago, at which
+point the archipelago stagnates and is often discarded."
+
+No enforcement ->  people do whatever
+
+### de Almeida 2021
+
+[Beyond tight deadlines: what are the business causes for technical debt?](https://arxiv.org/pdf/2104.09330.pdf)
+
+de Almeida, Rodrigo Rebouças, Christoph Treude, and Uirá Kulesza. "Beyond tight deadlines: what are the business causes for technical debt?." arXiv preprint arXiv:2104.09330 (2021).
+
+## To Read
+
+M. Shaw, D. Garlan et al., Software architecture. Prentice Hall
+Englewood Cliffs, 1996.
+
+ L. Bass, P. Clements, and R. Kazman, Software architecture in practice.
+Addison-Wesley Professional, 2003

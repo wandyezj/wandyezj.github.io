@@ -28,22 +28,32 @@ Person would then need to control their expenses to stay within their preplanned
 
 ## Living Expenses
 
-* Housing
-* Food
-* Transportation
-* Healthcare
-* Clothing
-* Essentials
-* Entertainment
+- Housing
+- Food
+- Transportation
+- Healthcare
+- Clothing
+- Essentials
+- Entertainment
 
 ### Housing
 
-* Close to work can reduce transportation costs
-* Further from work might be less expensive
-* Utilities
-* Possibly live with roommates to reduce cost?
+- Close to work can reduce transportation costs
+- Further from work might be less expensive
+- Utilities
+- Possibly live with roommates to reduce cost?
 
 Aim for about 500 per month = 6000 per year
+
+Per Month   | Per Year  | notes
+---         | ---       | ---
+100         | 1200      | Living with a benevolent person
+300         | 3600      | Splitting with someone
+500         | 6000      |
+600         | 7200      | Most places start at 600
+700         | 8400      |
+
+Owning can be less than renting due to tax breaks and once the loan is paid off.
 
 ### Food
 
@@ -51,52 +61,52 @@ Nutritious Balanced Diet with a reasonable taste (delicious once you have become
 
 Basics
 
-* Onions
-* Spinach
-* Kale
-* Tomatoes
-* Potatoes
-* Beans
-* Lentils
-* Peppers
-* Spices + Herbs +Salt
+- Onions
+- Spinach
+- Kale
+- Tomatoes
+- Potatoes
+- Beans
+- Lentils
+- Peppers
+- Spices + Herbs +Salt
     - a little goes a long way
-* Garlic
-* Oatmeal
-* Bananas
-* Masa Flour
-* Whole Wheat Flour
-* Rice
-* Olive Oil
-* Fish
+- Garlic
+- Oatmeal
+- Bananas
+- Masa Flour
+- Whole Wheat Flour
+- Rice
+- Olive Oil
+- Fish
 
 Avoid anything with butter or sugar or anything you can't pronounce on the back of the package.
 
 What is the cost per meal?
 
-* Home cooking
+- Home cooking
 
-    * Specific meals, cost per meal = cost of ingredients / number of meals
-    * Chili
-    * Tacos
-    * Guacamole
-    * Sandwiches
-    * Cereal
-        * Gallon of milk = ~3
-        * Box of cereal = ~ < 4
-        * Per week = 7
-        * Per Day = ~1
-    * Oatmeal
-    * Pancakes
-    * Pasta
-    * Toast
-    * Fajitas
-    * Fruit
-    * Pizza
-    * Nuts
-    * Stir Fry
-    * Stew
-    * Soup
+    - Specific meals, cost per meal = cost of ingredients / number of meals
+    - Chili
+    - Tacos
+    - Guacamole
+    - Sandwiches
+    - Cereal
+        - Gallon of milk = ~3
+        - Box of cereal = ~ < 4
+        - Per week = 7
+        - Per Day = ~1
+    - Oatmeal
+    - Pancakes
+    - Pasta
+    - Toast
+    - Fajitas
+    - Fruit
+    - Pizza
+    - Nuts
+    - Stir Fry
+    - Stew
+    - Soup
 
 Would it be possible to have an app that checks the store prices of ingredients and checks how expensive it is to make the meal?
 
@@ -104,44 +114,46 @@ The cost per meal is a function of diet, healthier diets tend to be less expensi
 
 Total Meals in a year:
 
-* 365 Breakfast
-    * at 1 per meal = 365
-    * at 2 per meal = 730
-* 365 Lunch
-    * at 4 per meal = 1460
-* 365 Dinner
-    * at 5 per meal = 1825
+- 365 Breakfast
+    - at 1 per meal = 365
+    - at 2 per meal = 730
+- 365 Lunch
+    - at 4 per meal = 1460
+- 365 Dinner
+    - at 5 per meal = 1825
 
 Total = 3650-4015
+
+This can be reduced further if most food is homemade and following a healthy diet (which tastes better that processed food)
 
 ### Transportation
 
 Recommendation live close to work and save. Transportation options and cost will be determined by how the community is designed.
 
-Using the bus and using a car could come out to be roughly equivalent in terms on monetary expenses depending on the area. However, the bus will generally be significantly less expensive and more reliable.
+Using the bus and using a car could come out to be roughly equivalent in terms on monetary expenses depending on the area. However, the bus will generally be significantly less expensive and potentially more reliable.
 
 A car can offers significantly more freedom than a bus in terms of choosing residence and work options, although it can be a significant expense.
 
-* Walk
+- Walk
     - Least expensive solution requires living close to work, not an option for many people due to  current community design
-* Bike
+- Bike
     - Cost of a bike (lasts year) and keeping the bike in good condition
-    * A high end bike is ~1000 but lasts for over 10 years so per year thats < 100
-    * How much is maintenance?
+    - A high end bike is ~1000 but lasts for over 10 years so per year thats < 100
+    - How much is maintenance?
         - probably < 500/year ?
-* Public Transit
-    * King County = 2.75 per ride
-    * 2 rides per day = 12 per week = 1650 per year
-    * 52 weeks/year * 33/rides/week * 2.75/ride = 1716/year
-    * cost ~1716/year
-* Car
-    * Reliable Used Car
-        * Possibly ~1000
-        * Maintenance cost?
-    * Insurance
-        * Possibly ~800 per year or more possible ~1000
-    * Gas
-    * What is the cost per mile?
+- Public Transit
+    - King County = 2.75 per ride
+    - 2 rides per day = 12 per week = 1650 per year
+    - 52 weeks/year * 33/rides/week * 2.75/ride = 1716/year
+    - cost ~1716/year
+- Car
+    - Reliable Used Car
+        - Possibly ~1000
+        - Maintenance cost?
+    - Insurance
+        - Possibly ~800 per year or more possible ~1000
+    - Gas
+    - What is the cost per mile?
     - What is the cost of a new car financed on a per month basis?
         - Tesla 2020 Model 3 Standard (300 mile range) Lease 371/month = ~4452/year
         - Tesla 2020 Model Y Standard (300 mile range) Lease ~500/month = ~6000/year
@@ -162,40 +174,44 @@ A car can offers significantly more freedom than a bus in terms of choosing resi
 
 ### Healthcare
 
-* Really Expensive!!!
-* What is the lowest cost plan?
+- Really Expensive!!!
+- What is the lowest cost plan?
 
-* Possibly can get paid for by the government
-* Medicaid is available if close to poverty level of 12000
+- Possibly can get paid for by the government
+- Medicaid is available if close to poverty level of 12000
 
-* Insurance is maybe 200/400/500 month?
+- Insurance is maybe 200/400/500 month?
     - Highly dependent on the state
     - in 2020 Washington State seems to be about 340?
     - Seems to really depend on the plan
     - so maybe in the range of 2400/4800/6000
 
+Best way to reduce Healthcare costs is to take care of your body, avoid dangerous hobbies, and avoid dangerous occupations.
+
 ### Clothing
 
 How many outfits are required?
 
-* Work
-* Home
-* Outdoors
+- Work
+- Home
+- Outdoors
 
 Specific Items
 
-* T-shirts
-    * ~20 each but last several (5+) years
-    * Possibly much less expensive at a thrift store ~5
-* Shoes
-    * Nice ones that last a year are probably around 100
-* Pants
+- T-shirts
+    - ~20 each but last several (5+) years
+    - Possibly much less expensive at a thrift store ~5
+- Shoes
+    - Nice ones that last a year are probably around 100
+- Pants
     - Jeans - last a long time and can be comfortable
     - Maybe some nice ones are 50
-* Shorts
+- Shorts
     - Can be made from old jeans by cutting and sewing the bottoms if you are fashion and cost conscious
-* Undergarments
+- Undergarments
     - 20
+
+Most items cost can be significantly reduce by buying used.
 
 Say the total cost is ~200 if you get one reliable new outfit that lasts each year, and a new pair of shoes (although some shoes such a certain Sperry's can last multiple years)
 
@@ -216,7 +232,7 @@ Total cost of laundry is about <~350
 
 ### Essentials
 
-* Phone
+- Phone
     - Phones are essential for almost every aspect of every day life. Coordinating with friends and family, finding Jobs, and being contacted for Jobs.cows
     What is needed on a phone?
     What model of phone?
@@ -236,13 +252,13 @@ Total cost of laundry is about <~350
     - This means a single phone and plan can range from about 500/year to 1152/year depending on how cost and cooperative people are.
     - note: some phone models can be turned into wifi hotspots 'tethering', thus an external laptop can be connected to the internet through a phone plan. That is a laptop could be used to do work offline to be synced later or to browse more comfortably. Would have to check what the data plan is for the phone, however most basic tasks should be doable.
 
-* Bed - a bed can last 10+ years
+- Bed - a bed can last 10+ years
     - A comfy bed is potentially bad for physical health, recommendations are a pallet (like Japan) which can be less expensive,
     - babies are especially at risk if they are kept in cushy beds with
     - Parents sleeping with their kids in the same bed has when they are younger has show significant health benefits especially to mental well being as the child grows (although it's possible intimacy between a couple can suffer if other arrangements are not made)
-* Sheets - a set of sheets can last 5+ years
-* Cleaning Supplies
-* Cooking Equipment
+- Sheets - a set of sheets can last 5+ years
+- Cleaning Supplies
+- Cooking Equipment
     what specifically? Generally lasts a long time 10+ years
     - Instant Pot
     - Toaster
@@ -252,30 +268,30 @@ Total cost of laundry is about <~350
 
 Strive for zero cost options
 
-* Exercise without equipment
-    * Walks
-    * Free form exercise
-    * Biking
-* Social
-    * Community Service
-    * Local Government
-    * Chats
-    * Board Games
-    * Story Games
-    * Cards Games
+-  Exercise without equipment
+    - Walks
+    - Free form exercise
+    - Biking
+- Social
+    - Community Service
+    - Local Government
+    - Chats
+    - Board Games
+    - Story Games
+    - Cards Games
 
-* Library
-* Writing
-* Computer
-    * Expensive to have home internet at ~40 per month means ~480 per year
-        * Can use free computers at the library
-        * Can use free wifi at a library or most cafes
-        * YouTube Videos
-        * Wikipedia
-        * Research
-    * A reasonable laptop computer is about ~400 a nice one is around 800, however the computer should last around 4+ years meaning this is a cost of about 100 to 200 per year (much less expensive than internet)
-        * Multimedia art programs
-        * Probably want if using public transportation
+- Library
+- Writing
+- Computer
+    - Expensive to have home internet at ~40 per month means ~480 per year
+        - Can use free computers at the library
+        - Can use free wifi at a library or most cafes
+        - YouTube Videos
+        - Wikipedia
+        - Research
+    - A reasonable laptop computer is about ~400 a nice one is around 800, however the computer should last around 4+ years meaning this is a cost of about 100 to 200 per year (much less expensive than internet)
+        - Multimedia art programs
+        - Probably want if using public transportation
 
 #### Expensive Entertainment
 
@@ -284,22 +300,22 @@ Sins of a Budget
 These are entertainment options that can be very expensive
 
 
-* Pets
-* Smoking
-* Drinking
-* Junk Food
-* Fashion
-* Salons
-* Subscriptions
-* Makeup
-* Restaurants
-* Travel
-* Kids
+- Pets
+- Smoking
+- Drinking
+- Junk Food
+- Fashion
+- Salons
+- Subscriptions
+- Makeup
+- Restaurants
+- Travel
+- Kids
 
 Comments
 
-* Restaurants are expensive and generally serve food that is not optimal (and sometimes harmful) for physical health
-* Kids are expensive, if you are trying to keep costs low to work minimal hours and pursue artistic passions, kids are not ideal. Each child costs roughly ~1000+/month = ~12,000/year. Not to mention the incredible investment in parental time.
+- Restaurants are expensive and generally serve food that is not optimal (and sometimes harmful) for physical health
+- Kids are expensive, if you are trying to keep costs low to work minimal hours and pursue artistic passions, kids are not ideal. Each child costs roughly ~1000+/month = ~12,000/year. Not to mention the incredible investment in parental time.
 
 ## Case Study for Seattle
 
@@ -315,25 +331,25 @@ What is the tax rate?
 
 What is income post tax?
 
-* Housing
+- Housing
     - 800-1000/month ~= 7600-12000/year depending on where you live and if you have a roommate.
-* Phone
+- Phone
     - 500-1152 hinging on how good of a relationship you have with your parents
-* Transportation
+- Transportation
     - Walk, Bike, Bus
     - 0, 100, 1716
     - Cars are not a reliable option to get to work in Seattle unless you want to be stuck in traffic
-* Clothes
+- Clothes
     - ~600/year
         - 350 Laundry
         - 200 New Clothes
         - 50 round to make math easy
-* Food
+- Food
     - 3650-4015/year
     - heavily dependent on diet, healthy diets tend to be less expensive
     - avoiding meat (unhealthy + gross) reduces costs
     - avoiding preprocessed food (unhealthy + gross) reduces costs
-* Health Care
+- Health Care
     - 5000/year
     - Health insurance is a mess on complication since it is highly variable based on plan choice, co-pays, deductibles, etc.. Why is it so complicated? Decided on what seems like a high amount, but maybe it isn't? Also depends if it is covered by an employer
 

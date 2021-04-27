@@ -99,3 +99,5 @@ documetnation as knowledge pool
 documentation as a force multiplier for key architects.
 
 Generally knowledge lies in the heads of a few key technical people. These people are the goto people for their area. Many of the questions directed their way could be answered by documentation.
+
+Documentation not the primary motivation, where does documentation deliver value?

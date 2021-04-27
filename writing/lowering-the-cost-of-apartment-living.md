@@ -31,5 +31,11 @@ More convenience is more desirable
     - utilities included
 
 
+## Financing
 
+The main cost of any building is the land and initial construction cost
+
+Generally construction cost is so expensive that it requires a loan. Once the loan is paid off then the cost is simply 
+
+Thus it make sense to design buildings to either last a long time or to be built inexpensively.
 

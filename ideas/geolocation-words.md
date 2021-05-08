@@ -49,4 +49,8 @@ example
 
 - 123 456 789 - three words
 
+- 12 3456 78 9 - four words looked up in index
+
+Issues around zero
+
 

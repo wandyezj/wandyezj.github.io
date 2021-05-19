@@ -70,3 +70,15 @@ What is the message of your product?
 ## Sales
 
 How are you going to sell the product?
+
+
+## Technical
+
+Networking is a key aspect
+
+- WiFi
+    - How to connect to the wifi network?
+    - UDP broadcast to communicate between devices?
+
+- Bluetooth
+    - can communicate directly

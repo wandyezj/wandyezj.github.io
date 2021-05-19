@@ -78,6 +78,8 @@ Samsung SSD 860 EVO 2TB X 1
 
 [Microsoft Sculpt Ergonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)
 
+[Logitec MX Master 3 Advanced Wireless Mouse - Graphite](https://www.logitech.com/en-us/products/mice/mx-master-3.910-005620.html)
+
 ## Keyboard
 
 ## Scanner

@@ -335,6 +335,7 @@ What is income post tax?
     - 800-1000/month ~= 7600-12000/year depending on where you live and if you have a roommate.
 - Phone
     - 500-1152 hinging on how good of a relationship you have with your parents
+    - Home Internet: upper bound $500 + $99 a month for starlink
 - Transportation
     - Walk, Bike, Bus
     - 0, 100, 1716
@@ -432,4 +433,21 @@ Give specific options
 - healthcare
 
 
+## Assumptions
+
+What if we assumed someone was not working?
+
+Less consumption of:
+
+- Transportation
+    - $0 / year - walk / bike
+- Clothing
+    - $200 / year
+- Housing (can live in less expensive areas away from things or with other people)
+    - $7200 /year -> 600/ month
+    - $8400 /year -> $700
+- Food
+    - $2000
+
+In that case transportation and only a mobile connection is needed.
 

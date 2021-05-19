@@ -242,10 +242,14 @@ Total cost of laundry is about <~350
     Case Study: iPhone is 400, however it can be financed with the Apple Card 
     - for the 2020 iPhone SE 16.62/month for 24 months = ~200/y for 2 years
     - for the 2020 iPhone 11 29.12/month  for 24 months or ~350/y for 2 years.
-    - T mobile 
+    - T mobile
         - essential plan is 100/month for four lines
         - single line 70/month for the Magenta plan
         - single line 60 for essentials
+    - Google Fi
+        - Single person
+        - 20 + 10/GB  = 240 + 120/g?
+        - 60 for unlimited = 720
     - this means that mobile internet is  ~852/y
     - A new phone is thus at a fixed cost of ~852 a year for a single line or for a family of four lines ~1200/year or single ~300/year for four lines (family) (many people share their phone plans within a family)
     - The variable cost is in the model of phone, for a new high end phone like the iPhone this is about ~200/year on top if the phone lasts two years or, ~150 if the phone lasts three years
@@ -268,7 +272,7 @@ Total cost of laundry is about <~350
 
 Strive for zero cost options
 
--  Exercise without equipment
+- Exercise without equipment
     - Walks
     - Free form exercise
     - Biking
@@ -334,8 +338,9 @@ What is income post tax?
 - Housing
     - 800-1000/month ~= 7600-12000/year depending on where you live and if you have a roommate.
 - Phone
-    - 500-1152 hinging on how good of a relationship you have with your parents
+    - 500-1152 hinging on how good of a relationship you have with your parents or friends
     - Home Internet: upper bound $500 + $99 a month for starlink
+    - Google Fi: upper bound 60 * 12 = 720 + tax
 - Transportation
     - Walk, Bike, Bus
     - 0, 100, 1716

@@ -140,3 +140,15 @@ https://learn.adafruit.com/circuitpython-nrf52840/bluetooth-basics
 - Arduino 
     - Arduino Sense 33 BLU - Bluetooth Only
     - https://docs.arduino.cc/hardware/nano-33-iot - WiFi and Bluetooth
+
+
+## Potential Software
+
+- Android Application - Android Studio
+    - Programming is ok
+    - Can use on phones and communicate between phones
+- Windows C# Application - Visual Studio Community 2019
+    - Strong support in the .Net API, but bound to Windows
+- C# Xamarin Application
+    - looks like no abstracted support for bluetooth or WiFi would need to write custom code
+    - can write custom code, and would allow cross platform development

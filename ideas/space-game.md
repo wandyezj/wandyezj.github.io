@@ -95,5 +95,46 @@ Meaningful unit designs - It more interesting when unit composition and deployme
 
 Meaningful research decisions, want both planned and unplanned results
 
+Doesn't have to be realistic just has to be fun.
+
+
+
+## Technical
+
+A turn based grid based game is easier to implement than a real time strategy game.
+
+separate the UI from underlying engine
+
+Game is a complex state machine with global values that can be saved and loaded.
+
+Every entity should have a unique id to identify it.
+
+- makes the most sense to store things by system?
+- need to be able to retrieve all ships for a player, but this could be done by iterating over a system, but it might be easier to simply store each entity in its own set and then produce data structures on top of everything.
+
+most entities are in a system with specific coordinates attached, this means each instance can simply stored with coordinates.
+
+essentially want two views all entities and entities by system for drawing. The technical pieces can be abstracted by a data structure that contains all global entities, and simply provides methods to retrieve them.
+
+## views
+
+Star Chart - all systems in the game, empty space in between systems -> possible to travel between systems without warp points but would take forever
+System Map - individual star with planets
+
+## Entities
+
+
+- system
+
+- planets
+    - facilities
+- ships
+    - components
+- bases
+    - components
+- Warp Points
+- asteroids
+- orders
+
 
 

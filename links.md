@@ -257,6 +257,10 @@
 
 [US Department of Education Data](https://www2.ed.gov/rschstat/landing.jhtml)
 
+### Standards
+
+[Coalition for Content Provenance and Authenticity (C2PA)](https://c2pa.org)
+
 ### Life
 
 [Scarleteen](https://www.scarleteen.com/)

@@ -171,6 +171,10 @@
 
 - functionality available in specified node versions
 
+[HTML5 Canvas Deep Dive](https://joshondesign.com/p/books/canvasdeepdive/toc.html)
+
+- HTML canvas tutorial
+
 ### Information Technology
 
 [CompTIA](https://en.wikipedia.org/wiki/CompTIA)
@@ -187,7 +191,7 @@
 
 [KeePass](https://keepass.info/)
 
-- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive. Store the keepass application on the file share as well to avoid having to download it again and to use the same version consistently. Do not allow automatic updates for keepass. 
+- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive. Store the keepass application on the file share as well to avoid having to download it again and to use the same version consistently. Do not allow automatic updates for keepass.
 
 [Microsoft OneDrive Personal Vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)
 
@@ -203,7 +207,7 @@
 
 [justdelete.me](justdelete.me)
 
-- How to delete accounts in different websites. For security only join websites that have easily deleted accounts. 
+- How to delete accounts in different websites. For security only join websites that have easily deleted accounts.
 
 ### Image Editing
 

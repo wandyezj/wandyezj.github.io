@@ -97,6 +97,7 @@ Meaningful research decisions, want both planned and unplanned results
 
 Doesn't have to be realistic just has to be fun.
 
+Many 4X strategy games devolve into micros management. However, in real management there is only so much time and so many actions that someone can take. To take away some of the micro management, limit each turn to a small number of command points. This forces the player to focus on hat is most important.
 
 
 ## Technical

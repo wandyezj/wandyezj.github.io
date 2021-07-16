@@ -1,5 +1,7 @@
 # Computer Technical Specs
 
+[PC Part Picker Link](https://pcpartpicker.com/list/JJN9Mv)
+
 ## Case
 
 [Corsair 350 D](https://www.corsair.com/us/en/Categories/Products/Cases/Obsidian-Series%E2%84%A2-350D-Micro-ATX-PC-Case/p/CC-9011028-WW)

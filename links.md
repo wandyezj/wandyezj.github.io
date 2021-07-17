@@ -301,13 +301,19 @@ Chicago Style Citations
 
 [Thompson, Ken. "Reflections on trusting trust." Commun. ACM 27, no. 8 (1984): 761-763.](https://raw.github.com/wandyezj/reference/master/trusting-trust.pdf)
 
+[Stroustrup, Bjarne. "Thriving in a crowded and changing world: C++ 2006–2020." Proceedings of the ACM on Programming Languages 4, no. HOPL (2020): 1-168.](https://raw.github.com/wandyezj/reference/master/thriving-in-a-crowded-and-changing-world-C++-2006–2020.pdf)
+
+[Armour, Phillip G. "The five orders of ignorance." Communications of the ACM 43, no. 10 (2000): 17-20.](https://raw.github.com/wandyezj/reference/master/five-orders-of-ignorance.pdf)
+
 Norman, Don. The design of everyday things: Revised and expanded edition. Basic books, 2013.
+
+Norman, Donald A. The invisible computer: why good products can fail, the personal computer is so complex, and information appliances are the solution. MIT press, 1998.
 
 McKeachie, Wilbert, and Marilla Svinicki. McKeachie's teaching tips. Cengage Learning, 2013.
 
-
 Diane Tavenner. Prepared: What Kids Need for a Fulfilled Life. New York: Currency, 2019.
 
+Brooks Jr, Frederick P. The mythical man-month: essays on software engineering. Pearson Education, 1995.
 
 [W. Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming)
 

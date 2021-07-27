@@ -65,6 +65,86 @@ Complicated by lack of concrete entities to join on. How to define a concrete en
 
 https://data-seattlecitygis.opendata.arcgis.com/datasets/f61d9ea57af34150b20e2bd5b2d6b681_7.csv?outSR=%7B%22latestWkid%22%3A2926%2C%22wkid%22%3A2926%7D
 
+Lack of standard licenses for the data.
+
+Identifiers out of context with rest of the important data.
+
+Might be convenient to have a standard reporting system with explanation of how records should be derived, and what each field means, and a standard way to upload and verify the data is from the specified entity (Hardware based 2FA might be good...), simply include reporting as a standard requirement in order to get federal dollars
+
+
+Data is often composed of similar concrete entities, but the format of these entities is different in different data sets
+Identifier Name for entities is also highly variable
+
+- Time
+- Location
+    - Street Address
+    - Postal Address
+    - GPS Coordinates
+- Name
+- Phone Number
+
+### Location Formats
+
+From: https://data.ct.gov/api/views/9k2y-kqxn/rows.csv?accessType=DOWNLOAD
+
+Location
+
+"81 West Rocks Road
+Norwalk, CT 06851-2299
+(41.134342, -73.414156)"
+
+
+
+From: https://data-seattlecitygis.opendata.arcgis.com/datasets/f61d9ea57af34150b20e2bd5b2d6b681_7.csv?outSR=%7B%22latestWkid%22%3A2926%2C%22wkid%22%3A2926%7D
+
+X, Y
+1263633.12497076,192888.60952957
+
+SCHOOL_STREET_ADDRESS, SCHOOL_CITY, SCHOOL_STATE, SCHOOL_ZIP_CODE
+9421 18th Ave SW,Seattle, WA, 98106
+
+
+
+From: https://data-nces.opendata.arcgis.com/datasets/6a2b95d345d8452ca527b30490096391_0.csv?outSR=%7B%22latestWkid%22%3A4269%2C%22wkid%22%3A4269%7D https://catalog.data.gov/dataset/postsecondary-school-locations-2019-20
+
+X,Y,
+-86.568502,34.783368
+
+NAME,STREET,CITY,STATE,ZIP
+Alabama A & M University,4900 Meridian Street,Normal,AL,35762
+
+### Phone Number Formats
+
+From: https://data.ct.gov/api/views/9k2y-kqxn/rows.csv?accessType=DOWNLOAD
+
+860-584-7827
+
+## What kind of data is useful and desireable to collect?
+
+- Location of key community resources, can be done via registration
+
+- Work related injuries
+    Goal: Reduce workplace injuries
+- Schools
+    - Teaching Staff education levels
+    - Teaching Staff salaries
+    - Student demographics
+    - Student regions feeding the school
+    - AP test scores
+    Goal: Understand what schools are available and level of student educational attainment
+    Goal: solid data source for location of resource
+- Hospitals & Clinics
+    - Treatments available at the hospital
+    - Treatments and costs billed within a range
+    - What kinds of medical treatments are being applied? What kinds of health problems are people in the community having?
+    Goal: increase public health
+    Goal: solid data source for location of the resource
+- Buisnesses
+    - Registration of grocery stores
+    Goal: Location of these buisnesses, allow people to find physical stores more easily
+- Libraries
+    Goal: Allow people to find these resources more easily
+
 
 ## Data Management Systems
 

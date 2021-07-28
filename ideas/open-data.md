@@ -2,14 +2,14 @@
 
 ## Definition
 
- "Open Data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control."  from [Wikipedia Open Data](https://en.wikipedia.org/wiki/Open_data)
+ "Open Data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control."  from the [Wikipedia page on Open Data](https://en.wikipedia.org/wiki/Open_data)
 
 ## Objectives
 
 Some Open Data objectives:
 
 - Allow citizens to check on government activities.
-- Allow administrators to make better decision.
+- Enable administrators to make better decision.
 - Increase business competition and service quality.
 
 Open Data could allow citizens, researchers, and administrators to gauge the effectiveness of specific program interventions and to assess and improve the quality of peoples lives.
@@ -17,8 +17,8 @@ Open Data could allow citizens, researchers, and administrators to gauge the eff
 Some potential questions:
 
 - What specific and types of roadway intersections have the most accidents?
-- Are community resources ( Fire, Police, Libraries, Schools, Clinics, Groceries) accessible to citizens?
-- What and where are injuries taking place?
+- Are community resources {Fire, Police, Libraries, Schools, Clinics, Groceries} accessible to citizens?
+- Where and what injuries taking place?
 - What measures account for differences in reported injuries?
 - Does an area have sufficient resources to support a new business?
 - How are people's lives impacted by air pollution and noise pollution, what interventions are effective in reducing this pollution?
@@ -38,58 +38,181 @@ The United States Government's Open Data size [data.gov](https://www.data.gov/) 
 
 ## Open Data Quality
 
-Data Quality is essential to ensure that conclusions derived from data analysis can be accurate. If analysis of data is used to guide decision making, the data needs to be accurate and to contain enough information to ensure that the guidance offered by the data can be accurate. It's also important that the complete set of steps from data source to data analysis be accessible so all conclusions can be verified.
+Data Quality is essential to ensure that conclusions derived from data analysis can be accurate. To ensure guidance offered by analysis of data is accurate the data must contain sufficient accurate information for the analysis.
+
+To verify conclusions the complete set of steps from data source to data analysis should be accessible.
 
 Some Data Quality dimensions:
 
 - Source
 - Collection
-- Compatible
+- Private
 - Timely
 - Fresh
 - Citable
+- Compatible
 - Metadata
 
 ### Source
 
-It's important that the source of the data is trusted. Can the source of the data be verified?
+Can the source of the data be verified? Does the data come from a trusted source?
 
 ### Collection
 
-How was the data collected? It's important that the procedure used to collect the data is documented and made available along with the source and adhered to during collection.
+How was the data collected? What procedure was used to collect the data?
 
-##
+### Privacy
+
+Does the data maintain individual privacy?
+
+### Timely
+
+Is the data made available soon enough for the analysis to guide decision making?
+
+### Fresh
+
+How often is the data updated? How often is it stated the data will be updated? How long will the data set be maintained?
+
+### Citable
+
+How can analysis done using the data cite the specific version of the data set used for analysis?
+
+### Compatible
+
+Is the data compatible with other data sets? Is the data easy to combine with other data sets? Do data fields follow standard data formats? Is the data exportable to standard export formats? Can the data be easily ingested into standard analysis tools?
 
 ### Metadata
 
+Does the metadata specify:
+
+- the source of the data
+- how to verify the source of the data
+- the data collection procedure
+- what every field in the data set means
+- when new versions of the data set are made available
+- frequency of updates to the data set
+- how long the data set will be updated and maintained
+- how to cite the data set
+
+## Case Study, Open Data Quality on data.gov Issues
+
+I browsed though the data available on data.gov and made the following observations and suggestions.
+
+### Formats Filter
+
+Under the [data catalog](https://catalog.data.gov/dataset) there is a 'Formats' filter.
+It is unclear what the 'Formats' filter and tags mean. Does the formats field mean the formats that are supported for a piece of data or all the formats the data consists of? Publishers of data seem confused as some data has the same information in multiple formats (although who knows if these align) other data is composed of multiple formats of data. For example some data might consist of images and a file that contains additional metadata about those images.
+
+Suggestion: have a single format source of truth for the data. If the data consists of multiple formats then that data should be packaged together into a single compressed file.
+
+### Data Formats
+
+Data is in multiple formats:
+
+```text
+API, ARCE, ARCG, ASCII, ArcGIS, BIN, CDF, CSV, DOC, Digital, ESRI, EXCEL, EXE, Esri, Export, GIF, GZ, GeoJSON, GeoTIFF, HTML, JPEG, JSON, KML, MGD77t, NETCDF, OGC, PDF, PNG, QGIS, RDF, SHP, SID, TAR, TEXT, TIFF, Undefined, WCS, WFS, WMS, XML, XYZ, ZIP, application/html, application/unknown, application/vnd.geo..., chemical/x-mdl-sdfile, comma-delimited, gml, nc, sos
+```
+
+One of the formats is `undefined`.
+
+Some of these formats seem redundant:
+
+- Geolocation: ArcGIS, gml, ESRI, KML,
+- tables: EXCEL, CSV, comma-delimited
+- Rich Data: JSON, RDF, XML
+- image: PNG, GIF, JPEG
+- Compressed: TAR, ZIP, GZ
+- DOC, PDF
+
+Multiple formats requires multiple readers to get the data into a standard format so it can be analyzed.
+
+[TSV](https://en.wikipedia.org/wiki/Tab-separated_values) which is frequently used in place of CSV due less complex parsing is not used.
+
+### Data Updates
+
+Hard to tell what data is one off verses which data is updated and when.
+
+Hard to tell when data was collected and renewed. What time frame is the data for?
+
+### Data Location
+
+Hard to tell where data is located. Some data sets are uploaded to the site while others are linked to external sites.
+
+Links to external sites are often broken.
+
+### License
+
+Hard to tell what license data sets are distributed under. Some data sets have licenses but others are missing a license.
+
+### Data Set Titles
+
+Data Set titles are often unclear. Some Data Sets that could be part of a group are broken into multiple separate entries.
+
+
+- how are some formats undefined?
 
 
 
 
-Source
-    - Trusted
-Metadata
-    - Complete
-    - Specifies data collection procedure
-    - Specifies the source of the data
-    - Specified what every field in the data means
-    - specifies what analysis was done using the data so if inaccuracies are found in the data and the data is updated those conclusions can be revised.
-Compatible
-    - Can be easily combined with other data
-Timely
-    - Data is provided in a timely manner
-Maintained
-    - Data is 
-Citable
-    - Two way link to see what papers rely on the data
 
-Consistent sets
 
-## Case Study, Issues in data.gov Open Data Quality
 
+
+
+Suggestion: eliminate redundant data formats.
+
+
+TSV is not supported, would be better than CSV
+
+https://en.wikipedia.org/wiki/Tab-separated_values
+
+multiple formats, and mu
+
+ for the same data
+
+
+- Non compatible formats for similar fields
+- Inconsistent Field names
+
+- Splitting of data sets instead and global rollup
+
+- multiple formats: {
+    
+} 
+How come these are not limited to a few standard formats, with the other formats being derivable
+
+
+
+- lack of license
+
+
+- lack of dates
+- lack of clear titles
+
+- links to data verse sets of data available
+
+- links to data are often broken
 
 
 ## Recommendations to improve Data Quality
+
+Idea of a Data Asset, Data Set.
+
+Data Schema -> Defined Schema that a Data Asset adheres to and can be used across assets. Allow Schemas to be combined. Strong Types! Create schemas for subtypes. Schemas could be defined as TypeScript interfaces.
+
+Data Asset / entity -> single file or group of files, an individually downloadable unit.
+
+Data Set -> a set of Data Assets
+
+JSON -> TSV conversion is this reasonable? Yes simply destructure the field, add a deliminator (maybe `.`)
+TSV as the unit of a data asset.
+
+
+
+
+Standards Based Approach to highlight high quality data, and to make it easy to find data.
+
+Insist
 
 - Data Portals should allow complete download of data sets.
 - Data Portals should not be used for processing and analyzing data sets; instead data should be downloaded and ingested into dedicated processing applications. This places the cost on those who analyze the data instead of on the public. Data Portals can provide a mechanism, such as an RSS feed to indicate when new data is available.
@@ -112,6 +235,28 @@ Potentially useful questions:
 ## scratch
 
 
+is documented and made available along with the source and adhered to during collection.
+
+
+
+Source
+    - Trusted
+Metadata
+    - Complete
+    - Specifies data collection procedure
+    - Specifies the source of the data
+    - Specified what every field in the data means
+    - specifies what analysis was done using the data so if inaccuracies are found in the data and the data is updated those conclusions can be revised.
+Compatible
+    - Can be easily combined with other data
+Timely
+    - Data is provided in a timely manner
+Maintained
+    - Data is 
+Citable
+    - Two way link to see what papers rely on the data
+
+Consistent sets
 
 Design of a data collection system
 

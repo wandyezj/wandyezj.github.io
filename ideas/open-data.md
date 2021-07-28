@@ -38,6 +38,11 @@ The data needs to be accurate for any calculations on the data to have a chance 
 
 2007 America COMPETES Act requires "civilian federal agencies to provide guidelines, policies and procedures, to facilitate and optimize the open exchange of data and research between agencies, the public and policymakers. See Section 1009."
 
+Need a pipeline that continually renews and updates data. The Data must match the state of the world, of the view of that world will be inaccurate, and thus calculations will be inaccurate.
+
+Important for policy makers and administrators to have a clear view of data so that they can make informed choices about allocation of resources and make better policy. It's also important for the data to be open so the public can take advantage of it, it will also spark new business and increase competition.
+
+How frequently to be useful does the data need to be updated? How quickly does data rot set in, data rot being where the data no longer reflects the state of the world.
 
 Lots of Data is available online:
 
@@ -144,6 +149,15 @@ From: https://data.ct.gov/api/views/9k2y-kqxn/rows.csv?accessType=DOWNLOAD
     Goal: Location of these buisnesses, allow people to find physical stores more easily
 - Libraries
     Goal: Allow people to find these resources more easily
+- Roads
+    Closed Lanes
+- Registered Laws
+
+- Air Quality Data Sensor
+- Weather Sensor
+
+## How can this inform normal data availability practices?
+
 
 
 ## Data Management Systems

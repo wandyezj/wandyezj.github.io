@@ -1,12 +1,29 @@
 # Open Data
 
+## Definition
+
  "Open Data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control."  from [Wikipedia Open Data](https://en.wikipedia.org/wiki/Open_data)
 
-Some objectives of Open Data:
+## Objectives
+
+Some Open Data objectives:
 
 - Allow citizens to check on government activities.
 - Allow administrators to make better decision.
-- Increase business competition.
+- Increase business competition and service quality.
+
+Open Data could allow citizens, researchers, and administrators to gauge the effectiveness of specific program interventions and to assess and improve the quality of peoples lives.
+
+Some potential questions:
+
+- What specific and types of roadway intersections have the most accidents?
+- Are community resources ( Fire, Police, Libraries, Schools, Clinics, Groceries) accessible to citizens?
+- What and where are injuries taking place?
+- What measures account for differences in reported injuries?
+- Does an area have sufficient resources to support a new business?
+- How are people's lives impacted by air pollution and noise pollution, what interventions are effective in reducing this pollution?
+
+## Open Data Portals
 
 To realize the Open Data ideal, data must be made available. Many systems have been devised to make data available:
 
@@ -17,7 +34,67 @@ To realize the Open Data ideal, data must be made available. Many systems have b
 
 [CKAN](https://ckan.org/) has become a standard Open Data portal for many federal governments, including: Canada, The United States, Mexico, Australia, Singapore, and Switzerland.
 
-United States Government's Open Data on [data.gov](https://www.data.gov/) is powered by CKAN.
+The United States Government's Open Data size [data.gov](https://www.data.gov/) is powered by CKAN.
+
+## Open Data Quality
+
+Data Quality is essential to ensure that conclusions derived from data analysis can be accurate. If analysis of data is used to guide decision making, the data needs to be accurate and to contain enough information to ensure that the guidance offered by the data can be accurate. It's also important that the complete set of steps from data source to data analysis be accessible so all conclusions can be verified.
+
+Some Data Quality dimensions:
+
+- Source
+- Collection
+- Compatible
+- Timely
+- Fresh
+- Citable
+- Metadata
+
+### Source
+
+It's important that the source of the data is trusted. Can the source of the data be verified?
+
+### Collection
+
+How was the data collected? It's important that the procedure used to collect the data is documented and made available along with the source and adhered to during collection.
+
+##
+
+### Metadata
+
+
+
+
+
+Source
+    - Trusted
+Metadata
+    - Complete
+    - Specifies data collection procedure
+    - Specifies the source of the data
+    - Specified what every field in the data means
+    - specifies what analysis was done using the data so if inaccuracies are found in the data and the data is updated those conclusions can be revised.
+Compatible
+    - Can be easily combined with other data
+Timely
+    - Data is provided in a timely manner
+Maintained
+    - Data is 
+Citable
+    - Two way link to see what papers rely on the data
+
+Consistent sets
+
+## Case Study, Issues in data.gov Open Data Quality
+
+
+
+## Recommendations to improve Data Quality
+
+- Data Portals should allow complete download of data sets.
+- Data Portals should not be used for processing and analyzing data sets; instead data should be downloaded and ingested into dedicated processing applications. This places the cost on those who analyze the data instead of on the public. Data Portals can provide a mechanism, such as an RSS feed to indicate when new data is available.
+
+Publishing data sets is one component, another key component is data quality
 
 
 -> Challenges
@@ -27,6 +104,10 @@ Updating
 Maintenance
 interoperability between sets
 interoperability within analysis software, ingestion
+
+Potentially useful questions:
+
+
 
 ## scratch
 

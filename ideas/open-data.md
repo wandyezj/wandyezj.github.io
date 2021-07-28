@@ -1,6 +1,41 @@
 # Open Data
 
+ "Open Data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control."  from [Wikipedia Open Data](https://en.wikipedia.org/wiki/Open_data)
+
+Some objectives of Open Data:
+
+- Allow citizens to check on government activities.
+- Allow administrators to make better decision.
+- Increase business competition.
+
+To realize the Open Data ideal, data must be made available. Many systems have been devised to make data available:
+
+- [Comprehensive Knowledge Archive Network (CKAN)](https://en.wikipedia.org/wiki/CKAN)
+- [Socrata](https://en.wikipedia.org/wiki/Socrata)
+- [DSpace](https://duraspace.org/dspace/)
+- [Dataverse](https://en.wikipedia.org/wiki/Dataverse)
+
+[CKAN](https://ckan.org/) has become a standard Open Data portal for many federal governments, including: Canada, The United States, Mexico, Australia, Singapore, and Switzerland.
+
+United States Government's Open Data on [data.gov](https://www.data.gov/) is powered by CKAN.
+
+
+-> Challenges
+
+Reporting
+Updating
+Maintenance
+interoperability between sets
+interoperability within analysis software, ingestion
+
+## scratch
+
+
+
 Design of a data collection system
+
+
+
 
 Design data points to collect document both intent and how the data points are specifically collected. How data points are collected can change so this metadata needs to be updated as appropriate.
 
@@ -10,6 +45,11 @@ Steps in data collection and maintenance
 
 Much effort has been spent on analysis while relatively little has been spent on data source quality assurance.
 
+Specify units in the name of the data point
+
+Most data can't be single collection since the state of the world changes.
+
+standard atomic entities from which other entities are built, and standard representation between formats, JSON, TSV
 
 Annotate in code that data is collected and provide link to metadata, annotate metadata with link to where data is collected in code. Have a random GUID tag that can be researched later.
 
@@ -186,6 +226,8 @@ Today there is a lot of focus on tooling but little focus on the people who carr
     Open Source
     Powers Data.gov, western governments
 
+[ckan.org](https://ckan.org/)
+
 ### DSpace
 
 [DSpace](https://duraspace.org/dspace/) Open Digital Repositories
@@ -206,6 +248,8 @@ Socrata Open Data API
 https://www.tylertech.com/products/socrata
 
 https://en.wikipedia.org/wiki/Socrata
+
+[Socrata product page](https://www.tylertech.com/products/socrata)
 
 ## Data Sets
 

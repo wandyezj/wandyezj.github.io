@@ -1,6 +1,19 @@
 # Open Data
 
-The idea of open data is that data is visibile to the public.
+Design of a data collection system
+
+Design data points to collect document both intent and how the data points are specifically collected. How data points are collected can change so this metadata needs to be updated as appropriate.
+
+Data Persistence, how long will the data set stay available? How often is the data set renewed? How are new points entered into the data set.
+
+Steps in data collection and maintenance
+
+Much effort has been spent on analysis while relatively little has been spent on data source quality assurance. 
+
+
+## Notes
+
+The idea of open data is that data is visible to the public.
 
 How to ensure the integrity of data sources and document how the data was collected?
 
@@ -156,8 +169,11 @@ From: https://data.ct.gov/api/views/9k2y-kqxn/rows.csv?accessType=DOWNLOAD
 - Air Quality Data Sensor
 - Weather Sensor
 
+https://en.wikipedia.org/wiki/Fei-Fei_Li
+
 ## How can this inform normal data availability practices?
 
+Today there is a lot of focus on tooling but little focus on the people who carry out data collection and use the end product data sets. This is a tricky problem to solve to mange the people collecting the data and management of the data.s
 
 
 ## Data Management Systems
@@ -188,3 +204,14 @@ Socrata Open Data API
 https://www.tylertech.com/products/socrata
 
 https://en.wikipedia.org/wiki/Socrata
+
+## Data Sets
+
+Data Sets are key for academic research
+
+[https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.255.6394&rep=rep1&type=pdf](https://openaccess.thecvf.com/content_cvpr_2017/papers/Johnson_CLEVR_A_Diagnostic_CVPR_2017_paper.pdf)
+
+[Novel Dataset for Fine-Grained Image Categorization:
+Stanford Dogs](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.255.6394&rep=rep1&type=pdf)
+
+Image Net

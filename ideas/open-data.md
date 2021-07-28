@@ -8,8 +8,10 @@ Data Persistence, how long will the data set stay available? How often is the da
 
 Steps in data collection and maintenance
 
-Much effort has been spent on analysis while relatively little has been spent on data source quality assurance. 
+Much effort has been spent on analysis while relatively little has been spent on data source quality assurance.
 
+
+Annotate in code that data is collected and provide link to metadata, annotate metadata with link to where data is collected in code. Have a random GUID tag that can be researched later.
 
 ## Notes
 

@@ -96,7 +96,7 @@ Does the metadata specify:
 
 ## Case Study, Open Data Quality on data.gov Issues
 
-I browsed though the data available on data.gov and made the following observations and suggestions.
+Browsing though the data available on data.gov I made the following observations.
 
 ### Formats Filter
 
@@ -126,7 +126,7 @@ Some of these formats seem redundant:
 
 Multiple formats requires multiple readers to get the data into a standard format so it can be analyzed.
 
-[TSV](https://en.wikipedia.org/wiki/Tab-separated_values) which is frequently used in place of CSV due less complex parsing is not used.
+[TSV](https://en.wikipedia.org/wiki/Tab-separated_values) frequently used in place of CSV since it has simpler parsing less prone to errors is not used.
 
 ### Data Updates
 
@@ -146,7 +146,7 @@ Hard to tell what license data sets are distributed under. Some data sets have l
 
 ### Data Set Titles
 
-Data Set titles are often unclear. Some Data Sets that could be part of a group are broken into multiple separate entries.
+Data Set titles are often unclear. Some Data Sets that could be part of a group are broken into multiple separate entries. There does not seem to be a standard format for titles. Not all titles contain the time span the data is relevant for or when the data was collected.
 
 ### Data Set Fields
 
@@ -158,52 +158,16 @@ Data Set fields have inconsistent formatting and types for the same type of data
 
 Data is often aggregated for specific reports, it would be pre useful if data was not aggregated. That way analysis tools could choose to aggregate as needed. Aggregation also hides aspects of the data. For example the mean hides outliers.
 
-- how are some formats undefined?
+### Data Relations
 
-
-
-
-
-
-
-
-
-Suggestion: eliminate redundant data formats.
-
-
-TSV is not supported, would be better than CSV
-
-https://en.wikipedia.org/wiki/Tab-separated_values
-
-multiple formats, and mu
-
- for the same data
-
-
-- Non compatible formats for similar fields
-- Inconsistent Field names
-
-- Splitting of data sets instead and global rollup
-
-- multiple formats: {
-    
-} 
-How come these are not limited to a few standard formats, with the other formats being derivable
-
-
-
-- lack of license
-
-
-- lack of dates
-- lack of clear titles
-
-- links to data verse sets of data available
-
-- links to data are often broken
-
+Data is split up between multiple sets, it is hard to find related data, that can be looked at together. Since keys are not universally shared it can be difficult to related and link together different sets.
 
 ## Recommendations to improve Data Quality
+
+Improve metadata
+
+
+
 
 Idea of a Data Asset, Data Set.
 
@@ -243,6 +207,49 @@ Potentially useful questions:
 
 ## scratch
 
+
+
+
+
+Difficult to find related data so 
+
+
+- how are some formats undefined?
+
+
+Suggestion: eliminate redundant data formats.
+
+
+TSV is not supported, would be better than CSV
+
+https://en.wikipedia.org/wiki/Tab-separated_values
+
+multiple formats, and mu
+
+ for the same data
+
+
+- Non compatible formats for similar fields
+- Inconsistent Field names
+
+- Splitting of data sets instead and global rollup
+
+- multiple formats: {
+    
+} 
+How come these are not limited to a few standard formats, with the other formats being derivable
+
+
+
+- lack of license
+
+
+- lack of dates
+- lack of clear titles
+
+- links to data verse sets of data available
+
+- links to data are often broken
 
 is documented and made available along with the source and adhered to during collection.
 

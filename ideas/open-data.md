@@ -185,6 +185,15 @@ Data is split up between multiple sets, it is hard to find related data, that ca
 
 ## Proposed Open Data Principles
 
+All Open Data should be published with metadata that describes:
+
+- Data Collection Procedure as detailed as possible
+- License under which the data is published
+
+
+
+a data schema.
+
 Data Schemas.
 
 Single entity owns definitions of new schemas.

@@ -101,7 +101,7 @@ I browsed though the data available on data.gov and made the following observati
 ### Formats Filter
 
 Under the [data catalog](https://catalog.data.gov/dataset) there is a 'Formats' filter.
-It is unclear what the 'Formats' filter and tags mean. Does the formats field mean the formats that are supported for a piece of data or all the formats the data consists of? Publishers of data seem confused as some data has the same information in multiple formats (although who knows if these align) other data is composed of multiple formats of data. For example some data might consist of images and a file that contains additional metadata about those images.
+It is unclear what the 'Formats' filter and tags mean. Does the formats field mean the formats that are supported for a piece of data or all the formats the data consists of? Publishers of data seem confused as some data has the same information in multiple formats (although who knows if these align) other data is composed of multiple formats of data. For example some data might consist of images and a file that contains additional metadata about those images. Or does this mean that there is one asset for each tag. So two HTLM tags indicated two HTML documents?
 
 Suggestion: have a single format source of truth for the data. If the data consists of multiple formats then that data should be packaged together into a single compressed file.
 
@@ -148,6 +148,15 @@ Hard to tell what license data sets are distributed under. Some data sets have l
 
 Data Set titles are often unclear. Some Data Sets that could be part of a group are broken into multiple separate entries.
 
+### Data Set Fields
+
+Data Set fields are often ambiguous. Not exposed on the site what fields are present in a data set.
+
+Data Set fields have inconsistent formatting and types for the same type of data. For example geographic location.
+
+### Data Aggregation
+
+Data is often aggregated for specific reports, it would be pre useful if data was not aggregated. That way analysis tools could choose to aggregate as needed. Aggregation also hides aspects of the data. For example the mean hides outliers.
 
 - how are some formats undefined?
 
@@ -204,8 +213,8 @@ Data Asset / entity -> single file or group of files, an individually downloadab
 
 Data Set -> a set of Data Assets
 
-JSON -> TSV conversion is this reasonable? Yes simply destructure the field, add a deliminator (maybe `.`)
-TSV as the unit of a data asset.
+JSON -> TSV conversion is this reasonable? Yes simply destructure the field, add a deliminator (maybe `.`) how would this work for lists of objects? (possibly ban lists of objects, reasonable to ban all lists?)
+TSV as the unit of a data asset. TSV is easily consumed by spreadsheet programs, and databases, as tables, while JSON and complex objects have yet to be consumable.
 
 
 

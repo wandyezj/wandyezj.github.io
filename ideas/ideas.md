@@ -139,9 +139,16 @@ hello	world	50	0	0
 
 
 
-## TSV Schema checker
+## TSV Lint - Schema checker
+
+TSV offers a standard human readable easily consumable format for data. Most data sets are relatively small so this format is convenient.
+Unfortunately, TSVs do not come with 
+
+For larger data sets
 
 A way to check that data in a TSV file adheres to a set schema.
+
+TSV embodies the simplest format for a relational database.
 
 Check that all rows have appropriate number of tabs and appropriate number of values
 
@@ -153,10 +160,185 @@ Should all be describable and accomplishable with regex, although faster validat
 - enum - one of a list of values
 - number - requires specification of allowable range of values, minimum and maximum, along with if only integers are allowed or if decimal numbers, is scientific notation used? what is the accuracy of the decimal to how many places? Would be convenient to have a set of standard types and validators?
 - string - specification of what characters are allowed in the string
+- unique - ensure that any value appears at most once for a column.
+
+reference implementation
 
 How long does it take to validate and entire TSV file? How expensive are the regex to run? (Technically this is a prefectly parallel problem)
 
 Should output list of validation errors, row number and column number along with offending value and 
+
+Technical, needs to be cross platform
+
+JSON that describes the schema
+
+```json
+{
+    "hasHeader": true,
+    "fieldOrder:": ["field_name"],
+    "fields": {
+        "field_name": {
+            "name": "proper name of the field",
+            "description":"what does the field mean?",
+            "header":"header for the field in the file can check that the correct column is referred to",
+            "lint":{
+                "type":"regex",
+                "value":""
+            }
+        }
+    }
+}
+```
+
+```typescript
+
+interface LintRule {
+    description?: string;
+    /**
+     * See if the field value matches the regex
+     */
+    regex?: string; // since all CSV values are strings regex can be used for all of them
+    
+    /**
+     * See if the field value matches one of the values.
+     * Useful for enum like values.
+     * This is simply a regex of the values `^(valueOne|valueTwo)$` but this is a little easier than a regex, and potentially more performant.
+     */
+    oneOf?: string[]
+}
+//     regex: string;
+// {
+//             description?: string;
+//             engine: string;
+//             parameters?: {[name: string]:string}
+//         }
+
+/**
+ * Schema used to lint a tsv file
+ */
+interface LintSchema {
+    /**
+     * Version of the lint schema file
+     */
+    version: 0;
+
+    // /**
+    //  * The TSV file has headers. Skips the first line if true.
+    //  * should it simply be required that a TSV head a header?
+    //  */
+    // hasHeaders?: boolean;
+
+    /**
+     * Describe the TSV header
+     */
+    header: {
+        /**
+         * Header is present, default is false
+         */
+        present: boolean;
+
+        /**
+         * Header field names are unique.
+         * Checks this by comparing all header field names.
+         */
+        unique?: boolean;
+    }
+
+    // 
+    /*
+        Assumes all columns are listed
+
+        how to target the fields for validation?
+        any field with a linter rule
+        can simply lint all fields listed targeted based on index and header
+        lint fields in order
+        lint a specific set of fields
+    */
+    //lintFields: "list"
+
+    /**
+     * Order of the fields to validate
+     * This requires a number of entries equivalent to the number of columns in the TSV, what if only want to validate a few columns and know their indicies? Annoying to type a bunch of empty spaces
+     */
+    //fieldOrder: string[] | {index: number, name: string}[];
+
+    /**
+     * All the fields listed in the TSV. There should be one entry for every field in the TSV. The entry can be an empty object {} for an undescribed field.
+     * If the index is present objects must be listed in ascending order.
+     */
+    fields: [
+        {
+            /**
+             * human metadata name for the field
+             */
+            name?: string;
+
+            /**
+             * human metadata to describe what the field represents
+             */
+            description?: string;
+
+
+            /**
+             * human metadata to describe what unit the field is measured in.
+             * Ideally an SI Unit
+             */
+            unit?: string;
+
+            /**
+             * zero based index of the field in the TSV
+             */
+            index?: number;
+
+            /**
+             * the header that should be on top of the field in the CSV file, useful to check that the right column was captured.
+             * ignored if hasHeader is false
+             */
+            header?: string;
+
+            /**
+             * The lint rule to apply to the value.
+             * Lint rules can only apply to single values in the field.
+             * Some lint rules are built in as standards.
+             * Custom lint rules are prefixed with `custom.` followed by the name of the rule.
+             * The custom prefix allows new built in types to be added without breaking existing custom rules.
+             */
+            lint?: string | LintRule;
+        }
+    ];
+
+    // /**
+    //  * custom lint rules
+    //  * allows sharing of rules between fields.
+    //  */
+    // custom: {
+    //     [name: string]: LintRule;
+    // }
+            // {
+            //      /**
+            //       * name of the rule to apply
+            //       * built in rules like regex or type or custom which can
+            //       * want some set of built in lints that can be easily referenced and can't be overwritten.
+            //       */
+            //     rule: "regex" | "type" | "custom";
+            //     value:
+
+            //  }
+
+}
+
+
+
+```
+
+field order and type order?
+
+has header tells validation to ignore the first field of the data set, default is false.
+
+field order is separated from the definition to enable recycling of field defintions, or easy reordering, or skipping of validation on specific fields, for example could provide "" multiple times to skip validation for a column.
+
+
+
 
 
 ## Transportable Data Process

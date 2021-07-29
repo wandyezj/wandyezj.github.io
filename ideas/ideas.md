@@ -93,3 +93,72 @@ Is is more effective to have students write their own stories with their own cha
 Would that help them better analyze their characters in other stories?
 
 How does this kind of story thinking apply to real life situations?
+
+
+## TSV <-> JSON
+
+Convert JSON to a TSV and a TSV to JSON. Requires limitation on the structure of JSON.
+
+JSON
+```json
+[
+    {
+        "name":"my name",
+        "value":"my value",
+        "id":"5",
+        "nested": {
+            "x":"50",
+            "y":"32"
+        }
+    },
+    {
+        "name":"hello",
+        "value":"world",
+        "id":"50",
+        "nested": {
+            "x":"0",
+            "y":"0"
+        }
+    }
+]
+```
+
+TSV
+
+```tsv
+name	value	id	nested.x	nested.y
+my name	my value	5	50	32
+hello	world	50	0	0
+```
+
+- objects `{}` can be easily decomposed and recomposed by simply adding a deliminator to denest the object
+
+- lists `[]` are harder to decompose and recompose especially if they contain objects, so it might be easier to avoid lists alltogether
+
+- TSV only had the option for strings, so all values should be treated as strings
+
+
+
+## TSV Schema checker
+
+A way to check that data in a TSV file adheres to a set schema.
+
+Check that all rows have appropriate number of tabs and appropriate number of values
+
+Schema should specify how the strings in the csv (all fields by default) should be interpreted
+
+Should all be describable and accomplishable with regex, although faster validation techniques could be used
+
+- optional modifier, allow no value as an answer
+- enum - one of a list of values
+- number - requires specification of allowable range of values, minimum and maximum, along with if only integers are allowed or if decimal numbers, is scientific notation used? what is the accuracy of the decimal to how many places? Would be convenient to have a set of standard types and validators?
+- string - specification of what characters are allowed in the string
+
+How long does it take to validate and entire TSV file? How expensive are the regex to run? (Technically this is a prefectly parallel problem)
+
+Should output list of validation errors, row number and column number along with offending value and 
+
+
+## Transportable Data Process
+
+A way to check that data and everything around the data is defined.

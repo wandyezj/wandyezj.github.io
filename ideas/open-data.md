@@ -1,24 +1,40 @@
 # Open Data
 
+## Abstract
+
+Analysis of data is increasingly used to make decisions. The data used for analysis must come from some source. Open Data is the idea that some data be made freely available for analysis.
+
+This paper:
+
+- defines Open Data
+- proposes objectives for Open Data
+- proposes quality measures for Open Data
+- examines Open Data practices on data.gov
+- proposes Open Data principles to guide Open Data practices
+
+The objective of this paper is to propose objectives, quality measures, and principles for Open Data.
+
 ## Definition
 
- "Open Data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control."  from the [Wikipedia page on Open Data](https://en.wikipedia.org/wiki/Open_data)
+"Open Data is the idea that some data should be freely available to everyone to use and republish as they wish, without restrictions from copyright, patents or other mechanisms of control."  from the [Wikipedia page on Open Data](https://en.wikipedia.org/wiki/Open_data)
 
-## Objectives
+## Proposed Open Data Objectives
 
-Some Open Data objectives:
+I propose the following Open Data objectives:
 
+- Maintain trust in conclusions derived from data.
 - Allow citizens to check on government activities.
 - Enable administrators to make better decision.
-- Increase business competition and service quality.
+- Increase economic competition and service quality.
+- Expand collaboration among organizations and communities.
 
 Open Data could allow citizens, researchers, and administrators to gauge the effectiveness of specific program interventions and to assess and improve the quality of peoples lives.
 
-Some potential questions:
+Some potential questions answerable with data:
 
 - What specific and types of roadway intersections have the most accidents?
 - Are community resources {Fire, Police, Libraries, Schools, Clinics, Groceries} accessible to citizens?
-- Where and what injuries taking place?
+- Where and what injuries are taking place?
 - What measures account for differences in reported injuries?
 - Does an area have sufficient resources to support a new business?
 - How are people's lives impacted by air pollution and noise pollution, what interventions are effective in reducing this pollution?
@@ -36,14 +52,15 @@ To realize the Open Data ideal, data must be made available. Many systems have b
 
 The United States Government's Open Data size [data.gov](https://www.data.gov/) is powered by CKAN.
 
-## Open Data Quality
+## Proposed Measures of Open Data Quality
 
-Data Quality is essential to ensure that conclusions derived from data analysis can be accurate. To ensure guidance offered by analysis of data is accurate the data must contain sufficient accurate information for the analysis.
+I propose Data Quality be measured on the dimensions of allowing accurate conclusions to be derived via data analysis.
 
-To verify conclusions the complete set of steps from data source to data analysis should be accessible.
+Data Quality is essential to ensure that conclusions derived from data analysis can be appropriately trusted. To ensure guidance offered by analysis of data is accurate the data must contain sufficient accurate information for the analysis. To verify conclusions the complete set of steps from data source to data analysis needs to be accessible.
 
-Some Data Quality dimensions:
+I propose the following Data Quality dimensions:
 
+- Accessible
 - Source
 - Collection
 - Private
@@ -53,17 +70,21 @@ Some Data Quality dimensions:
 - Compatible
 - Metadata
 
+### Accessible
+
+Is relevant data discoverable? Can the data be easily downloaded? Can what the data represents be easily understood?
+
 ### Source
 
 Can the source of the data be verified? Does the data come from a trusted source?
 
 ### Collection
 
-How was the data collected? What procedure was used to collect the data?
+How was the data collected? What procedure was used to collect the data? What assumptions are made during collection? (biases in the collection proceedure can introduce and invalidate certain types of conclusions) Placing the data in context.
 
 ### Privacy
 
-Does the data maintain individual privacy?
+Does the data maintain individuals privacy?
 
 ### Timely
 
@@ -71,15 +92,15 @@ Is the data made available soon enough for the analysis to guide decision making
 
 ### Fresh
 
-How often is the data updated? How often is it stated the data will be updated? How long will the data set be maintained?
+When is the data updated? How often is it stated the data will be updated? How long will the data set be maintained? Can the presence of data be relied upon in the future?
 
 ### Citable
 
-How can analysis done using the data cite the specific version of the data set used for analysis?
+Can analysis done using the data cite the specific version of the data set used for analysis?
 
 ### Compatible
 
-Is the data compatible with other data sets? Is the data easy to combine with other data sets? Do data fields follow standard data formats? Is the data exportable to standard export formats? Can the data be easily ingested into standard analysis tools?
+Is the data compatible with other data sets? Is the data easy to combine with other data sets? Do data fields follow standard data formats? Is the data exportable in standard formats? Can the data be easily ingested into standard analysis tools?
 
 ### Metadata
 
@@ -94,7 +115,7 @@ Does the metadata specify:
 - how long the data set will be updated and maintained
 - how to cite the data set
 
-## Case Study, Open Data Quality on data.gov Issues
+## Open Data Quality on data.gov
 
 Browsing though the data available on data.gov I made the following observations.
 
@@ -156,13 +177,31 @@ Data Set fields have inconsistent formatting and types for the same type of data
 
 ### Data Aggregation
 
-Data is often aggregated for specific reports, it would be pre useful if data was not aggregated. That way analysis tools could choose to aggregate as needed. Aggregation also hides aspects of the data. For example the mean hides outliers.
+Data is often aggregated for specific reports. Aggregation hides aspects of the data. For example the mean hides outliers. It would be useful if data was not aggregated to allow analysis tools to aggregate as needed. If data is aggregated it should be explained how the aggregation was performed from the base source of data and the intent behind the aggregation.
 
 ### Data Relations
 
 Data is split up between multiple sets, it is hard to find related data, that can be looked at together. Since keys are not universally shared it can be difficult to related and link together different sets.
 
-## Recommendations to improve Data Quality
+## Proposed Open Data Principles
+
+Data Schemas.
+
+Single entity owns definitions of new schemas.
+
+Need a schema defintion language.
+
+Single entity owns the schema for a set of data.
+
+Standard ways to communicate specific data.
+
+Data is Dynamic and must be updated to reflect the state of the world.
+
+Archived.
+
+
+
+## Applications 
 
 Improve metadata
 
@@ -208,6 +247,7 @@ Potentially useful questions:
 ## scratch
 
 
+Knowledge is power. Data forms the basis of knowledge. The I
 
 
 
@@ -503,3 +543,7 @@ Data Sets are key for academic research
 Stanford Dogs](https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.255.6394&rep=rep1&type=pdf)
 
 Image Net
+
+## Papers
+
+Kassen, Maxat (1 October 2013). "A promising phenomenon of open data: A case study of the Chicago open data project"

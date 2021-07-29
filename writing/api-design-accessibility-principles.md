@@ -73,7 +73,7 @@ Some well known __Technical Models__ include:
 * Language Models: C, C++, JavaScript, TypeScript, Block programming etc...
     * Languages generally provide specific means to accomplish various programming tasks and generally come with a standard set of conventions.
 
-The __Technical Model__ provides the foundation for which an API is based and comes with a certain set of expectations about how features in the model are used.
+The __Technical Model__ provides the foundation on which an API is based, and comes with a certain set of expectations about how features in the model are used.
 
 The __Mental Model__ is the user's map of what API represents, and how the API pieces fit together to accomplish tasks. See [The Design of Everyday Things by Don Norman](#The-Design-of-Everyday-Things-by-Don-Norman) chapter 1 for a good explanation of mental models.
 

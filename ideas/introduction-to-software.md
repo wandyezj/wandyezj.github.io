@@ -59,14 +59,23 @@ Git Committing and pushing changes
 
 Python Hello World
 
-
+Windows Key + type
 ctrl + s
 
 F5 to run
 
+executes the line
+need to have specific key words
+
+what do colors represent?
+
+Turn on line numbers
+
 comments
 
 - print
+- Sequence
+- executed each statement in order
 - variables
 - add
 
@@ -76,11 +85,104 @@ comments
 Open Github Desktop
 Open IDLE
 
+
+
 - booleans
+- operators
+- True False
+- and and or
 - if
+- elif and else is optional
+- picks first one that is true
+- block keyword all the lines that are indented
+- can nest if statements inside of the blosk
+
+- only assign one variable at a time
 
 
 
 
 
 
+## Notes
+
+- Setup
+    - GitHub
+    - GitHub Desktop
+    - Vocabulary: Repository
+    - Install Python
+    - Vocabulary: Editor
+    - Vocabulary: IDE
+    - Vocabulary: Command Line / Shell / Console
+    - IDLE - enable line numbers
+- Sequence
+    - code executes from top to bottom one statement at a time
+    - Print
+    - Arithmetic
+    - Variables
+    - Vocabulary: String
+    - Vocabulary: Number
+    - Vocabulary: Assignment
+    - Input
+    - Type Conversion
+    - Vocabulary: integer
+    - Vocabulary: float
+
+- Assignment - square area
+    - enter the side length of a square and print out its area
+
+```python
+# Minimal
+l = input()
+print(l * l)
+```
+
+```python
+# Properly commented and explained
+# Calculate the area of a square given the length of the side
+length = float(input("square side length: "))
+print("square area")
+print(length * length)
+```
+
+- Selection
+    - booleans
+    - Comparison operators
+    - and or not
+    - if
+    - Vocabulary: Block
+    - if else
+    - if, elif, else
+
+- Assignment - password checker
+    - check if "password" is entered, if so print "correct" if not print "enter password"
+
+```python
+# minimal
+p = input()
+if p == "password":
+    print("correct")
+else:
+    print("enter password")
+```
+
+- Repetition
+    - While
+    - Flag
+    - For
+
+- Assignment - password checker advances
+    - update the password checker to prompt until the password is entered
+
+```python
+# minimal
+f = True
+while f: 
+    p = input()
+    if p == "password":
+        print("correct")
+        f = False
+    else:
+        print("enter password")
+
+```

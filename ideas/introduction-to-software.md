@@ -102,38 +102,75 @@ Open IDLE
 
 
 
-
+ctrl + a
 
 ## Notes
 
 - Setup
     - GitHub
     - GitHub Desktop
+    - Vocabulary: Documentation
+    - Python Documentation: https://docs.python.org/3.9/index.html
+    - Python Tutorial: https://docs.python.org/3.9/tutorial/index.html
     - Vocabulary: Repository
     - Install Python
     - Vocabulary: Editor
     - Vocabulary: IDE
-    - Vocabulary: Command Line / Shell / Console
+    - Vocabulary: Shell/ Command Line /  / Console
     - IDLE - enable line numbers
 - Sequence
     - code executes from top to bottom one statement at a time
     - Print
+    - Vocabulary: Line Number
+    - Vocabulary: Function
+    - Vocabulary: Argument
+    - Name of function, arguments to function
+    - Vocabulary: Call - call a function and syntax
+    - Vocabulary: Debug
+    - Vocabulary: Syntax Error
+    - Vocabulary: Logic Error
+    - Common Syntax Errors
     - Arithmetic
     - Variables
+        - stays the same until assign over it
+        - can only use a specific set of characters for a variable
+        - case sensitive
+        - follow conventions
+        - only lowercase letters and underscore in variable names
+    - Evaluation of the Right Hand Side is assigned to the Left Hand Side
+    - Vocabulary: Character
     - Vocabulary: String
     - Vocabulary: Number
+    - Vocabulary: Integer
+    - Vocabulary: Float
     - Vocabulary: Assignment
+    - type
     - Input
+        - always returns a string
+        - input is evil
     - Type Conversion
-    - Vocabulary: integer
-    - Vocabulary: float
+        - int
+        - float
+        - str
+    - Vocabulary: Concatenation
 
-- Assignment - square area
-    - enter the side length of a square and print out its area
+
+- Assignment - echo
 
 ```python
 # Minimal
-l = input()
+print(input())
+```
+
+- Assignment - square area
+    - enter the side length of a square and print out its area
+    - Specific issues:
+        - type conversion
+        - int or float?
+
+```python
+# Minimal
+l = float(input())
 print(l * l)
 ```
 
@@ -142,7 +179,17 @@ print(l * l)
 # Calculate the area of a square given the length of the side
 length = float(input("square side length: "))
 print("square area")
-print(length * length)
+area = length * length
+print(area)
+```
+
+- Assignment - Hard: given the radius of a circle calculate the area and circumference
+    - can make arbitrary hard geometry problems
+    - how to get pi?
+
+```python
+    import math
+    print(math.pi)
 ```
 
 - Selection

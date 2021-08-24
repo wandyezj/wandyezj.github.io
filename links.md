@@ -225,6 +225,10 @@
 
 [OBS Studio](https://obsproject.com/)
 
+### Gif Creation
+
+[Screen To Gif](https://www.screentogif.com/)
+
 ### Tools
 
 [YouTube DL](https://youtube-dl.org/)
@@ -284,6 +288,7 @@
 [Unlicense](https://unlicense.org/)
     - Unlicense code
 
+[GitHub DMCA reform proposals](https://docs.github.com/en/github/site-policy/dmca-takedown-policy#learn-more-and-speak-up)
 
 ### Presentation
 

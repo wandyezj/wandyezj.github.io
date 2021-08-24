@@ -169,7 +169,12 @@ print(input())
         - int or float?
 
 ```python
-# Minimal
+# minimal
+print(float(input())**2)
+```
+
+```python
+# Simple
 l = float(input())
 print(l * l)
 ```

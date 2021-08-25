@@ -53,3 +53,7 @@ Add butter, brown sugar, and cinnamon and maple syrup, to a pan on low heat stir
 ## Fruit
 
 Seasonal
+
+- cherries
+- strawberries
+- watermellon (cut into slices)

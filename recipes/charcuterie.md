@@ -14,6 +14,7 @@ cut cheese and meat, and vegetables into small cracker fitting slices
 
 can cut on an angle to make the slices longer
 
+
 ## Specifics
 
 ## Vegetable  Dip
@@ -57,3 +58,7 @@ Seasonal
 - cherries
 - strawberries
 - watermellon (cut into slices)
+
+## Candy
+
+- Winegums

@@ -342,3 +342,8 @@ Brooks Jr, Frederick P. The mythical man-month: essays on software engineering. 
 ## English Grammar
 
 [Adjective Word Order](https://grammar.cl/english/adjectives-word-order.htm)
+
+
+## Software
+
+[Cirsim Circuit Simulator](https://www.npmjs.com/package/cirsim)

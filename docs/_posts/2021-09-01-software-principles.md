@@ -29,3 +29,4 @@ Software must be accessible to the community it serves. The community must be ab
 - Build a positive community that is open and accepting of new members.
 - Minimize non development costs.
 - Communicate any changes to the software to the community and explain the reason for those changes.
+- Install everything as part of the application don't rely on external dependencies, which can become deprecated and obsolete over time.

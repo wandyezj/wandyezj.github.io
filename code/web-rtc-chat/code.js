@@ -1,40 +1,66 @@
 
+/**
+ * static variable, do not access directly, us getControls instead.
+ */
+let controls = undefined;
+
 function getControls() {
 
-    const buttonConnect = document.getElementById("button_connect");
-    const buttonSend = document.getElementById("button_send");
-    const textareaSend = document.getElementById("textarea_send");
+    if (controls === undefined) {
 
-    return {
-        buttonConnect,
-        buttonSend,
-        textareaSend,
+        const buttonConnect = document.getElementById("button_connect");
+        const buttonSend = document.getElementById("button_send");
+        const textareaSend = document.getElementById("textarea_send");
+
+        const buttonLocalOffer = document.getElementById("button_local_offer");
+        const buttonRemoteAnswer = document.getElementById("button_remote_answer");
+        const buttonLocalAccept = document.getElementById("button_local_accept");
+
+        const textareaLocalOffer = document.getElementById("textarea_local_offer");
+        const textareaRemoteOfferReceive = document.getElementById("textarea_remote_offer_receive");
+        const textareaRemoteAnswer = document.getElementById("textarea_remote_answer");
+        const textareaRemoteAnswerReceive = document.getElementById("textarea_remote_answer_receive");
+
+        controls = {
+            buttonConnect,
+            buttonSend,
+            textareaSend,
+            buttonLocalOffer,
+            buttonRemoteAnswer,
+            buttonLocalAccept,
+            textareaLocalOffer,
+            textareaRemoteOfferReceive,
+            textareaRemoteAnswer,
+            textareaRemoteAnswerReceive,
+        }
     }
+    return controls;
 }
 
 function start() {
-    const {buttonConnect, buttonSend} = getControls();
+    const { buttonConnect, buttonSend, buttonLocalOffer, buttonRemoteAnswer, buttonLocalAccept } = getControls();
     buttonConnect.addEventListener('click', connect);
     buttonSend.addEventListener('click', send);
+
+    buttonLocalOffer.addEventListener('click', offer);
+    buttonRemoteAnswer.addEventListener('click', answer);
+    buttonLocalAccept.addEventListener('click', accept);
 }
 
 
-let connection;
 
 // one offers and one accepts
 
-async function connect() {
-
-
-    connection = new RTCPeerConnection();
+function createConnection() {
+    const connection = new RTCPeerConnection();
 
     // ice candidate discovered
     connection.addEventListener('icecandidate', async (event) => {
-        const {target, candidate} = event;
+        const { target, candidate } = event;
 
         if (candidate) {
             const ice = new RTCIceCandidate(candidate);
- 
+
         }
 
     });
@@ -43,6 +69,23 @@ async function connect() {
     connection.addEventListener('iceconnectionstatechange', (event) => {
 
     });
+
+    return connection;
+}
+
+let connection = undefined;
+
+function getConnection() {
+    if (connection === undefined) {
+        connection = createConnection();
+    }
+
+    return connection;
+}
+
+async function connect() {
+
+    const connection = getConnection();
 
     const offer = await connection.createOffer();
     console.log(offer.sdp);
@@ -91,6 +134,10 @@ function offer() {
 }
 
 function answer() {
+
+}
+
+function accept() {
 
 }
 

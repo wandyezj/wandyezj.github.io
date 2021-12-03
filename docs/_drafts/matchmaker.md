@@ -69,6 +69,25 @@ Can match people to other things as well
 
 no posts that's silly, messaging individuals only
 
+## Proof of identity, how to know its hwo you think you are talking to online?
+
+Posting of public key, and check against that key, how to make sure websites are ntoa spoof?
+
+More complex adding of friends
+
+## Data storage and distribution
+
+- some data can go over existing P2P distribution swarms
+- desireable for other data to be distributed to trusted peers only
+- possible to watermark content to see who leaked it? <- probably not worth it
+
+## Circle of trust
+
+- how trustworthy is an identity?
+- who vouches for the identity?
+
+## Hardware based key that can't leave the piece of hardware
+
 ## Technical
 
 Write Everything in TypeScript
@@ -76,6 +95,7 @@ Write Everything in TypeScript
 Azure Functions
 
 Static Website
+
 
 ### Web RTC
 
@@ -102,3 +122,15 @@ https://codelabs.developers.google.com/codelabs/webrtc-web/#4
 
 
 
+## Existing Work
+
+https://eunomia.social/
+
+
+## Technical
+
+Azure WebSocket server - Azure Web PubSub
+https://azure.microsoft.com/en-us/blog/easily-build-realtime-apps-with-websockets-and-azure-web-pubsub-now-in-preview/
+
+https://azure.microsoft.com/en-us/blog/azure-cosmosdb-database-for-serverless-era/
+cx

@@ -1,8 +1,8 @@
 ---
 layout: post
 title:  "Code Best Practice - do not use language keywords as identifiers"
-date:   2021-08-24 20:00:00 -0700
-categories: jekyll update
+date:   2021-12-03 12:00:00 -0700
+categories: best-practice code
 ---
 
 # Code Best Practice - do not use language keywords as identifers
@@ -20,4 +20,4 @@ Why?
 - Keywords have special meaning using them as identifiers adds confusion to those reading the code.
 - In some languages some keywords can be overwritten which can change the commonly understood meaning.
 - Syntax highlighting tools often specially highlight keywords, using keywords as identifiers often results in these identifiers being highlighted as keywords instead of as identifiers. This can be confusing to look at.
- 
+

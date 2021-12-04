@@ -58,7 +58,7 @@ David Deming is the director of the Malcolm Wiener Center for Social Policy at t
 ## Thoughts
 
 - lasting wealth implies material prosperity
-    - some the article further discusses money, the presumption is that the artical refers to wealth and income over an individuals lifetime
+    - some the article further discusses money, the presumption is that the article refers to wealth and income over an individuals lifetime
 - does not talk about investment and savings
 - use of mean verses median
     - mean is a poor statistic to use as it is subject to skew by outliers

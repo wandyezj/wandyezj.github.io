@@ -5,7 +5,7 @@ date:   2021-12-01 20:00:00 -0700
 categories: software
 ---
 
-Software Vocabulary
+Some basic software vocabulary with links to wikipedia.
 
 ## Programs
 

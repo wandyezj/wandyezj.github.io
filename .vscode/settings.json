@@ -1,9 +1,11 @@
 {
+    "editor.bracketPairColorization.enabled": true,
+    "editor.guides.bracketPairs":"active",
     "cSpell.words": [
         "Haikus",
         "Legos",
         "Oaty",
         "performant",
         "wandyezj"
-    ]
+    ],
 }

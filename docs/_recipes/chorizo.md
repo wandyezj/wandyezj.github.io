@@ -1,4 +1,11 @@
-# [Chorizo](https://www.bluezones.com/recipe/mushroom-chorizo-tacos/)
+---
+---
+
+# Chorizo
+
+## Source
+
+[Blue Zones - Chorizo](https://www.bluezones.com/recipe/mushroom-chorizo-tacos/)
 
 ## Ingredients
 
@@ -13,6 +20,8 @@
 - 1/4 cup olive oil
 - Salt and pepper, to taste
 
+## Equipment
+
 ## Directions
 
 1. In a medium pan, heat on medium-high.
@@ -23,3 +32,5 @@
 1. Add remaining ingredients and stir until all seasonings are well blended. You might need to add more spices depending on flavor preference.
 1. Finish with vinegar and season with salt and pepper to taste.
 1. Put your mushroom “chorizo” on your favorite corn tortillas.
+
+## Notes

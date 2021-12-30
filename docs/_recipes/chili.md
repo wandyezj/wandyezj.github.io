@@ -1,4 +1,9 @@
+---
+---
+
 # Chili
+
+## Source
 
 ## Ingredients
 
@@ -39,3 +44,5 @@
 1. Stir in spices thoroughly
 1. Cook for 2 hours, stirring every 20 minutes (make sure nothing is sticking to the bottom of the pot)
 1. Set heat on high to boil off excess water until chili reaches desired thickness
+
+## Notes

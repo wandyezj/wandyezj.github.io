@@ -1,3 +1,6 @@
+---
+---
+
 # Party Crackers
 
 A quick delicious party opener.
@@ -9,6 +12,8 @@ A quick delicious party opener.
 - Sun-dried Tomatoes - Trader Joes California Sun-dried Tomatoes
 - Cheese - Murray's Smoked Gouda
 - Avocado
+
+## Equipment
 
 ## Directions
 

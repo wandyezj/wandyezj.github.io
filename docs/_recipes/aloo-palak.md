@@ -1,10 +1,11 @@
+---
+---
+
 # Aloo Palak
 
+## Source
 
-
-
-
-## Ingredients 
+## Ingredients
 
 - 2 cloves of pealed garlic
 - 1/2 inch piece of fresh pealed ginger root
@@ -18,6 +19,13 @@
 - 2 roma (plum) tomatoes, diced (~4 cups when chopped)
 - 2 potatoes, diced (~4 cups when chopped)
 - 2 bunched of fresh spinach, chopped fine (~2 cups once chopped)
+
+## Equipment
+
+- 1/4 teaspoon
+- chefs knife
+- cutting board
+- pan
 
 ## Directions
 
@@ -33,3 +41,5 @@
 1. cook for 20 minutes, stiring every five minutes
 1. add spinach
 1. cook until potatoes are tender ~10 more minutes
+
+## Notes

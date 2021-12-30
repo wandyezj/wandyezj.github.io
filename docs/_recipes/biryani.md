@@ -1,4 +1,12 @@
-# [Biryani](https://www.cookwithmanali.com/easy-instant-pot-vegetable-biryani/)
+---
+---
+
+# Biryani
+
+## Source
+
+[Cook with Manali - Biryani](https://www.cookwithmanali.com/easy-instant-pot-vegetable-biryani/)
+
 
 ## Ingredients
 
@@ -20,6 +28,7 @@
 - 1 cup basmati rice
 - 1.25 cups water
 
+## Equipment
 
 ## Directions
 
@@ -45,7 +54,7 @@
 1. Close the pot with its lid and then press the manual or pressure cook button. Cook on high pressure for 5 minutes with the pressure valve in the sealing position.
 1. Let the pressure release naturally for 5 minutes and then release the remaining pressure manually. Open the pot and fluff the rice with a fork.
 
-## notes
+## Notes
 
 - add more onions they disappear in the rice
 - double the spices for a stronger flavor

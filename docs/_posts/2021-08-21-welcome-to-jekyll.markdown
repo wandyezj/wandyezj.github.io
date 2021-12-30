@@ -59,6 +59,8 @@ on windows Using WSL2 with ubuntu 20
 
 With the following installed
 
+> cd docs
+
 > bundle install
 
 > bundle exec jekyll serve

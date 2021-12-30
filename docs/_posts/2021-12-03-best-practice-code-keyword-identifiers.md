@@ -11,7 +11,7 @@ In Python for example `if`, `True` and `False` are keywords.
 
 Coding languages often allow identifiers for variable names, class names, struct names, method names, function names, and property names.
 
-Language keywords should only be used for their specified purpose in the languages. Keyword should not be used as identifiers.
+Language keywords should only be used for their specified purpose in the language. Keyword should not be used as identifiers.
 
 It would be convenient if by default programming languages disallowed the use of keywords as identifiers. There may be some edge cases where it makes sense to use keywords as identifiers, however enabling this behavior should be a deliberate choice on the part of the programmer.
 

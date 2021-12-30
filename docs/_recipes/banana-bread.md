@@ -1,5 +1,9 @@
+---
+---
+
 # Banana Bread
 
+## Source
 
 ## Ingredients
 
@@ -32,5 +36,9 @@
 1. Add flour
 1. Add additional mix-ins
 1. Pour the batter into your greased loaf pan and sprinkle lightly with cinnamon.
-1. Bake for 55 to 60 minutes, or until a toothpick inserted into the center comes out clean 
+1. Bake for 55 to 60 minutes, or until a toothpick inserted into the center comes out clean
 1. Let the bread cool in the loaf pan for 10 minutes.
+
+## Notes
+
+- can cut the maple syrup and honey to a quarter cup by adding another banana

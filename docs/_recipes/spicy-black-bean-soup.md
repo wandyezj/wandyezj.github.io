@@ -1,4 +1,12 @@
-# [Spicy Black Bean Soup](https://cookieandkate.com/spicy-vegan-black-bean-soup/)
+---
+---
+
+# Spicy Black Bean Soup
+
+## Source
+
+[Cookie and Kate - Spicy Black Bean Soup](https://cookieandkate.com/spicy-vegan-black-bean-soup/)
+
 
 ## Ingredients
 
@@ -17,6 +25,8 @@
 - salt to taste
 - freshly ground black pepper to taste
 
+## Equipment
+
 ## Directions
 
 1. Heat the olive oil in a large Dutch oven or soup pot over medium heat until shimmering.
@@ -27,3 +37,4 @@
 1. Cook, reducing heat as necessary to maintain a gentle simmer, until the broth is flavorful and the beans are very tender, about 30 minutes.
 1. stir in the cilantro, vinegar/lime juice and salt and pepper, to taste.
 
+## Notes

@@ -1,4 +1,11 @@
-# [Spinach Dal](https://www.bluezones.com/recipe/longevity-dal-palak-spinach-dal/)
+---
+---
+
+# Spinach Dal
+
+## Source
+
+[Blue Zones - Spinach Dal](https://www.bluezones.com/recipe/longevity-dal-palak-spinach-dal/)
 
 ## Ingredients
 
@@ -16,9 +23,13 @@
 - 2 1/2 cups water
 - Salt to taste
 
+## Equipment
+
 ## Directions
 
 1. Sauté all spices and vegetables, except spinach, until onions are clear.
 1. Add tomatoes, lentils, and water and simmer for 30 mins.
 1. Add spinach and cook for 3 more minutes. Salt to taste.
 1. Serve over rice
+
+## Notes

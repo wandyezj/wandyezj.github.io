@@ -1,9 +1,15 @@
+---
+---
+
 # Orange Rice
 
-Spanish Rice
+## Source
 
-Sopa de Arroz
+Also known as:
+- Spanish Rice
+- Sopa de Arroz
 
+## Ingredients
 
 - 1 cup White rice
 - 1/4 teaspoon garlic salt
@@ -15,8 +21,12 @@ Sopa de Arroz
 - 1/2 tomatto cut small
 - 2 cups water
 
+## Equipment
+
 - small saucepan with lid
 - wood spatula
+
+## Directions
 
 1. Place small saucepan on stove
 1. Place canola oil in saucepan
@@ -32,3 +42,5 @@ Sopa de Arroz
     - chicken bouillon
     - tomatoes
 1. cover and simmer on low heat 20 minutes, stiring every five minutes so that the rice does not stick to the bottom of the pan
+
+## Notes

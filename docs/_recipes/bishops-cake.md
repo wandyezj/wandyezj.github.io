@@ -1,3 +1,6 @@
+---
+---
+
 # Bishops Cake
 
 ## Source
@@ -6,9 +9,11 @@ silver palate cookbook
 Page 295
 Bishops Cake
 
+Also known as Pound Cake
+
 ## Ingredients
 
-- 2 sticks of sweet butter
+- 2 sticks of sweet butter (unsalted butter)
 - 2 cups granulated sugar
 - 2 cups unbleached all purpose flour
 - 2-3 tablespoons of lemon juice
@@ -40,3 +45,8 @@ Bishops Cake
 tasty for a whole week
 
 Do __not__ microwave butter to soften it, as this changes the texture of the cake, instead let better warm by leaving it out.
+
+- can swap a half cup of flour for almond flour for a fluffier cake with a taste of almond
+- add lemon zest for a more lemony flavor
+- cut a cup of sugar to make it less sweet
+- higher quality ingredients make a big difference especially butter and eggs

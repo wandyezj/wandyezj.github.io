@@ -41,3 +41,15 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
+
+# https://jekyllrb.com/docs/collections/
+collections:
+  recipes:
+    output: true
+
+defaults:
+  -
+    scope:
+      type: recipes # a collection in your site, in plural form
+    values:
+      layout: post

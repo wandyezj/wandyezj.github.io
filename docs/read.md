@@ -3,18 +3,10 @@ layout: page
 ---
 # Read
 
-## Books
 
-{% assign books_not_academic = site.books | where_exp:"item","item.genre != 'academic'" %}
-{% for book in books_not_academic %}
-<p>
-<a href="{{ book.wiki }}" >
-{{ book.title }} - {{ book.author }} ({{ book.year }})
-</a>
-</p>
-{% endfor %}
 
-## Papers
+
+## Academic Books
 
 {% assign books_academic = site.books | where:"genre", "academic" %}
 {% for book in books_academic %}
@@ -25,5 +17,15 @@ layout: page
 </p>
 {% endfor %}
 
+## Papers
 
-Diffusion of innovations
+## Books
+
+{% assign books_not_academic = site.books | where_exp:"item","item.genre != 'academic'" %}
+{% for book in books_not_academic %}
+<p>
+<a href="{{ book.wiki }}" >
+{{ book.title }} - {{ book.author }} ({{ book.year }})
+</a>
+</p>
+{% endfor %}

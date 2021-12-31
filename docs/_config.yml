@@ -46,6 +46,13 @@ plugins:
 collections:
   recipes:
     output: true
+  books:
+    output: false
+    title: ""
+    author: ""
+    year: ""
+    wiki: ""
+    genre: ""
 
 defaults:
   -

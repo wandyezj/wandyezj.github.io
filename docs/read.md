@@ -1,9 +1,16 @@
+---
+layout: page
+---
 # Read
 
 ## Books
 
-[The Diamond Age - Neal Stephenson (1995)](https://en.wikipedia.org/wiki/The_Diamond_Age)
-
-[Rainbows End - Vernor Vinge (2007)](https://en.wikipedia.org/wiki/Rainbows_End)
+{% for book in site.books %}
+<p>
+<a href="{{ book.wiki }}" >
+{{ book.title }} - {{ book.author }} ({{ book.year }})
+</a>
+</p>
+{% endfor %}
 
 ## Papers

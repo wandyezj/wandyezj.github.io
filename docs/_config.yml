@@ -53,6 +53,13 @@ collections:
     year: ""
     wiki: ""
     genre: ""
+  papers:
+    output: false
+    title: ""
+    author: ""
+    year: ""
+    link: ""
+    tags: []
 
 defaults:
   -

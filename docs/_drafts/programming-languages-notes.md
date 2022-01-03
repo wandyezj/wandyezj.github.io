@@ -9,6 +9,7 @@ Optional items are usually enclosed in square brackets[]
 
 - Lexical analyzer
     - lex / flex
+    - C
 
 - parser
     - yacc

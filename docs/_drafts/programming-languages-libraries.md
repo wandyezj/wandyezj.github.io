@@ -13,6 +13,8 @@
 - [zlib](http://zlib.net/)
     - License: [Open Specific](http://zlib.net/zlib_license.html)
 
+- [OpenSSL](https://www.openssl.org/)
+    - License: 
 
 - [clang](https://clang.llvm.org/)
     - License: Apache License 2.0 with LLVM Exceptions

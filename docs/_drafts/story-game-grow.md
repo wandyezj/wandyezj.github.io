@@ -50,6 +50,15 @@ How can you use a scene?
 - Introduce a new character
 - Plot Action
 
+- flash forward / flash back
+
+- Inner monologue - what is a character thinking? What is a character feeling?
+
+- What as a player are you thinking?
+
+## Challenge
+
+- sharing narrative control
 
 # notes
 

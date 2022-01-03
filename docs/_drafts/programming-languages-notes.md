@@ -8,7 +8,7 @@ Optional items are usually enclosed in square brackets[]
 
 
 - Lexical analyzer
-    - lex / flex
+    - lex / [flex](https://en.wikipedia.org/wiki/Flex_(lexical_analyser_generator)) https://github.com/westes/flex
     - C
 
 - parser

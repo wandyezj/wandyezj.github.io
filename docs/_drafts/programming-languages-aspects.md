@@ -59,6 +59,11 @@ Programming languages cannot be separated from their development environments or
     - struct
     - union
     - enum
+- namespaces
+    - inaide od muslwa
+- modules
+    - file scoped
+- pipe
 
 ## Languages
 
@@ -66,15 +71,17 @@ Programming languages cannot be separated from their development environments or
 
 [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-[Perl]()
+[Perl](https://en.wikipedia.org/wiki/Perl)
 
 [c](https://en.wikipedia.org/wiki/C_(programming_language))
 
-[c++]()
+[c++](https://en.wikipedia.org/wiki/C%2B%2B)
 
-[JavaScript]()
+[JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-[TypeScript]()
+[TypeScript](https://en.wikipedia.org/wiki/TypeScript)
+
+[Lua](https://en.wikipedia.org/wiki/Lua_(programming_language))
 
 ## Common Objects
 
@@ -85,6 +92,77 @@ Built In types
 - List / Array / Vector (all different)
 - Map / Hash / Dictionary
 - Set
+
+## Comments
+
+Languages use different comment conventions
+https://en.wikipedia.org/wiki/Comparison_of_programming_languages_(syntax)#Comments
+
+For single line comments `#`or `//` are the most popular
+
+For multiline comments `/* */` is the most popular (it's convenient if sequences can be nested)
+
+Python docstring serves as documentation built into the language itself which is somewhat convenient
+
+__Python__
+
+```python
+# comment
+'''
+comment
+'''
+
+"""
+comment
+"""
+```
+
+`#` requires holding the shift key to press but otherwise is faster then // (two simultaneous key presses)
+
+`'''` is somewhat easy but also annoying to type because of the three characters, technically in python this is a doc string
+
+
+__C++__
+
+```cpp
+// comment
+
+/*
+comment
+*/
+```
+
+`//` is convenient to type
+`/* */` is annoying to type because of the shift
+
+__perl__
+
+```perl
+# comment
+=begin
+comment
+=cut
+```
+
+`=begin` and `=cut` are super inconvenient
+
+
+__ruby__
+
+```ruby
+# comment
+=begin
+comment
+=end
+```
+bizare as in perl
+
+
+__sql__
+
+```slq
+-- comment
+```
 
 ## List
 
@@ -233,3 +311,62 @@ Ownership of variables
 
 Definition of access of variable names
     - need clearly defined blocks
+
+
+Require same format for all code blocks.
+
+```text
+if (condition) {
+
+}
+
+if condition {
+
+}
+
+```
+
+Should all for loops be over ranges or generators? Simplify conditions and avoid logic errors?
+
+Should break or continue be allowed?
+
+Switch or match statement.
+
+```text
+
+// () make it hard to read
+for (x in range(5)) {
+
+}
+
+for x in range(5) {
+
+}
+
+foreach (x in range(5)) {
+
+}
+
+for (i : range(5)) {
+
+}
+
+```
+
+
+
+super simple embeddable scripting language.
+
+If on the web then needs to execute in JavaScript
+
+- lightweight and fast
+- quick to iterate on
+- hard to mess up
+- macros
+- simple scripts
+- Extensions
+- verify correctness
+- avoids common syntax errors
+- duel mode - compilable and executable line by line
+- easily represented with a graphical programming language perfect translation back and forth
+- describable in BNF

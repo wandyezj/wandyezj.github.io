@@ -1,5 +1,10 @@
 # Nice Things
 
+## Materials
+
+- glass, metal, wood, ceramic
+    - make sure they they don't contain any heavy metals
+
 ## Chocolates
 
 [L. A. Burdick](https://www.burdickchocolate.com/)
@@ -9,6 +14,8 @@
 [Marou](https://marouchocolate.com/)
 
 [Askinosie White Chocolate Bar](https://askinosie.com/collections/white-chocolate-bars)
+
+[Bar and cocoa](https://barandcocoa.com/)
 
 ## Containers
 
@@ -41,8 +48,16 @@ Tide Original
 - Cracklin' Oat Bran
 - Weetabix
 
+## Tea
 
+[Twinings](https://twiningsusa.com/)
+
+[tealeaves](https://www.tealeaves.com/)
 
 ## Food
 
 Cape Cod Potatoe Chips, Sea Salt and Vinegar
+
+## Pepper Grinder
+
+[Peugeot pepper mill -Fidji](https://us.peugeot-saveurs.com/en_us/pepper-mills)

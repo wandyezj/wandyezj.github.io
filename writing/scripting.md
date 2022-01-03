@@ -78,3 +78,5 @@ const startTimeMilliseconds = getMillisecondsSinceStart()
 - Within a team standardize on one scripting language, preference should be node TypeScript
 
 - have most common code pathways come before less common pathways. In the case of doing something special for specific cases in a loop do the cases in order of occurance.
+
+- Do not label a wrapper script the same as the thing to be called, if the path includes the wrapper script it will infinitely recursively call itself. Path order matters, but also just avoid the issue.

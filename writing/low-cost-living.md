@@ -47,13 +47,33 @@ Aim for about 500 per month = 6000 per year
 
 Per Month   | Per Year  | notes
 ---         | ---       | ---
-100         | 1200      | Living with a benevolent person
-300         | 3600      | Splitting with someone
-500         | 6000      |
-600         | 7200      | Most places start at 600
-700         | 8400      |
+100         |  1200     | Living with a benevolent person
+300         |  3600     | Splitting with someone
+500         |  6000     |
+600         |  7200     | Most places start at 600
+700         |  8400     | Most Apartments
+800         |  9600     |
+900         | 10800     | Big City Apartments
+1000        | 12000     | A nice apartment
 
-Owning can be less than renting due to tax breaks and once the loan is paid off.
+Owning can be less than renting due to tax breaks and once the loan is paid off. This requires having enough money for a down payment and the willingness to stay in the area for a while. This is also dependent on any HOA fees or expenses to maintain the property.
+
+Tax deductions to home ownership
+
+- mortgage interest 375,000
+- mortgage insurance
+- state and local property taxes 5000
+
+
+Case Study Seattle Apodment
+
+Around $800 - $900
+
+- All utilities including internet are included.
+- Twin Bed
+- Furnishing is included.
+- Single occupant
+- Shared Laundry
 
 ### Food
 
@@ -296,6 +316,8 @@ Strive for zero cost options
     - A reasonable laptop computer is about ~400 a nice one is around 800, however the computer should last around 4+ years meaning this is a cost of about 100 to 200 per year (much less expensive than internet)
         - Multimedia art programs
         - Probably want if using public transportation
+        - Writing
+        - Drawing
 
 #### Expensive Entertainment
 
@@ -320,6 +342,59 @@ Comments
 
 - Restaurants are expensive and generally serve food that is not optimal (and sometimes harmful) for physical health
 - Kids are expensive, if you are trying to keep costs low to work minimal hours and pursue artistic passions, kids are not ideal. Each child costs roughly ~1000+/month = ~12,000/year. Not to mention the incredible investment in parental time.
+
+## Income
+
+Weekly Income at Hourly wage at hours worked
+
+Hourly  | 20 hours  | 30 hours  | 40 hours  | 50 hours
+7.5     | 150       | 225       | 300       | 375
+10      | 200       | 300       | 400       | 500
+15      | 300       | 450       | 600       | 750
+16.69   | 333.8     | 500.7     | 667.6     | 834.5
+20      | 400       | 600       | 800       | 1000
+
+
+There are 52 weeks in a year
+
+50 weeks at 30 hours is 1500
+50 weeks at 36 hours is 1800
+45 weeks at 40 hours is 1800
+50 weeks at 40 hours is 2000
+
+Average is 1800 hours per year
+
+Yearly Income at Hourly wage at hours worked per year
+
+Hourly  | Income at 1500 hours    | Income at 1800 hours    | Income at 2000 hours
+7.5     | 11250                   | 13500                   | 15000
+10      | 15000                   | 20000                   | 20000
+15      | 22500                   | 30000                   | 30000
+16.69   | 25035                   | 30042                   | 33380
+20      | 30000                   | 40000                   | 40000
+
+Taxes are brutal
+
+Tax Income
+
+20000   |   2200
+30000   |   3400
+40000   |   4600
+
+Tax Social Security 7 %
+
+20000   |   1400
+30000   |   2100
+40000   |   2800
+
+Tax Total
+
+20000   |   3600
+30000   |   5600
+40000   |   7400
+
+Basically Paying for Social Security Medicare and Medicaid are super punishing for young people.
+
 
 ## Case Study for Seattle
 

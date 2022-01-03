@@ -19,7 +19,7 @@ layout: page
 
 ## Papers
 
-## Books
+## Literature
 
 {% assign books_not_academic = site.books | where_exp:"item","item.genre != 'academic'" %}
 {% for book in books_not_academic %}

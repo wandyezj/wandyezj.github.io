@@ -83,3 +83,16 @@ Programming languages cannot be separated from their development environments or
 
 
 Is there a Mathematical language? One suited to writing out equations and solving them? Needs to explain how the problem is solved
+
+## Core Features
+
+
+
+## Desireable Properties
+
+Clearly defined and understandable Variable Scope and lifetime.
+
+Ownership of variables
+
+Definition of access of variable names
+    - need clearly defined blocks

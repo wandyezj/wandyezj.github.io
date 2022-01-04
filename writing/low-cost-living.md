@@ -387,6 +387,19 @@ Tax Social Security 7 %
 30000   |   2100
 40000   |   2800
 
+Really:  7.65% (6.2% Social Security, 1.45% Medicare)
+
+20000   |   1533
+30000   |   2299.5
+40000   |   3066
+
+Projected Equivalent with Stock market savings principal doubling every 10 years
+
+        | percent 0.062 | 10    | 20    | 30     | 40       | 50        | 20 year, yearly payout
+20000   | 1240          | 12400 | 37200 | 86800  | 186000   | 384400    | 19220
+30000   | 1860          | 18600 | 55800 | 130200 | 279000   | 576600    | 28830
+40000   | 2480          | 24800 | 74400 | 173600 | 372000   | 768800    | 38440
+
 Tax Total
 
 20000   |   3600

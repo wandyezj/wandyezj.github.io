@@ -380,3 +380,44 @@ If on the web then needs to execute in JavaScript
 - typed so functions can have overloads? However this requires that functions have types? Or is there generic catch all functions? for objet can simply apply a type property to allow reflection to see what functions match up.
     - what about function order? If executing in order requires definition before access.
 
+- variable names as handles to things. Type of a variable specifying that it can only handle specific things. This requires that the type of the actual object be defined on the Right hand side, and the type of the handle being defined on the left hand side. This also requires a difference between the declaration of a variable and the assignment of a variable.
+
+Example
+
+```text
+
+# `list()` creates a list, and variable points to this list
+variable = list()
+
+# later on variable is assigned to a set
+variable = set()
+
+# this does not allow for scoping rules since it is unclear where the variable is actually declared
+function f():
+    variable = 5
+
+
+let variable = list()
+
+function f():
+    # specifies that the variable is referring to the outer scoped variable
+    variable = 5
+
+function f2():
+    # specified that the variable is defined within the function scope
+    let variable = 5
+
+
+# split of variable declaration and assignment also allows variable to specify what they can be pointed to
+
+# specifies that this handle can only point to list type variables, allows for error checking
+let variable: list
+
+# no specified type can point to anything
+let variable
+
+```
+
+ essentially the conclusion here is that in order to have firm scope rules its required to separate declaration from assignment.
+
+

@@ -164,6 +164,8 @@ __sql__
 -- comment
 ```
 
+## Files and Networking
+
 ## List
 
 __Python__
@@ -370,3 +372,11 @@ If on the web then needs to execute in JavaScript
 - duel mode - compilable and executable line by line
 - easily represented with a graphical programming language perfect translation back and forth
 - describable in BNF
+- permissions to explicitly specify what language features are allowed to be used in the script (increase security of scripts, disallow unexpected features in called libraries)
+    - challenging if calling outside of the script engine since there isn't an easy way to enforce what a dll will do.
+    - could specify what libraries and hashes of those libraries are allowed. This would require explicit versioning which would break scripts.
+    - all features used should be extractable with a scan of the script.
+
+- typed so functions can have overloads? However this requires that functions have types? Or is there generic catch all functions? for objet can simply apply a type property to allow reflection to see what functions match up.
+    - what about function order? If executing in order requires definition before access.
+

@@ -11,8 +11,6 @@ Diffusion of Innovations by Everett M. Rogers (Rogers, Everett M. Diffusion of I
 
 An innovation is an idea, practice, or object that is perceived as new by an individual or other unit of adoption.
 
-
-
 ## Perceived attributes of innovations
 
 - Relative advantage
@@ -20,7 +18,7 @@ An innovation is an idea, practice, or object that is perceived as new by an ind
 - Compatibility
     - Consistent with: needs, existing values, past experiences
 - Complexity
-    - Simplicity of understanding and use.
+    - Ease of understanding and use.
 - Trialability
     - Ability to experiment on a limited basis.
 - Observability
@@ -37,6 +35,9 @@ A `communication channel` is the means by which messages get from one individual
 - `Interpersonal channels` are more effective in persuading an individual to accept a new idea, especially if the interpersonal channel links two or more individuals who are similar in socioeconomic status, education, or other important ways.
 
 Diffusion investigations show that most individuals do not evaluate an innovation on the basis of scientific studies of its consequences, although such objective evaluations are not entirely irrelevant, especially to the very first individuals who adopt. Instead, most people depend mainly upon a subjective evaluation of an innovation that is conveyed to them from other individuals like themselves who have already adopted the innovation. This dependence on the experience of near peers suggests that the heart of the diffusion process consists of the modeling and imitation by potential adopters of their network partners who have previously adopted. Diffusion is a very social process that involves interpersonal communication relationships.
+
+- Most individuals __do not__ evaluate an innovation on the basis of scientific studies of its consequences.
+- Most people depend on subjective evaluation of an innovation as conveyed to them from other individuals like themselves who have already adopted the innovation.
 
 ## Time
 

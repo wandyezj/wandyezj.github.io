@@ -133,7 +133,23 @@ Questions:
 * Should games try for more than an engrossing story? Shock: exploring social issues, Kingdom: exploring power dynamics? Should games stories strive to reach a higher truth?
 
 
+Where does the context for the game come from?
 
+- externally people already have something to relate to
+- constructed during the game
+- important the all players share common ground to make the game work
+
+
+Fiasco Analysis:
+
+Fiasco everyone comes in with the same idea, understand the settings
+don't make the character assigned so don't feel as attached as one created for yourself so don't mind bad things happening to them.
+
+What makes the game work?
+
+sillyness and goofyness is ok.
+
+dice serve purpose even though its random
 
 
 

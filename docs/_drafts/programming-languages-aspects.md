@@ -64,6 +64,15 @@ Programming languages cannot be separated from their development environments or
 - modules
     - file scoped
 - pipe
+- data structures
+    - struct
+    - union
+    - enum
+- globals
+- pointers
+- polymorphism
+- inheritance
+- interfaces
 
 ## Languages
 
@@ -300,6 +309,12 @@ Implemented similar to C++ vector to allow fast lookup by index.
 
 
 Is there a Mathematical language? One suited to writing out equations and solving them? Needs to explain how the problem is solved
+
+What is the most useful set of features for specific programming tasks?
+
+- Scripting
+- Data analysis
+- Application Development
 
 ## Core Features
 

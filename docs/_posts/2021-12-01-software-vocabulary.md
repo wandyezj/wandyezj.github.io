@@ -87,3 +87,22 @@ Some basic software vocabulary with links to wikipedia.
     - [Wikipedia - Logic error](https://en.wikipedia.org/wiki/Logic_error)
 
 
+## Variables
+
+scope
+
+- global variable
+    - Global variables are defined outside of any function and can be used anywhere in a program.
+    - Overusing global variables quickly leads to unclear, unmanageable, and buggy code
+    - [Wikipedia - Global Variable](https://en.wikipedia.org/wiki/Global_variable)
+
+- local variables
+    - like function parameters. These variables can only be used in the functions that they are defined in.
+    - [Wikipedia - Local Variable](https://en.wikipedia.org/wiki/Local_variable)
+
+## General
+
+- Multi-factor Authentication
+    - A user is granted access only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something only the user knows), possession (something only the user has), or inherence (something only the user is).
+    - Includes: two factor authentication (2FA)
+    - [Wikipedia - Multi-factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)

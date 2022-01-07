@@ -40,3 +40,17 @@
 
 - Enterprise Automation
 - Generic Scripting
+
+
+## Properties
+
+What properties of the programming language or execution environment are necessary to guarantee these properties?
+
+- prove things about specific code paths
+    - complexity of the program
+    - expected runtime and memory usage for a given size input
+- detect all references to external functions so that these can be accurately exposed to the running of the script so they can make a decision?
+    - In current languages this has to be done manually which is annoying
+
+
+

@@ -25,7 +25,9 @@ What is the bare minimum?
         - important to be able to convert between different formats
         - would be convenient if all files stored dates the same way, since this can avoid the ambiguity.
         - What matters is wha time a day starts and what time a year starts these can be linked back to a specific timeframe. Hence an algorithm would simply look these offsets up in a table. However since time is a human construct that means that new time system can come into play. Should this be exposed to a script writer? changing this underneath the hood can have existing scripts modify their results.
-
+        - [C++ Chrono](https://www.cplusplus.com/reference/chrono/)
+            - takes the opinion of the system clock -> looks at the machines clock.
+        - any timestamp of day will need to refer to some alternative endpoint
 - networking
     - fetch
     - [http](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol)

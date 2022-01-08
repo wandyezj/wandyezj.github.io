@@ -3,8 +3,11 @@
 
 `try` `catch` `except`
 
-
 `raise` `throw`
+
+- exceptions are almost an expectation in modern programming languages
+    - Are exceptions needed for scripts?
+    - fetch
 
 - should exceptions be strongly typed in the catch?
 

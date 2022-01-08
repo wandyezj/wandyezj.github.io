@@ -14,14 +14,18 @@
 - Limit what external libraries can do, requires built in APIs for all permissions.
 
 - Permissions
-    - network
-    - file system
     - compute resources
         - memory
         - CPU
+            - need model of how expensive each command is to run, can be built of system stats over time
         - GPU
     - IO
+        - external information from the system
         - Camera
+        - environment variables
+        - network
+        - file system
+        - time
     - Specific DLLs to link code (But then give up other properties since DLLs can do anything)
 
 
@@ -52,5 +56,7 @@ What properties of the programming language or execution environment are necessa
 - detect all references to external functions so that these can be accurately exposed to the running of the script so they can make a decision?
     - In current languages this has to be done manually which is annoying
 
+
+- don't have features beyond the minimum needed. Don't add lots of features. The goal is to write fast provable scripts.
 
 

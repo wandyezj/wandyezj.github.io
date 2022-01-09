@@ -44,9 +44,9 @@ Also known as Pound Cake
 
 tasty for a whole week
 
-Do __not__ microwave butter to soften it, as this changes the texture of the cake, instead let better warm by leaving it out.
+Do __not__ microwave butter to soften it, as this changes the texture of the cake, instead let butter warm by leaving it out.
 
-- can swap a half cup of flour for almond flour for a fluffier cake with a taste of almond
+- can swap a quarter to a half cup of flour for almond flour for a fluffier cake with a taste of almond
 - add lemon zest for a more lemony flavor
 - cut a cup of sugar to make it less sweet
 - higher quality ingredients make a big difference especially butter and eggs

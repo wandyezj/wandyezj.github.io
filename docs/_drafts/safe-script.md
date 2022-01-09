@@ -60,3 +60,7 @@ What properties of the programming language or execution environment are necessa
 - don't have features beyond the minimum needed. Don't add lots of features. The goal is to write fast provable scripts.
 
 
+- make it easy to understand
+- do not allow redefinition of functions? (or at leas
+t built in functions)
+

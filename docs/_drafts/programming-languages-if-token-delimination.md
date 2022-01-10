@@ -108,7 +108,7 @@ Advantages
 Disadvantages
 
 - possibly more complex explanation since there are multiple options
-- have to se
+- easy to forget colon
 
 ### Python style without colon
 
@@ -127,7 +127,7 @@ Advantages:
 
 Disadvantages:
 
-- no single line if
 - requires that block always start on the next line
-- condition can be spread across multiple lines and automatically derived if types are known in advance and there are restrictions on what can be in statements.
+- no single line if unless types are derivable at compile time and there are restrictions on what is allowed to be in a statement.
+- condition can not be spread across multiple lines and automatically derived unless types are known in advance and there are restrictions on what can be in statements.
 

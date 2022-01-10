@@ -1,0 +1,173 @@
+---
+layout: post
+title:  "Elements of Programming Languages - if token delimitation"
+date:   2022-01-09 12:00:00 -0700
+categories: software programming languages
+---
+
+Conditional logic is key in many programs. Most programming languages provide an `if` statement to allow for conditional branches. If statements execute a `conditional block` of statements if the `condition` expression evaluates to true.
+
+A key task for the `if` statement construct is to delimitate the `condition` and the `conditional block`.
+
+This essay examines different systems of if statement delimitation for the `condition` and `conditional block`.
+
+## Example if statements in different languages
+
+Example if statement for a `conditional block` in: C, C++, C#, Java, JavaScript
+
+```c
+if (condition) {
+    // conditional block
+    conditional_statement();
+}
+```
+
+`note`: Some languages allow the curly braces to be excluded for a single statements. Many style guides recommend that curly braces be used consistently even if there is a single statement. Some reasons include: consistency and prevention of errors when new statements are added.
+
+Example if statement for single conditional statement in: C, C++, JavaScript
+
+```c
+if (condition) conditional_statement(); // single conditional statement
+```
+
+Example if statements in: Python
+
+```python
+if condition:
+    # conditional block
+    conditional_statement()
+```
+
+Example if statement for single conditional statement in: Python
+
+```python
+if condition: conditional_statement() # single conditional statement
+```
+
+Example if statement with a condition spread across multiple lines in: Python
+
+```python
+# Multi Line conditions are wrapped in parentheses
+if (condition
+    and condition):
+    # conditional block
+    conditional_statement()
+```
+
+## Delimitation of `condition` from the `conditional block`
+
+In C, C++, C#, Java, JavaScript:
+
+- The `condition` is surrounded by parentheses (an opening round bracket `(` and closing round bracket `)`).
+- The `conditional block` is surrounded by braces (an opening curly bracket `{` and closing curly bracket `}`). These
+
+In the Python programming language:
+- The end of the `condition` expression is denoted by a colon `:`
+- The `conditional block` is any set of statements indented underneath the `if`
+
+
+## Why is the colon `:` in Python if statement necessary from a technical standpoint?
+
+
+## Experience
+
+
+
+## Alternate Delimitation Schemes
+
+### Like Python, but without a colon `:`
+
+With `:`
+
+```text
+if condition:
+    # block
+
+```
+
+Without `:`
+
+```text
+if condition
+    # block
+```
+
+Advantages:
+
+- no need to type colon
+- one less thing to explain
+- removal of possible error condition
+- consistency - all if statements the same
+- easier to parse
+
+Disadvantages:
+
+- no single line if
+- requires that block always start on the next line
+
+
+
+
+
+## Scratch
+
+Example
+
+
+The colon is easy to miss when typing code. Considering that Python goes out of the way to eliminate other pieces of standard syntax in common programming languages around the if statement; parentheses around the condition and and curly braces around the conditional block; it may seem surprising that colon is present.
+
+
+In most other programming languages parentheses and curly braces allow whitespace to not be considered significant.
+
+
+
+
+The colon is needed for the case where the conditional statement is in the same line as the if condition.
+
+Example:
+
+```python
+condition = True
+if condition : print("hello")
+```
+
+The following case cannot be disambiguated without a semicolon. `if a - b - c` does this mean `if a: - b - c` or `if a - b: -c`
+
+
+## Alternatives to `:`
+
+Require any statements begin on the next line.
+
+Comparison
+
+
+
+
+
+
+
+the colon is needed to separate 
+
+This is because Python allows statements like `a < b`.
+
+Without a colon `:` to delimitate the end of the condition
+
+
+- not needed for ternary
+`value if condition else alternative`
+
+```text
+if condition
+    # conditional block
+
+
+
+# only allow variable 
+if condition statement
+
+```
+
+
+requires shift + :
+
+verses simply typing letters on the keyboard

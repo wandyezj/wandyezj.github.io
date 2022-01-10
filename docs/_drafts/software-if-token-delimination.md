@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Elements of Programming Languages - if token delimitation"
+title:  "Programming Languages - if token delimitation"
 date:   2022-01-09 12:00:00 -0700
 categories: software programming languages
 ---
@@ -62,14 +62,54 @@ In C, C++, C#, Java, JavaScript:
 - The `conditional block` is surrounded by braces (an opening curly bracket `{` and closing curly bracket `}`). These
 
 In the Python programming language:
+
 - The end of the `condition` expression is denoted by a colon `:`
 - The `conditional block` is any set of statements indented underneath the `if`
 
 
-## Why is the colon `:` in Python if statement necessary from a technical standpoint?
+### Why is the colon `:` in Python if statement necessary from a technical standpoint?
 
+The colon is needed for the case where the conditional statement is in the same line as the if condition.
 
-## Experience
+The following case cannot be disambiguated without a semicolon. `if a - b - c` does this mean `if a: - b - c` or `if a - b: -c`
+
+The colon`:` ia not used in Pythons ternary expression `value if condition else alternative`
+
+## C stye if verses Python style for multiple block statements
+
+### C style
+
+- Type `if`
+- put the condition between parentheses
+- put any conditional block statements between the curly braces.
+
+Advantages
+
+- Relatively easy auto formatting for indentation
+- single way to do things
+
+Disadvantages
+
+- requires typing at least one `(` sometimes a `{` typically most editors automate adding the other
+- mismatch errors between curly braces
+- arguments about brace style
+
+### Python style
+
+- Type `if` and a space then write out the the condition
+- If the condition spans multiple lines it needs to be in parentheses
+- Place a colon after the condition.
+- make any conditional block statements are indented under the if block
+
+Advantages
+
+- forced indentation makes the code consistent
+
+Disadvantages
+
+- possibly more complex explanation since there are multiple options
+- have to se
+
 
 
 
@@ -77,7 +117,7 @@ In the Python programming language:
 
 ### Like Python, but without a colon `:`
 
-With `:`
+Python With `:`
 
 ```text
 if condition:
@@ -85,7 +125,7 @@ if condition:
 
 ```
 
-Without `:`
+Potential Without `:`
 
 ```text
 if condition
@@ -94,7 +134,7 @@ if condition
 
 Advantages:
 
-- no need to type colon
+- no need to type colon (requires shift + colon)
 - one less thing to explain
 - removal of possible error condition
 - consistency - all if statements the same
@@ -104,6 +144,7 @@ Disadvantages:
 
 - no single line if
 - requires that block always start on the next line
+- condition can be spread across multiple lines and automatically derived if types are known in advance and there are restrictions on what can be in statements.
 
 
 
@@ -122,7 +163,6 @@ In most other programming languages parentheses and curly braces allow whitespac
 
 
 
-The colon is needed for the case where the conditional statement is in the same line as the if condition.
 
 Example:
 
@@ -130,9 +170,6 @@ Example:
 condition = True
 if condition : print("hello")
 ```
-
-The following case cannot be disambiguated without a semicolon. `if a - b - c` does this mean `if a: - b - c` or `if a - b: -c`
-
 
 ## Alternatives to `:`
 
@@ -154,7 +191,7 @@ Without a colon `:` to delimitate the end of the condition
 
 
 - not needed for ternary
-`value if condition else alternative`
+
 
 ```text
 if condition

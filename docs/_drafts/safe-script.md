@@ -80,6 +80,19 @@ t built in functions)
 
 - requiring scripts to be open source and reviewable is part of the package, allows reuse of existing scripts within scripts.
 
+
+- concept of making a claim about a script, either intentionally or derivable via static analysis that is enforceable so that the claim cannot be violated when the script executes.
+    - claim may be that the script only reads files, only reads X files, only writes specific files in specific locations
+    - claim may be that the script only calls specific DLLs and only calls specific APIs within those dlls.
+    - claim may be that the script only accesses specific functions from other scripts
+    - claim may be about what a script does with specific data
+
+- want the script execution program and language to allow extension so that even more specific claims may be enforced over time.
+
+- lots of scripts on the internet to do many convenient useful things, but how can we be more certain that these scripts (code other people wrote) only does what is specified and nothing more? How can we be certain that
+
+- making claims needs to be convenient, automatic, and things can be applied later to make more stringent claims.
+
 ## Proposed Syntax
 
 Declaration

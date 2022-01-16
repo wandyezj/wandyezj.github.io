@@ -2,7 +2,7 @@
 layout: post
 title:  "Programming Languages - if token delimitation"
 date:   2022-01-09 12:00:00 -0700
-categories: software programming languages
+tags: software programming languages
 ---
 
 Conditional logic is key in many programs. Most programming languages provide an `if` statement to allow for conditional branches. If statements execute a `conditional block` of statements if the `condition` expression evaluates to true.

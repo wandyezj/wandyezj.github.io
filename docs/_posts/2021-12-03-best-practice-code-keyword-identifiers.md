@@ -2,7 +2,7 @@
 layout: post
 title:  "Code Best Practice - do not use language keywords as identifiers"
 date:   2021-12-03 12:00:00 -0700
-categories: best-practice code
+tags: best-practice code
 ---
 
 Coding languages often have keywords:  `if`, `null`, `None`, etc..

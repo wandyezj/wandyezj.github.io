@@ -2,7 +2,7 @@
 layout: post
 title:  "Diffusion of Innovations"
 date:   2022-01-03 12:00:00 -0700
-categories: software
+tags: software
 ---
 
 _Rogers, Everett M. Diffusion of innovations, 5th Edition. Free Press, 2003._

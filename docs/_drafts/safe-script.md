@@ -76,6 +76,10 @@ t built in functions)
 
 - Do not allow assignment outside of an assignment statement
 
+- Anything provable about a script should also be provable about a function in the script leading to function summarization.
+
+- requiring scripts to be open source and reviewable is part of the package, allows reuse of existing scripts within scripts.
+
 ## Proposed Syntax
 
 Declaration

@@ -299,3 +299,55 @@ function name({parameter_a, parameter_b})
 generator name()
     yield value
 ```
+
+### Dot Semantics
+
+`object.method(...)` can be translated to `method(object, ...). Allowing methods to be defined dynamically requires a way to differentiate between 'built-in' methods part of the class and user defined methods, or methods from a library. This way people are not confused about what is what. i.e. can trust that built in methods do the same thing but not defined methods.
+
+
+## BNF
+
+http://www.cs.man.ac.uk/~pjj/bnf/bnf.html
+
+http://www.cs.man.ac.uk/~pjj/bnf/c_syntax.bnf
+
+```bnf
+<number> ::= <digit> | <number><digit>
+<digit> ::= "0" | "1" | "2" | "3" | "4" | "5" | "6" | "7" | "8" | "9"
+<character> ::= %any utf-8 character%
+<letter> ::= <letter_uppercase> | <letter_lowercase>
+<letter_uppercase> ::= "A" | "B" | "C" | "D" | "E" | "F" | "G" | "H" | "I" | "J" | "K" | "L" | "M" | "N" | "O" | "P" | "Q" | "R" | "S" | "T" | "U" | "V" | "W" | "X" | "Y" | "Z"
+<letter_lowercase> ::= "a" | "b" | "c" | "d" | "e" | "f" | "g" | "h" | "i" | "j" | "k" | "l" | "m" | "n" | "o" | "p" | "q" | "r" | "s" | "t" | "u" | "v" | "w" | "x" | "y" | "z"
+
+<newline> ::= "\n"
+<optional_whitespace> ::= " " <optional_whitespace> | ""
+
+<token_quote_double> ::= """
+
+<literal> ::= literal_string | literal_number
+<literal_number> ::= <number>
+<literal_string> ::= <token_quote_double> <character_sequence> <token_quote_double>
+<character_sequence> ::= <character> <character_sequence> | <character> | ""
+
+<identifier> ::=
+
+<expression> ::= <expression_call> |
+(* call expression with positional arguments, but don't actually want positional arguments want named arguments*)
+<expression_call> ::= <identifier_function> "(" <expression_call_argument_list> ")"
+<expression_call_argument_list> ::= "" | <expression_call_argument> | <expression_call_argument_list> "," <expression_call_argument>
+<expression_call_argument> ::= <literal>
+
+<keyword_if> ::= "if"
+<keyword_else> ::= "else"
+<keyword_and> ::= "and"
+<keyword_or> ::= "or"
+<keyword_not> ::= "not"
+
+<identifier_character> ::= %[a-z]
+
+
+
+```
+
+- boolean expression
+- numeric expression

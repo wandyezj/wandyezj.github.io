@@ -9,9 +9,10 @@ May want the ability to ensure that an integer is within the specified bounds fo
 
 Integers and strings
 
-[TypeScript Playgroud code below](https://www.typescriptlang.org/play?&q=501#code/LAKA9AVBoAQTBJAdgYwDYFcDOBLAbgKYwBGA9hkgCZYwBmpATjAIZIw5IAuBA5gQ7HgBtALYccIjCIA0MEcwAeEqQF1BYUB24NazFEWTc+DAMKkkWTg2ZasAHjFJlImAQXcqNJFOL9Z8pUkXNw9qGG8RXwYAPhgAb1g5cSCALiSnIIBuRIDnNNys0ABfUFBIaBA4GBQACwIUAGsCSnYuXn5qtGYsLH9mJposDAYiThrmThgxojxmTCI6tBacGlZWow6AdxwxjhgsAAd6nFocZpJyT3VQdG6aQ3aGB2SpV3cCT3CfPzlFZzfQl5vjF4olEmAwCwUJwMHM0ABPGAHBj4CYERIAYhQwxGXDSESi2RAiRQ5ksDAw0MYAAoDhhiGgcChqmSrDYuFg0g9jGYLGzbM8MlI+oEpNFZNiGLjOPjgQBKUGVGDK3ZYAB0WJxH0mAF5qlquETlSViUq+JNZvNqQqEkrlSMYQw2KqNZLpUaYCbElgCBa5hgCNTLQHZZF+DbEsrufw1bV6g0AGr+wMu0l86y2WTBghyj0qmorV0G3UwbMer3gKCCap1RpTcaTab6qXa0vJuQEX00Jtp8nszhYa5KuONa2K5VRtrGWO1xPJ6mp1kZjmyF2altcXOJCvK5Go7j7TgTJk1+NJ+aCgEfMIEn4BK+fW8xam9-kcrlT-i8vsCxwi8VtvMoZRBGdowBCcjYJMvgsGwWiPJG7C0DA1IAIQAHLAmqKzRgwQbJnKoEThOYwMKQmzhAQFEAKJSjSAAGbqtkIAAkcTZkUKjsF4pCTGs8HGPRcqITuE6vvE6TOCK-xFDAeqvsuA55khKEFK8diAQGMAAD7aZpRAaY4zhEcR9ZkRRSBUTAtFkXhjHFjArHscmnHcTA5CTKQyFkBQYROUZQRFLIbFqSInFCSJ27FKU4CQpQBCnE4nA4OY7nIZZFGcPCRygFlRyIJ+DDIAASqwfAAFr8KQAAqpAABK+SMLR6rhdgAAyyAAjG1bXRESEGkiIIipa+rCNqQMDYEQ3T1kQCn9jcrIsum-a4SVZUEJVZG1Q1VBNR+GymEu-b2B13W9XJ8QBVIaQdb8ooiCk51FESMVoL6MAKAdjzrUgFVVTtjXnHqGUFYdL7HVoa1IKVf2bQD9VA5QsgAKxbqaEG6DgaAwAAtO5GADjg8UXL5zAMPCZSQgoarZpduOdVTn20+2erdYzsXM3TLVIIlOzwv11Ms-Ml3ocw6ExRBQwoPoPR460uAkz5VDk5TIA09zMBtaAGuszAHO6yLbM9TFvakO9apoKQPDUobAbo0AA)
+[TypeScript Playgroud code below](https://www.typescriptlang.org/play?&q=501#code/LAKA9AVBoAQTBJAdgYwDYFcDOBLAbgKYwBGA9hkgCZYwBmpATjAIZIw5IAuBA5gQ7HgBtALYccIjCIA0MEcwAeEqQF1BYUB24NazFEWTc+DAMKkkWTg2ZasAHjFJlImAQXcqNJFOL9Z8pUkXNw9qGG8RXwYAPhgAb1g5cSCALiSnIIBuRIDnNNys0ABfUFBIaBA4GBQACwIUAGsCSnYuXn5qtGYsLH9mJposDAYiThrmThgxojxmTCI6tBacGlZWow6AdxwxjhgsAAd6nFocZpJyT3VQdG6aQ3aGB2SpV3cCT3CfPzlFZzfQl5vjF4olEmAwCwUJwMHM0ABPGAHBj4CYERIAYhQ5ks1lsaQexjMFisNi49kczj6gSk0WylRgWOGIy4aQiUXpMBgpQZ2JJDAw0MYAAo+biyZwsAS2kScaTbM8MlJqc5orIUMyPpw2cCAJSghlc3ZYAB0WLlePJMAAvNULRKsJyuVMaiszRqGCzJraPV6nSUQIk+JNZvNhfqEoaYCMYQw2Mb3ZquP6eVysAQQ3MMARhaHszrIvwI4kuYT+CbavUGgA1LM5hPm-kO2R5gi6p1G12mpmerU2mCtlOB8BQQTVOqNF0TF1EX191tyAgZmjTO1N2zXXkThrhg3OxAy8uVxq1sMNsXy8myc9JzjtxIBxLI1HcfacCY4FDjqun7OKgEfGE7I-AEAGfMBMSiva+IHhspjQeSirUmqA51gWUTFlGEJyNgky+CwbBaI8JbsLQMDCgAhAAcsCJorGWDC5nWuqYfunYMKQmzhAQXEAKKeiKAAGc5cDAQgACRxK2RQqOwXikJMaxEcYgm6iRj5Rhe8TpFSvw0i4RT9helqSh2pHkQUrx2Kh8wwAAPnZNnZjA1mUkErFsWMHFcUgPEwPxHGMcJt5iZJ0mySsMDkJMpBkWQFBhBJcRuVIRSyJJlkiDJqnqQ+xQ8thlAEKcTicDg5hRWRvlcZw8JHKAtVHLBjzIAASqwfAAFr8KQAAqpAABIJSMLS2gxdgAAyyAAjBNE10mUkLYiIIgVRerCTJwpAwNgRDdDOa7iloNxyodl6cAxbUdQQ3Ucf1Q1UCN0pwcSR2IVNs3zf2yUvCIaRTXpeSfUU9I8mgGYwAoz0tUg7VIF1PX3cN5y2tVzXGFB65cJdsPXbdfWDcjlCyAArPew7YboOBoDAAC0UUYJKOBFRcCXMAw8KLZDJoLratPTVzCg83W-azQL4CQkLvMHiVOzwvS2FSyLtpUcwVEFZCQwoPoPR060uAs-FVDs5zIBK7ZtoTaA5vOba4s20QdtzTyYqkODJpoKQPDCg75NAA)
 
 ```typescript
+
 /**
  * Inclusive bounds for an integer
  * [minimum, maximum]
@@ -27,9 +28,12 @@ interface IntegerConstraints<minimum extends number, maximum extends number> {
 class Integer<minimum extends number, maximum extends number> {
   
   // actually private
+  #constraints: IntegerConstraints<minimum, maximum>;
   #current: number;
+  
 
-  constructor(public constraints: IntegerConstraints<minimum, maximum>, current: number) {
+  constructor(constraints: IntegerConstraints<minimum, maximum>, current: number) {
+    this.#constraints = constraints;
     this.#current = current;
   }
 
@@ -38,7 +42,7 @@ class Integer<minimum extends number, maximum extends number> {
   }
 
   set value(value: number) {
-    Integer.checkValue(this.constraints, value);
+    Integer.checkValue(this.#constraints, value);
     this.#current = value;
   }
 
@@ -46,7 +50,7 @@ class Integer<minimum extends number, maximum extends number> {
  * check that the current value meets the constraints
  */
   check() {
-    Integer.checkValue(this.constraints, this.#current);
+    Integer.checkValue(this.#constraints, this.#current);
   }
 
   private static checkValue<min extends number, max extends number>(constraints: IntegerConstraints<min, max>, value: number) {

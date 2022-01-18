@@ -93,6 +93,8 @@ t built in functions)
 
 - making claims needs to be convenient, automatic, and things can be applied later to make more stringent claims.
 
+- convenient if there were something like: [Quick Check](https://en.wikipedia.org/wiki/QuickCheck) fuzzer built in.
+
 ## Proposed Syntax
 
 Declaration
@@ -300,6 +302,8 @@ generator name()
     yield value
 ```
 
+is there a way to specify that a function does not have side effects? Is IO a form of side effect?
+
 ### Dot Semantics
 
 `object.method(...)` can be translated to `method(object, ...). Allowing methods to be defined dynamically requires a way to differentiate between 'built-in' methods part of the class and user defined methods, or methods from a library. This way people are not confused about what is what. i.e. can trust that built in methods do the same thing but not defined methods.
@@ -310,6 +314,8 @@ generator name()
 http://www.cs.man.ac.uk/~pjj/bnf/bnf.html
 
 http://www.cs.man.ac.uk/~pjj/bnf/c_syntax.bnf
+
+How is BNF parsed?
 
 ```bnf
 <number> ::= <digit> | <number><digit>
@@ -324,6 +330,17 @@ http://www.cs.man.ac.uk/~pjj/bnf/c_syntax.bnf
 
 <token_quote_double> ::= """
 
+(* is there a way to forbid keywords from begin identified as identifiers? want to forbid keywords from being used as identifiers *)
+<keyword_if> ::= "if"
+<keyword_else> ::= "else"
+<keyword_and> ::= "and"
+<keyword_or> ::= "or"
+<keyword_not> ::= "not"
+<keyword_true> ::= "true"
+<keyword_false> ::= "false"
+
+
+
 <literal> ::= literal_string | literal_number
 <literal_number> ::= <number>
 <literal_string> ::= <token_quote_double> <character_sequence> <token_quote_double>
@@ -337,11 +354,7 @@ http://www.cs.man.ac.uk/~pjj/bnf/c_syntax.bnf
 <expression_call_argument_list> ::= "" | <expression_call_argument> | <expression_call_argument_list> "," <expression_call_argument>
 <expression_call_argument> ::= <literal>
 
-<keyword_if> ::= "if"
-<keyword_else> ::= "else"
-<keyword_and> ::= "and"
-<keyword_or> ::= "or"
-<keyword_not> ::= "not"
+
 
 <identifier_character> ::= %[a-z]
 

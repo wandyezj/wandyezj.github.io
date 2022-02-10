@@ -98,6 +98,8 @@
 
 - Open Source Security Community
 
+[OWASP Cheat Sheet Series](https://cheatsheetseries.owasp.org/index.html)
+
 [Juice Shop](https://github.com/bkimminich/juice-shop)
 
 - understand security with practice

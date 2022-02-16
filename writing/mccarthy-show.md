@@ -1,0 +1,24 @@
+# McCarthy Show
+
+- []()
+- [Rule 9 - when slipping, don't fall](https://www.youtube.com/watch?v=tMrl5fVuZYc)
+- [Rule 10 - Never trade a bad date from an equally bad date](https://www.youtube.com/watch?v=7RvvcAUa1Qk)
+    - "until you know when you are going to be done don't do anything"
+    - "credibility mathematics"
+    - go through the planning exercise and reschedule
+- [Rule 11 - Low tech is good](https://www.youtube.com/watch?v=KKcIosOYCms)
+    - low tech understood solution before complex solution
+    - what you don't understand you don't understand when you will ship
+    - customers do not pay for a long term vision
+- [Rule 12 - Design time at design time](https://www.youtube.com/watch?v=k5pqsFlBXh0)
+    - Timeliness as a design element
+    - design the product to ship on time
+- [Rule 13 - If you build it, it will ship](https://www.youtube.com/watch?v=fKpjxEFOuAI)
+    - Frequent rolling build
+    - See what you are working on
+    - If you can touch the product you can see where it is at.
+    - Big indicator of health
+    - Anti-surprise device
+    - The build is the heartbeat, if there ain't no heartbeat it's dead
+    - Can't break the build without fixing the build
+- []()

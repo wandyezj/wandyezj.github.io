@@ -106,3 +106,40 @@ scope
     - A user is granted access only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something only the user knows), possession (something only the user has), or inherence (something only the user is).
     - Includes: two factor authentication (2FA)
     - [Wikipedia - Multi-factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
+
+## Boolean Comparisions
+
+(x < y)	is x less than y?
+(x <= y)	is x less than or equal to y?
+(x == y)	is x equal to y?
+(x != y)	is x not equal to y?
+(x > y)	is x greater than y?
+(x >= y)	is x greater than or equal to y?
+
+
+
+## College Board Syntax Cheat Sheet
+
+```text
+IF(condition)
+{
+  conditional body
+}
+```
+
+```
+IF(condition)
+{
+  first conditional body
+}ELSE
+{
+  second conditional body
+}
+```
+
+To test if a is equal to b: a = b
+To test if a is not equal to b: a ≠ b
+To test if a is greater than b: a > b
+To test if a is less than b: a < b
+To test if a is greater than or equal to b: a ≥ b
+To test if a is less than or equal to b: a ≤ b

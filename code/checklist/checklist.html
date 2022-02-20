@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Checlist</title>
+  </head>
+  <body>
+
+    <!--
+        Generate a configurable list layout with clickable boxes and allow export to an image
+
+        Allow export and sharing via URL
+
+        Pieces:
+
+        Configuration
+            - hostable and pointable on any URL
+            - fixed set of options
+                - checkbox
+                - likert
+        HTML Render and Selection
+        URL hash encode and decode
+
+        Canvas Draw and Image Export / Download
+
+        Principles:
+            - hostable anywhere - self contained HTML page
+            - sharable and private
+                - no telemetry
+                - no storage or persistance of data outside of users machine
+            - configurable and customizable, with sharable configurations
+            - machine parsable if shared
+        
+    -->
+    <h1>Heading</h1>
+    <p>paragraph</p>
+
+    <script>
+        // Load Configuration
+
+        function loadConfiguration(configuration) {
+
+        }
+
+
+
+        const defaultConfigurationJson = {
+            title: "example configuration title",
+            description: "example configuration description",
+            items: {
+                "example-id": {
+                    title: "example checkbox item title",
+                    description: "example checkbox item description",
+                    input: "checkbox"
+                }
+            },
+
+            // sections group items together
+            // should sections be infinitel nestable?
+            // sections: [
+            //     {
+            //         name:"example section",
+            //         items: [ {
+            //             name: "example",
+            //             description: "example description",
+            //             input: "checkbox"
+            //         }]
+            //     }
+            // ]
+        }
+
+        // whitespace matters
+        const defaultConfigurationMarkdown = `
+# example title
+> example description
+
+- [ ] example item
+    > example item description
+- [ ] example item 2
+    > example item description
+`
+
+        function parseMarkdownToConfiguration(markdownInput) {
+            const markdown = markdownInput.trim()
+
+            const lines = markdown.split("\n");
+
+            /**
+             * Title for the whole list
+             */
+            const listTitle = undefined;
+
+            /**
+             * description for the whole list
+             */
+            const listDescription = undefined;
+
+
+            // Delimiters
+            const delimiterListTitle = "# ";
+            const delimiterListDescription = "> "
+
+            for (let i = 0; i< lines.length; i++) {
+                const line = lines[i];
+                console.log(line)
+
+                // parse the line
+                if (line.startswith(delimiterListTitle)) {
+                    if (listTitle === undefined) {
+                        listTitle = line.subs
+                    } else {
+                        console.error(`second list tile on line only a single list title may be defined`)
+                    }    
+                }
+
+            }
+        }
+
+        // function run on setup
+        function initialize() {
+            parseMarkdownToConfiguration(defaultConfigurationMarkdown);
+        }
+
+        initialize();
+
+
+
+    </script>
+  </body>
+</html>

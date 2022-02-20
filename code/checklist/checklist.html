@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8" />
-    <title>Checlist</title>
-  </head>
-  <body>
+    <title>Checklist</title>
+</head>
+
+<body>
 
     <!--
         Generate a configurable list layout with clickable boxes and allow export to an image
@@ -15,6 +17,7 @@
 
         Configuration
             - hostable and pointable on any URL
+                - determine which parser to use based off .md or .json suffix
             - fixed set of options
                 - checkbox
                 - likert
@@ -30,7 +33,12 @@
                 - no storage or persistance of data outside of users machine
             - configurable and customizable, with sharable configurations
             - machine parsable if shared
-        
+            - secure
+                - do not want to allow links that people can click, except to know safe domains (maybe wikipedia links are ok?)
+                - defend against HTML injection from input sources
+            - compatible this means old configurations and renders continue to work
+                - can be done by versioning, point to specific HTML page
+                - or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
     -->
     <h1>Heading</h1>
     <p>paragraph</p>
@@ -47,13 +55,13 @@
         const defaultConfigurationJson = {
             title: "example configuration title",
             description: "example configuration description",
-            items: {
-                "example-id": {
+            items: [
+                {
                     title: "example checkbox item title",
                     description: "example checkbox item description",
                     input: "checkbox"
                 }
-            },
+            ]
 
             // sections group items together
             // should sections be infinitel nestable?
@@ -78,47 +86,111 @@
     > example item description
 - [ ] example item 2
     > example item description
-`
 
+`;
+
+        /**
+         * create json configuration from a markdown description
+         */
         function parseMarkdownToConfiguration(markdownInput) {
             const markdown = markdownInput.trim()
 
             const lines = markdown.split("\n");
+            // Could scrub empty lines for utility, but then need a mapping of lines to orignal line numbers for errors
 
             /**
              * Title for the whole list
              */
-            const listTitle = undefined;
+            let listTitle = undefined;
 
             /**
              * description for the whole list
              */
-            const listDescription = undefined;
+            let listDescription = undefined;
+
+            /**
+             * items in the list
+             * Each item has
+             * - title
+             * - description
+             * - input- the type of input 
+             */
+            const listItems = [];
 
 
             // Delimiters
             const delimiterListTitle = "# ";
-            const delimiterListDescription = "> "
+            const delimiterListDescription = "> ";
+            const delimiterListItemCheckbox = "- [ ] ";
+            const delimiterListItemDescription = "    > ";
 
-            for (let i = 0; i< lines.length; i++) {
+            for (let i = 0; i < lines.length; i++) {
+                const linePrevious = i > 0 ? lines[i - 1] : undefined;
                 const line = lines[i];
+                const lineNext = i + 1 < lines.length ? lines[i + 1] : undefined;
                 console.log(line)
 
                 // parse the line
-                if (line.startswith(delimiterListTitle)) {
+                if (line.startsWith(delimiterListTitle)) {
+                    // List Title
                     if (listTitle === undefined) {
-                        listTitle = line.subs
+                        listTitle = line.substring(delimiterListTitle.length);
                     } else {
-                        console.error(`second list tile on line only a single list title may be defined`)
-                    }    
-                }
+                        console.error(`line [${i}]: duplicate list title - only a single list title may be defined`);
+                    }
 
+                    // List Description
+                    // Must be next line after title
+                    if (lineNext !== undefined && lineNext.startsWith(delimiterListDescription)) {
+                        listDescription = lineNext.substring(delimiterListDescription.length);
+                    }
+
+                } else if (line.startsWith(delimiterListItemCheckbox)) {
+                    // List Item Checkbox
+
+                    const itemTitle = line.substring(delimiterListItemCheckbox.length);
+                    const itemInput = "checkbox";
+                    let itemDescription = undefined;
+
+                    if (lineNext !== undefined && lineNext.startsWith(delimiterListItemDescription)) {
+                        // List Item Description
+                        itemDescription = lineNext.substring(delimiterListItemDescription.length);
+
+                        // Already parsed the line go to next
+                        i++;
+                    }
+
+                    listItems.push({
+                        title: itemTitle,
+                        description: itemDescription,
+                        input: itemInput,
+                    });
+                } else {
+                    // Unknown What is this?
+                    if (line !== "") {
+                        console.error(`line [${i}]: unknown value [${line}]`);
+                    }
+                }
             }
+
+            // Assemble configuration Json
+            const configurationJson = {
+                title: listTitle,
+                description: listDescription,
+                items: listItems,
+            }
+
+            return configurationJson;
         }
+
+
+
+
 
         // function run on setup
         function initialize() {
-            parseMarkdownToConfiguration(defaultConfigurationMarkdown);
+            const configuration = parseMarkdownToConfiguration(defaultConfigurationMarkdown);
+            console.log(configuration);
         }
 
         initialize();
@@ -126,5 +198,6 @@
 
 
     </script>
-  </body>
+</body>
+
 </html>

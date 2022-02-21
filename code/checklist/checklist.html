@@ -22,6 +22,10 @@
                 - checkbox
                 - likert - future
         HTML Render and Selection
+
+        Everything loaded is a configuration
+            - markdown configuration is a template
+            - json or URL configurations include answers
         
         save
             - image
@@ -32,6 +36,9 @@
             - json configuration
             - MD configuration
             - URL hash decode
+
+        edit
+            - probably want a way to edit inline
 
         Canvas Draw and Image Export / Download
 
@@ -139,10 +146,11 @@
             const delimiterListItemDescription = "    > ";
 
             for (let i = 0; i < lines.length; i++) {
+                // Get all lines before and after
                 const linePrevious = i > 0 ? lines[i - 1] : undefined;
                 const line = lines[i];
                 const lineNext = i + 1 < lines.length ? lines[i + 1] : undefined;
-                console.log(line)
+                //console.log(line);
 
                 // parse the line
                 if (line.startsWith(delimiterListTitle)) {
@@ -195,6 +203,7 @@
                         description: itemDescription,
                         input: itemInput,
                     });
+
                 } else {
                     // Unknown What is this?
                     if (line !== "") {
@@ -245,12 +254,13 @@
 
         /**
          * load the configuration to html on the pace so it can be manipulated
+         * include state informtion
          */
         function loadConfiguration(configuration) {
 
             const div = document.getElementById("div_configuration");
 
-            const { title, description, items } = configuration;
+            const { title, description, items, state } = configuration;
 
             const defaultTitle = "List";
             const defaultDescription = "";
@@ -273,8 +283,6 @@
 
                 const elementDiv = document.createElement("div");
 
-
-
                 // determine input type
                 // why not aimply assign? - security plus elements have different needs
                 if (input === "checkbox") {
@@ -282,6 +290,11 @@
                     elementInput.type = "checkbox";
                     elementInput.name = title;
                     elementInput.id = id;
+
+                    // use preserved state
+                    if (state && state[id] && typeof state[id] === "boolean") {
+                        elementInput.checked = state[id]
+                    }
 
                     const elementLabel = document.createElement("label");
                     elementLabel.for = id;
@@ -333,11 +346,34 @@
         /**
          *  get snapshot of the current configurations answers and save to JSON
          */
-        function saveSnapshotToJson() {
+        function saveSnapshotToJsonTextFile() {
             const snapshot = getConfigurationSnapshotJson(gconfiguration);
-            const snapshotJson = JSON.stringify(snapshot, undefined, "    ");
-            console.log(snapshotJson);
+            const snapshotJsonText = JSON.stringify(snapshot, undefined, "    ");
+            console.log(snapshotJsonText);
+            const filename = `${snapshot.title}.json`;
+            downloadTextFile(filename, snapshotJsonText);
         }
+
+        /**
+         * download file
+         * @param filename - name of the file to download
+         * @param text - contents of the text file
+         */
+        function downloadTextFile(filename, text) {
+            const element = document.createElement('a');
+            element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(text));
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+
+        function loadSnapshotFromJsonTextFile() {
+            // need input of where the file is located
+            // need some input or prompt
+        }
+
 
         /**
          * currently loaded configuration
@@ -352,7 +388,7 @@
             gconfiguration = configuration;
         
         
-            document.getElementById("button_save_to_json").onclick = saveSnapshotToJson;
+            document.getElementById("button_save_to_json").onclick = saveSnapshotToJsonTextFile;
         }
 
         initialize();

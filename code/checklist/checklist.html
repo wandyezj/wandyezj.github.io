@@ -45,7 +45,7 @@
     </div>
 
     <script>
-   
+
 
 
         const defaultConfigurationJson = {
@@ -130,7 +130,7 @@
                 if (line.startsWith(delimiterListTitle)) {
                     // List Title
                     if (listTitle === undefined) {
-                        listTitle = line.substring(delimiterListTitle.length);
+                        listTitle = line.substring(delimiterListTitle.length).trim();
                     } else {
                         console.error(`line [${i}]: duplicate list title - only a single list title may be defined`);
                     }
@@ -138,7 +138,7 @@
                     // List Description
                     // Must be next line after title
                     if (lineNext !== undefined && lineNext.startsWith(delimiterListDescription)) {
-                        listDescription = lineNext.substring(delimiterListDescription.length);
+                        listDescription = lineNext.substring(delimiterListDescription.length).trim();
                         // already parsed line go to next
                         i++;
                     }
@@ -146,19 +146,33 @@
                 } else if (line.startsWith(delimiterListItemCheckbox)) {
                     // List Item Checkbox
 
-                    const itemTitle = line.substring(delimiterListItemCheckbox.length);
+                    const itemTitle = line.substring(delimiterListItemCheckbox.length).trim();
                     const itemInput = "checkbox";
                     let itemDescription = undefined;
 
                     if (lineNext !== undefined && lineNext.startsWith(delimiterListItemDescription)) {
                         // List Item Description
-                        itemDescription = lineNext.substring(delimiterListItemDescription.length);
+                        itemDescription = lineNext.substring(delimiterListItemDescription.length).trim();
 
                         // Already parsed the line go to next
                         i++;
                     }
 
+                    // mapping is imperfect since it filters characters
+                    const itemBaseId = titleToId(itemTitle);
+                    let itemId = itemBaseId;
+
+                    // id must not already be present
+                    // if id is already present attach a numeric count to the end to make it unique
+                    let itemIdCount = 0;
+                    while (-1 !== listItems.findIndex(({ id }) => id === itemId)) {
+                        itemIdCount++;
+                        itemId = itemBaseId + "_" + itemIdCount;
+                    }
+
+
                     listItems.push({
+                        id: itemId,
                         title: itemTitle,
                         description: itemDescription,
                         input: itemInput,
@@ -181,6 +195,35 @@
             return configurationJson;
         }
 
+        /**
+         * Map item title to id
+         * id can only consist of lowercase letters, numbers, and underscores
+         * converts uppercase to lowercase
+         * removes duplicate spaces and replaces the space with an underscore
+         */
+        function titleToId(title) {
+            const characters = Array.from(title.toLowerCase());
+
+            // characters allowed in an identifier
+            const alphabet = "abcdefghijklmnopqrstuvwxyz";
+            const numbers = "0123456789"
+            const space = " "
+
+            const valid = alphabet + numbers + space;
+
+            const validCharacters = Array.from(valid);
+
+            // filter out invalid characters, remove duplicate spaces, map spaces to underscores
+            const idArray = characters
+                .filter((c) => validCharacters.includes(c))
+                .filter((c, index, array) =>
+                    // no duplicate spaces
+                    c !== space || (c === space && index - 1 >= 0 && array[index - 1] !== space)
+                ).map((c) => c === space ? "_" : c);
+
+            const id = idArray.join("");
+            return id;
+        }
 
         /**
          * load the configuration in html
@@ -189,7 +232,7 @@
 
             const div = document.getElementById("div_configuration");
 
-            const {title, description, items} = configuration;
+            const { title, description, items } = configuration;
 
             const defaultTitle = "List";
             const defaultDescription = "";
@@ -208,11 +251,11 @@
             div.appendChild(elementListDescription);
 
             // append all list elements
-            const children = items.map( ({title, description, input}) => {
+            const children = items.map(({ id, title, description, input }) => {
 
                 const elementDiv = document.createElement("div");
 
-               
+
 
                 // determine input type
                 // why not aimply assign? - security plus elements have different needs
@@ -220,8 +263,11 @@
                     const elementInput = document.createElement("input");
                     elementInput.type = "checkbox";
                     elementInput.name = title;
+                    elementInput.id = id;
 
                     const elementLabel = document.createElement("label");
+                    elementLabel.for = id;
+                    elementLabel.innerText = title;
 
                     elementDiv.appendChild(elementInput);
                     elementDiv.appendChild(elementLabel);

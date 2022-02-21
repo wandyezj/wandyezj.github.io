@@ -55,8 +55,18 @@
             - compatible this means old configurations and renders continue to work
                 - can be done by versioning, point to specific HTML page
                 - or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
-    -->
-    <button id="button_save_to_json">Save to JSON</button>
+    
+        Reference
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
+        https://developer.mozilla.org/en-US/docs/Web/API/File
+    
+            -->
+    <button id="button_save_json">Save JSON</button>
+    <br>
+    <label for="input_load_file">Load json or md configuration</label>
+    <input id="input_load_file" type="file" accept=".json,.md">
+
     <div id="div_configuration">
 
     </div>
@@ -259,6 +269,8 @@
         function loadConfiguration(configuration) {
 
             const div = document.getElementById("div_configuration");
+            // reset everything in the div, (otherwise end up with duplicate elements on subsequent loads)
+            div.innerText = "";
 
             const { title, description, items, state } = configuration;
 
@@ -321,15 +333,17 @@
 
         /**
          * Get a snapshot of the current configuration
+         * a snapshot is simply a configuration with state
          */
         function getConfigurationSnapshotJson(configuration) {
             // clone configuration
             const snapshot = JSON.parse(JSON.stringify(configuration));
+
             // empty state
             snapshot["state"] = {};
 
             // retrieve current state and bind it to the snapshot
-            snapshot.items.forEach(({id, input})=> {
+            snapshot.items.forEach(({ id, input }) => {
                 const element = document.getElementById(id);
                 if (element) {
                     if (input === "checkbox") {
@@ -340,13 +354,17 @@
             });
 
             return snapshot
-
         }
+
+
+        //
+        // UI callable methods
+        //
 
         /**
          *  get snapshot of the current configurations answers and save to JSON
          */
-        function saveSnapshotToJsonTextFile() {
+        function saveSnapshotJsonTextFile() {
             const snapshot = getConfigurationSnapshotJson(gconfiguration);
             const snapshotJsonText = JSON.stringify(snapshot, undefined, "    ");
             console.log(snapshotJsonText);
@@ -361,17 +379,51 @@
          */
         function downloadTextFile(filename, text) {
             const element = document.createElement('a');
-            element.setAttribute('href','data:text/plain;charset=utf-8, ' + encodeURIComponent(text));
+            element.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent(text));
             element.setAttribute('download', filename);
             document.body.appendChild(element);
             element.click();
             document.body.removeChild(element);
         }
 
+        /**
+         * loads up the configuration from json text
+         */
+        function loadConfigurationTextJson(text) {
+            const configuration = JSON.parse(text);
+            loadConfiguration(configuration);
+            gconfiguration = configuration;
+        }
 
-        function loadSnapshotFromJsonTextFile() {
-            // need input of where the file is located
-            // need some input or prompt
+        /**
+         * loads up the configuration from markdown text
+         */
+        function loadConfigurationTextMarkdown(text) {
+            const configuration = parseMarkdownToConfiguration(text);
+            console.log(configuration);
+            loadConfiguration(configuration);
+            gconfiguration = configuration;
+        }
+
+        async function loadConfigurationFile(files) {
+            if (files.length !== 1) {
+                console.error(`can only load a single file`);
+                return;
+            }
+
+            const file = files[0];
+            const name = file.name;
+            const text = await file.text();
+
+            // load differently based on the file extension
+            const nameLowercase = name.toLowerCase();
+            if (nameLowercase.endsWith(".json")) {
+                loadConfigurationTextJson(text);
+            } else if (nameLowercase.endsWith(".md")) {
+                loadConfigurationTextMarkdown(text);
+            } else {
+                console.error(`unknown how to load file extension ${name}`);
+            }
         }
 
 
@@ -382,18 +434,18 @@
 
         // function run on setup
         function initialize() {
-            const configuration = parseMarkdownToConfiguration(defaultConfigurationMarkdown);
-            console.log(configuration);
-            loadConfiguration(configuration);
-            gconfiguration = configuration;
-        
-        
-            document.getElementById("button_save_to_json").onclick = saveSnapshotToJsonTextFile;
+            loadConfigurationTextMarkdown(defaultConfigurationMarkdown);
+
+            document.getElementById("button_save_json").onclick = saveSnapshotJsonTextFile;
+
+            const input_file = document.getElementById("input_load_file")
+            input_file.onchange = async () => {
+                const files = input_file.files;
+                loadConfigurationFile(files)
+            };
         }
 
         initialize();
-
-
 
     </script>
 </body>

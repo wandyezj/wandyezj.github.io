@@ -20,9 +20,18 @@
                 - determine which parser to use based off .md or .json suffix
             - fixed set of options
                 - checkbox
-                - likert
+                - likert - future
         HTML Render and Selection
-        URL hash encode and decode
+        
+        save
+            - image
+            - URL hash encode
+            - json - configuration + answers
+        load
+            - configuration + answers
+            - json configuration
+            - MD configuration
+            - URL hash decode
 
         Canvas Draw and Image Export / Download
 
@@ -40,6 +49,7 @@
                 - can be done by versioning, point to specific HTML page
                 - or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
     -->
+    <button id="button_save_to_json">Save to JSON</button>
     <div id="div_configuration">
 
     </div>
@@ -47,30 +57,38 @@
     <script>
 
 
-
+        // Example actually use markdown as all input
         const defaultConfigurationJson = {
             title: "example configuration title",
             description: "example configuration description",
+
+            // All independent items
             items: [
+                // items and order they appear in
                 {
+                    // id is derivable from title in md but must be specified in json
+                    id: "example_checkbox_item_title",
                     title: "example checkbox item title",
                     description: "example checkbox item description",
                     input: "checkbox"
                 }
-            ]
+            ],
 
-            // sections group items together
-            // should sections be infinitel nestable?
-            // sections: [
-            //     {
-            //         name:"example section",
-            //         items: [ {
-            //             name: "example",
-            //             description: "example description",
-            //             input: "checkbox"
-            //         }]
-            //     }
-            // ]
+            // layout
+            // probably want a separate layout section that can determine how items are layed out
+            // maybe sections and subsections with their own titles and descriptions
+            // should these sections be infinitely nestable?
+            // do section titles become part of the item id? Probably yes when layed out with markdown
+
+            // state of all items
+            // id -> value
+            // id should be present in the items
+            // value is dependent on the item type
+            // empty assumes default value
+            state: {
+                // by default empty
+            }
+
         }
 
         // whitespace matters
@@ -226,7 +244,7 @@
         }
 
         /**
-         * load the configuration in html
+         * load the configuration to html on the pace so it can be manipulated
          */
         function loadConfiguration(configuration) {
 
@@ -288,12 +306,53 @@
         }
 
 
+        /**
+         * Get a snapshot of the current configuration
+         */
+        function getConfigurationSnapshotJson(configuration) {
+            // clone configuration
+            const snapshot = JSON.parse(JSON.stringify(configuration));
+            // empty state
+            snapshot["state"] = {};
+
+            // retrieve current state and bind it to the snapshot
+            snapshot.items.forEach(({id, input})=> {
+                const element = document.getElementById(id);
+                if (element) {
+                    if (input === "checkbox") {
+                        const checked = element.checked;
+                        snapshot.state[id] = checked;
+                    }
+                }
+            });
+
+            return snapshot
+
+        }
+
+        /**
+         *  get snapshot of the current configurations answers and save to JSON
+         */
+        function saveSnapshotToJson() {
+            const snapshot = getConfigurationSnapshotJson(gconfiguration);
+            const snapshotJson = JSON.stringify(snapshot, undefined, "    ");
+            console.log(snapshotJson);
+        }
+
+        /**
+         * currently loaded configuration
+         */
+        let gconfiguration = undefined;
 
         // function run on setup
         function initialize() {
             const configuration = parseMarkdownToConfiguration(defaultConfigurationMarkdown);
             console.log(configuration);
             loadConfiguration(configuration);
+            gconfiguration = configuration;
+        
+        
+            document.getElementById("button_save_to_json").onclick = saveSnapshotToJson;
         }
 
         initialize();

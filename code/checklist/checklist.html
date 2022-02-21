@@ -40,16 +40,12 @@
                 - can be done by versioning, point to specific HTML page
                 - or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
     -->
-    <h1>Heading</h1>
-    <p>paragraph</p>
+    <div id="div_configuration">
+
+    </div>
 
     <script>
-        // Load Configuration
-
-        function loadConfiguration(configuration) {
-
-        }
-
+   
 
 
         const defaultConfigurationJson = {
@@ -143,6 +139,8 @@
                     // Must be next line after title
                     if (lineNext !== undefined && lineNext.startsWith(delimiterListDescription)) {
                         listDescription = lineNext.substring(delimiterListDescription.length);
+                        // already parsed line go to next
+                        i++;
                     }
 
                 } else if (line.startsWith(delimiterListItemCheckbox)) {
@@ -184,6 +182,64 @@
         }
 
 
+        /**
+         * load the configuration in html
+         */
+        function loadConfiguration(configuration) {
+
+            const div = document.getElementById("div_configuration");
+
+            const {title, description, items} = configuration;
+
+            const defaultTitle = "List";
+            const defaultDescription = "";
+
+            const listTitle = title || defaultTitle;
+
+            const elementListTitle = document.createElement("h1");
+            elementListTitle.innerText = listTitle;
+
+            const elementListDescription = document.createElement("p");
+            elementListDescription.innerText = description || defaultDescription;
+
+            document.title = listTitle;
+
+            div.appendChild(elementListTitle);
+            div.appendChild(elementListDescription);
+
+            // append all list elements
+            const children = items.map( ({title, description, input}) => {
+
+                const elementDiv = document.createElement("div");
+
+               
+
+                // determine input type
+                // why not aimply assign? - security plus elements have different needs
+                if (input === "checkbox") {
+                    const elementInput = document.createElement("input");
+                    elementInput.type = "checkbox";
+                    elementInput.name = title;
+
+                    const elementLabel = document.createElement("label");
+
+                    elementDiv.appendChild(elementInput);
+                    elementDiv.appendChild(elementLabel);
+
+                } else {
+                    console.error(`invalid type for item [${input}]`);
+                    const p = document.createElement("p");
+                    p.innerText = `item [${name}] invalid type [${input}] for item`;
+                    elementDiv.appendChild(p);
+                }
+
+                return elementDiv;
+
+            });
+
+            div.append(...children);
+
+        }
 
 
 
@@ -191,6 +247,7 @@
         function initialize() {
             const configuration = parseMarkdownToConfiguration(defaultConfigurationMarkdown);
             console.log(configuration);
+            loadConfiguration(configuration);
         }
 
         initialize();

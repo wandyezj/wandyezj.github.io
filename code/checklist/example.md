@@ -4,11 +4,9 @@
 - [ ] example item
     > example item description
 - [ ] example item 2
-    > example itme description
+    > example item description
 
 ## example section
 
 - [ ] example item
-    > example item description
 - [ ] example item 2
-    > example itme description

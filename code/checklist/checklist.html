@@ -62,7 +62,9 @@
         https://developer.mozilla.org/en-US/docs/Web/API/File
     
             -->
-    <button id="button_save_json">Save JSON</button>
+    <button id="button_save_url">Save URL</button>
+    <br>
+    <button id="button_save_file">Save JSON</button>
     <br>
     <label for="input_load_file">Load json or md configuration</label>
     <input id="input_load_file" type="file" accept=".json,.md">
@@ -426,6 +428,65 @@
             }
         }
 
+        function bufferToHex(buffer) { // buffer is an ArrayBuffer
+            return [...new Uint8Array(buffer)]
+                .map(x => x.toString(16).padStart(2, '0'))
+                .join('');
+        }
+
+        async function compress(text) {
+            // https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream
+
+            const readStream = new Response(text);
+            const compressedReadableStream = readStream.body.pipeThrough(new CompressionStream('gzip'));
+            const response = new Response(compressedReadableStream);
+
+            const buffer = await response.arrayBuffer();
+            const compressedText = bufferToHex(buffer);
+            return compressedText;
+        }
+
+        function decompress(text) {
+            return text;
+        }
+
+        function loadConfigurationUrlHash() {
+
+        }
+
+        async function saveConfigurationUrlHash() {
+            // # comes after the url
+
+            // remove #
+            const hash = window.location.hash.substring(1);
+            console.log(hash);
+
+            // translate configuration to hash
+            // snapshot current state
+            const snapshot = getConfigurationSnapshotJson(gconfiguration);
+            const snapshotJsonText = JSON.stringify(snapshot);
+            console.log(snapshotJsonText);
+
+            const compressedText = await compress(snapshotJsonText);
+            console.log(compressedText);
+
+            const decompressedText = await decompress(compressedText);
+            console.log(decompressedText);
+
+            // should be able to decompress
+            console.log(snapshotJsonText === decompressedText);
+
+            // Max size of hash 50k ish
+
+            // should not be needed because completely hex
+            // encodeUri
+            // decodeUri
+            // encodeURIComponent
+            // decodeURIComponent
+
+
+            window.location.hash = snapshotJsonText;
+        }
 
         /**
          * currently loaded configuration
@@ -436,13 +497,15 @@
         function initialize() {
             loadConfigurationTextMarkdown(defaultConfigurationMarkdown);
 
-            document.getElementById("button_save_json").onclick = saveSnapshotJsonTextFile;
+            document.getElementById("button_save_file").onclick = saveSnapshotJsonTextFile;
 
             const input_file = document.getElementById("input_load_file")
             input_file.onchange = async () => {
                 const files = input_file.files;
                 loadConfigurationFile(files)
             };
+
+            document.getElementById("button_save_url").onclick = saveConfigurationUrlHash;
         }
 
         initialize();

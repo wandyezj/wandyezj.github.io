@@ -95,6 +95,9 @@ t built in functions)
 
 - convenient if there were something like: [Quick Check](https://en.wikipedia.org/wiki/QuickCheck) fuzzer built in.
 
+
+- can make claims about where data ends up by tracking input data and output data with tags throughout the program. data derived from a source can be considered derived from that source when the data is output, the source can be checked to make sure that it it ok for data to be taken from one source and placed to another. This is a tricky data flow problem, since data could be written to disk and then re-read, the way to solve this might to be having a temporary location that stores all output until the script is complete and then the output is moved to the final output place, this way it can be tracked what files have what data and reading in the same file results in the data being tagged as having a specific source applied to it. This essentially requires that all data be tagged with the source during runtime, or static analysis needs to be good enough to make sure that input and output can be tracked.
+
 ## Proposed Syntax
 
 Declaration

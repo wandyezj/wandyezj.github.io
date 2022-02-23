@@ -44,6 +44,9 @@ Some basic software vocabulary with links to wikipedia.
     - [Wikipedia - Expression (computer science)](https://en.wikipedia.org/wiki/Expression_%28computer_science%29)
 
 
+- variable
+    - A variable is an abstraction inside a program that can hold a value. Each variable has associated data storage that represents one value at a time, but that value can be a list or other collection that in turn contains multiple values.
+
 - procedure
     - A procedure is a named group of programming instructions that may have parameters and return values. Also known as functions.
     - [Wikipedia - Procedure (computer science)](https://en.wikipedia.org/wiki/Subroutine)
@@ -94,11 +97,21 @@ scope
 - global variable
     - Global variables are defined outside of any function and can be used anywhere in a program.
     - Overusing global variables quickly leads to unclear, unmanageable, and buggy code
+    - Use globals as little as possible.
     - [Wikipedia - Global Variable](https://en.wikipedia.org/wiki/Global_variable)
 
 - local variables
     - like function parameters. These variables can only be used in the functions that they are defined in.
+    - Do not use a local with the same name as a global. This can be confusing and should be avoided.
     - [Wikipedia - Local Variable](https://en.wikipedia.org/wiki/Local_variable)
+
+### lists
+
+- index
+    - An index is a common method for referencing the elements in a list or string using natural numbers.
+
+- element
+    - An element is an individual value in a list that is assigned a unique index.
 
 ## General
 
@@ -106,3 +119,40 @@ scope
     - A user is granted access only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something only the user knows), possession (something only the user has), or inherence (something only the user is).
     - Includes: two factor authentication (2FA)
     - [Wikipedia - Multi-factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
+
+## Boolean Comparisions
+
+(x < y)	is x less than y?
+(x <= y)	is x less than or equal to y?
+(x == y)	is x equal to y?
+(x != y)	is x not equal to y?
+(x > y)	is x greater than y?
+(x >= y)	is x greater than or equal to y?
+
+
+
+## College Board Syntax Cheat Sheet
+
+```text
+IF(condition)
+{
+  conditional body
+}
+```
+
+```
+IF(condition)
+{
+  first conditional body
+}ELSE
+{
+  second conditional body
+}
+```
+
+To test if a is equal to b: a = b
+To test if a is not equal to b: a ≠ b
+To test if a is greater than b: a > b
+To test if a is less than b: a < b
+To test if a is greater than or equal to b: a ≥ b
+To test if a is less than or equal to b: a ≤ b

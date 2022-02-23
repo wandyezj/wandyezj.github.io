@@ -14,13 +14,13 @@
 - 1/4 teaspoon ground pepper
 - beef cubes (1 inch)
 - 5 teaspoons avocado oil
-- 2 tablespoons red wine vinegar
+- 4 tablespoons red wine vinegar
 - 2 cups red wine
-- 4 cups beef broth (low sodium)
+- 1 cup broth (low sodium) + 1 cup water
 - 2 bay leaves
-- 2 peeled and chopped sweet onions
+- 4 peeled and chopped sweet onions (sauteed)
 - 5 medium carrots cut into quarter inch rounds
-- 2 large baked potatoes cut into 2/4 inch cubes
+- 6 medium baked potatoes cut into 2/4 inch cubes
 - 2 teaspoons salt
 
 ## Equipment
@@ -38,11 +38,13 @@
 1. add flour and pepper and salt to bowl
 1. add beef to bowl and coat with flour
 1. add beef to pot and cook until browned on each side
+1. take meat out after cooking
 1. add add and sautee onions
 1. add vinegar and wine to pot
 1. cook over medium high heat
 1. scrape beef bits from bottom and side of pot
 1. add beef broth, and bay leaves
+1. add beef back in and mushrooms
 1. bring to boil then reduce to low simmer.
 1. cover pot ant cook 1.5 hours
 1. add carrots and simmer for 10 minutes
@@ -56,3 +58,6 @@
 - can add even more carrots and onions
 - 1 tablespoon fresh thyme for more flavor
 - can use balsamic instead of red wine vinegar
+- Add mushrooms (2 cartons) (cook first) and toss in with the meat
+- Can sautee onions after the mushrooms and once carmelied can add potatoes and carrots and cook next to the stew
+- is the beef broth needed? Did it with chicken broth and it was super good.

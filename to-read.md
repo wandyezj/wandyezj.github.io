@@ -15,3 +15,16 @@ https://en.wikipedia.org/wiki/Causal_consistency
 https://en.wikipedia.org/wiki/Serializability
 
 https://en.wikipedia.org/wiki/Sequential_consistency
+
+https://github.com/microsoft/FluidFramework/blob/main/docs/content/docs/data-structures/sequences.md
+
+Accessibility Standards
+- Confrom with standards
+- US Section 503
+- EN 301 549
+- Keep Slides simple so they are accessible and use images with captions
+- Do Markdown to HTML generators create accesible HTML?
+- Is Accessibility in the UN Declaration of Human rights? Should be.
+- avoid justified text
+- summary, short
+- Person First Language verse Identify First Language - very contentious

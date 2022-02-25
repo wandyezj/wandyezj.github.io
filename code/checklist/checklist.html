@@ -75,7 +75,7 @@
     <button id="button_load_url">Load URL</button>
     <br>
     <br>
-    
+
     <label for="input_load_file">Load json or md configuration</label>
     <input id="input_load_file" type="file" accept=".json,.md">
 
@@ -613,22 +613,50 @@
         function drawConfiguration(configuration, canvas) {
             canvas.width = 200;
             canvas.height = 200;
-            
-
             const context = canvas.getContext("2d");
+
+            const { title, description, items, state } = configuration;
+
+            context.font = '14px serif';
+            context.textBaseline = "bottom"; //"alphabetic"; 
+
+            const measure = context.measureText(title);
+            const height = measure.fontBoundingBoxAscent + measure.fontBoundingBoxDescent;
+
+            // write out title
+            context.fillText(title, 0, height);
 
             // Draw all of the configuration settings on the canvas
 
+            const spacing = height + 10;
+            let y = spacing;
+            let x = 10;
+            const checkboxSize = 10;
+
+            items.forEach(({id, title, input}) => {
+                if (input === "checkbox") {
+                    // draw the checkbox
+                    const value = state === undefined ? undefined : state[id];
+
+                    context.fillRect(x, y, checkboxSize, checkboxSize);
+
+                    // increae offset
+                    y += spacing;
+
+                }
+            });
+
             // Determine how checkbox is drawn
 
+
             context.fillStyle = "#FF0000";
-            context.fillRect(0, 0, 150, 75);
+            context.fillRect(0, 0, 10, 10);
 
         }
 
         /**
          * button
-         */ 
+         */
         function saveConfigurationImage() {
             // draw the configuration on a canvas
 
@@ -660,7 +688,7 @@
         function initialize() {
             // Initial configuration
             loadConfigurationTextMarkdown(defaultConfigurationMarkdown);
-            
+
             // Start - Test
             // Test Code to run at start
             saveConfigurationImage();

@@ -87,15 +87,14 @@
 
     <!-- Configuration Placeholder with actual actions -->
 
-    <div id="div_configuration">
-
-    </div>
+    <div id="div_configuration"></div>
 
     <br>
     <!-- Div to contain the canvas for the image, shown for testing purposes -->
-    <div id="div_configuration_canvas">
+    <div id="div_configuration_canvas"></div>
 
-    </div>
+    <br>
+    <div id="div_configuration_svg"></div>
 
     <script>
 
@@ -609,16 +608,22 @@
             window.location.hash = compressedText;
         }
 
-
-        function drawConfiguration(configuration, canvas) {
+        /**
+         * canvas is a bit pixelated
+         */
+        function drawConfigurationCanvas(configuration, canvas) {
             canvas.width = 200;
             canvas.height = 200;
             const context = canvas.getContext("2d");
 
             const { title, description, items, state } = configuration;
 
-            context.font = '14px serif';
-            context.textBaseline = "bottom"; //"alphabetic"; 
+            context.font = '20px serif';
+            context.textBaseline = "alphabetic"; //"alphabetic"; 
+
+            const checkboxSize = 10;
+            const checkboxColor = "#000000"; // black
+            const textColor = "#000000";
 
             const measure = context.measureText(title);
             const height = measure.fontBoundingBoxAscent + measure.fontBoundingBoxDescent;
@@ -631,14 +636,26 @@
             const spacing = height + 10;
             let y = spacing;
             let x = 10;
-            const checkboxSize = 10;
 
-            items.forEach(({id, title, input}) => {
+
+
+            items.forEach(({ id, title, input }) => {
                 if (input === "checkbox") {
                     // draw the checkbox
                     const value = state === undefined ? undefined : state[id];
 
+                    // rectangle draws down from the top left x, y
+                    context.fillStyle = checkboxColor;
                     context.fillRect(x, y, checkboxSize, checkboxSize);
+
+                    // text draws from the left bottom x y
+                    const dx = checkboxSize + 10;
+                    const dy = checkboxSize;
+                    context.fillStyle = textColor;
+                    context.fillText(title, x + dx, y + dy);
+
+                    context.fillStyle = "#FF0000";
+                    context.fillRect(0, 0, 1, 1);
 
                     // increae offset
                     y += spacing;
@@ -648,9 +665,67 @@
 
             // Determine how checkbox is drawn
 
+        }
 
-            context.fillStyle = "#FF0000";
-            context.fillRect(0, 0, 10, 10);
+        function saveConfigurationImageCanvas(configuration) {
+            const canvas = document.createElement("canvas");
+            drawConfigurationCanvas(configuration, canvas);
+
+
+            // for testing purposes allow preview of the canvas
+            const div = document.getElementById("div_configuration_canvas");
+            // reset
+            div.innerText = "";
+            div.appendChild(canvas);
+        }
+
+
+        function createSvgTextElement(x,y, text) {
+            const textElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'text'
+            );
+
+            textElement.setAttribute("x", x);
+            textElement.setAttribute("y", y);
+
+            // TODO: sanitize the text
+            const textNode = document.createTextNode(text);
+            textElement.appendChild(textNode);
+
+            return textElement;
+
+        }
+
+        function drawConfigurationSvg(configuration, svg) {
+
+            const textElement = createSvgTextElement(20,20, "Hello World");
+            svg.appendChild(textElement);
+
+            //<text x="20" y="35" fill="green">Example for SVG Text</text>
+
+        }
+
+
+        function saveConfigurationImageSvg(configuration) {
+
+            // for testing purposes allow preview on the canvas
+            const div = document.getElementById("div_configuration_svg");
+
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            //svg.setAttribute("viewbox", "0 0 100 100");
+            svg.setAttribute("width", "100");
+            svg.setAttribute("height", "100");
+            drawConfigurationSvg(configuration, svg);
+
+
+            // reset
+            div.innerText = "";
+            div.appendChild(svg);
+
+
+
 
         }
 
@@ -659,16 +734,10 @@
          */
         function saveConfigurationImage() {
             // draw the configuration on a canvas
+            saveConfigurationImageCanvas(gconfiguration);
 
-            const canvas = document.createElement("canvas");
-            drawConfiguration(gconfiguration, canvas);
-
-
-            // for testing purposes allow preview of the canvas
-            const div = document.getElementById("div_configuration_canvas");
-            // reset
-            div.innerText = "";
-            div.appendChild(canvas);
+            // draw the configuration as an svg
+            saveConfigurationImageSvg(gconfiguration);
 
 
             // save the canvas

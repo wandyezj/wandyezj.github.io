@@ -644,20 +644,23 @@
                     // draw the checkbox
                     const value = state === undefined ? undefined : state[id];
 
+                    // checkbox
                     // rectangle draws down from the top left x, y
                     context.fillStyle = checkboxColor;
                     context.fillRect(x, y, checkboxSize, checkboxSize);
 
+                    // text
                     // text draws from the left bottom x y
                     const dx = checkboxSize + 10;
                     const dy = checkboxSize;
                     context.fillStyle = textColor;
                     context.fillText(title, x + dx, y + dy);
 
+                    // dot
                     context.fillStyle = "#FF0000";
                     context.fillRect(0, 0, 1, 1);
 
-                    // increae offset
+                    // increase offset
                     y += spacing;
 
                 }
@@ -680,6 +683,11 @@
         }
 
 
+        /**
+         * @param x - x of lower left corner
+         * @param y - y of lower left corner
+         * @param text - the text to write
+         */
         function createSvgTextElement(x,y, text) {
             const textElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
@@ -689,6 +697,8 @@
             textElement.setAttribute("x", x);
             textElement.setAttribute("y", y);
 
+            textElement.setAttribute("alignment-baseline", "baseline");
+
             // TODO: sanitize the text
             const textNode = document.createTextNode(text);
             textElement.appendChild(textNode);
@@ -697,12 +707,77 @@
 
         }
 
-        function drawConfigurationSvg(configuration, svg) {
+        /**
+         * @param x - x of upper left corner
+         * @param y - y of upper left corner
+         * @param checkboxSize - width and height of the checkbox
+         * @param checked - is the checkbox checked
+         */
+        function createSvgCheckboxElement(x,y, checkboxSize, checked) {
 
-            const textElement = createSvgTextElement(20,20, "Hello World");
-            svg.appendChild(textElement);
+            const rectElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'rect'
+            );
 
-            //<text x="20" y="35" fill="green">Example for SVG Text</text>
+            rectElement.setAttribute("x", x);
+            rectElement.setAttribute("y", y);
+
+            rectElement.setAttribute("width", checkboxSize);
+            rectElement.setAttribute("height", checkboxSize);
+
+            return rectElement;
+        }
+
+        // sweet sweet SVGs! Pixel perfection!
+        function drawConfigurationSvg(configuration) {
+            const { title, description, items, state } = configuration;
+
+            const checkboxSize = 10;
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            //svg.setAttribute("viewbox", "0 0 100 100");
+            svg.setAttribute("width", 200);
+            svg.setAttribute("height", 200);
+
+
+            const height = 20; // need to measure height of text
+            let y = height;
+            let x = 0;
+
+            // title
+            svg.appendChild(createSvgTextElement(x,y, title));
+
+            const spacing = height + 10;
+            y = spacing;
+            x = 10;
+
+
+            items.forEach(({ id, title, input }) => {
+                if (input === "checkbox") {
+                    // draw the checkbox
+                    const value = state === undefined ? undefined : state[id];
+
+                    // checkbox
+                    // rectangle draws down from the top left x, y
+                    const checkboxElement = createSvgCheckboxElement(x,y, checkboxSize, value);
+                    svg.appendChild(checkboxElement);
+
+                    // text
+                    // text draws from the left bottom x y
+                    const dx = checkboxSize + 10;
+                    const dy = checkboxSize;
+                    const textElement = createSvgTextElement(x + dx,y + dy, title);
+                    svg.appendChild(textElement);
+
+                    // increae offset
+                    y += spacing;
+
+                }
+            });
+
+
+            return svg;
 
         }
 
@@ -712,21 +787,11 @@
             // for testing purposes allow preview on the canvas
             const div = document.getElementById("div_configuration_svg");
 
-
-            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            //svg.setAttribute("viewbox", "0 0 100 100");
-            svg.setAttribute("width", "100");
-            svg.setAttribute("height", "100");
-            drawConfigurationSvg(configuration, svg);
-
+            const svg = drawConfigurationSvg(configuration);
 
             // reset
             div.innerText = "";
             div.appendChild(svg);
-
-
-
-
         }
 
         /**

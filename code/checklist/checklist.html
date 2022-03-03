@@ -560,7 +560,7 @@
         /**
          * text compress decompress
          */
-        async function testHextText() {
+        async function testHexText() {
             // input text
             const snapshotText = getConfigurationSnapshotJsonText(gconfiguration);
             console.log(snapshotText);
@@ -646,7 +646,7 @@
 
                     // checkbox
                     // rectangle draws down from the top left x, y
-                    context.fillStyle = checkboxColor;
+                    context.fillStyle = value ? checkboxColor : "#FFFFFF";
                     context.fillRect(x, y, checkboxSize, checkboxSize);
 
                     // text
@@ -726,6 +726,10 @@
             rectElement.setAttribute("width", checkboxSize);
             rectElement.setAttribute("height", checkboxSize);
 
+
+            const color = checked ? "black" : "white";
+            rectElement.setAttribute("style", `fill:${color}` );
+
             return rectElement;
         }
 
@@ -798,11 +802,13 @@
          * button
          */
         function saveConfigurationImage() {
+            const configuration = getConfigurationSnapshotJson(gconfiguration)
+
             // draw the configuration on a canvas
-            saveConfigurationImageCanvas(gconfiguration);
+            saveConfigurationImageCanvas(configuration);
 
             // draw the configuration as an svg
-            saveConfigurationImageSvg(gconfiguration);
+            saveConfigurationImageSvg(configuration);
 
 
             // save the canvas

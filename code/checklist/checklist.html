@@ -140,7 +140,9 @@
 
 - [ ] example item
     > example item description
-- [ ] example item 2
+- [x] example item
+    > example item description duplicate
+- [ ] example item other
     > example item description
 
 `;
@@ -173,12 +175,22 @@
              */
             const listItems = [];
 
+            /**
+             * state of each item
+             */
+            const state = {};
+
+
+            const itemIds = [];
 
             // Delimiters
             const delimiterListTitle = "# ";
             const delimiterListDescription = "> ";
-            const delimiterListItemCheckbox = "- [ ] ";
+            const delimiterListItemCheckboxUnchecked = "- [ ] ";
+            const delimiterListItemCheckboxChecked = "- [x] ";
             const delimiterListItemDescription = "    > ";
+
+
 
             for (let i = 0; i < lines.length; i++) {
                 // Get all lines before and after
@@ -186,6 +198,11 @@
                 const line = lines[i];
                 const lineNext = i + 1 < lines.length ? lines[i + 1] : undefined;
                 //console.log(line);
+
+                const isListItemCheckboxUnchecked = line.startsWith(delimiterListItemCheckboxUnchecked);
+                const isListItemCheckboxChecked = line.startsWith(delimiterListItemCheckboxChecked);
+
+                const isListItemCheckbox = isListItemCheckboxUnchecked || isListItemCheckboxChecked;
 
                 // parse the line
                 if (line.startsWith(delimiterListTitle)) {
@@ -204,10 +221,10 @@
                         i++;
                     }
 
-                } else if (line.startsWith(delimiterListItemCheckbox)) {
+                } else if (isListItemCheckbox) {
                     // List Item Checkbox
 
-                    const itemTitle = line.substring(delimiterListItemCheckbox.length).trim();
+                    const itemTitle = line.substring(delimiterListItemCheckboxUnchecked.length).trim();
                     const itemInput = "checkbox";
                     let itemDescription = undefined;
 
@@ -221,16 +238,10 @@
 
                     // mapping is imperfect since it filters characters
                     const itemBaseId = titleToId(itemTitle);
-                    let itemId = itemBaseId;
+                    const itemId = toUniqueId(itemBaseId, itemIds);
+                    itemIds.push(itemId);
 
-                    // id must not already be present
-                    // if id is already present attach a numeric count to the end to make it unique
-                    let itemIdCount = 0;
-                    while (-1 !== listItems.findIndex(({ id }) => id === itemId)) {
-                        itemIdCount++;
-                        itemId = itemBaseId + "_" + itemIdCount;
-                    }
-
+                    state[itemId] = isListItemCheckboxChecked;
 
                     listItems.push({
                         id: itemId,
@@ -252,6 +263,7 @@
                 title: listTitle,
                 description: listDescription,
                 items: listItems,
+                state,
             }
 
             return configurationJson;
@@ -285,6 +297,23 @@
 
             const id = idArray.join("");
             return id;
+        }
+
+        /**
+         * create unique id based off a baseId, given the set of existing Ids
+         */
+        function toUniqueId(baseId, existingIds) {
+            let itemId = baseId;
+
+            // id must not already be present
+            // if id is already present attach a numeric count to the end to make it unique
+            let idCount = 0;
+            while (-1 !== existingIds.findIndex((id ) => id === itemId)) {
+                idCount++;
+                itemId = baseId + "_" + idCount;
+            }
+
+            return itemId;
         }
 
         /**

@@ -31,6 +31,10 @@
             - compressed hex url hash (allows sharing link)
             - TODO: image (render selection for reference and share, and load from image via embedded state)
 
+        Save / Load methods
+            loadConfiguration
+
+
         HTML Render and Selection
 
         Everything loaded is a configuration
@@ -47,6 +51,10 @@
 
         Styling
             - will need to style so it looks appealing
+
+        Features
+            - encode hash to make it harder for people to tamper with to check that image is actual representation, could also compare image to value but then this changes if svg encoding changes between versions.
+
 
         Principles:
             - hostable anywhere - self contained HTML page
@@ -71,19 +79,17 @@
     
             -->
     <button id="button_save_url">Save URL</button>
-    <br>
     <button id="button_load_url">Load URL</button>
     <br>
-    <br>
 
+    <p>Save File</p>
+    <button id="button_save_file_json">json</button>
+    <button id="button_save_file_text">text</button>
+    <button id="button_save_file_svg">svg</button>
+    <br>
+    <br>
     <label for="input_load_file">Load json or md configuration</label>
     <input id="input_load_file" type="file" accept=".json,.md">
-
-    <button id="button_save_file">Save JSON</button>
-    <br>
-
-    <button id="button_save_image">Save Image</button>
-    <br>
 
     <!-- Configuration Placeholder with actual actions -->
 
@@ -317,10 +323,23 @@
         }
 
         /**
+         * currently loaded configuration
+         * should only be used by loadConfiguration and getConfigurationSnapshot
+         */
+        let gconfiguration = undefined;
+
+        function loadConfiguration(configuration) {
+            console.log("loadConfiguration");
+            console.log(configuration);
+            loadConfigurationToHtml(configuration);
+            gconfiguration = configuration;
+        }
+
+        /**
          * load the configuration to html on the pace so it can be manipulated
          * include state informtion
          */
-        function loadConfiguration(configuration) {
+        function loadConfigurationToHtml(configuration) {
 
             const div = document.getElementById("div_configuration");
             // reset everything in the div, (otherwise end up with duplicate elements on subsequent loads)
@@ -384,12 +403,13 @@
 
         }
 
-
         /**
-         * Get a snapshot of the current configuration
-         * a snapshot is simply a configuration with state
+         * Get a snapshot of the current global configuration
+         * a snapshot is simply a configuration with the current state of the HTML attached
          */
-        function getConfigurationSnapshotJson(configuration) {
+        function getConfigurationSnapshot() {
+            const configuration = gconfiguration;
+
             // clone configuration
             const snapshot = JSON.parse(JSON.stringify(configuration));
 
@@ -408,105 +428,6 @@
             });
 
             return snapshot
-        }
-
-        function getConfigurationSnapshotJsonText(configuration) {
-            const snapshotJson = getConfigurationSnapshotJson(configuration);
-            const snapshotText = JSON.stringify(snapshotJson);
-            return snapshotText;
-        }
-
-        //
-        // UI callable methods
-        //
-
-        /**
-         * button 
-         * get snapshot of the current configurations answers and save to JSON
-         */
-        function saveSnapshotJsonFile() {
-            const snapshot = getConfigurationSnapshotJson(gconfiguration);
-
-            const snapshotJsonText = JSON.stringify(snapshot, undefined, "    ");
-
-            const filename = `${snapshot.title}.json`;
-            const text = snapshotJsonText;
-            const encoding = 'data:text/plain';
-            downloadFile(filename, text, encoding);
-        }
-
-        /**
-         * button 
-         * get snapshot of the current configurations answers and save to svg
-         */
-        function saveSnapshotSvgFile() {
-            const snapshot = getConfigurationSnapshotJson(gconfiguration);
-
-            const snapshotSvg = drawConfigurationSvg(snapshot);
-            var serializer = new XMLSerializer();
-            var snapshotSvgText = serializer.serializeToString(snapshotSvg);
-
-            const filename = `${snapshot.title}.svg`;
-            const text = snapshotSvgText;
-            const encoding = 'data:image/svg+xml';
-            downloadFile(filename, text, encoding);
-        }
-
-
-        /**
-         * download file
-         * @param filename - name of the file to download
-         * @param text - contents of the text file ut-16 text
-         * @param encoding - type of file to download
-         */
-        function downloadFile(filename, text, encoding) {
-            const element = document.createElement('a');
-            const component = encodeURIComponent(text);
-            element.setAttribute('href', `${encoding};charset=utf-16, ` + component);
-            element.setAttribute('download', filename);
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
-        }
-
-        /**
-         * loads up the configuration from json text
-         */
-        function loadConfigurationTextJson(text) {
-            const configuration = JSON.parse(text);
-            loadConfiguration(configuration);
-            gconfiguration = configuration;
-        }
-
-        /**
-         * loads up the configuration from markdown text
-         */
-        function loadConfigurationTextMarkdown(text) {
-            const configuration = parseMarkdownToConfiguration(text);
-            console.log(configuration);
-            loadConfiguration(configuration);
-            gconfiguration = configuration;
-        }
-
-        async function loadConfigurationFile(files) {
-            if (files.length !== 1) {
-                console.error(`can only load a single file`);
-                return;
-            }
-
-            const file = files[0];
-            const name = file.name;
-            const text = await file.text();
-
-            // load differently based on the file extension
-            const nameLowercase = name.toLowerCase();
-            if (nameLowercase.endsWith(".json")) {
-                loadConfigurationTextJson(text);
-            } else if (nameLowercase.endsWith(".md")) {
-                loadConfigurationTextMarkdown(text);
-            } else {
-                console.error(`unknown how to load file extension ${name}`);
-            }
         }
 
         function assertString(variable) {
@@ -609,12 +530,102 @@
             return text;
         }
 
+
+
+        /**
+         * convert configuration to json text
+         */
+        function getConfigurationToTextJson(configuration, { pretty } = { pretty: false }) {
+            // pretty option adds spaces for readability
+            const text = pretty ? JSON.stringify(configuration, undefined, "    ") : JSON.stringify(configuration);
+            return text;
+        }
+
+        /**
+         * get a configuration from json text
+         */
+        function getConfigurationFromTextJson(text) {
+            const configuration = JSON.parse(text);
+            return configuration;
+        }
+
+        /**
+         * get a configuration from hex text (compressed json text)
+         */
+        async function getConfigurationFromTextHex(text) {
+            const decompressedText = await decompress(text);
+            const configuration = getConfigurationFromTextJson(decompressedText);
+            return configuration;
+        }
+
+        /**
+         * get a configuration from markdown text
+         */
+        function getConfigurationFromTextMarkdown(text) {
+            const configuration = parseMarkdownToConfiguration(text);
+            console.log(configuration);
+            return configuration;
+        }
+
+        async function getConfigurationFromFile(name, text) {
+            let configuration = undefined;
+            // load differently based on the file extension
+            const nameLowercase = name.toLowerCase();
+            if (nameLowercase.endsWith(".json")) {
+                configuration = getConfigurationFromTextJson(text);
+            } else if (nameLowercase.endsWith(".md")) {
+                configuration = getConfigurationFromTextMarkdown(text);
+            }
+
+            return configuration;
+
+        }
+
+
+        /**
+         * download file
+         * @param filename - name of the file to download
+         * @param text - contents of the text file utf-16 text
+         * @param encoding - type of file to download
+         */
+        function downloadFile({ filename, text, encoding }) {
+            const element = document.createElement('a');
+            const component = encodeURIComponent(text);
+
+            element.setAttribute('href', `${encoding};charset=utf-16, ` + component);
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+
+        async function buttonLoadSnapshotFromFile(files) {
+            if (files.length !== 1) {
+                console.error(`can only load a single file`);
+                return;
+            }
+
+            const file = files[0];
+            const name = file.name;
+            const text = await file.text();
+
+            const configuration = await getConfigurationFromFile(name, text);
+
+            if (configuration === undefined) {
+                console.error(`unable to load file extension ${name}`);
+            } else {
+                loadConfiguration(configuration);
+            }
+        }
+
         /**
          * text compress decompress
          */
         async function testHexText() {
             // input text
-            const snapshotText = getConfigurationSnapshotJsonText(gconfiguration);
+            const configuration = getConfigurationSnapshot();
+            const snapshotText = getConfigurationToTextJson(configuration);
             console.log(snapshotText);
 
             const compressedText = await compress(snapshotJsonText);
@@ -632,33 +643,16 @@
             }
         }
 
-        /**
-         * button
-         */
-        async function loadConfigurationUrlHash() {
-            // # comes after the url
 
-            // remove #
-            const compressedText = window.location.hash.substring(1);
-            const decompressedText = await decompress(compressedText);
-            loadConfigurationTextJson(decompressedText);
-        }
-
-        /**
-         * button 
-         */
-        async function saveConfigurationUrlHash() {
-            // translate configuration to hash
-            // snapshot current state
-            const snapshotJsonText = getConfigurationSnapshotJsonText(gconfiguration);
-            console.log(snapshotJsonText);
+        async function getConfigurationToTextHex(configuration) {
+            const snapshotJsonText = getConfigurationToTextJson(configuration);
+            //console.log(snapshotJsonText);
 
             const compressedText = await compress(snapshotJsonText);
-            console.log(compressedText);
-
-            // set to hash at top of window
-            window.location.hash = compressedText;
+            //console.log(compressedText);
+            return compressedText;
         }
+
 
         /**
          * canvas is a bit pixelated
@@ -786,7 +780,7 @@
         }
 
         // sweet sweet SVGs! Pixel perfection!
-        function drawConfigurationSvg(configuration) {
+        function getConfigurationToSvgElement(configuration) {
             const { title, description, items, state } = configuration;
 
             const checkboxSize = 10;
@@ -843,20 +837,90 @@
             // for testing purposes allow preview on the canvas
             const div = document.getElementById("div_configuration_svg");
 
-            const svg = drawConfigurationSvg(configuration);
+            const svg = getConfigurationToSvgElement(configuration);
 
             // reset
             div.innerText = "";
             div.appendChild(svg);
         }
 
+
+        //
+        // UI callable methods
+        //
+
+        /**
+         * button
+         */
+        async function buttonLoadSnapshotFromUrlHash() {
+            // # comes after the url
+            // remove #
+            const text = window.location.hash.substring(1);
+            const configuration = await getConfigurationFromTextHex(text);
+            loadConfiguration(configuration);
+        }
+
+        /**
+         * button 
+         */
+        async function buttonSaveSnapshotToUrlHash() {
+            const configuration = getConfigurationSnapshot();
+            const text = await getConfigurationToTextHex(configuration)
+
+            // set to hash at top of window
+            window.location.hash = text;
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to JSON
+         */
+        function buttonSaveSnapshotToFileJson() {
+            const configuration = getConfigurationSnapshot();
+
+            const filename = `${configuration.title}.json`;
+            const text = getConfigurationToTextJson(configuration, { pretty: true });
+            const encoding = 'data:text/plain';
+            downloadFile({ filename, text, encoding });
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to svg
+         */
+        function buttonSaveSnapshotToFileSvg() {
+            const configuration = getConfigurationSnapshot();
+
+            const svg = getConfigurationToSvgElement(configuration);
+            var serializer = new XMLSerializer();
+            var snapshotSvgText = serializer.serializeToString(svg);
+
+            const filename = `${configuration.title}.svg`;
+            const text = snapshotSvgText;
+            const encoding = 'data:image/svg+xml';
+            downloadFile({ filename, text, encoding });
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to svg
+         */
+        async function buttonSaveSnapshotToFileTextHex() {
+            const configuration = getConfigurationSnapshot();
+
+            const filename = `${configuration.title}.txt`;
+            const text = await getConfigurationToTextHex(configuration);
+            const encoding = 'data:text/plain';
+            downloadFile({ filename, text, encoding });
+        }
+
         /**
          * button
          */
         function saveConfigurationImage() {
-            saveSnapshotSvgFile();
+            buttonSaveSnapshotToFileSvg();
 
-            const configuration = getConfigurationSnapshotJson(gconfiguration)
+            const configuration = getConfigurationSnapshot()
 
             // draw the configuration on a canvas
             saveConfigurationImageCanvas(configuration);
@@ -869,11 +933,6 @@
             // same as saving json
         }
 
-        /**
-         * currently loaded configuration
-         */
-        let gconfiguration = undefined;
-
 
         /**
          * Only function run on start
@@ -881,25 +940,27 @@
          */
         function initialize() {
             // Initial configuration
-            loadConfigurationTextMarkdown(defaultConfigurationMarkdown);
+            const configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
+            loadConfiguration(configuration);
 
             // Start - Test
             // Test Code to run at start
-            saveConfigurationImage();
+
             // End - Test
 
-            document.getElementById("button_save_file").onclick = saveSnapshotJsonFile;
+            document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;
+            document.getElementById("button_load_url").onclick = buttonLoadSnapshotFromUrlHash;
 
+            document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;
+            document.getElementById("button_save_file_text").onclick = buttonSaveSnapshotToFileTextHex;
+            document.getElementById("button_save_file_svg").onclick = buttonSaveSnapshotToFileSvg;
+
+            // Load file
             const input_file = document.getElementById("input_load_file");
             input_file.onchange = async () => {
                 const files = input_file.files;
-                loadConfigurationFile(files)
+                await buttonLoadSnapshotFromFile(files)
             };
-
-            document.getElementById("button_save_url").onclick = saveConfigurationUrlHash;
-            document.getElementById("button_load_url").onclick = loadConfigurationUrlHash;
-
-            document.getElementById("button_save_image").onclick = saveConfigurationImage;
         }
 
         initialize();

@@ -76,6 +76,8 @@
         https://developer.mozilla.org/en-US/docs/Web/API/File
 
         https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
+
+        https://motdave.com/page-https-developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
     
             -->
     <button id="button_save_url">Save URL</button>
@@ -89,7 +91,7 @@
     <br>
     <br>
     <label for="input_load_file">Load json or md configuration</label>
-    <input id="input_load_file" type="file" accept=".json,.md">
+    <input id="input_load_file" type="file" accept=".json,.md,.txt">
 
     <!-- Configuration Placeholder with actual actions -->
 
@@ -569,18 +571,33 @@
 
         async function getConfigurationFromFile(name, text) {
             let configuration = undefined;
+
             // load differently based on the file extension
             const nameLowercase = name.toLowerCase();
+
             if (nameLowercase.endsWith(".json")) {
                 configuration = getConfigurationFromTextJson(text);
             } else if (nameLowercase.endsWith(".md")) {
                 configuration = getConfigurationFromTextMarkdown(text);
+            } else if (nameLowercase.endsWith(".txt")) {
+                configuration = getConfigurationFromTextHex(text);
             }
 
             return configuration;
 
         }
 
+        /**
+         * download a file by inserting a link element with the url containing the encoding
+         */
+        function downloadFileUrl({ filename, url }) {
+            const element = document.createElement('a');
+            element.setAttribute('href', url);
+            element.setAttribute('download', filename);
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
 
         /**
          * download file
@@ -589,16 +606,10 @@
          * @param encoding - type of file to download
          */
         function downloadFile({ filename, text, encoding }) {
-            const element = document.createElement('a');
             const component = encodeURIComponent(text);
-
-            element.setAttribute('href', `${encoding};charset=utf-16, ` + component);
-            element.setAttribute('download', filename);
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
+            const url = `${encoding};charset=utf-16, ` + component;
+            downloadFileUrl({filename, url})
         }
-
 
         async function buttonLoadSnapshotFromFile(files) {
             if (files.length !== 1) {
@@ -917,8 +928,8 @@
         /**
          * button
          */
-        function saveConfigurationImage() {
-            buttonSaveSnapshotToFileSvg();
+        function drawConfigurationImage() {
+            //buttonSaveSnapshotToFileSvg();
 
             const configuration = getConfigurationSnapshot()
 
@@ -933,6 +944,25 @@
             // same as saving json
         }
 
+        let downloadUrl = undefined;
+        function testDownloadUtf8() {
+            const configuration = getConfigurationSnapshot()
+            const text = getConfigurationToTextJson(configuration, { pretty: true });
+
+            const blob = new Blob([text])
+            // const encoder = new TextEncoder();
+            // const encoded = encoder.encode(text);
+
+            if (downloadUrl) {
+                URL.revokeObjectURL(downloadUrl);
+            }
+            downloadUrl = URL.createObjectURL(blob, {
+                type: "text/plain;charset=utf-8"
+            });
+
+            downloadFileUrl({ filename: "text.json", url: downloadUrl });
+        }
+
 
         /**
          * Only function run on start
@@ -945,7 +975,8 @@
 
             // Start - Test
             // Test Code to run at start
-
+            testDownloadUtf8()
+            drawConfigurationImage()
             // End - Test
 
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;

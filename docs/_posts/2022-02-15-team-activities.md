@@ -11,9 +11,10 @@ The purpose of team activities is team information flow. Education, Coordination
 Beginning of the Week (Tuesday)
 
 - text status updates
+    - What have you completed?
     - What are you working on?
     - What do you need help with?
-- Warm Up (10 minutes)
+- Warm Up (5 minutes)
 - Announcements (1 minute)
 - Technical Dive (10 minutes)
 - Questions or help, stick around
@@ -26,6 +27,7 @@ End of the Week (Thursday)
     - Text reply to:
         - What went well?
         - What could have been better? Why? How?
+    - Go over responses
     - Action item pick 1 for next week.
 
 ## Text Updates
@@ -51,6 +53,7 @@ The warm up is to facilitate people informally talking to each other.
 
 To see people as the people with lives and not just coworkers.
 
+A good warm up might be having someone answer a random question, or organic conversation before a meeting.
 
 ## Selecting a facilitator
 

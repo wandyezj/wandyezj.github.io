@@ -582,6 +582,7 @@
             } else if (nameLowercase.endsWith(".txt")) {
                 configuration = getConfigurationFromTextHex(text);
             }
+            // TODO: Support SVG
 
             return configuration;
 
@@ -592,23 +593,29 @@
          */
         function downloadFileUrl({ filename, url }) {
             const element = document.createElement('a');
+
             element.setAttribute('href', url);
             element.setAttribute('download', filename);
-            document.body.appendChild(element);
             element.click();
-            document.body.removeChild(element);
         }
 
         /**
          * download file
          * @param filename - name of the file to download
          * @param text - contents of the text file utf-16 text
-         * @param encoding - type of file to download
+         * @param encoding - mime type of the file
          */
         function downloadFile({ filename, text, encoding }) {
-            const component = encodeURIComponent(text);
-            const url = `${encoding};charset=utf-16, ` + component;
-            downloadFileUrl({filename, url})
+            const blob = new Blob([text], {type:encoding})
+            const downloadUrl = URL.createObjectURL(blob);
+            console.log(downloadUrl)
+            downloadFileUrl({ filename, url: downloadUrl });
+            URL.revokeObjectURL(downloadUrl);
+
+            // legacy
+            // const component = encodeURIComponent(text);
+            // const url = `${encoding};charset=utf-16, ` + component;
+            // downloadFileUrl({filename, url})
         }
 
         async function buttonLoadSnapshotFromFile(files) {
@@ -944,26 +951,6 @@
             // same as saving json
         }
 
-        let downloadUrl = undefined;
-        function testDownloadUtf8() {
-            const configuration = getConfigurationSnapshot()
-            const text = getConfigurationToTextJson(configuration, { pretty: true });
-
-            const blob = new Blob([text])
-            // const encoder = new TextEncoder();
-            // const encoded = encoder.encode(text);
-
-            if (downloadUrl) {
-                URL.revokeObjectURL(downloadUrl);
-            }
-            downloadUrl = URL.createObjectURL(blob, {
-                type: "text/plain;charset=utf-8"
-            });
-
-            downloadFileUrl({ filename: "text.json", url: downloadUrl });
-        }
-
-
         /**
          * Only function run on start
          * Set up everything, link all UI elements
@@ -975,7 +962,6 @@
 
             // Start - Test
             // Test Code to run at start
-            testDownloadUtf8()
             drawConfigurationImage()
             // End - Test
 

@@ -49,7 +49,7 @@ Save / Load hex to url hash
 - buttonSaveSnapshotToFileJson
 - buttonSaveSnapshotToFileText
 
-- buttonLoadShapshotFromFile
+- buttonLoadSnapshotFromFile
 
 
 ## Test Scenarios

@@ -106,6 +106,14 @@
 
     <script>
 
+        /**
+         * A configuration
+         * @typedef {Object} Configuration
+         * @property {string} title - title
+         * @property {string} description - description
+         * @property {Object[]} items - items
+         * @property {Object} state - state
+         */
 
         // Example actually use markdown as all input
         const defaultConfigurationJson = {
@@ -282,6 +290,7 @@
          * id can only consist of lowercase letters, numbers, and underscores
          * converts uppercase to lowercase
          * removes duplicate spaces and replaces the space with an underscore
+         * @param {string} title - convert an items title into an id
          */
         function titleToId(title) {
             const characters = Array.from(title.toLowerCase());
@@ -309,6 +318,9 @@
 
         /**
          * create unique id based off a baseId, given the set of existing Ids
+         * @param {string} baseId - base id to make a unique id out of
+         * @param {string[]} existingIds - existing set of unique ids to make sure the returned id does not clash
+         * @return {string} unique id not present in existingIds
          */
         function toUniqueId(baseId, existingIds) {
             let itemId = baseId;
@@ -327,9 +339,13 @@
         /**
          * currently loaded configuration
          * should only be used by loadConfiguration and getConfigurationSnapshot
+         * @type {Configuration|undefined}
          */
         let gconfiguration = undefined;
 
+        /**
+         * @param {Configuration} configuration
+         */
         function loadConfiguration(configuration) {
             console.log("loadConfiguration");
             console.log(configuration);
@@ -340,6 +356,7 @@
         /**
          * load the configuration to html on the pace so it can be manipulated
          * include state informtion
+         * @param {Configuration} configuration
          */
         function loadConfigurationToHtml(configuration) {
 
@@ -408,6 +425,7 @@
         /**
          * Get a snapshot of the current global configuration
          * a snapshot is simply a configuration with the current state of the HTML attached
+         * @returns {Configuration} snapshot of configuration
          */
         function getConfigurationSnapshot() {
             const configuration = gconfiguration;
@@ -440,8 +458,8 @@
 
         /**
          * check that string is only made up of valid characters
-         * @param check - string to check
-         * @param valid - string of valid characters
+         * @param {string} check - string to check
+         * @param {string} valid - string of valid characters
          */
         function assertStringRange(check, valid) {
             assertString(check);
@@ -458,7 +476,8 @@
 
         /**
          * converts an ArrayBuffer to hexText
-         * @param buffer - ArrayBuffer
+         * @param {ArrayBuffer} buffer - ArrayBuffer
+         * @returns {string}
          */
         function convertBufferToHex(buffer) {
             // https://stackoverflow.com/questions/40031688/javascript-arraybuffer-to-hex
@@ -469,6 +488,8 @@
 
         /**
          * converts hexText to ArrayBuffer
+         * @param {string} hexText - hexadecimal text to convert to an array buffer
+         * @returns {ArrayBuffer}
          */
         function convertHexToBuffer(hexText) {
             assertString(hexText);
@@ -499,8 +520,8 @@
 
         /**
          * converts text to gzip compressed hexText
-         * @param text - a string
-         * @returns gzip compressed hexText
+         * @param {string} text - a string
+         * @returns {Promise<string>} gzip compressed hexText
          */
         async function compress(text) {
             // https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream
@@ -536,6 +557,7 @@
 
         /**
          * convert configuration to json text
+         * @param {Configuration} configuration
          */
         function getConfigurationToTextJson(configuration, { pretty } = { pretty: false }) {
             // pretty option adds spaces for readability
@@ -545,6 +567,7 @@
 
         /**
          * get a configuration from json text
+         * @param {string} text
          */
         function getConfigurationFromTextJson(text) {
             const configuration = JSON.parse(text);
@@ -553,6 +576,8 @@
 
         /**
          * get a configuration from hex text (compressed json text)
+         * @param {string} text - hex text
+         * @returns {Configuration}
          */
         async function getConfigurationFromTextHex(text) {
             const decompressedText = await decompress(text);
@@ -562,6 +587,8 @@
 
         /**
          * get a configuration from markdown text
+         * @param {string} text - hex text
+         * @returns {Configuration}
          */
         function getConfigurationFromTextMarkdown(text) {
             const configuration = parseMarkdownToConfiguration(text);
@@ -569,6 +596,11 @@
             return configuration;
         }
 
+        /**
+         * @param {string} name - name of the file
+         * @param {string} text - file text
+         * @returns {Configuration}
+         */
         async function getConfigurationFromFile(name, text) {
             let configuration = undefined;
 
@@ -662,6 +694,11 @@
         }
 
 
+        /**
+         * converts a configuration to hex text
+         * @param {Configuration} configuration
+         * @returns {string} hex text
+         */
         async function getConfigurationToTextHex(configuration) {
             const snapshotJsonText = getConfigurationToTextJson(configuration);
             //console.log(snapshotJsonText);
@@ -674,6 +711,7 @@
 
         /**
          * canvas is a bit pixelated
+         * @param {Configuration} configuration
          */
         function drawConfigurationCanvas(configuration, canvas) {
             canvas.width = 200;
@@ -734,6 +772,9 @@
 
         }
 
+        /**
+         * @param {Configuration} configuration
+         */
         function saveConfigurationImageCanvas(configuration) {
             const canvas = document.createElement("canvas");
             drawConfigurationCanvas(configuration, canvas);
@@ -748,9 +789,9 @@
 
 
         /**
-         * @param x - x of lower left corner
-         * @param y - y of lower left corner
-         * @param text - the text to write
+         * @param {number} x - x of lower left corner
+         * @param {number} y - y of lower left corner
+         * @param {string} text - the text to write
          */
         function createSvgTextElement(x, y, text) {
             const textElement = document.createElementNS(
@@ -772,10 +813,10 @@
         }
 
         /**
-         * @param x - x of upper left corner
-         * @param y - y of upper left corner
-         * @param checkboxSize - width and height of the checkbox
-         * @param checked - is the checkbox checked
+         * @param {number} x - x of upper left corner
+         * @param {number} y - y of upper left corner
+         * @param {number} checkboxSize - width and height of the checkbox
+         * @param {boolean} checked - is the checkbox checked
          */
         function createSvgCheckboxElement(x, y, checkboxSize, checked) {
 
@@ -798,6 +839,9 @@
         }
 
         // sweet sweet SVGs! Pixel perfection!
+        /**
+         * @param {Configuration} configuration
+         */
         function getConfigurationToSvgElement(configuration) {
             const { title, description, items, state } = configuration;
 
@@ -849,7 +893,9 @@
 
         }
 
-
+        /**
+         * @param {Configuration} configuration
+         */
         function saveConfigurationImageSvg(configuration) {
 
             // for testing purposes allow preview on the canvas

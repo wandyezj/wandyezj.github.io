@@ -93,6 +93,7 @@
     <label for="input_load_file">Load json or md configuration</label>
     <input id="input_load_file" type="file" accept=".json,.md,.txt">
 
+    <p id="user_agent"></p>
     <!-- Configuration Placeholder with actual actions -->
 
     <div id="div_configuration"></div>
@@ -106,16 +107,30 @@
 
     <script>
 
+
+
         /**
          * A configuration
          * @typedef {Object} Configuration
          * @property {string} title - title
          * @property {string} description - description
-         * @property {Object[]} items - items
+         * @property {ConfigurationItem[]} items - items
          * @property {Object} state - state
          */
 
+        /**
+         * A configuration item
+         * @typedef ConfigurationItem
+         * @property {string} id
+         * @property {string} title
+         * @property {string} description
+         * @property {string} input
+         */
+
         // Example actually use markdown as all input
+        /**
+         * @type {Configuration}
+         */
         const defaultConfigurationJson = {
             title: "example configuration title",
             description: "example configuration description",
@@ -165,6 +180,7 @@
 
         /**
          * create json configuration from a markdown description
+         * @param {string} markdownInput
          */
         function parseMarkdownToConfiguration(markdownInput) {
             const markdown = markdownInput.trim()
@@ -184,6 +200,7 @@
 
             /**
              * items in the list
+             * @type {ConfigurationItem[]}
              * Each item has
              * - title
              * - description
@@ -196,7 +213,9 @@
              */
             const state = {};
 
-
+            /**
+             * @type {string[]}
+             */
             const itemIds = [];
 
             // Delimiters
@@ -320,7 +339,7 @@
          * create unique id based off a baseId, given the set of existing Ids
          * @param {string} baseId - base id to make a unique id out of
          * @param {string[]} existingIds - existing set of unique ids to make sure the returned id does not clash
-         * @return {string} unique id not present in existingIds
+         * @returns {string} unique id not present in existingIds
          */
         function toUniqueId(baseId, existingIds) {
             let itemId = baseId;
@@ -355,14 +374,30 @@
 
         /**
          * load the configuration to html on the pace so it can be manipulated
-         * include state informtion
+         * include state information
          * @param {Configuration} configuration
          */
-        function loadConfigurationToHtml(configuration) {
+         function loadConfigurationToHtml(configuration) {
+            // get new div children
+            const configurationDiv = getConfigurationToDivElement(configuration);
+            const children = configurationDiv.childNodes;
 
+            // update the div
             const div = document.getElementById("div_configuration");
             // reset everything in the div, (otherwise end up with duplicate elements on subsequent loads)
             div.innerText = "";
+            div.append(...children);
+         }
+
+        /**
+         * load the configuration to html on the pace so it can be manipulated
+         * include state informtion
+         * @param {Configuration} configuration
+         * @returns {HTMLDivElement}
+         */
+        function getConfigurationToDivElement(configuration) {
+
+            const div = document.createElement("div");
 
             const { title, description, items, state } = configuration;
 
@@ -419,7 +454,7 @@
             });
 
             div.append(...children);
-
+            return div;
         }
 
         /**
@@ -537,8 +572,8 @@
 
         /**
          * converts gzip compressed hexText to text
-         * @param compressedHexText - gzip compressed hexText
-         * @returns text
+         * @param {string} compressedHexText - gzip compressed hexText
+         * @returns {string} text
          */
         async function decompress(compressedHexText) {
 
@@ -558,6 +593,7 @@
         /**
          * convert configuration to json text
          * @param {Configuration} configuration
+         * @returns {string}
          */
         function getConfigurationToTextJson(configuration, { pretty } = { pretty: false }) {
             // pretty option adds spaces for readability
@@ -568,6 +604,7 @@
         /**
          * get a configuration from json text
          * @param {string} text
+         * @returns {Configuration}
          */
         function getConfigurationFromTextJson(text) {
             const configuration = JSON.parse(text);
@@ -622,6 +659,9 @@
 
         /**
          * download a file by inserting a link element with the url containing the encoding
+         * @param {Object} o
+         * @param {string} o.filename
+         * @param {string} o.url
          */
         function downloadFileUrl({ filename, url }) {
             const element = document.createElement('a');
@@ -633,9 +673,10 @@
 
         /**
          * download file
-         * @param filename - name of the file to download
-         * @param text - contents of the text file utf-16 text
-         * @param encoding - mime type of the file
+         * @param {Object} o
+         * @param {string} o.filename - name of the file to download
+         * @param {string} o.text - contents of the text file utf-16 text
+         * @param {string} o.encoding - mime type of the file
          */
         function downloadFile({ filename, text, encoding }) {
             const blob = new Blob([text], {type:encoding})
@@ -650,6 +691,9 @@
             // downloadFileUrl({filename, url})
         }
 
+        /**
+         * @param {FileList} files
+         */
         async function buttonLoadSnapshotFromFile(files) {
             if (files.length !== 1) {
                 console.error(`can only load a single file`);
@@ -712,6 +756,7 @@
         /**
          * canvas is a bit pixelated
          * @param {Configuration} configuration
+         * @param {HTMLCanvasElement} canvas
          */
         function drawConfigurationCanvas(configuration, canvas) {
             canvas.width = 200;
@@ -792,6 +837,7 @@
          * @param {number} x - x of lower left corner
          * @param {number} y - y of lower left corner
          * @param {string} text - the text to write
+         * @returns {SVGTextElement}
          */
         function createSvgTextElement(x, y, text) {
             const textElement = document.createElementNS(
@@ -817,6 +863,7 @@
          * @param {number} y - y of upper left corner
          * @param {number} checkboxSize - width and height of the checkbox
          * @param {boolean} checked - is the checkbox checked
+         * @returns {SVGTextElement}
          */
         function createSvgCheckboxElement(x, y, checkboxSize, checked) {
 
@@ -841,6 +888,7 @@
         // sweet sweet SVGs! Pixel perfection!
         /**
          * @param {Configuration} configuration
+         * @returns {SVGSVGElement}
          */
         function getConfigurationToSvgElement(configuration) {
             const { title, description, items, state } = configuration;
@@ -939,7 +987,7 @@
          * button 
          * get snapshot of the current configurations answers and save to JSON
          */
-        function buttonSaveSnapshotToFileJson() {
+        async function buttonSaveSnapshotToFileJson() {
             const configuration = getConfigurationSnapshot();
 
             const filename = `${configuration.title}.json`;
@@ -952,7 +1000,7 @@
          * button 
          * get snapshot of the current configurations answers and save to svg
          */
-        function buttonSaveSnapshotToFileSvg() {
+        async function buttonSaveSnapshotToFileSvg() {
             const configuration = getConfigurationSnapshot();
 
             const svg = getConfigurationToSvgElement(configuration);
@@ -981,7 +1029,7 @@
         /**
          * button
          */
-        function drawConfigurationImage() {
+        async function drawConfigurationImage() {
             //buttonSaveSnapshotToFileSvg();
 
             const configuration = getConfigurationSnapshot()
@@ -997,6 +1045,11 @@
             // same as saving json
         }
 
+        function displayBrowser() {
+            const agent = window.navigator.userAgent
+            document.getElementById("user_agent").innerText = agent;
+        }
+
         /**
          * Only function run on start
          * Set up everything, link all UI elements
@@ -1008,6 +1061,7 @@
 
             // Start - Test
             // Test Code to run at start
+            displayBrowser();
             drawConfigurationImage()
             // End - Test
 
@@ -1019,10 +1073,13 @@
             document.getElementById("button_save_file_svg").onclick = buttonSaveSnapshotToFileSvg;
 
             // Load file
+            /**
+             * @type {HTMLInputElement}
+             */
             const input_file = document.getElementById("input_load_file");
             input_file.onchange = async () => {
                 const files = input_file.files;
-                await buttonLoadSnapshotFromFile(files)
+                await buttonLoadSnapshotFromFile(files);
             };
         }
 

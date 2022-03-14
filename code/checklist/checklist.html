@@ -317,13 +317,25 @@
         let globalConfiguration = undefined;
 
         /**
+         * call when the configuration changes
+         */
+        function onConfigurationUpdated() {
+            // update images
+            drawConfigurationImage()
+
+            // update hash
+            saveSnapshotToUrlHash();
+        }
+
+        /**
          * @param {Configuration} configuration
          */
         function loadConfiguration(configuration) {
             console.log("loadConfiguration");
             console.log(configuration);
-            loadConfigurationToHtml(configuration);
             globalConfiguration = configuration;
+            loadConfigurationToHtml(configuration);
+            onConfigurationUpdated();
         }
 
         /**
@@ -1051,15 +1063,19 @@
             loadConfiguration(configuration);
         }
 
-        /**
-         * button 
-         */
-        async function buttonSaveSnapshotToUrlHash() {
+        async function saveSnapshotToUrlHash() {
             const configuration = getConfigurationSnapshot();
             const text = await getConfigurationToTextHex(configuration)
 
             // set to hash at top of window
             window.location.hash = text;
+        }
+
+        /**
+         * button 
+         */
+        async function buttonSaveSnapshotToUrlHash() {
+            await saveSnapshotToUrlHash();
         }
 
         /**
@@ -1145,6 +1161,9 @@
             // Initial configuration
             const configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
             loadConfiguration(configuration);
+
+
+            document.getElementById("div_configuration").onchange = onConfigurationUpdated;
 
             // Start - Test
             // Test Code to run at start

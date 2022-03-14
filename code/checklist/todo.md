@@ -4,8 +4,7 @@
     - https://caniuse.com/link-icon-svg
     - should this only allow PNG to avoid SVG security issues?
 - default svg favicon
-- browser check 
-    - only support Firefox, Chrome, and Edge (and at least a recent updated version)
+
 - embed configuration in svg element and allow upload of svg
     - https://svgwg.org/svg2-draft/struct.html#MetadataElement
 - convert svg to png
@@ -29,3 +28,15 @@
 - likart support
     - https://en.wikipedia.org/wiki/Likert_scale
 - styling css
+
+## done
+
+- [x] browser check
+    - only officially support Edge (and at least a recent updated version)
+    - only tested on edge - too much effort to try to support multiple browsers (what works on edge should work on other updated chromium browsers)
+    - check that APIs are supported
+    - difficult to tell specific browser, not a clean way to check
+    - instead check for specific API support
+    - not supporting
+        - legacy: IE, Safari
+        - Non Chromium: Gecko, WebKit

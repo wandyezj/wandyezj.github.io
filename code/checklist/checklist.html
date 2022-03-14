@@ -8,92 +8,27 @@
 
 <body>
 
-    <!--
-        Generate a configurable list layout with clickable boxes and allow export to an image
+    <div id="div_controls">
+        <button id="button_save_url">Save URL</button>
+        <button id="button_load_url">Load URL</button>
+        <br>
 
-        Allow export and sharing via URL
-
-        Pieces:
-
-        Configuration
-            - The `configuration` is the set, layout, and state of possible items.     
-            - fixed set of item options
-                - checkbox
-                - likert - future
-            - hostable and pointable on any URL
-                - determine which parser to use based off .md or .json suffix
-
-        load only
-            - markdown template (more easily viewable and editable than json)
-
-        save / load
-            - json configuration (allows saving to local file system)
-            - compressed hex url hash (allows sharing link)
-            - TODO: image (render selection for reference and share, and load from image via embedded state)
-
-        Save / Load methods
-            loadConfiguration
+        <p>Save File</p>
+        <button id="button_save_file_json">json</button>
+        <button id="button_save_file_text">text</button>
+        <button id="button_save_file_svg">svg</button>
+        <br>
+        <br>
+        <label for="input_load_file">Load json or md configuration</label>
+        <input id="input_load_file" type="file" accept=".json,.md,.txt">
+    </div>
 
 
-        HTML Render and Selection
-
-        Everything loaded is a configuration
-            - markdown configuration is a template
-            - json or URL configurations include answers
-
-        edit
-            - probably want a way to edit inline
-
-        Canvas Draw and Image Export / Download
-            - possible via screen capture?
-            - steganography embedd compressed information into the image since programs remove metadata, also embedd the metadata
-            - RGBA can tack on at the end, but still need the total length of data to read
-
-        Styling
-            - will need to style so it looks appealing
-
-        Features
-            - encode hash to make it harder for people to tamper with to check that image is actual representation, could also compare image to value but then this changes if svg encoding changes between versions.
-
-
-        Principles:
-            - hostable anywhere - self contained HTML page
-            - sharable and private
-                - no telemetry
-                - no storage or persistance of data outside of users machine
-            - configurable and customizable, with sharable configurations
-            - machine parsable if shared
-            - secure
-                - do not want to allow links that people can click, except to know safe domains (maybe wikipedia links are ok?)
-                - defend against HTML injection from input sources
-            - compatible this means old configurations and renders continue to work
-                - can be done by versioning, point to specific HTML page
-                - or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
-    
-        Reference
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
-        https://developer.mozilla.org/en-US/docs/Web/API/File
-
-        https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas
-
-        https://motdave.com/page-https-developer.mozilla.org/en-US/docs/Web/API/File/Using_files_from_web_applications
-    
-            -->
-    <button id="button_save_url">Save URL</button>
-    <button id="button_load_url">Load URL</button>
-    <br>
-
-    <p>Save File</p>
-    <button id="button_save_file_json">json</button>
-    <button id="button_save_file_text">text</button>
-    <button id="button_save_file_svg">svg</button>
-    <br>
-    <br>
-    <label for="input_load_file">Load json or md configuration</label>
-    <input id="input_load_file" type="file" accept=".json,.md,.txt">
-
-    <p id="user_agent"></p>
+    <div id="div_browser_info">
+        <p id="p_browser_not_supported_message" hidden>This browser is not supported, please use the latest version of
+            <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
+        </p>
+    </div>
     <!-- Configuration Placeholder with actual actions -->
 
     <div id="div_configuration"></div>
@@ -107,7 +42,20 @@
 
     <script>
 
-
+        /**
+         * Possible Configuration Input Types
+         * @readonly
+         * @enum {string}
+         */
+        const ConfigurationInputType = {
+            /**
+             * @readonly
+             * @type {"checkbox"}
+             * A checkbox
+             * linked state can only be true or false
+             */
+            Checkbox: "checkbox",
+        }
 
         /**
          * A configuration
@@ -115,17 +63,19 @@
          * @property {string} title - title
          * @property {string} description - description
          * @property {ConfigurationItem[]} items - items
-         * @property {Object} state - state
+         * @property {Object} state - state: id -> value
          */
 
         /**
          * A configuration item
          * @typedef ConfigurationItem
-         * @property {string} id
-         * @property {string} title
-         * @property {string} description
-         * @property {string} input
+         * @property {string} id - unique id for the item, used to reference the state
+         * @property {string} title - displayed
+         * @property {string} description - explanation for the item
+         * @property {"checkbox"} input - input type from limited set of: {"checkbox"}
          */
+
+
 
         // Example actually use markdown as all input
         /**
@@ -158,10 +108,10 @@
             // id should be present in the items
             // value is dependent on the item type
             // empty assumes default value
+
             state: {
                 // by default empty
             }
-
         }
 
         // whitespace matters
@@ -177,6 +127,8 @@
     > example item description
 
 `;
+
+        //#region "markdown"
 
         /**
          * create json configuration from a markdown description
@@ -260,7 +212,7 @@
                     // List Item Checkbox
 
                     const itemTitle = line.substring(delimiterListItemCheckboxUnchecked.length).trim();
-                    const itemInput = "checkbox";
+                    const itemInput = ConfigurationInputType.Checkbox;
                     let itemDescription = undefined;
 
                     if (lineNext !== undefined && lineNext.startsWith(delimiterListItemDescription)) {
@@ -316,8 +268,8 @@
 
             // characters allowed in an identifier
             const alphabet = "abcdefghijklmnopqrstuvwxyz";
-            const numbers = "0123456789"
-            const space = " "
+            const numbers = "0123456789";
+            const space = " ";
 
             const valid = alphabet + numbers + space;
 
@@ -355,12 +307,14 @@
             return itemId;
         }
 
+        //#endregion "markdown"
+
         /**
          * currently loaded configuration
          * should only be used by loadConfiguration and getConfigurationSnapshot
          * @type {Configuration|undefined}
          */
-        let gconfiguration = undefined;
+        let globalConfiguration = undefined;
 
         /**
          * @param {Configuration} configuration
@@ -369,7 +323,7 @@
             console.log("loadConfiguration");
             console.log(configuration);
             loadConfigurationToHtml(configuration);
-            gconfiguration = configuration;
+            globalConfiguration = configuration;
         }
 
         /**
@@ -377,7 +331,7 @@
          * include state information
          * @param {Configuration} configuration
          */
-         function loadConfigurationToHtml(configuration) {
+        function loadConfigurationToHtml(configuration) {
             // get new div children
             const configurationDiv = getConfigurationToDivElement(configuration);
             const children = configurationDiv.childNodes;
@@ -387,11 +341,11 @@
             // reset everything in the div, (otherwise end up with duplicate elements on subsequent loads)
             div.innerText = "";
             div.append(...children);
-         }
+        }
 
         /**
          * load the configuration to html on the pace so it can be manipulated
-         * include state informtion
+         * include state information
          * @param {Configuration} configuration
          * @returns {HTMLDivElement}
          */
@@ -423,8 +377,8 @@
                 const elementDiv = document.createElement("div");
 
                 // determine input type
-                // why not aimply assign? - security plus elements have different needs
-                if (input === "checkbox") {
+                // why not simply assign? - security plus elements have different needs
+                if (input === ConfigurationInputType.Checkbox) {
                     const elementInput = document.createElement("input");
                     elementInput.type = "checkbox";
                     elementInput.name = title;
@@ -463,9 +417,12 @@
          * @returns {Configuration} snapshot of configuration
          */
         function getConfigurationSnapshot() {
-            const configuration = gconfiguration;
+            const configuration = globalConfiguration;
 
             // clone configuration
+            /**
+             * @type {Configuration}
+             */
             const snapshot = JSON.parse(JSON.stringify(configuration));
 
             // empty state
@@ -509,6 +466,8 @@
             }
         }
 
+
+        //#region "hextext"
         /**
          * converts an ArrayBuffer to hexText
          * @param {ArrayBuffer} buffer - ArrayBuffer
@@ -588,7 +547,31 @@
             return text;
         }
 
+        /**
+         * text compress decompress
+         */
+        async function testHexText() {
+            // input text
+            const configuration = getConfigurationSnapshot();
+            const snapshotText = getConfigurationToTextJson(configuration);
+            console.log(snapshotText);
 
+            const compressedText = await compress(snapshotJsonText);
+            console.log(compressedText);
+
+            const decompressedText = await decompress(compressedText);
+            console.log(decompressedText);
+
+            // should be able to decompress
+            const equal = snapshotJsonText === decompressedText
+            console.log(equal);
+
+            if (!equal) {
+                throw new Error("compress does not decompress");
+            }
+        }
+
+        //#endregion "hextext"
 
         /**
          * convert configuration to json text
@@ -679,7 +662,7 @@
          * @param {string} o.encoding - mime type of the file
          */
         function downloadFile({ filename, text, encoding }) {
-            const blob = new Blob([text], {type:encoding})
+            const blob = new Blob([text], { type: encoding })
             const downloadUrl = URL.createObjectURL(blob);
             console.log(downloadUrl)
             downloadFileUrl({ filename, url: downloadUrl });
@@ -713,29 +696,6 @@
             }
         }
 
-        /**
-         * text compress decompress
-         */
-        async function testHexText() {
-            // input text
-            const configuration = getConfigurationSnapshot();
-            const snapshotText = getConfigurationToTextJson(configuration);
-            console.log(snapshotText);
-
-            const compressedText = await compress(snapshotJsonText);
-            console.log(compressedText);
-
-            const decompressedText = await decompress(compressedText);
-            console.log(decompressedText);
-
-            // should be able to decompress
-            const equal = snapshotJsonText === decompressedText
-            console.log(equal);
-
-            if (!equal) {
-                throw new Error("compress does not decompress");
-            }
-        }
 
 
         /**
@@ -753,6 +713,7 @@
         }
 
 
+        //#region "canvas"
         /**
          * canvas is a bit pixelated
          * @param {Configuration} configuration
@@ -817,6 +778,8 @@
 
         }
 
+        //#endregion "canvas"
+
         /**
          * @param {Configuration} configuration
          */
@@ -832,6 +795,7 @@
             div.appendChild(canvas);
         }
 
+        //#region "svg"
 
         /**
          * @param {number} x - x of lower left corner
@@ -941,6 +905,8 @@
 
         }
 
+        //#endregion "svg"
+
         /**
          * @param {Configuration} configuration
          */
@@ -957,10 +923,76 @@
         }
 
 
+
+        /**
+         * get the support level for required APIs
+         */
+        function getBrowserSupport() {
+            // Required APIs to work.
+            // list all APIs
+            // https://developer.mozilla.org/en-US/docs/Web/API/Compression_Streams_API
+            const supportsCompressionStream = "undefined" !== typeof CompressionStream;
+            // https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream
+            const supportsDecompressionStream = "undefined" !== typeof DecompressionStream;
+
+            /**
+             * @type {[string, boolean][]}
+             */
+            const apis = [
+                ["CompressionStream", supportsCompressionStream],
+                ["DecompressionStream", supportsDecompressionStream],
+            ];
+            const supported = apis.every(([_, supports]) => supports);
+
+            return {
+                apis,
+                supported,
+            }
+        }
+
         //
         // UI callable methods
         //
 
+        //#region "interactions"
+        /**
+         * browser details
+         * writes if the browser is supported
+         * @param {Object} [options=undefined]
+         * @param {boolean} [options.showDetails=undefined] - show additional details about the browser
+         */
+        function displayBrowserSupport(options) {
+            const div = document.getElementById("div_browser_info");
+
+            const { apis, supported } = getBrowserSupport();
+
+            if (!supported) {
+                document.getElementById("p_browser_not_supported_message").hidden = false;
+            }
+
+            const showDetails = typeof options !== "undefined" && options.showDetails;
+
+            // show details about supported APIs
+            if (showDetails) {
+                // user Agent
+                const agent = window.navigator.userAgent;
+                const infoAgent = document.createElement("p");
+                infoAgent.appendChild(document.createTextNode(agent));
+                div.appendChild(infoAgent);
+
+                // APIs
+                apis.forEach(([name, supports]) => {
+                    const infoApi = document.createElement("p");
+                    const br = document.createElement("br");
+                    div.appendChild(br);
+                    div.appendChild(document.createTextNode(`${name}: ${supports}`));
+                });
+            }
+        }
+        //#endregion "interactions"
+
+
+        //#region "buttons"
         /**
          * button
          */
@@ -1045,29 +1077,39 @@
             // same as saving json
         }
 
-        function displayBrowser() {
-            const agent = window.navigator.userAgent
-            document.getElementById("user_agent").innerText = agent;
-        }
+        //#endregion "buttons"
+
+
 
         /**
          * Only function run on start
          * Set up everything, link all UI elements
          */
         function initialize() {
+            // check if the browser is supported
+            const { supported } = getBrowserSupport();
+            if (!supported) {
+                document.getElementById("div_controls").innerText = "";
+                displayBrowserSupport({ showDetails: true });
+                // don't set up any of the handlers
+                return;
+            }
+
             // Initial configuration
             const configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
             loadConfiguration(configuration);
 
             // Start - Test
             // Test Code to run at start
-            displayBrowser();
             drawConfigurationImage()
             // End - Test
 
+
+            // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;
             document.getElementById("button_load_url").onclick = buttonLoadSnapshotFromUrlHash;
 
+            // File
             document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;
             document.getElementById("button_save_file_text").onclick = buttonSaveSnapshotToFileTextHex;
             document.getElementById("button_save_file_svg").onclick = buttonSaveSnapshotToFileSvg;

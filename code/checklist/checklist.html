@@ -981,6 +981,8 @@
                 div.appendChild(infoAgent);
 
                 // APIs
+                div.appendChild(document.createTextNode("Required API: supported"))
+
                 apis.forEach(([name, supports]) => {
                     const infoApi = document.createElement("p");
                     const br = document.createElement("br");

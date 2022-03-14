@@ -19,8 +19,8 @@
         <button id="button_save_file_svg">svg</button>
         <br>
         <br>
-        <label for="input_load_file">Load json or md configuration</label>
-        <input id="input_load_file" type="file" accept=".json,.md,.txt">
+        <label for="input_load_file">Load configuration</label>
+        <input id="input_load_file" type="file" accept=".json,.md,.txt,.svg">
     </div>
 
 
@@ -617,6 +617,29 @@
         }
 
         /**
+         * pull out configuration stored in the svg
+         * get a configuration from desc element containing configuration hex tex embedded in svg text
+         * @param {string} text - svg text
+         * @returns {Configuration}
+         */
+        async function getConfigurationFromSvg(text) {
+
+            // pull out configuration hex text from configuration desc element
+            const parser = new DOMParser();
+            const svg = parser.parseFromString(text, "image/svg+xml");
+
+            // note: The configuration is the inner html of the first element with the id 'configuration' 
+            /**
+             * @type {SVGDescElement}
+             */
+            const configurationDesc = svg.getElementById("configuration");
+            const configurationTextHex = configurationDesc.innerHTML; // note: no innerText element in SVGDescElement
+
+            const configuration = getConfigurationFromTextHex(configurationTextHex);
+            return configuration;
+        }
+
+        /**
          * @param {string} name - name of the file
          * @param {string} text - file text
          * @returns {Configuration}
@@ -633,11 +656,11 @@
                 configuration = getConfigurationFromTextMarkdown(text);
             } else if (nameLowercase.endsWith(".txt")) {
                 configuration = getConfigurationFromTextHex(text);
+            } else if (nameLowercase.endsWith(".svg")) {
+                configuration = getConfigurationFromSvg(text);
             }
-            // TODO: Support SVG
 
             return configuration;
-
         }
 
         /**
@@ -701,7 +724,7 @@
         /**
          * converts a configuration to hex text
          * @param {Configuration} configuration
-         * @returns {string} hex text
+         * @returns {Promise<string>} hex text
          */
         async function getConfigurationToTextHex(configuration) {
             const snapshotJsonText = getConfigurationToTextJson(configuration);
@@ -798,6 +821,24 @@
         //#region "svg"
 
         /**
+         * @param {string} text - text for the desc element
+         * @param id {string} - id for the desc element for easy access
+         */
+        function createSvgDescElement(text, id) {
+            const descElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'desc'
+            );
+
+            descElement.setAttribute("id", id);
+
+            const textNode = document.createTextNode(text);
+            descElement.appendChild(textNode);
+
+            return descElement;
+        }
+
+        /**
          * @param {number} x - x of lower left corner
          * @param {number} y - y of lower left corner
          * @param {string} text - the text to write
@@ -852,9 +893,9 @@
         // sweet sweet SVGs! Pixel perfection!
         /**
          * @param {Configuration} configuration
-         * @returns {SVGSVGElement}
+         * @returns {Promise<SVGSVGElement>}
          */
-        function getConfigurationToSvgElement(configuration) {
+        async function getConfigurationToSvgElement(configuration) {
             const { title, description, items, state } = configuration;
 
             const checkboxSize = 10;
@@ -863,6 +904,10 @@
             //svg.setAttribute("viewbox", "0 0 100 100");
             svg.setAttribute("width", 200);
             svg.setAttribute("height", 200);
+
+            // append text hex description of the configuration that generated the svg
+            const configurationTextHex = await getConfigurationToTextHex(configuration);
+            svg.appendChild(createSvgDescElement(configurationTextHex, "configuration"));
 
 
             const height = 20; // need to measure height of text
@@ -910,12 +955,12 @@
         /**
          * @param {Configuration} configuration
          */
-        function saveConfigurationImageSvg(configuration) {
+        async function saveConfigurationImageSvg(configuration) {
 
             // for testing purposes allow preview on the canvas
             const div = document.getElementById("div_configuration_svg");
 
-            const svg = getConfigurationToSvgElement(configuration);
+            const svg = await getConfigurationToSvgElement(configuration);
 
             // reset
             div.innerText = "";
@@ -1037,7 +1082,7 @@
         async function buttonSaveSnapshotToFileSvg() {
             const configuration = getConfigurationSnapshot();
 
-            const svg = getConfigurationToSvgElement(configuration);
+            const svg = await getConfigurationToSvgElement(configuration);
             var serializer = new XMLSerializer();
             var snapshotSvgText = serializer.serializeToString(svg);
 
@@ -1072,7 +1117,7 @@
             saveConfigurationImageCanvas(configuration);
 
             // draw the configuration as an svg
-            saveConfigurationImageSvg(configuration);
+            await saveConfigurationImageSvg(configuration);
 
 
             // save the canvas

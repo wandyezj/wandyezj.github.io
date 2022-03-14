@@ -4,11 +4,18 @@
     - https://caniuse.com/link-icon-svg
     - should this only allow PNG to avoid SVG security issues?
 - default svg favicon
-
-- embed configuration in svg element and allow upload of svg
-    - https://svgwg.org/svg2-draft/struct.html#MetadataElement
+- error checking for invalid file or invalid configuration
+    - error handling around json parsing
+    - check that only valid things are in the configuration and all types are correct
+    - check that all ids are present and unique
+    - error handling around md parsing
+    - display for invalid errors
+    - communication of where the invalid data is
+    - need new UI function to show error
+    - from configuration parsers return success or failure codes
+- likert support
+    - https://en.wikipedia.org/wiki/Likert_scale
 - convert svg to png
-- embed configuration in png
 - writeup explaining security and privacy features
     - apply unlicense
     - svg sandbox for
@@ -25,11 +32,15 @@
     - entity encode all configuration fields when the configuration is parsed so that data is good everywhere?
     - https://owasp.org/www-project-enterprise-security-api/
 - writeup explaining configuration formats
-- likart support
-    - https://en.wikipedia.org/wiki/Likert_scale
 - styling css
 
 ## done
+
+- [x] embed configuration in svg element and allow upload of svg
+    - embed configuration in png
+    - https://svgwg.org/svg2-draft/struct.html#MetadataElement
+    - use desc element instead identified by the id 'configuration'
+    - want to support svg since it allows downloading an image and then if you want to make changes to the image can simply upload modify and re-download.
 
 - [x] browser check
     - only officially support Edge (and at least a recent updated version)

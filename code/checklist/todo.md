@@ -33,6 +33,11 @@
     - https://owasp.org/www-project-enterprise-security-api/
 - writeup explaining configuration formats
 - styling css
+- embed checksum of configuration in configuration to check unmodified.
+    - this would simply prevent accidental modification
+- embed signature in configuration and allow checking that the
+    - allow signing with private key in UI
+    - signature against an embedded public key
 
 ## done
 

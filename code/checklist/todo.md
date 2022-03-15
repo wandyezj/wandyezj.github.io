@@ -38,8 +38,11 @@
 - embed signature in configuration and allow checking that the
     - allow signing with private key in UI
     - signature against an embedded public key
+- load configuration from hash by default
 
 ## done
+
+- [x] update drawings as html is updated for testing convenience
 
 - [x] embed configuration in svg element and allow upload of svg
     - embed configuration in png

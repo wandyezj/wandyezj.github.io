@@ -11,6 +11,7 @@
     <div id="div_controls">
         <button id="button_save_url">Save URL</button>
         <button id="button_load_url">Load URL</button>
+        <button id="button_clear_url">Clear URL</button>
         <br>
 
         <p>Save File</p>
@@ -324,7 +325,7 @@
             drawConfigurationImage()
 
             // update hash
-            saveSnapshotToUrlHash();
+            //saveSnapshotToUrlHash();
         }
 
         /**
@@ -609,7 +610,7 @@
         /**
          * get a configuration from hex text (compressed json text)
          * @param {string} text - hex text
-         * @returns {Configuration}
+         * @returns {Promise<Configuration>}
          */
         async function getConfigurationFromTextHex(text) {
             const decompressedText = await decompress(text);
@@ -647,7 +648,7 @@
             const configurationDesc = svg.getElementById("configuration");
             const configurationTextHex = configurationDesc.innerHTML; // note: no innerText element in SVGDescElement
 
-            const configuration = getConfigurationFromTextHex(configurationTextHex);
+            const configuration = await getConfigurationFromTextHex(configurationTextHex);
             return configuration;
         }
 
@@ -667,7 +668,7 @@
             } else if (nameLowercase.endsWith(".md")) {
                 configuration = getConfigurationFromTextMarkdown(text);
             } else if (nameLowercase.endsWith(".txt")) {
-                configuration = getConfigurationFromTextHex(text);
+                configuration = await getConfigurationFromTextHex(text);
             } else if (nameLowercase.endsWith(".svg")) {
                 configuration = getConfigurationFromSvg(text);
             }
@@ -1050,6 +1051,11 @@
         }
         //#endregion "interactions"
 
+        function getUrlHash() {
+            const text = window.location.hash.substring(1);
+            return text
+        }
+
 
         //#region "buttons"
         /**
@@ -1058,9 +1064,13 @@
         async function buttonLoadSnapshotFromUrlHash() {
             // # comes after the url
             // remove #
-            const text = window.location.hash.substring(1);
-            const configuration = await getConfigurationFromTextHex(text);
-            loadConfiguration(configuration);
+            const text = getUrlHash();
+            if (text) {
+                const configuration = await getConfigurationFromTextHex(text);
+                loadConfiguration(configuration);
+            } else {
+                console.log("no url hash to load")
+            }
         }
 
         async function saveSnapshotToUrlHash() {
@@ -1148,7 +1158,7 @@
          * Only function run on start
          * Set up everything, link all UI elements
          */
-        function initialize() {
+        async function initialize() {
             // check if the browser is supported
             const { supported } = getBrowserSupport();
             if (!supported) {
@@ -1159,7 +1169,17 @@
             }
 
             // Initial configuration
-            const configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
+            const urlHash = getUrlHash();
+            console.log(urlHash);
+            /**
+             * @type {Configuration}
+             */
+            let configuration = undefined;
+            if (urlHash.length === 0) {
+                configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
+            } else {
+                configuration = await getConfigurationFromTextHex(urlHash);
+            }
             loadConfiguration(configuration);
 
 
@@ -1174,6 +1194,11 @@
             // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;
             document.getElementById("button_load_url").onclick = buttonLoadSnapshotFromUrlHash;
+            document.getElementById("button_clear_url").onclick = ()=> {
+                //window.location.hash = "";
+                window.history.pushState('', document.title, window.location.pathname);
+            };
+
 
             // File
             document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;

@@ -318,17 +318,6 @@
         let globalConfiguration = undefined;
 
         /**
-         * call when the configuration changes
-         */
-        function onConfigurationUpdated() {
-            // update images
-            drawConfigurationImage()
-
-            // update hash
-            //saveSnapshotToUrlHash();
-        }
-
-        /**
          * @param {Configuration} configuration
          */
         function loadConfiguration(configuration) {
@@ -1081,6 +1070,10 @@
             window.location.hash = text;
         }
 
+        function buttonClearUrlHash() {
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+
         /**
          * button 
          */
@@ -1152,6 +1145,18 @@
 
         //#endregion "buttons"
 
+        /**
+         * called when the configuration changes
+         */
+         function onConfigurationUpdated() {
+            // update images
+            drawConfigurationImage()
+
+            // update hash
+            // useful if always want a shareable url
+            //saveSnapshotToUrlHash();
+        }
+
 
 
         /**
@@ -1169,6 +1174,7 @@
             }
 
             // Initial configuration
+            // pull from url has if available or load default
             const urlHash = getUrlHash();
             console.log(urlHash);
             /**
@@ -1190,15 +1196,10 @@
             drawConfigurationImage()
             // End - Test
 
-
             // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;
             document.getElementById("button_load_url").onclick = buttonLoadSnapshotFromUrlHash;
-            document.getElementById("button_clear_url").onclick = ()=> {
-                //window.location.hash = "";
-                window.history.pushState('', document.title, window.location.pathname);
-            };
-
+            document.getElementById("button_clear_url").onclick = buttonClearUrlHash;
 
             // File
             document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;

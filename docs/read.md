@@ -19,6 +19,16 @@ layout: page
 
 ## Papers
 
+{% assign papers = site.papers %}
+{% for paper in papers %}
+<p>
+<a href="{{ paper.link }}" >
+{{ paper.title }} - {{ paper.author }} ({{ paper.year }})
+</a>
+</p>
+{% endfor %}
+
+
 ## Literature
 
 {% assign books_not_academic = site.books | where_exp:"item","item.genre != 'academic'" %}

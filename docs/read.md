@@ -22,7 +22,7 @@ layout: page
 {% assign papers = site.papers %}
 {% for paper in papers %}
 <p>
-<a href="{{ paper.link }}" title="{{ paper.citation }}">
+<a href="{{ paper.link }}" title="{{ paper.citation.html_safe }}">
 {{ paper.title }} - {{ paper.author }} ({{ paper.year }})
 </a>
 </p>

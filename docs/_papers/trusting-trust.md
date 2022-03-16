@@ -1,5 +1,5 @@
 ---
-title: Reflection on Trusting Trust
+title: Reflections on Trusting Trust
 author: Ken Thompson
 year: 1984
 citation: Thompson, Ken. "Reflections on trusting trust." Communications of the ACM 27, no. 8 (1984)&#58 761-763.

@@ -10,9 +10,10 @@ layout: page
 
 {% assign books_academic = site.books | where:"genre", "academic" %}
 {% for book in books_academic %}
+{% assign wiki = book.wiki | escape %}
 <p>
-<a href="{{ book.wiki }}" >
-{{ book.title }} - {{ book.author }} ({{ book.year }})
+<a href="{{ wiki }}" >
+{{ book.title | escape }} - {{ book.author | escape }} ({{ book.year | escape }})
 </a>
 </p>
 {% endfor %}
@@ -21,9 +22,11 @@ layout: page
 
 {% assign papers = site.papers %}
 {% for paper in papers %}
+{% assign link = paper.link | escape %}
+{% assign citation = paper.citation | escape %}
 <p>
-<a href="{{ paper.link }}" title="{{ paper.citation.html_safe }}">
-{{ paper.title }} - {{ paper.author }} ({{ paper.year }})
+<a href="{{ link }}" title="{{ citation }}">
+{{ paper.title | escape }} - {{ paper.author | escape }} ({{ paper.year | escape }})
 </a>
 </p>
 {% endfor %}
@@ -33,9 +36,10 @@ layout: page
 
 {% assign books_not_academic = site.books | where_exp:"item","item.genre != 'academic'" %}
 {% for book in books_not_academic %}
+{% assign wiki = book.wiki | escape %}
 <p>
-<a href="{{ book.wiki }}" >
-{{ book.title }} - {{ book.author }} ({{ book.year }})
+<a href="{{ wiki }}" >
+{{ book.title | escape }} - {{ book.author | escape }} ({{ book.year | escape }})
 </a>
 </p>
 {% endfor %}

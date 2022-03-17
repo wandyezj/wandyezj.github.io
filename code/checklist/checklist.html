@@ -43,6 +43,8 @@
 
     <script>
 
+        //#region "definitions"
+
         /**
          * Possible Configuration Input Types
          * @readonly
@@ -63,8 +65,9 @@
          * @typedef {Object} Configuration
          * @property {string} title - title
          * @property {string} description - description
+         * @property {Object.<string,ConfigurationConfig>} configs - configs
          * @property {ConfigurationItem[]} items - items
-         * @property {Object} state - state: id -> value
+         * @property {Object.<string, boolean>} state - state: id -> value
          */
 
         /**
@@ -74,10 +77,36 @@
          * @property {string} title - displayed
          * @property {string} description - explanation for the item
          * @property {"checkbox"} input - input type from limited set of: {"checkbox"}
+         * @property {string?} configId - config id, used to reference the relevant formatting config
          */
 
+         /**
+          * A configuration config - used to style elements
+          * @typedef ConfigurationConfig
+          * @property {string} id - unique id for the config
+          * @property {ConfigurationConfigCheckbox} checkbox - checkbox configuration
+          * 
+          */
+
+          /**
+           * A configuration config checkbox configuration - used to style and checkbox element
+           * @typedef ConfigurationConfigCheckbox
+           * @property {ConfigurationConfigCheckboxState} checked - checked state
+           * @property {ConfigurationConfigCheckboxState} unchecked - unchecked state
+           */
+
+          /**
+           * @typedef ConfigurationConfigCheckboxState
+           * @property {string} color - HTML color
+           */
 
 
+        //#endregion "definitions"
+
+
+        //#region "default configurations"
+
+        // note: defaultConfigurationJson is not actually used anywhere
         // Example actually use markdown as all input
         /**
          * @type {Configuration}
@@ -97,6 +126,10 @@
                     input: "checkbox"
                 }
             ],
+
+            configs: {
+
+            },
 
             // layout
             // probably want a separate layout section that can determine how items are layed out
@@ -120,6 +153,49 @@
 # example title
 > example description
 
+\`\`\`config
+{
+    "id":"default",
+    "checkbox" : {
+        "checked": {
+            "color":"green"
+        },
+        "unchecked": {
+            "color":"white"
+        }
+    },
+    "likert": {
+        "options":[
+            {
+                "value":"strongly agree",
+                "description":"always",
+                "color":"green"
+            },
+            {
+                "value":"agree",
+                "description":"mostly",
+                "color":"blue"
+            },
+            {
+                "value":"neutral",
+                "description":"unknown",
+                "color":"white"
+            },
+            {
+                "value":"disagree",
+                "description":"rarely",
+                "color":"yellow"
+            },
+            {
+                "value":"strongly disagree",
+                "description":"never",
+                "color:"red"
+            }
+        ]
+    },
+}
+\`\`\`
+
 - [ ] example item
     > example item description
 - [x] example item
@@ -127,7 +203,11 @@
 - [ ] example item other
     > example item description
 
+
+
 `;
+
+        //#endregion "default configurations"
 
         //#region "markdown"
 
@@ -139,7 +219,7 @@
             const markdown = markdownInput.trim()
 
             const lines = markdown.split("\n");
-            // Could scrub empty lines for utility, but then need a mapping of lines to orignal line numbers for errors
+            // Could scrub empty lines for utility, but then need a mapping of lines to original line numbers for errors
 
             /**
              * Title for the whole list
@@ -152,17 +232,19 @@
             let listDescription = undefined;
 
             /**
+             * @type {Object.<string,ConfigurationConfig>}
+             */
+            const listConfigs = {};
+
+            /**
              * items in the list
              * @type {ConfigurationItem[]}
-             * Each item has
-             * - title
-             * - description
-             * - input- the type of input 
              */
             const listItems = [];
 
             /**
              * state of each item
+             * @type {Object.<string, boolean>}
              */
             const state = {};
 
@@ -177,13 +259,14 @@
             const delimiterListItemCheckboxUnchecked = "- [ ] ";
             const delimiterListItemCheckboxChecked = "- [x] ";
             const delimiterListItemDescription = "    > ";
-
+            const delimiterListConfigStart = "```config";
+            const delimiterListConfigEnd = "```";
 
 
             for (let i = 0; i < lines.length; i++) {
                 // Get all lines before and after
                 const linePrevious = i > 0 ? lines[i - 1] : undefined;
-                const line = lines[i];
+                let line = lines[i];
                 const lineNext = i + 1 < lines.length ? lines[i + 1] : undefined;
                 //console.log(line);
 
@@ -238,6 +321,15 @@
                         input: itemInput,
                     });
 
+                } else if (line.startsWith(delimiterListConfigStart)) {
+
+                    do {
+                        // get all config lines
+                        console.log(line);
+                        i++;
+                        line = lines[i];
+                        
+                    } while (line !== undefined && !line.startsWith(delimiterListConfigEnd));
                 } else {
                     // Unknown What is this?
                     if (line !== "") {

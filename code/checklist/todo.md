@@ -1,10 +1,20 @@
 # checklist todo
 
+- likert support
+    - https://en.wikipedia.org/wiki/Likert_scale
+- configuration support in markdown
 - embed favicon icon in configuration png or svg (some browsers do not support)
     - https://caniuse.com/link-icon-svg
     - should this only allow PNG to avoid SVG security issues?
 - default svg favicon
 - error checking for invalid file or invalid configuration
+    - just make a simple JSON validator
+        - allow validation of references, insistence that a string is a keyof another field can refer via dot notation
+        - x.y.z.{keys} keyof x.k
+        - x.l is {list} - check properties type is one in the set 
+        - a.z is {list, undefined} - check property type
+        - x.l[] - represent an item of the list
+        - need ability to define strong types for convenience
     - error handling around json parsing
     - check that only valid things are in the configuration and all types are correct
     - check that all ids are present and unique
@@ -13,8 +23,6 @@
     - communication of where the invalid data is
     - need new UI function to show error
     - from configuration parsers return success or failure codes
-- likert support
-    - https://en.wikipedia.org/wiki/Likert_scale
 - convert svg to png
 - writeup explaining security and privacy features
     - apply unlicense

@@ -80,73 +80,31 @@
          * @property {string?} configId - config id, used to reference the relevant formatting config
          */
 
-         /**
-          * A configuration config - used to style elements
-          * @typedef ConfigurationConfig
-          * @property {string} id - unique id for the config
-          * @property {ConfigurationConfigCheckbox} checkbox - checkbox configuration
-          * 
-          */
+        /**
+         * A configuration config - used to style elements
+         * @typedef ConfigurationConfig
+         * @property {string} id - unique id for the config
+         * @property {ConfigurationConfigCheckbox} checkbox - checkbox configuration
+         * 
+         */
 
-          /**
-           * A configuration config checkbox configuration - used to style and checkbox element
-           * @typedef ConfigurationConfigCheckbox
-           * @property {ConfigurationConfigCheckboxState} checked - checked state
-           * @property {ConfigurationConfigCheckboxState} unchecked - unchecked state
-           */
+        /**
+         * A configuration config checkbox configuration - used to style and checkbox element
+         * @typedef ConfigurationConfigCheckbox
+         * @property {ConfigurationConfigCheckboxState} checked - checked state
+         * @property {ConfigurationConfigCheckboxState} unchecked - unchecked state
+         */
 
-          /**
-           * @typedef ConfigurationConfigCheckboxState
-           * @property {string} color - HTML color
-           */
+        /**
+         * @typedef ConfigurationConfigCheckboxState
+         * @property {string} color - HTML color
+         */
 
 
         //#endregion "definitions"
 
 
         //#region "default configurations"
-
-        // note: defaultConfigurationJson is not actually used anywhere
-        // Example actually use markdown as all input
-        /**
-         * @type {Configuration}
-         */
-        const defaultConfigurationJson = {
-            title: "example configuration title",
-            description: "example configuration description",
-
-            // All independent items
-            items: [
-                // items and order they appear in
-                {
-                    // id is derivable from title in md but must be specified in json
-                    id: "example_checkbox_item_title",
-                    title: "example checkbox item title",
-                    description: "example checkbox item description",
-                    input: "checkbox"
-                }
-            ],
-
-            configs: {
-
-            },
-
-            // layout
-            // probably want a separate layout section that can determine how items are layed out
-            // maybe sections and subsections with their own titles and descriptions
-            // should these sections be infinitely nestable?
-            // do section titles become part of the item id? Probably yes when layed out with markdown
-
-            // state of all items
-            // id -> value
-            // id should be present in the items
-            // value is dependent on the item type
-            // empty assumes default value
-
-            state: {
-                // by default empty
-            }
-        }
 
         // whitespace matters
         const defaultConfigurationMarkdown = `
@@ -189,10 +147,10 @@
             {
                 "value":"strongly disagree",
                 "description":"never",
-                "color:"red"
+                "color":"red"
             }
         ]
-    },
+    }
 }
 \`\`\`
 
@@ -252,6 +210,12 @@
              * @type {string[]}
              */
             const itemIds = [];
+
+            /**
+             * All errors parsing the markdown configuration
+             * @type {string[]}
+             */
+            const errors = [];
 
             // Delimiters
             const delimiterListTitle = "# ";
@@ -323,19 +287,94 @@
 
                 } else if (line.startsWith(delimiterListConfigStart)) {
 
-                    do {
-                        // get all config lines
-                        console.log(line);
+                    const configStartLine = i;
+
+                    /**
+                     * All lines in the config section
+                     * does not include the line that starts and ends the configuration
+                     * @type {string[]}
+                     */
+                    const configLines = [];
+
+                    /**
+                     * did the config have a proper end before we ran out of lines?
+                     */
+                    let incompleteConfig = false;
+
+                    while (true) {
+
                         i++;
+
+                        if (i >= lines.length) {
+                            // ran out of lines
+                            incompleteConfig = true;
+                            break;
+                        }
+
                         line = lines[i];
-                        
-                    } while (line !== undefined && !line.startsWith(delimiterListConfigEnd));
+
+                        if (line.startsWith(delimiterListConfigEnd)) {
+                            // end of the config section
+                            break;
+                        }
+
+                        configLines.push(line);
+                    }
+
+                    if (incompleteConfig) {
+                        const error = `line [${configStartLine}]: config starting on the line has no end`;
+                        errors.push(error);
+
+                    } else {
+                        const completeConfig = configLines.join("\n")
+                        console.log(completeConfig);
+
+                        /**
+                         * @type {ConfigurationConfig}
+                         */
+                        let config = undefined
+                        try {
+                            config = JSON.parse(completeConfig)
+                        } catch (e) {
+                            const error = `line [${configStartLine}]: config starting on the line is not valid JSON : ${e}`;
+                            errors.push(error);
+                        }
+
+
+                        if (config) {
+                            // TODO: validate config
+
+                            const { id } = config;
+
+                            // check config Id
+                            if (id === undefined) {
+                                const error = `line [${configStartLine}]: config starting on the line is missing an id property`;
+                                errors.push(error);
+                            } else if (typeof id !== "string") {
+                                const error = `line [${configStartLine}]: config starting on the line is not a string`;
+                                errors.push(error);
+                            } else if (listConfigs.hasOwnProperty(id)) {
+                                const error = `line [${configStartLine}]: config starting on the line has duplicate id of another config, config ids must be unique`;
+                                errors.push(error);
+                            } else {
+                                // Add config
+                                listConfigs[id] = config;
+                            }
+                        }
+                    }
+
                 } else {
                     // Unknown What is this?
                     if (line !== "") {
-                        console.error(`line [${i}]: unknown value [${line}]`);
+                        const error = `line [${i}]: unknown value [${line}]`
+                        console.error(error);
+                        errors.push(error);
                     }
                 }
+            }
+
+            if (errors.length > 0) {
+                throw new Error(`Errors in Markdown configuration:\n ${errors.join("\n")}`);
             }
 
             // Assemble configuration Json
@@ -343,6 +382,7 @@
                 title: listTitle,
                 description: listDescription,
                 items: listItems,
+                configs: listConfigs,
                 state,
             }
 
@@ -1240,7 +1280,7 @@
         /**
          * called when the configuration changes
          */
-         function onConfigurationUpdated() {
+        function onConfigurationUpdated() {
             // update images
             drawConfigurationImage()
 

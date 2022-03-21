@@ -116,7 +116,7 @@
     "id":"default",
     "checkbox" : {
         "checked": {
-            "color":"green"
+            "color":"pink"
         },
         "unchecked": {
             "color":"white"
@@ -327,7 +327,7 @@
 
                     } else {
                         const completeConfig = configLines.join("\n")
-                        console.log(completeConfig);
+                        //console.log(completeConfig);
 
                         /**
                          * @type {ConfigurationConfig}
@@ -1002,9 +1002,11 @@
          * @param {number} y - y of upper left corner
          * @param {number} checkboxSize - width and height of the checkbox
          * @param {boolean} checked - is the checkbox checked
+         * @param {ConfigurationConfigCheckbox} config - 
+         * 
          * @returns {SVGTextElement}
          */
-        function createSvgCheckboxElement(x, y, checkboxSize, checked) {
+        function createSvgCheckboxElement(x, y, checkboxSize, checked, config) {
 
             const rectElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
@@ -1017,8 +1019,8 @@
             rectElement.setAttribute("width", checkboxSize);
             rectElement.setAttribute("height", checkboxSize);
 
-
-            const color = checked ? "black" : "white";
+            // use config color for checkbox or default color
+            const color = checked ? config?.checked?.color || "black" : config?.unchecked?.color || "white";
             rectElement.setAttribute("style", `fill:${color}`);
 
             return rectElement;
@@ -1030,7 +1032,10 @@
          * @returns {Promise<SVGSVGElement>}
          */
         async function getConfigurationToSvgElement(configuration) {
-            const { title, description, items, state } = configuration;
+            const { title, description, items, state, configs } = configuration;
+
+            const configDefault = configs["default"];
+            console.log(configDefault);
 
             const checkboxSize = 10;
 
@@ -1063,7 +1068,7 @@
 
                     // checkbox
                     // rectangle draws down from the top left x, y
-                    const checkboxElement = createSvgCheckboxElement(x, y, checkboxSize, value);
+                    const checkboxElement = createSvgCheckboxElement(x, y, checkboxSize, value, configDefault?.checkbox);
                     svg.appendChild(checkboxElement);
 
                     // text

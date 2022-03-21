@@ -46,6 +46,9 @@ Text updates:
 - look back at what drove various decisions to reflect on overall progress
 - provide links to reference specific code reviews or documents
 - place to ask and answer questions about specific updates
+- are great for asynchronous work, where people are in different timezones and may not be able to make every meeting.
+
+A status update is likely only needed once a week to denote specific progress. However, it can be convenient for the update to be a list of all items significant amounts of time were spent on. More holistic updates give people a clearer picture of what is going on.
 
 ## Warm Up
 
@@ -77,6 +80,8 @@ These technical dives should rotate between people on the team.
 Assigning a technical dive presentation to new hires can also serve as a way to get a new hire in depth with code since they may need to explain an area that people on the team are already familiar with.
 
 It's difficult to run out of technical dives since there is always new code being written.
+
+Technical dives can be used to share new knowledge learned within the team.
 
 ## Recorded Demos
 

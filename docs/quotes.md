@@ -110,3 +110,5 @@ Now entering party conventions, you have been warned!"
 "Incompetent people lack the knowledge to recognize their own incompetence, as well as the competence of others" - The Pocket Universal Principals of Design
 
 "You can have everything in life you want, if you will just help other people get what they want." - Zig Ziglar
+
+"The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it." - Mark Weiser

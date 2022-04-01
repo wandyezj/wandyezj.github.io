@@ -2,6 +2,12 @@
 
 - likert support
     - https://en.wikipedia.org/wiki/Likert_scale
+    - `- (likert)
+    - md format
+    - json config
+    - svg
+    - support single select only or multi select?
+
 - configuration support in markdown
 - embed favicon icon in configuration png or svg (some browsers do not support)
     - https://caniuse.com/link-icon-svg

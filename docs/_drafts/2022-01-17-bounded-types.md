@@ -5,9 +5,40 @@ date:   2022-01-17 12:00:00 -0700
 tags: software
 ---
 
-I have often found myself wishing for a way to more clearly define the range of values assignable to a `number` or a `string`. Specifically, it would be convenient to be able to specify the range of acceptable values for numbers and strings in a functions argument declared types instead of having to rely on documentation and writing custom error checking conditions. Ideally these type checks could be done as part of static analysis and IntelliSense could show where arguments need to be checked.
+I have often found myself wishing in many programming languages for a way to more clearly express the range of values assignable to a `number` or a `string`.
 
-For example an integer might need to be mapped to a specific compiler defined type. It would be convenient to be able to specify the range of possible values instead of attempting to figure out how many bytes should be allocated. The compiler can figure out the appropriate type to represent something based on the specified range of values. Such types could also be used to easily check inputs
+For example if would be convenient to be able to specify:
+
+- For a numeric value:
+    - lower bound,
+    - upper bound, and the
+    - degree of precision.
+
+- For a string value:
+    - minimum lenght,
+    - maximum lenght,
+    - the set of acceptable values at each position (most often expressable with a regex).
+
+
+Expressing these bounds more clearly, potentially as a type, could allow:
+
+- static analysis to show where values need to be checked,
+- automatic enforcement of constraints,
+- replacement of custom error checking conditions with standard ones,
+- replacement of documentation expressing the range of acceptable value with descriptive types,
+- prevention of off by one errors whe defining small values,
+- automatic compiler optimization to automatically pick the most efficient hardware representation for a value.
+
+
+Issues
+
+- potentially introduces inefficiencies
+- more oerheard for compiler
+- possibly too restrictive, programmers do not account for a case? But arguably this is a feature
+- possibly annoying?
+- syntax how to make this easy and convenient, if it does not integrate well, and is not easy to understand and use, then it is not something people will use
+
+For example an integer might need to be mapped to a specific compiler defined type. It would be convenient to be able to specify the range of possible values instead of attempting to figure out how many bytes should be allocated. The compiler can figure out the appropriate type to represent something based on the specified range of values. Such types could also be used to easily check input or assignment to values.
 
 
 
@@ -31,6 +62,8 @@ Number
 May want the ability to ensure that an integer is within the specified bounds for the course of a program, want to allow upcasting to a boundary that overlaps without issues. Otherwise enforce checking at the bounds. Having to check the bounds manually instead of building those bounds into the type.
 
 Integers and strings
+
+
 
 ## Bounded Integer
 

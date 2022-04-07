@@ -1,0 +1,105 @@
+<!--
+
+  This page is used to test loading the Visual Studio Code Online Extension iframe
+
+  Goal:
+
+    allow a tab on a different origin to be able to consistently connect to another tab on a different origin.
+
+  Diagram:
+
+    tab (on origin) <- broadcast channel -> iframe (on origin) <- message port -> host (on different origin that loads iframe)
+
+  Setup:
+
+    this test page acts as both the `tab` and `host` to test the iframe
+
+    - register listener on origin broadcast channel
+    - dynamically create iframe
+    - wait to receive port from loaded iframe via post message (important the register must happen before the iframe is loaded)
+    - register listener on port
+
+  Test:
+
+    - send message over broadcast channel which should be received by the port
+    - send message over port with should be received by broadcast channel
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+
+  <body>
+    <script>
+      /**
+       * name of this page
+       */
+      const name = "host";
+
+      /**
+       * @type {BroadcastChannel}
+       */
+      let broadcastChannel;
+
+      /**
+       * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+       */
+      function initialize() {
+        console.log(`initialize ${name}`);
+
+        // broadcast channel is purely in host for testing purposes
+        // simply print out all messages sent
+        // would not be included on actual host since the host would be on a different origin
+        broadcastChannel = new BroadcastChannel("extension");
+        broadcastChannel.addEventListener("message", (message) => {
+          const { data } = message;
+          console.log(`${name} received (broadcast channel): ${data}`);
+        });
+
+        // set up iframe
+        const source = window.self.origin + "/extension.html";
+        const iframe = document.createElement("iframe");
+
+        iframe.hidden = true;
+
+        window.addEventListener("message", (e) => {
+          console.log(`${name} received (window.message):`);
+          if (e) {
+            const { data } = e;
+            if (data && data.type === "port") {
+              /**
+               * @type {MessagePort}
+               */
+              const port = data.port;
+              if (port) {
+                console.log(`${name} send (port): test port`);
+                port.postMessage("test port"); // send the port should be received by broadcast channel above
+
+                // register event listener for the port
+                port.addEventListener("message", (message) => {
+                  const { data } = message;
+                  console.log(`${name} received (port): ${data}`);
+                });
+                // if using addEventListener need to start the port.
+                port.start();
+                console.log(`${name} send (broadcast channel): test broadcast channel`);
+                broadcastChannel.postMessage("test broadcast channel"); // should be received on port above
+              }
+            }
+          }
+        });
+
+        console.log(`${name} set iframe source`);
+        iframe.src = source;
+        document.body.appendChild(iframe);
+      }
+
+      initialize();
+    </script>
+  </body>
+</html>

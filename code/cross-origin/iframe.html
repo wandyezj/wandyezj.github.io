@@ -1,0 +1,116 @@
+<!--
+
+  This page is used for the case that a page need to be able to connect and reconnect to another open tab on a different origin.
+
+  host loads iframe
+
+
+  iframe <-loads-- host
+  iframe checks origin
+  iframe --here is message port-> host
+
+  begin forwarding messages between port to broadcast channel
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+      /**
+       * name of this page
+       */
+      const name = "iframe";
+
+      /**
+       * connection between iframe and host parent
+       * @type {MessageChannel}
+       * https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel
+       */
+      let messageChannel;
+
+      /**
+       * connection between iframe and tab on same origin
+       * @type {BroadcastChannel}
+       * https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel
+       */
+      let broadcastChannel;
+
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+
+      /**
+       * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+       */
+      function initialize() {
+        console.log(`initialize ${name}`);
+        // Setup MessageChannel
+
+        if (!inIframe()) {
+          console.error("ERROR: extension.html must be loaded in an iframe");
+          return;
+        }
+
+        // figure out origin URL, can only pick from the allowedOrigins list.
+        const host = window.parent;
+        const parentOrigin = window.parent.origin;
+        const allowedOrigins = [
+            // list of allowed origins, very important for security!
+            // ONLY include trusted origins
+          // For testing, trust the origin hosting the iframe
+          window.self.origin,
+        ];
+
+        const matchingOrigins = allowedOrigins.filter((x) => x === parentOrigin);
+        let origin = matchingOrigins.length === 1 ? matchingOrigins[0] : undefined;
+
+        if (origin === undefined) {
+          console.error(`ERROR: ${name} must be loaded in a valid host`);
+          return;
+        }
+
+        // set up channels
+        messageChannel = new MessageChannel();
+        broadcastChannel = new BroadcastChannel("extension");
+
+        // use port1 to hit port2
+        const { port1, port2 } = messageChannel;
+
+        // Set up forwarding between channels
+        port1.addEventListener("message", (message) => {
+          const { data } = message;
+          console.log(`${name} received (port): ${data}`);
+          broadcastChannel.postMessage(data);
+        });
+
+        // if use addEventListener need to start the port
+        port1.start();
+
+        broadcastChannel.addEventListener("message", (message) => {
+          const { data } = message;
+          console.log(`${name} received (broadcast channel): ${data}`);
+          port1.postMessage(data);
+        });
+
+        console.log(`${name} post message port to parent`);
+
+        // send port that the parent can use to communicate to the iframe
+        // Send origin the port
+        // note: MUST specify the specific target origin.
+        host.postMessage({ type: "port", port: port2 }, origin, [port2]);
+      }
+
+      initialize();
+    </script>
+  </head>
+
+  <body></body>
+</html>

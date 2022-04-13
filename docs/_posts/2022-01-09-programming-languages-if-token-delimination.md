@@ -59,12 +59,12 @@ if (condition
 In C, C++, C#, Java, JavaScript:
 
 - The `condition` is surrounded by parentheses (an opening round bracket `(` and closing round bracket `)`).
-- The `conditional block` is surrounded by braces (an opening curly bracket `{` and closing curly bracket `}`). These
+- The `conditional block` is surrounded by braces (an opening curly bracket `{` and closing curly bracket `}`).
 
 In the Python programming language:
 
 - The end of the `condition` expression is denoted by a colon `:`
-- The `conditional block` is any set of statements indented underneath the `if`
+- The `conditional block` is any set of statements consistently indented underneath the `if`
 
 
 ### Why is the colon `:` in Python if statement necessary from a technical standpoint?
@@ -73,9 +73,9 @@ The colon is needed for the case where the conditional statement is in the same 
 
 The following case cannot be disambiguated without a semicolon. `if a - b - c` does this mean `if a: - b - c` or `if a - b: -c`
 
-The colon`:` ia not used in Pythons ternary expression `value if condition else alternative`
+_note_: The colon`:` is not used in Pythons ternary expression `value if condition else alternative`
 
-## C stye if verses Python style for multiple block statements
+## C stye if verses Python style if for multiple statement blocks
 
 ### C style
 
@@ -99,7 +99,7 @@ Disadvantages
 - Type `if` and a space then write out the the condition
 - If the condition spans multiple lines it needs to be in parentheses
 - Place a colon after the condition.
-- make any conditional block statements are indented under the if block
+- Indent conditional block statements under the if
 
 Advantages
 
@@ -109,6 +109,7 @@ Disadvantages
 
 - possibly more complex explanation since there are multiple options
 - easy to forget colon
+- inconsistent with most mainstream programming languages
 
 ### Python style without colon
 
@@ -127,7 +128,7 @@ Advantages:
 
 Disadvantages:
 
-- requires that block always start on the next line
+- requires blocks always start on the next line
 - no single line if unless types are derivable at compile time and there are restrictions on what is allowed to be in a statement.
 - condition can not be spread across multiple lines and automatically derived unless types are known in advance and there are restrictions on what can be in statements.
 

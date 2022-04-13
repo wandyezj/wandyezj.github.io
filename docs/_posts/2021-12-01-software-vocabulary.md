@@ -26,6 +26,8 @@ Some basic software vocabulary with links to wikipedia.
     - Program documentation is a written description of the function of a code segment, event, procedure, or program and how it was developed.
     - [Wikipedia - Software Documentation](https://en.wikipedia.org/wiki/Software_documentation)
 
+
+
 ## Code
 
 - comments
@@ -61,6 +63,13 @@ Some basic software vocabulary with links to wikipedia.
 - event
     - Events are associated with an action and supplies input data to a program.
     - [Wikipedia - Event (computing)](https://en.wikipedia.org/wiki/Event_(computing))
+
+- library
+    - a collection of functions that can be added to the code
+
+- Application Program Interface (API)
+    - a description of what each function in the library does and how to use it
+
 
 ## Development
 
@@ -129,7 +138,43 @@ scope
 (x > y)	is x greater than y?
 (x >= y)	is x greater than or equal to y?
 
+- Inclusive or
+    - either of the or conditions
+- Exclusive or
+    - only a single one of the or conditions
 
+- compound conditional
+    - use and, or, and not
+- nested conditionals
+    - nesting if statements inside other if statements
+
+## Types
+
+- integers
+    - Numbers such as 42, 0, and -5
+- floats
+    - Numbers with a decimal point, such as 1.2, -5.8, and 3.0
+- strings
+    - Characters within single or double quotes, such as 'hello' and "this works, too!"
+- booleans
+    - One of two values: True or False
+- lists
+    - An ordered sequence of stored values
+
+## Strings
+
+- string
+    - A string is an ordered sequence of characters.
+- substring
+    - A substring is a string that is a part of an existing string.
+
+
+## Python
+
+`int()`
+    - converts value to integer
+`str()`
+    - converts value to string
 
 ## College Board Syntax Cheat Sheet
 
@@ -150,9 +195,32 @@ IF(condition)
 }
 ```
 
+```
+PROCEDURE procName(parameter1, parameter2, …)
+{
+  procedure body
+  RETURN(expression)
+}
+
+result ← procName(arg1, arg2, …)
+```
+
 To test if a is equal to b: a = b
 To test if a is not equal to b: a ≠ b
 To test if a is greater than b: a > b
 To test if a is less than b: a < b
 To test if a is greater than or equal to b: a ≥ b
 To test if a is less than or equal to b: a ≤ b
+
+```text
+AND instead of and
+OR instead of or
+NOT instead of not
+operators can use both boolean value True, False and boolean expressions
+```
+
+```
+INPUT()
+```
+
+Unlike some programming languages, both Python and the programming language used on the AP Exam have no limit on how large a number can be, as long as the computer's memory can store it. 

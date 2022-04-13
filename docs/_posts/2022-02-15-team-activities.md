@@ -11,9 +11,10 @@ The purpose of team activities is team information flow. Education, Coordination
 Beginning of the Week (Tuesday)
 
 - text status updates
+    - What have you completed?
     - What are you working on?
     - What do you need help with?
-- Warm Up (10 minutes)
+- Warm Up (5 minutes)
 - Announcements (1 minute)
 - Technical Dive (10 minutes)
 - Questions or help, stick around
@@ -26,6 +27,7 @@ End of the Week (Thursday)
     - Text reply to:
         - What went well?
         - What could have been better? Why? How?
+    - Go over responses
     - Action item pick 1 for next week.
 
 ## Text Updates
@@ -44,6 +46,9 @@ Text updates:
 - look back at what drove various decisions to reflect on overall progress
 - provide links to reference specific code reviews or documents
 - place to ask and answer questions about specific updates
+- are great for asynchronous work, where people are in different timezones and may not be able to make every meeting.
+
+A status update is likely only needed once a week to denote specific progress. However, it can be convenient for the update to be a list of all items significant amounts of time were spent on. More holistic updates give people a clearer picture of what is going on.
 
 ## Warm Up
 
@@ -51,6 +56,7 @@ The warm up is to facilitate people informally talking to each other.
 
 To see people as the people with lives and not just coworkers.
 
+A good warm up might be having someone answer a random question, or organic conversation before a meeting.
 
 ## Selecting a facilitator
 
@@ -74,6 +80,8 @@ These technical dives should rotate between people on the team.
 Assigning a technical dive presentation to new hires can also serve as a way to get a new hire in depth with code since they may need to explain an area that people on the team are already familiar with.
 
 It's difficult to run out of technical dives since there is always new code being written.
+
+Technical dives can be used to share new knowledge learned within the team.
 
 ## Recorded Demos
 

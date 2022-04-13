@@ -8,139 +8,176 @@
 
 <body>
 
-    <!--
-        Generate a configurable list layout with clickable boxes and allow export to an image
+    <div id="div_controls">
+        <button id="button_save_url">Save URL</button>
+        <button id="button_load_url">Load URL</button>
+        <button id="button_clear_url">Clear URL</button>
+        <br>
 
-        Allow export and sharing via URL
+        <p>Save File</p>
+        <button id="button_save_file_json">json</button>
+        <button id="button_save_file_text">text</button>
+        <button id="button_save_file_svg">svg</button>
+        <br>
+        <br>
+        <label for="input_load_file">Load configuration</label>
+        <input id="input_load_file" type="file" accept=".json,.md,.txt,.svg">
+    </div>
 
-        Pieces:
 
-        Configuration
-            - The `configuration` is the set, layout, and state of possible items.     
-            - fixed set of item options
-                - checkbox
-                - likert - future
-            - hostable and pointable on any URL
-                - determine which parser to use based off .md or .json suffix
-
-        load only
-            - markdown template (more easily viewable and editable than json)
-
-        save / load
-            - json configuration (allows saving to local file system)
-            - compressed hex url hash (allows sharing link)
-            - TODO: image (render selection for reference and share, and load from image via embedded state)
-
-        HTML Render and Selection
-
-        Everything loaded is a configuration
-            - markdown configuration is a template
-            - json or URL configurations include answers
-
-        edit
-            - probably want a way to edit inline
-
-        Canvas Draw and Image Export / Download
-            - possible via screen capture?
-
-        Styling
-            - will need to style so it looks appealing
-
-        Principles:
-            - hostable anywhere - self contained HTML page
-            - sharable and private
-                - no telemetry
-                - no storage or persistance of data outside of users machine
-            - configurable and customizable, with sharable configurations
-            - machine parsable if shared
-            - secure
-                - do not want to allow links that people can click, except to know safe domains (maybe wikipedia links are ok?)
-                - defend against HTML injection from input sources
-            - compatible this means old configurations and renders continue to work
-                - can be done by versioning, point to specific HTML page
-                - or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
-    
-        Reference
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Input/checkbox
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/file
-        https://developer.mozilla.org/en-US/docs/Web/API/File
-    
-            -->
-    <button id="button_save_url">Save URL</button>
-    <br>
-    <button id="button_load_url">Load URL</button>
-    <br>
-    <br>
-    
-    <label for="input_load_file">Load json or md configuration</label>
-    <input id="input_load_file" type="file" accept=".json,.md">
-
-    <button id="button_save_file">Save JSON</button>
-    <br>
-
+    <div id="div_browser_info">
+        <p id="p_browser_not_supported_message" hidden>This browser is not supported, please use the latest version of
+            <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
+        </p>
+    </div>
     <!-- Configuration Placeholder with actual actions -->
 
-    <div id="div_configuration">
+    <div id="div_configuration"></div>
 
-    </div>
+    <br>
+    <!-- Div to contain the canvas for the image, shown for testing purposes -->
+    <div id="div_configuration_canvas"></div>
+
+    <br>
+    <div id="div_configuration_svg"></div>
 
     <script>
 
+        //#region "definitions"
 
-        // Example actually use markdown as all input
-        const defaultConfigurationJson = {
-            title: "example configuration title",
-            description: "example configuration description",
-
-            // All independent items
-            items: [
-                // items and order they appear in
-                {
-                    // id is derivable from title in md but must be specified in json
-                    id: "example_checkbox_item_title",
-                    title: "example checkbox item title",
-                    description: "example checkbox item description",
-                    input: "checkbox"
-                }
-            ],
-
-            // layout
-            // probably want a separate layout section that can determine how items are layed out
-            // maybe sections and subsections with their own titles and descriptions
-            // should these sections be infinitely nestable?
-            // do section titles become part of the item id? Probably yes when layed out with markdown
-
-            // state of all items
-            // id -> value
-            // id should be present in the items
-            // value is dependent on the item type
-            // empty assumes default value
-            state: {
-                // by default empty
-            }
-
+        /**
+         * Possible Configuration Input Types
+         * @readonly
+         * @enum {string}
+         */
+        const ConfigurationInputType = {
+            /**
+             * @readonly
+             * @type {"checkbox"}
+             * A checkbox
+             * linked state can only be true or false
+             */
+            Checkbox: "checkbox",
         }
+
+        /**
+         * A configuration
+         * @typedef {Object} Configuration
+         * @property {string} title - title
+         * @property {string} description - description
+         * @property {Object.<string,ConfigurationConfig>} configs - configs
+         * @property {ConfigurationItem[]} items - items
+         * @property {Object.<string, boolean>} state - state: id -> value
+         */
+
+        /**
+         * A configuration item
+         * @typedef ConfigurationItem
+         * @property {string} id - unique id for the item, used to reference the state
+         * @property {string} title - displayed
+         * @property {string} description - explanation for the item
+         * @property {"checkbox"} input - input type from limited set of: {"checkbox"}
+         * @property {string?} configId - config id, used to reference the relevant formatting config
+         */
+
+        /**
+         * A configuration config - used to style elements
+         * @typedef ConfigurationConfig
+         * @property {string} id - unique id for the config
+         * @property {ConfigurationConfigCheckbox} checkbox - checkbox configuration
+         * 
+         */
+
+        /**
+         * A configuration config checkbox configuration - used to style and checkbox element
+         * @typedef ConfigurationConfigCheckbox
+         * @property {ConfigurationConfigCheckboxState} checked - checked state
+         * @property {ConfigurationConfigCheckboxState} unchecked - unchecked state
+         */
+
+        /**
+         * @typedef ConfigurationConfigCheckboxState
+         * @property {string} color - HTML color
+         */
+
+
+        //#endregion "definitions"
+
+
+        //#region "default configurations"
 
         // whitespace matters
         const defaultConfigurationMarkdown = `
 # example title
 > example description
 
+\`\`\`config
+{
+    "id":"default",
+    "checkbox" : {
+        "checked": {
+            "color":"pink"
+        },
+        "unchecked": {
+            "color":"white"
+        }
+    },
+    "likert": {
+        "options":[
+            {
+                "value":"strongly agree",
+                "description":"always",
+                "color":"green"
+            },
+            {
+                "value":"agree",
+                "description":"mostly",
+                "color":"blue"
+            },
+            {
+                "value":"neutral",
+                "description":"unknown",
+                "color":"white"
+            },
+            {
+                "value":"disagree",
+                "description":"rarely",
+                "color":"yellow"
+            },
+            {
+                "value":"strongly disagree",
+                "description":"never",
+                "color":"red"
+            }
+        ]
+    }
+}
+\`\`\`
+
 - [ ] example item
     > example item description
-- [ ] example item 2
+- [x] example item
+    > example item description duplicate
+- [ ] example item other
     > example item description
+
+
 
 `;
 
+        //#endregion "default configurations"
+
+        //#region "markdown"
+
         /**
          * create json configuration from a markdown description
+         * @param {string} markdownInput
          */
         function parseMarkdownToConfiguration(markdownInput) {
             const markdown = markdownInput.trim()
 
             const lines = markdown.split("\n");
-            // Could scrub empty lines for utility, but then need a mapping of lines to orignal line numbers for errors
+            // Could scrub empty lines for utility, but then need a mapping of lines to original line numbers for errors
 
             /**
              * Title for the whole list
@@ -153,27 +190,54 @@
             let listDescription = undefined;
 
             /**
+             * @type {Object.<string,ConfigurationConfig>}
+             */
+            const listConfigs = {};
+
+            /**
              * items in the list
-             * Each item has
-             * - title
-             * - description
-             * - input- the type of input 
+             * @type {ConfigurationItem[]}
              */
             const listItems = [];
 
+            /**
+             * state of each item
+             * @type {Object.<string, boolean>}
+             */
+            const state = {};
+
+            /**
+             * @type {string[]}
+             */
+            const itemIds = [];
+
+            /**
+             * All errors parsing the markdown configuration
+             * @type {string[]}
+             */
+            const errors = [];
 
             // Delimiters
             const delimiterListTitle = "# ";
             const delimiterListDescription = "> ";
-            const delimiterListItemCheckbox = "- [ ] ";
+            const delimiterListItemCheckboxUnchecked = "- [ ] ";
+            const delimiterListItemCheckboxChecked = "- [x] ";
             const delimiterListItemDescription = "    > ";
+            const delimiterListConfigStart = "```config";
+            const delimiterListConfigEnd = "```";
+
 
             for (let i = 0; i < lines.length; i++) {
                 // Get all lines before and after
                 const linePrevious = i > 0 ? lines[i - 1] : undefined;
-                const line = lines[i];
+                let line = lines[i];
                 const lineNext = i + 1 < lines.length ? lines[i + 1] : undefined;
                 //console.log(line);
+
+                const isListItemCheckboxUnchecked = line.startsWith(delimiterListItemCheckboxUnchecked);
+                const isListItemCheckboxChecked = line.startsWith(delimiterListItemCheckboxChecked);
+
+                const isListItemCheckbox = isListItemCheckboxUnchecked || isListItemCheckboxChecked;
 
                 // parse the line
                 if (line.startsWith(delimiterListTitle)) {
@@ -192,11 +256,11 @@
                         i++;
                     }
 
-                } else if (line.startsWith(delimiterListItemCheckbox)) {
+                } else if (isListItemCheckbox) {
                     // List Item Checkbox
 
-                    const itemTitle = line.substring(delimiterListItemCheckbox.length).trim();
-                    const itemInput = "checkbox";
+                    const itemTitle = line.substring(delimiterListItemCheckboxUnchecked.length).trim();
+                    const itemInput = ConfigurationInputType.Checkbox;
                     let itemDescription = undefined;
 
                     if (lineNext !== undefined && lineNext.startsWith(delimiterListItemDescription)) {
@@ -209,16 +273,10 @@
 
                     // mapping is imperfect since it filters characters
                     const itemBaseId = titleToId(itemTitle);
-                    let itemId = itemBaseId;
+                    const itemId = toUniqueId(itemBaseId, itemIds);
+                    itemIds.push(itemId);
 
-                    // id must not already be present
-                    // if id is already present attach a numeric count to the end to make it unique
-                    let itemIdCount = 0;
-                    while (-1 !== listItems.findIndex(({ id }) => id === itemId)) {
-                        itemIdCount++;
-                        itemId = itemBaseId + "_" + itemIdCount;
-                    }
-
+                    state[itemId] = isListItemCheckboxChecked;
 
                     listItems.push({
                         id: itemId,
@@ -227,12 +285,96 @@
                         input: itemInput,
                     });
 
+                } else if (line.startsWith(delimiterListConfigStart)) {
+
+                    const configStartLine = i;
+
+                    /**
+                     * All lines in the config section
+                     * does not include the line that starts and ends the configuration
+                     * @type {string[]}
+                     */
+                    const configLines = [];
+
+                    /**
+                     * did the config have a proper end before we ran out of lines?
+                     */
+                    let incompleteConfig = false;
+
+                    while (true) {
+
+                        i++;
+
+                        if (i >= lines.length) {
+                            // ran out of lines
+                            incompleteConfig = true;
+                            break;
+                        }
+
+                        line = lines[i];
+
+                        if (line.startsWith(delimiterListConfigEnd)) {
+                            // end of the config section
+                            break;
+                        }
+
+                        configLines.push(line);
+                    }
+
+                    if (incompleteConfig) {
+                        const error = `line [${configStartLine}]: config starting on the line has no end`;
+                        errors.push(error);
+
+                    } else {
+                        const completeConfig = configLines.join("\n")
+                        //console.log(completeConfig);
+
+                        /**
+                         * @type {ConfigurationConfig}
+                         */
+                        let config = undefined
+                        try {
+                            config = JSON.parse(completeConfig)
+                        } catch (e) {
+                            const error = `line [${configStartLine}]: config starting on the line is not valid JSON : ${e}`;
+                            errors.push(error);
+                        }
+
+
+                        if (config) {
+                            // TODO: validate config
+
+                            const { id } = config;
+
+                            // check config Id
+                            if (id === undefined) {
+                                const error = `line [${configStartLine}]: config starting on the line is missing an id property`;
+                                errors.push(error);
+                            } else if (typeof id !== "string") {
+                                const error = `line [${configStartLine}]: config starting on the line is not a string`;
+                                errors.push(error);
+                            } else if (listConfigs.hasOwnProperty(id)) {
+                                const error = `line [${configStartLine}]: config starting on the line has duplicate id of another config, config ids must be unique`;
+                                errors.push(error);
+                            } else {
+                                // Add config
+                                listConfigs[id] = config;
+                            }
+                        }
+                    }
+
                 } else {
                     // Unknown What is this?
                     if (line !== "") {
-                        console.error(`line [${i}]: unknown value [${line}]`);
+                        const error = `line [${i}]: unknown value [${line}]`
+                        console.error(error);
+                        errors.push(error);
                     }
                 }
+            }
+
+            if (errors.length > 0) {
+                throw new Error(`Errors in Markdown configuration:\n ${errors.join("\n")}`);
             }
 
             // Assemble configuration Json
@@ -240,6 +382,8 @@
                 title: listTitle,
                 description: listDescription,
                 items: listItems,
+                configs: listConfigs,
+                state,
             }
 
             return configurationJson;
@@ -250,14 +394,15 @@
          * id can only consist of lowercase letters, numbers, and underscores
          * converts uppercase to lowercase
          * removes duplicate spaces and replaces the space with an underscore
+         * @param {string} title - convert an items title into an id
          */
         function titleToId(title) {
             const characters = Array.from(title.toLowerCase());
 
             // characters allowed in an identifier
             const alphabet = "abcdefghijklmnopqrstuvwxyz";
-            const numbers = "0123456789"
-            const space = " "
+            const numbers = "0123456789";
+            const space = " ";
 
             const valid = alphabet + numbers + space;
 
@@ -276,14 +421,71 @@
         }
 
         /**
-         * load the configuration to html on the pace so it can be manipulated
-         * include state informtion
+         * create unique id based off a baseId, given the set of existing Ids
+         * @param {string} baseId - base id to make a unique id out of
+         * @param {string[]} existingIds - existing set of unique ids to make sure the returned id does not clash
+         * @returns {string} unique id not present in existingIds
+         */
+        function toUniqueId(baseId, existingIds) {
+            let itemId = baseId;
+
+            // id must not already be present
+            // if id is already present attach a numeric count to the end to make it unique
+            let idCount = 0;
+            while (-1 !== existingIds.findIndex((id) => id === itemId)) {
+                idCount++;
+                itemId = baseId + "_" + idCount;
+            }
+
+            return itemId;
+        }
+
+        //#endregion "markdown"
+
+        /**
+         * currently loaded configuration
+         * should only be used by loadConfiguration and getConfigurationSnapshot
+         * @type {Configuration|undefined}
+         */
+        let globalConfiguration = undefined;
+
+        /**
+         * @param {Configuration} configuration
          */
         function loadConfiguration(configuration) {
+            console.log("loadConfiguration");
+            console.log(configuration);
+            globalConfiguration = configuration;
+            loadConfigurationToHtml(configuration);
+            onConfigurationUpdated();
+        }
 
+        /**
+         * load the configuration to html on the pace so it can be manipulated
+         * include state information
+         * @param {Configuration} configuration
+         */
+        function loadConfigurationToHtml(configuration) {
+            // get new div children
+            const configurationDiv = getConfigurationToDivElement(configuration);
+            const children = configurationDiv.childNodes;
+
+            // update the div
             const div = document.getElementById("div_configuration");
             // reset everything in the div, (otherwise end up with duplicate elements on subsequent loads)
             div.innerText = "";
+            div.append(...children);
+        }
+
+        /**
+         * load the configuration to html on the pace so it can be manipulated
+         * include state information
+         * @param {Configuration} configuration
+         * @returns {HTMLDivElement}
+         */
+        function getConfigurationToDivElement(configuration) {
+
+            const div = document.createElement("div");
 
             const { title, description, items, state } = configuration;
 
@@ -309,8 +511,8 @@
                 const elementDiv = document.createElement("div");
 
                 // determine input type
-                // why not aimply assign? - security plus elements have different needs
-                if (input === "checkbox") {
+                // why not simply assign? - security plus elements have different needs
+                if (input === ConfigurationInputType.Checkbox) {
                     const elementInput = document.createElement("input");
                     elementInput.type = "checkbox";
                     elementInput.name = title;
@@ -340,16 +542,21 @@
             });
 
             div.append(...children);
-
+            return div;
         }
 
-
         /**
-         * Get a snapshot of the current configuration
-         * a snapshot is simply a configuration with state
+         * Get a snapshot of the current global configuration
+         * a snapshot is simply a configuration with the current state of the HTML attached
+         * @returns {Configuration} snapshot of configuration
          */
-        function getConfigurationSnapshotJson(configuration) {
+        function getConfigurationSnapshot() {
+            const configuration = globalConfiguration;
+
             // clone configuration
+            /**
+             * @type {Configuration}
+             */
             const snapshot = JSON.parse(JSON.stringify(configuration));
 
             // empty state
@@ -369,81 +576,6 @@
             return snapshot
         }
 
-        function getConfigurationSnapshotJsonText(configuration) {
-            const snapshotJson = getConfigurationSnapshotJson(configuration);
-            const snapshotText = JSON.stringify(snapshotJson);
-            return snapshotText;
-        }
-
-        //
-        // UI callable methods
-        //
-
-        /**
-         *  get snapshot of the current configurations answers and save to JSON
-         */
-        function saveSnapshotJsonTextFile() {
-            const snapshot = getConfigurationSnapshotJson(gconfiguration);
-            const snapshotJsonText = JSON.stringify(snapshot, undefined, "    ");
-            console.log(snapshotJsonText);
-            const filename = `${snapshot.title}.json`;
-            downloadTextFile(filename, snapshotJsonText);
-        }
-
-        /**
-         * download file
-         * @param filename - name of the file to download
-         * @param text - contents of the text file
-         */
-        function downloadTextFile(filename, text) {
-            const element = document.createElement('a');
-            element.setAttribute('href', 'data:text/plain;charset=utf-8, ' + encodeURIComponent(text));
-            element.setAttribute('download', filename);
-            document.body.appendChild(element);
-            element.click();
-            document.body.removeChild(element);
-        }
-
-        /**
-         * loads up the configuration from json text
-         */
-        function loadConfigurationTextJson(text) {
-            const configuration = JSON.parse(text);
-            loadConfiguration(configuration);
-            gconfiguration = configuration;
-        }
-
-        /**
-         * loads up the configuration from markdown text
-         */
-        function loadConfigurationTextMarkdown(text) {
-            const configuration = parseMarkdownToConfiguration(text);
-            console.log(configuration);
-            loadConfiguration(configuration);
-            gconfiguration = configuration;
-        }
-
-        async function loadConfigurationFile(files) {
-            if (files.length !== 1) {
-                console.error(`can only load a single file`);
-                return;
-            }
-
-            const file = files[0];
-            const name = file.name;
-            const text = await file.text();
-
-            // load differently based on the file extension
-            const nameLowercase = name.toLowerCase();
-            if (nameLowercase.endsWith(".json")) {
-                loadConfigurationTextJson(text);
-            } else if (nameLowercase.endsWith(".md")) {
-                loadConfigurationTextMarkdown(text);
-            } else {
-                console.error(`unknown how to load file extension ${name}`);
-            }
-        }
-
         function assertString(variable) {
             if (typeof variable !== 'string') {
                 throw new TypeError('variable must be a string')
@@ -452,8 +584,8 @@
 
         /**
          * check that string is only made up of valid characters
-         * @param check - string to check
-         * @param valid - string of valid characters
+         * @param {string} check - string to check
+         * @param {string} valid - string of valid characters
          */
         function assertStringRange(check, valid) {
             assertString(check);
@@ -468,9 +600,12 @@
             }
         }
 
+
+        //#region "hextext"
         /**
          * converts an ArrayBuffer to hexText
-         * @param buffer - ArrayBuffer
+         * @param {ArrayBuffer} buffer - ArrayBuffer
+         * @returns {string}
          */
         function convertBufferToHex(buffer) {
             // https://stackoverflow.com/questions/40031688/javascript-arraybuffer-to-hex
@@ -481,6 +616,8 @@
 
         /**
          * converts hexText to ArrayBuffer
+         * @param {string} hexText - hexadecimal text to convert to an array buffer
+         * @returns {ArrayBuffer}
          */
         function convertHexToBuffer(hexText) {
             assertString(hexText);
@@ -511,8 +648,8 @@
 
         /**
          * converts text to gzip compressed hexText
-         * @param text - a string
-         * @returns gzip compressed hexText
+         * @param {string} text - a string
+         * @returns {Promise<string>} gzip compressed hexText
          */
         async function compress(text) {
             // https://developer.mozilla.org/en-US/docs/Web/API/CompressionStream
@@ -528,8 +665,8 @@
 
         /**
          * converts gzip compressed hexText to text
-         * @param compressedHexText - gzip compressed hexText
-         * @returns text
+         * @param {string} compressedHexText - gzip compressed hexText
+         * @returns {string} text
          */
         async function decompress(compressedHexText) {
 
@@ -547,9 +684,10 @@
         /**
          * text compress decompress
          */
-        async function testHextText() {
+        async function testHexText() {
             // input text
-            const snapshotText = getConfigurationSnapshotJsonText(gconfiguration);
+            const configuration = getConfigurationSnapshot();
+            const snapshotText = getConfigurationToTextJson(configuration);
             console.log(snapshotText);
 
             const compressedText = await compress(snapshotJsonText);
@@ -567,47 +705,653 @@
             }
         }
 
-        async function loadConfigurationUrlHash() {
-            // # comes after the url
+        //#endregion "hextext"
 
-            // remove #
-            const compressedText = window.location.hash.substring(1);
-            const decompressedText = await decompress(compressedText);
-            loadConfigurationTextJson(decompressedText);
-        }
-
-        async function saveConfigurationUrlHash() {
-            // translate configuration to hash
-            // snapshot current state
-            const snapshotJsonText = getConfigurationSnapshotJsonText(gconfiguration);
-            console.log(snapshotJsonText);
-
-            const compressedText = await compress(snapshotJsonText);
-            console.log(compressedText);
-
-            // set to hash at top of window
-            window.location.hash = compressedText;
+        /**
+         * convert configuration to json text
+         * @param {Configuration} configuration
+         * @returns {string}
+         */
+        function getConfigurationToTextJson(configuration, { pretty } = { pretty: false }) {
+            // pretty option adds spaces for readability
+            const text = pretty ? JSON.stringify(configuration, undefined, "    ") : JSON.stringify(configuration);
+            return text;
         }
 
         /**
-         * currently loaded configuration
+         * get a configuration from json text
+         * @param {string} text
+         * @returns {Configuration}
          */
-        let gconfiguration = undefined;
+        function getConfigurationFromTextJson(text) {
+            const configuration = JSON.parse(text);
+            return configuration;
+        }
 
-        // function run on setup
-        function initialize() {
-            loadConfigurationTextMarkdown(defaultConfigurationMarkdown);
+        /**
+         * get a configuration from hex text (compressed json text)
+         * @param {string} text - hex text
+         * @returns {Promise<Configuration>}
+         */
+        async function getConfigurationFromTextHex(text) {
+            const decompressedText = await decompress(text);
+            const configuration = getConfigurationFromTextJson(decompressedText);
+            return configuration;
+        }
 
-            document.getElementById("button_save_file").onclick = saveSnapshotJsonTextFile;
+        /**
+         * get a configuration from markdown text
+         * @param {string} text - hex text
+         * @returns {Configuration}
+         */
+        function getConfigurationFromTextMarkdown(text) {
+            const configuration = parseMarkdownToConfiguration(text);
+            console.log(configuration);
+            return configuration;
+        }
 
+        /**
+         * pull out configuration stored in the svg
+         * get a configuration from desc element containing configuration hex tex embedded in svg text
+         * @param {string} text - svg text
+         * @returns {Configuration}
+         */
+        async function getConfigurationFromSvg(text) {
+
+            // pull out configuration hex text from configuration desc element
+            const parser = new DOMParser();
+            const svg = parser.parseFromString(text, "image/svg+xml");
+
+            // note: The configuration is the inner html of the first element with the id 'configuration' 
+            /**
+             * @type {SVGDescElement}
+             */
+            const configurationDesc = svg.getElementById("configuration");
+            const configurationTextHex = configurationDesc.innerHTML; // note: no innerText element in SVGDescElement
+
+            const configuration = await getConfigurationFromTextHex(configurationTextHex);
+            return configuration;
+        }
+
+        /**
+         * @param {string} name - name of the file
+         * @param {string} text - file text
+         * @returns {Configuration}
+         */
+        async function getConfigurationFromFile(name, text) {
+            let configuration = undefined;
+
+            // load differently based on the file extension
+            const nameLowercase = name.toLowerCase();
+
+            if (nameLowercase.endsWith(".json")) {
+                configuration = getConfigurationFromTextJson(text);
+            } else if (nameLowercase.endsWith(".md")) {
+                configuration = getConfigurationFromTextMarkdown(text);
+            } else if (nameLowercase.endsWith(".txt")) {
+                configuration = await getConfigurationFromTextHex(text);
+            } else if (nameLowercase.endsWith(".svg")) {
+                configuration = getConfigurationFromSvg(text);
+            }
+
+            return configuration;
+        }
+
+        /**
+         * download a file by inserting a link element with the url containing the encoding
+         * @param {Object} o
+         * @param {string} o.filename
+         * @param {string} o.url
+         */
+        function downloadFileUrl({ filename, url }) {
+            const element = document.createElement('a');
+
+            element.setAttribute('href', url);
+            element.setAttribute('download', filename);
+            element.click();
+        }
+
+        /**
+         * download file
+         * @param {Object} o
+         * @param {string} o.filename - name of the file to download
+         * @param {string} o.text - contents of the text file utf-16 text
+         * @param {string} o.encoding - mime type of the file
+         */
+        function downloadFile({ filename, text, encoding }) {
+            const blob = new Blob([text], { type: encoding })
+            const downloadUrl = URL.createObjectURL(blob);
+            console.log(downloadUrl)
+            downloadFileUrl({ filename, url: downloadUrl });
+            URL.revokeObjectURL(downloadUrl);
+
+            // legacy
+            // const component = encodeURIComponent(text);
+            // const url = `${encoding};charset=utf-16, ` + component;
+            // downloadFileUrl({filename, url})
+        }
+
+        /**
+         * @param {FileList} files
+         */
+        async function buttonLoadSnapshotFromFile(files) {
+            if (files.length !== 1) {
+                console.error(`can only load a single file`);
+                return;
+            }
+
+            const file = files[0];
+            const name = file.name;
+            const text = await file.text();
+
+            const configuration = await getConfigurationFromFile(name, text);
+
+            if (configuration === undefined) {
+                console.error(`unable to load file extension ${name}`);
+            } else {
+                loadConfiguration(configuration);
+            }
+        }
+
+
+
+        /**
+         * converts a configuration to hex text
+         * @param {Configuration} configuration
+         * @returns {Promise<string>} hex text
+         */
+        async function getConfigurationToTextHex(configuration) {
+            const snapshotJsonText = getConfigurationToTextJson(configuration);
+            //console.log(snapshotJsonText);
+
+            const compressedText = await compress(snapshotJsonText);
+            //console.log(compressedText);
+            return compressedText;
+        }
+
+
+        //#region "canvas"
+        /**
+         * canvas is a bit pixelated
+         * @param {Configuration} configuration
+         * @param {HTMLCanvasElement} canvas
+         */
+        function drawConfigurationCanvas(configuration, canvas) {
+            canvas.width = 200;
+            canvas.height = 200;
+            const context = canvas.getContext("2d");
+
+            const { title, description, items, state } = configuration;
+
+            context.font = '20px serif';
+            context.textBaseline = "alphabetic"; //"alphabetic"; 
+
+            const checkboxSize = 10;
+            const checkboxColor = "#000000"; // black
+            const textColor = "#000000";
+
+            const measure = context.measureText(title);
+            const height = measure.fontBoundingBoxAscent + measure.fontBoundingBoxDescent;
+
+            // write out title
+            context.fillText(title, 0, height);
+
+            // Draw all of the configuration settings on the canvas
+
+            const spacing = height + 10;
+            let y = spacing;
+            let x = 10;
+
+
+
+            items.forEach(({ id, title, input }) => {
+                if (input === "checkbox") {
+                    // draw the checkbox
+                    const value = state === undefined ? undefined : state[id];
+
+                    // checkbox
+                    // rectangle draws down from the top left x, y
+                    context.fillStyle = value ? checkboxColor : "#FFFFFF";
+                    context.fillRect(x, y, checkboxSize, checkboxSize);
+
+                    // text
+                    // text draws from the left bottom x y
+                    const dx = checkboxSize + 10;
+                    const dy = checkboxSize;
+                    context.fillStyle = textColor;
+                    context.fillText(title, x + dx, y + dy);
+
+                    // dot
+                    context.fillStyle = "#FF0000";
+                    context.fillRect(0, 0, 1, 1);
+
+                    // increase offset
+                    y += spacing;
+
+                }
+            });
+
+            // Determine how checkbox is drawn
+
+        }
+
+        //#endregion "canvas"
+
+        /**
+         * @param {Configuration} configuration
+         */
+        function saveConfigurationImageCanvas(configuration) {
+            const canvas = document.createElement("canvas");
+            drawConfigurationCanvas(configuration, canvas);
+
+
+            // for testing purposes allow preview of the canvas
+            const div = document.getElementById("div_configuration_canvas");
+            // reset
+            div.innerText = "";
+            div.appendChild(canvas);
+        }
+
+        //#region "svg"
+
+        /**
+         * @param {string} text - text for the desc element
+         * @param id {string} - id for the desc element for easy access
+         */
+        function createSvgDescElement(text, id) {
+            const descElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'desc'
+            );
+
+            descElement.setAttribute("id", id);
+
+            const textNode = document.createTextNode(text);
+            descElement.appendChild(textNode);
+
+            return descElement;
+        }
+
+        /**
+         * @param {number} x - x of lower left corner
+         * @param {number} y - y of lower left corner
+         * @param {string} text - the text to write
+         * @returns {SVGTextElement}
+         */
+        function createSvgTextElement(x, y, text) {
+            const textElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'text'
+            );
+
+            textElement.setAttribute("x", x);
+            textElement.setAttribute("y", y);
+
+            textElement.setAttribute("alignment-baseline", "baseline");
+
+            // TODO: sanitize the text
+            const textNode = document.createTextNode(text);
+            textElement.appendChild(textNode);
+
+            return textElement;
+
+        }
+
+        /**
+         * @param {number} x - x of upper left corner
+         * @param {number} y - y of upper left corner
+         * @param {number} checkboxSize - width and height of the checkbox
+         * @param {boolean} checked - is the checkbox checked
+         * @param {ConfigurationConfigCheckbox} config - 
+         * 
+         * @returns {SVGTextElement}
+         */
+        function createSvgCheckboxElement(x, y, checkboxSize, checked, config) {
+
+            const rectElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'rect'
+            );
+
+            rectElement.setAttribute("x", x);
+            rectElement.setAttribute("y", y);
+
+            rectElement.setAttribute("width", checkboxSize);
+            rectElement.setAttribute("height", checkboxSize);
+
+            // use config color for checkbox or default color
+            const color = checked ? config?.checked?.color || "black" : config?.unchecked?.color || "white";
+            rectElement.setAttribute("style", `fill:${color}`);
+
+            return rectElement;
+        }
+
+        // sweet sweet SVGs! Pixel perfection!
+        /**
+         * @param {Configuration} configuration
+         * @returns {Promise<SVGSVGElement>}
+         */
+        async function getConfigurationToSvgElement(configuration) {
+            const { title, description, items, state, configs } = configuration;
+
+            const configDefault = configs["default"];
+            console.log(configDefault);
+
+            const checkboxSize = 10;
+
+            const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+            //svg.setAttribute("viewbox", "0 0 100 100");
+            svg.setAttribute("width", 200);
+            svg.setAttribute("height", 200);
+
+            // append text hex description of the configuration that generated the svg
+            const configurationTextHex = await getConfigurationToTextHex(configuration);
+            svg.appendChild(createSvgDescElement(configurationTextHex, "configuration"));
+
+
+            const height = 20; // need to measure height of text
+            let y = height;
+            let x = 0;
+
+            // title
+            svg.appendChild(createSvgTextElement(x, y, title));
+
+            const spacing = height + 10;
+            y = spacing;
+            x = 10;
+
+
+            items.forEach(({ id, title, input }) => {
+                if (input === "checkbox") {
+                    // draw the checkbox
+                    const value = state === undefined ? undefined : state[id];
+
+                    // checkbox
+                    // rectangle draws down from the top left x, y
+                    const checkboxElement = createSvgCheckboxElement(x, y, checkboxSize, value, configDefault?.checkbox);
+                    svg.appendChild(checkboxElement);
+
+                    // text
+                    // text draws from the left bottom x y
+                    const dx = checkboxSize + 10;
+                    const dy = checkboxSize;
+                    const textElement = createSvgTextElement(x + dx, y + dy, title);
+                    svg.appendChild(textElement);
+
+                    // increase offset
+                    y += spacing;
+
+                }
+            });
+
+
+            return svg;
+
+        }
+
+        //#endregion "svg"
+
+        /**
+         * @param {Configuration} configuration
+         */
+        async function saveConfigurationImageSvg(configuration) {
+
+            // for testing purposes allow preview on the canvas
+            const div = document.getElementById("div_configuration_svg");
+
+            const svg = await getConfigurationToSvgElement(configuration);
+
+            // reset
+            div.innerText = "";
+            div.appendChild(svg);
+        }
+
+
+
+        /**
+         * get the support level for required APIs
+         */
+        function getBrowserSupport() {
+            // Required APIs to work.
+            // list all APIs
+            // https://developer.mozilla.org/en-US/docs/Web/API/Compression_Streams_API
+            const supportsCompressionStream = "undefined" !== typeof CompressionStream;
+            // https://developer.mozilla.org/en-US/docs/Web/API/DecompressionStream
+            const supportsDecompressionStream = "undefined" !== typeof DecompressionStream;
+
+            /**
+             * @type {[string, boolean][]}
+             */
+            const apis = [
+                ["CompressionStream", supportsCompressionStream],
+                ["DecompressionStream", supportsDecompressionStream],
+            ];
+            const supported = apis.every(([_, supports]) => supports);
+
+            return {
+                apis,
+                supported,
+            }
+        }
+
+        //
+        // UI callable methods
+        //
+
+        //#region "interactions"
+        /**
+         * browser details
+         * writes if the browser is supported
+         * @param {Object} [options=undefined]
+         * @param {boolean} [options.showDetails=undefined] - show additional details about the browser
+         */
+        function displayBrowserSupport(options) {
+            const div = document.getElementById("div_browser_info");
+
+            const { apis, supported } = getBrowserSupport();
+
+            if (!supported) {
+                document.getElementById("p_browser_not_supported_message").hidden = false;
+            }
+
+            const showDetails = typeof options !== "undefined" && options.showDetails;
+
+            // show details about supported APIs
+            if (showDetails) {
+                // user Agent
+                const agent = window.navigator.userAgent;
+                const infoAgent = document.createElement("p");
+                infoAgent.appendChild(document.createTextNode(agent));
+                div.appendChild(infoAgent);
+
+                // APIs
+                div.appendChild(document.createTextNode("Required API: supported"))
+
+                apis.forEach(([name, supports]) => {
+                    const infoApi = document.createElement("p");
+                    const br = document.createElement("br");
+                    div.appendChild(br);
+                    div.appendChild(document.createTextNode(`${name}: ${supports}`));
+                });
+            }
+        }
+        //#endregion "interactions"
+
+        function getUrlHash() {
+            const text = window.location.hash.substring(1);
+            return text
+        }
+
+
+        //#region "buttons"
+        /**
+         * button
+         */
+        async function buttonLoadSnapshotFromUrlHash() {
+            // # comes after the url
+            // remove #
+            const text = getUrlHash();
+            if (text) {
+                const configuration = await getConfigurationFromTextHex(text);
+                loadConfiguration(configuration);
+            } else {
+                console.log("no url hash to load")
+            }
+        }
+
+        async function saveSnapshotToUrlHash() {
+            const configuration = getConfigurationSnapshot();
+            const text = await getConfigurationToTextHex(configuration)
+
+            // set to hash at top of window
+            window.location.hash = text;
+        }
+
+        function buttonClearUrlHash() {
+            window.history.replaceState(null, '', window.location.pathname);
+        }
+
+        /**
+         * button 
+         */
+        async function buttonSaveSnapshotToUrlHash() {
+            await saveSnapshotToUrlHash();
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to JSON
+         */
+        async function buttonSaveSnapshotToFileJson() {
+            const configuration = getConfigurationSnapshot();
+
+            const filename = `${configuration.title}.json`;
+            const text = getConfigurationToTextJson(configuration, { pretty: true });
+            const encoding = 'data:text/plain';
+            downloadFile({ filename, text, encoding });
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to svg
+         */
+        async function buttonSaveSnapshotToFileSvg() {
+            const configuration = getConfigurationSnapshot();
+
+            const svg = await getConfigurationToSvgElement(configuration);
+            var serializer = new XMLSerializer();
+            var snapshotSvgText = serializer.serializeToString(svg);
+
+            const filename = `${configuration.title}.svg`;
+            const text = snapshotSvgText;
+            const encoding = 'data:image/svg+xml';
+            downloadFile({ filename, text, encoding });
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to svg
+         */
+        async function buttonSaveSnapshotToFileTextHex() {
+            const configuration = getConfigurationSnapshot();
+
+            const filename = `${configuration.title}.txt`;
+            const text = await getConfigurationToTextHex(configuration);
+            const encoding = 'data:text/plain';
+            downloadFile({ filename, text, encoding });
+        }
+
+        /**
+         * button
+         */
+        async function drawConfigurationImage() {
+            //buttonSaveSnapshotToFileSvg();
+
+            const configuration = getConfigurationSnapshot()
+
+            // draw the configuration on a canvas
+            saveConfigurationImageCanvas(configuration);
+
+            // draw the configuration as an svg
+            await saveConfigurationImageSvg(configuration);
+
+
+            // save the canvas
+            // same as saving json
+        }
+
+        //#endregion "buttons"
+
+        /**
+         * called when the configuration changes
+         */
+        function onConfigurationUpdated() {
+            // update images
+            drawConfigurationImage()
+
+            // update hash
+            // useful if always want a shareable url
+            //saveSnapshotToUrlHash();
+        }
+
+
+
+        /**
+         * Only function run on start
+         * Set up everything, link all UI elements
+         */
+        async function initialize() {
+            // check if the browser is supported
+            const { supported } = getBrowserSupport();
+            if (!supported) {
+                document.getElementById("div_controls").innerText = "";
+                displayBrowserSupport({ showDetails: true });
+                // don't set up any of the handlers
+                return;
+            }
+
+            // Initial configuration
+            // pull from url has if available or load default
+            const urlHash = getUrlHash();
+            console.log(urlHash);
+            /**
+             * @type {Configuration}
+             */
+            let configuration = undefined;
+            if (urlHash.length === 0) {
+                configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
+            } else {
+                configuration = await getConfigurationFromTextHex(urlHash);
+            }
+            loadConfiguration(configuration);
+
+
+            document.getElementById("div_configuration").onchange = onConfigurationUpdated;
+
+            // Start - Test
+            // Test Code to run at start
+            drawConfigurationImage()
+            // End - Test
+
+            // Url Hash
+            document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;
+            document.getElementById("button_load_url").onclick = buttonLoadSnapshotFromUrlHash;
+            document.getElementById("button_clear_url").onclick = buttonClearUrlHash;
+
+            // File
+            document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;
+            document.getElementById("button_save_file_text").onclick = buttonSaveSnapshotToFileTextHex;
+            document.getElementById("button_save_file_svg").onclick = buttonSaveSnapshotToFileSvg;
+
+            // Load file
+            /**
+             * @type {HTMLInputElement}
+             */
             const input_file = document.getElementById("input_load_file");
             input_file.onchange = async () => {
                 const files = input_file.files;
-                loadConfigurationFile(files)
+                await buttonLoadSnapshotFromFile(files);
             };
-
-            document.getElementById("button_save_url").onclick = saveConfigurationUrlHash;
-            document.getElementById("button_load_url").onclick = loadConfigurationUrlHash;
         }
 
         initialize();

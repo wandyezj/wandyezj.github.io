@@ -7,6 +7,12 @@ tags: software
 
 Some basic software vocabulary with links to wikipedia.
 
+## Ideas
+
+- abstraction
+    - the process of removing details from something in order to obtain a more general representation
+
+
 ## Programs
 
 - program
@@ -26,6 +32,8 @@ Some basic software vocabulary with links to wikipedia.
     - Program documentation is a written description of the function of a code segment, event, procedure, or program and how it was developed.
     - [Wikipedia - Software Documentation](https://en.wikipedia.org/wiki/Software_documentation)
 
+- modularity
+    - The subdivision of a computer program into separate subprograms
 
 
 ## Code
@@ -84,6 +92,10 @@ Some basic software vocabulary with links to wikipedia.
     - Testing uses defined inputs to ensure that an algorithm or program is producing the expected outcomes. Programmers use the results from testing to revise their algorithms or programs.
     - [Wikipedia - software testing](https://en.wikipedia.org/wiki/Software_testing)
 
+- Minimum Viable Product (MVP)
+    -  a version of a product with just enough features to be usable by early customers who can then provide feedback for future product development.
+    - [Wikipedia - minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product)
+
 ## Errors
 
 - syntax error
@@ -128,6 +140,15 @@ scope
     - A user is granted access only after successfully presenting two or more pieces of evidence (or factors) to an authentication mechanism: knowledge (something only the user knows), possession (something only the user has), or inherence (something only the user is).
     - Includes: two factor authentication (2FA)
     - [Wikipedia - Multi-factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
+
+## Algorithms
+
+- sequencing
+    - The order that the steps of an algorithm are given.
+- selection
+    - The use of a boolean condition to determine which of two parts of an algorithm is used (Ex. conditionals) 
+- iteration
+    - When a part of an algorithm is repeated, either for a certain number of times or until a condition is met. (Ex. for loops) 
 
 ## Boolean Comparisions
 
@@ -213,14 +234,17 @@ To test if a is greater than or equal to b: a ≥ b
 To test if a is less than or equal to b: a ≤ b
 
 ```text
-AND instead of and
+AND instead of ands
 OR instead of or
 NOT instead of not
 operators can use both boolean value True, False and boolean expressions
 ```
 
-```
+```text
 INPUT()
+
+random(low, hi)
+RANDOM(a, b) 
 ```
 
 Unlike some programming languages, both Python and the programming language used on the AP Exam have no limit on how large a number can be, as long as the computer's memory can store it. 

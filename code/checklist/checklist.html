@@ -338,8 +338,8 @@
                         configId: "default"
                     });
 
-                    state[itemId] = {[itemInput]:itemValue};
- 
+                    state[itemId] = { [itemInput]: itemValue };
+
 
                 } else if (isListItemLikert) {
                     // 
@@ -577,7 +577,7 @@
                     elementInput.id = id;
 
                     // use preserved state
-                    if (state && state[id] && typeof state[id]?.checkbox === "boolean" ) {
+                    if (state && state[id] && typeof state[id]?.checkbox === "boolean") {
                         elementInput.checked = state[id].checkbox
                     }
 
@@ -670,7 +670,7 @@
                 if (element) {
                     if (input === "checkbox") {
                         const checked = element.checked;
-                        snapshot.state[id] = {checkbox: checked};
+                        snapshot.state[id] = { checkbox: checked };
                     }
                 }
             });
@@ -1102,13 +1102,12 @@
         /**
          * @param {number} x - x of upper left corner
          * @param {number} y - y of upper left corner
-         * @param {number} checkboxSize - width and height of the checkbox
-         * @param {boolean} checked - is the checkbox checked
-         * @param {ConfigurationConfigCheckbox} config - 
+         * @param {number} size - width and height of the square
+         * @param {color} string - fill color
          * 
-         * @returns {SVGTextElement}
+         * @returns {SVGRectElement}
          */
-        function createSvgCheckboxElement(x, y, checkboxSize, checked, config) {
+        function createSvgSquareElement(x, y, size, color) {
 
             const rectElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
@@ -1118,11 +1117,9 @@
             rectElement.setAttribute("x", x);
             rectElement.setAttribute("y", y);
 
-            rectElement.setAttribute("width", checkboxSize);
-            rectElement.setAttribute("height", checkboxSize);
+            rectElement.setAttribute("width", size);
+            rectElement.setAttribute("height", size);
 
-            // use config color for checkbox or default color
-            const color = checked ? config?.checked?.color || "black" : config?.unchecked?.color || "white";
             rectElement.setAttribute("style", `fill:${color}`);
 
             return rectElement;
@@ -1131,15 +1128,41 @@
         /**
          * @param {number} x - x of upper left corner
          * @param {number} y - y of upper left corner
+         * @param {number} size - diameter of the circle
+         * @param {color} string - fill color
+         * 
+         * @returns {SVGRectElement}
+         */
+        function createSvgCircleElement(x, y, size, color) {
+            const circleElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'circle'
+            );
+
+            const radius = size/ 2
+            const dx = radius;
+            const dy = radius;
+
+            circleElement.setAttribute("cx", x + dx);
+            circleElement.setAttribute("cy", y + dy);
+            circleElement.setAttribute("r", radius);
+            circleElement.setAttribute("style", `fill:${color};stroke:black;`);
+
+            return circleElement;
+        }
+
+        /**
+         * @param {number} x - x of upper left corner
+         * @param {number} y - y of upper left corner
          * @param {string} id - id of the element
          * @param {string} title - title for the element
          * @param {number} elementSize - width and height of the checkbox
-         * @param {boolean|undefined} value - is the checkbox checked
+         * @param {boolean|undefined} checked - is the checkbox checked
          * @param {ConfigurationConfigCheckbox} config - 
          * 
          * @returns {SVGGroupElement}
          */
-        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config) {
+        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, config) {
             const gElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
                 'g'
@@ -1147,7 +1170,9 @@
 
             // checkbox
             // rectangle draws down from the top left x, y
-            const checkboxElement = createSvgCheckboxElement(x, y, elementSize, value, config);
+            // use config color for checkbox or default color
+            const color = checked ? config?.checked?.color || "black" : config?.unchecked?.color || "white";
+            const checkboxElement = createSvgSquareElement(x, y, elementSize, color);
             gElement.appendChild(checkboxElement);
 
             // text
@@ -1176,29 +1201,33 @@
                 'g'
             );
 
-            const radius = elementSize / 2;
             const spacing = 10;
+
+            const getDx = (index) => (elementSize + spacing) * index
 
             const options = config.options.map(({ value, description, color }, index) => {
 
-                const optionElement = document.createElementNS(
-                    'http://www.w3.org/2000/svg',
-                    'circle'
-                );
-
                 // offset between elements
-                const dx = (radius * 2 + spacing) * index + radius;
- 
-                optionElement.setAttribute("cx", x + dx);
-                optionElement.setAttribute("cy", y);
-                optionElement.setAttribute("r", radius);
-                optionElement.setAttribute("style", `fill:${color};stroke:black;`);
+                const dx = getDx(index);
+
+                // TODO: differentiate selected
+                const optionElement = createSvgCircleElement(x + dx, y, elementSize, color);
 
                 return optionElement;
 
             });
 
+
             gElement.append(...options);
+
+            // text
+            // text draws from the left bottom x y
+            const dx = getDx(options.length - 1) + 10 + 10;
+            const dy = elementSize;
+            const textElement = createSvgTextElement(x + dx, y + dy, title);
+            gElement.appendChild(textElement);
+
+
 
             return gElement;
 
@@ -1243,9 +1272,9 @@
                 // draw each separate input
                 if (input === "checkbox") {
                     const value = state === undefined ? undefined : state[id]?.checkbox;
-                    const config =  configDefault?.checkbox;
+                    const config = configDefault?.checkbox;
 
-                    const checkboxGroup = createSvgCheckboxGroupElement(x,y, id, title, elementSize, value, config);
+                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config);
                     svg.append(checkboxGroup);
 
                 } else if (input === "likert") {

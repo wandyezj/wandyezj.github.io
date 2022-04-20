@@ -102,5 +102,9 @@ Team members should write out short answers to the following questions:
 
 The point is to reflect and improve team performance.
 
+## Lunch
 
+Getting Lunch together as a team is an important way to build relationships among team members.
+
+A recommendation is having a consistent scheduled lunch at least once a week. One way to make it feel more inclusive is to have someone go around and invite people to lunch.
 

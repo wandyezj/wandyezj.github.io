@@ -58,6 +58,14 @@
              * linked state can only be true or false
              */
             Checkbox: "checkbox",
+
+            /**
+             * @readonly
+             * @type {"likert"}
+             * A likert
+             * a likert state is one of the likert values
+             */
+            Likert: "likert"
         }
 
         /**
@@ -67,7 +75,15 @@
          * @property {string} description - description
          * @property {Object.<string,ConfigurationConfig>} configs - configs
          * @property {ConfigurationItem[]} items - items
-         * @property {Object.<string, boolean>} state - state: id -> value
+         * @property {Object.<string, ConfigurationState} state - state: id -> value
+         */
+
+        /**
+         * A configuration state
+         * @typedef {Object} ConfigurationState
+         * @property {boolean?} checkbox - checkbox state is checked or unchecked
+         * @property {string?} likert - likert state selected
+         * 
          */
 
         /**
@@ -76,7 +92,7 @@
          * @property {string} id - unique id for the item, used to reference the state
          * @property {string} title - displayed
          * @property {string} description - explanation for the item
-         * @property {"checkbox"} input - input type from limited set of: {"checkbox"}
+         * @property {"checkbox"|"likert"} input - input type from limited set of: {"checkbox"}
          * @property {string?} configId - config id, used to reference the relevant formatting config
          */
 
@@ -85,11 +101,12 @@
          * @typedef ConfigurationConfig
          * @property {string} id - unique id for the config
          * @property {ConfigurationConfigCheckbox} checkbox - checkbox configuration
+         * @property {ConfigurationConfigLikert} likert - likert configuration
          * 
          */
 
         /**
-         * A configuration config checkbox configuration - used to style and checkbox element
+         * A configuration config checkbox configuration - used to style a checkbox element
          * @typedef ConfigurationConfigCheckbox
          * @property {ConfigurationConfigCheckboxState} checked - checked state
          * @property {ConfigurationConfigCheckboxState} unchecked - unchecked state
@@ -100,6 +117,20 @@
          * @property {string} color - HTML color
          */
 
+
+        /**
+         * A configuration config likert configuration - used to configure and style a likert element
+         * @typedef ConfigurationConfigLikert
+         * @property {ConfigurationConfigLikertOption[]} options - order of likert options
+         */
+
+        /**
+        * A configuration config likert configuration option - used to configure and style a likert options
+        * @typedef ConfigurationConfigLikertOption
+        * @property {string} value - likert option value
+        * @property {string} description - likert options descriptions
+        * @property {string} color - HTML color
+        */
 
         //#endregion "definitions"
 
@@ -161,7 +192,7 @@
 - [ ] example item other
     > example item description
 
-
+- (likert) some likert
 
 `;
 
@@ -202,7 +233,7 @@
 
             /**
              * state of each item
-             * @type {Object.<string, boolean>}
+             * @type {Object.<string, ConfigurationState>}
              */
             const state = {};
 
@@ -222,6 +253,7 @@
             const delimiterListDescription = "> ";
             const delimiterListItemCheckboxUnchecked = "- [ ] ";
             const delimiterListItemCheckboxChecked = "- [x] ";
+            const delimiterListItemLikert = "- (likert) ";
             const delimiterListItemDescription = "    > ";
             const delimiterListConfigStart = "```config";
             const delimiterListConfigEnd = "```";
@@ -238,6 +270,10 @@
                 const isListItemCheckboxChecked = line.startsWith(delimiterListItemCheckboxChecked);
 
                 const isListItemCheckbox = isListItemCheckboxUnchecked || isListItemCheckboxChecked;
+
+                const isListItemLikert = line.startsWith(delimiterListItemLikert);
+
+                const isListItem = isListItemCheckbox || isListItemLikert;
 
                 // parse the line
                 if (line.startsWith(delimiterListTitle)) {
@@ -256,11 +292,29 @@
                         i++;
                     }
 
-                } else if (isListItemCheckbox) {
+                } else if (isListItem) {
+
+                    let itemTitle = undefined;
+                    let itemInput = undefined;
+                    let itemValue = undefined;
+
                     // List Item Checkbox
 
-                    const itemTitle = line.substring(delimiterListItemCheckboxUnchecked.length).trim();
-                    const itemInput = ConfigurationInputType.Checkbox;
+                    if (isListItemCheckbox) {
+                        itemTitle = line.substring(delimiterListItemCheckboxUnchecked.length).trim();
+                        itemInput = ConfigurationInputType.Checkbox;
+                        itemValue = isListItemCheckboxChecked;
+                    }
+
+
+                    // List Item Likert
+                    if (isListItemLikert) {
+                        itemTitle = line.substring(delimiterListItemLikert.length).trim();
+                        itemInput = ConfigurationInputType.Likert;
+                        // How to store the value as part of the item?
+                        itemValue = undefined;
+                    }
+
                     let itemDescription = undefined;
 
                     if (lineNext !== undefined && lineNext.startsWith(delimiterListItemDescription)) {
@@ -276,15 +330,19 @@
                     const itemId = toUniqueId(itemBaseId, itemIds);
                     itemIds.push(itemId);
 
-                    state[itemId] = isListItemCheckboxChecked;
-
                     listItems.push({
                         id: itemId,
                         title: itemTitle,
                         description: itemDescription,
                         input: itemInput,
+                        configId: "default"
                     });
 
+                    state[itemId] = {[itemInput]:itemValue};
+ 
+
+                } else if (isListItemLikert) {
+                    // 
                 } else if (line.startsWith(delimiterListConfigStart)) {
 
                     const configStartLine = i;
@@ -487,7 +545,7 @@
 
             const div = document.createElement("div");
 
-            const { title, description, items, state } = configuration;
+            const { title, description, items, state, configs } = configuration;
 
             const defaultTitle = "List";
             const defaultDescription = "";
@@ -506,7 +564,7 @@
             div.appendChild(elementListDescription);
 
             // append all list elements
-            const children = items.map(({ id, title, description, input }) => {
+            const children = items.map(({ id, title, description, input, configId }) => {
 
                 const elementDiv = document.createElement("div");
 
@@ -519,8 +577,8 @@
                     elementInput.id = id;
 
                     // use preserved state
-                    if (state && state[id] && typeof state[id] === "boolean") {
-                        elementInput.checked = state[id]
+                    if (state && state[id] && typeof state[id]?.checkbox === "boolean" ) {
+                        elementInput.checked = state[id].checkbox
                     }
 
                     const elementLabel = document.createElement("label");
@@ -529,6 +587,50 @@
 
                     elementDiv.appendChild(elementInput);
                     elementDiv.appendChild(elementLabel);
+
+                } else if (input === ConfigurationInputType.Likert) {
+                    // TODO
+                    // how to represent likerts? Series of checkboxes?
+                    const config = configs[configId];
+                    if (configId === undefined) {
+                        console.error(`invalid configId for item [${input}]`);
+                        const p = document.createElement("p");
+                        p.innerText = `item [${name}] configId [${configId}] not found.`;
+                        elementDiv.appendChild(p);
+                    } else {
+                        // create checkbox for each item in the likerts
+                        const elements = config.likert.options.map(({ value, description, color }, index) => {
+                            // Use radio?
+                            // const elementInput = document.createElement("input");
+                            // elementInput.type = "radio";
+                            // elementInput.name = title; // names need to be same for all radios
+                            // elementInput.id = id;
+
+                            // Can set a different style for each checkbox
+
+                            // nest inside label tag and apply css rules to the label?
+
+                            // check box
+                            const elementInput = document.createElement("input");
+                            elementInput.type = "checkbox";
+                            elementInput.name = title;
+                            //elementInput.id = id; ids should probably be different?
+                            elementInput.value = value;
+                            return elementInput;
+                        });
+
+
+
+                        const elementLabel = document.createElement("label");
+                        elementLabel.for = id;
+                        elementLabel.innerText = title;
+
+                        elementDiv.append(...elements);
+                        elementDiv.appendChild(elementLabel);
+                    }
+
+
+                    //elementDiv.appendChild(elementInputDiv);
 
                 } else {
                     console.error(`invalid type for item [${input}]`);
@@ -568,7 +670,7 @@
                 if (element) {
                     if (input === "checkbox") {
                         const checked = element.checked;
-                        snapshot.state[id] = checked;
+                        snapshot.state[id] = {checkbox: checked};
                     }
                 }
             });
@@ -907,7 +1009,7 @@
             items.forEach(({ id, title, input }) => {
                 if (input === "checkbox") {
                     // draw the checkbox
-                    const value = state === undefined ? undefined : state[id];
+                    const value = state === undefined ? undefined : state[id].checkbox;
 
                     // checkbox
                     // rectangle draws down from the top left x, y
@@ -1026,6 +1128,82 @@
             return rectElement;
         }
 
+        /**
+         * @param {number} x - x of upper left corner
+         * @param {number} y - y of upper left corner
+         * @param {string} id - id of the element
+         * @param {string} title - title for the element
+         * @param {number} elementSize - width and height of the checkbox
+         * @param {boolean|undefined} value - is the checkbox checked
+         * @param {ConfigurationConfigCheckbox} config - 
+         * 
+         * @returns {SVGGroupElement}
+         */
+        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config) {
+            const gElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'g'
+            );
+
+            // checkbox
+            // rectangle draws down from the top left x, y
+            const checkboxElement = createSvgCheckboxElement(x, y, elementSize, value, config);
+            gElement.appendChild(checkboxElement);
+
+            // text
+            // text draws from the left bottom x y
+            const dx = elementSize + 10;
+            const dy = elementSize;
+            const textElement = createSvgTextElement(x + dx, y + dy, title);
+            gElement.appendChild(textElement);
+
+            return gElement;
+        }
+
+        /**
+         * @param {number} x - x of upper left corner
+         * @param {number} y - y of upper left corner
+         * @param {string} id - id of the element
+         * @param {string} title - title for the element
+         * @param {number} elementSize - size of the element
+         * @param {string|undefined} value - likert selection
+         * @param {ConfigurationConfigLikert} config - 
+         */
+        function createSvgLikertGroupElement(x, y, id, title, elementSize, value, config) {
+            // group likert circles
+            const gElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'g'
+            );
+
+            const radius = elementSize / 2;
+            const spacing = 10;
+
+            const options = config.options.map(({ value, description, color }, index) => {
+
+                const optionElement = document.createElementNS(
+                    'http://www.w3.org/2000/svg',
+                    'circle'
+                );
+
+                // offset between elements
+                const dx = (radius * 2 + spacing) * index + radius;
+ 
+                optionElement.setAttribute("cx", x + dx);
+                optionElement.setAttribute("cy", y);
+                optionElement.setAttribute("r", radius);
+                optionElement.setAttribute("style", `fill:${color};stroke:black;`);
+
+                return optionElement;
+
+            });
+
+            gElement.append(...options);
+
+            return gElement;
+
+        }
+
         // sweet sweet SVGs! Pixel perfection!
         /**
          * @param {Configuration} configuration
@@ -1037,7 +1215,7 @@
             const configDefault = configs["default"];
             console.log(configDefault);
 
-            const checkboxSize = 10;
+            const elementSize = 10;
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             //svg.setAttribute("viewbox", "0 0 100 100");
@@ -1062,26 +1240,24 @@
 
 
             items.forEach(({ id, title, input }) => {
+                // draw each separate input
                 if (input === "checkbox") {
-                    // draw the checkbox
-                    const value = state === undefined ? undefined : state[id];
+                    const value = state === undefined ? undefined : state[id]?.checkbox;
+                    const config =  configDefault?.checkbox;
 
-                    // checkbox
-                    // rectangle draws down from the top left x, y
-                    const checkboxElement = createSvgCheckboxElement(x, y, checkboxSize, value, configDefault?.checkbox);
-                    svg.appendChild(checkboxElement);
+                    const checkboxGroup = createSvgCheckboxGroupElement(x,y, id, title, elementSize, value, config);
+                    svg.append(checkboxGroup);
 
-                    // text
-                    // text draws from the left bottom x y
-                    const dx = checkboxSize + 10;
-                    const dy = checkboxSize;
-                    const textElement = createSvgTextElement(x + dx, y + dy, title);
-                    svg.appendChild(textElement);
+                } else if (input === "likert") {
+                    const value = state === undefined ? undefined : state[id]?.likert;
+                    const config = configDefault?.likert;
 
-                    // increase offset
-                    y += spacing;
-
+                    const likertGroup = createSvgLikertGroupElement(x, y, id, title, elementSize, value, config);
+                    svg.append(likertGroup);
                 }
+
+                // increase offset
+                y += spacing;
             });
 
 
@@ -1270,7 +1446,7 @@
             const configuration = getConfigurationSnapshot()
 
             // draw the configuration on a canvas
-            saveConfigurationImageCanvas(configuration);
+            // saveConfigurationImageCanvas(configuration);
 
             // draw the configuration as an svg
             await saveConfigurationImageSvg(configuration);

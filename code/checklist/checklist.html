@@ -87,12 +87,17 @@
          */
 
         /**
+         * Input Type
+         * @typedef {"checkbox"|"likert"} InputType
+         */
+
+        /**
          * A configuration item
          * @typedef ConfigurationItem
          * @property {string} id - unique id for the item, used to reference the state
          * @property {string} title - displayed
          * @property {string} description - explanation for the item
-         * @property {"checkbox"|"likert"} input - input type from limited set of: {"checkbox"}
+         * @property {InputType} input - input type from limited set of: {"checkbox"}
          * @property {string?} configId - config id, used to reference the relevant formatting config
          */
 
@@ -131,6 +136,14 @@
         * @property {string} description - likert options descriptions
         * @property {string} color - HTML color
         */
+
+        // place on click handler on the svg
+        /**
+         * Callback function for handling clicking of an sve element
+         * @callback onclickSvgElement
+         * @param {string} id - id of the clicked element
+         * @param {InputType} input - type of input
+         */
 
         //#endregion "definitions"
 
@@ -1120,20 +1133,40 @@
             rectElement.setAttribute("width", size);
             rectElement.setAttribute("height", size);
 
-            rectElement.setAttribute("style", `fill:${color}`);
+            rectElement.setAttribute("style", `fill:${color};stroke:black;`);
 
             return rectElement;
+        }
+
+        /**
+         * @param {string} title - title text
+         * @returns {SVGTitleElement}
+         */
+        function createSvgTitleElement(title) {
+            const titleElement = document.createElementNS(
+                'http://www.w3.org/2000/svg',
+                'title'
+            );
+
+            const textElement = document.createTextNode(title);
+            titleElement.append(textElement);
+
+            return titleElement;
         }
 
         /**
          * @param {number} x - x of upper left corner
          * @param {number} y - y of upper left corner
          * @param {number} size - diameter of the circle
-         * @param {color} string - fill color
+         * 
+         * @param {string} color - fill color
+         * @param {strokeWidth} number - width of surrounding stroke
+         * 
+         * @param {string} tooltip - tooltip to show
          * 
          * @returns {SVGRectElement}
          */
-        function createSvgCircleElement(x, y, size, color) {
+        function createSvgCircleElement(x, y, size, color, strokeWidth, tooltip) {
             const circleElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
                 'circle'
@@ -1145,8 +1178,15 @@
 
             circleElement.setAttribute("cx", x + dx);
             circleElement.setAttribute("cy", y + dy);
+
             circleElement.setAttribute("r", radius);
-            circleElement.setAttribute("style", `fill:${color};stroke:black;`);
+
+            circleElement.setAttribute("style", `fill:${color};stroke:black;stroke-width:${strokeWidth};`);
+
+            if (typeof tooltip === "string") {
+                const titleElement = createSvgTitleElement(tooltip);
+                circleElement.append(titleElement);
+            }
 
             return circleElement;
         }
@@ -1160,9 +1200,11 @@
          * @param {boolean|undefined} checked - is the checkbox checked
          * @param {ConfigurationConfigCheckbox} config - 
          * 
+         * @param {boolean} responsive - include onclick handler
+         * 
          * @returns {SVGGroupElement}
          */
-        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, config) {
+        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, config, responsive) {
             const gElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
                 'g'
@@ -1173,6 +1215,12 @@
             // use config color for checkbox or default color
             const color = checked ? config?.checked?.color || "black" : config?.unchecked?.color || "white";
             const checkboxElement = createSvgSquareElement(x, y, elementSize, color);
+
+            if (responsive) {
+                // TODO: actually have this modify the state with a different method.
+                checkboxElement.setAttribute("onclick", `alert('checkbox ${id}')`);
+            }
+
             gElement.appendChild(checkboxElement);
 
             // text
@@ -1191,10 +1239,11 @@
          * @param {string} id - id of the element
          * @param {string} title - title for the element
          * @param {number} elementSize - size of the element
-         * @param {string|undefined} value - likert selection
-         * @param {ConfigurationConfigLikert} config - 
+         * @param {string|undefined} selection - likert selection
+         * @param {ConfigurationConfigLikert} config -
+         * @param {} 
          */
-        function createSvgLikertGroupElement(x, y, id, title, elementSize, value, config) {
+        function createSvgLikertGroupElement(x, y, id, title, elementSize, selection, config) {
             // group likert circles
             const gElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
@@ -1211,7 +1260,8 @@
                 const dx = getDx(index);
 
                 // TODO: differentiate selected
-                const optionElement = createSvgCircleElement(x + dx, y, elementSize, color);
+                const strokeWidth = value === selection ? 3 : 1;
+                const optionElement = createSvgCircleElement(x + dx, y, elementSize, color, strokeWidth, description);
 
                 return optionElement;
 
@@ -1236,9 +1286,10 @@
         // sweet sweet SVGs! Pixel perfection!
         /**
          * @param {Configuration} configuration
+         * @param {boolean} [responsive=false] - allows on click to modify elements
          * @returns {Promise<SVGSVGElement>}
          */
-        async function getConfigurationToSvgElement(configuration) {
+        async function getConfigurationToSvgElement(configuration, responsive = false) {
             const { title, description, items, state, configs } = configuration;
 
             const configDefault = configs["default"];
@@ -1274,7 +1325,7 @@
                     const value = state === undefined ? undefined : state[id]?.checkbox;
                     const config = configDefault?.checkbox;
 
-                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config);
+                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config, responsive);
                     svg.append(checkboxGroup);
 
                 } else if (input === "likert") {
@@ -1304,7 +1355,8 @@
             // for testing purposes allow preview on the canvas
             const div = document.getElementById("div_configuration_svg");
 
-            const svg = await getConfigurationToSvgElement(configuration);
+            const responsive = true;
+            const svg = await getConfigurationToSvgElement(configuration, responsive);
 
             // reset
             div.innerText = "";

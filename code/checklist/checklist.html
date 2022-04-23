@@ -523,137 +523,7 @@
             console.log("loadConfiguration");
             console.log(configuration);
             globalConfiguration = configuration;
-            loadConfigurationToHtml(configuration);
             onConfigurationUpdated();
-        }
-
-        /**
-         * load the configuration to html on the pace so it can be manipulated
-         * include state information
-         * @param {Configuration} configuration
-         */
-        function loadConfigurationToHtml(configuration) {
-            // get new div children
-            const configurationDiv = getConfigurationToDivElement(configuration);
-            const children = configurationDiv.childNodes;
-
-            // update the div
-            const div = document.getElementById("div_configuration");
-            // reset everything in the div, (otherwise end up with duplicate elements on subsequent loads)
-            div.innerText = "";
-            div.append(...children);
-        }
-
-        /**
-         * load the configuration to html on the pace so it can be manipulated
-         * include state information
-         * @param {Configuration} configuration
-         * @returns {HTMLDivElement}
-         */
-        function getConfigurationToDivElement(configuration) {
-
-            const div = document.createElement("div");
-
-            const { title, description, items, state, configs } = configuration;
-
-            const defaultTitle = "List";
-            const defaultDescription = "";
-
-            const listTitle = title || defaultTitle;
-
-            const elementListTitle = document.createElement("h1");
-            elementListTitle.innerText = listTitle;
-
-            const elementListDescription = document.createElement("p");
-            elementListDescription.innerText = description || defaultDescription;
-
-            document.title = listTitle;
-
-            div.appendChild(elementListTitle);
-            div.appendChild(elementListDescription);
-
-            // append all list elements
-            const children = items.map(({ id, title, description, input, configId }) => {
-
-                const elementDiv = document.createElement("div");
-
-                // determine input type
-                // why not simply assign? - security plus elements have different needs
-                if (input === ConfigurationInputType.Checkbox) {
-                    const elementInput = document.createElement("input");
-                    elementInput.type = "checkbox";
-                    elementInput.name = title;
-                    elementInput.id = id;
-
-                    // use preserved state
-                    if (state && state[id] && typeof state[id]?.checkbox === "boolean") {
-                        elementInput.checked = state[id].checkbox
-                    }
-
-                    const elementLabel = document.createElement("label");
-                    elementLabel.for = id;
-                    elementLabel.innerText = title;
-
-                    elementDiv.appendChild(elementInput);
-                    elementDiv.appendChild(elementLabel);
-
-                } else if (input === ConfigurationInputType.Likert) {
-                    // TODO
-                    // how to represent likerts? Series of checkboxes?
-                    const config = configs[configId];
-                    if (configId === undefined) {
-                        console.error(`invalid configId for item [${input}]`);
-                        const p = document.createElement("p");
-                        p.innerText = `item [${name}] configId [${configId}] not found.`;
-                        elementDiv.appendChild(p);
-                    } else {
-                        // create checkbox for each item in the likerts
-                        const elements = config.likert.options.map(({ value, description, color }, index) => {
-                            // Use radio?
-                            // const elementInput = document.createElement("input");
-                            // elementInput.type = "radio";
-                            // elementInput.name = title; // names need to be same for all radios
-                            // elementInput.id = id;
-
-                            // Can set a different style for each checkbox
-
-                            // nest inside label tag and apply css rules to the label?
-
-                            // check box
-                            const elementInput = document.createElement("input");
-                            elementInput.type = "checkbox";
-                            elementInput.name = title;
-                            //elementInput.id = id; ids should probably be different?
-                            elementInput.value = value;
-                            return elementInput;
-                        });
-
-
-
-                        const elementLabel = document.createElement("label");
-                        elementLabel.for = id;
-                        elementLabel.innerText = title;
-
-                        elementDiv.append(...elements);
-                        elementDiv.appendChild(elementLabel);
-                    }
-
-
-                    //elementDiv.appendChild(elementInputDiv);
-
-                } else {
-                    console.error(`invalid type for item [${input}]`);
-                    const p = document.createElement("p");
-                    p.innerText = `item [${name}] invalid type [${input}] for item`;
-                    elementDiv.appendChild(p);
-                }
-
-                return elementDiv;
-
-            });
-
-            div.append(...children);
-            return div;
         }
 
         /**
@@ -669,20 +539,6 @@
              * @type {Configuration}
              */
             const snapshot = JSON.parse(JSON.stringify(configuration));
-
-            // empty state
-            snapshot["state"] = {};
-
-            // retrieve current state and bind it to the snapshot
-            snapshot.items.forEach(({ id, input }) => {
-                const element = document.getElementById(id);
-                if (element) {
-                    if (input === "checkbox") {
-                        const checked = element.checked;
-                        snapshot.state[id] = { checkbox: checked };
-                    }
-                }
-            });
 
             return snapshot
         }
@@ -1269,6 +1125,8 @@
 
         //#endregion "svg"
 
+        //#region "svg interaction"
+
         // can get the target which could have the target and the id
         function onclickSvg(e) {
             console.log("clicked SVG")
@@ -1307,24 +1165,30 @@
         }
 
         /**
-         * @param {Configuration} configuration
+         * draws the configuration as an interactive svg on the page
          */
-        async function saveConfigurationImageSvg(configuration) {
+         async function drawConfigurationImage() {
+            //buttonSaveSnapshotToFileSvg();
 
-            // for testing purposes allow preview on the canvas
-            const div = document.getElementById("div_configuration_svg");
+            const configuration = getConfigurationSnapshot()
+
+            // draw the configuration as an svg
 
             const svg = await getConfigurationToSvgElement(configuration);
 
             // responsive all handled on the top level element
             svg.setAttribute("onclick", "onclickSvg(event)");
 
+
+            // set the contents of the div element
+            const div = document.getElementById("div_configuration_svg");
+
             // reset
             div.innerText = "";
             div.appendChild(svg);
         }
 
-
+        //#endregion "svg interaction"
 
         /**
          * get the support level for required APIs
@@ -1479,17 +1343,6 @@
             downloadFile({ filename, text, encoding });
         }
 
-        /**
-         * button
-         */
-        async function drawConfigurationImage() {
-            //buttonSaveSnapshotToFileSvg();
-
-            const configuration = getConfigurationSnapshot()
-
-            // draw the configuration as an svg
-            await saveConfigurationImageSvg(configuration);
-        }
 
         //#endregion "buttons"
 
@@ -1536,13 +1389,12 @@
             }
             loadConfiguration(configuration);
 
-
-            document.getElementById("div_configuration").onchange = onConfigurationUpdated;
-
             // Start - Test
             // Test Code to run at start
-            drawConfigurationImage()
+            
             // End - Test
+
+            drawConfigurationImage()
 
             // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;

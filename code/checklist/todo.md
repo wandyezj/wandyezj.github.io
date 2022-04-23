@@ -1,5 +1,8 @@
 # checklist todo
 
+- replacement of HTML with svg as the display canvas
+    - event handler that takes care of the html
+
 - likert support
     - https://en.wikipedia.org/wiki/Likert_scale
     - `- (likert)

@@ -35,10 +35,6 @@
     <div id="div_configuration"></div>
 
     <br>
-    <!-- Div to contain the canvas for the image, shown for testing purposes -->
-    <div id="div_configuration_canvas"></div>
-
-    <br>
     <div id="div_configuration_svg"></div>
 
     <script>
@@ -985,80 +981,11 @@
         }
 
 
-        //#region "canvas"
-        /**
-         * canvas is a bit pixelated
-         * @param {Configuration} configuration
-         * @param {HTMLCanvasElement} canvas
-         */
-        function drawConfigurationCanvas(configuration, canvas) {
-            canvas.width = 200;
-            canvas.height = 200;
-            const context = canvas.getContext("2d");
-
-            const { title, description, items, state } = configuration;
-
-            context.font = '20px serif';
-            context.textBaseline = "alphabetic"; //"alphabetic"; 
-
-            const checkboxSize = 10;
-            const checkboxColor = "#000000"; // black
-            const textColor = "#000000";
-
-            const measure = context.measureText(title);
-            const height = measure.fontBoundingBoxAscent + measure.fontBoundingBoxDescent;
-
-            // write out title
-            context.fillText(title, 0, height);
-
-            // Draw all of the configuration settings on the canvas
-
-            const spacing = height + 10;
-            let y = spacing;
-            let x = 10;
-
-
-
-            items.forEach(({ id, title, input }) => {
-                if (input === "checkbox") {
-                    // draw the checkbox
-                    const value = state === undefined ? undefined : state[id].checkbox;
-
-                    // checkbox
-                    // rectangle draws down from the top left x, y
-                    context.fillStyle = value ? checkboxColor : "#FFFFFF";
-                    context.fillRect(x, y, checkboxSize, checkboxSize);
-
-                    // text
-                    // text draws from the left bottom x y
-                    const dx = checkboxSize + 10;
-                    const dy = checkboxSize;
-                    context.fillStyle = textColor;
-                    context.fillText(title, x + dx, y + dy);
-
-                    // dot
-                    context.fillStyle = "#FF0000";
-                    context.fillRect(0, 0, 1, 1);
-
-                    // increase offset
-                    y += spacing;
-
-                }
-            });
-
-            // Determine how checkbox is drawn
-
-        }
-
-        //#endregion "canvas"
 
         /**
          * @param {Configuration} configuration
          */
         function saveConfigurationImageCanvas(configuration) {
-            const canvas = document.createElement("canvas");
-            drawConfigurationCanvas(configuration, canvas);
-
 
             // for testing purposes allow preview of the canvas
             const div = document.getElementById("div_configuration_canvas");
@@ -1200,27 +1127,21 @@
          * @param {boolean|undefined} checked - is the checkbox checked
          * @param {ConfigurationConfigCheckbox} config - 
          * 
-         * @param {boolean} responsive - include onclick handler
-         * 
          * @returns {SVGGroupElement}
          */
-        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, config, responsive) {
+        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, config) {
             const gElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
                 'g'
             );
+
+            gElement.setAttribute("id", id);
 
             // checkbox
             // rectangle draws down from the top left x, y
             // use config color for checkbox or default color
             const color = checked ? config?.checked?.color || "black" : config?.unchecked?.color || "white";
             const checkboxElement = createSvgSquareElement(x, y, elementSize, color);
-
-            if (responsive) {
-                // TODO: actually have this modify the state with a different method.
-                checkboxElement.setAttribute("onclick", `alert('checkbox ${id}')`);
-            }
-
             gElement.appendChild(checkboxElement);
 
             // text
@@ -1249,6 +1170,8 @@
                 'http://www.w3.org/2000/svg',
                 'g'
             );
+
+            gElement.setAttribute("id", id);
 
             const spacing = 10;
 
@@ -1286,10 +1209,9 @@
         // sweet sweet SVGs! Pixel perfection!
         /**
          * @param {Configuration} configuration
-         * @param {boolean} [responsive=false] - allows on click to modify elements
          * @returns {Promise<SVGSVGElement>}
          */
-        async function getConfigurationToSvgElement(configuration, responsive = false) {
+        async function getConfigurationToSvgElement(configuration) {
             const { title, description, items, state, configs } = configuration;
 
             const configDefault = configs["default"];
@@ -1325,7 +1247,7 @@
                     const value = state === undefined ? undefined : state[id]?.checkbox;
                     const config = configDefault?.checkbox;
 
-                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config, responsive);
+                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config);
                     svg.append(checkboxGroup);
 
                 } else if (input === "likert") {
@@ -1347,6 +1269,43 @@
 
         //#endregion "svg"
 
+        // can get the target which could have the target and the id
+        function onclickSvg(e) {
+            console.log("clicked SVG")
+            //console.log(e);
+            const target = e?.target;
+            const parentElement = target?.parentElement;
+ 
+
+            // console.log(target);
+            // console.log(parentElement)
+
+
+            const nodeName = parentElement?.nodeName;
+            //console.log(nodeName);
+
+            const id = parentElement?.id;
+            //console.log(id);
+
+            // update the state
+
+            const configuration = getConfigurationSnapshot();
+            const value = configuration?.state[id];
+            // Object.prototype.hasOwnProperty.apply(configuration.state, id)
+            if (value) {
+                console.log(id);
+                console.log(value)
+                const {checkbox} = value;
+
+                if (checkbox !== undefined) {
+                    configuration.state[id].checkbox = !checkbox;
+                }
+ 
+                console.log(configuration.state)
+                loadConfiguration(configuration);
+            }
+        }
+
         /**
          * @param {Configuration} configuration
          */
@@ -1355,8 +1314,10 @@
             // for testing purposes allow preview on the canvas
             const div = document.getElementById("div_configuration_svg");
 
-            const responsive = true;
-            const svg = await getConfigurationToSvgElement(configuration, responsive);
+            const svg = await getConfigurationToSvgElement(configuration);
+
+            // responsive all handled on the top level element
+            svg.setAttribute("onclick", "onclickSvg(event)");
 
             // reset
             div.innerText = "";
@@ -1526,15 +1487,8 @@
 
             const configuration = getConfigurationSnapshot()
 
-            // draw the configuration on a canvas
-            // saveConfigurationImageCanvas(configuration);
-
             // draw the configuration as an svg
             await saveConfigurationImageSvg(configuration);
-
-
-            // save the canvas
-            // same as saving json
         }
 
         //#endregion "buttons"
@@ -1550,7 +1504,6 @@
             // useful if always want a shareable url
             //saveSnapshotToUrlHash();
         }
-
 
 
         /**
@@ -1576,6 +1529,7 @@
              */
             let configuration = undefined;
             if (urlHash.length === 0) {
+                // use default MD configuration
                 configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
             } else {
                 configuration = await getConfigurationFromTextHex(urlHash);

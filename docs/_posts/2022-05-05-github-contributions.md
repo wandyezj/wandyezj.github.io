@@ -39,6 +39,12 @@ I always forget the git commands to set up a Pull Request to Open Source project
 
     _note_: `NAME` is the name of the new branch. Recommended to be username/description, username is your github username, and description is a short description of the change
 
+1. Push the branch
+
+    > git push
+
+    _note_: This will git you the actual command to run to push to origin.
+
 1. make and commit changes to the local repostiory
     > git add
 

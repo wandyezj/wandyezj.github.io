@@ -104,6 +104,10 @@
 
 - understand security with practice
 
+[Content Security Policy](https://content-security-policy.com/)
+
+- essential for webpages
+
 ### JavaScript Libraries
 
 [chart js](https://www.chartjs.org/)

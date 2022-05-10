@@ -41,6 +41,8 @@ IntelliSense places an icon next to variables that are being referenced from a h
 
 variables throw if accessed for a value without being assigned to, this also shows up a syntax error.
 
+Is 
+
 ## Scope
 
 scope is defined by indentation
@@ -127,17 +129,22 @@ select expression
 
 ```text
 
+while expression
+    statements
+
+```
+
+
+Go through an iterator
+
+```text
+
 for identifier in iterable
     statements
 
 ```
 
-```text
 
-while expression
-    statements
-
-```
 
 specialized control flow
 
@@ -182,8 +189,15 @@ label while expression
 
 Use python text instead of weird symbols `and` `or` `not`
 
+## functions
+
 ## Generator
 
+actually needs `yield` and `return`
+
+Generators should simply return an iterator
+
+{value T, done boolean}
 
 ## Import
 
@@ -197,3 +211,6 @@ provide a hash of the library?
 import library
 
 ```
+
+
+## Threading Support

@@ -2,8 +2,31 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
+    <meta charset="UTF-8" />
     <title>Checklist</title>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <!--
+        https://content-security-policy.com/script-src/
+        remove unsafe-inline
+        replace this with a hash of the script
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+        
+
+        cat ./checklist.js | openssl sha512 -binary | openssl base64
+        script-src 'sha512-HASH'
+
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin
+
+        <script src="checklist.js" integrity="sha512-HASH" crossorigin="anonymous"></script>
+
+        For normal development use 'self' 'unsafe-inline'
+    -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'">
+
+    <!-- development - can be convenient to refresh automatically (every 30 seconds)-->
+    <!-- <meta http-equiv="refresh" content="30"> -->
+    
 </head>
 
 <body>
@@ -36,7 +59,6 @@
 
     <br>
     <div id="div_configuration_svg"></div>
-
     <script>
 
         //#region "definitions"
@@ -321,7 +343,8 @@
                         itemTitle = line.substring(delimiterListItemLikert.length).trim();
                         itemInput = ConfigurationInputType.Likert;
                         // How to store the value as part of the item?
-                        itemValue = undefined;
+                        // undefined will be removed from stringify
+                        itemValue = null;
                     }
 
                     let itemDescription = undefined;
@@ -348,7 +371,6 @@
                     });
 
                     state[itemId] = { [itemInput]: itemValue };
-
 
                 } else if (isListItemLikert) {
                     // 
@@ -535,10 +557,13 @@
             const configuration = globalConfiguration;
 
             // clone configuration
+            const s = JSON.stringify(configuration);
+
             /**
              * @type {Configuration}
              */
-            const snapshot = JSON.parse(JSON.stringify(configuration));
+            const snapshot = JSON.parse(s);
+
 
             return snapshot
         }
@@ -1039,7 +1064,8 @@
                 const dx = getDx(index);
 
                 // TODO: differentiate selected
-                const strokeWidth = value === selection ? 3 : 1;
+                debugger;
+                const strokeWidth = value === selection ? 5 : 1;
                 const optionElement = createSvgCircleElement(x + dx, y, elementSize, color, strokeWidth, description);
 
                 return optionElement;
@@ -1132,6 +1158,9 @@
             console.log("clicked SVG")
             //console.log(e);
             const target = e?.target;
+            /**
+             * @type HTMLElement
+             */
             const parentElement = target?.parentElement;
  
 
@@ -1152,11 +1181,26 @@
             // Object.prototype.hasOwnProperty.apply(configuration.state, id)
             if (value) {
                 console.log(id);
-                console.log(value)
-                const {checkbox} = value;
+                console.log(value);
+                const {checkbox, likert} = value;
 
-                if (checkbox !== undefined) {
+                const isCheckbox = Object.prototype.hasOwnProperty.call(value, "checkbox");
+                const isLikert = Object.prototype.hasOwnProperty.call(value, "likert");
+
+                if ([isCheckbox, isLikert].filter(x => x).length > 1) {
+                    console.error(`${id} has multiple values defined`);
+                }
+
+                if (isCheckbox) {
+                    console.log(`clicked checkbox ${id}`);
                     configuration.state[id].checkbox = !checkbox;
+                }
+
+                if (isLikert) {
+                    console.log(`clicked likert ${id}`);
+                    // will need to change if there is a new way of storing the text
+                    const title = parentElement.firstChild.firstChild.firstChild.data;
+                    configuration.state[id].likert = title
                 }
  
                 console.log(configuration.state)

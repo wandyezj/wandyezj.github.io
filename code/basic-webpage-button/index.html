@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Title</title>
+  </head>
+  <body>
+    <h1>Heading</h1>
+    <p>paragraph</p>
+    <button id="button_hello">Hello</button>
+    <button id="button_close">Close</button>
+  </body>
+  <script>
+
+    // log to console
+    const button_hello = document.getElementById("button_hello");
+    button_hello.onclick = () => {
+      console.log("Hello World");
+    }
+
+    // close the tab
+    const button_close = document.getElementById("button_close");
+    button_close.onclick = () => {
+      window.close();
+    }
+
+  </script>
+</html>

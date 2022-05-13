@@ -187,28 +187,28 @@
     "likert": {
         "options":[
             {
-                "value":"strongly agree",
-                "description":"always",
-                "color":"green"
+                "value":"always",
+                "description":"strongly agree",
+                "color":"lime"
             },
             {
-                "value":"agree",
-                "description":"mostly",
-                "color":"blue"
+                "value":"mostly",
+                "description":"agree",
+                "color":"lightcyan"
             },
             {
-                "value":"neutral",
-                "description":"unknown",
+                "value":"unknown",
+                "description":"neutral",
                 "color":"white"
             },
             {
-                "value":"disagree",
-                "description":"rarely",
+                "value":"rarely",
+                "description":"disagree",
                 "color":"yellow"
             },
             {
-                "value":"strongly disagree",
-                "description":"never",
+                "value":"never",
+                "description":"strongly disagree",
                 "color":"red"
             }
         ]
@@ -224,6 +224,8 @@
     > example item description
 
 - (likert) some likert
+
+- (likert) another likert
 
 `;
 
@@ -1063,10 +1065,11 @@
                 // offset between elements
                 const dx = getDx(index);
 
-                // TODO: differentiate selected
-                debugger;
-                const strokeWidth = value === selection ? 5 : 1;
-                const optionElement = createSvgCircleElement(x + dx, y, elementSize, color, strokeWidth, description);
+                // differentiate selected via strokeWidth
+                const tooltip = description; // currently used as the selection
+                const strokeWidth = tooltip === selection ? 3 : 1;
+
+                const optionElement = createSvgCircleElement(x + dx, y, elementSize, color, strokeWidth, tooltip);
 
                 return optionElement;
 
@@ -1082,8 +1085,6 @@
             const textElement = createSvgTextElement(x + dx, y + dy, title);
             gElement.appendChild(textElement);
 
-
-
             return gElement;
 
         }
@@ -1097,7 +1098,7 @@
             const { title, description, items, state, configs } = configuration;
 
             const configDefault = configs["default"];
-            console.log(configDefault);
+            //console.log(configDefault);
 
             const elementSize = 10;
 
@@ -1155,33 +1156,21 @@
 
         // can get the target which could have the target and the id
         function onclickSvg(e) {
-            console.log("clicked SVG")
-            //console.log(e);
+            //console.log("clicked SVG")
             const target = e?.target;
             /**
              * @type HTMLElement
              */
             const parentElement = target?.parentElement;
  
-
-            // console.log(target);
-            // console.log(parentElement)
-
-
             const nodeName = parentElement?.nodeName;
-            //console.log(nodeName);
-
             const id = parentElement?.id;
-            //console.log(id);
 
             // update the state
 
             const configuration = getConfigurationSnapshot();
             const value = configuration?.state[id];
-            // Object.prototype.hasOwnProperty.apply(configuration.state, id)
             if (value) {
-                console.log(id);
-                console.log(value);
                 const {checkbox, likert} = value;
 
                 const isCheckbox = Object.prototype.hasOwnProperty.call(value, "checkbox");
@@ -1192,18 +1181,21 @@
                 }
 
                 if (isCheckbox) {
-                    console.log(`clicked checkbox ${id}`);
+                    //console.log(`clicked checkbox ${id}`);
                     configuration.state[id].checkbox = !checkbox;
                 }
 
                 if (isLikert) {
-                    console.log(`clicked likert ${id}`);
+                    //console.log(`clicked likert ${id}`);
                     // will need to change if there is a new way of storing the text
-                    const title = parentElement.firstChild.firstChild.firstChild.data;
-                    configuration.state[id].likert = title
+                    const title = target.firstChild.firstChild.data;
+                    // allow de-selection
+                    const current = configuration.state[id].likert;
+
+                    configuration.state[id].likert = current === title ? null : title;
                 }
  
-                console.log(configuration.state)
+                //console.log(configuration.state)
                 loadConfiguration(configuration);
             }
         }

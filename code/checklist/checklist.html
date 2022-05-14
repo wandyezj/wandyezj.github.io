@@ -13,7 +13,7 @@
         <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
         
 
-        cat ./checklist.js | openssl sha512 -binary | openssl base64
+        cat ./checklist.js | openssl sha256 -binary | openssl base64
         script-src 'sha512-HASH'
 
         https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin
@@ -21,8 +21,13 @@
         <script src="checklist.js" integrity="sha512-HASH" crossorigin="anonymous"></script>
 
         For normal development use 'self' 'unsafe-inline'
+
+        Hashes
+            - main script tag
     -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'">
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'"> -->
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' ">
 
     <!-- development - can be convenient to refresh automatically (every 30 seconds)-->
     <!-- <meta http-equiv="refresh" content="30"> -->
@@ -1213,8 +1218,8 @@
             const svg = await getConfigurationToSvgElement(configuration);
 
             // responsive all handled on the top level element
-            svg.setAttribute("onclick", "onclickSvg(event)");
-
+            //svg.setAttribute("onclick", "onclickSvg(event)");
+            //svg.onclick = onclickSvg;
 
             // set the contents of the div element
             const div = document.getElementById("div_configuration_svg");
@@ -1431,6 +1436,9 @@
             // End - Test
 
             drawConfigurationImage()
+
+            // update
+            document.getElementById("div_configuration_svg").onclick = onclickSvg;
 
             // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;

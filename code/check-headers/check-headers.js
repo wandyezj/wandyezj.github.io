@@ -1,4 +1,6 @@
 // check headers for a url
+// can also do with curl
+// curl -i url
 
 const process = require("process")
 

@@ -2,6 +2,8 @@
 
 Attempt to create a simple scripting language.
 
+The scripting language cannot be thought of as separate from supporting tools. Tools must exist to support the language.
+
 ## Comments
 
 Comments start with hash `#`
@@ -214,3 +216,46 @@ import library
 
 
 ## Threading Support
+
+
+## Objects and methods
+
+Objects are sets of data
+
+```text
+interface o {
+    dataA typeA
+    dataB typeB
+}
+
+```
+
+methods can be declared to act on objects
+
+```text
+
+function method(item o, parameter typeP) {
+
+}
+
+# function can then be accessed
+
+method(o, parameter)
+
+# same as
+
+o.method(parameter)
+
+# dot notation keys intellisense to provide options
+
+```
+
+
+
+## Metadata Tag Types
+
+Allow annotation of method or blocks of code that prove certain things about that code.
+
+Does not access X resource or Does access X resource, takes up so much space, has specific complexity, etc..
+
+Is there a way to automatically analyze space time complexity of a function given the types? That seems like a useful tool...

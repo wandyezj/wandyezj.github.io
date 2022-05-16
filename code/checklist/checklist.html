@@ -10,7 +10,8 @@
         https://content-security-policy.com/script-src/
         remove unsafe-inline
         replace this with a hash of the script
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+        <meta http-equiv="Content-Security-Policy"
+         content="default-src 'self'">
         
 
         cat ./checklist.js | openssl sha256 -binary | openssl base64
@@ -25,7 +26,8 @@
         Hashes
             - main script tag
     -->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline'"> -->
+    <!-- <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'self' 'unsafe-inline'"> -->
 
     <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' ">
 

@@ -3,6 +3,33 @@
 // node ./embed-script-hash.js && cat ./checklist.js | openssl sha256 -binary | openssl base64
 
 /**
+ * 
+ * @param {string} s - string to search in
+ * @param {string} delimiterStart 
+ * @param {string} delimiterEnd
+ * @returns {string|undefined}
+ */
+function contentBetweenDelimiters(s, delimiterStart, delimiterEnd) {
+
+    const delimiterIndexStart = s.indexOf(delimiterStart);
+    const delimiterIndexEnd = s.indexOf(delimiterEnd, delimiterIndexStart + delimiterStart.length, );
+
+    const data = s.substring(delimiterIndexStart + delimiterStart.length, delimiterIndexEnd);
+
+    return data;
+}
+
+/**
+ * standardize newlines to proper unix line endings
+ * @param {string} s - string to standardize
+ * @return {string}
+ */
+ function standardizeNewlines(s) {
+    return s.replace(/\r/gm, "");
+}
+
+
+/**
  * Get the data between the first complete <script> </script> tags.
  * @param {string} data
  * @returns {string | undefined}
@@ -15,11 +42,16 @@ function getScriptData(data) {
     const delimiterScriptOpen = "<script>";
     const delimiterScriptClose = "</script>";
 
-    const scriptOpen = data.indexOf(delimiterScriptOpen);
-    const scriptClose = data.indexOf(delimiterScriptClose, scriptOpen);
+    // const scriptOpen = data.indexOf(delimiterScriptOpen);
+    // const scriptClose = data.indexOf(delimiterScriptClose, scriptOpen);
 
-    const scriptData = data.substring(scriptOpen + delimiterScriptOpen.length, scriptClose)
-    return scriptData;
+    // const scriptData = data.substring(scriptOpen + delimiterScriptOpen.length, scriptClose)
+
+    const scriptData = contentBetweenDelimiters(data, delimiterScriptOpen, delimiterScriptClose);
+
+    // browser swaps \cr\lf to lf for hash calculation
+    const s = standardizeNewlines(scriptData)
+    return s;
 }
 
 /**
@@ -40,6 +72,7 @@ function getHash(data) {
 
     return `sha256-${digest}`;
 }
+
 
 /**
  * 
@@ -64,15 +97,19 @@ function main() {
         return 1;
     }
 
-    const filePathOut = "checklist.js";
+    
 
-    fs.writeFileSync(filePathOut,scriptData);
+    // test file contents for openssl calculation
+    //const filePathOut = "checklist.js";
+    //fs.writeFileSync(filePathOut,scriptData);
 
     // text
     // first 80
-    console.log(visible(scriptData.substring(0,80)));
+    //console.log(visible(scriptData.substring(0,80)));
     //last 80
-    console.log(visible(scriptData.substring(scriptData.length -80)));
+    //console.log(visible(scriptData.substring(scriptData.length -80)));
+
+    // needs to be cr/lf
 
     const scriptHash = getHash(scriptData);
 
@@ -81,6 +118,19 @@ function main() {
     // hmm... why is the hash not the same as the one the browser calculates?
 
     // embed hash in the document (don't actually modify the original document that's dangerous!) Instead create a new document with the hash embedded
+
+    const delimiterCspStart = `<meta http-equiv="Content-Security-Policy" content=`;
+    const delimiterCspEnd = `>`;
+    const csp = contentBetweenDelimiters(data, delimiterCspStart, delimiterCspEnd);
+    //console.log(csp);
+
+    // placeholder for the hash
+    const cspHashPlaceholder = "sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8="
+    const cspUpdated = csp.replaceAll(cspHashPlaceholder, scriptHash)
+
+    console.log(cspUpdated);
+
+    // now replace entire piece
 
 }
 

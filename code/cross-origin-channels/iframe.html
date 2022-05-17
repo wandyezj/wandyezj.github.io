@@ -1,22 +1,28 @@
 <!--
 
-        This page is used for the case that a page need to be able to connect and reconnect to another open tab on a different origin.
+    This page is used for the case that a page need to be able to connect and reconnect to another open tab on a different origin.
 
-        host loads iframe
+    host loads iframe
 
 
-        iframe <-loads-- host
-        iframe checks origin
-        iframe --here is message port-> host
+    iframe <-loads-- host
+    iframe checks origin
+    iframe --here is message port-> host
 
-        the message port is then used to control the iframe to
-        - open a channel with name
-                - opens a broadcast channel with name linked to a returned message port
-                        - if name exists first closes and then recreates the channel
-                - begins forwarding messages between port to broadcast channel
-                - returns message port for the channel that receives data and forwards data along the broadcast channel
-        - close a channel with name
-                - closes broadcast channel with name and associated message port
+    the message port is then used to control the iframe to
+    - open a channel with name
+            - opens a broadcast channel with name linked to a returned message port
+                    - if name exists first closes and then recreates the channel
+            - begins forwarding messages between port to broadcast channel
+            - returns message port for the channel that receives data and forwards data along the broadcast channel
+    - close a channel with name
+            - closes broadcast channel with name and associated message port
+
+
+    Security
+        since any page could load the iframe, 
+        Content Security Policy should be applied to only allows specific urls to be ancestors.
+        This ensures only approved pages have access to the channel.
 
 -->
 <!DOCTYPE html>

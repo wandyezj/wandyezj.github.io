@@ -19,6 +19,7 @@
     - wait to receive control port from loaded iframe via post message (important the register must happen before the iframe is loaded)
 
   TEST
+    > npx serve --cors -l 5000 %r%\wandyezj.github.io\code\cross-origin-channels
     - use control port to create channel
     - message through the created channel
 
@@ -34,7 +35,15 @@
 </head>
 
 <body>
-    <button id="button_send_random" hidden> Send Random Message</button>
+    <textarea  id="textarea_channel_name" rows="1" cols="30" hidden>test</textarea>
+    <br>
+    <br>
+    <button id="button_channel_open" hidden> Open Channel</button>
+    <button id="button_channel_close" hidden> Close Channel</button>
+    <br>
+    <br>
+    <button id="button_channel_send" hidden> Send Channel Random Message</button>
+
     <script>
         /**
          * name of this page
@@ -62,11 +71,25 @@
          */
         let controlPort;
 
-        async function runtests() {
-            log("run tests");
+        /**
+         * get channel name from the text area
+         */
+        function getChannelName() {
+            const textarea = document.getElementById("textarea_channel_name");
+            const name = textarea.value;
+            return name;
+        }
 
-            const channelName = "test";
+        /**
+         * channelName -> channel MessagePort
+         * @type {Map<string, MessagePort>}
+         */
+        let channels = new Map();
 
+        /**
+         * @param {string} channelName
+         */
+        async function channelOpen(channelName) {
             const { type, name, port } = await doControl({ type: "open", name: channelName });
 
             const typeExpected = "opened"
@@ -81,18 +104,84 @@
                 return;
             }
 
-            const sendRandomMessage = () => {
-                const randomValue = Math.floor(Math.random() * 100);
-                const messageData = `message ${randomValue}`;
-                log(`send (port): ${messageData}`);
-                port.postMessage(messageData);
-                // message should be received by another instance
+            channels.set(channelName, port);
+        }
+
+        /**
+         * @param {string} channelName
+         */
+        async function channelClose(channelName) {
+            const channel = channels.get(channelName);
+            if (channel === undefined) {
+                return;
+            }
+            channels.delete(channelName);
+
+            const { type, name, port } = await doControl({ type: "close", name: channelName });
+
+            const typeExpected = "closed"
+            if (type !== typeExpected) {
+                logError(`open returned type is ${type} expected ${typeExpected}`)
+                return;
             }
 
-            const button = document.getElementById("button_send_random")
-            button.onclick = sendRandomMessage;
+            const nameExpected = channelName;
+            if (name !== nameExpected) {
+                logError(`open returned name is ${name} expected ${nameExpected}`)
+                return;
+            }
+        }
+
+        /**
+         * @param {string} channelName
+         */
+        function channelSend(channelName, message) {
+            const channel = channels.get(channelName);
+            if (channel === undefined) {
+                log(`channel [${channelName}] is not open`);
+                return;
+            }
+
+            channel.postMessage(message);
+        }
+
+        async function buttonChannelOpen() {
+            const channelName = getChannelName();
+            await channelOpen(channelName);
+        }
+
+        async function buttonChannelClose() {
+            const channelName = getChannelName();
+            await channelClose(channelName);
+        }
+
+        function buttonChannelSend() {
+            const channelName = getChannelName();
+            const randomValue = Math.floor(Math.random() * 100);
+            const message = `message ${randomValue}`;
+
+            channelSend(channelName, message);
+        }
+
+        function setupButton(id, onclick) {
+            const button = document.getElementById(id)
+            button.onclick = onclick;
             button.hidden = false;
-            sendRandomMessage();
+        }
+
+        async function runtests() {
+            log("run tests - start");
+            await buttonChannelOpen();
+            await buttonChannelSend();
+            await buttonChannelClose();
+            await buttonChannelSend();
+            log("run tests - done");
+
+            log("setup buttons")
+            document.getElementById("textarea_channel_name").hidden = false;
+            setupButton("button_channel_open", buttonChannelOpen);
+            setupButton("button_channel_close", buttonChannelClose);
+            setupButton("button_channel_send", buttonChannelSend);
         }
 
         /**
@@ -124,7 +213,7 @@
 
 
             // set up iframe
-            const source = window.self.origin + "/extension.html";
+            const source = window.self.origin + "/iframe.html";
             const iframe = document.createElement("iframe");
 
             iframe.hidden = true;
@@ -147,6 +236,7 @@
 
                             // handle messages from the control port
                             controlPort.addEventListener("message", handleControlMessage);
+                            controlPort.start();
 
                             if (test) {
                                 runtests();

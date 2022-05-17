@@ -132,7 +132,7 @@
             const channel = createChannel(channelName);
             channels.set(channelName, channel);
 
-            log(`${name} send port for channel ${channelName} to parent`);
+            log(`send port for channel ${channelName} to parent`);
             const port = channel.port;
             controlMessageChannel.port1.postMessage({ type: "opened", name: channelName, port }, [port]);
         }
@@ -185,7 +185,7 @@
          * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
          */
         function initialize() {
-            console.log(`initialize ${name}`);
+            log(`initialize`);
             // Setup MessageChannel
 
             if (!inIframe()) {

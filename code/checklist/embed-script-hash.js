@@ -12,9 +12,31 @@
 function contentBetweenDelimiters(s, delimiterStart, delimiterEnd) {
 
     const delimiterIndexStart = s.indexOf(delimiterStart);
-    const delimiterIndexEnd = s.indexOf(delimiterEnd, delimiterIndexStart + delimiterStart.length, );
+    const delimiterIndexEnd = s.indexOf(delimiterEnd, delimiterIndexStart + delimiterStart.length);
 
-    const data = s.substring(delimiterIndexStart + delimiterStart.length, delimiterIndexEnd);
+    const indexStart = delimiterIndexStart + delimiterStart.length;
+    const indexEnd = delimiterIndexEnd;
+
+    const data = s.substring(indexStart, indexEnd);
+
+    return data;
+}
+
+/**
+ * 
+ * @param {string} s - string to search in
+ * @param {string} delimiterStart 
+ * @param {string} delimiterEnd
+ * @returns {string|undefined}
+ */
+function contentWithDelimiters(s, delimiterStart, delimiterEnd) {
+    const delimiterIndexStart = s.indexOf(delimiterStart);
+    const delimiterIndexEnd = s.indexOf(delimiterEnd, delimiterIndexStart + delimiterStart.length);
+
+    const indexStart = delimiterIndexStart
+    const indexEnd = delimiterIndexEnd + delimiterEnd.length;
+
+    const data = s.substring(indexStart, indexEnd);
 
     return data;
 }
@@ -83,12 +105,31 @@ function visible(data) {
     return`----\n${data.replace(/ /g, ".")}\n----`
 }
 
+const process = require("process");
+
 function main() {
-    const filePath = "checklist.html";
+
+    
+    const args = process.argv.slice(2);
+
+
+    if (args.length !== 3) {
+        console.log(args)
+        console.log("usage: [file in]  [file out] [csp placeholder]")
+        return 1
+    }
+
+    const [filePathIn, filePathOut, cspHashPlaceholder] = args;
+    console.log(`
+in: ${filePathIn}
+out: ${filePathOut}
+place: ${cspHashPlaceholder}
+`);
+
 
     // read file data
     const fs = require('fs');
-    const data = fs.readFileSync(filePath, { encoding: "utf-8" });
+    const data = fs.readFileSync(filePathIn, { encoding: "utf-8" });
 
     const scriptData = getScriptData(data);
 
@@ -97,11 +138,9 @@ function main() {
         return 1;
     }
 
-    
-
     // test file contents for openssl calculation
-    //const filePathOut = "checklist.js";
-    //fs.writeFileSync(filePathOut,scriptData);
+    //const filePathJsOut = "checklist.js";
+    //fs.writeFileSync(filePathJsOut,scriptData);
 
     // text
     // first 80
@@ -113,7 +152,9 @@ function main() {
 
     const scriptHash = getHash(scriptData);
 
-    console.log(scriptHash);
+    console.log(`Calculated Hash:
+${scriptHash}
+`);
 
     // hmm... why is the hash not the same as the one the browser calculates?
 
@@ -121,18 +162,31 @@ function main() {
 
     const delimiterCspStart = `<meta http-equiv="Content-Security-Policy" content=`;
     const delimiterCspEnd = `>`;
-    const csp = contentBetweenDelimiters(data, delimiterCspStart, delimiterCspEnd);
-    //console.log(csp);
+    const csp = contentWithDelimiters(data, delimiterCspStart, delimiterCspEnd);
+    // console.log(csp);
 
     // placeholder for the hash
-    const cspHashPlaceholder = "sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8="
+    //const cspHashPlaceholder = "sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8="
+
+    const cspHashPlaceholderPresent = csp.includes(cspHashPlaceholder);
+    if (!cspHashPlaceholderPresent) {
+        console.log(`no instance of csp placeholder [${cspHashPlaceholder}] for csp [${csp}]`)
+        return 1;
+    }
+
     const cspUpdated = csp.replaceAll(cspHashPlaceholder, scriptHash)
 
-    console.log(cspUpdated);
+    console.log(`Updated csp
+${cspUpdated}
+`);
 
-    // now replace entire piece
+    const dataUpdated = data.replace(csp, cspUpdated)
+
+    fs.writeFileSync(filePathOut, dataUpdated, {encoding:"utf-8"});
+    console.log(`wrote update to:
+${filePathOut}`)
 
 }
 
 
-main();
+process.exit(main());

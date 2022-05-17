@@ -58,7 +58,7 @@
          */
         function log(message) {
             if (test) {
-                console.log(`${name} ${message}`);
+                console.log(`${name}   > ${message}`);
             }
         }
 
@@ -104,6 +104,12 @@
                 return;
             }
 
+            port.addEventListener("message",(message) => {
+                const {data} = message;
+                log(`channel [${channelName}] received: ${data}`);
+            });
+            port.start();
+
             channels.set(channelName, port);
         }
 
@@ -142,16 +148,19 @@
                 return;
             }
 
+            log(`channel [${channelName}] send: ${message}`);
             channel.postMessage(message);
         }
 
         async function buttonChannelOpen() {
             const channelName = getChannelName();
+            log(`button - open channel [${channelName}]`);
             await channelOpen(channelName);
         }
 
         async function buttonChannelClose() {
             const channelName = getChannelName();
+            log(`button - close channel [${channelName}]`);
             await channelClose(channelName);
         }
 
@@ -160,6 +169,7 @@
             const randomValue = Math.floor(Math.random() * 100);
             const message = `message ${randomValue}`;
 
+            log(`button - send channel [${channelName}] message: ${message}`);
             channelSend(channelName, message);
         }
 
@@ -175,6 +185,7 @@
             await buttonChannelSend();
             await buttonChannelClose();
             await buttonChannelSend();
+            await buttonChannelOpen();
             log("run tests - done");
 
             log("setup buttons")
@@ -209,7 +220,7 @@
          * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
          */
         function initialize() {
-            console.log(`initialize ${name}`);
+            log(`initialize`);
 
 
             // set up iframe
@@ -219,7 +230,7 @@
             iframe.hidden = true;
 
             const onMessage = (e) => {
-                console.log(`${name} received (window.message):`);
+                log(`received (window.message):`);
                 if (e) {
                     const { data } = e;
                     if (data && data.type === "port") {
@@ -248,7 +259,7 @@
 
             window.addEventListener("message", onMessage);
 
-            console.log(`${name} set iframe source`);
+            log(`set iframe source`);
             iframe.src = source;
             document.body.appendChild(iframe);
         }

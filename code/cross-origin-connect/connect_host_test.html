@@ -1,0 +1,185 @@
+<!--
+
+  This is a TEST page used to test loading the iframe and cross origin communication.
+
+  Goal:
+
+    allow a tab on a different origin to be able to consistently connect to another tab on a different origin.
+
+  Diagram:
+
+    tab (on origin) <- broadcast channel -> iframe (on origin) <- message port -> host (on different origin that loads iframe)
+
+  Setup:
+
+    this test page acts as both the `tab` and `host` to test the iframe
+
+    - register listener on origin broadcast channel
+    - dynamically create iframe
+    - wait to receive port from loaded iframe via post message (important the register must happen before the iframe is loaded)
+    - register listener on port
+
+  Test:
+
+    - send message over broadcast channel which should be received by the port
+    - send message over port with should be received by broadcast channel
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+  </head>
+
+  <body>
+    <button id="button_send_random" hidden> Send Random Message</button>
+    <script>
+      /**
+       * test mode
+       */
+      const test = true;
+
+      /**
+       * name of this page
+       */
+      const name = "host";
+
+      /**
+       * logs the message if test
+       * @param message {string} - message to log
+       */
+      function log(message) {
+        if (test) {
+          console.log(`${name} ${message}`);
+        }
+      }
+
+      /**
+       * Checks that the provided origin is in a list of allowed origins.
+       * Only returns a string in allowedOrigins so that external origin data can not be returned.
+       *
+       * @param origin {string}
+       * @param allowedOrigins {string[]}
+       * @returns {string|undefined} allowed origin or undefined if not an allowed origin.
+       */
+      function getAllowedOrigin(origin, allowedOrigins) {
+        const matchingOrigins = allowedOrigins.filter((x) => x === origin);
+        const count = matchingOrigins.length;
+        if (count === 1) {
+          const match = matchingOrigins[0];
+          return match;
+        } else if (count === 0) {
+          // No origin matched
+          return undefined;
+        }
+
+        // multiple origins matched - means there is a bug.
+        throw new Error(`Origin matched more than one allowed origin`);
+      }
+
+      /**
+       * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+       */
+      function initialize() {
+        log("initialize");
+
+        /**
+         * Origin this html page loaded from
+         */
+        const ownOrigin = window.self.origin;
+
+        // in actual host implementation the selected soure origin would be the origin hosting the extension
+        // select allows the origin to be selected at runtime from different environments
+        const iframeOriginSelected = test ? ownOrigin : "ACTUAL ORIGIN";
+
+        /**
+         * origins from which MessagePort implementation can be received
+         */
+        const allowedOrigins = [
+          // ONLY include trusted origins.
+          // Should only include ACTUAL ORIGIN
+        ];
+
+        // For testing, trust the origin hosting the iframe
+        if (test) {
+          allowedOrigins.push(ownOrigin);
+        }
+
+        // iframe can only come from allowed set of origins
+        const iframeOrigin = getAllowedOrigin(iframeOriginSelected, allowedOrigins);
+
+        if (iframeOrigin === undefined) {
+          console.error(`ERROR: ${name} must be load an iframe from a valid origin`);
+          return;
+        }
+
+        const onMessage = (e) => {
+          log(`received (window.message)`);
+          if (e) {
+            const { origin, data } = e;
+            // must be from the iframe origin and have the right message type
+            // MUST check that the origin came from the iframe for security purposes.
+            if (
+              origin !== undefined &&
+              origin === iframeOrigin &&
+              data &&
+              data.type === "port"
+            ) {
+              // Don't need to keep listening
+              window.removeEventListener("message", onMessage);
+
+              /**
+               * @type {MessagePort}
+               */
+              const port = data.port;
+              if (port) {
+                // register event listener for the port
+                port.addEventListener("message", (message) => {
+                  const { data } = message;
+                  log(`received (port): ${data}`);
+                });
+
+                // if using addEventListener need to start the port.
+                port.start();
+
+                if (test) {
+                  const sendRandomMessage = ()=> {
+                    // TEST message not to be in actual implementation of host
+                    const randomValue = Math.floor(Math.random() * 100);
+                    const messageData = `message ${randomValue}`;
+                    log(`send (port): ${messageData}`);
+                    port.postMessage(messageData);
+                    // message should be received by another instance
+                  }
+
+                  const button = document.getElementById("button_send_random")
+                  button.onclick = sendRandomMessage;
+                  button.hidden = false;
+                  sendRandomMessage();
+                }
+              }
+            }
+          }
+        };
+        // set this up before loading the iframe
+        window.addEventListener("message", onMessage);
+
+        // set up iframe
+        log(`set up iframe`);
+        const source = iframeOrigin + "/connect.html";
+        const iframe = document.createElement("iframe");
+        iframe.hidden = true;
+        // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#attr-sandbox
+        // no reason not to lock it down.
+        iframe.sandbox = "allow-scripts allow-same-origin";
+        iframe.src = source;
+        document.body.appendChild(iframe);
+      }
+
+      initialize();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,170 @@
+<!--
+
+  This page is used to test loading the iframe by a host
+
+  Goal:
+
+    allow a tab on a different origin to be able to consistently connect to another tab on a different origin.
+
+  Diagram:
+
+    host (on different origin that loads iframe) <-message port-> iframe (on origin) <-broadcast channel-> iframe (on origin) <-message port-> host (on different origin that loads iframe)
+
+  Setup:
+
+    this test page acts as the `host` on both ends to test the iframe
+
+    - register listener on origin broadcast channel
+    - dynamically create iframe
+    - wait to receive control port from loaded iframe via post message (important the register must happen before the iframe is loaded)
+
+  TEST
+    - use control port to create channel
+    - message through the created channel
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- <meta http-equiv="Expires" content="0" /> -->
+</head>
+
+<body>
+    <button id="button_send_random" hidden> Send Random Message</button>
+    <script>
+        /**
+         * name of this page
+         */
+        const name = "host";
+
+        const test = true;
+
+        /**
+         * logs message if in test mode.
+         * @param {string} message
+         */
+        function log(message) {
+            if (test) {
+                console.log(`${name} ${message}`);
+            }
+        }
+
+        function logError(message) {
+            console.error(`ERROR: ${name} ${message}`);
+        }
+
+        /**
+         * @type {MessagePort}
+         */
+        let controlPort;
+
+        async function runtests() {
+            log("run tests");
+
+            const channelName = "test";
+
+            const { type, name, port } = await doControl({ type: "open", name: channelName });
+
+            const typeExpected = "opened"
+            if (type !== typeExpected) {
+                logError(`open returned type is ${type} expected ${typeExpected}`)
+                return;
+            }
+
+            const nameExpected = channelName;
+            if (name !== nameExpected) {
+                logError(`open returned name is ${name} expected ${nameExpected}`)
+                return;
+            }
+
+            const sendRandomMessage = () => {
+                const randomValue = Math.floor(Math.random() * 100);
+                const messageData = `message ${randomValue}`;
+                log(`send (port): ${messageData}`);
+                port.postMessage(messageData);
+                // message should be received by another instance
+            }
+
+            const button = document.getElementById("button_send_random")
+            button.onclick = sendRandomMessage;
+            button.hidden = false;
+            sendRandomMessage();
+        }
+
+        /**
+         * @type {({type: "opened" | "closed", name: string, port: MessagePort} | {type: "closed", name: string}) => void}
+         */
+        let nextControlMessageResolve;
+        async function doControl(message) {
+            const promise = new Promise((resolve) => {
+                nextControlMessageResolve = resolve;
+            });
+            controlPort.postMessage(message);
+
+            const result = await promise;
+            return result;
+        }
+
+        /**
+         * @type {MessageEvent<any>} message
+         */
+        function handleControlMessage(message) {
+            nextControlMessageResolve(message.data);
+        }
+
+        /**
+         * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+         */
+        function initialize() {
+            console.log(`initialize ${name}`);
+
+
+            // set up iframe
+            const source = window.self.origin + "/extension.html";
+            const iframe = document.createElement("iframe");
+
+            iframe.hidden = true;
+
+            const onMessage = (e) => {
+                console.log(`${name} received (window.message):`);
+                if (e) {
+                    const { data } = e;
+                    if (data && data.type === "port") {
+                        /**
+                         * @type {MessagePort}
+                         */
+                        const port = data.port;
+                        if (port) {
+                            log("received port");
+                            controlPort = port;
+
+                            // no need to listen further
+                            window.removeEventListener("message", onMessage);
+
+                            // handle messages from the control port
+                            controlPort.addEventListener("message", handleControlMessage);
+
+                            if (test) {
+                                runtests();
+                            }
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener("message", onMessage);
+
+            console.log(`${name} set iframe source`);
+            iframe.src = source;
+            document.body.appendChild(iframe);
+        }
+
+        initialize();
+    </script>
+</body>
+
+</html>

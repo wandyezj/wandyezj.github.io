@@ -1,0 +1,188 @@
+<!--
+
+  This page is used for the case that a page need to be able to connect and reconnect to another open tab on a different origin.
+
+  host loads iframe
+
+
+  iframe <-loads-- host
+  iframe checks origin
+  iframe --here is message port-> host
+
+  begin forwarding messages between port to broadcast channel
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <!-- When the scripts change CSP hashes need to be updated -->
+    <!-- <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'none'; script-src 'sha256-x'"
+    /> -->
+
+    <script>
+      /**
+       * test mode
+       */
+      const test = true;
+
+      /**
+       * name of this page
+       */
+      const name = "iframe";
+
+      /**
+       * connection between iframe and host parent
+       * @type {MessageChannel}
+       * https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel
+       */
+      let messageChannel;
+
+      /**
+       * connection between iframe and tab on same origin
+       * @type {BroadcastChannel}
+       * https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel
+       */
+      let broadcastChannel;
+
+      /**
+       * logs the message if test
+       * @param message {string} - message to log
+       */
+      function log(message) {
+        if (test) {
+          console.log(`${name} ${message}`);
+        }
+      }
+
+      /**
+       * @returns {boolean} true if the page is loaded in an iframe
+       */
+      function inIframe() {
+        try {
+          return window.self !== window.top;
+        } catch (e) {
+          return true;
+        }
+      }
+
+      /**
+       * Checks that the provided origin is in a list of allowed origins.
+       * Only returns a string in allowedOrigins so that external origin data is never returned.
+       *
+       * @param origin {string}
+       * @param allowedOrigins {string[]}
+       * @returns {string|undefined} allowed origin or undefined if not an allowed origin.
+       */
+      function getAllowedOrigin(origin, allowedOrigins) {
+        const matchingOrigins = allowedOrigins.filter((x) => x === origin);
+        const count = matchingOrigins.length;
+        if (count === 1) {
+          const match = matchingOrigins[0];
+          return match;
+        } else if (count === 0) {
+          // No origin matched
+          return undefined;
+        }
+
+        // multiple origins matched - means there is a bug.
+        throw new Error(`Origin matched more than one allowed origin`);
+      }
+
+      /**
+       * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+       */
+      function initialize() {
+        log("initialize");
+
+        if (!inIframe()) {
+          console.error("ERROR: extension.html must be loaded in an iframe");
+          return;
+        }
+
+        /**
+         * Origin this html page loaded from
+         */
+        const ownOrigin = window.self.origin;
+
+        // figure out origin URL, can only pick from the allowedOrigins list.
+        const host = window.parent;
+        const parentOrigin = window.parent.origin;
+
+        if (test && ownOrigin !== parentOrigin) {
+          console.error("ERROR: test requires parent origin to be own origin");
+          return;
+        }
+
+        const allowedOrigins = [
+          // List of allowed origins.
+          // ONLY include trusted origins
+        ];
+
+        // For testing allow own origin
+        if (test) {
+          allowedOrigins.push(ownOrigin);
+        }
+
+        /**
+         * Origin of the loading window, or undefined if not in the list of allowed origins
+         */
+        const hostOrigin = getAllowedOrigin(parentOrigin, allowedOrigins);
+
+        if (hostOrigin === undefined) {
+          console.error(`ERROR: ${name} must be loaded in a valid host`);
+          return;
+        }
+
+        // set up channels
+        messageChannel = new MessageChannel();
+        broadcastChannel = new BroadcastChannel("extension");
+
+        // use ports to hit each other
+        const { port1, port2 } = messageChannel;
+
+        //
+        // Set up channel message forwarding
+        //
+
+        port1.addEventListener("message", (message) => {
+          const { data } = message;
+          // Don't need to check origin, MessagePort messages can only come from the host if the host is on an allowed origin.
+          log(`received (port): ${data}`);
+          broadcastChannel.postMessage(data);
+        });
+
+        // must start the port since used addEventListener
+        port1.start();
+
+        broadcastChannel.addEventListener("message", (message) => {
+          const { data } = message;
+          // Don't need to check origin, BroadcastChannel messages can only come from same origin.
+          // https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/postMessage
+          log(`received (broadcast channel): ${data}`);
+          port1.postMessage(data);
+        });
+
+        //
+        // Message Parent
+        //
+
+        log("post message port to parent");
+
+        // send port that the parent can use to communicate to the iframe
+        // Send origin the port
+        // note: MUST specify the specific target origin.
+        host.postMessage({ type: "port", port: port2 }, hostOrigin, [port2]);
+      }
+
+      initialize();
+    </script>
+  </head>
+
+  <body></body>
+</html>

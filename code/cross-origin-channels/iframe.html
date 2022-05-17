@@ -1,0 +1,247 @@
+<!--
+
+        This page is used for the case that a page need to be able to connect and reconnect to another open tab on a different origin.
+
+        host loads iframe
+
+
+        iframe <-loads-- host
+        iframe checks origin
+        iframe --here is message port-> host
+
+        the message port is then used to control the iframe to
+        - open a channel with name
+                - opens a broadcast channel with name linked to a returned message port
+                        - if name exists first closes and then recreates the channel
+                - begins forwarding messages between port to broadcast channel
+                - returns message port for the channel that receives data and forwards data along the broadcast channel
+        - close a channel with name
+                - closes broadcast channel with name and associated message port
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    <script>
+        /**
+         * name of this page
+         */
+        const name = "iframe";
+
+        const test = true;
+
+        /**
+         * logs message if in test mode.
+         * @param {string} message
+         */
+        function log(message) {
+            if (test) {
+                console.log(`${name} ${message}`);
+            }
+        }
+
+        // {broadcastChannel: BroadcastChannel, messageChannel: MessageChannel, port: MessagePort, forwardPort: () => void, forwardBroadcast: () => void}
+        /**
+         * Everything releated to a single changnnel
+         * @typedef Channel
+         * @type {object}
+         * @property {BroadcastChannel} broadcastChannel
+         * @property {MessageChannel} messageChannel
+         * @property {MessagePort} port
+         * @property {() => void} forwardPort
+         * @property {() => void} forwardBroadcast
+         */
+
+        /**
+         * connection between iframe and host parent
+         * @type {MessageChannel}
+         * https://developer.mozilla.org/en-US/docs/Web/API/MessageChannel
+         */
+        let controlMessageChannel;
+
+        /**
+         * connection between iframe and tab on same origin
+         * @type {Map<string, Channel>}
+         * https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel
+         */
+        let channels = new Map();
+
+        function inIframe() {
+            try {
+                return window.self !== window.top;
+            } catch (e) {
+                return true;
+            }
+        }
+        /**
+         * creates a channel pair
+         * @param {string} channelName - name of the channel
+         * @returns {Channel}
+         */
+        function createChannel(channelName) {
+            // set up channels
+            const broadcastChannel = new BroadcastChannel(channelName);
+            const messageChannel = new MessageChannel();
+
+            // port1 - links to broadcast channel
+            // port2 - links to host
+            const { port1, port2 } = messageChannel;
+
+            // Set up forwarding between BroadcastChannel and MessageChannel.
+
+            // forward Message Channel port messages to Broadcast Channel
+            const forwardPort = (message) => {
+                const { data } = message;
+                log(`channel ${channelName} received (port) : ${data}`);
+                broadcastChannel.postMessage(data);
+            };
+            port1.addEventListener("message", forwardPort);
+
+            // if use addEventListener need to start the port
+            port1.start();
+
+            // forward Broadcast Channel messages to Message Channel port
+            const forwardBroadcast = (message) => {
+                const { data } = message;
+                log(`channel ${channelName} received (broadcast channel): ${data}`);
+                port1.postMessage(data);
+            };
+            broadcastChannel.addEventListener("message", forwardBroadcast);
+
+            return {
+                broadcastChannel,
+                messageChannel,
+                forwardPort,
+                forwardBroadcast,
+                port: port2
+            }
+        }
+
+        /**
+         * opens a channel
+         * @param {string} channelName - name of the channel
+         */
+        function openChannel(channelName) {
+            closeChannel(channelName);
+
+            const channel = createChannel(channelName);
+            channels.set(channelName, channel);
+
+            log(`${name} send port for channel ${channelName} to parent`);
+            const port = channel.port;
+            controlMessageChannel.port1.postMessage({ type: "opened", name: channelName, port }, [port]);
+        }
+
+        /**
+         * closes a channel
+         * @param {string} channelName
+         */
+        function closeChannel(channelName) {
+            const channel = channels.get(channelName)
+            if (channel === undefined) {
+                return;
+            }
+
+            // shutdown port and broadcast channel
+            channel.port.close();
+            channel.broadcastChannel.close();
+
+            // cleanup
+            channel.port.removeEventListener("message", channel.forwardPort);
+            channel.broadcastChannel.removeEventListener("message", channel.forwardBroadcast);
+
+            channels.delete(channelName);
+
+            controlMessageChannel.port1.postMessage({ type: "closed", name: channelName });
+        }
+
+        /**
+         * @param {MessageEvent<any>} message
+         */
+        function handleControlMessage(message) {
+            const { data } = message;
+
+            const { type, name } = data;
+
+            switch (type) {
+                case "open":
+                    openChannel(name);
+                    break;
+                case "close":
+                    closeChannel(name);
+                    break;
+                default:
+                    console.error(`ERROR: invalid command ${command}`);
+                    break;
+            }
+        }
+
+        /**
+         * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+         */
+        function initialize() {
+            console.log(`initialize ${name}`);
+            // Setup MessageChannel
+
+            if (!inIframe()) {
+                console.error("ERROR: extension.html must be loaded in an iframe");
+                return;
+            }
+
+            // figure out origin URL, can only pick from the allowedOrigins list.
+            const host = window.parent;
+            const parentOrigin = window.parent.origin;
+            const allowedOrigins = [
+                // list of allowed origins, very important for security!
+                // ONLY include trusted origins
+
+            ];
+
+            if (test) {
+                // For testing, trust the origin hosting the iframe
+                allowedOrigins.push(window.self.origin)
+            }
+
+            const matchingOrigins = allowedOrigins.filter(
+                (x) => x === parentOrigin
+            );
+            let origin =
+                matchingOrigins.length === 1 ? matchingOrigins[0] : undefined;
+
+            if (origin === undefined) {
+                console.error(`ERROR: ${name} must be loaded in a valid host`);
+                return;
+            }
+
+            // set up control channel
+            controlMessageChannel = new MessageChannel();
+
+            // port1 - on client
+            // port2 - on host
+            const { port1, port2 } = controlMessageChannel;
+            port1.addEventListener("message", handleControlMessage);
+
+            // if use addEventListener need to start the port
+            port1.start();
+
+            console.log(`${name} post control port to parent`);
+
+            // send port that the parent can use to communicate to the iframe
+            // Send origin the port
+            // note: MUST specify the specific target origin.
+            const port = port2;
+            host.postMessage({ type: "port", port }, origin, [port]);
+        }
+
+        initialize();
+    </script>
+</head>
+
+<body></body>
+
+</html>

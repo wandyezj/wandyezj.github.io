@@ -1,13 +1,23 @@
 # checklist todo
 
-- default svg favicon
+
+- share URL to clipboard button
+    - click button
+    - ctrl + v into open tab
+    - enter
+    - should show equivalent version
+
 
 - multi select support?
 
 
-- embed favicon icon in configuration png or svg (some browsers do not support)
-    - https://caniuse.com/link-icon-svg
-    - should this only allow PNG to avoid SVG security issues?
+
+- support descriptions on item (check and likert) text
+
+- support sections groups and overall title
+
+- way to view and edit markdown configuration
+
 
 - error checking for invalid file or invalid configuration
     - just make a simple JSON validator
@@ -34,6 +44,7 @@
     - no web requests
     - no use of eval
 - security
+    - Apply Content Security Policy
     - configuration is the main entry point for data can this inject anything?
     - Cross Site Scripting with the configuration is the major attack vector
         - https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html
@@ -82,3 +93,10 @@
     - json config
     - svg
     - support single select only 
+
+- [x] default svg favicon
+
+- [x] embed favicon icon in configuration png or svg (some browsers do not support)
+    - https://caniuse.com/link-icon-svg
+    - should this only allow PNG to avoid SVG security issues?
+    - CSP hashable?

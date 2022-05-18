@@ -1,21 +1,14 @@
 # checklist todo
 
-- replacement of HTML with svg as the display canvas
-    - event handler that takes care of the html
+- default svg favicon
 
-- likert support
-    - https://en.wikipedia.org/wiki/Likert_scale
-    - `- (likert)
-    - md format
-    - json config
-    - svg
-    - support single select only or multi select?
+- multi select support?
 
-- configuration support in markdown
+
 - embed favicon icon in configuration png or svg (some browsers do not support)
     - https://caniuse.com/link-icon-svg
     - should this only allow PNG to avoid SVG security issues?
-- default svg favicon
+
 - error checking for invalid file or invalid configuration
     - just make a simple JSON validator
         - allow validation of references, insistence that a string is a keyof another field can refer via dot notation
@@ -76,3 +69,16 @@
     - not supporting
         - legacy: IE, Safari
         - Non Chromium: Gecko, WebKit
+
+- [x] configuration support in markdown
+
+- [x] replacement of HTML with svg as the display canvas
+    - event handler that takes care of the html
+
+- [x] likert support
+    - https://en.wikipedia.org/wiki/Likert_scale
+    - `- (likert)
+    - md format
+    - json config
+    - svg
+    - support single select only 

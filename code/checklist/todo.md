@@ -1,23 +1,12 @@
 # checklist todo
 
-
-- share URL to clipboard button
-    - click button
-    - ctrl + v into open tab
-    - enter
-    - should show equivalent version
-
-
-- multi select support?
-
-
+- way to view and edit markdown configuration
 
 - support descriptions on item (check and likert) text
 
 - support sections groups and overall title
 
-- way to view and edit markdown configuration
-
+- multi select support?
 
 - error checking for invalid file or invalid configuration
     - just make a simple JSON validator
@@ -36,6 +25,16 @@
     - need new UI function to show error
     - from configuration parsers return success or failure codes
 - convert svg to png
+    - desireable to be able to load from svg as well, however this requires complex embedding
+- separate repository for project 
+- publish pipeline
+    - build
+    - publish
+    - embed csp hashes
+- create site to support page
+    - need server and web address
+    - need to apply CSP
+
 - writeup explaining security and privacy features
     - apply unlicense
     - svg sandbox for
@@ -100,3 +99,9 @@
     - https://caniuse.com/link-icon-svg
     - should this only allow PNG to avoid SVG security issues?
     - CSP hashable?
+
+- [x] share URL to clipboard button
+    - click button
+    - ctrl + v into open tab
+    - enter
+    - should show equivalent version

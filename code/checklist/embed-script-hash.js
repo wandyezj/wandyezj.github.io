@@ -112,6 +112,17 @@ function main() {
     
     const args = process.argv.slice(2);
 
+    // hash a specific file
+    // really want a config file that is passed in with the hashed to replace.
+    if (args.length === 1) {
+        const fs = require('fs');
+        const data = fs.readFileSync(args[0], { encoding: "utf-8" });
+        const hash = getHash(data);
+        console.log(`Calculated Hash:
+    ${hash}
+    `);
+        return 1;
+    }
 
     if (args.length !== 3) {
         console.log(args)
@@ -148,7 +159,7 @@ place: ${cspHashPlaceholder}
     //last 80
     //console.log(visible(scriptData.substring(scriptData.length -80)));
 
-    // needs to be cr/lf
+    // needs to be lf not cr/lf
 
     const scriptHash = getHash(scriptData);
 
@@ -156,17 +167,11 @@ place: ${cspHashPlaceholder}
 ${scriptHash}
 `);
 
-    // hmm... why is the hash not the same as the one the browser calculates?
-
     // embed hash in the document (don't actually modify the original document that's dangerous!) Instead create a new document with the hash embedded
 
     const delimiterCspStart = `<meta http-equiv="Content-Security-Policy" content=`;
     const delimiterCspEnd = `>`;
     const csp = contentWithDelimiters(data, delimiterCspStart, delimiterCspEnd);
-    // console.log(csp);
-
-    // placeholder for the hash
-    //const cspHashPlaceholder = "sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8="
 
     const cspHashPlaceholderPresent = csp.includes(cspHashPlaceholder);
     if (!cspHashPlaceholderPresent) {

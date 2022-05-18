@@ -56,6 +56,7 @@ Checklist
         <button id="button_save_url">Save URL</button>
         <button id="button_load_url">Load URL</button>
         <button id="button_clear_url">Clear URL</button>
+        <button id="button_share_url">Share URL</button>
         <br>
 
         <p>Save File</p>
@@ -1326,27 +1327,40 @@ Checklist
         //#region "buttons"
         /**
          * button
+         * 
+         * Loads snapshot configuration in URL hash
+         * If no url hash, loads default configuration.
          */
         async function buttonLoadSnapshotFromUrlHash() {
             // # comes after the url
             // remove #
             const text = getUrlHash();
-            if (text) {
+            let configuration;            if (text) {
                 const configuration = await getConfigurationFromTextHex(text);
                 loadConfiguration(configuration);
             } else {
-                console.log("no url hash to load")
+                console.log("no url hash to load - load default");
+                const configuration = getDefaultConfiguration();
+                loadConfiguration(configuration);
             }
         }
 
-        async function saveSnapshotToUrlHash() {
+        async function getSnapshotTextHex() {
             const configuration = getConfigurationSnapshot();
-            const text = await getConfigurationToTextHex(configuration)
+            const text = await getConfigurationToTextHex(configuration);
+            return text;
+        }
+
+        async function saveSnapshotToUrlHash() {
+            const text = await getSnapshotTextHex();
 
             // set to hash at top of window
             window.location.hash = text;
         }
 
+        /**
+         * button
+         */
         function buttonClearUrlHash() {
             window.history.replaceState(null, '', window.location.pathname);
         }
@@ -1356,6 +1370,18 @@ Checklist
          */
         async function buttonSaveSnapshotToUrlHash() {
             await saveSnapshotToUrlHash();
+        }
+
+        /**
+         * button
+         * 
+         * Write URL to Clipboard so it can be shared.
+         */
+        async function buttonShareUrlToClipboard() {
+            const text = await getSnapshotTextHex();
+            const baseUrl = window.location.href.replace(window.location.hash, "");
+            const url = baseUrl + '#' + text;
+            navigator.clipboard.writeText(url);
         }
 
         /**
@@ -1416,7 +1442,25 @@ Checklist
             //saveSnapshotToUrlHash();
         }
 
+        /**
+         * sets icon svg as the Favicon data url
+         */
+        function setIconAsFavicon() {
+            const icon = document.getElementById("icon")
+            const data = (new XMLSerializer()).serializeToString(icon);
+            const dataUrl = "data:image/svg+xml," + data;
 
+            document.getElementById("icon").setAttribute("href", dataUrl);
+        }
+
+        /**
+         * Default configuration when there is none present
+         * Parses from the default Markdown configuration
+         */
+        function getDefaultConfiguration() {
+            const configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
+            return configuration;
+        }
         /**
          * Only function run on start
          * Set up everything, link all UI elements
@@ -1431,6 +1475,8 @@ Checklist
                 return;
             }
 
+            setIconAsFavicon();
+
             // Initial configuration
             // pull from url has if available or load default
             const urlHash = getUrlHash();
@@ -1441,7 +1487,7 @@ Checklist
             let configuration = undefined;
             if (urlHash.length === 0) {
                 // use default MD configuration
-                configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
+                configuration = getDefaultConfiguration();
             } else {
                 configuration = await getConfigurationFromTextHex(urlHash);
             }
@@ -1461,6 +1507,7 @@ Checklist
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;
             document.getElementById("button_load_url").onclick = buttonLoadSnapshotFromUrlHash;
             document.getElementById("button_clear_url").onclick = buttonClearUrlHash;
+            document.getElementById("button_share_url").onclick = buttonShareUrlToClipboard;
 
             // File
             document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;
@@ -1478,17 +1525,9 @@ Checklist
             };
         }
 
-        function serializeSvgIcon() {
-            const icon = document.getElementById("icon")
-            const data = (new XMLSerializer()).serializeToString(icon);
-            const dataUrl = "data:image/svg+xml," + data;
-
-            document.getElementById("icon").setAttribute("href", dataUrl);
-            console.log(dataUrl);
-        }
-        serializeSvgIcon();
-
         initialize();
+
+
 
 
 

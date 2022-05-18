@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <title>Checklist</title>
-
+    <link id="favicon" rel="shortcut icon" href="" type="image/svg">
+    <!-- 'data:image/svg+xml,<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="white"/><text x="50%" y="100%" text-anchor="middle" font-size="1em">%F0%9F%97%B8</text></svg>'-->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <!--
         https://content-security-policy.com/script-src/
@@ -26,10 +27,14 @@
         Hashes
             - main script tag
     -->
-    <!-- <meta http-equiv="Content-Security-Policy" 
-        content="default-src 'self' 'unsafe-inline'"> -->
+    <!--
+        img-src is for the favicon
+    -->
+    <meta http-equiv="Content-Security-Policy" 
+        content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
 
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' ">
+    <!-- Content Security Policy for production-->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' "> -->
 
     <!-- development - can be convenient to refresh automatically (every 30 seconds)-->
     <!-- <meta http-equiv="refresh" content="30"> -->
@@ -37,6 +42,15 @@
 </head>
 
 <body>
+
+    <p>
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+    <!-- <rect width="100%" height="100%" fill="green" /> -->
+    <circle cx="8" cy="8" r="8" fill="white" />
+    <text x="50%" y="100%" text-anchor="middle" font-size="1em">🗸</text>
+</svg>
+Checklist
+    </p>
 
     <div id="div_controls">
         <button id="button_save_url">Save URL</button>
@@ -54,6 +68,7 @@
         <input id="input_load_file" type="file" accept=".json,.md,.txt,.svg">
     </div>
 
+    
 
     <div id="div_browser_info">
         <p id="p_browser_not_supported_message" hidden>This browser is not supported, please use the latest version of
@@ -1463,7 +1478,19 @@
             };
         }
 
+        function serializeSvgIcon() {
+            const icon = document.getElementById("icon")
+            const data = (new XMLSerializer()).serializeToString(icon);
+            const dataUrl = "data:image/svg+xml," + data;
+
+            document.getElementById("icon").setAttribute("href", dataUrl);
+            console.log(dataUrl);
+        }
+        serializeSvgIcon();
+
         initialize();
+
+
 
     </script>
 </body>

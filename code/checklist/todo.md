@@ -1,6 +1,9 @@
 # checklist todo
 
 - way to view and edit markdown configuration
+    - big textarea, overlay and button to accept
+    - transparent background style  background-color rgba(0,0,0.9) 
+
 
 - support descriptions on item (check and likert) text
 

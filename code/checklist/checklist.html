@@ -52,7 +52,27 @@
 Checklist
     </p>
 
+    <!-- Edit Markdown that makes up the document -->
+    <div id="div_edit" style="background-color: rgba(0, 0, 0, 0.1);position: absolute;top:0%; bottom:0; left:0%;right:0%;" hidden>
+        <!-- Need Save Button at top or bottom, maybe side?  -->
+        <button id="button_edit_save">Save</button>
+        <!-- Text area can contain default markdown configuration, does this require generation of md from json configuration? or should it just show the json? -->
+        <textarea id="textarea_edit" 
+            style="
+                position:relative; top:0%;
+                display: block;
+                margin-left: auto;
+                margin-right: auto;" 
+            cols="100" rows="80">
+        </textarea>
+    </div>
+
     <div id="div_controls">
+
+        <button id="button_edit">Edit Configuration</button>
+        <br>
+        <br>
+
         <button id="button_save_url">Save URL</button>
         <button id="button_load_url">Load URL</button>
         <button id="button_clear_url">Clear URL</button>
@@ -82,6 +102,9 @@ Checklist
 
     <br>
     <div id="div_configuration_svg"></div>
+
+
+
     <script>
 
         //#region "definitions"

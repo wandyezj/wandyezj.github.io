@@ -3,7 +3,7 @@
 // node ./embed-script-hash.js && cat ./checklist.js | openssl sha256 -binary | openssl base64
 
 /**
- * 
+ * Get content from string that is between two delimiters. First match of delimiter start.
  * @param {string} s - string to search in
  * @param {string} delimiterStart 
  * @param {string} delimiterEnd
@@ -12,7 +12,16 @@
 function contentBetweenDelimiters(s, delimiterStart, delimiterEnd) {
 
     const delimiterIndexStart = s.indexOf(delimiterStart);
+
+    if (delimiterIndexStart === -1) {
+        return undefined;
+    }
+
     const delimiterIndexEnd = s.indexOf(delimiterEnd, delimiterIndexStart + delimiterStart.length);
+
+    if (delimiterIndexEnd === -1) {
+        return undefined;
+    }
 
     const indexStart = delimiterIndexStart + delimiterStart.length;
     const indexEnd = delimiterIndexEnd;
@@ -23,7 +32,7 @@ function contentBetweenDelimiters(s, delimiterStart, delimiterEnd) {
 }
 
 /**
- * 
+ * Get content from string from start of first delimiter to end of end delimiter.
  * @param {string} s - string to search in
  * @param {string} delimiterStart 
  * @param {string} delimiterEnd
@@ -31,7 +40,16 @@ function contentBetweenDelimiters(s, delimiterStart, delimiterEnd) {
  */
 function contentWithDelimiters(s, delimiterStart, delimiterEnd) {
     const delimiterIndexStart = s.indexOf(delimiterStart);
+
+    if (delimiterIndexStart === -1) {
+        return undefined;
+    }
+
     const delimiterIndexEnd = s.indexOf(delimiterEnd, delimiterIndexStart + delimiterStart.length);
+
+    if (delimiterIndexEnd === -1) {
+        return undefined;
+    }
 
     const indexStart = delimiterIndexStart
     const indexEnd = delimiterIndexEnd + delimiterEnd.length;
@@ -58,18 +76,17 @@ function contentWithDelimiters(s, delimiterStart, delimiterEnd) {
  */
 function getScriptData(data) {
     // read script node from html
-    // only handles first script tag, does not handle script tags in strings
+    // only handles first script tag, does not handle script tags in strings.
 
     // Node does not have a built in XML parsing library.
     const delimiterScriptOpen = "<script>";
     const delimiterScriptClose = "</script>";
 
-    // const scriptOpen = data.indexOf(delimiterScriptOpen);
-    // const scriptClose = data.indexOf(delimiterScriptClose, scriptOpen);
-
-    // const scriptData = data.substring(scriptOpen + delimiterScriptOpen.length, scriptClose)
-
     const scriptData = contentBetweenDelimiters(data, delimiterScriptOpen, delimiterScriptClose);
+
+    if (scriptData === undefined) {
+        return undefined;
+    }
 
     // browser swaps \cr\lf to lf for hash calculation
     const s = standardizeNewlines(scriptData)
@@ -77,7 +94,7 @@ function getScriptData(data) {
 }
 
 /**
- * 
+ * SHA 256 hash of data
  * @param {string} data
  * @returns {string} hash of the data
  */
@@ -95,6 +112,16 @@ function getHash(data) {
     return `sha256-${digest}`;
 }
 
+/**
+ * @param {string} data
+ * @returns {string} 
+ */
+function getMetaContentSecurityPolicyTag(data) {
+    const delimiterCspStart = `<meta http-equiv="Content-Security-Policy" content=`;
+    const delimiterCspEnd = `>`;
+    const csp = contentWithDelimiters(data, delimiterCspStart, delimiterCspEnd);
+    return csp;
+}
 
 /**
  * 
@@ -105,12 +132,16 @@ function visible(data) {
     return`----\n${data.replace(/ /g, ".")}\n----`
 }
 
-const process = require("process");
 
-function main() {
+
+
+/**
+ * @param {string[]} args 
+ * @returns {number} errorlevel
+ */
+function main(args) {
 
     
-    const args = process.argv.slice(2);
 
     // hash a specific file
     // really want a config file that is passed in with the hashed to replace.
@@ -124,9 +155,9 @@ function main() {
         return 1;
     }
 
-    if (args.length !== 3) {
+    if (![2,3].includes(args.length)) {
         console.log(args)
-        console.log("usage: [file in]  [file out] [csp placeholder]")
+        console.log("usage: [file in]  [file out] [(optional)csp placeholder]")
         return 1
     }
 
@@ -169,19 +200,39 @@ ${scriptHash}
 
     // embed hash in the document (don't actually modify the original document that's dangerous!) Instead create a new document with the hash embedded
 
-    const delimiterCspStart = `<meta http-equiv="Content-Security-Policy" content=`;
-    const delimiterCspEnd = `>`;
-    const csp = contentWithDelimiters(data, delimiterCspStart, delimiterCspEnd);
-
-    const cspHashPlaceholderPresent = csp.includes(cspHashPlaceholder);
-    if (!cspHashPlaceholderPresent) {
-        console.log(`no instance of csp placeholder [${cspHashPlaceholder}] for csp [${csp}]`)
+    const csp = getMetaContentSecurityPolicyTag(data)
+    if (csp === undefined) {
+        console.log("ERROR: can not find meta content security policy tag");
         return 1;
     }
 
-    const cspUpdated = csp.replaceAll(cspHashPlaceholder, scriptHash)
+    // retrieve placeholder
 
-    console.log(`Updated csp
+    let placeholder;
+    
+    if (cspHashPlaceholder === undefined) {
+        placeholder = contentBetweenDelimiters(csp, "script-src '", "'");
+        if (placeholder.length < 0) {
+            console.log(`unable to automatically discover placeholder`);
+            return 1;
+        }
+    } else {
+        const cspHashPlaceholderPresent = csp.includes(cspHashPlaceholder);
+        if (!cspHashPlaceholderPresent) {
+            console.log(`no instance of csp placeholder [${cspHashPlaceholder}] for csp [${csp}]`)
+            return 1;
+        }
+        placeholder = cspHashPlaceholder;
+    }
+
+    const cspUpdated = csp.replaceAll(placeholder, scriptHash)
+
+    console.log(`Content Security Policy Meta Tag
+
+original:
+${csp}
+
+updated:
 ${cspUpdated}
 `);
 
@@ -191,7 +242,10 @@ ${cspUpdated}
     console.log(`wrote update to:
 ${filePathOut}`)
 
+    return 0;
+
 }
 
-
-process.exit(main());
+const process = require("process");
+const args = process.argv.slice(2);
+process.exit(main(args));

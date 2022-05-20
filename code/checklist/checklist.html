@@ -30,8 +30,7 @@
     <!--
         img-src is for the favicon
     -->
-    <meta http-equiv="Content-Security-Policy" 
-        content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
 
     <!-- Content Security Policy for production-->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' "> -->
@@ -1451,6 +1450,37 @@ Checklist
         }
 
 
+        /**
+         * Open edit screen
+         */
+        function buttonEdit() {
+            const div = document.getElementById("div_edit");
+            const textarea = document.getElementById("textarea_edit");
+
+            // set text area value to current configuration json
+            textarea.value = getConfigurationToTextJson(getConfigurationSnapshot(), {pretty: true});
+
+            // show edit screen
+            div.hidden = false;
+        }
+
+        /**
+         * Save edit configutation
+         */
+        function buttonEditSave() {
+            const div = document.getElementById("div_edit");
+            const textarea = document.getElementById("textarea_edit");
+
+            // load modified configuration
+            const configuration = JSON.parse(textarea.value);
+            loadConfiguration(configuration);
+
+            // hide edit screen and reset value
+            div.hidden = true;
+            textarea.value = "";
+        }
+
+
         //#endregion "buttons"
 
         /**
@@ -1484,6 +1514,9 @@ Checklist
             const configuration = getConfigurationFromTextMarkdown(defaultConfigurationMarkdown);
             return configuration;
         }
+
+
+
         /**
          * Only function run on start
          * Set up everything, link all UI elements
@@ -1525,6 +1558,10 @@ Checklist
 
             // update
             document.getElementById("div_configuration_svg").onclick = onclickSvg;
+
+            // Edit
+            document.getElementById("button_edit").onclick = buttonEdit;
+            document.getElementById("button_edit_save").onclick = buttonEditSave;
 
             // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;

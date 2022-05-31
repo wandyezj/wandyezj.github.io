@@ -1,15 +1,19 @@
 # checklist todo
 
-- way to view and edit markdown configuration
-    - big textarea, overlay and button to accept
-    - transparent background style  background-color rgba(0,0,0.9) 
+- view and edit configuration as markdown
 
+- configuration json to configuration markdown
+
+- edit cancel button
 
 - support descriptions on item (check and likert) text
 
 - support sections groups and overall title
 
 - multi select support?
+
+- convert svg to png
+    - desireable to be able to load from svg as well, however this requires complex embedding
 
 - error checking for invalid file or invalid configuration
     - just make a simple JSON validator
@@ -27,8 +31,7 @@
     - communication of where the invalid data is
     - need new UI function to show error
     - from configuration parsers return success or failure codes
-- convert svg to png
-    - desireable to be able to load from svg as well, however this requires complex embedding
+
 - separate repository for project 
 - publish pipeline
     - build
@@ -108,3 +111,7 @@
     - ctrl + v into open tab
     - enter
     - should show equivalent version
+
+- [x] way to view and edit configuration
+    - big textarea, overlay and button to accept
+    - transparent background style background-color rgba(0,0,0.9)

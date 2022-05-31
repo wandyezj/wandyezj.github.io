@@ -53,7 +53,7 @@
 
         // {broadcastChannel: BroadcastChannel, messageChannel: MessageChannel, port: MessagePort, forwardPort: () => void, forwardBroadcast: () => void}
         /**
-         * Everything releated to a single changnnel
+         * Everything related to a single channel
          * @typedef Channel
          * @type {object}
          * @property {BroadcastChannel} broadcastChannel
@@ -199,30 +199,8 @@
                 return;
             }
 
-            // figure out origin URL, can only pick from the allowedOrigins list.
+            // note: cross origin iframes are restricted from accessing parents origin.
             const host = window.parent;
-            const parentOrigin = window.parent.origin;
-            const allowedOrigins = [
-                // list of allowed origins, very important for security!
-                // ONLY include trusted origins
-
-            ];
-
-            if (test) {
-                // For testing, trust the origin hosting the iframe
-                allowedOrigins.push(window.self.origin)
-            }
-
-            const matchingOrigins = allowedOrigins.filter(
-                (x) => x === parentOrigin
-            );
-            let origin =
-                matchingOrigins.length === 1 ? matchingOrigins[0] : undefined;
-
-            if (origin === undefined) {
-                console.error(`ERROR: ${name} must be loaded in a valid host`);
-                return;
-            }
 
             // set up control channel
             controlMessageChannel = new MessageChannel();
@@ -239,7 +217,9 @@
 
             // send port that the parent can use to communicate to the iframe
             // Send origin the port
-            // note: MUST specify the specific target origin.
+            // note: Use * for the origin. The CORS frame ancestors policy should be used to restrict which origins can load the iframe.
+            const origin = "*";
+
             const port = port2;
             host.postMessage({ type: "port", port }, origin, [port]);
         }

@@ -1,0 +1,271 @@
+<!--
+
+  This page is used to test loading the iframe by a host
+
+  Goal:
+
+    allow a tab on a different origin to be able to consistently connect to another tab on a different origin.
+
+  Diagram:
+
+    host (on different origin that loads iframe) <-message port-> iframe (on origin) <-broadcast channel-> iframe (on origin) <-message port-> host (on different origin that loads iframe)
+
+  Setup:
+
+    this test page acts as the `host` on both ends to test the iframe
+
+    - register listener on origin broadcast channel
+    - dynamically create iframe
+    - wait to receive control port from loaded iframe via post message (important the register must happen before the iframe is loaded)
+
+  TEST
+    > npx serve --cors -l 5000 %r%\wandyezj.github.io\code\cross-origin-channels
+    - use control port to create channel
+    - message through the created channel
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <!-- <meta http-equiv="Expires" content="0" /> -->
+</head>
+
+<body>
+    <textarea  id="textarea_channel_name" rows="1" cols="30" hidden>test</textarea>
+    <br>
+    <br>
+    <button id="button_channel_open" hidden> Open Channel</button>
+    <button id="button_channel_close" hidden> Close Channel</button>
+    <br>
+    <br>
+    <button id="button_channel_send" hidden> Send Channel Random Message</button>
+
+    <script>
+        /**
+         * name of this page
+         */
+        const name = "host";
+
+        const test = true;
+
+        /**
+         * logs message if in test mode.
+         * @param {string} message
+         */
+        function log(message) {
+            if (test) {
+                console.log(`${name}   > ${message}`);
+            }
+        }
+
+        function logError(message) {
+            console.error(`ERROR: ${name} ${message}`);
+        }
+
+        /**
+         * @type {MessagePort}
+         */
+        let controlPort;
+
+        /**
+         * get channel name from the text area
+         */
+        function getChannelName() {
+            const textarea = document.getElementById("textarea_channel_name");
+            const name = textarea.value;
+            return name;
+        }
+
+        /**
+         * channelName -> channel MessagePort
+         * @type {Map<string, MessagePort>}
+         */
+        let channels = new Map();
+
+        /**
+         * @param {string} channelName
+         */
+        async function channelOpen(channelName) {
+            const { type, name, port } = await doControl({ type: "open", name: channelName });
+
+            const typeExpected = "opened"
+            if (type !== typeExpected) {
+                logError(`open returned type is ${type} expected ${typeExpected}`)
+                return;
+            }
+
+            const nameExpected = channelName;
+            if (name !== nameExpected) {
+                logError(`open returned name is ${name} expected ${nameExpected}`)
+                return;
+            }
+
+            port.addEventListener("message",(message) => {
+                const {data} = message;
+                log(`channel [${channelName}] received: ${data}`);
+            });
+            port.start();
+
+            channels.set(channelName, port);
+        }
+
+        /**
+         * @param {string} channelName
+         */
+        async function channelClose(channelName) {
+            const channel = channels.get(channelName);
+            if (channel === undefined) {
+                return;
+            }
+            channels.delete(channelName);
+
+            const { type, name, port } = await doControl({ type: "close", name: channelName });
+
+            const typeExpected = "closed"
+            if (type !== typeExpected) {
+                logError(`open returned type is ${type} expected ${typeExpected}`)
+                return;
+            }
+
+            const nameExpected = channelName;
+            if (name !== nameExpected) {
+                logError(`open returned name is ${name} expected ${nameExpected}`)
+                return;
+            }
+        }
+
+        /**
+         * @param {string} channelName
+         */
+        function channelSend(channelName, message) {
+            const channel = channels.get(channelName);
+            if (channel === undefined) {
+                log(`channel [${channelName}] is not open`);
+                return;
+            }
+
+            log(`channel [${channelName}] send`);
+            channel.postMessage(message);
+        }
+
+        async function buttonChannelOpen() {
+            const channelName = getChannelName();
+            log(`button - open channel [${channelName}]`);
+            await channelOpen(channelName);
+        }
+
+        async function buttonChannelClose() {
+            const channelName = getChannelName();
+            log(`button - close channel [${channelName}]`);
+            await channelClose(channelName);
+        }
+
+        function buttonChannelSend() {
+            const channelName = getChannelName();
+            const randomValue = Math.floor(Math.random() * 100);
+            const message = `message ${randomValue}`;
+
+            log(`button - send channel [${channelName}] message: ${message}`);
+            channelSend(channelName, message);
+        }
+
+        function setupButton(id, onclick) {
+            const button = document.getElementById(id)
+            button.onclick = onclick;
+            button.hidden = false;
+        }
+
+        async function runtests() {
+            log("run tests - start");
+            await buttonChannelOpen();
+            await buttonChannelSend();
+            await buttonChannelClose();
+            await buttonChannelSend();
+            await buttonChannelOpen();
+            log("run tests - done");
+
+            log("setup buttons")
+            document.getElementById("textarea_channel_name").hidden = false;
+            setupButton("button_channel_open", buttonChannelOpen);
+            setupButton("button_channel_close", buttonChannelClose);
+            setupButton("button_channel_send", buttonChannelSend);
+        }
+
+        /**
+         * @type {({type: "opened" | "closed", name: string, port: MessagePort} | {type: "closed", name: string}) => void}
+         */
+        let nextControlMessageResolve;
+        async function doControl(message) {
+            const promise = new Promise((resolve) => {
+                nextControlMessageResolve = resolve;
+            });
+            controlPort.postMessage(message);
+
+            const result = await promise;
+            return result;
+        }
+
+        /**
+         * @type {MessageEvent<any>} message
+         */
+        function handleControlMessage(message) {
+            nextControlMessageResolve(message.data);
+        }
+
+        /**
+         * set up the connection betwen the iframe parent and the broadcast channel on the same origin.
+         */
+        function initialize() {
+            log(`initialize`);
+
+
+            // set up iframe
+            const source = window.self.origin + "/iframe.html";
+            const iframe = document.createElement("iframe");
+
+            iframe.hidden = true;
+
+            const onMessage = (e) => {
+                log(`received (window.message):`);
+                if (e) {
+                    const { data } = e;
+                    if (data && data.type === "port") {
+                        /**
+                         * @type {MessagePort}
+                         */
+                        const port = data.port;
+                        if (port) {
+                            log("received port");
+                            controlPort = port;
+
+                            // no need to listen further
+                            window.removeEventListener("message", onMessage);
+
+                            // handle messages from the control port
+                            controlPort.addEventListener("message", handleControlMessage);
+                            controlPort.start();
+
+                            if (test) {
+                                runtests();
+                            }
+                        }
+                    }
+                }
+            }
+
+            window.addEventListener("message", onMessage);
+
+            log(`set iframe source`);
+            iframe.src = source;
+            document.body.appendChild(iframe);
+        }
+
+        initialize();
+    </script>
+</body>
+
+</html>

@@ -54,13 +54,16 @@
         // {broadcastChannel: BroadcastChannel, messageChannel: MessageChannel, port: MessagePort, forwardPort: () => void, forwardBroadcast: () => void}
         /**
          * Everything related to a single channel
+         * A channel consists of a MessageChannel BroadcastChannel pair.
+         * Messages are forwarded between the BroadcastChannel and MessageChannel.
+         * port <-> MessageChannel <- forwardPort & forwardBroadcast -> BroadcastChannel
          * @typedef Channel
          * @type {object}
+         * @property {MessagePort} port - MessageChannel port used to send and receive messages.
          * @property {BroadcastChannel} broadcastChannel
          * @property {MessageChannel} messageChannel
-         * @property {MessagePort} port
-         * @property {() => void} forwardPort
-         * @property {() => void} forwardBroadcast
+         * @property {() => void} forwardPort - callback to forward port messages to BroadcastChannel
+         * @property {() => void} forwardBroadcast - callback to forward BroadcastChannel messages to port
          */
 
         /**
@@ -77,6 +80,9 @@
          */
         let channels = new Map();
 
+        /**
+         * 
+         */
         function inIframe() {
             try {
                 return window.self !== window.top;
@@ -120,17 +126,18 @@
             broadcastChannel.addEventListener("message", forwardBroadcast);
 
             return {
+                port: port2,
                 broadcastChannel,
                 messageChannel,
                 forwardPort,
                 forwardBroadcast,
-                port: port2
             }
         }
 
         /**
          * opens a channel
          * @param {string} channelName - name of the channel
+         * @returns {MessagePort} - port to send and receive from channel
          */
         function openChannel(channelName) {
             closeChannel(channelName);
@@ -138,14 +145,13 @@
             const channel = createChannel(channelName);
             channels.set(channelName, channel);
 
-            log(`send port for channel ${channelName} to parent`);
             const port = channel.port;
             return port
         }
 
         /**
          * closes a channel
-         * @param {string} channelName
+         * @param {string} channelName - name of the channel
          */
         function closeChannel(channelName) {
             const channel = channels.get(channelName)
@@ -165,6 +171,8 @@
         }
 
         /**
+         * Handle control messages from the control port.
+         * 
          * @param {MessageEvent<any>} message
          */
         function handleControlMessage(message) {
@@ -175,6 +183,7 @@
             switch (type) {
                 case "open":
                     const port = openChannel(name);
+                    log(`send port for channel ${channelName} to parent`);
                     controlMessageChannel.port1.postMessage({ type: "opened", name, port }, [port]);
                     break;
                 case "close":

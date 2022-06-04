@@ -1,5 +1,20 @@
 # Code Reviews
 
+## Purpose
+
+- Improve Quality
+- Share Knowledge
+
+## How
+
+
+Preferable for a single person other than the author to be the primary reviewer, for complex pieces of code where knowledge is split between people individual people can review it.
+
+
+## Who
+
+Code Review is not a substitute for automated tests, which should occur in a pipeline
+
 Review by an experienced person who understands the code
 
 Know who expereinced people are

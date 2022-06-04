@@ -103,7 +103,6 @@ Checklist
     <div id="div_configuration_svg"></div>
 
 
-
     <script>
 
         //#region "definitions"
@@ -195,7 +194,7 @@ Checklist
         /**
         * A configuration config likert configuration option - used to configure and style a likert options
         * @typedef ConfigurationConfigLikertOption
-        * @property {string} value - likert option value
+        * @property {string} value - likert option value, used to pick option
         * @property {string} description - likert options descriptions
         * @property {string} color - HTML color
         */
@@ -217,6 +216,20 @@ Checklist
         const defaultConfigurationMarkdown = `
 # example title
 > example description
+
+- [ ] example item
+    > example item description
+- [x] example item
+    > example item description duplicate
+- [ ] example item other
+    > example item description
+
+- (likert) [always] some likert
+
+- (likert) another likert
+
+- (likert) [] empty value likert
+
 
 \`\`\`config
 {
@@ -261,22 +274,91 @@ Checklist
 }
 \`\`\`
 
-- [ ] example item
-    > example item description
-- [x] example item
-    > example item description duplicate
-- [ ] example item other
-    > example item description
-
-- (likert) some likert
-
-- (likert) another likert
 
 `;
 
         //#endregion "default configurations"
 
         //#region "markdown"
+
+        /**
+         * Markdown Configuration Delimiters
+         * @readonly
+         * @enum {string}
+         */
+         const MarkdownConfigurationDelimiter = {
+
+            /**
+             * start list
+             * @readonly
+             * @type {"string"}
+             */
+            ListTitle: "# ",
+
+            /**
+             * start list description
+             * @readonly
+             * @type {"string"}
+             */
+            ListDescription: "> ",
+
+            /**
+             * start list checkbox checked
+             * @readonly
+             * @type {"string"}
+             */
+            ListItemCheckboxUnchecked: "- [ ] ",
+
+            /**
+             * start list checkbox unchecked
+             * @readonly
+             * @type {"string"}
+             */
+            ListItemCheckboxChecked: "- [x] ",
+
+            /**
+             * start list likert
+             * @readonly
+             * @type {"string"}
+             */
+            ListItemLikert: "- (likert) ",
+
+            /**
+             * list item likert value start
+             * @readonly
+             * @type {"string"}
+             */
+            ListItemLikertValueStart: "[",
+
+            /**
+             * list item likert value end
+             * @readonly
+             * @type {"string"}
+             */
+            ListItemLikertValueEnd: "] ",
+
+            /**
+             * list description start
+             * @readonly
+             * @type {"string"}
+             */
+            ListItemDescription: "    > ",
+
+            /**
+             * list config start
+             * @readonly
+             * @type {"string"}
+             */
+            ListConfigStart: "```config",
+
+            /**
+             * list config end
+             * @readonly
+             * @type {"string"}
+             */
+            ListConfigEnd: "```",
+
+        }
 
         /**
          * create json configuration from a markdown description
@@ -327,14 +409,16 @@ Checklist
             const errors = [];
 
             // Delimiters
-            const delimiterListTitle = "# ";
-            const delimiterListDescription = "> ";
-            const delimiterListItemCheckboxUnchecked = "- [ ] ";
-            const delimiterListItemCheckboxChecked = "- [x] ";
-            const delimiterListItemLikert = "- (likert) ";
-            const delimiterListItemDescription = "    > ";
-            const delimiterListConfigStart = "```config";
-            const delimiterListConfigEnd = "```";
+            const delimiterListTitle = MarkdownConfigurationDelimiter.ListTitle;
+            const delimiterListDescription = MarkdownConfigurationDelimiter.ListDescription;
+            const delimiterListItemCheckboxUnchecked = MarkdownConfigurationDelimiter.ListItemCheckboxChecked;
+            const delimiterListItemCheckboxChecked = MarkdownConfigurationDelimiter.ListItemCheckboxUnchecked;
+            const delimiterListItemLikert = MarkdownConfigurationDelimiter.ListItemLikert;
+            const delimiterListItemLikertValueStart = MarkdownConfigurationDelimiter.ListItemLikertValueStart;
+            const delimiterListItemLikertValueEnd = MarkdownConfigurationDelimiter.ListItemLikertValueEnd;
+            const delimiterListItemDescription = MarkdownConfigurationDelimiter.ListItemDescription;
+            const delimiterListConfigStart = MarkdownConfigurationDelimiter.ListConfigStart;
+            const delimiterListConfigEnd = MarkdownConfigurationDelimiter.ListConfigEnd;
 
 
             for (let i = 0; i < lines.length; i++) {
@@ -392,6 +476,20 @@ Checklist
                         // How to store the value as part of the item?
                         // undefined will be removed from stringify
                         itemValue = null;
+
+                        // value can be specified between delimiters
+                        const valueStart = itemTitle.indexOf(delimiterListItemLikertValueStart);
+                        const valueEnd = itemTitle.indexOf(delimiterListItemLikertValueEnd);
+
+                        if (valueStart === 0 && valueEnd > 0) {
+                            itemValue = itemTitle.substring(valueStart + delimiterListItemLikertValueStart.length, valueEnd);
+                            itemTitle = itemTitle.substring(valueEnd + delimiterListItemLikertValueEnd.length);
+
+                            // consider empty to be null value
+                            if (itemValue === "") {
+                                itemValue = null;
+                            }
+                        }
                     }
 
                     let itemDescription = undefined;
@@ -576,6 +674,65 @@ Checklist
             return itemId;
         }
 
+        /**
+         * convert configuration to markdown text
+         * @param {Configuration} configuration
+         * @returns {string}
+         */
+        function getConfigurationToMarkdown(configuration) {
+
+            // Tokens
+            const delimiterListTitle = MarkdownConfigurationDelimiter.ListTitle;
+            const delimiterListDescription = MarkdownConfigurationDelimiter.ListDescription;
+            const delimiterListItemCheckboxUnchecked = MarkdownConfigurationDelimiter.ListItemCheckboxChecked;
+            const delimiterListItemCheckboxChecked = MarkdownConfigurationDelimiter.ListItemCheckboxUnchecked;
+            const delimiterListItemLikert = MarkdownConfigurationDelimiter.ListItemLikert;
+            const delimiterListItemLikertValueStart = MarkdownConfigurationDelimiter.ListItemLikertValueStart;
+            const delimiterListItemLikertValueEnd = MarkdownConfigurationDelimiter.ListItemLikertValueEnd;
+            const delimiterListItemDescription = MarkdownConfigurationDelimiter.ListItemDescription;
+            const delimiterListConfigStart = MarkdownConfigurationDelimiter.ListConfigStart;
+            const delimiterListConfigEnd = MarkdownConfigurationDelimiter.ListConfigEnd;
+
+            const {title, description, configs, items, state} = configuration;
+
+            // title
+            const piecesTitle = [
+                `${delimiterListTitle}${title}`,
+                `${delimiterListDescription}${description}`,
+            ];
+
+
+            // items
+            const piecesItems = items.map((item) => {
+                const {input, id, title, description} = item;
+
+                // everything uses the same way of declaring a description
+                const markdownDescription = description === undefined ? "" : `\n    > ${description}`;
+
+                if (input === ConfigurationInputType.Checkbox) {
+                    const value = state[id].checkbox;
+                    return `${value ? delimiterListItemCheckboxChecked : delimiterListItemCheckboxUnchecked}${title}${markdownDescription}`;
+
+                } else if (input === ConfigurationInputType.Likert) {
+                    const value = state[id].likert;
+                    return `${delimiterListItemLikert}${value === null ? "" : `${delimiterListItemLikertValueStart}${value}${delimiterListItemLikertValueEnd}`}${title}`;
+                }
+
+                throw new Error(`Invalid input [${input}]`);
+            });
+
+            // configs
+            const piecesConfigs = Object.getOwnPropertyNames(configs).map((name) => {
+                const config = JSON.stringify(configs[name], undefined, 4);
+                return `${delimiterListConfigStart}\n${config}\n${delimiterListConfigEnd}`;
+            });
+
+            const pieces = [piecesTitle.join("\n"), piecesItems.join("\n\n"), ...piecesConfigs];
+            const body = pieces.join("\n\n");
+
+            return body;
+        }
+
         //#endregion "markdown"
 
         /**
@@ -591,6 +748,7 @@ Checklist
         function loadConfiguration(configuration) {
             console.log("loadConfiguration");
             console.log(configuration);
+            console.log(getConfigurationToMarkdown(configuration));
             globalConfiguration = configuration;
             onConfigurationUpdated();
         }
@@ -1111,7 +1269,7 @@ Checklist
                 const dx = getDx(index);
 
                 // differentiate selected via strokeWidth
-                const tooltip = description; // currently used as the selection
+                const tooltip = value; // currently used as the selection
                 const strokeWidth = tooltip === selection ? 3 : 1;
 
                 const optionElement = createSvgCircleElement(x + dx, y, elementSize, color, strokeWidth, tooltip);
@@ -1149,7 +1307,8 @@ Checklist
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
             //svg.setAttribute("viewbox", "0 0 100 100");
-            svg.setAttribute("width", 200);
+            // TODO: set this to calculated minimum pixel width and height
+            svg.setAttribute("width", "100%");
             svg.setAttribute("height", 200);
 
             // append text hex description of the configuration that generated the svg
@@ -1357,7 +1516,9 @@ Checklist
             // # comes after the url
             // remove #
             const text = getUrlHash();
-            let configuration;            if (text) {
+            let configuration;
+
+            if (text) {
                 const configuration = await getConfigurationFromTextHex(text);
                 loadConfiguration(configuration);
             } else {

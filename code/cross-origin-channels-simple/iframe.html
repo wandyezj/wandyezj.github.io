@@ -31,7 +31,10 @@
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
     <meta http-equiv="Pragma" content="no-cache" />
     <meta http-equiv="Expires" content="0" />
+    <!-- When the scripts change CSP hashes need to be updated -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-+UfUsMqHe2o5pheywX+NgNhqA4EHSI1nP+GXOaCWGtA='"/> -->
     <script>
+
         /**
          * name of this page
          */
@@ -75,7 +78,7 @@
         let controlMessageChannel;
 
         /**
-         * connection between iframe and tab on same origin
+         * connection between iframes on same origin
          * @type {Map<string, Channel>}
          * https://developer.mozilla.org/en-US/docs/Web/API/BroadcastChannel/BroadcastChannel
          */
@@ -91,6 +94,7 @@
                 return true;
             }
         }
+
         /**
          * creates a channel pair
          * @param {string} channelName - name of the channel
@@ -132,7 +136,7 @@
                 messageChannel,
                 forwardPort,
                 forwardBroadcast,
-            }
+            };
         }
 
         /**
@@ -147,7 +151,7 @@
             channels.set(channelName, channel);
 
             const port = channel.port;
-            return port
+            return port;
         }
 
         /**
@@ -184,7 +188,7 @@
             switch (type) {
                 case "open":
                     const port = openChannel(name);
-                    log(`send port for channel ${channelName} to parent`);
+                    log(`send port for channel ${name} to parent`);
                     controlMessageChannel.port1.postMessage({ type: "opened", name, port }, [port]);
                     break;
                 case "close":
@@ -202,7 +206,6 @@
          */
         function initialize() {
             log(`initialize`);
-            // Setup MessageChannel
 
             if (!inIframe()) {
                 console.error("ERROR: extension.html must be loaded in an iframe");

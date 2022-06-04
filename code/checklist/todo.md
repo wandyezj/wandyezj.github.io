@@ -1,11 +1,5 @@
 # checklist todo
 
-
-- UI move cancel away from save button
-    - make buttons bigger
-
-- view and edit configuration as markdown or json
-
 - svg show descriptions on item (check and likert) text also title
     - makes it easy to check by viewing UI
 
@@ -136,3 +130,8 @@
 - [x] download and upload markdown files
 
 - [x] edit cancel button
+
+- [x] view and edit configuration as markdown or json
+
+- [x] UI move cancel away from save button
+    - make buttons bigger

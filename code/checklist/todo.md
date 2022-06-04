@@ -1,12 +1,15 @@
 # checklist todo
 
-- support descriptions on item (check and likert) text also title
-    - makes it easy to check by viewing UI
+- edit cancel button
 
 - view and edit configuration as markdown or json
 
-- edit cancel button
+- support descriptions on item (check and likert) text also title
+    - makes it easy to check by viewing UI
 
+- auto test framework for scenarios
+    - loads html page and runs scenarios
+    - save/load all formats
 
 - support sections groups and overall title
 
@@ -19,7 +22,7 @@
     - just make a simple JSON validator
         - allow validation of references, insistence that a string is a keyof another field can refer via dot notation
         - x.y.z.{keys} keyof x.k
-        - x.l is {list} - check properties type is one in the set 
+        - x.l is {list} - check properties type is one in the set
         - a.z is {list, undefined} - check property type
         - x.l[] - represent an item of the list
         - need ability to define strong types for convenience

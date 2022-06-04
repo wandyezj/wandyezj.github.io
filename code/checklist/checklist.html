@@ -80,8 +80,9 @@ Checklist
 
     <div id="div_controls">
 
-        <button id="button_edit">Edit Configuration</button>
-        <br>
+        <p>Edit Configuration</p>
+        <button id="button_edit_markdown">markdown</button>
+        <button id="button_edit_json">json</button>
         <br>
 
         <p>URL</p>
@@ -97,8 +98,8 @@ Checklist
         <button id="button_save_file_text">txt</button>
         <button id="button_save_file_svg">svg</button>
         <br>
-        <br>
-        <label for="input_load_file">Load configuration</label>
+
+        <p>Load File</p>
         <input id="input_load_file" type="file" accept=".json,.md,.txt,.svg">
     </div>
 
@@ -107,8 +108,8 @@ Checklist
             <a href="https://www.microsoft.com/en-us/edge">Edge</a>.
         </p>
     </div>
-    <!-- Configuration Placeholder with actual actions -->
 
+    <!-- Configuration Placeholder with actual actions -->
     <div id="div_configuration"></div>
 
     <br>
@@ -1039,8 +1040,8 @@ Checklist
         function downloadFile({ filename, text, encoding }) {
             const blob = new Blob([text], { type: encoding })
             const downloadUrl = URL.createObjectURL(blob);
-            console.log(downloadUrl)
-            // downloadFileUrl({ filename, url: downloadUrl });
+            //console.log(downloadUrl)
+            downloadFileUrl({ filename, url: downloadUrl });
             URL.revokeObjectURL(downloadUrl);
 
             // legacy
@@ -1599,8 +1600,10 @@ Checklist
          * get snapshot of the current configurations answers and save to JSON
          */
          async function buttonSaveSnapshotToFileMarkdown() {
+            const configuration = getConfigurationSnapshot();
+
             const filename = `${configuration.title}.md`;
-            const text = getSnapshotMarkdown();
+            const text = getConfigurationToMarkdown(configuration);
             const encoding = 'data:text/plain';
             downloadFile({ filename, text, encoding });
         }
@@ -1649,17 +1652,35 @@ Checklist
         }
 
         /**
-         * Open edit screen
+         * Currently Open Edit Type
+         * @type {"markdown" | "json" | undefined}
          */
-        function editOpen() {
+        let gOpenEditType = undefined;
+
+        /**
+         * Open edit screen
+         * @param {"json" |"markdown"} type
+         */
+        function editOpen(type) {
             const div = document.getElementById("div_edit");
             const textarea = document.getElementById("textarea_edit");
 
+            gOpenEditType = type;
+
+            /**
+             * @type {string}
+             */
+            let value;
+
             // markdown
-            const value = getSnapshotMarkdown();
+            if (type === "markdown") {
+                value = getSnapshotMarkdown();
+            }
 
             // json
-            //const value = getConfigurationToTextJson(getConfigurationSnapshot(), {pretty: true});
+            if (type === "json") {
+                value = getConfigurationToTextJson(getConfigurationSnapshot(), {pretty: true});
+            }
 
             // set text area value to current configuration json
             textarea.value = value;
@@ -1684,8 +1705,16 @@ Checklist
          * button
          * Open edit screen
          */
-        function buttonEdit() {
-            editOpen();
+        function buttonEditMarkdown() {
+            editOpen("markdown");
+        }
+
+        /**
+         * button
+         * Open edit screen
+         */
+        function buttonEditJson() {
+            editOpen("json");
         }
 
         /**
@@ -1696,11 +1725,20 @@ Checklist
             const textarea = document.getElementById("textarea_edit");
             const value = textarea.value;
 
-            // json
-            // const configuration = JSON.parse(textarea.value);
+            /**
+             * @type {Configuration}
+             */
+            let configuration;
 
             // markdown
-            const configuration = getConfigurationFromTextMarkdown(value)
+            if (gOpenEditType === "markdown") {
+                configuration = getConfigurationFromTextMarkdown(value);
+            }
+
+            // json
+            if (gOpenEditType === "json") {
+                configuration = JSON.parse(textarea.value);
+            }
 
             // load modified configuration
             loadConfiguration(configuration);
@@ -1795,7 +1833,8 @@ Checklist
             document.getElementById("div_configuration_svg").onclick = onclickSvg;
 
             // Edit
-            document.getElementById("button_edit").onclick = buttonEdit;
+            document.getElementById("button_edit_markdown").onclick = buttonEditMarkdown;
+            document.getElementById("button_edit_json").onclick = buttonEditJson;
             document.getElementById("button_edit_save").onclick = buttonEditSave;
             document.getElementById("button_edit_cancel").onclick = buttonEditCancel;
 
@@ -1827,6 +1866,9 @@ Checklist
 
             // open edit view
             //document.getElementById("button_edit").click();
+
+            // download markdown
+            //document.getElementById("button_save_file_markdown").click();
 
             // Test - End
         }

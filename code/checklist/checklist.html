@@ -79,8 +79,9 @@ Checklist
         <br>
 
         <p>Save File</p>
+        <button id="button_save_file_markdown">md</button>
         <button id="button_save_file_json">json</button>
-        <button id="button_save_file_text">text</button>
+        <button id="button_save_file_text">txt</button>
         <button id="button_save_file_svg">svg</button>
         <br>
         <br>
@@ -215,12 +216,15 @@ Checklist
         // whitespace matters
         const defaultConfigurationMarkdown = `
 # example title
+
 > example description
 
 - [ ] example item
     > example item description
+
 - [x] example item
     > example item description duplicate
+
 - [ ] example item other
     > example item description
 
@@ -446,10 +450,17 @@ Checklist
                         console.error(`line [${i}]: duplicate list title - only a single list title may be defined`);
                     }
 
+                    // scroll through empty lines
+                    line = lineNext;
+                    while (line !== undefined && line.trim() === "") {
+                        i++;
+                        line = i < lines.length ? lines[i] : undefined;
+                    }
+
                     // List Description
                     // Must be next line after title
-                    if (lineNext !== undefined && lineNext.startsWith(delimiterListDescription)) {
-                        listDescription = lineNext.substring(delimiterListDescription.length).trim();
+                    if (line !== undefined && line.startsWith(delimiterListDescription)) {
+                        listDescription = line.substring(delimiterListDescription.length).trim();
                         // already parsed line go to next
                         i++;
                     }
@@ -517,8 +528,6 @@ Checklist
 
                     state[itemId] = { [itemInput]: itemValue };
 
-                } else if (isListItemLikert) {
-                    // 
                 } else if (line.startsWith(delimiterListConfigStart)) {
 
                     const configStartLine = i;
@@ -698,6 +707,7 @@ Checklist
             // title
             const piecesTitle = [
                 `${delimiterListTitle}${title}`,
+                "",
                 `${delimiterListDescription}${description}`,
             ];
 
@@ -707,7 +717,7 @@ Checklist
                 const {input, id, title, description} = item;
 
                 // everything uses the same way of declaring a description
-                const markdownDescription = description === undefined ? "" : `\n    > ${description}`;
+                const markdownDescription = description === undefined ? "" : `    > ${description}`;
 
                 if (input === ConfigurationInputType.Checkbox) {
                     const value = state[id].checkbox;
@@ -728,7 +738,7 @@ Checklist
             });
 
             const pieces = [piecesTitle.join("\n"), piecesItems.join("\n\n"), ...piecesConfigs];
-            const body = pieces.join("\n\n");
+            const body = pieces.join("\n\n") +"\n"; // end in newline
 
             return body;
         }
@@ -1019,7 +1029,7 @@ Checklist
             const blob = new Blob([text], { type: encoding })
             const downloadUrl = URL.createObjectURL(blob);
             console.log(downloadUrl)
-            downloadFileUrl({ filename, url: downloadUrl });
+            // downloadFileUrl({ filename, url: downloadUrl });
             URL.revokeObjectURL(downloadUrl);
 
             // legacy
@@ -1571,6 +1581,19 @@ Checklist
          * button 
          * get snapshot of the current configurations answers and save to JSON
          */
+         async function buttonSaveSnapshotToFileMarkdown() {
+            const configuration = getConfigurationSnapshot();
+
+            const filename = `${configuration.title}.md`;
+            const text = getConfigurationToMarkdown(configuration);
+            const encoding = 'data:text/plain';
+            downloadFile({ filename, text, encoding });
+        }
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to JSON
+         */
         async function buttonSaveSnapshotToFileJson() {
             const configuration = getConfigurationSnapshot();
 
@@ -1731,6 +1754,7 @@ Checklist
             document.getElementById("button_share_url").onclick = buttonShareUrlToClipboard;
 
             // File
+            document.getElementById("button_save_file_markdown").onclick = buttonSaveSnapshotToFileMarkdown;
             document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;
             document.getElementById("button_save_file_text").onclick = buttonSaveSnapshotToFileTextHex;
             document.getElementById("button_save_file_svg").onclick = buttonSaveSnapshotToFileSvg;

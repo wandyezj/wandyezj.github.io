@@ -1,16 +1,16 @@
 # checklist todo
 
-- view and edit configuration as markdown or json
+- support descriptions on item (check and likert) text also title
+    - makes it easy to check by viewing UI
 
-- [x] configuration json to configuration markdown
+- view and edit configuration as markdown or json
 
 - edit cancel button
 
-- support descriptions on item (check and likert) text
 
 - support sections groups and overall title
 
-- multi select support?
+- multi select support? (new likert like type)
 
 - convert svg to png
     - desireable to be able to load from svg as well, however this requires complex embedding
@@ -97,7 +97,7 @@
     - md format
     - json config
     - svg
-    - support single select only 
+    - support single select only
 
 - [x] default svg favicon
 
@@ -115,3 +115,7 @@
 - [x] way to view and edit configuration
     - big textarea, overlay and button to accept
     - transparent background style background-color rgba(0,0,0.9)
+
+- [x] configuration json to configuration markdown
+
+- [x] download and upload markdown files

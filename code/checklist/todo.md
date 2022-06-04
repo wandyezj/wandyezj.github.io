@@ -3,6 +3,9 @@
 - svg show descriptions on item (check and likert) text also title
     - makes it easy to check by viewing UI
 
+- bigger default text and clickables for checkbox and circles
+    - at minimum double current size (better if scale is configurable)
+
 - support item types
     - support sections groups and overall title
         - type heading
@@ -22,6 +25,10 @@
 - convert svg to png
     - desireable to be able to load from png as well, however this requires complex embedding
 
+- UI better layout for all the normal controls
+
+- UI About button that contains documentation to describe everything
+
 - error checking for invalid file or invalid configuration
     - just make a simple JSON validator
         - allow validation of references, insistence that a string is a keyof another field can refer via dot notation
@@ -38,6 +45,7 @@
     - communication of where the invalid data is
     - need new UI function to show error
     - from configuration parsers return success or failure codes
+    - display issues in a window when editing the Markdown File with a periodic refresh rate
 
 - separate repository for project 
 - publish pipeline

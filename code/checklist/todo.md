@@ -1,19 +1,27 @@
 # checklist todo
 
 
-
 - UI move cancel away from save button
+    - make buttons bigger
 
 - view and edit configuration as markdown or json
 
-- support descriptions on item (check and likert) text also title
+- svg show descriptions on item (check and likert) text also title
     - makes it easy to check by viewing UI
+
+- support item types
+    - support sections groups and overall title
+        - type heading
+        - can make this an item as well, set of item types?
+
+    - Markdown comments?
+        - type comment
+        - how would this be kept track of in json? as items? or just ignore for JSON purposes (that poses problems for edit)
+        - new comment item type has comment property, just union with normal items, just support single line comments to make it easy, but would be nice to support multi line
 
 - auto test framework for scenarios
     - loads html page and runs scenarios
     - save/load all formats
-
-- support sections groups and overall title
 
 - multi select support? (new likert like type)
 
@@ -70,6 +78,8 @@
     - allow signing with private key in UI
     - signature against an embedded public key
 - load configuration from hash by default
+
+- localization for controls via configuration
 
 ## done
 

@@ -55,6 +55,7 @@ Checklist
     <div id="div_edit" style="background-color: rgba(0, 0, 0, 0.1);position: absolute;top:0%; bottom:0; left:0%;right:0%;" hidden>
         <!-- Need Save Button at top or bottom, maybe side?  -->
         <button id="button_edit_save">Save</button>
+        <button id="button_edit_cancel">Cancel</button>
         <!-- Text area can contain default markdown configuration, does this require generation of md from json configuration? or should it just show the json? -->
         <textarea id="textarea_edit" 
             style="
@@ -1633,11 +1634,10 @@ Checklist
             downloadFile({ filename, text, encoding });
         }
 
-
         /**
          * Open edit screen
          */
-        function buttonEdit() {
+        function editOpen() {
             const div = document.getElementById("div_edit");
             const textarea = document.getElementById("textarea_edit");
 
@@ -1649,21 +1649,46 @@ Checklist
         }
 
         /**
-         * Save edit configutation
+         * close edit screen
          */
-        function buttonEditSave() {
+        function editClose() {
             const div = document.getElementById("div_edit");
             const textarea = document.getElementById("textarea_edit");
-
-            // load modified configuration
-            const configuration = JSON.parse(textarea.value);
-            loadConfiguration(configuration);
 
             // hide edit screen and reset value
             div.hidden = true;
             textarea.value = "";
         }
 
+        /**
+         * button
+         * Open edit screen
+         */
+        function buttonEdit() {
+            editOpen();
+        }
+
+        /**
+         * button
+         * Save edit configuration
+         */
+        function buttonEditSave() {
+            const textarea = document.getElementById("textarea_edit");
+
+            // load modified configuration
+            const configuration = JSON.parse(textarea.value);
+            loadConfiguration(configuration);
+
+            editClose();
+        }
+
+        /**
+         * button
+         * discard change and close
+         */
+        function buttonEditCancel() {
+            editClose();
+        }
 
         //#endregion "buttons"
 
@@ -1746,6 +1771,7 @@ Checklist
             // Edit
             document.getElementById("button_edit").onclick = buttonEdit;
             document.getElementById("button_edit_save").onclick = buttonEditSave;
+            document.getElementById("button_edit_cancel").onclick = buttonEditCancel;
 
             // Url Hash
             document.getElementById("button_save_url").onclick = buttonSaveSnapshotToUrlHash;

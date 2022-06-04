@@ -54,8 +54,19 @@ Checklist
     <!-- Edit Markdown that makes up the document -->
     <div id="div_edit" style="background-color: rgba(0, 0, 0, 0.1);position: absolute;top:0%; bottom:0; left:0%;right:0%;" hidden>
         <!-- Need Save Button at top or bottom, maybe side?  -->
-        <button id="button_edit_save">Save</button>
-        <button id="button_edit_cancel">Cancel</button>
+
+        <button id="button_edit_save"
+            style="
+                float: left;
+                padding: 10px 20px;
+                ">Save</button>
+
+        <button id="button_edit_cancel"
+            style="
+                float: right;
+                padding: 10px 20px;
+                ">Cancel</button>
+
         <!-- Text area can contain default markdown configuration, does this require generation of md from json configuration? or should it just show the json? -->
         <textarea id="textarea_edit" 
             style="
@@ -73,10 +84,11 @@ Checklist
         <br>
         <br>
 
-        <button id="button_save_url">Save URL</button>
-        <button id="button_load_url">Load URL</button>
-        <button id="button_clear_url">Clear URL</button>
-        <button id="button_share_url">Share URL</button>
+        <p>URL</p>
+        <button id="button_save_url">Save</button>
+        <button id="button_load_url">Load</button>
+        <button id="button_clear_url">Clear</button>
+        <button id="button_share_url">Share</button>
         <br>
 
         <p>Save File</p>
@@ -89,8 +101,6 @@ Checklist
         <label for="input_load_file">Load configuration</label>
         <input id="input_load_file" type="file" accept=".json,.md,.txt,.svg">
     </div>
-
-    
 
     <div id="div_browser_info">
         <p id="p_browser_not_supported_message" hidden>This browser is not supported, please use the latest version of
@@ -1810,6 +1820,15 @@ Checklist
                 const files = input_file.files;
                 await buttonLoadSnapshotFromFile(files);
             };
+
+
+            // Test - Start
+            // Test Code to run at end
+
+            // open edit view
+            //document.getElementById("button_edit").click();
+
+            // Test - End
         }
 
         initialize();

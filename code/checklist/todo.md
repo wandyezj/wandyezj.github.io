@@ -1,6 +1,8 @@
 # checklist todo
 
-- edit cancel button
+
+
+- UI move cancel away from save button
 
 - view and edit configuration as markdown or json
 
@@ -16,7 +18,7 @@
 - multi select support? (new likert like type)
 
 - convert svg to png
-    - desireable to be able to load from svg as well, however this requires complex embedding
+    - desireable to be able to load from png as well, however this requires complex embedding
 
 - error checking for invalid file or invalid configuration
     - just make a simple JSON validator
@@ -122,3 +124,5 @@
 - [x] configuration json to configuration markdown
 
 - [x] download and upload markdown files
+
+- [x] edit cancel button

@@ -1,8 +1,8 @@
 # checklist todo
 
-- view and edit configuration as markdown
+- view and edit configuration as markdown or json
 
-- configuration json to configuration markdown
+- [x] configuration json to configuration markdown
 
 - edit cancel button
 

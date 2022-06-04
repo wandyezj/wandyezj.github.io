@@ -218,7 +218,7 @@ Checklist
         const defaultConfigurationMarkdown = `
 # example title
 
-> example description
+> example title description
 
 - [ ] example item
     > example item description
@@ -416,8 +416,8 @@ Checklist
             // Delimiters
             const delimiterListTitle = MarkdownConfigurationDelimiter.ListTitle;
             const delimiterListDescription = MarkdownConfigurationDelimiter.ListDescription;
-            const delimiterListItemCheckboxUnchecked = MarkdownConfigurationDelimiter.ListItemCheckboxChecked;
-            const delimiterListItemCheckboxChecked = MarkdownConfigurationDelimiter.ListItemCheckboxUnchecked;
+            const delimiterListItemCheckboxUnchecked = MarkdownConfigurationDelimiter.ListItemCheckboxUnchecked;
+            const delimiterListItemCheckboxChecked = MarkdownConfigurationDelimiter.ListItemCheckboxChecked;
             const delimiterListItemLikert = MarkdownConfigurationDelimiter.ListItemLikert;
             const delimiterListItemLikertValueStart = MarkdownConfigurationDelimiter.ListItemLikertValueStart;
             const delimiterListItemLikertValueEnd = MarkdownConfigurationDelimiter.ListItemLikertValueEnd;
@@ -694,8 +694,8 @@ Checklist
             // Tokens
             const delimiterListTitle = MarkdownConfigurationDelimiter.ListTitle;
             const delimiterListDescription = MarkdownConfigurationDelimiter.ListDescription;
-            const delimiterListItemCheckboxUnchecked = MarkdownConfigurationDelimiter.ListItemCheckboxChecked;
-            const delimiterListItemCheckboxChecked = MarkdownConfigurationDelimiter.ListItemCheckboxUnchecked;
+            const delimiterListItemCheckboxUnchecked = MarkdownConfigurationDelimiter.ListItemCheckboxUnchecked;
+            const delimiterListItemCheckboxChecked = MarkdownConfigurationDelimiter.ListItemCheckboxChecked;
             const delimiterListItemLikert = MarkdownConfigurationDelimiter.ListItemLikert;
             const delimiterListItemLikertValueStart = MarkdownConfigurationDelimiter.ListItemLikertValueStart;
             const delimiterListItemLikertValueEnd = MarkdownConfigurationDelimiter.ListItemLikertValueEnd;
@@ -718,7 +718,7 @@ Checklist
                 const {input, id, title, description} = item;
 
                 // everything uses the same way of declaring a description
-                const markdownDescription = description === undefined ? "" : `    > ${description}`;
+                const markdownDescription = description === undefined ? "" : `\n    > ${description}`;
 
                 if (input === ConfigurationInputType.Checkbox) {
                     const value = state[id].checkbox;
@@ -1545,6 +1545,12 @@ Checklist
             return text;
         }
 
+        function getSnapshotMarkdown() {
+            const configuration = getConfigurationSnapshot();
+            const text = getConfigurationToMarkdown(configuration);
+            return text;
+        }
+
         async function saveSnapshotToUrlHash() {
             const text = await getSnapshotTextHex();
 
@@ -1583,10 +1589,8 @@ Checklist
          * get snapshot of the current configurations answers and save to JSON
          */
          async function buttonSaveSnapshotToFileMarkdown() {
-            const configuration = getConfigurationSnapshot();
-
             const filename = `${configuration.title}.md`;
-            const text = getConfigurationToMarkdown(configuration);
+            const text = getSnapshotMarkdown();
             const encoding = 'data:text/plain';
             downloadFile({ filename, text, encoding });
         }
@@ -1641,8 +1645,14 @@ Checklist
             const div = document.getElementById("div_edit");
             const textarea = document.getElementById("textarea_edit");
 
+            // markdown
+            const value = getSnapshotMarkdown();
+
+            // json
+            //const value = getConfigurationToTextJson(getConfigurationSnapshot(), {pretty: true});
+
             // set text area value to current configuration json
-            textarea.value = getConfigurationToTextJson(getConfigurationSnapshot(), {pretty: true});
+            textarea.value = value;
 
             // show edit screen
             div.hidden = false;
@@ -1674,9 +1684,15 @@ Checklist
          */
         function buttonEditSave() {
             const textarea = document.getElementById("textarea_edit");
+            const value = textarea.value;
+
+            // json
+            // const configuration = JSON.parse(textarea.value);
+
+            // markdown
+            const configuration = getConfigurationFromTextMarkdown(value)
 
             // load modified configuration
-            const configuration = JSON.parse(textarea.value);
             loadConfiguration(configuration);
 
             editClose();

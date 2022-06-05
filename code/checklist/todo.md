@@ -5,6 +5,8 @@
     - at minimum double current size (better if scale is configurable)
 
 - support item types
+    - title could be considered an item when built (still want it separate for easy of use in configuration json)
+
     - support sections groups and overall title
         - type heading
         - can make this an item as well, set of item types?

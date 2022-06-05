@@ -741,7 +741,7 @@ Checklist
 
                 } else if (input === ConfigurationInputType.Likert) {
                     const value = state[id].likert;
-                    return `${delimiterListItemLikert}${value === null ? "" : `${delimiterListItemLikertValueStart}${value}${delimiterListItemLikertValueEnd}`}${title}`;
+                    return `${delimiterListItemLikert}${value === null ? "" : `${delimiterListItemLikertValueStart}${value}${delimiterListItemLikertValueEnd}`}${title}${markdownDescription}`;
                 }
 
                 throw new Error(`Invalid input [${input}]`);
@@ -1317,7 +1317,7 @@ Checklist
 
             // text
             // text draws from the left bottom x y
-            const dx = getDx(options.length - 1) + 10 + 10;
+            const dx = getDx(options.length - 1) + elementSize  + 10 ;//10 + 10;
             const dy = elementSize;
             const textElement = createSvgTextElement(x + dx, y + dy, title, tooltip);
             gElement.appendChild(textElement);
@@ -1337,30 +1337,45 @@ Checklist
             const configDefault = configs["default"];
             //console.log(configDefault);
 
-            const elementSize = 10;
+            const scale = 1;
+
+            // size of squares and circles
+            const elementSize = 10 * scale;
 
             const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
-            //svg.setAttribute("viewbox", "0 0 100 100");
-            // TODO: set this to calculated minimum pixel width and height
-            svg.setAttribute("width", "100%");
-            svg.setAttribute("height", items.length * (elementSize * 3) + elementSize * 2);
+
 
             // append text hex description of the configuration that generated the svg
             const configurationTextHex = await getConfigurationToTextHex(configuration);
             svg.appendChild(createSvgDescElement(configurationTextHex, "configuration"));
 
 
-            const height = 20; // need to measure height of text
+            const height = elementSize + 10// need to measure height of text
             let y = height;
             let x = 0;
 
             // title
             svg.appendChild(createSvgTextElement(x, y, title));
 
-            const spacing = height + 10;
+            // spacing between elements
+            const spacing = height + 10 * scale / 2;
             y = spacing;
             x = 10;
 
+
+            // need 10 elements for current likert, would really need to calculate
+            // 200 is room for text
+            const gridX = elementSize * 10 + (200 * scale);
+
+            // elements
+            const gridY = spacing * (items.length + 1);
+
+            //svg.setAttribute("style", "background-color:teal");
+            // TODO: set this to calculated minimum pixel width and height
+            //svg.setAttribute("viewbox", `0 0 ${gridX} ${gridY}`);
+            svg.setAttribute("width", gridX); //"100%");
+            svg.setAttribute("height", gridY);
+            // TODO: scale text
 
             items.forEach(({ id, title, input, description }) => {
                 // draw each separate input

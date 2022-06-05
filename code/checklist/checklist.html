@@ -51,21 +51,22 @@
 Checklist
     </p>
 
-    <!-- Edit Markdown that makes up the document -->
+    <!-- Edit configuration that describes the document -->
     <div id="div_edit" style="background-color: rgba(0, 0, 0, 0.1);position: absolute;top:0%; bottom:0; left:0%;right:0%;" hidden>
-        <!-- Need Save Button at top or bottom, maybe side?  -->
-
-        <button id="button_edit_save"
-            style="
-                float: left;
-                padding: 10px 20px;
-                ">Save</button>
 
         <button id="button_edit_cancel"
             style="
-                float: right;
+                float: left;
                 padding: 10px 20px;
                 ">Cancel</button>
+
+        <button id="button_edit_save"
+            style="
+                float: right;
+                padding: 10px 20px;
+                ">Save</button>
+
+
 
         <!-- Text area can contain default markdown configuration, does this require generation of md from json configuration? or should it just show the json? -->
         <textarea id="textarea_edit" 
@@ -243,6 +244,9 @@ Checklist
 - (likert) [always] some likert
 
 - (likert) another likert
+
+- (likert) with description
+    > likert description
 
 - (likert) [] empty value likert
 
@@ -1126,9 +1130,10 @@ Checklist
          * @param {number} x - x of lower left corner
          * @param {number} y - y of lower left corner
          * @param {string} text - the text to write
+         * @param {string|undefined} tooltip - 
          * @returns {SVGTextElement}
          */
-        function createSvgTextElement(x, y, text) {
+        function createSvgTextElement(x, y, text, tooltip) {
             const textElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
                 'text'
@@ -1142,6 +1147,11 @@ Checklist
             // TODO: sanitize the text
             const textNode = document.createTextNode(text);
             textElement.appendChild(textNode);
+
+            if (typeof tooltip === "string") {
+                const titleElement = createSvgTitleElement(tooltip);
+                textElement.append(titleElement);
+            }
 
             return textElement;
 
@@ -1233,11 +1243,12 @@ Checklist
          * @param {string} title - title for the element
          * @param {number} elementSize - width and height of the checkbox
          * @param {boolean|undefined} checked - is the checkbox checked
+         * @param {string|undefined} tooltip - 
          * @param {ConfigurationConfigCheckbox} config - 
          * 
          * @returns {SVGGroupElement}
          */
-        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, config) {
+        function createSvgCheckboxGroupElement(x, y, id, title, elementSize, checked, tooltip, config) {
             const gElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
                 'g'
@@ -1256,7 +1267,7 @@ Checklist
             // text draws from the left bottom x y
             const dx = elementSize + 10;
             const dy = elementSize;
-            const textElement = createSvgTextElement(x + dx, y + dy, title);
+            const textElement = createSvgTextElement(x + dx, y + dy, title, tooltip);
             gElement.appendChild(textElement);
 
             return gElement;
@@ -1269,10 +1280,11 @@ Checklist
          * @param {string} title - title for the element
          * @param {number} elementSize - size of the element
          * @param {string|undefined} selection - likert selection
+         * @param {string|undefined} tooltip - 
          * @param {ConfigurationConfigLikert} config -
          * @param {} 
          */
-        function createSvgLikertGroupElement(x, y, id, title, elementSize, selection, config) {
+        function createSvgLikertGroupElement(x, y, id, title, elementSize, selection, tooltip, config) {
             // group likert circles
             const gElement = document.createElementNS(
                 'http://www.w3.org/2000/svg',
@@ -1307,7 +1319,7 @@ Checklist
             // text draws from the left bottom x y
             const dx = getDx(options.length - 1) + 10 + 10;
             const dy = elementSize;
-            const textElement = createSvgTextElement(x + dx, y + dy, title);
+            const textElement = createSvgTextElement(x + dx, y + dy, title, tooltip);
             gElement.appendChild(textElement);
 
             return gElement;
@@ -1331,7 +1343,7 @@ Checklist
             //svg.setAttribute("viewbox", "0 0 100 100");
             // TODO: set this to calculated minimum pixel width and height
             svg.setAttribute("width", "100%");
-            svg.setAttribute("height", 200);
+            svg.setAttribute("height", items.length * (elementSize * 3) + elementSize * 2);
 
             // append text hex description of the configuration that generated the svg
             const configurationTextHex = await getConfigurationToTextHex(configuration);
@@ -1350,20 +1362,20 @@ Checklist
             x = 10;
 
 
-            items.forEach(({ id, title, input }) => {
+            items.forEach(({ id, title, input, description }) => {
                 // draw each separate input
                 if (input === "checkbox") {
                     const value = state === undefined ? undefined : state[id]?.checkbox;
                     const config = configDefault?.checkbox;
 
-                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, config);
+                    const checkboxGroup = createSvgCheckboxGroupElement(x, y, id, title, elementSize, value, description, config);
                     svg.append(checkboxGroup);
 
                 } else if (input === "likert") {
                     const value = state === undefined ? undefined : state[id]?.likert;
                     const config = configDefault?.likert;
 
-                    const likertGroup = createSvgLikertGroupElement(x, y, id, title, elementSize, value, config);
+                    const likertGroup = createSvgLikertGroupElement(x, y, id, title, elementSize, value, description, config);
                     svg.append(likertGroup);
                 }
 
@@ -1430,17 +1442,10 @@ Checklist
          * draws the configuration as an interactive svg on the page
          */
          async function drawConfigurationImage() {
-            //buttonSaveSnapshotToFileSvg();
-
             const configuration = getConfigurationSnapshot()
 
             // draw the configuration as an svg
-
             const svg = await getConfigurationToSvgElement(configuration);
-
-            // responsive all handled on the top level element
-            //svg.setAttribute("onclick", "onclickSvg(event)");
-            //svg.onclick = onclickSvg;
 
             // set the contents of the div element
             const div = document.getElementById("div_configuration_svg");

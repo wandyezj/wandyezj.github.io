@@ -1,7 +1,5 @@
 # checklist todo
 
-- svg show descriptions on item (check and likert) text also title
-    - makes it easy to check by viewing UI
 
 - bigger default text and clickables for checkbox and circles
     - at minimum double current size (better if scale is configurable)
@@ -46,6 +44,7 @@
     - need new UI function to show error
     - from configuration parsers return success or failure codes
     - display issues in a window when editing the Markdown File with a periodic refresh rate
+
 
 - separate repository for project 
 - publish pipeline
@@ -143,3 +142,6 @@
 
 - [x] UI move cancel away from save button
     - make buttons bigger
+
+- [x] svg show descriptions on item (check and likert) text also title
+    - makes it easy to check by viewing UI

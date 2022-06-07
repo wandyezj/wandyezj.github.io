@@ -30,38 +30,38 @@
     <!--
         img-src is for the favicon
     -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
 
     <!-- Content Security Policy for production-->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' "> -->
 
     <!-- development - can be convenient to refresh automatically (every 30 seconds)-->
     <!-- <meta http-equiv="refresh" content="30"> -->
-    
+
 </head>
 
 <body>
 
     <p>
-<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
-    <!-- <rect width="100%" height="100%" fill="green" /> -->
-    <circle cx="8" cy="8" r="8" fill="white" />
-    <text x="50%" y="100%" text-anchor="middle" font-size="1em">🗸</text>
-</svg>
-Checklist
+        <svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+            <!-- <rect width="100%" height="100%" fill="green" /> -->
+            <circle cx="8" cy="8" r="8" fill="white" />
+            <text x="50%" y="100%" text-anchor="middle" font-size="1em">🗸</text>
+        </svg>
+        Checklist
     </p>
 
     <!-- Edit configuration that describes the document -->
-    <div id="div_edit" style="background-color: rgba(0, 0, 0, 0.1);position: absolute;top:0%; bottom:0; left:0%;right:0%;" hidden>
+    <div id="div_edit"
+        style="background-color: rgba(0, 0, 0, 0.1);position: absolute;top:0%; bottom:0; left:0%;right:0%;" hidden>
 
-        <button id="button_edit_cancel"
-            style="
+        <button id="button_edit_cancel" style="
                 float: left;
                 padding: 10px 20px;
                 ">Cancel</button>
 
-        <button id="button_edit_save"
-            style="
+        <button id="button_edit_save" style="
                 float: right;
                 padding: 10px 20px;
                 ">Save</button>
@@ -69,13 +69,11 @@ Checklist
 
 
         <!-- Text area can contain default markdown configuration, does this require generation of md from json configuration? or should it just show the json? -->
-        <textarea id="textarea_edit" 
-            style="
+        <textarea id="textarea_edit" style="
                 position:relative; top:0%;
                 display: block;
                 margin-left: auto;
-                margin-right: auto;" 
-            cols="100" rows="80">
+                margin-right: auto;" cols="100" rows="80">
         </textarea>
     </div>
 
@@ -306,7 +304,7 @@ Checklist
          * @readonly
          * @enum {string}
          */
-         const MarkdownConfigurationDelimiter = {
+        const MarkdownConfigurationDelimiter = {
 
             /**
              * start list
@@ -718,7 +716,7 @@ Checklist
             const delimiterListConfigStart = MarkdownConfigurationDelimiter.ListConfigStart;
             const delimiterListConfigEnd = MarkdownConfigurationDelimiter.ListConfigEnd;
 
-            const {title, description, configs, items, state} = configuration;
+            const { title, description, configs, items, state } = configuration;
 
             // title
             const piecesTitle = [
@@ -730,7 +728,7 @@ Checklist
 
             // items
             const piecesItems = items.map((item) => {
-                const {input, id, title, description} = item;
+                const { input, id, title, description } = item;
 
                 // everything uses the same way of declaring a description
                 const markdownDescription = description === undefined ? "" : `\n    > ${description}`;
@@ -754,7 +752,7 @@ Checklist
             });
 
             const pieces = [piecesTitle.join("\n"), piecesItems.join("\n\n"), ...piecesConfigs];
-            const body = pieces.join("\n\n") +"\n"; // end in newline
+            const body = pieces.join("\n\n") + "\n"; // end in newline
 
             return body;
         }
@@ -1217,7 +1215,7 @@ Checklist
                 'circle'
             );
 
-            const radius = size/ 2
+            const radius = size / 2
             const dx = radius;
             const dy = radius;
 
@@ -1317,7 +1315,7 @@ Checklist
 
             // text
             // text draws from the left bottom x y
-            const dx = getDx(options.length - 1) + elementSize  + 10 ;//10 + 10;
+            const dx = getDx(options.length - 1) + elementSize + 10;//10 + 10;
             const dy = elementSize;
             const textElement = createSvgTextElement(x + dx, y + dy, title, tooltip);
             gElement.appendChild(textElement);
@@ -1415,7 +1413,7 @@ Checklist
              * @type HTMLElement
              */
             const parentElement = target?.parentElement;
- 
+
             const nodeName = parentElement?.nodeName;
             const id = parentElement?.id;
 
@@ -1424,7 +1422,7 @@ Checklist
             const configuration = getConfigurationSnapshot();
             const value = configuration?.state[id];
             if (value) {
-                const {checkbox, likert} = value;
+                const { checkbox, likert } = value;
 
                 const isCheckbox = Object.prototype.hasOwnProperty.call(value, "checkbox");
                 const isLikert = Object.prototype.hasOwnProperty.call(value, "likert");
@@ -1447,7 +1445,7 @@ Checklist
 
                     configuration.state[id].likert = current === title ? null : title;
                 }
- 
+
                 //console.log(configuration.state)
                 loadConfiguration(configuration);
             }
@@ -1456,7 +1454,7 @@ Checklist
         /**
          * draws the configuration as an interactive svg on the page
          */
-         async function drawConfigurationImage() {
+        async function drawConfigurationImage() {
             const configuration = getConfigurationSnapshot()
 
             // draw the configuration as an svg
@@ -1619,7 +1617,7 @@ Checklist
          * button 
          * get snapshot of the current configurations answers and save to JSON
          */
-         async function buttonSaveSnapshotToFileMarkdown() {
+        async function buttonSaveSnapshotToFileMarkdown() {
             const configuration = getConfigurationSnapshot();
 
             const filename = `${configuration.title}.md`;
@@ -1699,7 +1697,7 @@ Checklist
 
             // json
             if (type === "json") {
-                value = getConfigurationToTextJson(getConfigurationSnapshot(), {pretty: true});
+                value = getConfigurationToTextJson(getConfigurationSnapshot(), { pretty: true });
             }
 
             // set text area value to current configuration json
@@ -1844,7 +1842,7 @@ Checklist
 
             // Start - Test
             // Test Code to run at start
-            
+
             // End - Test
 
             drawConfigurationImage()

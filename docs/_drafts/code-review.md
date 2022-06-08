@@ -7,18 +7,18 @@
 
 Keep Quality of Code Base High, Avoid accruing technical debt
 
-- Start review prombptly
+- Start review promptly
 - redirect if not able to do review
-- proovide high level feedback early on
-- suggestions, directivesm and questions
-- scale out, provde high level and delegate details
+- provide high level feedback early on
+- suggestions, and questions
+- scale out, provide high level and delegate details
 
 
 - right reviewer
 - preview change to involve reviewer early
-- privide overview of change in the description
+- provide overview of change in the description
 - don't take comments personally
-- break large changelists ito small ones
+- break large changelists into small ones
 
 - respect each other
 - use face to face
@@ -26,12 +26,14 @@ Keep Quality of Code Base High, Avoid accruing technical debt
 
 
 Quick Checks
-- cofors to codign guidelines
+
+- conforms to coding guidelines
 - has tests
 - reviews must have code context with surroundign code
 - broken into righ tside changes
 
 big picture
+
 - right change
 - don ein right place
 - solves the right problems
@@ -39,6 +41,7 @@ big picture
 - worthwhile investment
 
 Design / architecture
+
 - simple and extensible
     - avoid speculative implementation
     - keep choices open

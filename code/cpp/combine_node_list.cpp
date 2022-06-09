@@ -1,10 +1,12 @@
+// sudo apt install clang
 
 #include <assert.h>     /* assert */
 
 #include <iostream>
 #include <chrono>
 #include <random>
-
+#include <vector>
+#include <algorithm>
 
 // Node for a singly linked list
 struct Node {
@@ -100,8 +102,39 @@ void print(Node* head) {
     auto next = head;
     while (next != nullptr) {
         std::cout << next->data << std::endl;
+        next = next->next;
     }
 }
+
+void print_list(Node nodes[], size_t size) {
+    for (size_t i = 0; i < size; i++) {
+        auto &node = nodes[i];
+        auto data = node.next == nullptr ? -1 : node.next->data;
+        std::cout << i <<" " << node.data << " " << data << std::endl;
+    }
+}
+
+std::vector<int> get_random_vector_ascending(size_t size) {
+    // https://cplusplus.com/reference/random/uniform_int_distribution/operator()/
+    // construct a trivial random generator engine from a time-based seed:
+    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
+    std::default_random_engine generator (seed);
+
+    // only 0 through 9 for simple formatting
+    std::uniform_int_distribution<int> distribution(0,9);
+
+    auto get_random_value = [&generator, &distribution](){
+        return distribution(generator);
+    };
+
+    std::vector<int> v(size);
+    std::generate(v.begin(), v.end(), get_random_value);
+
+    std::sort(v.begin(), v.end());
+
+    return v;
+}
+
 
 int main(int argc, char* argv[]) {
 
@@ -113,40 +146,47 @@ int main(int argc, char* argv[]) {
     // cut array in half by setting middle node to nullptr
     // get pointers to two heads
 
-    // https://cplusplus.com/reference/random/uniform_int_distribution/operator()/
-    // construct a trivial random generator engine from a time-based seed:
-    unsigned seed = std::chrono::system_clock::now().time_since_epoch().count();
-    std::default_random_engine generator (seed);
+    // need to sort
+    const size_t size = 5;
+    Node nodes[5] = {};
 
-    std::uniform_int_distribution<int> distribution(0,9);
-
-    
-    const size_t size = 10;
-    Node nodes[10] = {};
     for (size_t i = 0; i < size; i++) {
-        auto data = distribution(generator);
         auto &node = nodes[i];
-        node.data = data;
+        // make it easy to check initial data
+        node.data = i;
         node.next = &(nodes[i+1]);
-        
     }
 
     nodes[size -1].next = nullptr;
 
-    for (size_t i = 0; i < size; i++) {
-        auto &node = nodes[i];
-        auto data = node.next == nullptr ? -1 : node.next->data;
-        std::cout << i <<" " << node.data << " " << data << std::endl;
-    }
+    // check list out
+    print_list(nodes, size);
 
 
+    std::cout << std::endl;
 
-    //print(&nodes[0]);
+    // cut up list
+    auto index_head_a = 0;
+    auto index_head_b = size / 2;
 
+    Node* headA = &(nodes[index_head_a]);
+    Node* headB = &(nodes[index_head_b]);
 
+    nodes[index_head_b -1].next = nullptr;
 
+    print_list(nodes, size);
+
+    // fill lists with random values
+
+    std::cout << std::endl;
+    print(headA);
+    std::cout << std::endl;
+    print(headB);
+
+    std::cout << std::endl;
     // combine the lists
-
+    auto result = combine(headA, headB);
+    print(result);
 
     // check that combined list is sorted
 

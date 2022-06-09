@@ -4,12 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <title>Checklist</title>
-    <link id="favicon" rel="shortcut icon" href="" type="image/svg">
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 
+    <link id="favicon" rel="shortcut icon" href="" type="image/svg">
+    
     <!--
         img-src is for the favicon
-        script-src is inline
+        script-src is for the inline script can be replaced with hash
     -->
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
@@ -92,6 +93,8 @@
     <br>
     <div id="div_configuration_svg"></div>
 
+    <br>
+    <div id="div_configuration_png"></div>
 
     <script>
 
@@ -1771,6 +1774,161 @@
             return configuration;
         }
 
+        /**
+         * 
+         * @returns {HTMLIFrameElement}
+         */
+        async function getGeneratorIframe() {
+            const id = "iframe_generator";
+
+            let frame = document.getElementById(id);
+
+            if (!frame) {
+                // create frame
+                const srcdoc = `
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8" />
+        <title>Checklist</title>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body>
+        <p> Generator Iframe </p>
+        <script>
+function initialize() {
+    console.log("initialize iframe");
+
+    // accept post message with svg string data use it to generate png string data and send it back
+
+    const onmessage = (event) => {
+        console.log("iframe event");
+        const {data, source} = event;
+
+        const {id, content} = data;
+        console.log(data);
+        const message = "hello! : " + content;
+
+        const reply = {id, message};
+        console.log("iframe reply");
+        source.postMessage(reply);
+    };
+
+    window.addEventListener("message", onmessage);
+
+    // notify the parent that is it initialized and ready
+    window.parent.postMessage({type:"ready"});
+    console.log("ready");
+
+}
+
+initialize();
+
+        <\/script>
+    <\/body>
+<\/html>
+            `;
+
+                iframe = document.createElement("iframe");
+                iframe.id = id;
+                iframe.srcdoc = srcdoc;
+                iframe.hidden = true;
+
+                // wait until iframe ready
+                await new Promise((resolve) => {
+
+                    const onmessage = (event) => {
+                        const {data, source} = event;
+                        const {type} = data;
+
+                        if (type === "ready") {
+                            window.removeEventListener("message", onmessage);
+                            resolve();
+                        }
+                    }
+                    window.addEventListener("message", onmessage);
+
+                    // starts loading the iframe
+                    document.body.appendChild(iframe);
+                });
+
+                console.log("iframe ready");
+            }
+
+            return iframe;
+        }
+
+        async function doGenerator() {
+            return new Promise(async (resolve) => {
+                const guid = Math.floor(Math.random() * 1000);
+
+                const iframe = await getGeneratorIframe();
+
+                const onmessage = (event) => {
+                    const {data} = event;
+                    const {id, message} = data;
+
+                    if (id === guid) {
+                        window.removeEventListener("message", onmessage);
+                        resolve(message);
+                    }
+                }
+                window.addEventListener("message", onmessage);
+
+                console.log("post message to iframe");
+
+                //iframe.postMessage({id: guid, content:"hi"}, "*");
+                iframe.contentWindow.postMessage({id: guid, content:"hi"}, "*");
+            });
+        }
+
+        async function svgToPng() {
+            const value = await doGenerator();
+            console.log(value);
+        //     const iframe = getGeneratorIframe();
+            
+
+        //     const canvas = document.createElement("canvas");
+
+        //     const context = canvas.getContext('2d');
+
+
+
+        //     // see if can get the generator_iframe
+        //     document.getElementById()
+        //     document.appendChild()
+
+        //     svg = `<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+        //     <!-- <rect width="100%" height="100%" fill="green" /> -->
+        //     <circle cx="8" cy="8" r="8" fill="white" />
+        //     <text x="50%" y="100%" text-anchor="middle" font-size="1em">x</text>
+        // </svg>`;
+
+
+        //     //context.drawImage();
+
+        //     var image = new Image();
+        //     image.onload = function() {
+        //         console.log("loaded")
+        //         context.drawImage(image, 0, 0);
+        //     }
+
+        //     // get svg data
+        //     var xml = svg;// new XMLSerializer().serializeToString(svg);
+
+        //     // make it base64
+        //     var svg64 = btoa(xml);
+        //     var b64Start = 'data:image/svg+xml;base64,';
+
+        //     // prepend a "header"
+        //     var image64 = b64Start + svg64;
+        //     image.src = image64;
+        //     //"http://upload.wikimedia.org/wikipedia/commons/d/d2/Svg_example_square.svg";
+
+        //     return canvas;
+        }
 
 
         /**
@@ -1846,6 +2004,10 @@
 
             // Test - Start
             // Test Code to run at end
+            //const canvas = svgToCanvas(undefined);
+            //document.getElementById("div_configuration_png").appendChild(canvas);
+            await svgToPng();
+            //debugger;
 
             // open edit view
             //document.getElementById("button_edit").click();

@@ -5,36 +5,14 @@
     <meta charset="UTF-8" />
     <title>Checklist</title>
     <link id="favicon" rel="shortcut icon" href="" type="image/svg">
-    <!-- 'data:image/svg+xml,<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="white"/><text x="50%" y="100%" text-anchor="middle" font-size="1em">%F0%9F%97%B8</text></svg>'-->
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-    <!--
-        https://content-security-policy.com/script-src/
-        remove unsafe-inline
-        replace this with a hash of the script
-        <meta http-equiv="Content-Security-Policy"
-         content="default-src 'self'">
-        
 
-        cat ./checklist.js | openssl sha256 -binary | openssl base64
-        script-src 'sha512-HASH'
-
-        https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin
-
-        <script src="checklist.js" integrity="sha512-HASH" crossorigin="anonymous"></script>
-
-        For normal development use 'self' 'unsafe-inline'
-
-        Hashes
-            - main script tag
-    -->
     <!--
         img-src is for the favicon
+        script-src is inline
     -->
     <meta http-equiv="Content-Security-Policy"
         content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
-
-    <!-- Content Security Policy for production-->
-    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' "> -->
 
     <!-- development - can be convenient to refresh automatically (every 30 seconds)-->
     <!-- <meta http-equiv="refresh" content="30"> -->
@@ -292,7 +270,6 @@
 }
 \`\`\`
 
-
 `;
 
         //#endregion "default configurations"
@@ -375,7 +352,6 @@
              * @type {"string"}
              */
             ListConfigEnd: "```",
-
         }
 
         /**
@@ -793,7 +769,6 @@
              */
             const snapshot = JSON.parse(s);
 
-
             return snapshot
         }
 
@@ -1045,11 +1020,6 @@
             //console.log(downloadUrl)
             downloadFileUrl({ filename, url: downloadUrl });
             URL.revokeObjectURL(downloadUrl);
-
-            // legacy
-            // const component = encodeURIComponent(text);
-            // const url = `${encoding};charset=utf-16, ` + component;
-            // downloadFileUrl({filename, url})
         }
 
         /**
@@ -1074,8 +1044,6 @@
             }
         }
 
-
-
         /**
          * converts a configuration to hex text
          * @param {Configuration} configuration
@@ -1089,8 +1057,6 @@
             //console.log(compressedText);
             return compressedText;
         }
-
-
 
         /**
          * @param {Configuration} configuration
@@ -1152,7 +1118,6 @@
             }
 
             return textElement;
-
         }
 
         /**

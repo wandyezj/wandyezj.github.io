@@ -1,4 +1,4 @@
-file = ./test;
+file=./test;
 
 if [ -e $file ] ; then
     rm $file

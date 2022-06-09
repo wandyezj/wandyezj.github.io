@@ -263,3 +263,45 @@ initialize
 ```typescript
             document.getElementById("div_configuration").onchange = onConfigurationUpdated;
 ```
+
+
+```typescript
+            // legacy
+            // const component = encodeURIComponent(text);
+            // const url = `${encoding};charset=utf-16, ` + component;
+            // downloadFileUrl({filename, url})
+```
+
+
+```html
+
+ <!-- 'data:image/svg+xml,<svg id="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"><circle cx="8" cy="8" r="8" fill="white"/><text x="50%" y="100%" text-anchor="middle" font-size="1em">%F0%9F%97%B8</text></svg>'-->
+
+    <!--
+        https://content-security-policy.com/script-src/
+        remove unsafe-inline
+        replace this with a hash of the script
+        <meta http-equiv="Content-Security-Policy"
+         content="default-src 'self'">
+        
+
+        cat ./checklist.js | openssl sha256 -binary | openssl base64
+        script-src 'sha512-HASH'
+
+        https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/crossorigin
+
+        <script src="checklist.js" integrity="sha512-HASH" crossorigin="anonymous"></script>
+
+        For normal development use 'self' 'unsafe-inline'
+
+        Hashes
+            - main script tag
+    -->
+```
+
+```html
+
+    <!-- Content Security Policy for production-->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline' ; script-src 'sha256-kNQ844ZEH9AlmYG2y/K2f1z1Jnh+OJS+aLF6MpUWix8=' "> -->
+
+```

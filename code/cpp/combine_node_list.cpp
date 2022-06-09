@@ -166,11 +166,11 @@ int main(int argc, char* argv[]) {
     std::cout << std::endl;
 
     // cut up list
-    auto index_head_a = 0;
-    auto index_head_b = size / 2;
+    const auto index_head_a = 0;
+    const auto index_head_b = size / 2;
 
-    Node* headA = &(nodes[index_head_a]);
-    Node* headB = &(nodes[index_head_b]);
+    Node* head_a = &(nodes[index_head_a]);
+    Node* head_b = &(nodes[index_head_b]);
 
     nodes[index_head_b -1].next = nullptr;
 
@@ -179,17 +179,40 @@ int main(int argc, char* argv[]) {
     // fill lists with random values
 
     std::cout << std::endl;
-    print(headA);
+    print(head_a);
     std::cout << std::endl;
-    print(headB);
+    print(head_b);
 
     std::cout << std::endl;
+
     // combine the lists
-    auto result = combine(headA, headB);
+    auto result = combine(head_a, head_b);
     print(result);
 
     // check that combined list is sorted
+    auto previous = result;
+    auto current = result->next;
+    auto count = 1;
+    while (current != nullptr) {
+        const auto previous_data = previous->data;
+        const auto current_data = current->data;
 
-    std::cout << "hello" << std::endl;
+        if (previous_data > current_data) {
+            std::cout<<"ERROR: previous " << previous_data << "is greater than current " << current_data <<std::endl 
+            << "nodes should be in ascending order after combine" <<std::endl;
+        }
+
+        count++;
+        previous = current;
+        current = current->next;
+    }
+
+    // note: if nodes next create a loop this will be an infinite loop
+
+    if (count != size) {
+         std::cout<<"ERROR: missing nodes, expected " << size << " counted " << count <<std::endl;
+    }
+
+    std::cout << "done" << std::endl;
 }
 

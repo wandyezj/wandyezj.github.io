@@ -62,8 +62,8 @@
         });
 
         // set up iframe
-        const origin = "http://localhost:5000";
-        //const origin = window.self.origin;
+        //const origin = "http://localhost:5000";
+        const origin = window.self.origin;
         const source = origin + "/iframe.html";
         const iframe = document.createElement("iframe");
 

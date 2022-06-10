@@ -7,8 +7,27 @@
 
 ## How
 
+### Preparing a Review
 
-Preferable for a single person other than the author to be the primary reviewer, for complex pieces of code where knowledge is split between people individual people can review it.
+- [ ] Open a draft pull request
+- [ ] Write up a description of the change
+    - Motivation - why is this change being made?
+    - Changelog stye summary of changes.ak
+
+Preferable for a single person other than the author to be the primary reviewer, for complex pieces of code where knowledge is split between people individual people can review the specific pieces they are knowledgeable about.
+
+Choose suitable reviewers
+
+### Reviewing a Change
+
+- [ ] start review promptly
+    - promptly means the same day you get the review.
+    - if unavailable to promptly do the review, redirect to another available reviewer, if there is no other appropriate reviewer provide an time frame.
+- [ ] seek context
+    - What is this change for?
+- provide high level feedback early on
+- suggestions, and questions
+- scale out, provide high level and delegate details
 
 
 ## Who

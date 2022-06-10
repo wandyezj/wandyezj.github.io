@@ -1,8 +1,9 @@
 # checklist todo
 
-
 - bigger default text and clickables for checkbox and circles
     - at minimum double current size (better if scale is configurable)
+
+- alternative layout for mobile
 
 - support item types
     - title could be considered an item when built (still want it separate for easy of use in configuration json)
@@ -25,7 +26,16 @@
 - convert svg to png
     - desireable to be able to load from png as well, however this requires complex embedding
 
+- default configuration json for markdown, so it doesn't need to be specified
+
 - UI better layout for all the normal controls
+    - have two different modes, one for developer one for use
+    - Buttons
+        - 'edit' - in markdown only
+        - 'share' - for url
+        - 'save' - download file in markdown or svg, maybe a save with dropdown with a selected default of svg
+        - 'load' - single button
+
 
 - UI About button that contains documentation to describe everything
 
@@ -48,7 +58,7 @@
     - display issues in a window when editing the Markdown File with a periodic refresh rate
 
 
-- separate repository for project 
+
 - publish pipeline
     - build
     - publish
@@ -147,3 +157,7 @@
 
 - [x] svg show descriptions on item (check and likert) text also title
     - makes it easy to check by viewing UI
+
+- [x] separate publish repository for project
+    - https://openchecklist.github.io
+    - simply a copy renamed index.html

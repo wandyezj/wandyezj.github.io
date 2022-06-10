@@ -108,6 +108,12 @@
 
 - essential for webpages
 
+### Software Project Management
+
+[OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/en)
+
+- certify an open source projects is following best practices
+
 ### JavaScript Libraries
 
 [chart js](https://www.chartjs.org/)

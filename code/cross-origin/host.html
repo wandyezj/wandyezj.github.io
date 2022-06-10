@@ -62,7 +62,9 @@
         });
 
         // set up iframe
-        const source = window.self.origin + "/extension.html";
+        const origin = "http://localhost:5000";
+        //const origin = window.self.origin;
+        const source = origin + "/iframe.html";
         const iframe = document.createElement("iframe");
 
         iframe.hidden = true;

@@ -1,5 +1,11 @@
 # checklist todo
 
+- convert svg to png
+    - desireable to be able to load from png as well, however this requires complex embedding
+    - image.src property is blocked by csp
+    - in order to support csp do the conversion via inline iframe, iframe can create own canvas draw the svg and then return the processed text to be downloaded
+
+
 - bigger default text and clickables for checkbox and circles
     - at minimum double current size (better if scale is configurable)
 
@@ -23,8 +29,6 @@
 
 - multi select support? (new likert like type)
 
-- convert svg to png
-    - desireable to be able to load from png as well, however this requires complex embedding
 
 - default configuration json for markdown, so it doesn't need to be specified
 

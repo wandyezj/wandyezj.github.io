@@ -5,7 +5,7 @@ date:   2022-01-16 12:00:00 -0700
 tags: software
 ---
 
-Software program descriptions often make claims about functionality. Some claims of recent interest are those around data privacy, data security, and data integrity.
+Software program descriptions often make claims about functionality. Some claims of recent interest are around: data privacy, data security, and data integrity.
 
 Claims are good, but proof is better. How can software provide evidence for its claims?
 
@@ -13,11 +13,11 @@ In the essay "Reflections on Trusting Trust" Ken Thompson states:
 
 > You can't trust code that you did not totally create yourself.
 
->No amount of source-level verification or scrutiny will protect you from using untrusted code.
+> No amount of source-level verification or scrutiny will protect you from using untrusted code.
 
 A main point of Thompson's essay is that you must trust the people who write the software (presumably people trust themselves and thus why you can trust code you wrote; a dubious claim).
 
-Considering most of use will continue to use software created by others in our daily lives, how can we increase our trust in the software we use?
+Considering most of us will continue to use software created by others in our daily lives, how can we increase our trust in the software we use?
 
 - Can we choose who to trust?
 - Can we reduce the amount of trust we need to have?
@@ -44,7 +44,7 @@ Organizations often have code review policies which require that more than one d
 
 Much work has been done on allowing software to present evidence for its claims.
 
-One example is requiring applications to show  required permissions to people before installation. In Android and iOS, software developers write a manifest that requests the permissions the application needs and the operating system that runs the application only allows the application to use the permissions it has requested.
+One example is requiring applications to show required permissions to people before installation. In Android and iOS, software developers write a manifest that requests the permissions the application needs and the operating system that runs the application only allows the application to use the permissions it has requested.
 
 Another example is techniques that provide evidence for specific behavior. In "Countering trusting trust through diverse double-compiling." David Wheeler explores a technique to provide evidence that a compiler is not bugged and that the source code for the compiler is likely the source of the compilers code. (_Note_: Contrary to the essays title it does not 'counter' trusting trust and misses Thompson's broader point about trust in software.)
 

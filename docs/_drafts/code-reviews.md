@@ -12,9 +12,9 @@ People are great at checking design assumptions or making sure all steps in the 
 
 ### How can code reviews share knowledge?
 
-Code reviews provide a forum for knowledge to flow among people.
-The people reviewing the code have a change to understand the specific change.
-The person having the code reviewed can learn from others expertise and insight.
+Code reviews provide a forum to share knowledge.
+The reviewers have a change to understand the specific change.
+The reviewee can learn from others expertise and insight.
 Code reviews can also prompt discussion on team standards, that once decided on can be written up for broader distribution.
 
 ## Preparing a Change
@@ -61,7 +61,7 @@ Code Review is not a substitute for automated tests, which should occur in a pip
 
 Review by an experienced person who understands the code
 
-Know who expereinced people are
+Know who experienced people are
 
 List of all code owners and reviewers, will need to keep the list up to date. Goal is to increase the number of people who can sigh
 
@@ -79,4 +79,4 @@ reviewer tends to be at a disadvantage since they didn't write the code and are 
 Requiring multiple sign offs on reviews combined with resetting votes on any change:
     - Significantly slows down how quickly changes can be made.
     - Reduces the incentive to fix nit comments, since it resets all reviewers
-    - Increases the incentive 
+    - Increases the incentive to sign off without through review, since presumably the other person is reviewing it (I just need one more sign off)

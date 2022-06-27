@@ -1,5 +1,9 @@
-# Code Reviews
-
+---
+layout: post
+title:  "Code Review"
+date:   2022-06-26 12:00:00 -0700
+tags: software
+---
 ## Purpose
 
 - Improve Quality
@@ -36,7 +40,9 @@ Avoid large all at once refactors. It's much easier to review small incremental 
 
 It is preferable for a single person other than the author to be the primary reviewer that signs off on the review. For complex pieces of code where knowledge is split between people, individual people can review the specific pieces they are knowledgeable about.
 
-Choose suitable reviewers. The best reviewers are those with in depth experience in the specific technologies being used, and with existing expertise in the codebase. One reviewer who goes in depth into the review is preferable to multiple shallow reviewers. It's best to choose reviewers before the change is made and to include the reviewers on 
+Choose suitable reviewers. The best reviewers are those with in depth experience in the specific technologies being used, and with existing expertise in the codebase. One reviewer who goes in depth into the review is preferable to multiple shallow reviewers. It's best to choose reviewers before the change is made and to include the reviewers in design discussions.
+
+If you are added to a review you don't have time or believe you are qualified for, you should decline the review and explain why.
 
 ## Reviewing a Change
 
@@ -57,11 +63,11 @@ Choose suitable reviewers. The best reviewers are those with in depth experience
 
 ## Errata
 
-Code Review is not a substitute for automated tests, which should occur in a pipeline. Code review is a great way to enforce that changes have tests.
+- Code Review is not a substitute for automated tests, which should occur in a pipeline. Code review is a great way to enforce that changes have tests.
 
-Review by an experienced person who understands the code
+- Get reviewed by an experienced person who understands the code.
 
-Know who experienced people are
+- Know who experienced people are, managing team knowledge.
 
 List of all code owners and reviewers, will need to keep the list up to date. Goal is to increase the number of people who can sigh
 
@@ -73,10 +79,10 @@ Reviewers goal is to make sure the code is correct, check for any unknowns and t
 
 Learners goal is to learn the area so they can become an expert reviewer, they should not sign off on the review, they should also questions
 
-
-reviewer tends to be at a disadvantage since they didn't write the code and are not as devoted to the review as teh person asking for the review.
+reviewer tends to be at a disadvantage since they didn't write the code and are not as devoted to the review as the person asking for the review.
 
 Requiring multiple sign offs on reviews combined with resetting votes on any change:
     - Significantly slows down how quickly changes can be made.
-    - Reduces the incentive to fix nit comments, since it resets all reviewers
-    - Increases the incentive to sign off without through review, since presumably the other person is reviewing it (I just need one more sign off)
+    - Reduces the incentive and cost to fix nit comments, since it resets all reviewers
+    - Increases the incentive to sign off without through review, since presumably the other person is reviewing it (I just need one more sign off).
+    - Places less significance on a sign off.

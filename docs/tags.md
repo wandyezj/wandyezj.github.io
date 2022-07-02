@@ -19,22 +19,23 @@ order: 1
 </ul>
 
 <ul style="list-style: none;">
-    {% for tag in tags %}
-        {% assign tag_name = tag[0] | escape %}
-        {% assign tag_posts = tag[1] | escape %}
+{% for tag in tags %}
+    {% assign tag_name = tag[0] | escape %}
+    {% assign tag_posts = tag[1] | escape %}
+
 <li id="{{ tag_name}}">{{ tag_name }}
-        {% for post in tag_posts %}
-            {% assign post_date = post.date | date:"%Y-%m-%d" %}
-  <ul style="list-style: none;">
-        <li>
-            <time datetime="{{ post_date }}">{{ post_date}}</time>
-            <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">
-                {{ post.title }}
-            </a>
-        </li>
-  </ul>
+    <ul style="list-style: none;">
+{% for post in tag_posts %}
+{% assign post_date = post.date | date:"%Y-%m-%d" | escape %}
+
+<li>
+{{ post_date }}
+<!-- <time datetime="{{ post_date }}">{{ post_date }}</time> -->
+<!-- <a href="{{ site.baseurl }}{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a> -->
 </li>
-        {% endfor %}
-    {% endfor %}
+</ul>
+</li>
+{% endfor %}
+{% endfor %}
 </ul>
 

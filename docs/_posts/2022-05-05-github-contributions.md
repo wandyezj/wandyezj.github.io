@@ -45,7 +45,7 @@ I always forget the git commands to set up a Pull Request to Open Source project
 
     _note_: This will git you the actual command to run to push to origin.
 
-1. make and commit changes to the local repostiory
+1. make and commit changes to the local repository
     > git add
 
     > git commit -m "message"

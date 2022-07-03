@@ -54,6 +54,13 @@ You can find the source code for Jekyll at GitHub:
 
 on windows Using WSL2 with ubuntu 20
 
+Packages have dependencies on multiple compilers:
+
+> sudo apt-get install gcc -y
+> sudo apt install g++ -y
+
+Once those compilers are installed:
+
 > sudo apt-get install ruby-full
 > gem install jekyll bundler
 

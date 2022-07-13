@@ -316,7 +316,7 @@ Chicago Style Citations
 
 [Codd, Edgar F. "A relational model of data for large shared data banks." Communications of the ACM 13.6 (1970): 377-387.](https://raw.github.com/wandyezj/reference/master/a-relational-model-of-data-for-large-shared-data-banks.pdf)
 
-[Thompson, Ken. "Reflections on trusting trust." Commun. ACM 27, no. 8 (1984): 761-763.](https://raw.github.com/wandyezj/reference/master/trusting-trust.pdf)
+[Thompson, Ken. "Reflections on trusting trust." Communications of the ACM 27, no. 8 (1984): 761-763.](https://raw.github.com/wandyezj/reference/master/trusting-trust.pdf)
 
 [Stroustrup, Bjarne. "Thriving in a crowded and changing world: C++ 2006–2020." Proceedings of the ACM on Programming Languages 4, no. HOPL (2020): 1-168.](https://raw.github.com/wandyezj/reference/master/thriving-in-a-crowded-and-changing-world-C++-2006–2020.pdf)
 

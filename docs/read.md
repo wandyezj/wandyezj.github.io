@@ -18,6 +18,18 @@ layout: page
 </p>
 {% endfor %}
 
+## Experience Books
+
+{% assign books_experience = site.books | where:"genre", "experience" %}
+{% for book in books_experience %}
+{% assign wiki = book.wiki | escape %}
+<p>
+<a href="{{ wiki }}" >
+{{ book.title | escape }} - {{ book.author | escape }} ({{ book.year | escape }})
+</a>
+</p>
+{% endfor %}
+
 ## Papers
 
 {% assign papers = site.papers %}

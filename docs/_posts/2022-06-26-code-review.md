@@ -12,7 +12,8 @@ tags: software
 ### How can code reviews contribute to code quality?
 
 Code review can help enforce team quality standards.
-People are great at checking design assumptions or making sure all steps in the process are followed.
+
+People can check design assumptions and check all steps in the process are followed.
 
 ### How can code reviews share knowledge?
 
@@ -51,6 +52,16 @@ If you are added to a review you don't have time or believe you are qualified fo
     - if unavailable to promptly do the review, redirect to another available reviewer, if there is no other appropriate reviewer provide an time frame.
 - [ ] seek context
     - What is this change for?
+- [ ] documentation
+    - Is there a written explanation of the feature others will be able to refer to later outside of the review?
+    - Is there a written explanation of the change and how it is implemented?
+    - How is the change architected?
+- [ ] architecture
+    - Does the change fit into the existing architecture?
+- [ ] test
+    - What tests offer evidence the change works as designed?
+    - What tests help ensure the change will continue to work?
+    - how is the
 
 - Ideally, read code in entirety before leaving comments (unfortunately, most review platforms don't allow draft comments)
 - It can be helpful to clone the branch with the change to poke the code and try it out for yourself
@@ -86,3 +97,8 @@ Requiring multiple sign offs on reviews combined with resetting votes on any cha
     - Reduces the incentive and cost to fix nit comments, since it resets all reviewers
     - Increases the incentive to sign off without through review, since presumably the other person is reviewing it (I just need one more sign off).
     - Places less significance on a sign off.
+
+
+When reviews take a long time to close it incentivizes placing a large number of changes in a single review. This makes changes more difficult to understand. To avoid this make reviews quick and easy.
+
+What does sign off on a code review mean?

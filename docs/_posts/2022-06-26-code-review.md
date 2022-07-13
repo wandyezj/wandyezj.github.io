@@ -54,7 +54,7 @@ If you are added to a review you don't have time or believe you are qualified fo
 
 - Ideally, read code in entirety before leaving comments (unfortunately, most review platforms don't allow draft comments)
 - It can be helpful to clone the branch with the change to poke the code and try it out for yourself
-- provide high level feedback early, before moving to nit comments
+- Provide high level feedback early, before moving to nit comments.
 - Ask questions about any changes you don't understand. Before signing off on a review you should understand the code in its entirety.
 
 - suggestions, and questions

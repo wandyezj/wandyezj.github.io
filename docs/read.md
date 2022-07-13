@@ -3,9 +3,6 @@ layout: page
 ---
 # Read
 
-
-
-
 ## Academic Books
 
 {% assign books_academic = site.books | where:"genre", "academic" %}
@@ -46,8 +43,8 @@ layout: page
 
 ## Literature
 
-{% assign books_not_academic = site.books | where_exp:"item","item.genre != 'academic'" %}
-{% for book in books_not_academic %}
+{% assign books_literature = site.books | where:"genre", "literature" %}
+{% for book in books_literature %}
 {% assign wiki = book.wiki | escape %}
 <p>
 <a href="{{ wiki }}" >
@@ -55,3 +52,4 @@ layout: page
 </a>
 </p>
 {% endfor %}
+

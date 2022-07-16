@@ -12,3 +12,7 @@ What considerations are there for designing a home beneficial for living?
 - air flow
 
 How does the living environment make someone feel?
+
+
+Importance of Noise Management
+https://www.youtube.com/watch?v=Fv7VXipiVl0

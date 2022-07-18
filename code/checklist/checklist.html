@@ -9,11 +9,14 @@
     <link id="favicon" rel="shortcut icon" href="" type="image/svg">
     
     <!--
-        img-src is for the favicon
-        script-src is for the inline script can be replaced with hash
+        img-src
+            hash - for the favicon
+            data: - for svg to png via drawing svg on canvas
+        script-src
+            for the inline script can be replaced with hash
     -->
     <meta http-equiv="Content-Security-Policy"
-        content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8='; script-src 'unsafe-inline'">
+        content="default-src 'none' ; style-src 'unsafe-inline' ; img-src 'sha256-+DtLlqnWKiFJtCffXhUE0UzZWfHaNwwHz3koyEK+r+8=' data:; script-src 'unsafe-inline'">
 
     <!-- development - can be convenient to refresh automatically (every 30 seconds)-->
     <!-- <meta http-equiv="refresh" content="30"> -->
@@ -1062,6 +1065,28 @@
         }
 
         /**
+         * converts a svg element to test
+         * @param {SVGSVGElement} svg
+         * @returns {string} svg text
+         */
+        function svgToTextSvg(svg) {
+            const serializer = new XMLSerializer();
+            const text = serializer.serializeToString(svg);
+            return text;
+        }
+
+        /**
+         * converts a configuration to svg text
+         * @param {Configuration} configuration
+         * @returns {Promise<string>} svg text
+         */
+        async function getConfigurationToTextSvg(configuration) {
+            const svg = await getConfigurationToSvgElement(configuration);
+            const text = svgToTextSvg(svg);
+            return text;
+        }
+
+        /**
          * @param {Configuration} configuration
          */
         function saveConfigurationImageCanvas(configuration) {
@@ -1614,9 +1639,7 @@
         async function buttonSaveSnapshotToFileSvg() {
             const configuration = getConfigurationSnapshot();
 
-            const svg = await getConfigurationToSvgElement(configuration);
-            var serializer = new XMLSerializer();
-            var snapshotSvgText = serializer.serializeToString(svg);
+            var snapshotSvgText = getConfigurationToTextSvg(configuration);
 
             const filename = `${configuration.title}.svg`;
             const text = snapshotSvgText;
@@ -1793,23 +1816,66 @@
         <meta charset="UTF-8" />
         <title>Checklist</title>
         <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' ; img-src 'unsafe-inline'  data: ; object-src 'unsafe-eval' ; ">
     </head>
 
     <body>
         <p> Generator Iframe </p>
         <script>
+
+/**
+ * draws the png on a canvas ov width x height
+ * @param {string} svg string
+ * @param {number} png width
+ * @param {number} png height
+ * @returns {string} png data url
+ */
+async function svgToPng(data, width, height) {
+
+    console.log("iframe svgToPng")
+    const image = new Image();
+    //const svg = new Blob([data], {type: 'image/svg+xml'});
+    //const url = window.URL.createObjectURL(svg);
+    const url = data
+
+    const promise = new Promise(resolve => {
+        
+        image.onload = () => {
+            console.log("iframe image load")
+
+            const canvas = document.createElement("canvas");
+            canvas.width = width;
+            canvas.height = height;
+            const context = canvas.getContext("2d");
+            context.drawImage(image, 0, 0);
+
+            //window.URL.revokeObjectURL(url);
+
+            const png = canvas.toDataURL("image/png");
+
+            resolve(png);
+        }
+
+        console.log("iframe image src")
+        // violates CSP
+        image.src = url;
+    });
+
+    return promise;
+}
 function initialize() {
     console.log("initialize iframe");
 
     // accept post message with svg string data use it to generate png string data and send it back
 
-    const onmessage = (event) => {
+    const onmessage = async (event) => {
         console.log("iframe event");
         const {data, source} = event;
 
-        const {id, content} = data;
+        const {id, content, width, height} = data;
         console.log(data);
-        const message = "hello! : " + content;
+        // "hello! : " + content;
+        const message = await svgToPng(content, width, height);
 
         const reply = {id, message};
         console.log("iframe reply");
@@ -1860,7 +1926,23 @@ initialize();
             return iframe;
         }
 
-        async function doGenerator() {
+        /**
+         * @param {SVGSVGElement} svg - svg Element
+         */
+        async function doGenerator(svg) {
+            const width = svg.width.baseVal.value;
+            const height = svg.height.baseVal.value;
+
+            const xml = svgToTextSvg(svg);
+            // make it base64
+            var svg64 = btoa(xml);
+            var b64Start = 'data:image/svg+xml;base64,';
+
+            // prepend a "header"
+            var image64 = b64Start + svg64;
+
+            const content = image64;
+
             return new Promise(async (resolve) => {
                 const guid = Math.floor(Math.random() * 1000);
 
@@ -1880,13 +1962,22 @@ initialize();
                 console.log("post message to iframe");
 
                 //iframe.postMessage({id: guid, content:"hi"}, "*");
-                iframe.contentWindow.postMessage({id: guid, content:"hi"}, "*");
+                iframe.contentWindow.postMessage({id: guid, content, width, height }, "*");
             });
         }
 
         async function svgToPng() {
-            const value = await doGenerator();
+            const configuration = getConfigurationSnapshot();
+
+            const svg = await getConfigurationToSvgElement(configuration);
+
+            // png
+            const value = await doGenerator(svg);
             console.log(value);
+
+            // how to download png?
+
+
         //     const iframe = getGeneratorIframe();
             
 

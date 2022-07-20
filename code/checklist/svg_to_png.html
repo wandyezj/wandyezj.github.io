@@ -5,12 +5,16 @@
     <meta charset="utf-8" />
     <title>svg to PNG</title>
 
+    <meta http-equiv="Content-Security-Policy"
+        content="default-src 'none' ; style-src 'unsafe-inline' ; img-src data:; script-src 'unsafe-inline'">
+
+
 </head>
 
 <body>
 
     <!-- <canvas id="canvas"></canvas> -->
-    <img id="image" alt="png from canvas"/>
+    <img id="image" alt="png from canvas" />
 
     <script>
 
@@ -21,11 +25,11 @@
          * @param {number} png height
          * @returns {string} png data url
          */
-        async function svgToPng(data, width, height) {
+        async function svgToPngViaCreateObjectUrl(data, width, height) {
 
 
             const image = new Image();
-            const svg = new Blob([data], {type: 'image/svg+xml'});
+            const svg = new Blob([data], { type: 'image/svg+xml' });
             const url = window.URL.createObjectURL(svg);
 
             const promise = new Promise(resolve => {
@@ -51,13 +55,61 @@
             return promise;
         }
 
+
+        /**
+         * draws the svg on a canvas of svg width x height and returns a png data url
+         * @param {SVGSVGElement} svg string
+         * @returns {string} png data url
+         */
+        async function svgToPng(svg) {
+
+            const width = svg.width.baseVal.value;
+            const height = svg.height.baseVal.value;
+
+            const serializer = new XMLSerializer();
+            const text = serializer.serializeToString(svg);
+
+            // make it base64
+            var svg64 = btoa(text);
+            var b64Start = 'data:image/svg+xml;base64,';
+
+            //  header
+            var image64 = b64Start + svg64;
+
+            const url = image64;
+
+            const image = new Image();
+
+            const promise = new Promise(resolve => {
+
+                image.onload = () => {
+
+                    const canvas = document.createElement("canvas");
+                    canvas.width = width;
+                    canvas.height = height;
+
+                    const context = canvas.getContext("2d");
+                    context.drawImage(image, 0, 0);
+
+                    const png = canvas.toDataURL("image/png");
+
+                    resolve(png);
+                }
+
+                // violates Content Security Policy img-src unless data: is allowed.
+                image.src = url;
+            });
+
+            return promise;
+        }
+
         // svg text
-        const data=`<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200"><desc id="configuration">1f8b080000000000000ab554db6e83300cfd1594675ef6da3fd8374c15cac0850893a0c4294515ffbe1008e5924edbaabd253e27c7f631e6ce4810023b31b8f1a64548a67bca0a30b9162d0925f768b2c65226081ac34e1f77268a07351bc30eddebcfe1b8fc08eed5656bc951f20af2fa53dd5c2857f222caf7315901176e91d89046b2676fafe64f0adba2c839c18b9528aa403fa92609e07f79625403198a1a34ad4a18a3c9120d924be03b412e7dc947cd19f8a36c27a8cab69d06e111da99b0756b4af0c4a71f6587a6a53ebb72b411b33c9878f097cd9d43d8adc87d099fe6a4e19e3e66e9207f86c21f152aed88ad90b5ab95591901bbca7d246c70f05c8ac3943761da4b5ff7381eec786f0ede19d24a96d827bcd400be8f49174503dea020d02843d81f048eefca8af29ecbcd632b6ba9bae3e82458d21c57efe77e566f35d710495c08b3cfdd03a2ea368f255c23fbb5741d11d1cedfe13c8c8e1a1ab7df19baf9af8521f9815d381a70d4ddbf67c3216d0f9469efa352eb957584700a13748cdd0eae48d2223ac2619b8e94c827bf270dc31736ebd58723060000</desc><text x="0" y="20" alignment-baseline="baseline">example title</text><g id="example_item"><rect x="10" y="25" width="10" height="10" style="fill:white;stroke:black;"/><text x="30" y="35" alignment-baseline="baseline">example item<title>example item description</title></text></g><g id="example_item_1"><rect x="10" y="50" width="10" height="10" style="fill:pink;stroke:black;"/><text x="30" y="60" alignment-baseline="baseline">example item<title>example item description duplicate</title></text></g><g id="example_item_other"><rect x="10" y="75" width="10" height="10" style="fill:white;stroke:black;"/><text x="30" y="85" alignment-baseline="baseline">example item other<title>example item description</title></text></g><g id="some_likert"><circle cx="15" cy="105" r="5" style="fill:lime;stroke:black;stroke-width:3;"><title>always</title></circle><circle cx="35" cy="105" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="105" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="105" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="105" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="110" alignment-baseline="baseline">some likert</text></g><g id="another_likert"><circle cx="15" cy="130" r="5" style="fill:lime;stroke:black;stroke-width:1;"><title>always</title></circle><circle cx="35" cy="130" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="130" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="130" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="130" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="135" alignment-baseline="baseline">another likert</text></g><g id="with_description"><circle cx="15" cy="155" r="5" style="fill:lime;stroke:black;stroke-width:1;"><title>always</title></circle><circle cx="35" cy="155" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="155" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="155" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="155" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="160" alignment-baseline="baseline">with description<title>likert description</title></text></g><g id="empty_value_likert"><circle cx="15" cy="180" r="5" style="fill:lime;stroke:black;stroke-width:1;"><title>always</title></circle><circle cx="35" cy="180" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="180" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="180" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="180" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="185" alignment-baseline="baseline">empty value likert</text></g></svg>`;
+        const data = `<svg id="svg" xmlns="http://www.w3.org/2000/svg" width="300" height="200"><desc id="configuration">1f8b080000000000000ab554db6e83300cfd1594675ef6da3fd8374c15cac0850893a0c4294515ffbe1008e5924edbaabd253e27c7f631e6ce4810023b31b8f1a64548a67bca0a30b9162d0925f768b2c65226081ac34e1f77268a07351bc30eddebcfe1b8fc08eed5656bc951f20af2fa53dd5c2857f222caf7315901176e91d89046b2676fafe64f0adba2c839c18b9528aa403fa92609e07f79625403198a1a34ad4a18a3c9120d924be03b412e7dc947cd19f8a36c27a8cab69d06e111da99b0756b4af0c4a71f6587a6a53ebb72b411b33c9878f097cd9d43d8adc87d099fe6a4e19e3e66e9207f86c21f152aed88ad90b5ab95591901bbca7d246c70f05c8ac3943761da4b5ff7381eec786f0ede19d24a96d827bcd400be8f49174503dea020d02843d81f048eefca8af29ecbcd632b6ba9bae3e82458d21c57efe77e566f35d710495c08b3cfdd03a2ea368f255c23fbb5741d11d1cedfe13c8c8e1a1ab7df19baf9af8521f9815d381a70d4ddbf67c3216d0f9469efa352eb957584700a13748cdd0eae48d2223ac2619b8e94c827bf270dc31736ebd58723060000</desc><text x="0" y="20" alignment-baseline="baseline">example title</text><g id="example_item"><rect x="10" y="25" width="10" height="10" style="fill:white;stroke:black;"/><text x="30" y="35" alignment-baseline="baseline">example item<title>example item description</title></text></g><g id="example_item_1"><rect x="10" y="50" width="10" height="10" style="fill:pink;stroke:black;"/><text x="30" y="60" alignment-baseline="baseline">example item<title>example item description duplicate</title></text></g><g id="example_item_other"><rect x="10" y="75" width="10" height="10" style="fill:white;stroke:black;"/><text x="30" y="85" alignment-baseline="baseline">example item other<title>example item description</title></text></g><g id="some_likert"><circle cx="15" cy="105" r="5" style="fill:lime;stroke:black;stroke-width:3;"><title>always</title></circle><circle cx="35" cy="105" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="105" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="105" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="105" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="110" alignment-baseline="baseline">some likert</text></g><g id="another_likert"><circle cx="15" cy="130" r="5" style="fill:lime;stroke:black;stroke-width:1;"><title>always</title></circle><circle cx="35" cy="130" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="130" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="130" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="130" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="135" alignment-baseline="baseline">another likert</text></g><g id="with_description"><circle cx="15" cy="155" r="5" style="fill:lime;stroke:black;stroke-width:1;"><title>always</title></circle><circle cx="35" cy="155" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="155" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="155" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="155" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="160" alignment-baseline="baseline">with description<title>likert description</title></text></g><g id="empty_value_likert"><circle cx="15" cy="180" r="5" style="fill:lime;stroke:black;stroke-width:1;"><title>always</title></circle><circle cx="35" cy="180" r="5" style="fill:lightcyan;stroke:black;stroke-width:1;"><title>mostly</title></circle><circle cx="55" cy="180" r="5" style="fill:white;stroke:black;stroke-width:1;"><title>unknown</title></circle><circle cx="75" cy="180" r="5" style="fill:yellow;stroke:black;stroke-width:1;"><title>rarely</title></circle><circle cx="95" cy="180" r="5" style="fill:red;stroke:black;stroke-width:1;"><title>never</title></circle><text x="110" y="185" alignment-baseline="baseline">empty value likert</text></g></svg>`;
 
         function prototype() {
 
             var image = new Image();
-            var svg = new Blob([data], {type: 'image/svg+xml'});
+            var svg = new Blob([data], { type: 'image/svg+xml' });
 
             var url = window.URL.createObjectURL(svg);
 
@@ -77,7 +129,7 @@
 
                 const png = canvas.toDataURL("image/png");
                 document.getElementById("image").src = png;
-                
+
                 // get png from canvas
                 console.log(png);
             };
@@ -87,7 +139,12 @@
         }
 
         async function initialize() {
-            const png = await svgToPng(data, 300, 200);
+            const div = document.createElement("div")
+            div.innerHTML = data;
+            const svg = div.children[0]//.lastChild;//.getElementById("svg");
+
+            const png = await svgToPng(svg);
+            console.log(png)
             document.getElementById("image").src = png;
         }
 

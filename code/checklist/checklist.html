@@ -78,6 +78,7 @@
         <button id="button_save_file_json">json</button>
         <button id="button_save_file_text">txt</button>
         <button id="button_save_file_svg">svg</button>
+        <button id="button_save_file_png">png</button>
         <br>
 
         <p>Load File</p>
@@ -1025,6 +1026,7 @@
         function downloadFile({ filename, text, encoding }) {
             const blob = new Blob([text], { type: encoding })
             const downloadUrl = URL.createObjectURL(blob);
+            console.log(downloadUrl)
             //console.log(downloadUrl)
             downloadFileUrl({ filename, url: downloadUrl });
             URL.revokeObjectURL(downloadUrl);
@@ -1653,6 +1655,22 @@
          * button 
          * get snapshot of the current configurations answers and save to svg
          */
+         async function buttonSaveSnapshotToFileSvg() {
+            const configuration = getConfigurationSnapshot();
+
+            var snapshotPng = getConfigurationToTextSvg(configuration);
+
+            const filename = `${configuration.title}.svg`;
+            const text = snapshotSvgText;
+            const encoding = 'data:image/svg+xml';
+            downloadFile({ filename, text, encoding });
+        }
+
+
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to svg
+         */
         async function buttonSaveSnapshotToFileTextHex() {
             const configuration = getConfigurationSnapshot();
 
@@ -1660,6 +1678,21 @@
             const text = await getConfigurationToTextHex(configuration);
             const encoding = 'data:text/plain';
             downloadFile({ filename, text, encoding });
+        }
+
+        
+        /**
+         * button 
+         * get snapshot of the current configurations answers and save to png
+         */
+        async function buttonSaveSnapshotToFilePng(){
+            const configuration = getConfigurationSnapshot();
+
+            const filename = `${configuration.title}.png`;
+            const url = await getConfigurationToPng(configuration);
+
+            // already have a download URL
+            downloadFileUrl({filename, url:text})
         }
 
         /**
@@ -1799,6 +1832,11 @@
             return configuration;
         }
 
+        async function getConfigurationToPng(configuration) {
+            const svg = await getConfigurationToSvgElement(configuration)
+            const png = await svgToPng(svg);
+            return png;
+        }
 
         /**
          * draws the svg on a canvas of svg width x height and returns a png data url
@@ -1844,8 +1882,8 @@
                 image.src = url;
             });
 
-return promise;
-}
+            return promise;
+        }
 
         /**
          * Only function run on start
@@ -1906,6 +1944,7 @@ return promise;
             document.getElementById("button_save_file_json").onclick = buttonSaveSnapshotToFileJson;
             document.getElementById("button_save_file_text").onclick = buttonSaveSnapshotToFileTextHex;
             document.getElementById("button_save_file_svg").onclick = buttonSaveSnapshotToFileSvg;
+            document.getElementById("button_save_file_png").onclick = buttonSaveSnapshotToFilePng;
 
             // Load file
             /**

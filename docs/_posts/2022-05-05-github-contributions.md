@@ -54,3 +54,11 @@ I always forget the git commands to set up a Pull Request to Open Source project
     > git push
 
 1. Create pull request
+
+## Convenient Git Commands
+
+### Delete remote branch
+
+> git push origin --delete NAME
+
+_note_: `NAME` is the name of the remote branch.

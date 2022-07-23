@@ -77,8 +77,8 @@
         <button id="button_save_file_markdown">md</button>
         <button id="button_save_file_json">json</button>
         <button id="button_save_file_text">txt</button>
-        <button id="button_save_file_svg">svg</button>
         <button id="button_save_file_png">png</button>
+        <button id="button_save_file_svg">svg</button>
         <br>
 
         <p>Load File</p>
@@ -91,16 +91,8 @@
         </p>
     </div>
 
-    <!-- Configuration Placeholder with actual actions -->
-    <div id="div_configuration"></div>
-
     <br>
     <div id="div_configuration_svg"></div>
-
-    <br>
-    <div id="div_configuration_png">
-        <image id="image_configuration_png"></image>
-    </div>
 
     <script>
 
@@ -1961,12 +1953,13 @@
             // Test Code to run at end
             //const canvas = svgToCanvas(undefined);
             //document.getElementById("div_configuration_png").appendChild(canvas);
-            const svg = await getConfigurationToSvgElement(configuration)
-            const png = await svgToPng(svg);
-            console.log(png);
+            // const svg = await getConfigurationToSvgElement(configuration)
+            // const png = await svgToPng(svg);
+            // console.log(png);
+            // document.getElementById("image_configuration_png").src = png;
             // const image = document.createElement("image");
             // image.src = png;
-            document.getElementById("image_configuration_png").src = png;
+            
             //debugger;
 
             // open edit view
@@ -1979,10 +1972,6 @@
         }
 
         initialize();
-
-
-
-
 
     </script>
 </body>

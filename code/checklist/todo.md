@@ -1,12 +1,14 @@
 # checklist todo
 
-- convert svg to png
-    - desireable to be able to load from png as well, however this requires complex embedding
-    - image.src property is blocked by csp
-    - in order to support csp do the conversion via inline iframe, iframe can create own canvas draw the svg and then return the processed text to be downloaded
+- UI testing with a framework Playwright.
+    - cross browser
+    - low dependencies
+    - https://playwright.dev/docs/intro
 
+- load configuration from png
+    - requires complex embedding or analyzing png
 
-- bigger default text and clickables for checkbox and circles
+- bigger default text and click zones for checkbox and circles
     - at minimum double current size (better if scale is configurable)
 
 - alternative layout for mobile
@@ -165,3 +167,7 @@
 - [x] separate publish repository for project
     - https://openchecklist.github.io
     - simply a copy renamed index.html
+
+- [x] convert svg to png
+    - as simple as drawing to a canvas, simply allow a data url for an image in CSP
+    - image.src property is blocked by csp - allow data url bypass

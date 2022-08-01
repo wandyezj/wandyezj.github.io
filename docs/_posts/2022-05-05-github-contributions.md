@@ -62,3 +62,7 @@ I always forget the git commands to set up a Pull Request to Open Source project
 > git push origin --delete NAME
 
 _note_: `NAME` is the name of the remote branch.
+
+### Automatically push to central repository
+
+> git config --local --add push.autoSetupRemote true

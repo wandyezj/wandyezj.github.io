@@ -5,6 +5,20 @@
 - glass, metal, wood, ceramic
     - make sure they they don't contain any heavy metals
 
+## Tea
+
+[Twinings](https://twiningsusa.com/)
+
+[tealeaves](https://www.tealeaves.com/)
+
+## Biscotti
+
+[Dicamillo Bakery](https://www.dicamillobakery.com/)
+
+## Dried Fruit
+
+[Chukar Cherries](https://www.chukar.com/)
+
 ## Chocolates
 
 [L. A. Burdick](https://www.burdickchocolate.com/)
@@ -48,16 +62,13 @@ Tide Original
 - Cracklin' Oat Bran
 - Weetabix
 
-## Tea
-
-[Twinings](https://twiningsusa.com/)
-
-[tealeaves](https://www.tealeaves.com/)
 
 ## Food
 
-Cape Cod Potatoe Chips, Sea Salt and Vinegar
+[Cape Cod Potato Chips](https://www.capecodchips.com/)
+    - Sea Salt and Vinegar
 
 ## Pepper Grinder
 
-[Peugeot pepper mill -Fidji](https://us.peugeot-saveurs.com/en_us/pepper-mills)
+[Peugeot pepper mill](https://us.peugeot-saveurs.com/en_us/pepper-mills)
+    - Fidji

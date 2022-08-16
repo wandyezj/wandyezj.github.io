@@ -1,0 +1,11 @@
+# Code Day labs
+
+A Guide for running a Code Day lab project and for students.
+
+Educating students as they are working on the project
+
+- establish consistent meeting times
+- set up the entire project and repository including CI mechanisms
+- write down all the rules and how to do everything.
+- write down references to all training material
+- Presentation skills

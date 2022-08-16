@@ -9,3 +9,23 @@ Educating students as they are working on the project
 - write down all the rules and how to do everything.
 - write down references to all training material
 - Presentation skills
+
+
+Requirements
+
+- end goal output
+- scenarios
+- changelog
+
+How to
+
+- build
+- make changes
+- test
+- integrate
+- deploy
+
+- overcome common issues
+
+- handle incidents
+- accessability, security, privacy

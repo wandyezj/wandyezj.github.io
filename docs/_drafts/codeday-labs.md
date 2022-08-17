@@ -11,6 +11,8 @@ Educating students as they are working on the project
 - Presentation skills
 
 
+- getting to know students
+
 Requirements
 
 - end goal output

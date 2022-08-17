@@ -142,6 +142,10 @@
 
 - parse JSON with comments using `stripComments`
 
+### Crypto
+
+[A beginner's guide to constant-time cryptography](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html)
+
 ### Programming
 
 [Elements Of Programming](http://elementsofprogramming.com/)

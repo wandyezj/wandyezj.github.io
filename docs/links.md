@@ -259,6 +259,11 @@
 
 - A complete, cross-platform solution to record, convert and stream audio and video.
 
+[ImageMagick](https://imagemagick.org/)
+
+- https://github.com/ImageMagick/ImageMagick
+- Create edit and compose images
+
 ### Concepts
 
 [Set Theory](https://en.wikipedia.org/wiki/Set_theory)

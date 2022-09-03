@@ -13,3 +13,15 @@ Optional items are usually enclosed in square brackets[]
 
 - parser
     - yacc
+
+
+
+
+## Vocabulary
+
+http://craftinginterpreters.com/the-lox-language.html
+
+- expressions
+    - evaluate to a value
+- statements
+    - 

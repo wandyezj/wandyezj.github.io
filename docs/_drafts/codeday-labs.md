@@ -64,6 +64,42 @@ Students tend to lack the ability to accurately assess implementation time.
 ### Overview of projects
 
 
+## Weekly Meetings
+
+### Daily Written Standup
+
+Written document of
+
+- Done
+    - what you completed since you last wrote this up
+- Open
+    - include links to PRs if relevant
+- Chat
+    - anything to chat about
+- TODO
+    - list of what you are targeting to work on next
+
+
+### Individual Chats
+
+Schedule a separate day of the week for each person.
+
+What happens if people do not show up?
+
+### Monday Standup
+
+- Random Fun Icebreaker Question
+- Friendly Chat
+- Weekly Goals
+
+### Friday Retrospective
+
+- go over weekly goals
+- Demos
+- How are things going?
+- Feedback
+
+
 ## Notes
 
 Educating students as they are working on the project
@@ -74,6 +110,7 @@ Educating students as they are working on the project
 - write down references to all training material
 - Presentation skills
 
+- specifically outline that I am also learning.
 
 - getting to know students
 
@@ -97,3 +134,5 @@ How to
 - accessability, security, privacy
 
 
+- specifically call out that this is not like school
+- ask for written over verbal communication

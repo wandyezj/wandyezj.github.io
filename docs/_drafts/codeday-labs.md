@@ -1,10 +1,23 @@
 # Code Day labs
 
-A guide for running a Code Day lab project and for students.
+A guide for mentoring a Code Day Labs project.
 
 Consider this guide a set of scripts to follow for setting expectations.
 
-## Project Selection
+## Outcomes
+
+Outcomes this guide is designed to achieve.
+
+- Everyone has fun.
+- Students learn what it's like to be part of a team building software.
+- Students learn technology that interests them.
+- Students learn to self manage and communicate their own progress.
+- Students learn to ask for help when they need it.
+- Mentors learn how to better lead a project.
+
+## Project
+
+### Project Selection
 
 I recommend giving students a small choice of well scoped projects.
 
@@ -12,23 +25,48 @@ Projects should be outlined and well scoped before introducing them to students.
 
 Students tend to lack the ability to accurately assess implementation time.
 
+Projects should be completable with 3 weeks of writing code. You as a professional should be able to complete the project in a week long hackathon.  
+
+Allow students to pick which project they want to complete.
+
 ### Project Principles
 
-- long term sustainable
+- Sustainable
+    - over the long term
     - (no backends)
+- Private
+    - no storage of user data
+    - no collection of user data
+- Open Source
+    - All code should be publically available on GitHub
 - Unlicense
+    - All code should be available for anyone to use without any restriction.
+
 
 ## First Meeting
 
-1. Outline of agenda
-    - introductions
-    - expectations
-    - contact information
-    - meeting times
-1. Introduce yourself first
-1. go around getting introductions (take notes)
+The first meeting with everyone.
+
+The mentor should reach out and set up meeting at an agreed upong meeting time.
+
+Agenda Outline
+
+- [Introductions](#introductions)
+- [Expectations](#expectations)
+- [Contacts](#contacts)
+- [Meetings](#meetings)
+- [Projects](#project)
+- [Tasks](#tasks)
+
+Everything discussed in the meeting should be written down so students can refer back to it later.
 
 ### Introductions
+
+Introduce yourself first
+
+Have everyone introduce themselves:
+
+Take notes to refer back to later.
 
 - Name
 - A bit about yourself
@@ -42,14 +80,17 @@ Students tend to lack the ability to accurately assess implementation time.
 
 - Explain how you are going to run the project
 
-### Contact Information
+### Contacts
+
+Make sure everyone has access to everyones contact information.
 
 - name
 - GitHub Alias
 - email
 - teams alias
+- phone number
 
-### Set up meetings
+### Meetings
 
 - Set up teams meeting, make sure anyone can join without being admitted
     - use the same meeting call for all meetings
@@ -61,7 +102,17 @@ Students tend to lack the ability to accurately assess implementation time.
     - I recommend the morning and have a 1:1 on a different day for each student
 - set up team meeting
 
-### Overview of projects
+### Projects
+
+- Overview of different project options
+
+Should have two options with the 3rd option being 'something else' have students propose something.
+
+
+### Tasks
+
+These are the tasks to be accomplished by the next meeting.
+
 
 
 ## Weekly Meetings
@@ -82,7 +133,7 @@ Written document of
 
 ### Individual Chats
 
-Schedule a separate day of the week for each person.
+Schedule a separate day of the week for each person, and separate from Weekly team meetings.
 
 What happens if people do not show up?
 
@@ -90,13 +141,15 @@ What happens if people do not show up?
 
 - Random Fun Icebreaker Question
 - Friendly Chat
-- Weekly Goals
+- Set Weekly Goals
 
 ### Friday Retrospective
 
-- go over weekly goals
 - Demos
+- Check Weekly Goals
 - How are things going?
+- What went well?
+- What could be better?
 - Feedback
 
 

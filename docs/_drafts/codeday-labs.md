@@ -29,6 +29,8 @@ Projects should be completable with 3 weeks of writing code. You as a profession
 
 Allow students to pick which project they want to complete.
 
+Pick projects that use technologies that you have in depth familiarity with since you will be called on by students to answer questions about these technologies.
+
 ### Project Principles
 
 - Sustainable
@@ -38,9 +40,16 @@ Allow students to pick which project they want to complete.
     - no storage of user data
     - no collection of user data
 - Open Source
-    - All code should be publically available on GitHub
+    - All code should be publicly available on GitHub
 - Unlicense
     - All code should be available for anyone to use without any restriction.
+
+### Potential Projects
+
+- Office Add-In using office.js
+- Web Application
+- Visual Studio Code Extension
+- Command line tools
 
 ## First Contact
 
@@ -60,11 +69,12 @@ First contact with students will likely be over email
 
 The first meeting with everyone.
 
-The mentor should reach out and set up meeting at an agreed upong meeting time.
+The mentor should reach out and set up meeting at an agreed upon meeting time.
 
 Agenda Outline
 
 - [Introductions](#introductions)
+- [Overview](#overview)
 - [Expectations](#expectations)
 - [Contacts](#contacts)
 - [Meetings](#meetings)
@@ -81,9 +91,15 @@ Have everyone introduce themselves:
 
 Take notes to refer back to later.
 
-- Name
+- Name (pay attention to pronunciation)
 - A bit about yourself
 - something you are looking forward to
+
+### Overview
+
+Overall Project Arc, where we are today and where we are going.
+
+By the end of the project...
 
 ### Expectations
 
@@ -93,6 +109,7 @@ Take notes to refer back to later.
 
 - Explain how you are going to run the project
 - Expectation that things will be ambiguous at times
+- How many hours put forth per day and per week.
 
 ### Contacts
 
@@ -168,6 +185,39 @@ What happens if people do not show up?
 - What could be better?
 - Feedback
 
+
+## Training
+
+Students will need training on any technology they are unfamiliar with, make sure to have links to training material ready.
+
+### Infrastructure
+
+- [GitHub Actions](https://docs.github.com/en/actions/learn-github-actions)
+
+### Tools
+
+- [Git](https://git-scm.com/docs/gittutorial)
+- [GitHub Desktop](https://desktop.github.com/)
+- [Visual Studio COde](https://code.visualstudio.com/Download)
+
+### Libraries
+
+- [TypeScript](https://www.typescriptlang.org/)
+- [NPM](https://docs.npmjs.com/)
+- [prettier](https://prettier.io/)
+- [Jest](https://jestjs.io/)
+
+### Documentation
+
+- [GitHub Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
+- [Write The Docs](https://www.writethedocs.org/guide/)
+
+### Presentation
+
+- [How to Speak - MIT open CourseWare](https://www.youtube.com/watch?v=Unzc731iCUY)
+- [Audacity](https://www.audacityteam.org/download/)
+
+Video Editing Software and tutorials on how to create a good presentation.
 
 ## Notes
 

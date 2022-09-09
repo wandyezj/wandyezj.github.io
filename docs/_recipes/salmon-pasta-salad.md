@@ -1,12 +1,13 @@
 Salmon Sald Pasta with kale and cashew herb sauce
 
 ## Sauce
+
 1/3 cup cashews (soaked at least 8 hour in 1 cup of water)
 1 big lemon worth of juice
 1 clove of garlic
 1 dash salt
-1 dash fresh groupd pepper
-2 tablesoppn nutritional yeast
+1 dash fresh ground pepper
+2 tablespoon nutritional yeast
 
 finely blend everything in food processor
 
@@ -21,7 +22,7 @@ fresh tyme
 cook pasta   el- dente and set aside
 
 
-## Vegtables
+## Vegetables
 
 1 red onion sliced
 1/2 package kale
@@ -30,7 +31,7 @@ roasted brocoli
 
 saute onions in water
 once translucent add kale and sauce
-cook for a minute on medul heat
+cook for a minute on medium heat
 
 stir in pasts, salmon and tyme,
 salt and pepper to taste

@@ -50,6 +50,13 @@ Text updates:
 
 A status update is likely only needed once a week to denote specific progress. However, it can be convenient for the update to be a list of all items significant amounts of time were spent on. More holistic updates give people a clearer picture of what is going on.
 
+Status updates around an area should have the following parts
+
+- done - what work has been completed since the last update?
+- open - what current work is in progress?
+- next - what work is planned to be opened next?
+
+
 ## Warm Up
 
 The warm up is to facilitate people informally talking to each other.

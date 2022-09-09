@@ -1,9 +1,17 @@
 # Nice Things
 
-## Materials
+## Principles
+
+### Materials
 
 - glass, metal, wood, ceramic
     - make sure they they don't contain any heavy metals
+
+### Design
+
+- no sharp edges
+- quiet
+- easy to use
 
 ## Tea
 
@@ -72,3 +80,13 @@ Tide Original
 
 [Peugeot pepper mill](https://us.peugeot-saveurs.com/en_us/pepper-mills)
     - Fidji
+
+## Magazines
+
+[Popular Mechanics](https://www.popularmechanics.com/)
+
+[The Atlantic](https://www.theatlantic.com/)
+
+[Cooks Illustrated](https://www.cooksillustrated.com/)
+
+[Consumer Report](https://www.consumerreports.org/)

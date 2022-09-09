@@ -92,6 +92,10 @@
 
 - programable modeling software
 
+[uBlock Origin](https://github.com/gorhill/uBlock)
+
+- Wide Spectrum Blocker
+
 ### Software Security
 
 [OWASP](https://www.owasp.org/)
@@ -254,6 +258,11 @@
 [FFmpeg](https://ffmpeg.org/)
 
 - A complete, cross-platform solution to record, convert and stream audio and video.
+
+[ImageMagick](https://imagemagick.org/)
+
+- https://github.com/ImageMagick/ImageMagick
+- Create edit and compose images
 
 ### Concepts
 

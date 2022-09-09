@@ -42,6 +42,19 @@ Allow students to pick which project they want to complete.
 - Unlicense
     - All code should be available for anyone to use without any restriction.
 
+## First Contact
+
+First contact with students will likely be over email
+
+- Introduce yourself
+    - attach an updated resume
+    - provide contact information
+- Propose first meeting time
+- Send link to shared team Doc
+    - Ask to fill out contact information
+- Send link of how you will run the team
+- Send links to project proposals
+
 
 ## First Meeting
 
@@ -79,10 +92,11 @@ Take notes to refer back to later.
     - students role
 
 - Explain how you are going to run the project
+- Expectation that things will be ambiguous at times
 
 ### Contacts
 
-Make sure everyone has access to everyones contact information.
+Make sure everyone has access to everyone's contact information.
 
 - name
 - GitHub Alias
@@ -108,11 +122,13 @@ Make sure everyone has access to everyones contact information.
 
 Should have two options with the 3rd option being 'something else' have students propose something.
 
-
 ### Tasks
 
 These are the tasks to be accomplished by the next meeting.
 
+- Send Resumes
+    - The mentor should collect and review all team members current resumes to get an understanding of students current skill level.
+- Have students select a meeting time hey can work together independently
 
 
 ## Weekly Meetings

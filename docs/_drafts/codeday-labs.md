@@ -255,3 +255,46 @@ How to
 
 - specifically call out that this is not like school
 - ask for written over verbal communication
+
+There are two options for this project, and the team will decide which one to pursue:
+
+## Option 1: Private Shareable List
+
+Lists are all the rage! People love sharing their preferences and power rankings on social media. This project will be to create a site that allows people to securely create and share lists with each other.
+
+Create a single page application that allows people to create and share lists with each other. This Open Source application will be written using HTML, CSS, and JavaScript, to allow others to audit the source code. This project will build off of a prototype version at https://openchecklist.github.io/  which handles basic plumbing functions, with the goal of creating a polished experience. If you want to polish your web dev skills HTML, JavaScript, and SVG skills, and have something polished to show people at the end this is the perfect project for you!
+
+## Option 2: Visual Studio Code Extension
+
+Visual Studio is a mainstream code editing platform. Part of what makes it so useful is the number of extensions available. This project will focus on creating extensions for Visual Studio Code.
+
+One option is to create an extension to do static analysis TypeScript code to help people during development.
+
+- Poetry Helper
+- TypeScript Static Analysis
+
+## Option 3: Office Add-In
+
+Create a cross platform Office Add-In using Office.js
+
+- Poetry Helper for Word
+
+## Option 4: Data Frameworks TSV lint
+
+Create a command line tool to analyze TSV files and check that they conform to a schema, and highlight where they do not.
+
+## Option Technical
+
+Option 1:
+
+- create and manipulate and style new UI elements
+- add new UI list options
+- testing frameworks
+
+Option 2:
+
+- Visual Studio Code Extension published on the store
+- Analysis of TypeScript functions for
+  - potential errors throw
+  - calling of other functions
+  - reading and writing of global variables

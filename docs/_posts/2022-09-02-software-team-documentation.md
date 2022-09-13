@@ -39,7 +39,7 @@ Common development scenarios:
     - What is expected in Code Review?
     - How is the code deployed?
     - How do I learn to use the tools used by the project?
-- Where should I ask questions
+- Where should I ask questions?
 - Who should I contact for specific questions?
 - What dependencies does the project have?
     - Important from a security perspective when those dependencies need to be updated.
@@ -53,3 +53,12 @@ Common development scenarios:
     - What assumptions does the API make?
 
 
+In large complex pieces of software, where people update and add new code all the time, it quickly becomes impossible to know all the technical details. What details are important to know? What is the mechanism to keep track of those details? How team facilitate knowledge exchange and coordination?
+
+One way to ease finding information is to place it in a consistent place in an consistent format.
+
+In an individual 
+
+Repositories across an organization.
+
+Standard repository format

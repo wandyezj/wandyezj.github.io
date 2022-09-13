@@ -58,8 +58,17 @@ In large complex pieces of software, where people update and add new code all th
 
 One way to ease finding information is to place it in a consistent place in an consistent format.
 
-In an individual 
+One way to ease updating information is to place it next to the thing that necessitates the information being updated. A common practice is to place technical design and overview documents in markdown files and check them in and update them with the code.
 
-Repositories across an organization.
+## Articles
 
-Standard repository format
+[Slashdot - Facebook engineers: have no idea where we keep all your personal data](https://tech.slashdot.org/story/22/09/07/2114208/facebook-engineers-we-have-no-idea-where-we-keep-all-your-personal-data)
+
+> "I'm just trying to understand at the most basic level from this list what we're looking at"
+
+> "I don't believe there's a single person that exists who could answer that question"
+
+> "Someone must have a diagram that says this is where this data is stored"
+
+> "We have a somewhat strange engineering culture compared to most where we don't generate a lot of artifacts during the engineering process. Effectively the code is its own design document often."
+> "For what it's worth, this is terrifying to me when I first joined as well."

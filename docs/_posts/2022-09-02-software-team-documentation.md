@@ -5,13 +5,13 @@ date:   2022-09-02 12:00:00 -0700
 tags: software documentation management
 ---
 
-A common question in software industry is "Where is the documentation?". The question is a good joke. 😀 There frequently isn't any! It is common for software teams to place documentation low on the priority list.
+A common question in the software industry is "Where is the documentation?". The question is a good joke. 😀 There frequently isn't any! It is common for software teams to place documentation low on the priority list.
 
-In the absence of clear documentation software engineers resort to: poking the software, staring for hours or days at a screen puzzling through complex code, attempting to find and get ahold of someone who can answer their questions, or making changes unsure of the downstream impact - hoping nothing breaks.
+In the absence of clear documentation, software engineers resort to: poking the software, staring for hours or days at a screen puzzling through complex code, attempting to find and get ahold of someone who can answer their questions, or making changes unsure of the downstream impact - hoping nothing breaks.
 
-The benefits of writing documentation when writing the software are not immediately obvious, after all, the person who wrote the code usually understands how it works at the time they wrote it. If anyone has any questions, they can just ask! Unfortunately, in long lived software projects others frequently can't ask, since code often lasts longer than peoples presence on the team or their memory of what the software does.
+The benefits of writing documentation when writing the software are not immediately obvious, after all, the person who wrote the code usually understands how it works at the time they wrote it. If anyone has any questions, they can just ask! Unfortunately, in long lived software projects others frequently can't ask, since code often outlives peoples presence on the team or their memory of what the software does.
 
-The difference in perspective of people writing the code and the people maintaining the code makes for an interesting challenge. This results in the interesting contradiction of people asking for documentation for someone elses work while providing little for their own work.
+The difference in perspective of people writing the code and the people maintaining the code is a challenge. This challenge shows in the amusing contradiction of people asking for documentation for someone elses work, while providing little for their own.
 
 Compounding the difficulty:
 
@@ -23,7 +23,7 @@ Compounding the difficulty:
 Considering the cost and the challenges, what documentation is most valuable and why?
 
 
-Documentation can be thought of as fulfilling scenarios just as software fulfills customer scenarios.
+Documentation can be thought of as fulfilling scenarios, just as software fulfills customer scenarios.
 
 Common development scenarios:
 
@@ -51,6 +51,7 @@ Common development scenarios:
 - How do I use a specific API?
     - What constraints does the API have?
     - What assumptions does the API make?
+- How is the project organized?
 
 
 In large complex pieces of software, where people update and add new code all the time, it quickly becomes impossible to know all the technical details. What details are important to know? What is the mechanism to keep track of those details? How team facilitate knowledge exchange and coordination?

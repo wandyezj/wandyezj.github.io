@@ -98,6 +98,36 @@ t built in functions)
 
 - can make claims about where data ends up by tracking input data and output data with tags throughout the program. data derived from a source can be considered derived from that source when the data is output, the source can be checked to make sure that it it ok for data to be taken from one source and placed to another. This is a tricky data flow problem, since data could be written to disk and then re-read, the way to solve this might to be having a temporary location that stores all output until the script is complete and then the output is moved to the final output place, this way it can be tracked what files have what data and reading in the same file results in the data being tagged as having a specific source applied to it. This essentially requires that all data be tagged with the source during runtime, or static analysis needs to be good enough to make sure that input and output can be tracked.
 
+## Differentiate Declaration and Assignment
+
+Is there a way to support Python style `identifier = value` combined declaration and assignment syntax while also supporting scoping rules? One way to do this would be to consider any assignment where the identifier is not shadowing to also be a variable declaration. This is simplified if global variables are banned from being accessed inside of functions. Since the function scope boundary could then be the top level scope. However, referencing variables outside of function scope is quite convenient for things like inline lambda functions since this eases writing callbacks without having to provide a context.
+
+`let identifier` is convenient for explicitly specifying the scope within which the identifier exists and what it shadows. Common cases are for nested if and for where the block boundary is delineated.
+
+Declaration separate from assignment makes it explicit in the code where the identifier is being declared instead of relying on context. Relying on context requires the programmer to do additional thinking about where the variable is declared verses simply looking for let.
+
+## What does constant mean?
+
+Constant means that the identifier cannot be assigned to outside of the declaration.
+
+Constants are still considered variables however and obey all other rules.
+
+Should constant be a completely separate keyword as in JavaScript or be a modifier to a declaration as in C++?
+
+By making a constant an alternative declaration keyword it makes it easier to use and more explicit.
+
+By having `const` be a modifier it allows static analysis to determine if a value is indeed constant, however, it also makes it more annoying to write intent.
+
+
+## Numbers
+
+Give infinite precision numbers, numbers are rendered when they are referenced.
+
+Irrational numbers are rendered to a fixed point representation.
+
+Numeric types can be use to restrict the range of allowed numeric values.
+
+
 ## Proposed Syntax
 
 Declaration

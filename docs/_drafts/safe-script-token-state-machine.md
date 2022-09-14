@@ -16,13 +16,21 @@ Restrict all syntax to a specific known sequence of characters.
 
 Restricting identifiers to a specific sequence is convenient.
 
+Can operators be any group of symbols?
+
 ## Keywords
 
 - `let`
 - `const`
 - `if`
 - `else`
+- `or`
+- `and`
 - `:`
-
-
-
+- `+`
+- `-`
+- `*`
+- `/`
+- `%`
+- `(`
+- `)`

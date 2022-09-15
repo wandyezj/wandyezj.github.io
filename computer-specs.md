@@ -58,7 +58,7 @@ Samsung SSD 860 EVO 2TB X 1
 
 ## Graphics Card
 
-[ASUS NVIDIA GeForce GTX 1060 6 GB](https://www.asus.com/us/Graphics-Cards/TURBO-GTX1060-6G/)
+[ASUS NVIDIA GeForce RTX 3060 16 GB](https://www.asus.com/us/Motherboards-Components/Graphics-Cards/Phoenix/PH-RTX3060-12G/)
 
 ## Power Supply
 
@@ -78,8 +78,6 @@ Samsung SSD 860 EVO 2TB X 1
 
 ## Mouse
 
-[Microsoft Sculpt Ergonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)
-
 [Logitec MX Master 3 Advanced Wireless Mouse - Graphite](https://www.logitech.com/en-us/products/mice/mx-master-3.910-005620.html)
 
 ## Keyboard
@@ -94,11 +92,13 @@ Samsung SSD 860 EVO 2TB X 1
 
 ## Headphones
 
+[Sony WH-1000XM5](https://electronics.sony.com/audio/headphones/all-headphones/p/wh1000xm5-b)
+
 [Bose Noise Canceling Headphones 700](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_black)
 
 ## Camera
 
-[Microsoft LifeCam HD-3000](https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011)
+[Microsoft Modern Webcam](https://www.microsoft.com/en/accessories/products/webcams/microsoft-modern-webcam?activetab=pivot:overviewtab)
 
 ## Pen Input
 
@@ -109,3 +109,10 @@ Samsung SSD 860 EVO 2TB X 1
 > Belkin 6-Outlet Commercial Power Strip Surge Protector with 8-Foot Cord and Rotating Plug, 720 Joules (BE106000-08R)
 
 
+## Sideline
+
+[Microsoft LifeCam HD-3000](https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011)
+
+[ASUS NVIDIA GeForce GTX 1060 6 GB](https://www.asus.com/us/Graphics-Cards/TURBO-GTX1060-6G/)
+
+[Microsoft Sculpt Ergonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)

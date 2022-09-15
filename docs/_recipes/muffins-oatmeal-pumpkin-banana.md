@@ -7,14 +7,15 @@
 
 ## Ingredients
 
-- 200 grams instant oats
-- 200 grams whole weat flour
+- 2 cups (200 grams) instant oats
+- 2 cups (200 grams) whole weat flour
 - 1 teaspoon baking powder
 - 1 teaspoon baking soda
 - 3 teaspoons ground cylon cinnamon
 - 1/2 teaspoon ground nutmeg
 - 1/4 teaspoon allspice
 - 1/4 teaspoon salt
+
 
 - 1/4 cup avocado oil
 - 1/4 cup milk

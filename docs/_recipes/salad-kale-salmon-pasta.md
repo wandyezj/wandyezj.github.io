@@ -1,19 +1,19 @@
 ---
 ---
 
-# Salad with kale, salmon, pasta, and mustard
+# Salad - Kale Salmon Pasta with Dijon Avocado sauce
 
 ## Ingredients
 
-1/2 cup Avocado (1 huge or 2 medium avocadoes)
-1 tablespoon Grey Poupon Dijon Mustard
-1/4 teaspoon salt
-1/8 teaspoon fresh ground pepper
-1 teaspoon lemon juice (to taste)
-1 bunch of Fresh kale (stems removed and)
-1 6 oz can salmon
-1/2 red pepper cut into tiny pieces
-1 package of whole wheat pasta (rotini) cooked el-dente (can be cooked the day before and left in the refrigerator)
+- 1/2 cup Avocado (1 huge or 2 medium avocadoes)
+- 1 tablespoon Grey Poupon Dijon Mustard
+- 1/4 teaspoon salt
+- 1/8 teaspoon fresh ground pepper
+- 1 teaspoon lemon juice (to taste)
+- 1 bunch of Fresh kale (stems removed and)
+- 1 6 oz can salmon
+- 1/2 red pepper cut into tiny pieces
+- 1 package of whole wheat pasta (rotini) cooked el-dente (can be cooked the day before and left in the refrigerator)
 
 ## Equipment
 

@@ -1,8 +1,49 @@
 # Links
 
-## Educational Resources
+## Contents
 
-### General
+Educational Resources
+
+- [General Education](#general-education)
+- [History Education](#history-education)
+- [Life](#life)
+- [Law](#law)
+- [Digital Security](#digital-security)
+
+Software Resources
+
+- [Software](#software)
+- [Image Editing](#image-editing)
+- [Video Editing](#video-editing)
+- [Gif Creation](#gif-creation)
+
+Programming Resources
+
+- [Software Security](#software-security)
+- [Programming](#programming)
+- [JavaScript Libraries](#javascript-libraries)
+- [Code Puzzle Sites](#code-puzzle-sites)
+- [Data](#data)
+
+Management
+
+- [Software Project Management](#software-project-management)
+
+Communication
+
+- [Rhetoric](#rhetoric)
+- [Presentation](#presentation)
+- [English Grammar](#english-grammar)
+
+Opportunities
+
+- [Opportunities](#opportunities)
+
+Other
+
+- [Technical Reading](#technical-reading)
+
+## General Education
 
 [Prepared For Success](https://preparedforsuccess.org/)
 
@@ -32,7 +73,7 @@
 
 - Access research papers for free
 
-### History
+## History Education
 
 [Crash Course World History](https://www.youtube.com/watch?v=Yocja_N5s1I&list=PLBDA2E52FB1EF80C9)
 
@@ -42,7 +83,7 @@
 
 [Khan Academy US History](https://www.khanacademy.org/humanities/us-history)
 
-### Software
+## Software
 
 [Mozilla Firefox Web Browser](https://www.mozilla.org/en-US/firefox/download/thanks/)
 
@@ -96,6 +137,10 @@
 
 - Wide Spectrum Blocker
 
+[Cirsim Circuit Simulator](https://www.npmjs.com/package/cirsim)
+
+## Security
+
 ### Software Security
 
 [OWASP](https://www.owasp.org/)
@@ -112,7 +157,39 @@
 
 - essential for webpages
 
-### Software Project Management
+### Crypto
+
+[A beginner's guide to constant-time cryptography](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html)
+
+### Digital Security
+
+[Multi Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
+
+[Microsoft Authenticator](https://www.microsoft.com/en-us/account/authenticator)
+
+- Enable two factor authentication on your online accounts
+
+[KeePass](https://keepass.info/)
+
+- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive. Store the keepass application on the file share as well to avoid having to download it again and to use the same version consistently. Do not allow automatic updates for keepass.
+
+[Microsoft OneDrive Personal Vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)
+
+- Use Personal vault to store the keepass password database.
+
+[BitLocker](https://en.wikipedia.org/wiki/BitLocker)
+
+- encrypt computer hard drives so data cannot be read from the drive without authentication. This protects the data on your device when your computer leaves your physical presence.
+
+[Panopticlick](https://panopticlick.eff.org/)
+
+- Check your browsers capability to prevent tracking
+
+[justdelete.me](justdelete.me)
+
+- How to delete accounts in different websites. For security only join websites that have easily deleted accounts.
+
+## Software Project Management
 
 [OpenSSF Best Practices](https://bestpractices.coreinfrastructure.org/en)
 
@@ -142,11 +219,7 @@
 
 - parse JSON with comments using `stripComments`
 
-### Crypto
-
-[A beginner's guide to constant-time cryptography](https://www.chosenplaintext.ca/articles/beginners-guide-constant-time-cryptography.html)
-
-### Programming
+## Programming
 
 [Elements Of Programming](http://elementsofprogramming.com/)
 
@@ -195,39 +268,25 @@
 
 - HTML canvas tutorial
 
+### Concepts
+
+[Set Theory](https://en.wikipedia.org/wiki/Set_theory)
+
+- Useful for description
+
+## Code Puzzle Sites
+
+[Advent of Code](https://adventofcode.com/)
+
+[Project Euler](https://projecteuler.net/)
+
+[USA Computing Olympiad](http://www.usaco.org/)
+
 ### Information Technology
 
 [CompTIA](https://en.wikipedia.org/wiki/CompTIA)
 
 - Certification for IT professionals
-
-### Digital Security
-
-[Multi Factor Authentication](https://en.wikipedia.org/wiki/Multi-factor_authentication)
-
-[Microsoft Authenticator](https://www.microsoft.com/en-us/account/authenticator)
-
-- Enable two factor authentication on your online accounts
-
-[KeePass](https://keepass.info/)
-
-- Store online passwords securely in a encrypted database that can be stored on any personal file share such as OneDrive. Store the keepass application on the file share as well to avoid having to download it again and to use the same version consistently. Do not allow automatic updates for keepass.
-
-[Microsoft OneDrive Personal Vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)
-
-- Use Personal vault to store the keepass password database.
-
-[BitLocker](https://en.wikipedia.org/wiki/BitLocker)
-
-- encrypt computer hard drives so data cannot be read from the drive without authentication. This protects the data on your device when your computer leaves your physical presence.
-
-[Panopticlick](https://panopticlick.eff.org/)
-
-- Check your browsers capability to prevent tracking
-
-[justdelete.me](justdelete.me)
-
-- How to delete accounts in different websites. For security only join websites that have easily deleted accounts.
 
 ### Image Editing
 
@@ -241,15 +300,18 @@
 
 [SVG Clipping and Masking](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
 
-### Video Editing
+[ImageMagick](https://imagemagick.org/)
 
-[OBS Studio](https://obsproject.com/)
+- https://github.com/ImageMagick/ImageMagick
+- Create edit and compose images
 
 ### Gif Creation
 
 [Screen To Gif](https://www.screentogif.com/)
 
-### Tools
+### Video Editing
+
+[OBS Studio](https://obsproject.com/)
 
 [YouTube DL](https://youtube-dl.org/)
 
@@ -259,24 +321,6 @@
 
 - A complete, cross-platform solution to record, convert and stream audio and video.
 
-[ImageMagick](https://imagemagick.org/)
-
-- https://github.com/ImageMagick/ImageMagick
-- Create edit and compose images
-
-### Concepts
-
-[Set Theory](https://en.wikipedia.org/wiki/Set_theory)
-
-- Useful for description
-
-### Code Puzzles
-
-[Advent Of Code](https://adventofcode.com/)
-
-[Project Euler](https://projecteuler.net/)
-
-[USACO](https://train.usaco.org/)
 
 ### Data
 
@@ -301,7 +345,6 @@
 [sexplanations](https://www.youtube.com/user/sexplanations/videos)
 
 [Hair Types](https://en.wikipedia.org/wiki/Hair)
-
 
 ### Law
 
@@ -368,7 +411,3 @@ Brooks Jr, Frederick P. The mythical man-month: essays on software engineering. 
 
 [Adjective Word Order](https://grammar.cl/english/adjectives-word-order.htm)
 
-
-## Software
-
-[Cirsim Circuit Simulator](https://www.npmjs.com/package/cirsim)

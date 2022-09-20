@@ -37,3 +37,12 @@ Before running
 > conda activate ldm
 
 > python scripts/txt2img.py --prompt "a photograph of an astronaut riding a horse" --plms
+
+> python scripts/txt2img.py --plms --n_samples 1 --skip_grid --prompt "hello world"
+
+## Inputs from File
+
+## Script To Generate Multiple Style
+
+## Saving Prompts in File
+

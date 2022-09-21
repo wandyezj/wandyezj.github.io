@@ -6,7 +6,7 @@ order: 1
 ---
 
 <ul style="list-style: none;">
-{% assign tags = site.tags %}
+{% assign tags = site.tags | sort %}
 {% for tag in tags %}
     {% assign tag_name = tag[0] | escape %}
     {% assign tag_posts = tag[1] %}

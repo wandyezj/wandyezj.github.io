@@ -60,14 +60,20 @@ Check Ubuntu version
 
 Packages have dependencies on multiple compilers:
 
+https://jekyllrb.com/docs/installation/
+
 > sudo apt-get install gcc -y
+
 > sudo apt install g++ -y
+
 > sudo apt-get update --fix-missing
+
 > sudo apt install make
 
 Once those compilers are installed:
 
 > sudo apt-get install ruby-full
+
 > sudo gem install jekyll bundler
 
 With the following installed

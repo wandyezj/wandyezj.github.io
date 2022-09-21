@@ -52,11 +52,17 @@ You can find the source code for Jekyll at GitHub:
 
 ## Local Testing
 
-on windows Using WSL2 with ubuntu 20
-
 Check Ubuntu version
 
 > lsb_release -a
+
+on windows 
+
+Using WSL2 with ubuntu 20 follow [setup](#setup).
+
+[Using WSL2 with Ubuntu 22](#notes-for-ubuntu-22)
+
+### Setup
 
 Packages have dependencies on multiple compilers:
 
@@ -76,10 +82,48 @@ Once those compilers are installed:
 
 > sudo gem install jekyll bundler
 
-With the following installed
+### Launch The Server
+
+With the following installed, launch the server
 
 > cd docs
 
 > bundle install
 
 > bundle exec jekyll serve
+
+### Notes for Ubuntu 22
+
+Before doing the 
+
+Ubuntu 22 comes with ruby 3 which is not compatible with the github-pages. Use ruby 2 with rvm.
+
+Install RVM
+
+https://rvm.io/rvm/install
+
+> sudo apt install gnupg2
+
+> gpg --keyserver hkp://pool.sks-keyservers.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+
+> \curl -sSL https://get.rvm.io | bash -s stable
+
+Install older ruby version
+
+> rvm pkg install openssl
+
+> rvm install 2.7 --with-openssl-dir=$HOME/.rvm/usr
+
+Check Installed Ruby Versions
+
+> rvm list known
+
+Use Installed ruby versions
+
+> rvm use ruby-2.7.6
+
+Check ruby version
+
+> ruby --version
+
+Follow [setup steps](#setup)

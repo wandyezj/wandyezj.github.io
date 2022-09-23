@@ -50,6 +50,10 @@ You can find the source code for Jekyll at GitHub:
 
 [jekyll-organization]: https://github.com/jekyll
 
+## GitHub Setups
+
+[GitHub Software Installed on docs runner](https://github.com/actions/runner-images/blob/ubuntu20/20220905.1/images/linux/Ubuntu2004-Readme.md)
+
 ## Local Testing
 
 Check Ubuntu version

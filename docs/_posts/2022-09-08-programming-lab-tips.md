@@ -18,4 +18,14 @@
 
 - Do Not use the term `Whole Number`
     - [Whole Number](https://en.wikipedia.org/wiki/Whole_number)is ambiguous.
-    - Instead use the term Natural number or Integer depending on which you mean.
+    - Instead use the term `Natural Number` or `Integer` depending on which you mean.
+
+- Teach about [formatting string literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) so students don't was time doing a bunch of plusses.
+
+- Teach a input redirection from a text file so students don't have to continuously type in things to test their program. This also gives them test cases to check against.
+    > python main.py < test.txt
+
+- Input validation, go over different types.
+    - number ranges
+    - static list
+    - strings determining it's part of speech and spelling is hard. Use API.

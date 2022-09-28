@@ -40,7 +40,8 @@ Second, the API shape is defined: interfaces, classes, enums, methods.
 
 Shape should:
 
-- make intuitive sense to many people without extensive background or documentation
+- make intuitive sense to many people without extensive background or documentation.
+- facilitate how people will use the API to accomplish the scenario.
 
 ### Documentation
 

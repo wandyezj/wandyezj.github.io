@@ -12,7 +12,7 @@ What is important to you?
 
 What change do you want to be in the world?
 
-Everyone choices each day determines the flow of cultural current of human history.
+everyone's choices each day determines the flow of cultural current of human history.
 
 How will your choices influence others?
 

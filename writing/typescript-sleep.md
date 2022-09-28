@@ -2,7 +2,7 @@
 
 ```typescript
 /**
- * delay number of millisconds before promise is resolved
+ * delay number of milliseconds before promise is resolved.
  */
 async function sleep(milliseconds: number): Promise<void>  {
     return new Promise<void>((resolve) => {

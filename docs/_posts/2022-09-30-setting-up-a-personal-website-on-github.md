@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting up a personal website on GitHub"
-date: 2022-09-30 12:00:00 -0700
+date: 2022-09-30 00:00:00 -0700
 tags: software github tutorial
 ---
 

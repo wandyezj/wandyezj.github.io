@@ -282,6 +282,8 @@ Other
 
 [USA Computing Olympiad](http://www.usaco.org/)
 
+[Detective Kusto](https://detective.kusto.io/)
+
 ### Information Technology
 
 [CompTIA](https://en.wikipedia.org/wiki/CompTIA)

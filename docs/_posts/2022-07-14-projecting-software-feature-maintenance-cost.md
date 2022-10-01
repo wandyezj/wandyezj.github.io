@@ -16,7 +16,7 @@ Understanding the maintenance cost is important for determining the lifecycle co
 
 Change.
 
-## What cause the need for change?
+## What causes the need for change?
 
 - Dependencies
 - Security Vulnerabilities
@@ -28,7 +28,6 @@ Graph of software dependencies
 
 upstream components -> component -> downstream components
 
-
 Change
 
 - Dependencies by the component on upstream software that is subject to change.
@@ -37,6 +36,17 @@ Change
 - Bugs discovered through usage.
 - Request for new features
 - change of requirements
+
+### Security Vulnerabilities
+
+Modern software systems are linked to many physical systems. Actors are always trying to exploit software to have ti work in their favor. As new threats are discovered software must be updated to patch these exploits.
+
+### Changing Requirements
+
+Software is used by people in the world. People needs change as the world changes. 
+
+When people use the software they often begin to better understand their own requirements and want to change the software to fit those new requirements.
+
 
 ## What factors increase the cost of change?
 

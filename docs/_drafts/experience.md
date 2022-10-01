@@ -33,7 +33,7 @@ the end to end experience
 Innovation is possible throughout the entire product lifecycle to devise a better experience.
 
 
-What can be doen to train people to improve each step of the experience and to scale that experience across everyone.
+What can be done to train people to improve each step of the experience and to scale that experience across everyone?
 
 
 

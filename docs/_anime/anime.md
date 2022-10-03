@@ -45,6 +45,8 @@ Ookami to Koushinryou
 
 Elfen Lied
 
+[Jin-Roh: The Wolf Brigade](https://en.wikipedia.org/wiki/Jin-Roh:_The_Wolf_Brigade)
+
 ## Ok
 
 Planetes

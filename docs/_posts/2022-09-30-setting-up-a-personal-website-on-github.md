@@ -11,15 +11,20 @@ You can do this entire tutorial from your browser!
 ## Steps
 
 1. Register for a GitHub account.
+    - You will need an email account, I recommend a gmail account with the same name as your Github account alias.
     - pick a name that you want to use as your alias forever.
     - you will by typing this alias a lot!
     - I recommend an alias that
         - is made of only lowercase a-z characters
         - is less than 10 characters
-1. Create a Logo for your alias
+1. (optional) Create a Logo for your alias
     - You can change this whenever but it acts as your symbol
     - (I've never changed mine)
-1. Create a repository called `ALIAS.github.io` where `ALIAS` is your github alias.
+1. Create a repository with `ALIAS.github.io` where `ALIAS` is your github alias.
+    - Click `Create repository`
+    - set the repository name to `ALIAS.github.io` where `ALIAS` is your github alias.
+    - Enter a description of `my website`
+    - Check `Add a README file`
 1. There are two main options for your website
     - Website using HTML
     - Blog using Jekyll

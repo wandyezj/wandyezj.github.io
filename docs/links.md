@@ -392,6 +392,8 @@ Brooks Jr, Frederick P. The mythical man-month: essays on software engineering. 
 
 [W. Edwards Deming](https://en.wikipedia.org/wiki/W._Edwards_Deming)
 
+[The facts depend on where you are coming from](https://raw.github.com/wandyezj/reference/master/the-facts-depend-on-where-you-are-coming-from.pdf)
+
 ## Opportunities
 
 [Scouting](https://www.scouting.org/)

@@ -6,3 +6,4 @@ Go around to each person and get their answer to the question.
 
 - What is your favorite color?
 - What do you like to read?
+- Would you rather work for the Empire or Rebels?

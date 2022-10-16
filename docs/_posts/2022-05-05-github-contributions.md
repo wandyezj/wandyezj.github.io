@@ -66,3 +66,7 @@ _note_: `NAME` is the name of the remote branch.
 ### Automatically push to central repository
 
 > git config --local --add push.autoSetupRemote true
+
+### Change Author or last commit
+
+> git commit --amend --author="Author Name <email@address.com>" --no-edit

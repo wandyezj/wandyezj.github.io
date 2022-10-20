@@ -91,3 +91,43 @@ Votes
 | order by Count
 ;
 ```
+
+## Case 3
+
+```kql
+// start
+// 157th Ave / 148th Street
+// between 8:31 and 8:40
+
+// Run queries individually
+// Saving as temporary tables cuts down on overall individual query time and memory resources which are limited
+
+// All VINs from starting ave and street from when robbers left to when police arrive
+//.drop table TrafficBank ifexists;
+// .set TrafficBank <| 
+Traffic | 
+where Ave == 157 and Street == 148 and Timestamp >= datetime(2022-10-16 08:31) and Timestamp <= datetime(2022-10-16 08:40)
+| project VIN | distinct VIN;
+
+
+
+// all final destinations
+//.drop table TrafficFinal ifexists;
+.set TrafficFinal <| Traffic | summarize arg_max(Timestamp, *) by VIN;
+
+
+// Find cars that left the banks final destination where there are more than three
+TrafficBank
+| join kind=inner TrafficFinal on VIN
+| summarize c = count() by Ave, Street
+| where c >= 3
+| order by c
+// strangely there were two locations with three cars so picked the first one.
+
+
+```
+
+Dead ends
+
+- Looking for cars that arrived before the robbery and left during the designated time
+- trying to query everything at once, exceeds memory

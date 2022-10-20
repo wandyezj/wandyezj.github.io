@@ -69,4 +69,23 @@ _note_: `NAME` is the name of the remote branch.
 
 ### Change Author or last commit
 
-> git commit --amend --author="Author Name <email@address.com>" --no-edit
+> git commit --amend --author="Author Name email@address.com" --no-edit
+
+### Check git config
+
+> git config --get user.email
+
+### Set local email
+
+> git config --local user.email email@address.com
+
+### Revert to commit
+
+see previous commit hashes
+> git log
+
+revert to the specific commit specify with `commithash`
+> git reset --HARD commithash
+
+push the change to the remote
+> git push --force

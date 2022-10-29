@@ -90,3 +90,11 @@ Tide Original
 [Cooks Illustrated](https://www.cooksillustrated.com/)
 
 [Consumer Report](https://www.consumerreports.org/)
+
+## Coffee Machines
+
+[La Marzocco](https://www.lamarzoccousa.com/)
+
+[Slayer](https://slayerespresso.com/)
+
+[Victoria Arduino](https://www.victoriaarduino.com/)

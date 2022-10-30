@@ -96,3 +96,11 @@ Tide Original
 Miele
 
 [Air Dresser](https://www.samsung.com/us/air-dresser)
+
+## Coffee Machines
+
+[La Marzocco](https://www.lamarzoccousa.com/)
+
+[Slayer](https://slayerespresso.com/)
+
+[Victoria Arduino](https://www.victoriaarduino.com/)

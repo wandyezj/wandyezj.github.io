@@ -104,3 +104,7 @@ Miele
 [Slayer](https://slayerespresso.com/)
 
 [Victoria Arduino](https://www.victoriaarduino.com/)
+
+[Mavam](https://www.mavamespresso.com/)
+
+[Tone](https://tone-swiss.com/)

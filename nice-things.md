@@ -90,3 +90,9 @@ Tide Original
 [Cooks Illustrated](https://www.cooksillustrated.com/)
 
 [Consumer Report](https://www.consumerreports.org/)
+
+## Appliances
+
+Miele
+
+[Air Dresser](https://www.samsung.com/us/air-dresser)

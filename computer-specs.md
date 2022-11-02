@@ -12,7 +12,7 @@
 
 ## Case Fans
 
-[Noctua 120mm, Anti-Stall Knobs Design,SSO2 Bearing PWM Case Cooling Fan NF-S12A PWM](https://noctua.at/en/nf-s12a-pwm)
+[Noctua 120mm, Anti-Stall Knobs Design,SSO2 Bearing PWM Case Cooling Fan NF-S12A PWM](https://noctua.at/en/nf-s12a-pwm) x2
 
 ## Motherboard
 

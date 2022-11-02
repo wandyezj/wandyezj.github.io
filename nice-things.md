@@ -13,21 +13,35 @@
 - quiet
 - easy to use
 
-## Tea
+## Food
+
+[Cape Cod Potato Chips](https://www.capecodchips.com/)
+    - Sea Salt and Vinegar
+
+### Cereal
+
+- Cheerios
+- Special K
+- Cracklin' Oat Bran
+- Weetabix
+- Rice Chex
+
+
+### Tea
 
 [Twinings](https://twiningsusa.com/)
 
 [tealeaves](https://www.tealeaves.com/)
 
-## Biscotti
+### Biscotti
 
 [Dicamillo Bakery](https://www.dicamillobakery.com/)
 
-## Dried Fruit
+### Dried Fruit
 
 [Chukar Cherries](https://www.chukar.com/)
 
-## Chocolates
+### Chocolates
 
 [L. A. Burdick](https://www.burdickchocolate.com/)
 
@@ -39,15 +53,29 @@
 
 [Bar and cocoa](https://barandcocoa.com/)
 
-## Containers
 
-Pyrex
+## Clothes
+
+Fjallraven
+    - Coats
+    - Pants
+
+L.L. Bean
+    - Pants
+
+[Marine Layer](https://www.marinelayer.com/)
+    - T Shirts
+    - Boxers
 
 ## Bags
 
 L.L.Bean
 
 Fjallraven Kanken
+
+## Floss
+
+- COCOFLOSS Coconut-Oil Infused Woven Dental Floss | Mint |
 
 ## Soap
 
@@ -63,23 +91,13 @@ Nexxus
 
 Tide Original
 
-## Cereal
+## Dishwasher Detergent
 
-- Cheerios
-- Special K
-- Cracklin' Oat Bran
-- Weetabix
+Grab Green Automatic Dishwashing Detergent Pods, Tangerine Lemongrass Scent
 
+## Pencil
 
-## Food
-
-[Cape Cod Potato Chips](https://www.capecodchips.com/)
-    - Sea Salt and Vinegar
-
-## Pepper Grinder
-
-[Peugeot pepper mill](https://us.peugeot-saveurs.com/en_us/pepper-mills)
-    - Fidji
+rOtring
 
 ## Magazines
 
@@ -91,6 +109,17 @@ Tide Original
 
 [Consumer Report](https://www.consumerreports.org/)
 
+## Kitchen
+
+### Containers
+
+Pyrex
+
+### Pepper Grinder
+
+[Peugeot pepper mill](https://us.peugeot-saveurs.com/en_us/pepper-mills)
+    - Fidji
+
 ## Appliances
 
 Miele
@@ -99,12 +128,13 @@ Miele
 
 ## Coffee Machines
 
+[Mavam](https://www.mavamespresso.com/)
+    - Fully Automatic and easily serviced
+
 [La Marzocco](https://www.lamarzoccousa.com/)
 
 [Slayer](https://slayerespresso.com/)
 
 [Victoria Arduino](https://www.victoriaarduino.com/)
-
-[Mavam](https://www.mavamespresso.com/)
 
 [Tone](https://tone-swiss.com/)

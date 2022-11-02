@@ -4,6 +4,14 @@
     - cross browser
     - low dependencies
     - https://playwright.dev/docs/intro
+    - can this be added to UI less test?
+    - pipeline do test after dist packaged so it cant be modified
+
+- checklist template repository
+    - allow for md checklists to be created
+    - allow for drop down selection from sample
+    - requires some sort of versioning?
+    - allow load of checklists from different URLs
 
 - load configuration from png
     - requires complex embedding or analyzing png
@@ -65,10 +73,7 @@
 
 
 
-- publish pipeline
-    - build
-    - publish
-    - embed csp hashes
+
 - create site to support page
     - need server and web address
     - need to apply CSP
@@ -171,3 +176,8 @@
 - [x] convert svg to png
     - as simple as drawing to a canvas, simply allow a data url for an image in CSP
     - image.src property is blocked by csp - allow data url bypass
+
+- [x] publish pipeline
+    - build
+    - publish
+    - embed csp hashes

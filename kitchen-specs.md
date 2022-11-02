@@ -2,7 +2,7 @@
 
 ## Cook Pan
 
-Staub Cast Iron 12-inch, Braiser with glass lid in Grenadine 
+Staub Cast Iron 12-inch, Braiser with glass lid in Grenadine
 
 - Cast Iron lasts forever
 - glass lid allows viewing of food as it cooks
@@ -25,6 +25,17 @@ Great for Hummus
 
 - urthware (out of business)
 - single board cutting board
+
+## Teapot
+
+Hario 'ChaCha Kyusu Maru' Teapot Heatproof Glass Teapot 700 mL, Glass
+
+## Baking Paper
+
+King Arthur, Pre-Cut Baking Parchment Paper, Heavy Duty, Professional Grade, Nonstick,
+
+
+If you care large baking cups
 
 ## Other
 

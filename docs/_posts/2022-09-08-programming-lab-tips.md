@@ -46,3 +46,13 @@ A collection of tips for writing programming labs.
     - strings determining it's part of speech and spelling is hard. Use API.
 
 - If referencing something else provide a link, don't merely say 'this is a concept covered somewhere else'. Give a specific link to that somewhere else.
+
+- Have repository of good solutions to common problems (these are buildings blocks for programs)
+    - list of numbers 0 to n -1 `list(range(n))`
+    - list of characters a-z plus other groups of characters
+
+- After the programming lab present a potential solution
+    - show the approach to the solution (How did you get the answer?)
+    - show any tips and tricks
+    - explain the final piece of code 
+    - The potential solution is 

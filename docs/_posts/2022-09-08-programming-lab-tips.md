@@ -29,15 +29,15 @@ A collection of tips for writing programming labs.
 - Follow up any exercises that ask students for predictions by providing better rules for future predictions.
 
 - If using Markdown avoid adding HTML tags to the markdown as not all markdown readers render it properly.
-    - Instead of color apply bold and italic to draw attention.
+    - Instead of color, apply bold and italic to draw attention.
 
 - Do __NOT__ use the term `Whole Number`
     - The term [Whole Number](https://en.wikipedia.org/wiki/Whole_number) is ambiguous.
     - Instead use the term `Natural Number` or `Integer` depending on which you mean.
 
-- Teach about [formatting string literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) so students don't was time doing a bunch of plusses.
+- Teach [formatting string literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) so students don't was time doing a bunch of plusses.
 
-- Teach a input redirection from a text file so students don't have to continuously type in things to test their program. This also gives them test cases to check against.
+- Teach input redirection from a text file so students don't have to continuously type in things to test their program. This also gives them test cases to check against.
     > python main.py < test.txt
 
 - Input validation, go over different types.
@@ -54,5 +54,12 @@ A collection of tips for writing programming labs.
 - After the programming lab present a potential solution
     - show the approach to the solution (How did you get the answer?)
     - show any tips and tricks
-    - explain the final piece of code 
-    - The potential solution is 
+    - explain the final piece of code
+    - The potential solution is
+
+- Teach input validation
+    - Is a Natural number `isnumeric`
+    - Is an integer (careful, negative numbers, are tricky)
+        - PEP: Python should provide an isinteger method for strings.
+    - Is a float
+        - PEP: Python should provide an isfloat method for strings.

@@ -63,3 +63,8 @@ A collection of tips for writing programming labs.
         - PEP: Python should provide an isinteger method for strings.
     - Is a float
         - PEP: Python should provide an isfloat method for strings.
+
+- Debugging
+    - Testing individual values and small snips in the console.
+    - Use of `type` to check a variables type.
+    - Explanation that types have different domains.

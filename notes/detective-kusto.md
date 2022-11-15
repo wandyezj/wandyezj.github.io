@@ -256,3 +256,239 @@ Learning
 - @"" for literal strings without escapes
 - Geo [H3](https://www.uber.com/blog/h3/)
 - Can create helper functions
+
+
+
+## Case 5
+
+```kql
+// Parse chat logs to make it easier to work with
+.drop table ChatLogsParsed ifexists;
+.set ChatLogsParsed <| ChatLogs
+| parse kind=regex Message with * "User '" user "' " action " '" data "'"
+```
+
+```kql
+// Brute force get all IP addresses and check every single one (very inefficient)
+
+ChatLogsParsed
+|  where action =="logged in from"
+| project-keep data
+| distinct data
+```
+
+Simply search through all the IPs to see which ones do not return 404.
+
+There are ~200000 IPs so export all of them and use a program to scan through them. This ensure that nothing is missed.
+
+```js
+function getUrl(ip) {
+    return `https://sneakinto.z13.web.core.windows.net/${ip}`;
+}
+
+async function checkUrl(ip) {
+    const url = getUrl(ip)
+    const response = await fetch(url);
+    
+    const success = response.status !== 404;
+    return {
+        success,
+        ip,
+        url,
+        response,
+    };
+}
+
+async function querySingleBatch(l, start, end) {
+    const promises = []
+    for (let i = start; i < end; i++) {
+        const ip = l[i];
+        const request = checkUrl(ip);
+        promises.push(request);
+    }
+
+    const results = await Promise.all(promises);
+    return results;
+}
+
+async function queryBatch(l) {
+    const start = 0;
+    const batchSize = 100;
+
+    const successes = [];
+    for (let i = start; i < l.length; i+= batchSize) {
+        const start = i;
+        const end = i + batchSize
+        const results = await querySingleBatch(l, start, end);
+        const ok = results.filter(x => x.success);
+        successes.push(...ok);
+        const tested = results.map(x => x.ip).join(", ");
+        console.log(`tested (${start} -> ${end -1}) [${tested}]`);
+        if (successes.length > 0) {
+            console.log(`SUCCESS [${successes.map(x => x.ip).join(" ")}]`);
+        }
+    }
+}
+
+async function main() {
+    const fs = require( 'fs')
+
+    // export.csv contains the export for kusto for the IPs
+    const data = fs.readFileSync("export.csv", {encoding:"utf8"}).toString().replace(/\r/,'')
+
+    const l = data.split("\n").map(x => x.replace(/"/g, '').replace(/\r/g,''));
+
+    queryBatch(l);
+} 
+
+main();
+
+```
+
+
+- [A](https://sneakinto.z13.web.core.windows.net/119.10.30.154)
+    - [message-project-x.png](https://sneakinto.z13.web.core.windows.net/119.10.30.154/message-project-x.png)
+- [B](https://sneakinto.z13.web.core.windows.net/146.49.19.37)
+    - [image1.jpg](https://sneakinto.z13.web.core.windows.net/146.49.19.37/image1.jpg)
+        - Date Taken: 2020-07-10 14:13
+    - [image2.jpg](https://sneakinto.z13.web.core.windows.net/146.49.19.37/image2.jpg)
+        - Date Taken: 2018-06-01 02:25
+    - [image3.jpg](https://sneakinto.z13.web.core.windows.net/146.49.19.37/image3.jpg)
+        - Matches the x.pdf circled image
+        - Date Taken: 2020-07-09 13:58
+    - [image4.jpg](https://sneakinto.z13.web.core.windows.net/146.49.19.37/image4.jpg)
+        - Date Taken: 2020-07-13 08:57
+- [C](https://sneakinto.z13.web.core.windows.net/194.243.69.176)
+    - [utils.txt](https://sneakinto.z13.web.core.windows.net/194.243.69.176/utils.txt)
+- [D](https://sneakinto.z13.web.core.windows.net/236.48.237.42)
+    - [project-x.pdf](https://sneakinto.z13.web.core.windows.net/236.48.237.42/project-x.pdf)
+        - circled image matches image 3
+
+
+Project X message
+
+```text
+
+Did you see that?! Kastor the Elephant was chosen as a city mascot!
+This is nonsense! Every tie I think of it, another Poppy the goldfish dies.
+We will strike back, and when we do - they will feel the anger of the escaping elephant!
+
+In past, we've talked much about the wealth and about importance of thinking out of the box, and I think I just got an inspiring idea by watching popular science course about Dig Data. You should watch it too...
+
+So, we have our target: the Project X is ON!
+
+1) Get the picture of the Project X's target and see the date it was taken (Date1)
+2) There was another historical nonsense event happened at year YYYY, and it reminds me of today (I will send a link later).
+    We will use that event as a reference point. The day of our action will be:
+    > Date1 + ((YYYY % 1000) days))
+
+We're in the game!
+
+-- JG, the Mayor
+
+```
+
+
+```kql
+// Handy utils
+
+// 1) Utility to discover secondary messages.
+// Usage: ReadMessage(Message, Key)
+let ReadMessage = (Message:string, Key:string) 
+{
+    let m = Message; let K = Key; let l = toscalar(print s = split(split(K,':')[1], ',') | mv-expand s | summarize make_list(tolong(s)));
+    let ma = (i1:long, i2:long) { make_string(repeat(tolong(l[i1])-tolong(l[i2]), 1))}; 
+    let ms = (d:dynamic, s:long, e:long) { make_string(array_slice(d, s, e)) };   
+    let mc = m has '...';
+    print s=split(split(replace_regex(m, @'[\s\?]+', ' '),substring(K,9,3))[1], ' ')
+    | mv-expand with_itemindex=r s to typeof(string) | serialize 
+    | where r in (l)
+    | extend s = iif(r-1 == prev(r), replace_string(strcat(prev(s), s),'o','ou'), s)
+    | where (r+1 != next(r))
+    | summarize s=strcat_array(make_list(s), iff(mc, '+%2B', ' '))
+    | extend k = series_subtract(series_add(to_utf8(K), l), repeat(23, 10))
+    | project result=iif(mc, strcat(ms(k,0,3), ma(8,2), ms(k,4,6), ms(l,8,8), ms(k,7,7), ma(8,0), s), s)
+};
+ReadMessage(
+```
+Hi there! How are you?
+
+PS: 
+This is a nice utility that reveals what hidden messages the text may have.
+We may read the message and think: is there anything beyond words?
+Can we find it without the utility, or it will become too much of a headache?
+```,
+h@'dhkl4fva!that:2,9,15,22,31'
+)
+
+
+// 2) Get GEO location from images:
+// Use https://tool.geoimgr.com/
+```
+
+
+Using the message combined with the previous gives the following URL:
+
+```kql
+ReadMessage(
+```
+Hello. It's going to happen soon: a big heist. You can stop it if you are quick enough. Find the exact place and time it’s going to happen.
+Do it right, and you will be rewarded, do it wrong, and you will miss your chance.
+
+Here are some pieces of the information:
+The heist team has 4 members. They are very careful, hide well with minimal interaction with the external world. Yet, they use public chat-server for their syncs. The data below was captured from the chat-server: it doesn't include messages, but still it may be useful. See what you can do to find the IPs the gang uses to communicate.
+Once you have their IPs, use my small utility to sneak into their machine’s and find more hints:
+https://sneakinto.z13.web.core.windows.net/<ip>
+
+Cheers
+El Puente
+
+PS:
+Feeling uncomfortable and wondering about an elephant in the room: why would I help you?
+Nothing escapes you, ha?
+Let’s put it this way: we live in a circus full of competition. I can use some of your help, and nothing breaks if you use mine... You see, everything is about symbiosis.
+Anyway, what do you have to lose? Look on an illustrated past, fast forward N days and realize the future is here.
+```,
+h@'wytaPUJM!PS:2,7,17,29,42,49,58,59,63')
+```
+
+
+
+[el puente url](https://bing.com?q=uncomfortable+%2Belephant+%2Bescapes+%2Bcircus+%2Bbreaks+%2Beverything+%2Btoulouse+%2Billustrated)
+
+[image search](https://images-cdn.bridgemanimages.com/api/1.0/image/600wm.XXX.20838950.7055475/5980623.jpg)
+
+The image was illustrated: November 14, 1891
+
+
+Potential options based on images
+
+- A 2020-07-10 + 891 = 2022-12-18
+    - Date: 2022-12-18 (Sunday)
+    - Longitude:
+    - Latitude:
+    - No GeoTags
+- B 2018-06-01 + 891 = 2020-11-08
+    - Date: 2020-11-08 (In the past)
+    - Longitude:
+    - Latitude:
+    - No GeoTags
+- C 2020-07-09 + 891 = 2022-12-17
+    - Date: 2022-12-17 (Saturday)
+    - Longitude: -3.38010413333333
+    - Latitude: 58.9688665166667
+- D 2020-07-13 + 891 = 2022-12-21
+    - Date: 2022-12-21 (Wednesday)
+    - Longitude:
+    - Latitude:
+    - No Geo Tags
+
+
+Have to make sure have the right date and location and needs to come back on that date to check.
+
+- Date: 2022-12-17 13:58 (Saturday)
+- Longitude: -3.38010413333333
+- Latitude: 58.9688665166667
+
+
+Thanks for the alert! We will start watching the location. Come back here on the date of the heist, resubmit your answer and see if you were right.

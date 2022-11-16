@@ -68,3 +68,17 @@ A collection of tips for writing programming labs.
     - Testing individual values and small snips in the console.
     - Use of `type` to check a variables type.
     - Explanation that types have different domains.
+
+- Types
+    - Generally it's best to avoid comparing different types.
+    - general example is string and integer
+
+- Careful with or
+    - `or` should only be used in boolean expressions.
+    - Python has a confusing property where it returns the value of the first thing if it is truthy. `'a' or 'b'` returns `'a'`
+
+- Tuples and Lists
+    - difference between tuples and lists
+
+- `if` `else`
+    - Use if else instead of inverting the expression, that way you can guarantee that only one path is executed. Otherwise risk a bug in either statement potentially executing both.

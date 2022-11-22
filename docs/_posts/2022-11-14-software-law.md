@@ -5,6 +5,8 @@ date: 2022-11-14 00:00:00 -0700
 tags: software law
 ---
 
+A collection of legal [cases](#cases) and [theory](#theory) related to software.
+
 
 ## Cases
 

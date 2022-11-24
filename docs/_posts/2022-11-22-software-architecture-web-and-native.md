@@ -5,13 +5,13 @@ date: 2022-11-22 00:00:00 -0700
 tags: software architecture
 ---
 
-What are the advantages and drawbacks of a website that runs in the browser verses a native application?
+What are the advantages and drawbacks of a web application verses a native application?
 
 ## Definitions
 
-Native Application - iOS Application, Android Application, Windows Application, Mac Application etc..
-
 Web Applications - a website accessed through a browser Native Application.
+
+Native Application - iOS Application, Android Application, Windows Application, Mac Application etc..
 
 
 ## Launch

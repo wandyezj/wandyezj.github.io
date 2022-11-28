@@ -106,6 +106,12 @@ Features
     - encode hash to make it harder for people to tamper with to check that image is actual representation, could also compare image to value but then this changes if svg encoding changes between versions.
 
 
+Versioning Compatibility
+
+- can be done by versioning, point to specific HTML page
+- or keep everything backwards compatible and have shim layers that translate to new logic based on an embedded version number
+
+
 Principles:
     - hostable anywhere - self contained HTML page
     - sharable and private

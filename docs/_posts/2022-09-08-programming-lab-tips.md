@@ -10,6 +10,10 @@ A collection of tips for writing programming labs.
 
 ## Tips
 
+- Have clear done criteria
+    - Explain the goal of the lab and the conditions under which a student should move on.
+    - Lab tasks written in an open ended way can lead students to spend time on them beyond what is useful for their learning. Students should know when to get help and when to move on.
+
 - Write Programming labs in markdown.
     - markdown provides support for programming text highlighting and allows copy and paste from the lab.
 

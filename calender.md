@@ -1,7 +1,5 @@
 # Calender
 
-
-
 April - Art Show
 
 April - [Skagit Valley Tulip Festival](https://tulipfestival.org/)
@@ -25,6 +23,8 @@ October 31st - [Halloween](https://en.wikipedia.org/wiki/Halloween)
 October - Art Show
 
 [Northwest Chocolate Festival](https://www.nwchocolate.com/)
+
+December -  Figgy Pudding Caroling Competition
 
 December - [Sheraton Gingerbread Village](https://gingerbreadvillage.org/)
 

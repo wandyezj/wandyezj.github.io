@@ -86,3 +86,24 @@ A collection of tips for writing programming labs.
 
 - `if` `else`
     - Use if else instead of inverting the expression, that way you can guarantee that only one path is executed. Otherwise risk a bug in either statement potentially executing both.
+
+- Teach consistent variable naming conventions
+    - In Python this would be PEP8 - variables are all lowercase with underscore separating words.
+    - Explain how this makes it easier to type variable names and avoid
+
+- Associates Lists
+    - Associate two lists. Use the index of one value in a list to access the value in another list.
+
+    ```python
+    letters = ["a", "b"]
+    messages = ["a is awesome", "b is best"]
+
+    choice = input("pick a letter")
+
+    # what if you wanted to make sure you don't look up something that doesn't exist?
+    index = letters.index(choice)
+    print(index)
+
+    message = messages[index]
+    print(message)
+    ```

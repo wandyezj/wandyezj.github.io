@@ -139,6 +139,10 @@ Other
 
 [Cirsim Circuit Simulator](https://www.npmjs.com/package/cirsim)
 
+[Shufflecake](https://shufflecake.net/)
+
+- hidden file systems for Linux
+
 ## Security
 
 ### Software Security

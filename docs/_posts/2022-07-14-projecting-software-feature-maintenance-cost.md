@@ -11,6 +11,7 @@ The maintenance of software consistently consumes developer resources.
 
 Understanding the maintenance cost is important for determining the lifecycle cost for a feature.
 
+It is desireable to understand the lifecycle cost of a feature so it can be planned for and used to assess the financial tradeoffs of a feature.
 
 ## What leads to maintenance costs?
 
@@ -39,11 +40,11 @@ Change
 
 ### Security Vulnerabilities
 
-Modern software systems are linked to many physical systems. Actors are always trying to exploit software to have ti work in their favor. As new threats are discovered software must be updated to patch these exploits.
+Modern software systems are linked to many physical systems. Actors are always trying to exploit software to have it work in their favor. As new threats are discovered software must be updated to patch these exploits.
 
 ### Changing Requirements
 
-Software is used by people in the world. People needs change as the world changes. 
+Software is used by people in the world. Peoples needs change as the world changes.
 
 When people use the software they often begin to better understand their own requirements and want to change the software to fit those new requirements.
 

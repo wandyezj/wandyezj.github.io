@@ -1,7 +1,5 @@
 # Calender
 
-
-
 April - Art Show
 
 April - [Skagit Valley Tulip Festival](https://tulipfestival.org/)
@@ -29,6 +27,8 @@ October - Art Show
 December - Zoo Lights at Point Defiance Zoo and Aquarium
 
 December - [Snowflake Lane](https://bellevuecollection.com/SnowflakeLane/)
+
+December -  Figgy Pudding Caroling Competition
 
 December - [Sheraton Gingerbread Village](https://gingerbreadvillage.org/)
 

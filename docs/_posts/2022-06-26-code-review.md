@@ -39,7 +39,7 @@ Avoid large all at once refactors. It's much easier to review small incremental 
 
 ## Who
 
-It is preferable for a single person other than the author to be the primary reviewer that signs off on the review. For complex pieces of code where knowledge is split between people, individual people can review the specific pieces they are knowledgeable about.
+Prefer a single person, other than the author, be the primary reviewer that signs off on the review. For complex pieces of code where knowledge is split between people, individual people can review the specific pieces they are knowledgeable about. _note_: Multiple reviewers adds significant overhead in explaining the change.
 
 Choose suitable reviewers. The best reviewers are those with in depth experience in the specific technologies being used, and with existing expertise in the codebase. One reviewer who goes in depth into the review is preferable to multiple shallow reviewers. It's best to choose reviewers before the change is made and to include the reviewers in design discussions.
 

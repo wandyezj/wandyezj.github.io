@@ -24,6 +24,10 @@ October - Art Show
 
 [Northwest Chocolate Festival](https://www.nwchocolate.com/)
 
+December - Zoo Lights at Point Defiance Zoo and Aquarium
+
+December - [Snowflake Lane](https://bellevuecollection.com/SnowflakeLane/)
+
 December -  Figgy Pudding Caroling Competition
 
 December - [Sheraton Gingerbread Village](https://gingerbreadvillage.org/)

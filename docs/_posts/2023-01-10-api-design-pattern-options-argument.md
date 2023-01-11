@@ -23,26 +23,26 @@ Carefully examine the following samples:
 
 ```typescript
 // options argument
-declare function f(one: string, two: string, 
-    options?:Partial<{ 
+declare function f(one: string, two: string,
+    options?: Partial<{
         switchOne: boolean;
         switchTwo: boolean;
         override: string
-    }>);
+    }>): void;
 
 // Example Usage
 f("one", "two");
-f("one", "two", {switchOne: true});
-f("one", "two", {switchTwo: true});
-f("one", "two", {override: "three"});
-f("one", "two", {switchOne: true, switchTwo: true, override: "three"});
+f("one", "two", { switchOne: true });
+f("one", "two", { switchTwo: true });
+f("one", "two", { override: "three" });
+f("one", "two", { switchOne: true, switchTwo: true, override: "three" });
 ```
 
 ## Example Inline Options
 
 ```typescript
 // Inline options
-declare function f(one: string, two: string, switchOne?: boolean, switchTwo?: boolean, override?: string);
+declare function f(one: string, two: string, switchOne?: boolean, switchTwo?: boolean, override?: string): void;
 
 // Example Usage
 f("one", "two", true);

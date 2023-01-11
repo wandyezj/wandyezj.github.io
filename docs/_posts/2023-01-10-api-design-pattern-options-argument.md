@@ -6,22 +6,22 @@ date: 2023-01-10
 tags: software architecture api design pattern
 ---
 
-The Options Argument Pattern uses the last parameter in a function to bundle together optional parameters into an options object.
+The Options Argument Pattern:
 
-The Options Argument Pattern is best used when a function has independent optional arguments. Independent optional arguments meaning that the arguments can be specified independently.
-
-The Options Argument Pattern allows optional arguments to be specified without having to specify preceding optional arguments.
+- is best used when a function has independent optional arguments
+- uses the last parameter in a function to bundle together optional parameters into an options object
+- allows optional arguments to be specified without having to specify preceding optional arguments
 
 An alternative to the Options Argument is Inline Options.
 
-The following samples demonstrate the two patterns using a sample function.
+The following samples demonstrate the two patterns using a sample function:
 
 - [Example Options Argument](#example-options-argument)
 - [Example Inline Options](#example-inline-options)
 
 Each sample uses a function `f` with two required arguments {`one`, `two`} and three optional arguments {`switchOne`, `switchTwo`, `override`} to demonstrate both function definitions.
 
-Example calls to function `f` are then provided for the follow scenarios:
+Example calls to function `f` are then provided for the following scenarios:
 
 - no optional arguments
 - only one optional argument `switchOne`
@@ -56,8 +56,8 @@ declare function f(one: string, two: string, switchOne?: boolean, switchTwo?: bo
 
 // Example Usage
 f("one", "two", true);
-f("one", "two", undefined, true);
-f("one", "two", undefined, undefined, "three");
+f("one", "two", undefined, true); // switchOne must be specified (using undefined to use the default value) before switchTwo can be specified.
+f("one", "two", undefined, undefined, "three"); // both switchOne and switchTwo must be specified before override can be specified.
 f("one", "two", true, true, "three");
 ```
 

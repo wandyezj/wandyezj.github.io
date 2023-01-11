@@ -44,10 +44,13 @@ The current standard source control tool is [git](https://en.wikipedia.org/wiki/
 
 ### Integrated Development Environment
 
-An Integrate Development Environment provides many features to ease development.
+An Integrate Development Environment provides many features to ease development. Picking an IDE to build development around is a good way to ease development.
 
 - IntelliSense
 - Autocomplete
+
+- Visual Studio
+- Visual Studio Code
 
 ### README
 
@@ -57,10 +60,9 @@ This file is important for people to quickly understand the purpose of the repos
 
 ### Build
 
-Process to build the repository. Ideally build is a single command that can be run. Any setup steps to get working in the repository such as tool dependencies should be described.
+Process to build the repository and use it's contents. Ideally, build is a single command that can be run. Any setup steps to get working in the repository such as tool dependencies should be described.
 
 Builds should be reproducible. Meaning that the same build output is generated for the same build input every time.
-
 
 ### Debug
 
@@ -76,7 +78,7 @@ A Continuous Integration pipeline runs quality checks on every Pull Request and 
 
 Pipelines can automate publishing of libraries and application deployment.
 
-Pipelines are key for rep
+Pipelines are key for reproducible builds and enforcing quality checks.
 
 ### Package System
 
@@ -85,7 +87,7 @@ Large projects typically consume pieces of code developed in other repositories.
 - [NPM](https://en.wikipedia.org/wiki/Npm_(software))
 - [NuGet](https://en.wikipedia.org/wiki/NuGet)
 
-The alternative of a package system is to copy and paste code between repositories.
+The alternative of a package system is to copy and paste code between repositories or GitHub submodules.
 
 ### Test
 

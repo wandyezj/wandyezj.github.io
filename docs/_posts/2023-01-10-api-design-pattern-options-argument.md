@@ -14,10 +14,20 @@ The Options Argument Pattern allows optional arguments to be specified without h
 
 An alternative to the Options Argument is Inline Options.
 
-Carefully examine the following samples:
+The following samples demonstrate the two patterns using a sample function.
 
 - [Example Options Argument](#example-options-argument)
 - [Example Inline Options](#example-inline-options)
+
+Each sample uses a function `f` with two required arguments {`one`, `two`} and three optional arguments {`switchOne`, `switchTwo`, `override`} to demonstrate both function definitions.
+
+Example calls to function `f` are then provided for the follow scenarios:
+
+- no optional arguments
+- only one optional argument `switchOne`
+- only one optional argument `switchTwo`
+- only one optional argument `override`
+- all three optional arguments { `switchOne`, `switchTwo`, `override`}
 
 ## Example Options Argument
 
@@ -41,7 +51,7 @@ f("one", "two", { switchOne: true, switchTwo: true, override: "three" });
 ## Example Inline Options
 
 ```typescript
-// Inline options
+// inline options
 declare function f(one: string, two: string, switchOne?: boolean, switchTwo?: boolean, override?: string): void;
 
 // Example Usage

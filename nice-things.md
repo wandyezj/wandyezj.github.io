@@ -7,11 +7,20 @@
 - glass, metal, wood, ceramic
     - make sure they they don't contain any heavy metals
 
+
 ### Design
 
 - no sharp edges
 - quiet
 - easy to use
+
+### Usage
+
+- Avoid burning things (Gas Stoves, Gas water heaters, candles). Burning things releases particulates that harm your health.
+
+### Philosophy
+
+It's about the small things that make life nicer and more comfortable.
 
 ## Food
 
@@ -73,9 +82,17 @@ L.L.Bean
 
 Fjallraven Kanken
 
+## Comb
+
+[Kent OT Sawcut](https://kentbrushes.com/collections/handmade-combs)
+
 ## Floss
 
-- COCOFLOSS Coconut-Oil Infused Woven Dental Floss | Mint |
+- [COCOFLOSS Coconut-Oil Infused Woven Dental Floss | Mint |](https://cocofloss.com/)
+
+## Toothpaste
+
+parodontax
 
 ## Soap
 
@@ -97,7 +114,7 @@ Grab Green Automatic Dishwashing Detergent Pods, Tangerine Lemongrass Scent
 
 ## Pencil
 
-rOtring
+[rOtring](https://www.rotring.com/)
 
 ## Magazines
 
@@ -110,6 +127,8 @@ rOtring
 [Consumer Report](https://www.consumerreports.org/)
 
 ## Kitchen
+
+### Pans
 
 ### Containers
 
@@ -125,6 +144,10 @@ Pyrex
 Miele
 
 [Air Dresser](https://www.samsung.com/us/air-dresser)
+
+### Stoves
+
+Electric Induction Stove.
 
 ## Coffee Machines
 

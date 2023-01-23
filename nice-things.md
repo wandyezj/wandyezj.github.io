@@ -7,16 +7,20 @@
 - glass, metal, wood, ceramic
     - make sure they they don't contain any heavy metals
 
-
 ### Design
 
 - no sharp edges
 - quiet
 - easy to use
+- built to last
 
 ### Usage
 
 - Avoid burning things (Gas Stoves, Gas water heaters, candles). Burning things releases particulates that harm your health.
+
+### Manufacture
+
+It matters how things are produced. Sustainable and ethically produced products are preferable.
 
 ### Philosophy
 
@@ -38,9 +42,18 @@ It's about the small things that make life nicer and more comfortable.
 
 ### Tea
 
+Loose leaf is much tastier.
+
 [Twinings](https://twiningsusa.com/)
+ - Lady Grey
 
 [tealeaves](https://www.tealeaves.com/)
+- Vanilla Earl Grey
+- Eros
+- Silver Leaf
+
+### Teapot
+
 
 ### Biscotti
 
@@ -78,7 +91,7 @@ L.L. Bean
 
 ## Bags
 
-L.L.Bean
+L.L.Bean Boat and Tote
 
 Fjallraven Kanken
 
@@ -114,7 +127,7 @@ Grab Green Automatic Dishwashing Detergent Pods, Tangerine Lemongrass Scent
 
 ## Pencil
 
-[rOtring](https://www.rotring.com/)
+[rOtring](https://www.rotring.com/) 800 0.5
 
 ## Magazines
 

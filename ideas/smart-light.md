@@ -152,3 +152,10 @@ https://learn.adafruit.com/circuitpython-nrf52840/bluetooth-basics
 - C# Xamarin Application
     - looks like no abstracted support for bluetooth or WiFi would need to write custom code
     - can write custom code, and would allow cross platform development
+
+## Research
+
+[BlueFi](https://dl.acm.org/doi/epdf/10.1145/3452296.3472920) [alt](https://rtcl.eecs.umich.edu/rtclweb/assets/publications/2021/sigcomm21-cho.pdf)
+    - Bluetooth over WiFi
+    - can use to reduce hardware cost for the IoT, since bluetooth interaction should be rare. 
+    - When should it switch between listening to bluetooth verses listenign to WiFi?

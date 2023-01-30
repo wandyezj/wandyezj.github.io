@@ -45,9 +45,11 @@ It's about the small things that make life nicer and more comfortable.
 Loose leaf is much tastier.
 
 [Twinings](https://twiningsusa.com/)
- - Lady Grey
+
+- Lady Grey
 
 [tealeaves](https://www.tealeaves.com/)
+
 - Vanilla Earl Grey
 - Eros
 - Silver Leaf
@@ -133,15 +135,22 @@ Grab Green Automatic Dishwashing Detergent Pods, Tangerine Lemongrass Scent
 
 [Popular Mechanics](https://www.popularmechanics.com/)
 
+[The Economist](https://www.economist.com/)
+
 [The Atlantic](https://www.theatlantic.com/)
 
 [Cooks Illustrated](https://www.cooksillustrated.com/)
 
 [Consumer Report](https://www.consumerreports.org/)
 
+
 ## Kitchen
 
 ### Pans
+
+Staub 
+
+- Cast Iron Brasier with glass lid.
 
 ### Containers
 

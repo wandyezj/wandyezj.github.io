@@ -29,3 +29,28 @@ Browse the SQLite database with
 [SQLiteDatabaseBrowser](https://sqlitebrowser.org/)
 
 Mozilla and Chromium browsers sqlite databases have different data structures.
+
+- Site History
+- Bookmarks
+
+### Program Sampling
+
+Periodically check what programs are running.
+
+> tasklist
+
+### Installed Programs
+
+[Check what programs are installed](https://stackoverflow.com/questions/908850/get-installed-applications-in-a-system)
+
+Look at the windows registry
+
+> "SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall"
+
+Specifically interested in any steam or xbox games or the like.
+
+### Web Traffic
+
+https://www.telerik.com/blogs/understanding-telerik-fiddler-as-a-proxy
+
+https://www.telerik.com/fiddler/usecases/https-traffic-recording

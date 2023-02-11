@@ -56,6 +56,10 @@ Blocks have:
 
 Blocks might want to express a dependency on a previous block.
 
+In general from a code standpoint parameters can express all type dependencies.
+
+Dependencies between blocks are thus only related to global state accessed through APIs. Any API accessible global state requires a separate tracking mechanism. For any complex program this can become quite difficult.
+
 
 ## Block Code
 

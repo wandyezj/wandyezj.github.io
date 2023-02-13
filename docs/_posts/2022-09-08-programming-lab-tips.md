@@ -107,3 +107,28 @@ A collection of tips for writing programming labs.
     message = messages[index]
     print(message)
     ```
+
+- datetime
+    - dates, time, and calenders are a complex concept generally we use libraries for these.
+
+    ```python
+
+    import datetime
+
+    # get the current time
+    x = datetime.datetime.now()
+    print(x)
+
+    # set the current date / time
+    x = datetime.datetime(2000, 1, 1)
+    print(x)
+
+    # add time to the date
+    n = x + datetime.timedelta(days=10)
+    print(n)
+
+    # break out pieces of the date
+    print(n.year)
+    print(n.month)
+    print(n.day)
+    ```

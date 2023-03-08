@@ -52,20 +52,47 @@ When people use the software they often begin to better understand their own req
 ## What factors increase the cost of change?
 
 - lack of expertise
-    - people have to implement software people with less expertise take significantly more time.
+    - people have to implement software - people with less expertise take significantly more time.
     - Difficulty learning how to maintain a piece of softwares increases the costs.
+    - Expertise includes knowledge of the specific software stack and tools used to implement the software, as well as knowledge about how the overall system is composed.
 - lack of documentation
 - lack of tests
 - lack of well specified interfaces
 - complex code
 
-Why is projecting software feature maintenance cost difficult?
+## Why is projecting software feature maintenance cost difficult?
 
 Difficulty in predicting:
 
 - usage
 - changes in dependencies
-- Difficulty in assessing how it will change.
-
+- future needs
 
 Leads to total costs being hard to predict.
+
+### Usage
+
+Increasing usage can increase:
+
+- the number of edge case behaviors encountered.
+- the number of changes people want to adapt the software to their needs.
+
+### Changes in Dependencies
+
+It can be hard to predict the long term future of dependencies.
+
+- Will the dependency by maintained long term?
+- How vulnerable is the dependency to security exploits?
+- Are there alternative dependencies that can be used instead?
+- What is the cost to swap out the dependency for an alternative one?
+
+### Future Needs
+
+What are the potential future needs of people using the software?
+
+What is the cost to adapt the software to these future needs?
+
+
+## What can we do to reduce the long term maintenance cost?
+
+

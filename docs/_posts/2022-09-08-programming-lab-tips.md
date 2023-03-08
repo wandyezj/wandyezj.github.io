@@ -132,3 +132,8 @@ A collection of tips for writing programming labs.
     print(n.month)
     print(n.day)
     ```
+
+- Have students go over their labs with each other when done.
+    - Explaining code to peers and answering peer questions reinforces learning and builds explanation skills.
+    - Seeing how other students approach can help students gain insights on their own practice.
+    - Remember, there are many approaches, explain things in terms of tradeoffs.

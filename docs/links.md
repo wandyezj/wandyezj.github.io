@@ -272,6 +272,14 @@ Other
 
 - HTML canvas tutorial
 
+### Utilities
+
+[AutoHotkey](https://github.com/AutoHotkey/AutoHotkey)
+    - Hotkeys for windows
+
+[HxD](https://mh-nexus.de/en/hxd/)
+    - Hex Editor
+
 ### Concepts
 
 [Set Theory](https://en.wikipedia.org/wiki/Set_theory)

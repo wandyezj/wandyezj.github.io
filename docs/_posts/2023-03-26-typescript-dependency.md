@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TypeScript Dependency"
-date: 2022-03-26
+date: 2023-03-26
  00:00:00 -0700
 tags: software architecture typescript
 ---

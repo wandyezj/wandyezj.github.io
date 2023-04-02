@@ -167,6 +167,10 @@ Miele
 
 [Air Dresser](https://www.samsung.com/us/air-dresser)
 
+## Mixer
+
+[Ankarsrum Stainless Steel Original 7 Liter Stand Mixer](https://www.ankarsrum.com/us/)
+
 ### Stoves
 
 Electric Induction Stove.

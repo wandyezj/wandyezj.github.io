@@ -1,5 +1,38 @@
 # Coffee Shop Setup
 
+## Outline
+
+- [Philosophy](#philosophy)
+- [Drinks](#drinks)
+- [Food](#food)
+- [Activities](#activities)
+- [Services](#services)
+- [Interior](#interior)
+- [Management](#management)
+- [Finance](#finance)
+
+
+## Philosophy
+
+A place to relax, ponder, and gather.
+
+## Drinks
+
+
+- Tea
+    - Green Tea
+- Matcha
+- Hot Chocolate
+- Espresso
+- Drip Coffee
+
+- Additives
+    - Honey
+    - Ginger
+    - Vanilla
+
+## Draft
+
 - Payment system - Square
 - Location
 
@@ -17,15 +50,6 @@ Supply Chain
 
 - Good teas from different providers
 
-## Drinks
-
-- Tea
-- Green Tea
-- Chocolate
-
-- Additives
-    - Honey
-    - Ginger
 
 ## Activities
 
@@ -62,15 +86,18 @@ Multi use space
     - Printing
     - Craft tools
 - Apartments on top to ensure steady income source and customer base?
+- Calligraphy signs with cute sayings.
 
 Possible to sell items by using them as decoration if have shallow shelves.
 
-## Food Items
+## Food
 
 - Granola
 - Milk
 - Salad
 - Eggs
+- Baked Goods
+    - Rosemary Sea Salt rolls
 
 ## Design
 
@@ -151,7 +178,15 @@ Track every single item purchased, and any wastage of items to determine where t
 
 noisy equipment (refrigerator,dishwasher, should go in the back)
 
-## Financial Calculations
+
+
+## Management
+
+- have instructions for all menu items written down and explained with pictures to ease training and to maintain consistency
+
+## Finance
+
+Financial Calculations
 
 ### Fixed Costs
 
@@ -160,7 +195,18 @@ noisy equipment (refrigerator,dishwasher, should go in the back)
 - Internet
 - Insurance
 
-## Variable Cost
+### Variable Cost
 
 - Hours and Employees Per Hour Open
 
+
+## Interior
+
+### Bathroom
+
+- Clean
+- Hooks for coat/purse and other items
+- Extra Toilet paper
+- Well Lit
+- Quiet
+- Nice Designs - repetitive yet interesting pattern on wall

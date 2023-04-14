@@ -2,7 +2,9 @@
 
 ## Outline
 
+
 - [Philosophy](#philosophy)
+- [Name](#name)
 - [Drinks](#drinks)
 - [Food](#food)
 - [Activities](#activities)
@@ -15,6 +17,10 @@
 ## Philosophy
 
 A place to relax, ponder, and gather.
+
+## Name
+
+Name and Logo to identify
 
 ## Drinks
 
@@ -210,3 +216,11 @@ Financial Calculations
 - Well Lit
 - Quiet
 - Nice Designs - repetitive yet interesting pattern on wall
+
+
+## Suppliers
+
+Ingram for books
+Penguine Rnadomhouse Direct
+
+Revel

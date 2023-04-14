@@ -6,9 +6,18 @@ date: 2023-03-26
 tags: software architecture typescript
 ---
 
+
+
 Implications of using TypeScript.
 
+## Short
+
+The TypeScript version must be kept updated.
+
+## Long
+
 - TypeScript major and minor versions are incremental and do not follow semantic versioning. i.e. 3.9, 4.0 [^1]
+
 - New TypeScript versions often introduce new syntax and have better type checking.[^1]
 
 - NPM packages typically target a single TypeScript version for their type files (.d.ts). Newer versions of packages often only target the latest TypeScript version.

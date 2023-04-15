@@ -27,6 +27,12 @@
 
 ## Equipment
 
+- measuring spoons
+- pepper grinder
+- vegetable peeler
+- chefs knife
+- soup pot
+
 ## Directions
 
 1. Heat the olive oil in a large Dutch oven or soup pot over medium heat until shimmering.

@@ -41,3 +41,5 @@
 1. add red pepper, mix well
 1. add pasta, mix but make sure not to crush pasta
 1. serve
+
+## Notes

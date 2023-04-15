@@ -6,6 +6,7 @@
 ## Source
 
 Also known as:
+
 - Spanish Rice
 - Sopa de Arroz
 
@@ -18,7 +19,7 @@ Also known as:
 - 1 cup (8oz can) tomato sauce
 - 1/4 of one onion cut small
 - 1/4 of one bell pepper cut small
-- 1/2 tomatto cut small
+- 1/2 tomato cut small
 - 2 cups water
 
 ## Equipment
@@ -33,7 +34,7 @@ Also known as:
 1. place rice in saucepan
 1. raise stove to medium heat
 1. stir fry rice with spatula until rice is white (not see through) and some of the rice look toasted
-1. place cut onion and cut bell peper in saucepan
+1. place cut onion and cut bell pepper in saucepan
 1. stir fry more
 1. add
     - tomato sauce
@@ -41,6 +42,6 @@ Also known as:
     - garlic salt
     - chicken bouillon
     - tomatoes
-1. cover and simmer on low heat 20 minutes, stiring every five minutes so that the rice does not stick to the bottom of the pan
+1. cover and simmer on low heat 20 minutes, stir every five minutes so that the rice does not stick to the bottom of the pan
 
 ## Notes

@@ -16,16 +16,19 @@
 
 ## Equipment
 
-1 Serving Board
+- 1 Serving Board
+- paring knife
 
 ## Directions
 
-Prepare the entire board beforehand
-cut cheese and meat, and vegetables into small cracker fitting slices
+1. Prepare the entire board beforehand
+1. cut cheese
+    - leave cheese out to get slightly warm
+1. cut meat, and vegetables into small cracker fitting slices
+    - cut on an angle to make the slices longer
+1. arrange in a nice design on the board
 
-can cut on an angle to make the slices longer
-
-
+## Notes
 
 ### Vegetable  Dip
 

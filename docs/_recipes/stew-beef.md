@@ -39,7 +39,7 @@
 1. add beef to bowl and coat with flour
 1. add beef to pot and cook until browned on each side
 1. take meat out after cooking
-1. add add and sautee onions
+1. add add and sauté onions
 1. add vinegar and wine to pot
 1. cook over medium high heat
 1. scrape beef bits from bottom and side of pot
@@ -59,5 +59,5 @@
 - 1 tablespoon fresh thyme for more flavor
 - can use balsamic instead of red wine vinegar
 - Add mushrooms (2 cartons) (cook first) and toss in with the meat
-- Can sautee onions after the mushrooms and once carmelied can add potatoes and carrots and cook next to the stew
+- Can sauté onions after the mushrooms and once caramelized can add potatoes and carrots and cook next to the stew
 - is the beef broth needed? Did it with chicken broth and it was super good.

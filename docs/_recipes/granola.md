@@ -13,7 +13,7 @@
 - 2 table spoons honey or maple syrup
 - 1/2 teaspoon ground cinnamon
 - 3 cups old fashioned oats
-- 2 cups raw nuts (walnuts, almonds, pecans)
+- 1 cup raw nuts (walnuts, almonds, pecans)
 - 1/2 cup dried fruit
 - chocolate chips (optional)
 

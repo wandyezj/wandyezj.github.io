@@ -33,14 +33,16 @@
 1. add liquids and spices to bowl and mix well with whisk.
 1. add granola and mix with spatula to coat evenly
 1. add nuts
-    - _note_: do __not__ add dried fruit and chocolate, they don't bake well.
+    - _note_: __after baking__, add dried fruit and chocolate.
 1. line baking sheet with parchment paper
 1. spread mix over baking sheet
 1. bake 20 minutes
 1. shuffle around
 1. bake another 20 minutes
-1. transfer to cooling rack so it can cool from bottom and the top  
+1. transfer to cooling rack so it can cool from bottom and the top
+1. _optional_ let cool, bake for another 20 minutes for a crunchier texture.
 1. add dried fruit and chocolate
+1. store in sealed glass jars.
 
 ## Notes
 

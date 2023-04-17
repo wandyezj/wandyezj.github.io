@@ -176,6 +176,20 @@ Multi use space
 
 Possible to sell items by using them as decoration if have shallow shelves.
 
+### Merchandise
+
+Generally these should just be extras of things the cafe generally uses.
+
+What is the ROI of this of branded merchandise? How long does the capital expense sit on the shelf before being used? What is the target customer for this type of merchandise? Does this also serve to spread awareness of the brand?
+
+- Branded T Shirts
+- Branded Coffee Mugs
+
+
+
+### Catering
+
+- [Espresso Catering](https://www.casestudycoffee.com/pages/espresso-catering)
 
 
 ## Design

@@ -30,10 +30,10 @@ _note_ this assumes you are in your 20-40s and have a significant amount of time
     - I recommend doing this monthly, quarterly, or when you reach a specific balance above your float.
 1. __Buy Index funds__
     - I recommend Vanguard Index funds, specifically VOO or VTV.
-    - DO NOT buy individual stocks. That's just gambling. There is extensive research that shows it's nearly impossible to beat an index fund.
+    - Do __NOT__ buy individual stocks. That's just gambling. There is extensive research that shows it's nearly impossible to beat an index fund.
 1. __Wait__
-    - Do NOT pay attention to what the market is doing.
-    - Do NOT sell your investments.
-1. Continue to save and invest
+    - Do __NOT__ pay attention to what the market is doing.
+    - Do __NOT__ sell your investments.
+1. __Continue__ to save and invest
 
 

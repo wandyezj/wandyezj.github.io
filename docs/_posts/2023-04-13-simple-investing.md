@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Simple Investing"
-date: 2023-03-26
+date: 2023-04-13
  00:00:00 -0700
 tags: investing
 ---

@@ -14,6 +14,7 @@
     - [Interior](#interior)
 - [Business](#business)
     - [Management](#management)
+    - [Equipment](#equipment)
     - [Finance](#finance)
 
 
@@ -257,17 +258,6 @@ Project future revenue.
 
 Track every single item purchased, and any wastage of items to determine where to save.
 
-## Equipment
-
-- espresso machine
-- large refrigerator
-- under counter refrigerator
-- dishwasher
-- oven
-- hood
-- electric induction stove or small pads
-- ceramic cups
-- teapots
 
 ## Convenience
 
@@ -279,6 +269,22 @@ Track every single item purchased, and any wastage of items to determine where t
 ### Management
 
 - have instructions for all menu items written down and explained with pictures to ease training and to maintain consistency
+
+### Equipment
+
+- water filter
+- espresso machine
+- large refrigerator
+- under counter refrigerator
+- dishwasher
+- oven
+- ceramic cups
+- teapots
+
+- hood
+- electric induction stove or small pads
+
+
 
 ### Finance
 

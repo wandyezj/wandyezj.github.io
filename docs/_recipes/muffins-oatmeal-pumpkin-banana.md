@@ -1,14 +1,14 @@
 ---
 ---
 
-# Outmeal Pumpkin Banana Breakfast Muffins
+# Oatmeal Pumpkin Banana Breakfast Muffins
 
 ## Source
 
 ## Ingredients
 
 - 2 cups (200 grams) instant oats
-- 2 cups (200 grams) whole weat flour
+- 2 cups (200 grams) whole wheat flour
 - 1 teaspoon baking powder
 - 1 teaspoon baking soda
 - 3 teaspoons ground cylon cinnamon

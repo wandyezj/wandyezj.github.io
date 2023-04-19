@@ -15,6 +15,9 @@ A quick delicious party opener.
 
 ## Equipment
 
+- small knife
+- cutting board
+
 ## Directions
 
 1. Place Crackers and toppings on a plate.
@@ -24,6 +27,7 @@ A quick delicious party opener.
 
 Good Combinations
 
-- wasa Sourdough crackers + EVOO Pink Salmon in Extra Virgin Olive Oil + Trader Joes California Sun-dried Tomatoes  + Murray's Smoked Gouda
-
-
+- wasa Sourdough crackers
+- EVOO Pink Salmon in Extra Virgin Olive Oil
+- Trader Joes California Sun-dried Tomatoes
+- Murray's Smoked Gouda

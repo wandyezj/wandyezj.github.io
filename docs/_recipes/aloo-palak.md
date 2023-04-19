@@ -33,12 +33,12 @@
 1. place pot on stove
 1. add olive oil to pot
 1. set burner under pot to medium high heat
-1. satute onions until translucent
-1. add spices: cumin, coriander, cayanne, tumeric, salt
+1. sauté onions until translucent
+1. add spices: cumin, coriander, cayenne, tumeric, salt
 1. mix well
 1. add tomatoes
 1. add potatoes
-1. cook for 20 minutes, stiring every five minutes
+1. cook for 20 minutes, stir every five minutes
 1. add spinach
 1. cook until potatoes are tender ~10 more minutes
 

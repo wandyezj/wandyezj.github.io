@@ -11,6 +11,12 @@ Cooking Dried beans in the instant pot
 - 8 cups water (room temperature)
 - 1 teaspoon salt
 
+## Equipment
+
+- instant pot
+- measuring cup
+- measuring spoons
+
 ## Directions
 
 1. Rinse instant pot

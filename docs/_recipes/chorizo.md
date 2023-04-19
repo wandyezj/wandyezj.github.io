@@ -9,7 +9,7 @@
 
 ## Ingredients
 
-- 1 pound  cremini mushrooms
+- 1 pound cremini mushrooms
 - 1/2 yellow or red onion, diced
 - 2 garlic cloves
 - 1-2 tablespoons paprika

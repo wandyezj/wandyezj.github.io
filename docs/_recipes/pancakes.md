@@ -28,7 +28,7 @@ New Basic Blueberry Pancakes
 - measuring spoons
 - Medium bowl
 - Whisk
-- 10" skillet
+- 10 inch skillet
 
 ## Directions
 

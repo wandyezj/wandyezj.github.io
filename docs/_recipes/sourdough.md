@@ -3,7 +3,6 @@
 
 # Sourdough
 
-
 ## Ingredients
 
 - 100 grams Starter
@@ -34,5 +33,5 @@
 
 ## Notes
 
-- can double or triple the ingredients for a bigger loaf
+- can double or triple the ingredients for a bigger loaf (Recommend making a quadruple loaf)
 - can cut up into thin slices and freeze for up to a month and toast slices as needed

@@ -49,5 +49,5 @@ Rocky Mountain Chip Cookies
 
 ## Notes
 
-Easy to pop a few in the oven after making the dough
-Better if golden brown around the edges
+- Easy to pop a few in the oven after making the dough
+- Better if golden brown around the edges

@@ -5,57 +5,136 @@
 
 - [Philosophy](#philosophy)
 - [Name](#name)
-- [Drinks](#drinks)
-- [Food](#food)
+- [Menu](#menu)
+    - [Drinks](#drinks)
+    - [Food](#food)
 - [Activities](#activities)
 - [Services](#services)
-- [Interior](#interior)
-- [Management](#management)
-- [Finance](#finance)
+- [Design](#design)
+    - [Interior](#interior)
+- [Business](#business)
+    - [Management](#management)
+    - [Equipment](#equipment)
+    - [Finance](#finance)
 
 
 ## Philosophy
 
 A place to relax, ponder, and gather.
 
+- Explore
+- Build Community
+
 ## Name
 
 Name and Logo to identify
 
-## Drinks
+## Menu
+
+Keep the menu short and simple with only excellent items on the menu. Change the menu slowly so people know what to expect. It's ok to have 1-2 special surprise items (as long as they are good) to add variation.
+
+- Have a public menu with only the basic most popular + 1 special
+- Have a special menu for special customers
+- Allow for some variation and novelty and advertise it
+    - Have standard bean and bean of the week
+    - Have unique drink of the week
+    - Keep the staff entertained, staff pick a new drink each week
+
+### Drinks
 
 
 - Tea
     - Green Tea
+    - Mint Tea
 - Matcha
 - Hot Chocolate
 - Espresso
-- Drip Coffee
 
 - Additives
     - Honey
     - Ginger
     - Vanilla
+    - Milk
+        - different types of milk including non dairy options
 
-## Draft
+Is there a point of drip coffee if there is espresso?
 
-- Payment system - Square
-- Location
+- Drip Coffee
 
-- Menu
-    - Have a public menu with only the basic most popular + 1 special
-    - Have a special menu for special customers
-    - Allow for some variation and novelty and advertise it
-        - Have standard bean and bean of the week
-        - Have unique drink of the week
-        - Keep the staff entertained, staff pick a new drink each week
 
-Supply Chain
 
-- Freshly roasted coffee that is ground just before brewing
 
-- Good teas from different providers
+### Coffee
 
+- Espresso
+
+### Tea
+
+- tea should be served pre-steeped and times for the type of tea.
+- cup or pot of tea
+- Feature regional makers. Limit selection to one for each category.
+- [Gaiwan Brewing](https://www.smithtea.com/pages/gaiwan)
+
+Types
+
+- Black
+- Oolong
+- Green
+- White
+- Mint
+- Herbal
+
+Suppliers
+
+- https://www.smithtea.com/
+
+- Matcha
+
+Flight of 3 Teas
+
+### Mixed
+
+Non alcoholic mixed drinks?
+
+### Other
+
+- Hot chocolate
+    - requires good chocolate
+- Fancy Water
+    - have glass bottles of chilled water
+
+Flight of 3 waters
+
+
+### Food
+
+Items that can be displayed and taken from a room temperature display case
+
+- Granola
+- Granola bars
+- Baked Goods
+    - Rosemary Sea Salt rolls
+    - Muffins
+- Biscotti
+
+Simple prepared food
+
+- Toast
+
+Items that require some preparation and refrigeration or refrigerated display case
+
+- Milk
+- Yogurt
+    - Toppings (serve on side in small bowels) - Dried Fruit, Granola, Yogurt base, Banana, Nuts, Seeds, Honey
+- Salad
+- Eggs
+    - Hard Boiled
+    - Omelet
+    - Scrambled
+
+- Fresh Fruit bowel
+
+note: Fresh fruit is tricky since fruit ages quickly, but it's possible to fold fruit into baked goods.
 
 ## Activities
 
@@ -68,6 +147,8 @@ What kinds of activities can happen at the coffee shop?
 - Chat
 - Study
 - Meetup
+- Games
+- Internet
 
 ## Location
 
@@ -96,14 +177,21 @@ Multi use space
 
 Possible to sell items by using them as decoration if have shallow shelves.
 
-## Food
+### Merchandise
 
-- Granola
-- Milk
-- Salad
-- Eggs
-- Baked Goods
-    - Rosemary Sea Salt rolls
+Generally these should just be extras of things the cafe generally uses.
+
+What is the ROI of this of branded merchandise? How long does the capital expense sit on the shelf before being used? What is the target customer for this type of merchandise? Does this also serve to spread awareness of the brand?
+
+- Branded T Shirts
+- Branded Coffee Mugs
+
+
+
+### Catering
+
+- [Espresso Catering](https://www.casestudycoffee.com/pages/espresso-catering)
+
 
 ## Design
 
@@ -124,6 +212,13 @@ Can premake salads and serve
 
 need dishwasher.
 
+Wood paneled interior
+
+Porch with plants
+
+Separate kitchen room for noisy machines and activities?
+
+Shelves behind the barista or in the store to display the different Teas, Coffees, Water, Hot Cocoa etc..
 
 
 ## Draw
@@ -163,34 +258,35 @@ Project future revenue.
 
 Track every single item purchased, and any wastage of items to determine where to save.
 
-## Equipment
-
-- espresso machine
-- large refrigerator
-- under counter refrigerator
-- dishwasher
-- oven
-- hood
-- electric induction stove or small pads
-- ceramic cups
-- teapots
 
 ## Convenience
 
 - what if there were very few prices on the menu? One price for a drink? Or would high low work better? A sparse menu with few prices? Or is it better to work people up with a low price thing and charge for additions?
 
 
-## Layout
+## Business
 
-noisy equipment (refrigerator,dishwasher, should go in the back)
-
-
-
-## Management
+### Management
 
 - have instructions for all menu items written down and explained with pictures to ease training and to maintain consistency
 
-## Finance
+### Equipment
+
+- water filter
+- espresso machine
+- large refrigerator
+- under counter refrigerator
+- dishwasher
+- oven
+- ceramic cups
+- teapots
+
+- hood
+- electric induction stove or small pads
+
+
+
+### Finance
 
 Financial Calculations
 
@@ -208,6 +304,12 @@ Financial Calculations
 
 ## Interior
 
+### Layout
+
+noisy equipment (refrigerator,dishwasher, should go in the back)
+
+
+
 ### Bathroom
 
 - Clean
@@ -224,3 +326,16 @@ Ingram for books
 Penguine Rnadomhouse Direct
 
 Revel
+
+Zines
+
+## Draft
+
+- Payment system - Square
+
+Supply Chain
+
+- Freshly roasted coffee that is ground just before brewing
+
+- Good teas from different providers
+

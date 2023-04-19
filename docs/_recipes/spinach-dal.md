@@ -25,6 +25,9 @@
 
 ## Equipment
 
+- measuring spoons
+- chefs knife
+
 ## Directions
 
 1. Sauté all spices and vegetables, except spinach, until onions are clear.

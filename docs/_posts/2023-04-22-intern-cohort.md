@@ -26,6 +26,7 @@ Generally, activities should encourage interns to be social, come at no cost to 
 
 - Frisbee in the park
 - Board Games at a coffee shop
-- City neighborhood walking tour
+- Walking Tour of City neighborhood
 - Attend free events
+- Lunch BBQ Potluck
 

@@ -39,17 +39,19 @@ Come up with a few different project ideas.
 - Write up project ideas as a 1 sentence goal.
 - Add additional clarifying sentences.
 
-Agree on one project idea with your teacher. Your teacher should make sure it is something reasonable that can be accomplished in the time available.
+Agree on one project idea with your teacher. Your teacher should make sure the project is something reasonable that can be accomplished in the time available.
 
-Write up a more detailed plan break the project into more specific tasks and estimate the time each will take.
+Write up a more detailed plan. Investigate as needed. Break the project into more specific tasks and estimate the time each will take.
 
-Have your teacher review the more detailed plan and provide comments.
+Have your teacher review the more detailed plan and provide comments, and adjust the plan accordingly.
 
 ### Do
 
 This should take about two weeks.
 
 Carry out the plan.
+
+Some tasks may take longer than expected. If it looks like you will only be able to get to a subset of the tasks, talk to your teacher and adjust the plan.
 
 ### Share
 

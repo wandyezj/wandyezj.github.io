@@ -65,4 +65,4 @@ Bobs Red Mill organic extra thick rolled oats
 - 2 tablespoons honey
 - 1 teaspoon cinnamon
 - 2 teaspoons vanilla
-- sliced almonds
+- 1/3 cup sliced almonds

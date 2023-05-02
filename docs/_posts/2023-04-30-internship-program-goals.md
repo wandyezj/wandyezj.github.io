@@ -6,19 +6,19 @@ date: 2023-04-30
 tags: internship
 ---
 
-Many companies have internship programs. These programs serve as a way to recruit college students, assess their fit for the organization, provide one-off funding for specific projects, and increase company reputation.
+Many companies have internship programs. These programs serve as a way to recruit college students, assess their fit for the organization, increase company reputation, provide one-off funding for specific projects.
 
 ## Internship Program Goals
 
 Internship programs typically have the following goals.
 
 - Deliver a reasonable hire / no-hire decision for the specific intern.
-- Make progress on a specific project with the addition of another temporary person.
 - Increase company reputation as a great company and great place to work.
     - Intern has a great experience, wants to come back, and tells others about their experience.
     - Intern believes they were treated fairly.
     - Intern feels well supported.
     - Intern does fun relevant work.
+- Make progress on a specific project with the addition of another temporary person.
 
 ## Arc
 

@@ -108,18 +108,49 @@ Flight of 3 waters
 
 ### Food
 
+
+#### Display Case
+
 Items that can be displayed and taken from a room temperature display case
 
 - Granola
 - Granola bars
-- Baked Goods
-    - Rosemary Sea Salt rolls
-    - Muffins
+- Rosemary Sea Salt rolls
+- Muffins
 - Biscotti
 
-Simple prepared food
+
+#### Cold Display
+
+- Overnight oats
+- Chia seed pudding
+- hard boiled eggs
+
+#### Quick prepared food
+
+- Oatmeal
+- Granola Cereal Bowl (granola with milk)
+
+#### Simple prepared food
 
 - Toast
+    - Avocado, Tomato, Cheese
+- [Muesli](https://en.wikipedia.org/wiki/Muesli)
+- Yogurt Parfait
+    - Toppings (serve on side in small bowels) - Yogurt base, Dried Fruit, Granola, Nuts, Seeds, Honey, Fresh Fruit (Cherry, Blueberry, Raspberry)
+    - Serve in fancy glass
+
+#### Complex prepared food
+
+- Fresh Fruit bowl
+    _note_: Fresh fruit is tricky since fruit ages quickly, but it's possible to fold fruit into baked goods.
+    - seasonal fruit
+    - apples
+    - cherries
+    - raspberries
+    - blueberries
+    - strawberries
+    - oranges
 
 Items that require some preparation and refrigeration or refrigerated display case
 
@@ -131,10 +162,6 @@ Items that require some preparation and refrigeration or refrigerated display ca
     - Hard Boiled
     - Omelet
     - Scrambled
-
-- Fresh Fruit bowel
-
-note: Fresh fruit is tricky since fruit ages quickly, but it's possible to fold fruit into baked goods.
 
 ## Activities
 
@@ -306,9 +333,25 @@ Financial Calculations
 
 ### Layout
 
-noisy equipment (refrigerator,dishwasher, should go in the back)
+noisy equipment (refrigerator, dishwasher, should go in the back)
 
+### Bar
 
+- Spindles that hold it off of the floor to allow sweeping under the bar?
+    - spindles are tricky since need to feed in wires and water
+    - LED lights underneath to make it seem light?
+- counter
+    - white quartz counter
+- wood paneling on bar
+    - thin 1 inch wide and 1/2 inch thick pieces that can curve around, don't use any nails so main panel pieces can be re-arranged or swapped out for different themes or if damaged, held in place by parallel forms
+
+### Drink Display
+
+Laster cut pieces of wood that are laser engraved and hung on pegs. Color in laster cut with black ink.
+
+### Floor
+
+- Designed for industrial grade roomba
 
 ### Bathroom
 

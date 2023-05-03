@@ -331,6 +331,8 @@ Financial Calculations
 
 ## Interior
 
+Kerf?
+
 ### Layout
 
 noisy equipment (refrigerator, dishwasher, should go in the back)

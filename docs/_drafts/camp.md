@@ -1,0 +1,185 @@
+# Camp
+
+I love camping, it's a simple way to take a vacation to chill and explore.
+
+This article shares some insights on how I like to camp.
+
+- [Philosophy](#philosophy)
+- [Gear](#gear)
+- [Site](#site)
+    - Where are you going to camp?
+- [Transport](#transport)
+    - How are you going there?
+- [Food](food)
+    - What are you going to eat?
+
+Checklists
+
+- [Site Checklist](#site-checklist)
+- [Packing Checklist](#packing-checklist)
+- [Food Checklist](#food-checklist)
+
+## Philosophy
+
+Lazy. Cheap. Comfy.
+
+I want to spend my time exploring and chilling out in nature. I want to maximize my time spent surrounded by nature reading a good book and drinking tasty hot tea.
+
+I'm a lazy camper. I want to achieve a reasonable level of comfortable without spending a lot of money and energy.
+
+I find packing the minimal amount of things needed to be the least amount of effort.
+
+I find having meals that don't require cooking or only require boiling water convenient. Especially if those meals are designed to let you skip cleaning dishes.
+
+## Gear
+
+Camping is a little different from staying at a hotel or in a cabin.
+
+Generally, since I'm cheap, I don't want to acquire a lot of gear. Having a lot of gear is also a hassle since you need to keep track of it and store it. That said, I fnd the following gear convenient:
+
+- Tent
+    - I find it more comfortable and less effort to sleep in the back of a hatchback. However, if you don't have a hatchback or have more people than can comfortable fit in a car, a tent is nice.
+- Sleeping pad
+    - Something between you and the hard cold ground is convenient, it's not necessary, but it makes sleeping more comfortable.
+- Sleeping Bag
+    - A sleeping bag allows you to keep all the warmth in, you can use blankets instead, but a sleeping bag can be convenient.
+- Small stove
+    - Having hot water for meals and tea is nice.
+
+### Tent
+
+Pick a tent that is easy to set up and take down. You will thank yourself later when you arrive at the site late and it's dark, and when you want to leave early in the morning after a long hike.
+
+If you intend to share a tent with others make sure the tent is big enough for everyone and their gear.
+
+If you intend to backpack or bike pack, consider the weight of the tent, try to find something under 3 pounds, every pound of weight matters.
+
+## Site
+
+There are many campgrounds to choose from.
+
+I recommend picking a campsite that is beautiful with running water, a bathroom, and trash disposal.
+
+[Site Checklist](#site-checklist)
+
+Some places to find campsites:
+
+- [National Parks](https://www.recreation.gov/)
+- [State Parks](https://www.parks.wa.gov/)
+- Some municipalities allow camping in certain parks.
+- [KOA](https://koa.com/)
+
+As you camp more you will make your own list of favorite sites to return to each year.
+
+## Transport
+
+Generally, most campsites are far enough away you will need to plan how to get there.
+
+- Car
+- Bike
+- Walk
+
+### Car Camping
+
+Drive to the campsite.
+
+The easiest type of camping is weekend car camping. You drive your car to a campsite on a Friday night, stay the night, spend Saturday exploring, stay the night, and head back Sunday Morning.
+
+For car camping I prefer to sleep in the car verses setting up a tent - it's less effort. Hatchbacks are ideal, generally you can fold down the back seats and have enough room to lie down and pass out.
+
+### Bike packing
+
+Ride your bike to the campsite.
+
+Weight matters since you need to bike everything in and out.
+
+### Back packing
+
+Hike to the campsite.
+
+Weight matters a lot - you need to carry everything on your back.
+
+Make sure to have a good backpack the distributes the load.
+
+## Site Checklist
+
+- Natural Beauty
+- Running Water
+- Bathroom
+- Trash
+- Shade
+- Close to adventure
+- Away from bugs
+
+## Packing Checklist
+
+Basics
+
+- phone
+- id
+- keys
+- phone charger
+
+Personal Care
+
+- toothbrush
+- toothpaste
+- floss
+- shaver
+- deodorant
+- toenail clipper
+- tweezers
+
+Clothes
+
+- pajama pants
+- t shirts - one per day
+- underwear - one per day
+- shorts or pants - one per day
+- belt
+
+Adventure
+
+- water bottle
+- sunscreen
+- hiking boots
+- baseball cap
+- sunglasses
+- swimsuit
+- hand warmers
+
+Sleeping
+
+- sleeping bag / blanket
+- sleeping pad
+- pillow
+
+
+Food
+
+- stove
+- stove fuel
+- pot to boil water
+- cup for tea
+- chopsticks - use the extra wooden ones you sometimes get for takeout
+- fork / spoon
+- water
+- [food](#food-checklist)
+
+Other
+
+- flashlight
+- book
+
+## Food checklist
+
+- tea bags
+- muffins
+- granola
+- granola bars
+- dried fruit
+- crackers
+- smoked fish or canned fish
+- fresh fruit that doesn't require refrigeration
+- instant - just add hot water packaged food - oatmeal, ramen, etc - easier if in own cup
+- chocolate

@@ -6,7 +6,7 @@ date: 2023-04-30
 tags: internship
 ---
 
-Many companies have internship programs. These programs serve as a way to recruit college students, assess their fit for the organization, increase company reputation, provide one-off funding for specific projects.
+Many companies have internship programs. These programs serve as a way to recruit college students, assess their fit for the organization, increase company reputation, and provide one-off funding for specific projects.
 
 ## Internship Program Goals
 
@@ -24,8 +24,10 @@ Internship programs typically have the following goals.
 
 An internship is usually around 12 weeks long.
 
-The first week should establish expectations and evaluation criteria. The intern should receive feedback throughout on how well they are doing, and what they need to change. Generally the first week should be spent getting everything set up and completing a simple warm up exercise that demonstrates everything is working.
+ The intern should receive feedback throughout on how well they are doing, and where they can improve.
 
-The middle week should have an evaluation of progress on that evaluation criteria,
+The first week should establish expectations and evaluation criteria. The first week should be spent getting everything set up and completing a simple warm up exercise that demonstrates everything is working.
+
+The middle week should have an formal evaluation of progress based on evaluation criteria.
 
 The final week should have a final evaluation of that criteria.

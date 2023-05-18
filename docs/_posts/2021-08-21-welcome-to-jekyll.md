@@ -98,7 +98,7 @@ With the following installed, launch the server
 
 ### Notes for Ubuntu 22
 
-Before doing the 
+Before doing the setup
 
 Ubuntu 22 comes with ruby 3 which is not compatible with the github-pages. Use ruby 2 with rvm.
 

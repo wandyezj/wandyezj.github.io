@@ -71,10 +71,31 @@ collections:
     year: ""
     link: ""
     tags: []
+  essays:
+    output: false
+    title: ""
+    author: ""
+    year: ""
+    link: ""
+    tags: []
+  products:
+    output: true
+    title: ""
+    category: ""
+    year: ""
+    manufacturer: ""
+    tags: []
+    review: ""
+
 
 defaults:
   -
     scope:
       type: recipes # a collection in your site, in plural form
+    values:
+      layout: post
+  -
+    scope:
+      type: products # a collection in your site, in plural form
     values:
       layout: post

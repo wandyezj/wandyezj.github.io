@@ -40,6 +40,19 @@ layout: page
 </p>
 {% endfor %}
 
+## Essays
+
+{% assign essays = site.essays %}
+{% for essay in essays %}
+{% assign link = essay.link | escape %}
+{% assign citation = essay.citation | escape %}
+<p>
+<a href="{{ link }}" title="{{ citation }}">
+{{ essay.title | escape }} - {{ essay.author | escape }} ({{ essay.year | escape }})
+</a>
+</p>
+{% endfor %}
+
 
 ## Literature
 

@@ -7,12 +7,12 @@ manufacturer: Logitech
 
 Decent computer mouse.
 
-Pluses
+## Pros
 
 - Rechargeable
 - Can switch between computers.
-- Lots of special buttons. 
+- Lots of special buttons.
 
-Minuses
+## Cons
 
 - Not easy to replace the battery.

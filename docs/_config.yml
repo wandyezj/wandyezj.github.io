@@ -85,6 +85,10 @@ collections:
     year: ""
     manufacturer: ""
     tags: []
+    # compost - every part of the product and packaging must be compostable
+    # recycle - every part of the product must be recyclable
+    # landfill - if any part of the product must go in the landfill
+    disposal: ""
     review: ""
 
 

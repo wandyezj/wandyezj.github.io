@@ -10,10 +10,10 @@ Many companies have internship programs. These programs serve as a way to recrui
 
 ## Internship Program Goals
 
-Internship programs typically have the following goals.
+Internship programs typically have the following goals:
 
 - Deliver a reasonable hire / no-hire decision for the specific intern.
-- Increase company reputation as a great company and great place to work.
+- Increase company reputation as a great place to work.
     - Intern has a great experience, wants to come back, and tells others about their experience.
     - Intern believes they were treated fairly.
     - Intern feels well supported.
@@ -24,7 +24,7 @@ Internship programs typically have the following goals.
 
 An internship is usually around 12 weeks long.
 
- The intern should receive feedback throughout on how well they are doing, and where they can improve.
+The intern should receive feedback throughout on how well they are doing, and where they can improve.
 
 The first week should establish expectations and evaluation criteria. The first week should be spent getting everything set up and completing a simple warm up exercise that demonstrates everything is working.
 

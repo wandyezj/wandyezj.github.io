@@ -31,3 +31,5 @@ Run test.js
 `test.js` imports the functions from `hello.js`
 
 _note_: the `require` path needs to path to the file that contains the export.
+
+_note_: `require` is a node specific construct - do not expect this to work in the browser.

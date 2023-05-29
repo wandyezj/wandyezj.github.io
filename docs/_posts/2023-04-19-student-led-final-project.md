@@ -6,26 +6,26 @@ date: 2023-04-19
 tags: teaching
 ---
 
-I think it's beneficial at the end of a class for students to apply what they learn to something they care about, or further explore something they find interesting.
+I believe it's beneficial at the end of a class for students to apply what they learn to something they care about, or to further explore something they find interesting.
 
-One way to do this is to have students explore on their own with a student led project.
+One way accomplish this is for students explore on their own with a student led project.
 
-A student led project should be done over a minimum of 3 weeks.
+A student led project should be done over a minimum of 3 weeks. Giving students sufficient time to plan, explore, and share.
 
 ## Outline
 
 The project should consist of the following parts:
 
 1. [Plan](#plan)
-1. [Do](#do)
+1. [Explore](#explore)
 1. [Share](#share)
 
 Overlap of project tasks
 
 ```text
-Plan  : --
-Do    :   --
-Share :    --
+Plan    : --
+Explore :   --
+Share   :    --
 ```
 
 ### Plan
@@ -45,7 +45,7 @@ Write up a more detailed plan. Investigate as needed. Break the project into mor
 
 Have your teacher review the more detailed plan and provide comments, and adjust the plan accordingly.
 
-### Do
+### Explore
 
 This should take about two weeks.
 
@@ -65,3 +65,15 @@ Alternatives:
 - paper
 
 The goal of the presentation is to explain what you did so everyone can learn from your experience.
+
+
+## Philosophy
+
+Student led projects are just that __student led__.
+
+Teachers should act as mentors - providing a framework and allowing students to run their own projects how they want to run them. It's ok if student deviate from the framework or students projects don't work out as planned, that's part of the learning experience.
+
+Ways to mentor:
+
+- Ask questions and having students explain what they are doing often this is enough for students to realize they may be missing something.
+- Wait for students to ask for help or resources - part of being student led is allowing students to figure things out on their own.

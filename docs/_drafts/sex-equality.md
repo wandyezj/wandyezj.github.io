@@ -11,3 +11,5 @@ If you are born a Man you are more mare than 13X more likely to end up in prison
 - [According to the CDC](https://wwwn.cdc.gov/NHISDataQueryTool/SHS_adult/index.html) in 2021, 13.1%of Men vers 10.1% of Women.
 
 - [According to the Bureau of Labor Statistics](https://www.bls.gov/news.release/pdf/cfoi.pdf) in 2021 Men made up 91.4% of all workplace fatalities while Women made up 8.6%
+
+- Military Draft

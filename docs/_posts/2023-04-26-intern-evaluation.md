@@ -8,7 +8,7 @@ tags: internship
 
 What criteria should be used to assess interns to make a reasonable hire / no-hire decision? It's important that these criteria are determined at the start of the internship.
 
-Many interns can be shaped to be effective employees. The question is how much effort does it take to shape them, and is it worth it?
+Many interns can be shaped to be effective employees. The question is: how much effort does it take to shape them, and is it worth it?
 
 ## Intern Evaluation Criteria
 

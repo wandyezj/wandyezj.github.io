@@ -40,3 +40,5 @@ Simple language with static analysis that is blockable and VM able.
 TypeScript is fundamentally a JavaScript extension from its design principals.
 
 Browser as a modern operating system.
+
+[Interview With Senio JS Developer](https://www.youtube.com/watch?v=Uo3cL4nrGOk&ab_channel=Programmersarealsohuman), all joking aside -> it is defacto.

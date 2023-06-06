@@ -3,7 +3,7 @@ layout: post
 title: "Story Game Philosophy"
 date: 2023-06-04
  00:00:00 -0700
-tags: "story games" philosophy
+tags: story-games philosophy
 ---
 
 Story Games focus on players creating an entertaining story together.

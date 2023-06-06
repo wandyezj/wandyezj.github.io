@@ -3,7 +3,7 @@ layout: post
 title: "Story Game Adoption"
 date: 2023-06-05
  00:00:00 -0700
-tags: "story games" philosophy
+tags: story-games philosophy
 ---
 
 Many role playing games have been developed that contain excellent ideas, yet are challenging to play as story games.

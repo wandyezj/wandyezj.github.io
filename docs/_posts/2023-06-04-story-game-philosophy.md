@@ -49,9 +49,9 @@ A one-shot is a game that starts and completes in a single session.
 
 A story game rule book should allow players to learn the rules and complete a compelling story within 2-4 hours.
 
-A story game can be extended beyond a one-shot if players want to keep playing out a story.
-
 One-shot games allow players to play together with minimal planning. This works especially well for meet-up groups where players may not be present every session. One-shot games also allow players to try different games and create new stories more frequently.
+
+A game session can usually be extended beyond a one-shot if players want to keep playing out a story.
 
 ### Equal Narrative Control
 

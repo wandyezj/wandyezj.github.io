@@ -3,7 +3,7 @@ layout: post
 title: "Building Your Life"
 date: 2023-06-10
  00:00:00 -0700
-tags: philosophy
+tags: philosophy self-help
 ---
 
 You can consciously decide who you want to be and the life you want to live.

@@ -8,7 +8,9 @@ tags: teaching
 
 I believe it's beneficial at the end of a class for students to apply what they learn to something they care about, or to further explore something they find interesting.
 
-One way accomplish this is for students explore on their own with a student led project.
+The term I use for this individual exploration is "Student Led Project".
+
+The purpose of this project is for students to prove they can learn and apply what they have learned on their own.
 
 A student led project should be done over a minimum of 3 weeks. Giving students sufficient time to plan, explore, and share.
 
@@ -30,9 +32,9 @@ Share   :    --
 
 ### Plan
 
-This should take about 2 weeks.
+Planning should take about 2 weeks.
 
-This should be done before the projects three weeks starts.
+A basic project outline should be done before the projects three weeks starts.
 
 Come up with a few different project ideas.
 
@@ -47,7 +49,7 @@ Have your teacher review the more detailed plan and provide comments, and adjust
 
 ### Explore
 
-This should take about two weeks.
+Exploration should take about two weeks.
 
 Carry out the plan.
 
@@ -55,7 +57,7 @@ Some tasks may take longer than expected. If it looks like you will only be able
 
 ### Share
 
-This should take about one week.
+Sharing should take about one week.
 
 Present what you did to the class. Ideally though a 5 minute video.
 
@@ -75,5 +77,5 @@ Teachers should act as mentors - providing a framework and allowing students to 
 
 Ways to mentor:
 
-- Ask questions and having students explain what they are doing often this is enough for students to realize they may be missing something.
+- Ask questions and have students explain what they are doing - often this is enough for students to realize they may be missing something.
 - Wait for students to ask for help or resources - part of being student led is allowing students to figure things out on their own.

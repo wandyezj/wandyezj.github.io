@@ -14,7 +14,7 @@ Story Games are a category of storytelling game [^storytelling-game-wikipedia], 
 
 How do I separate __Story Games__ from other storytelling games?
 
-- A focus on cooperative story telling where games rules give all players equal narrative control.
+- A focus on cooperative story telling where games rules give all players _equal narrative control_.
 - A player’s ability to affect what happens in the game is not dependent on a their character’s fictional ability to do those things. [^arsludi-defining-story-games]
 
 Different Story Games facilitate different kinds of stories:
@@ -40,7 +40,7 @@ Different Story Games facilitate different kinds of stories:
 
 What design principles should Story Games adhere to?
 
-As a baseline all games should be safe and fun. To adhere to my definition of Story Game the game must adhere to equal narrative control. The rest of the design principals help ease play.
+As a baseline all games should be safe and fun. To adhere to my definition of Story Game the game must have equal narrative control. The rest of the design principals help ease play.
 
 - [Safe](#safe)
 - [Fun](#fun)
@@ -52,26 +52,33 @@ As a baseline all games should be safe and fun. To adhere to my definition of St
 
 ### Safe
 
-A Story Game should be safe for players. Players should feel safe to express themselves and explore stories together.
+A Story Game should be safe for players.
 
+A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what makes uncomfortable until it's in the game.
 
+Meta rules are available to help [^safety-toolkit] [^x-card], however making sure everyone feels comfortable is ultimately everyone's responsibility[^x-card-insufficiency].
 
 ### Fun
 
-Players should have fun, whatever that means to them. Players should walk away every time thinking "that was awesome, let's play again!".
+A Story Game should be fun to play.
 
-Story Games _are_ games! A Story Game should engage it's players.
+Players should walk away every time thinking "that was awesome, let's play again!". Story Games _are_ games! It's hard to convince people to play a game that isn't fun.
 
-There are many ways a Story Game can be fun:
+There are many ways players can engage for fun:
 
-- Play with friends
-- Appreciate others cool ideas
+- Socialize with friends
+- Appreciate others' cool ideas
 - Explore new viewpoints
 - Create compelling emotional drama
+- Philosophical musing
+
+Different players prefer different types of fun. A Story Game should choose the elements of fun to focuses on.
+
+When constructing a game focus on "surrounding the fun" [^surround-the-fun] - strengthen fun elements and remove unenjoyable ones. Playtest the game with many groups and audiences, collect actual play experiences, and revise the game to further surround the fun.
 
 ### Equal Narrative Control
 
-A story game should give all players equal control over the narrative.
+A Story Game should give all players equal control over the narrative.
 
 This means dividing control of parts of the story among players and giving them ways to resolve conflicts. Ideally, the rules encourage players to interact by building on each others' ideas.
 
@@ -119,8 +126,17 @@ A Story Game should strive to be about more than having fun. Games allow us to e
 
 ## Reference
 
-[^arsludi-defining-story-games]: [Defining Story Games by Ben Robbins](https://arsludi.lamemage.com/index.php/460/defining-story-games/)
-
 [^storytelling-game-wikipedia]: [Storytelling Game on Wikipedia](https://en.wikipedia.org/wiki/Storytelling_game)
 
+[^arsludi-defining-story-games]: [Defining Story Games by Ben Robbins](https://arsludi.lamemage.com/index.php/460/defining-story-games/)
+
+[^surround-the-fun]: [Sid Meier Alpha Centauri Development on Wikipedia](https://en.wikipedia.org/wiki/Sid_Meier%27s_Alpha_Centauri#Development)
+
+[^x-card]: [X-Card by John Stavropoulos](https://docs.google.com/document/d/1SB0jsx34bWHZWbnNIVVuMjhDkrdFGo1_hSC2BWPlI3A/edit#heading=h.sge2nj90o9w0)
+
+[^safety-toolkit]: [Table Top Roll Playing Game Safety Toolkit by Kienna Shaw and Lauren Bryant-Monk](https://drive.google.com/file/d/1M3LpDnVOc2G5UV03mWsqSU2QkDvHcmWX/view?usp=drive_link)
+
+[^x-card-insufficiency]: [X Card insufficiency by Jamie Fristrom](https://www.gamedevblog.com/2019/11/the-insufficiency-of-the-x-card-and-story-games-safety.html)
+
 [^story-games-online]: [Story Games Online by Ben Robbins](https://arsludi.lamemage.com/index.php/1738/story-games-online-what-ive-learned-so-far/)
+

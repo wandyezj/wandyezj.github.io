@@ -6,7 +6,7 @@ date: 2023-04-26
 tags: internship
 ---
 
-What criteria should be used to assess interns to make a reasonable hire / no-hire decision? It's important that these criteria are determined at the start of the internship.
+What criteria should be used to assess interns to make a reasonable hire / no-hire decision? It's important that these criteria are determined and communicated to the intern at the start of the internship so interns have a shot at a fairer evaluation.
 
 Many interns can be shaped to be effective employees. The question is: how much effort does it take to shape them, and is it worth it?
 

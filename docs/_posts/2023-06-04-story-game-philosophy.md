@@ -54,7 +54,7 @@ As a baseline all games should be safe and fun. To adhere to my definition of St
 
 A Story Game should be safe for players.
 
-A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what makes uncomfortable until it's in the game.
+A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what makes us uncomfortable until it's in the game.
 
 Meta rules are available to help [^safety-toolkit] [^x-card], however making sure everyone feels comfortable is ultimately everyone's responsibility[^x-card-insufficiency].
 
@@ -82,7 +82,7 @@ A Story Game should give all players equal control over the narrative.
 
 This means dividing control of parts of the story among players and giving them ways to resolve conflicts. Ideally, the rules encourage players to interact by building on each others' ideas.
 
-This differs from games like _Dungeons & Dragons_ or _Monsterhearts_ which have DM's or GM's - who have significantly more control over the narrative than other players.
+This differs from games like _Dungeons & Dragons_[^dnd-wikipedia] or _Monsterhearts_[^monsterhearts-wikipedia] which have DM's or GM's - who have significantly more control over the narrative than other players.
 
 Giving players equal narrative control allows a broader diversity of ideas to emerge, leading to more interesting stories. The point of Story Games is to cooperatively tell stories, not for a single person to dictate the narrative.
 
@@ -137,6 +137,10 @@ A Story Game should strive to be about more than having fun. Games allow us to e
 [^safety-toolkit]: [Table Top Roll Playing Game Safety Toolkit by Kienna Shaw and Lauren Bryant-Monk](https://drive.google.com/file/d/1M3LpDnVOc2G5UV03mWsqSU2QkDvHcmWX/view?usp=drive_link)
 
 [^x-card-insufficiency]: [X Card insufficiency by Jamie Fristrom](https://www.gamedevblog.com/2019/11/the-insufficiency-of-the-x-card-and-story-games-safety.html)
+
+[^dnd-wikipedia]: [Dungeons & Dragons on Wikipadia](https://en.wikipedia.org/wiki/Dungeons_%26_Dragons)
+
+[^monsterhearts-wikipedia]: [Monsterhearts on Wikipedia](https://en.wikipedia.org/wiki/Monsterhearts)
 
 [^story-games-online]: [Story Games Online by Ben Robbins](https://arsludi.lamemage.com/index.php/1738/story-games-online-what-ive-learned-so-far/)
 

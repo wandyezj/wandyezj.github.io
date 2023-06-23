@@ -8,9 +8,9 @@ tags: leadership
 
 Many companies have summer intern programs as part of recruitment.
 
-An _intern cohort_ is made up of a group interns and at least two _intern cohort leaders_ who are company employees. A good cohort size is 10-20 interns and two leaders.
-
 An _intern cohort_ provides interns a way to connect with: each other, employees outside of their team, and the surrounding community.
+
+An _intern cohort_ is made up of a group interns and at least two _intern cohort leaders_ who are company employees. A good cohort size is 10-20 interns and two leaders.
 
 Ideally at the end of the summer interns: make lifelong friends, better understand company culture, and have awesome memories to share.
 

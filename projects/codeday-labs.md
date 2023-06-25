@@ -18,7 +18,7 @@ __Team Logistics__
 
 I will be using Email and Teams to communicate with everyone. I have sent you all a teams invite to your email.
 
-I have set up a bare bones skeleton for the project on GitHub [wandyezj/rss-reader](https://github.com/wandyezj/rss-reader/blob/main/docs/about.md). I have sent and invite to your GitHub aliases. Please follow the setup instructions to get things set up and running on your machine. Send me a message on Teams if you encounter any issues!
+I have set up a bare bones skeleton for the project on GitHub [wandyezj/rss-reader](https://github.com/wandyezj/rss-reader/blob/main/docs/about.md). I have sent an invite to your GitHub aliases. Please follow the setup instructions to get things set up and running on your machine. Send me a message on Teams if you encounter any issues!
 
 We need to set a time for our first meeting. I propose the coming Tuesday at 8:30 AM PST, with a backup of next Saturday at 10:00 PST. Please let me know which of these times work for you.
 

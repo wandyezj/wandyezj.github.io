@@ -17,7 +17,7 @@
 
 Hi! I'm Joe, your mentor this summer,
 
-I've been going software for a little bit, I still enjoy it!
+I've been writing software for a little bit, I still enjoy it!
 
 I'm super excited to see what you build this summer!
 
@@ -141,11 +141,11 @@ We're going to walk through the repository together.
 
 - Setup
 - Tools
-    - GitHub
-    - NPM
-    - TypeScript
-    - Webpack
-    - Playwright
+    - GitHub
+    - NPM
+    - TypeScript
+    - Webpack
+    - Playwright
 
 We're going to walk through the standard development loop.
 

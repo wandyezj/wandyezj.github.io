@@ -11,9 +11,7 @@
 
 - Turn on your video! :)
 - Introduce Yourself, Say Hi!
-- What do you do for fun? (besides program :P)
-- What do you hope to take away from this experience?
-- What is important about this experience for you?
+- Let's chat!
 
 ### I'll go first
 
@@ -21,12 +19,7 @@ Hi! I'm Joe, your mentor this summer,
 
 I've been going software for a little bit, I still enjoy it!
 
-I like to get coffee, work on my blog, and volunteer.
-
-What I'm hoping to take away are fun memories of helping y'all grow and seeing what you build.
-
-What's most important for me is that y'all have fun.
-
+I'm super excited to see what you build this summer!
 
 ### Who is next?
 
@@ -34,8 +27,19 @@ What's most important for me is that y'all have fun.
 
 ### Chat a bit
 
+Ask each question one at a time, give everyone a chance to think and write down their response.
 
+- What do you do for fun? (besides program :P)
+- What do you hope to take away from this experience?
+- What is important about this experience for you?
 
+### My Answers
+
+I like to get coffee, work on my blog, and volunteer.
+
+What I'm hoping to take away are fun memories of helping y'all grow and seeing what you build.
+
+What's most important for me is that y'all have fun.
 
 ## Project Overview
 
@@ -83,7 +87,51 @@ Seven weeks will go by faster than you expect! It's important that we move quick
 
 ### Coordination
 
+We will use Teams for all communication.
 
+- [Team Meeting](#team-meeting)
+- [Individual Weekly Writeup](#individual-weekly-writeup)
+- [Individual Meetings](#individual-meetings)
+
+### Team Meeting
+
+- Once a week
+- go over progress
+- share learning
+
+Let's settle on a time:
+
+Times: 8:00 - 9:30
+After: 6:00
+
+- Demo! What is the current state?
+- What's next?
+- Issues?
+- Learning!
+
+## Individual Weekly Writeup
+
+Each Monday, I expect each of you to post an individual writeup. This writeup is intended to help you plan and see your accomplishments, and to help me help you.
+
+This writeup should take you 5-10 minutes to write.
+
+The writeup should have the following sections:
+
+- Done
+    - What did you finish since your last writeup?
+- Now
+    - What are you working on now?
+- Plan
+    - What are you planning to work on next?
+- Issues
+    - Is there anything you are struggling with?
+- Grow
+    - What is one thing you learned last week?
+
+
+## Individual Meetings
+
+If you have questions about anything or want to go over things, I'm happy to set up a 1:1 meeting with you. :)
 
 ## Walkthrough
 
@@ -105,7 +153,6 @@ We're going to walk through the standard development loop.
 - Code Review
 
 All code checked into the repository needs to be code reviewed by at least one other person. We will go over how to do effective code review.
-
 
 ## Questions
 

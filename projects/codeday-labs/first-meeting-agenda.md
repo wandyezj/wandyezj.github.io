@@ -1,7 +1,6 @@
 
-# First Meeting
+# First Meeting Agenda
 
-Agenda:
 
 ## Introductions (3 minutes each)
 
@@ -17,7 +16,7 @@ Agenda:
 - Timeline
 - Coordination
 
-## Development Loop (10 minutes)
+## Walkthrough (10 minutes)
 
 - Setup
 - Tools

@@ -1,5 +1,10 @@
 # CodeDay Labs
 
+- [Welcome Mail](./welcome-mail.md)
+- [First Meeting Agenda](./first-meeting-agenda.md)
+- [First Meeting Presentation](./first-meeting-presentation.md)
+
+
 ## Scratch
 
 Immediate Tasks

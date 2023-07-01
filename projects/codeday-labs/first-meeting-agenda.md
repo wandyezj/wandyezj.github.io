@@ -10,7 +10,7 @@ Agenda:
 - What do you do for fun? (besides program :P)
 - What do you hope to take away from this experience?
 
-## Project Overview (10 minutes)__
+## Project Overview (10 minutes)
 
 - Philosophy
 - Expectations

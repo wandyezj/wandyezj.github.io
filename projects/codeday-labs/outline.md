@@ -34,19 +34,8 @@ Technologies
 
 Schedule
 
-Seven weeks will go by faster than you expect! It's important that we move quickly. This is a rough outline of what we will be doing each week.
-
-Week 1: Introductions, Project Outline, , Research, Planning
-Week 2: Prototype
-Week 3: Build
-Week 4: Build
-Week 5: Polish
-Week 6: Polish & Presentation Outline
-Week 7: Present 
 
 Repository & Organization
-
-All code checked into the repository needs to be code reviewed by at least one other person. We will go over how to do effective code review.
 
 Teams
 

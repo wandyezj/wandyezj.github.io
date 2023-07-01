@@ -22,4 +22,7 @@
         "URLPROJECT",
         "wandyezj"
     ],
+    "markdownlint.config": {
+        "MD036": false
+    },
 }

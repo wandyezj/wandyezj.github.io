@@ -10,7 +10,7 @@ I've played Story Games for a long time and have often wondered, what makes a "S
 
 ## What is a Story Game?
 
-Story Games are a category of storytelling game [^storytelling-game-wikipedia], typically for 2-5 players. Game rules guide how players interact to tell a story, for example, by helping players develop a setting, craft compelling characters, and resolve conflicts.
+Story Games are a category of storytelling game [^storytelling-game-wikipedia], typically for 2-5 players. Game rules guide how players interact to tell a story, for example, by helping players develop a setting, craft compelling characters, and resolve conflicts. Beyond game rules, Story Games are a style of play.
 
 How do I separate __Story Games__ from other storytelling games?
 
@@ -23,18 +23,7 @@ Different Story Games facilitate different kinds of stories:
 - __Kingdom__ explores _communities and how the people in them decide what they stand for_.
 - __Follow__ shapes a story about characters working together to complete a quest.
 
-### Example Story Games
-
-- [Fiasco by Jason Morningstar](https://bullypulpitgames.com/games/fiasco/)
-- [Follow by Ben Robbins](http://www.lamemage.com/follow/)
-- [Microscope by Ben Robbins](http://www.lamemage.com/microscope/)
-- [Kingdom by Ben Robbins](http://www.lamemage.com/kingdom/)
-- [Downfall by Caroline Hobbs](http://lessthanthreegames.com/downfall.html)
-- [Eden by Caroline Hobbs](http://lessthanthreegames.com/eden.html)
-- [One Missed Call by Caroline Hobbs](http://lessthanthreegames.com/one_missed_call.html)
-- The Mind of Margaret by Drew Besse
-- Shock: Social Science Fiction by Joshua A.C. Newman
-- Remember Tomorrow by Gregor Hutton
+[More Example Story Games](#example-story-games)
 
 ## Design Philosophy
 
@@ -123,6 +112,20 @@ For online play:
 ### Exploration
 
 A Story Game should strive to be about more than having fun. Games allow us to explore challenging ideas, learn about the human condition, connect us to others, and enrich our lives.
+
+## Example Story Games
+
+- [Fiasco by Jason Morningstar](https://bullypulpitgames.com/games/fiasco/)
+- [Follow by Ben Robbins](http://www.lamemage.com/follow/)
+- [Microscope by Ben Robbins](http://www.lamemage.com/microscope/)
+- [Kingdom by Ben Robbins](http://www.lamemage.com/kingdom/)
+- [Downfall by Caroline Hobbs](http://lessthanthreegames.com/downfall.html)
+- [Eden by Caroline Hobbs](http://lessthanthreegames.com/eden.html)
+- [One Missed Call by Caroline Hobbs](http://lessthanthreegames.com/one_missed_call.html)
+- The Mind of Margaret by Drew Besse
+- Shock: Social Science Fiction by Joshua A.C. Newman
+- Remember Tomorrow by Gregor Hutton
+
 
 ## Reference
 

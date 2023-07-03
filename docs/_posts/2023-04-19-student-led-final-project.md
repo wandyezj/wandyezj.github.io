@@ -38,7 +38,7 @@ A basic project outline should be done before the projects three weeks starts.
 
 Come up with a few different project ideas.
 
-- Write up project ideas as a 1 sentence goal.
+- Write up each project idea as a 1 sentence goal.
 - Add additional clarifying sentences.
 
 Agree on one project idea with your teacher. Your teacher should make sure the project is something reasonable that can be accomplished in the time available.
@@ -53,7 +53,7 @@ Exploration should take about two weeks.
 
 Carry out the plan.
 
-Some tasks may take longer than expected. If it looks like you will only be able to get to a subset of the tasks, talk to your teacher and adjust the plan.
+Some tasks may take longer than expected. If it appears you will only be able to get to a subset of the tasks, talk to your teacher and adjust the plan.
 
 ### Share
 
@@ -73,9 +73,9 @@ The goal of the presentation is to explain what you did so everyone can learn fr
 
 Student led projects are just that __student led__.
 
-Teachers should act as mentors - providing a framework and allowing students to run their own projects how they want to run them. It's ok if student deviate from the framework or students projects don't work out as planned, that's part of the learning experience.
+Teachers should act as mentors - providing a framework and allowing students to run their own projects how they want to run them. It's ok if students deviate from the framework or students projects don't work out as planned, that's part of the learning experience.
 
-Ways to mentor:
+## Ways to mentor
 
 - Ask questions and have students explain what they are doing - often this is enough for students to realize they may be missing something.
 - Wait for students to ask for help or resources - part of being student led is allowing students to figure things out on their own.

@@ -8,9 +8,9 @@ tags: software architecture api design pattern
 
 The Options Argument Pattern:
 
-- is best used when a function has independent optional arguments
-- uses the last parameter in a function to bundle together optional parameters into an options object
-- allows optional arguments to be specified without having to specify preceding optional arguments
+- Is best used when a function has independent optional arguments.
+- Uses the last parameter in a function to bundle together optional parameters into an options object.
+- Allows optional arguments to be specified without having to specify preceding optional arguments.
 
 An alternative to the Options Argument is Inline Options.
 

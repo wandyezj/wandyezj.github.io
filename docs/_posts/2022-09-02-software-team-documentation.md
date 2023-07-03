@@ -15,7 +15,7 @@ The difference in perspective of people writing the code and the people maintain
 
 Compounding the difficulty:
 
-- Good documentation, like all writing, takes time to write well.
+- Good documentation, like all writing, takes skill and time to write well.
 - When software changes, documentation must also change to present an accurate picture.
 - Documentation must be organized and searchable for answers.
 - Most Engineers are not trained in technical writing.
@@ -54,7 +54,7 @@ Common development scenarios:
 - How is the project organized?
 
 
-In large complex pieces of software, where people update and add new code all the time, it quickly becomes impossible to know all the technical details. What details are important to know? What is the mechanism to keep track of those details? How team facilitate knowledge exchange and coordination?
+In large complex pieces of software, where people update and add new code all the time, it quickly becomes impossible to know all the technical details. What details are important to know? What is the mechanism to keep track of those details? How does a team facilitate knowledge exchange and coordination?
 
 One way to ease finding information is to place it in a consistent place in an consistent format.
 

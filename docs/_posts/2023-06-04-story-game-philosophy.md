@@ -29,11 +29,14 @@ Different Story Games facilitate different kinds of stories:
 
 What design principles should Story Games adhere to?
 
-As a baseline all games should be safe and fun. To adhere to my definition of Story Game the game must have equal narrative control. The rest of the design principals help ease play.
+I see design encompassing the entire Story Game experience - this goes beyond a specific games rules and includes the expectations people have, and the way people interact with each other.
+
+As a baseline all games must be safe and fun. To adhere to my definition of Story Game the game must also have equal narrative control. The rest of the design principals help ease play.
 
 - [Safe](#safe)
 - [Fun](#fun)
 - [Equal Narrative Control](#equal-narrative-control)
+- [Accessible](#accessible)
 - [One-Shot](#one-shot)
 - [Simple Rules](#simple-rules)
 - [Minimal Materials](#minimal-materials)
@@ -74,6 +77,14 @@ This means dividing control of parts of the story among players and giving them 
 This differs from games like _Dungeons & Dragons_[^dnd-wikipedia] or _Monsterhearts_[^monsterhearts-wikipedia] which have DM's or GM's - who have significantly more control over the narrative than other players.
 
 Giving players equal narrative control allows a broader diversity of ideas to emerge, leading to more interesting stories. The point of Story Games is to cooperatively tell stories, not for a single person to dictate the narrative.
+
+### Accessible
+
+A Story Game should be accessible to a wide audience.
+
+Accessible means players with different life experiences and levels of experience can play together safely and have fun.
+
+Targeting Story Games to new players helps expand the Story Game community. A larger Story Game community increased the number of people to play with, and allows more people to have the opportunity to develop and test games with wider audiences.
 
 ### One-Shot
 

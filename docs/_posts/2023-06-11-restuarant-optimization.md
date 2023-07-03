@@ -93,3 +93,8 @@ Provide silverware as needed. Minimize time spent providing silverware.
     - Do not use numbers or random letter combinations, this is hard for customers to remember.
 - Hide any networks customers cannot connect to from discovery.
     - This reduces the chance customers accidentally connect to the wrong wifi and ask staff for help.
+
+## Steady Pace
+
+- Employees should work at a steady pace. Employees should not feel rushed, during peak times or during slow times.
+- Customers should be visibly served at a steady pace. Customers should have an accurate picture about how long they need to wait.

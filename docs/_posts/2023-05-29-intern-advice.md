@@ -18,4 +18,8 @@ A few pieces of advice for interns.
 
 ## Philosophy
 
-Internships can serve as a bridge between school life and work life. Habits set during an internship can ease this transition. Internships are a time to assess what you want to do with your life - you can set new goals for yourself and set yourself on the path to achieve them. School goals are somewhat restricted - life goals are more open ended. Internships offer resources (time, money, and exposure to alternative perspectives) to explore.
+Internships can serve as a bridge between school life and work life. Habits set during an internship can ease this transition.
+
+Internships are a time to assess what you want to do with your life - you can set new goals for yourself and set yourself on the path to achieve them.
+
+School goals are somewhat restricted - life goals are more open ended. Internships offer resources (time, money, and exposure to alternative perspectives) to explore.

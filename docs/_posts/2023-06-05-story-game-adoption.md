@@ -8,17 +8,17 @@ tags: story-games philosophy
 
 Many role playing games have been developed that contain excellent ideas, yet are challenging to play as Story Games.
 
-Often games are adapted by players from experience to make them more suitable for their play. Sometimes players are shocked to discover the way they play is different from the actual written rules.
+Often games are adapted by players from experience to make them more suitable for their play. Sometimes players are shocked to discover the way they play differs from the games written rules.
 
 Changes often include simplifying rules, clarifying rule wording, and adding elements invented since the game was originally written.
 
 I often think it would be neat to distribute adopted versions so more people can enjoy the brilliance of the core game concepts.
 
-Yet, distributing a new version of a game comes with challenges. What principals should be followed when creating and distributing an adopted version?
+Yet, distributing a new version of a game comes with challenges. What principles should be followed when creating and distributing an adopted version?
 
-## Adoption Principals
+## Adoption Principles
 
-These adoption principals are meant to help guide how I adopt of games:
+These adoption principles are meant to help guide how I adopt games:
 
 - [Credit](#credit)
 - [Concept](#concept)

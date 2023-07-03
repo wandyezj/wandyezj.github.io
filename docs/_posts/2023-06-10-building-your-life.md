@@ -21,11 +21,11 @@ Generally, I believe it's a matter of where. Where do you decide to adhere to ot
 
 ## What do I do?
 
-Generally, I prefer to live by my own expectations.
+I prefer to live by my own expectations.
 
-I choose my expectations based on who I want to be and what I want to put into the world.
+I choose my expectations based on who I want to be, and what I want to put into the world.
 
-There is no hiding from myself: when I don't live up to my expectations, I know. Rather than berating myself for my shortcomings, I am motivated to improve.
+There is no hiding from myself: when I don't live up to my expectations, I know. Rather than berate myself for my shortcomings, I am motivated to improve.
 
 ## Deciding
 

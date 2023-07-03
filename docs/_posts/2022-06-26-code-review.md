@@ -4,6 +4,18 @@ title:  "Code Review"
 date:   2022-06-26 12:00:00 -0700
 tags: software
 ---
+
+This post explores some of my thoughts in Code Reviews.
+
+- [Purpose](#purpose)
+- [How can code reviews contribute to code quality?](#how-can-code-reviews-contribute-to-code-quality)
+- [How can code reviews share knowledge?](#how-can-code-reviews-share-knowledge)
+- [Preparing a Change](#preparing-a-change)
+- [Preparing a Review](#preparing-a-review)
+- [Choosing Reviewers](#choosing-reviewers)
+- [Reviewing a Change](#reviewing-a-change)
+- [Errata](#errata)
+
 ## Purpose
 
 - Improve Quality
@@ -17,16 +29,16 @@ People can check design assumptions and check all steps in the process are follo
 
 ### How can code reviews share knowledge?
 
-Code reviews provide a forum to share knowledge.
-The reviewers have a change to understand the specific change.
-The reviewee can learn from others expertise and insight.
-Code reviews can also prompt discussion on team standards, that once decided on can be written up for broader distribution.
+- Code reviews provide a forum to share knowledge.
+- Reviewers have a chance to understand the specific change.
+- Reviewees can learn from others expertise and insight.
+- Code reviews can also prompt discussion on team standards, that once decided on can be written up for broader distribution.
 
 ## Preparing a Change
 
 It's easier to review changes that are: small, focused, and targeted. It's also easier to avoid merge conflicts. Packing multiple disparate changes into the same review makes it harder for reviewers to know what changes contribute to which piece.
 
-Avoid large all at once refactors. It's much easier to review small incremental changes that change code in a auditable way.
+Avoid large all at once refactors. It's easier to review small incremental changes that change code in a auditable way.
 
 ### Preparing a Review
 
@@ -37,34 +49,34 @@ Avoid large all at once refactors. It's much easier to review small incremental 
         - [keep a changelog](https://keepachangelog.com/en/1.0.0/)
         - [Common Changelog](https://common-changelog.org/)
 
-## Who
+## Choosing Reviewers
 
 Prefer a single person, other than the author, be the primary reviewer that signs off on the review. For complex pieces of code where knowledge is split between people, individual people can review the specific pieces they are knowledgeable about. _note_: Multiple reviewers adds significant overhead in explaining the change.
 
 Choose suitable reviewers. The best reviewers are those with in depth experience in the specific technologies being used, and with existing expertise in the codebase. One reviewer who goes in depth into the review is preferable to multiple shallow reviewers. It's best to choose reviewers before the change is made and to include the reviewers in design discussions.
 
-If you are added to a review you don't have time or believe you are qualified for, you should decline the review and explain why.
+If you are added to a review you don't have time or believe you are qualified for, you should decline the review and explain why. If you decline a review, it's nice to provide another person who can review the change in your place.
 
 ## Reviewing a Change
 
-- [ ] start review promptly
+- [ ] Start Promptly
     - promptly means the same day you get the review.
-    - if unavailable to promptly do the review, redirect to another available reviewer, if there is no other appropriate reviewer provide an time frame.
-- [ ] seek context
+    - If you are unavailable to promptly do the review, redirect to another available reviewer, if there is no other appropriate reviewer provide a time frame when you will do the review..
+- [ ] Seek Context
     - What is this change for?
-- [ ] documentation
+- [ ] Documentation
     - Is there a written explanation of the feature others will be able to refer to later outside of the review?
     - Is there a written explanation of the change and how it is implemented?
     - How is the change architected?
-- [ ] architecture
+- [ ] Architecture
     - Does the change fit into the existing architecture?
-- [ ] test
+- [ ] Test
     - What tests offer evidence the change works as designed?
     - What tests help ensure the change will continue to work?
-    - how is the
 
-- Ideally, read code in entirety before leaving comments (unfortunately, most review platforms don't allow draft comments)
-- It can be helpful to clone the branch with the change to poke the code and try it out for yourself
+
+- Ideally, read code in entirety before leaving comments (unfortunately, most review platforms don't allow draft comments). If you need to leave comments to help yourself through the review prefix them with a comment like `comment for personal use`.
+- It can be helpful to clone the branch with the change to poke the code and try it out for yourself.
 - Provide high level feedback early, before moving to nit comments.
 - Ask questions about any changes you don't understand. Before signing off on a review you should understand the code in its entirety.
 
@@ -74,9 +86,9 @@ If you are added to a review you don't have time or believe you are qualified fo
 
 ## Errata
 
-- Code Review is not a substitute for automated tests, which should occur in a pipeline. Code review is a great way to enforce that changes have tests.
+- Code Review is not a substitute for automated tests, which should occur in a pipeline. Code review is a great way to enforce changes have tests. Code Coverage tests are not a substitute for ensuring changes have tests that will ensure the feature continues to work.
 
-- Get reviewed by an experienced person who understands the code.
+- Get code reviewed by an experienced person who understands the code.
 
 - Know who experienced people are, managing team knowledge.
 
@@ -84,7 +96,7 @@ List of all code owners and reviewers, will need to keep the list up to date. Go
 
 Only one requestor of the review and one reviewer, optionally one person who is learning the area. Requestor and learner can be the same person
 
-Requestors goal is to make sure their code is correct
+Requestors goal is to make sure their code is correct.
 
 Reviewers goal is to make sure the code is correct, check for any unknowns and to sign off on the review, check for tests
 
@@ -101,4 +113,4 @@ Requiring multiple sign offs on reviews combined with resetting votes on any cha
 
 When reviews take a long time to close it incentivizes placing a large number of changes in a single review. This makes changes more difficult to understand. To avoid this make reviews quick and easy.
 
-What does sign off on a code review mean?
+What does sign off on a code review mean? Make sure to have a clear definition of what signing off on a review means for everyone on the team.

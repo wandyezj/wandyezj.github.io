@@ -6,7 +6,7 @@ date: 2023-06-04
 tags: story-games philosophy
 ---
 
-I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and design principals.
+I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and design principles.
 
 ## What is a Story Game?
 
@@ -31,7 +31,7 @@ What design principles should Story Games adhere to?
 
 I see design encompassing the entire Story Game experience - this goes beyond a specific games rules and includes the expectations people have, and the way people interact with each other.
 
-As a baseline all games must be safe and fun. To adhere to my definition of Story Game the game must also have equal narrative control. The rest of the design principals help ease play.
+As a baseline all games must be safe and fun. To adhere to my definition of Story Game the game must also have equal narrative control. The rest of the design principles help ease play.
 
 - [Safe](#safe)
 - [Fun](#fun)

@@ -5,11 +5,11 @@ date:   2022-07-14 12:00:00 -0700
 tags: software
 ---
 
-When new software features are implemented they come with an ongoing maintenance cost.
+Each new software feature implemented comes with an ongoing maintenance cost.
 
 The maintenance of software consistently consumes developer resources.
 
-Understanding the maintenance cost is important for determining the lifecycle cost for a feature.
+Understanding a features maintenance cost is important for determining the lifecycle cost for a feature.
 
 It is desireable to understand the lifecycle cost of a feature so it can be planned for and used to assess the financial tradeoffs of a feature.
 
@@ -19,15 +19,15 @@ Change.
 
 ## What causes the need for change?
 
-- Dependencies
-- Security Vulnerabilities
-- Changing Requirements
+- [Dependencies](#dependencies)
+- [Security Vulnerabilities](#security-vulnerabilities)
+- [Changing Requirements](#changing-requirements)
 
 ### Dependencies
 
-Graph of software dependencies
+Graph of software dependencies:
 
-upstream components -> component -> downstream components
+`upstream components -> component -> downstream components`
 
 Change
 
@@ -57,6 +57,7 @@ When people use the software they often begin to better understand their own req
     - Expertise includes knowledge of the specific software stack and tools used to implement the software, as well as knowledge about how the overall system is composed.
 - lack of documentation
 - lack of tests
+    - A lack of tests can cause a change to unknowingly break previous functionality. When existing functionality breaks and is shipped to customers this can cause a fire drill which consumed time to investigate, debug, and fix, that would otherwise go towards development.
 - lack of well specified interfaces
 - complex code
 
@@ -64,9 +65,9 @@ When people use the software they often begin to better understand their own req
 
 Difficulty in predicting:
 
-- usage
-- changes in dependencies
-- future needs
+- [Usage](#usage)
+- [Dependency Changes](#dependency-changes)
+- [Future Needs](#future-needs)
 
 Leads to total costs being hard to predict.
 
@@ -77,7 +78,7 @@ Increasing usage can increase:
 - the number of edge case behaviors encountered.
 - the number of changes people want to adapt the software to their needs.
 
-### Changes in Dependencies
+### Dependency Changes
 
 It can be hard to predict the long term future of dependencies.
 
@@ -95,4 +96,4 @@ What is the cost to adapt the software to these future needs?
 
 ## What can we do to reduce the long term maintenance cost?
 
-
+Build software for long term support and consider the life cycle cost of design and implementation decisions.

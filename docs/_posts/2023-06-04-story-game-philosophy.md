@@ -6,11 +6,11 @@ date: 2023-06-04
 tags: story-games philosophy
 ---
 
-I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and design principals.
+I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and design principles.
 
 ## What is a Story Game?
 
-Story Games are a category of storytelling game [^storytelling-game-wikipedia], typically for 2-5 players. Game rules guide how players interact to tell a story, for example, by helping players develop a setting, craft compelling characters, and resolve conflicts.
+Story Games are a category of storytelling game [^storytelling-game-wikipedia], typically for 2-5 players. Game rules guide how players interact to tell a story, for example, by helping players develop a setting, craft compelling characters, and resolve conflicts. Beyond game rules, Story Games are a style of play.
 
 How do I separate __Story Games__ from other storytelling games?
 
@@ -23,28 +23,20 @@ Different Story Games facilitate different kinds of stories:
 - __Kingdom__ explores _communities and how the people in them decide what they stand for_.
 - __Follow__ shapes a story about characters working together to complete a quest.
 
-### Example Story Games
-
-- [Fiasco by Jason Morningstar](https://bullypulpitgames.com/games/fiasco/)
-- [Follow by Ben Robbins](http://www.lamemage.com/follow/)
-- [Microscope by Ben Robbins](http://www.lamemage.com/microscope/)
-- [Kingdom by Ben Robbins](http://www.lamemage.com/kingdom/)
-- [Downfall by Caroline Hobbs](http://lessthanthreegames.com/downfall.html)
-- [Eden by Caroline Hobbs](http://lessthanthreegames.com/eden.html)
-- [One Missed Call by Caroline Hobbs](http://lessthanthreegames.com/one_missed_call.html)
-- The Mind of Margaret by Drew Besse
-- Shock: Social Science Fiction by Joshua A.C. Newman
-- Remember Tomorrow by Gregor Hutton
+[More Example Story Games](#example-story-games)
 
 ## Design Philosophy
 
 What design principles should Story Games adhere to?
 
-As a baseline all games should be safe and fun. To adhere to my definition of Story Game the game must have equal narrative control. The rest of the design principals help ease play.
+I see design encompassing the entire Story Game experience - this goes beyond a specific games rules and includes the expectations people have, and the way people interact with each other.
+
+As a baseline all games must be safe and fun. To adhere to my definition of Story Game the game must also have equal narrative control. The rest of the design principles help ease play.
 
 - [Safe](#safe)
 - [Fun](#fun)
 - [Equal Narrative Control](#equal-narrative-control)
+- [Accessible](#accessible)
 - [One-Shot](#one-shot)
 - [Simple Rules](#simple-rules)
 - [Minimal Materials](#minimal-materials)
@@ -86,6 +78,14 @@ This differs from games like _Dungeons & Dragons_[^dnd-wikipedia] or _Monsterhea
 
 Giving players equal narrative control allows a broader diversity of ideas to emerge, leading to more interesting stories. The point of Story Games is to cooperatively tell stories, not for a single person to dictate the narrative.
 
+### Accessible
+
+A Story Game should be accessible to a wide audience.
+
+Accessible means players with different life experiences and levels of experience can play together safely and have fun.
+
+Targeting Story Games to new players helps expand the Story Game community. A larger Story Game community increased the number of people to play with, and allows more people to have the opportunity to develop and test games with wider audiences.
+
 ### One-Shot
 
 A Story Game should facilitate one-shot sessions that allow players to learn the game rules and complete a compelling story within four hours.
@@ -123,6 +123,20 @@ For online play:
 ### Exploration
 
 A Story Game should strive to be about more than having fun. Games allow us to explore challenging ideas, learn about the human condition, connect us to others, and enrich our lives.
+
+## Example Story Games
+
+- [Fiasco by Jason Morningstar](https://bullypulpitgames.com/games/fiasco/)
+- [Follow by Ben Robbins](http://www.lamemage.com/follow/)
+- [Microscope by Ben Robbins](http://www.lamemage.com/microscope/)
+- [Kingdom by Ben Robbins](http://www.lamemage.com/kingdom/)
+- [Downfall by Caroline Hobbs](http://lessthanthreegames.com/downfall.html)
+- [Eden by Caroline Hobbs](http://lessthanthreegames.com/eden.html)
+- [One Missed Call by Caroline Hobbs](http://lessthanthreegames.com/one_missed_call.html)
+- The Mind of Margaret by Drew Besse
+- Shock: Social Science Fiction by Joshua A.C. Newman
+- Remember Tomorrow by Gregor Hutton
+
 
 ## Reference
 

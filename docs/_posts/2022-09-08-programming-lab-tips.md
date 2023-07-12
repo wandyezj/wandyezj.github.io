@@ -1,4 +1,9 @@
-# Programming Lab Tips
+---
+layout: post
+title:  "Programming Lab Tips"
+date:   2022-09-08 12:00:00 -0700
+tags: software teaching
+---
 
 A collection of tips for writing programming labs.
 

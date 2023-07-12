@@ -6,8 +6,6 @@ date: 2023-03-26
 tags: software architecture typescript
 ---
 
-
-
 Implications of using TypeScript.
 
 ## Short
@@ -24,8 +22,8 @@ The TypeScript version must be kept updated.
 
 - NPM packages frequently have security vulnerabilities discovered in old package versions that are fixed in new versions but rarely back ported. Patching these package dependencies involves updating them to the latest version.
 
-- If dependency packages are upgraded and use newer TypeScript features than the current TypeScript version used by the package then the TypeScript version of the package also needs to be upgraded.
+- If dependency packages are upgraded and use newer TypeScript features than the current TypeScript version used by the package, then the TypeScript version of the package also needs to be upgraded.
 
-- To keep things simple consistently update the TypeScript version to the latest.
+- To keep things simple, consistently update the TypeScript version to the latest.
 
 [^1]: [TypeScript Blog](https://devblogs.microsoft.com/typescript/)

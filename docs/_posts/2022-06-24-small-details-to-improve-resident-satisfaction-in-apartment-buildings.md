@@ -13,6 +13,9 @@ Adding small details can be quick and inexpensive. Over the long term small deta
 
 A short list of small details:
 
+- Friendly and Responsive Staff
+    - Staff are the face of the buildings management. Residents will interact with staff through email, phone conversations, and in person. Improving staff interactions is one of the most important investments to improving resident satisfaction.
+
 - Holiday decorations
     - It's not necessary to decorate for every holiday, that can be overwhelming for residents. Tasteful decorations for major holidays, like Christmas in the United States, are a nice touch many residents appreciate.
 
@@ -46,3 +49,7 @@ A short list of small details:
 
 - Tatami Mats
     - In buildings with poor noise insulation between floors, it can be beneficial to provide floor coverings (like Tatami Mats) over heavily walked areas in units. Floor covering help keep the noise down. It can also be beneficial to recommend residents talk to their upstairs neighbors and swap phone numbers to help resolve noise complaints without involving apartment staff.
+
+- Handle Community Issues Gracefully
+    - There are circumstances when a building community has issues: Fire, Police Action, Water Outage, Power Outage, Major Maintenance, etc.. In these circumstances it's important to communicate to reassure residents and let them know the actions you are taking to correct the issue, when it will be fixed, and the actions you are taking to prevent future issues.
+    - In the case of major inconvenience to residents where the issue can be blamed on the building design or the building management team, it's important to apologize and make up for the inconvenience to residents. An effective apology will help residents feel better about the community they live in and can help replace a negative memory with a positive one.

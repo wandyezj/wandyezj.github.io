@@ -16,8 +16,7 @@ Software must be trusted by the community it serves. Trust has to be earned from
 
 ### Accessible
 
-Software must be accessible to the community it serves. The community must be able to download and use the software without great hurdles. Accessible software must be easy obtain, use, and learn about. Software must be usable by all potential community members.
-
+Software must be accessible to the community it serves. The community must be able to download and use the software without great hurdles. Accessible software must be easy to obtain, use, and learn about. Software must be usable by all potential community members.
 
 ## Specifics
 

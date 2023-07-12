@@ -22,7 +22,7 @@ if (condition) {
 }
 ```
 
-`note`: Some languages allow the curly braces to be excluded for a single statements. Many style guides recommend that curly braces be used consistently even if there is a single statement. Some reasons include: consistency and prevention of errors when new statements are added.
+`note`: Some languages allow the curly braces to be excluded for a single statements. Many style guides recommend curly braces be used consistently even if there is a single statement. Some reasons include: consistency and prevention of errors when new statements are added.
 
 Example if statement for single conditional statement in: C, C++, JavaScript
 

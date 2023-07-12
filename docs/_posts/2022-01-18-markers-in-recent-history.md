@@ -7,7 +7,9 @@ tags: history
 
 Markers are dates one can use to orient oneself in historical context. Markers should help correlate fundamental technical, social, and economic changes.
 
-- 4 BCE - 30-  [Jesus](https://en.wikipedia.org/wiki/Jesus)
+This set of Markers focuses on the Common Era (CE) scope. These markers are eurocentric since Europe has profoundly impacted nearly every society around the globe.
+
+- 4 BCE - 30 -  [Jesus](https://en.wikipedia.org/wiki/Jesus)
 - 476 - [End of Roman Empire](https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire)
 - 570 - 632 - [Muhammad](https://en.wikipedia.org/wiki/Muhammad)
 - 1492 - [Columbus - Age of Discovery](https://en.wikipedia.org/wiki/Voyages_of_Christopher_Columbus)
@@ -50,6 +52,12 @@ Slavery. Signals significantly changing attitudes about slavery which had existe
 
 _note_ Many people had opposed slavery long before the American Civil War, the American Civil War is simply a highlight of changing attitudes.
 
+_note_ The [United Kingdom's Slavery Abolition Act of 1833](https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833) provided for the gradual abolition of slavery in many parts of the British Empire.
+
+The American Civil War was chosen because the path to war highlights how contentious the issue of slavery was and how tied slavery was into the global economic system. Slavery was so contentions that is caused a massive war, that killed between a half million to a million people.
+
+The American Civil War also highlights many technological innovations of the era including: Mass Production, Repeating Rifles, Iron ships, Submarines, Railroads, Balloons,  Photography, Telegraph, and more.
+
 ### Why the United States Constitutions 19th Amendment?
 
 Women's Suffrage. Signals a change in the power possessed by women.
@@ -60,9 +68,17 @@ The United States was not the first country to allow women to vote. Many Europea
 
 Organization of women began far before the passage of women's suffrage laws. One example is the 1840 Seneca Falls Convention.
 
+### Why the Indian Independence Act?
+
+The Indian Independence Act highlights the legacy of European imperialism and how European ideas shaped a country.
+
+### Why the declaration of the Peoples Republic of China?
+
+The Declaration of the Peoples Republic of China highlights another outcome of imperialism and again how European ideas were adopted and shaped a country.
+
 ### Why Apollo 11?
 
-Cold War. Technological Marvel.
+Cold War. Technological Marvel. Television. Computing.
 
 ### Why iPhone?
 

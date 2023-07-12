@@ -19,7 +19,7 @@ Cooking is about convenience, health, and delight.
 - Use simple recipes so there is less chance of messing up a step.
 - Use forgiving recipes so if you forgot an ingredient it can be added in or if you mess up a step you can recover, or if you cook a little over it is fine.
 - Use the same units (teaspoons, tablespoons, cups, grams) for all measurements.
-- For convenience convert grams to cups, teaspoons, and tablespoons, it
+- For convenience convert grams to cups, teaspoons, and tablespoons. For precision also include grams.
 
 ## Ingredients
 

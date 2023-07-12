@@ -28,7 +28,6 @@ A prioritized list of standard repository features.
 - [Code Review Guidelines](#code-review-guidelines)
 
 
-
 What do these features look like and why have them?
 
 ## Features
@@ -44,7 +43,7 @@ The current standard source control tool is [git](https://en.wikipedia.org/wiki/
 
 ### Integrated Development Environment
 
-An Integrate Development Environment provides many features to ease development. Picking an IDE to build development around is a good way to ease development.
+An Integrate Development Environment (IDE) provides many features to ease development. Picking an IDE to build development around is a good way to ease development.
 
 - IntelliSense
 - Autocomplete
@@ -52,9 +51,11 @@ An Integrate Development Environment provides many features to ease development.
 - Visual Studio
 - Visual Studio Code
 
+Picking a single IDE to for a project to support development makes it easier to set up standard tools.
+
 ### README
 
-`README.md` in the root of the repository that describes the contents, owner, and development process.
+A `README.md` file in the root of the repository that describes the contents, owner, and development process.
 
 This file is important for people to quickly understand the purpose of the repository, who to contact for help, and how to get started with the repository.
 

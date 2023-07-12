@@ -5,7 +5,7 @@ date:   2022-02-15 12:00:00 -0700
 tags: software teams
 ---
 
-The purpose of team activities is team information flow. Education, Coordination, Feedback.
+The purpose of team activities is team information flow: education, coordination, and feedback.
 
 
 Beginning of the Week (Tuesday)
@@ -17,7 +17,7 @@ Beginning of the Week (Tuesday)
 - Warm Up (5 minutes)
 - Announcements (1 minute)
 - Technical Dive (10 minutes)
-- Questions or help, stick around
+- Questions or help, stick around.
 
 End of the Week (Thursday)
 

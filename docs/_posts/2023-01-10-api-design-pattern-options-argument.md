@@ -14,7 +14,7 @@ The Options Argument Pattern:
 
 An alternative to the Options Argument is Inline Options.
 
-The following samples demonstrate the two patterns using a sample function:
+The following samples demonstrate the two patterns using a sample function in TypeScript:
 
 - [Example Options Argument](#example-options-argument)
 - [Example Inline Options](#example-inline-options)
@@ -61,9 +61,8 @@ f("one", "two", undefined, undefined, "three"); // both switchOne and switchTwo 
 f("one", "two", true, true, "three");
 ```
 
-## Conclusion
+## Consider
 
-1. Which option is easier to understand?
+1. Which option is easier to comprehend?
 1. Which option is easier to use?
-1. Which option is easier to extend or modify?
-
+1. Which option is easier to modify?

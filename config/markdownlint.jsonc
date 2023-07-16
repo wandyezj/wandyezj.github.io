@@ -2,15 +2,16 @@
     "MD004": {
         "style": "dash"
     },
+    "MD012": false,
     "MD007": {
         "indent": 4
     },
     "MD013": false,
-    "MD012": false,
     "MD024": { // Only check sibling headings
         "allow_different_nesting": false,
         // Only check sibling headings
         "siblings_only": true
     },
-    "MD028": false
+    "MD028": false,
+    "MD036": false
 }

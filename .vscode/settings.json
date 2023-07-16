@@ -3,7 +3,7 @@
     "editor.guides.bracketPairs":"active",
     
     "markdownlint.config": {
-        "extends": "./config/markdownlint.json"
+        "extends": "./config/markdownlint.jsonc"
     },
 
 }

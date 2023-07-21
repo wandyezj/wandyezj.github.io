@@ -88,7 +88,7 @@ A Story Game should be accessible to a wide audience.
 
 Accessible means players with different life experiences and levels of experience can play together safely and have fun.
 
-Targeting Story Games to new players helps expand the Story Game community. A larger Story Game community increased the number of people to play with, and allows more people to have the opportunity to develop and test games with wider audiences.
+Targeting Story Games to new players helps expand the Story Game community. A larger Story Game community increases the number of people to play with, and allows more people to have the opportunity to develop and test games with wider audiences.
 
 ### One-Shot
 

@@ -50,9 +50,9 @@ Principles:
 
 A Story Game should be safe for players.
 
-A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what makes us uncomfortable until it's in the game.
+A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what content makes us uncomfortable until it's in the game.
 
-Meta rules are available to help [^safety-toolkit] [^x-card], however making sure everyone feels comfortable is ultimately everyone's responsibility[^x-card-insufficiency].
+Meta rules are available to help [^safety-toolkit] [^x-card]; however, ultimately, making sure everyone feels comfortable is everyone's responsibility[^x-card-insufficiency].
 
 ### Fun
 
@@ -63,14 +63,14 @@ Players should walk away every time thinking "that was awesome, let's play again
 There are many ways players can engage for fun:
 
 - Socialize with friends
-- Appreciate others' cool ideas
+- Appreciate others' cool lideas
 - Explore new viewpoints
 - Create compelling emotional drama
 - Philosophical musing
 
-Different players prefer different types of fun. A Story Game should choose the elements of fun to focuses on.
+Different players prefer different types of fun. A Story Game should choose the elements of fun to focus on.
 
-When constructing a game focus on "surrounding the fun" [^surround-the-fun] - strengthen fun elements and remove unenjoyable ones. Playtest the game with many groups and audiences, collect actual play experiences, and revise the game to further surround the fun.
+When constructing a game, focus on "surrounding the fun" [^surround-the-fun] - strengthen fun elements and remove unenjoyable ones. Playtest the game with many groups and audiences, collect actual play experiences, and revise the game to further surround the fun.
 
 ### Equal Narrative Control
 

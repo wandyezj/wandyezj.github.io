@@ -38,14 +38,16 @@ A basic project outline should be done before the projects three weeks starts.
 
 Come up with a few different project ideas.
 
-- Write up each project idea as a 1 sentence goal.
+For each project idea:
+
+- Write up the idea as a 1 sentence goal.
 - Add additional clarifying sentences.
 
-Agree on one project idea with your teacher. Your teacher should make sure the project is something reasonable that can be accomplished in the time available.
+Agree on one project idea with your mentor. Your mentor should help you ensure the project is something reasonable that can be accomplished in the time available.
 
 Write up a more detailed plan. Investigate as needed. Break the project into more specific tasks and estimate the time each will take.
 
-Have your teacher review the more detailed plan and provide comments, and adjust the plan accordingly.
+Have your mentor review the more detailed plan and provide comments, and adjust the plan accordingly.
 
 ### Explore
 
@@ -53,7 +55,7 @@ Exploration should take about two weeks.
 
 Carry out the plan.
 
-Some tasks may take longer than expected. If it appears you will only be able to get to a subset of the tasks, talk to your teacher and adjust the plan.
+Some tasks may take longer than expected. If it appears you will only be able to get to a subset of the tasks, talk to your mentor and adjust the plan.
 
 ### Share
 
@@ -73,7 +75,7 @@ The goal of the presentation is to explain what you did so everyone can learn fr
 
 Student led projects are just that __student led__.
 
-Teachers should act as mentors - providing a framework and allowing students to run their own projects how they want to run them. It's ok if students deviate from the framework or students projects don't work out as planned, that's part of the learning experience.
+Mentors provide a framework and allow students to run their projects how they want to run them. It's ok if students deviate from the framework or students projects don't work out as planned, that's part of the learning experience.
 
 ## Ways to mentor
 

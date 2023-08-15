@@ -40,3 +40,34 @@ To prevent spamming the Open Library API it should only be called upon request, 
 https://en.wikipedia.org/wiki/International_Standard_Book_Number
 
 [NPR Top 100 Science Fiction](https://www.npr.org/2011/08/11/139085843/your-picks-top-100-science-fiction-fantasy-books)
+
+
+## Essays
+
+https://www.scattered-thoughts.net/writing/against-sql/
+
+https://www.cs.tufts.edu/~nr/cs257/archive/matthias-felleisen/expressive-as-published.pdf
+
+https://langdev.stackexchange.com/questions/2015/how-can-we-compare-expressive-power-between-two-turing-complete-languages
+
+
+## TypeScript
+
+[NPM package aliases](https://github.com/npm/cli/pull/3) 
+
+```text
+"dependencies": {
+    "foo-v3": "foo@3",
+    "foo-v4": "foo@4"
+}
+
+You can also refactor your codebase to update every reference to foo to foo-v3, and then do something like this: 
+
+"dependencies": {
+    "foo-old": "foo@^3",
+    "foo": "^4.0.3"
+}
+```
+
+
+[Pipeline Caching](https://learn.microsoft.com/en-us/azure/devops/pipelines/release/caching?view=azure-devops#nodejsnpm)

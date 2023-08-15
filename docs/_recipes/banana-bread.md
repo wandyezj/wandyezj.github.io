@@ -42,3 +42,17 @@
 ## Notes
 
 - can cut the maple syrup and honey to a quarter cup by adding another banana
+
+## Revised Ratios
+
+- 5 mashed ripe bananas
+- 1/3 cup (75 grams) avocado oil
+- 4 eggs
+- 1 teaspoon baking soda
+- 1 teaspoon vanilla extract
+- 1/2 teaspoon salt
+- 1 tablespoon ground cinnamon
+- 1 teaspoon ground allspice
+- 2 cups (220 grams) whole wheat flour
+- 1/2 cup oat flour
+- 1 cup chopped walnuts or pecans

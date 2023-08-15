@@ -1,28 +1,9 @@
 {
     "editor.bracketPairColorization.enabled": true,
     "editor.guides.bracketPairs":"active",
-    "cSpell.words": [
-        "basmati",
-        "Biryani",
-        "Biscotti",
-        "compostable",
-        "cremini",
-        "deglaze",
-        "Haikus",
-        "incentivizes",
-        "Legos",
-        "likert",
-        "Monsterhearts",
-        "Oaty",
-        "performant",
-        "Playtest",
-        "sandboxed",
-        "trialability",
-        "URLFORK",
-        "URLPROJECT",
-        "wandyezj"
-    ],
+    
     "markdownlint.config": {
-        "MD036": false
+        "extends": "./config/markdownlint.jsonc"
     },
+
 }

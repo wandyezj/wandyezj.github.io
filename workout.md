@@ -1,5 +1,7 @@
 # Workout
 
+Yoga
+
 Weights
 
 arms

@@ -90,6 +90,10 @@ collections:
     # landfill - if any part of the product must go in the landfill
     disposal: ""
     review: ""
+  thoughts:
+    output: true
+    title: ""
+    tags: []
 
 
 defaults:
@@ -102,4 +106,9 @@ defaults:
     scope:
       type: products # a collection in your site, in plural form
     values:
+      layout: post
+  -
+    scope:
+      type: thoughts
+    value:
       layout: post

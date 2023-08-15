@@ -70,7 +70,7 @@ Seasonal
 
 - cherries
 - strawberries
-- watermellon (cut into slices)
+- watermelon (cut into slices)
 
 ### Candy
 

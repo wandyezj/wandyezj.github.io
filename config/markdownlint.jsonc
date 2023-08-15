@@ -1,0 +1,42 @@
+{
+    // MD004 - Unordered list style
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md004.md
+    "MD004": {
+        "style": "dash"
+    },
+    
+    // MD012 - Multiple consecutive blank lines
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md012.md
+    "MD012": false,
+
+    // MD007 - Unordered list indentation
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md007.md
+    "MD007": {
+        "indent": 4
+    },
+
+    // MD013 - Line length
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md013.md
+    "MD013": false,
+
+    // MD024 - Multiple headings with the same content
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md024.md
+    "MD024": {
+        // Only check sibling headings
+        "allow_different_nesting": false,
+        // Only check sibling headings
+        "siblings_only": true
+    },
+
+    // MD028 - Blank line inside blockquote
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md028.md
+    "MD028": false,
+
+    // MD036 - Emphasis used instead of a heading
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md036.md
+    "MD036": false,
+
+    // MD041 - First line in a file should be a top-level heading
+    // https://github.com/DavidAnson/markdownlint/blob/main/doc/md041.md
+    "MD041": false
+}

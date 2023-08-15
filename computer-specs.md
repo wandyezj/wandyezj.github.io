@@ -1,6 +1,6 @@
 # Computer Technical Specs
 
-[PC Part Picker Link](https://pcpartpicker.com/list/pXz8Bj)
+[PC Part Picker Link](https://pcpartpicker.com/list/HdJ7rD)
 
 ## Case
 
@@ -48,13 +48,17 @@
 
 ## Storage
 
-Samsung SSD 850 EVO 500GB X 3
+Samsung SSD 850 EVO 500GB X 2
 
-> SAMSUNG 850 EVO 2.5" 500GB SATA III 32 layer 3D V-NAND Internal Solid State Drive (SSD) MZ-75E500B/AM
+> Samsung 850 EVO 2.5 Inch 500GB SATA III 32 layer 3D V-NAND Internal Solid State Drive (SSD) MZ-75E500B/AM
 
 Samsung SSD 860 EVO 2TB X 1
 
 > Samsung SSD 860 EVO 2TB 2.5 Inch SATA III Internal SSD (MZ-76E2T0B/AM)
+
+Samsung SSD 870 EVO 4TB X 1
+
+> Samsung 870 EVO 4TB 2.5 Inch SATA III Internal SSD (MZ-77E4T0B/AM)
 
 Samsung SSD 990 Pro 1TB X 1
 
@@ -116,8 +120,6 @@ Samsung SSD 990 Pro 1TB X 1
 [Bose Noise Canceling Headphones 700](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_black)
 
 [Microsoft LifeCam HD-3000](https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011)
-
-[ASUS NVIDIA GeForce GTX 1060 6 GB](https://www.asus.com/us/Graphics-Cards/TURBO-GTX1060-6G/)
 
 [Microsoft Sculpt Ergonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)
 

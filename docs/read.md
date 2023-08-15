@@ -1,7 +1,6 @@
 ---
 layout: page
 ---
-# Read
 
 ## Academic Books
 

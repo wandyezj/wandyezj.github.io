@@ -6,18 +6,20 @@ date: 2023-06-04
 tags: story-games philosophy
 ---
 
-I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and design principles.
+I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and my principles  of design.
 
 ## What is a Story Game?
 
-Story Games are a category of storytelling game [^storytelling-game-wikipedia], typically for 2-5 players. Game rules guide how players interact to tell a story, for example, by helping players develop a setting, craft compelling characters, and resolve conflicts. Beyond game rules, Story Games are a style of play.
+Story Games are a category of storytelling game [^storytelling-game-wikipedia], typically for 2-5 players. Game rules guide how players interact to tell a story, for example, by helping: players develop a setting, craft compelling characters, and resolve conflicts. Beyond game rules, Story Games are a style of play.
 
 How do I separate __Story Games__ from other storytelling games?
 
 - A focus on cooperative story telling where games rules give all players _equal narrative control_.
 - A player’s ability to affect what happens in the game is not dependent on a their character’s fictional ability to do those things. [^arsludi-defining-story-games]
 
-Different Story Games facilitate different kinds of stories:
+Different Story Games facilitate different kinds of stories.
+
+Example Story Games:
 
 - __Microscope__ focuses on telling an _epic history_.
 - __Kingdom__ explores _communities and how the people in them decide what they stand for_.
@@ -29,9 +31,11 @@ Different Story Games facilitate different kinds of stories:
 
 What design principles should Story Games adhere to?
 
-I see design encompassing the entire Story Game experience - this goes beyond a specific games rules and includes the expectations people have, and the way people interact with each other.
+I see design encompassing the entire Story Game experience - this goes beyond a specific game's rules and includes the expectations people have, and the way people interact with each other.
 
-As a baseline all games must be safe and fun. To adhere to my definition of Story Game the game must also have equal narrative control. The rest of the design principles help ease play.
+As a baseline all games must be safe and fun. To adhere to my definition of Story Game, the game must also have equal narrative control. The rest of the design principles help ease play.
+
+Principles:
 
 - [Safe](#safe)
 - [Fun](#fun)
@@ -46,9 +50,9 @@ As a baseline all games must be safe and fun. To adhere to my definition of Stor
 
 A Story Game should be safe for players.
 
-A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what makes us uncomfortable until it's in the game.
+A Story Game session consists of people telling a story together. As a story unfolds it's possible for content to be introduced that makes someone feel uncomfortable or unsafe. Everyone has different limits, and often we don't know what content makes us uncomfortable until it's in the game.
 
-Meta rules are available to help [^safety-toolkit] [^x-card], however making sure everyone feels comfortable is ultimately everyone's responsibility[^x-card-insufficiency].
+Meta rules are available to help [^safety-toolkit] [^x-card]; however, ultimately, making sure everyone feels comfortable is everyone's responsibility[^x-card-insufficiency].
 
 ### Fun
 
@@ -59,14 +63,14 @@ Players should walk away every time thinking "that was awesome, let's play again
 There are many ways players can engage for fun:
 
 - Socialize with friends
-- Appreciate others' cool ideas
+- Appreciate others' cool lideas
 - Explore new viewpoints
 - Create compelling emotional drama
 - Philosophical musing
 
-Different players prefer different types of fun. A Story Game should choose the elements of fun to focuses on.
+Different players prefer different types of fun. A Story Game should choose the elements of fun to focus on.
 
-When constructing a game focus on "surrounding the fun" [^surround-the-fun] - strengthen fun elements and remove unenjoyable ones. Playtest the game with many groups and audiences, collect actual play experiences, and revise the game to further surround the fun.
+When constructing a game, focus on "surrounding the fun" [^surround-the-fun] - strengthen fun elements and remove unenjoyable ones. Playtest the game with many groups and audiences, collect actual play experiences, and revise the game to further surround the fun.
 
 ### Equal Narrative Control
 
@@ -84,7 +88,7 @@ A Story Game should be accessible to a wide audience.
 
 Accessible means players with different life experiences and levels of experience can play together safely and have fun.
 
-Targeting Story Games to new players helps expand the Story Game community. A larger Story Game community increased the number of people to play with, and allows more people to have the opportunity to develop and test games with wider audiences.
+Targeting Story Games to new players helps expand the Story Game community. A larger Story Game community increases the number of people to play with, and allows more people to have the opportunity to develop and test games with wider audiences.
 
 ### One-Shot
 

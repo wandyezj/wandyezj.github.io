@@ -57,6 +57,10 @@ I always forget the git commands to set up a Pull Request to Open Source project
 
 ## Convenient Git Commands
 
+### Delete local branch
+
+> git branch -d NAME
+
 ### Delete remote branch
 
 > git push origin --delete NAME
@@ -89,3 +93,69 @@ revert to the specific commit specify with `commithash`
 
 push the change to the remote
 > git push --force
+
+
+## Merge another repository and preserve history
+
+These commands merge the remote repositories changes into the existing repository and preserve history.
+
+> git checkout main
+
+> git remote add remoteother url
+
+> git fetch remoteother
+
+> git merge remoteother/main --allow-unrelated-histories
+
+> git remote rm remoteother
+
+Use git mv to move files into position. This works better when there is less in the history.
+
+When merging the pull request make that the merge preserves all commits.
+
+
+## Typical Flow
+
+Typical flow for making changes to a project when you can create a branch and push to the project directly.
+
+### Create the topic branch
+
+> git checkout main
+
+Make sure you are on the main branch
+
+> git status
+
+Make sure main branch is updated with latest
+
+> git fetch
+
+> git pull
+
+Create the topic branch locally and push to remote
+
+> git checkout -b branch-name
+
+> git push
+
+### Commit changes
+
+> git add *
+
+> git commit -am "message"
+
+> git push
+
+### Merge changes
+
+> git fetch
+
+> git merge origin/main
+
+> git push
+
+### Complete Pull Request
+
+### Delete local branch
+
+> git branch -D branch-name

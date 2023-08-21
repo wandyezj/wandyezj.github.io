@@ -35,3 +35,4 @@
 
 - can double or triple the ingredients for a bigger loaf (Recommend making a quadruple loaf)
 - can cut up into thin slices and freeze for up to a month and toast slices as needed
+- can add thinly sliced Mezzetta sliced greek kalamata olives for extra flavor

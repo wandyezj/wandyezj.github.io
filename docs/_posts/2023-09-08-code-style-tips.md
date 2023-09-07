@@ -46,4 +46,10 @@ const ABCDThing = "a";
 ```
 
 
+## Enable TypeScript Rules
 
+[No Property Access From Index Signature](https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature)
+
+- any is forbidden
+
+[TypeScript](https://typescript-eslint.io/rules/?supported-rules=recommended-typeInformation)

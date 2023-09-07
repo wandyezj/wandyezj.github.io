@@ -45,6 +45,27 @@ const abcdThing = "a";
 const ABCDThing = "a";
 ```
 
+## Place default last in a switch statement
+
+```typescript
+// Good
+switch(item) {
+  case "a":
+    break;
+  default:
+    break;
+}
+```
+
+```typescript
+// Avoid
+switch(item) {
+  default:
+    break;
+  case "a":
+    break;
+}
+```
 
 ## Enable TypeScript Rules
 

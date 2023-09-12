@@ -7,11 +7,12 @@ tags: software
 
 Some basic software vocabulary with links to wikipedia.
 
+[TOC]
+
 ## Ideas
 
 - abstraction
     - the process of removing details from something in order to obtain a more general representation
-
 
 ## Programs
 
@@ -34,7 +35,6 @@ Some basic software vocabulary with links to wikipedia.
 
 - modularity
     - The subdivision of a computer program into separate subprograms
-
 
 ## Code
 
@@ -93,7 +93,7 @@ Some basic software vocabulary with links to wikipedia.
     - [Wikipedia - software testing](https://en.wikipedia.org/wiki/Software_testing)
 
 - Minimum Viable Product (MVP)
-    -  a version of a product with just enough features to be usable by early customers who can then provide feedback for future product development.
+    - a version of a product with just enough features to be usable by early customers who can then provide feedback for future product development.
     - [Wikipedia - minimum viable product](https://en.wikipedia.org/wiki/Minimum_viable_product)
 
 ## Errors
@@ -146,18 +146,43 @@ scope
 - sequencing
     - The order that the steps of an algorithm are given.
 - selection
-    - The use of a boolean condition to determine which of two parts of an algorithm is used (Ex. conditionals) 
+    - The use of a boolean condition to determine which of two parts of an algorithm is used (Ex. conditionals)
 - iteration
-    - When a part of an algorithm is repeated, either for a certain number of times or until a condition is met. (Ex. for loops) 
+    - When a part of an algorithm is repeated, either for a certain number of times or until a condition is met. (Ex. for loops)
 
-## Boolean Comparisions
+## Types
 
-(x < y)	is x less than y?
-(x <= y)	is x less than or equal to y?
-(x == y)	is x equal to y?
-(x != y)	is x not equal to y?
-(x > y)	is x greater than y?
-(x >= y)	is x greater than or equal to y?
+- integer
+    - Numbers such as 42, 0, and -5
+    - [Wikipedia - Integer](https://en.wikipedia.org/wiki/Integer)
+- float
+    - Numbers with a decimal point, such as 1.2, -5.8, and 3.0
+    - [Wikipedia - Floating-point arithmetic](https://en.wikipedia.org/wiki/Floating-point_arithmetic)
+- string
+    - Characters within single or double quotes, such as 'hello' and "this works, too!"
+    - [Wikipedia - String](https://en.wikipedia.org/wiki/String_(computer_science))
+- boolean
+    - One of two values: True or False
+    - [Wikipedia - Boolean data type](https://en.wikipedia.org/wiki/Boolean_data_type)
+- list
+    - An ordered sequence of stored values
+    - [Wikipedia - List (abstract data type)](https://en.wikipedia.org/wiki/List_(abstract_data_type))
+
+## Strings
+
+- string
+    - A string is an ordered sequence of characters.
+- substring
+    - A substring is a string that is a part of an existing string.
+
+## Boolean Comparisons
+
+(x < y)     is x less than y?
+(x <= y)    is x less than or equal to y?
+(x == y)    is x equal to y?
+(x != y)    is x not equal to y?
+(x > y)     is x greater than y?
+(x >= y)    is x greater than or equal to y?
 
 - Inclusive or
     - either of the or conditions
@@ -168,26 +193,6 @@ scope
     - use and, or, and not
 - nested conditionals
     - nesting if statements inside other if statements
-
-## Types
-
-- integers
-    - Numbers such as 42, 0, and -5
-- floats
-    - Numbers with a decimal point, such as 1.2, -5.8, and 3.0
-- strings
-    - Characters within single or double quotes, such as 'hello' and "this works, too!"
-- booleans
-    - One of two values: True or False
-- lists
-    - An ordered sequence of stored values
-
-## Strings
-
-- string
-    - A string is an ordered sequence of characters.
-- substring
-    - A substring is a string that is a part of an existing string.
 
 
 ## Python
@@ -206,7 +211,7 @@ IF(condition)
 }
 ```
 
-```
+```text
 IF(condition)
 {
   first conditional body
@@ -216,7 +221,7 @@ IF(condition)
 }
 ```
 
-```
+```text
 PROCEDURE procName(parameter1, parameter2, …)
 {
   procedure body

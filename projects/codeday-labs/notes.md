@@ -20,7 +20,27 @@
 - Ask that people install teams on their phone
 - Have a backup application to video chat and make sure it's installed.
 - Give out phone number in case of needing to contact?
+    - Ask for phone numbers
+- Back up meeting with skype
+-
 
 ## Other
 
 - worry less about automated testing given limited time frame of project
+- have a 30 minute 1:1 with each person each week, helpful to not just talk about the project
+    - explain what the time can be used for, bugs, general questions
+- have a one hour team meeting 30 minutes for everyone and then 30 minutes or project management
+    - make sure there are clear deliverables each week
+    - consistent meeting times
+- provide learning resources for each part of the project
+    - explain that there is a fast learning curve
+    - explain how estimations can be tricky - usually takes longer than you think so start early.
+    - provide Tutorials for
+        - GitHub
+        - GitHub Pull Requests
+        - TypeScript language onboarding
+        - Web Resources
+        - Building out a video
+    - explain testing infrastructure
+- Retrospective meeting at the end of the project
+- Overview of general repository structure

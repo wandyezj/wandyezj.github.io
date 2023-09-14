@@ -56,6 +56,20 @@ July - September - Blackberry / Blueberry
 August - October - Apples
 
 
+## Camping
+
+March - Scenic Beach State Park
+
+April - Deception Pass
+
+May - Lake Chelan
+
+Summer - Bike Camping - Fay Bainbridge Park
+
+Winter - Camano Island State Park - cafe
+
+
+
 
 ## Event Sources
 

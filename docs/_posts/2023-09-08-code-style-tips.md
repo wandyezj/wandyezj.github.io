@@ -67,6 +67,40 @@ switch(item) {
 }
 ```
 
+## Define functions before use
+
+This helps avoid issues where a function accesses a constant that is defined after the function call, since this results in an error.
+
+```typescript
+// Good
+function f() {
+}
+
+f();
+```
+
+```typescript
+// Avoid
+f();
+
+function f() {
+}
+```
+
+```typescript
+f(); // Error: Cannot access 'x' before initialization 
+
+const x = "x";
+
+function f() {
+  console.log(x);
+}
+```
+
+
+
+
+
 ## Enable TypeScript Rules
 
 [No Property Access From Index Signature](https://www.typescriptlang.org/tsconfig#noPropertyAccessFromIndexSignature)

@@ -98,8 +98,9 @@ function f() {
 ```
 
 
+## Automatically run pipelines against any dependency changes
 
-
+Pipelines should be automatically run against PRs that impact their dependencies. This helps ensure that the pipeline is passes for any checked in changes and continues to work.
 
 ## Enable TypeScript Rules
 

@@ -197,6 +197,8 @@ scope
 
 ## Python
 
+tip: make sure that the file extension is `.py`
+
 `int()`
     - converts value to integer
 `str()`

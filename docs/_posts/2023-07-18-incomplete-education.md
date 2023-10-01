@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "An Incomplete Education"
-date: 2023-07-18
- 00:00:00 -0700
+date: 2023-07-18 00:00:00 -0700
 tags: reflection
 ---
 

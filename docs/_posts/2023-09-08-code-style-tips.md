@@ -1,8 +1,7 @@
 ---
 layout: post
 title: "Code Style Tips"
-date: 2023-09-08
- 00:00:00 -0700
+date: 2023-09-08 00:00:00 -0700
 tags: code
 ---
 

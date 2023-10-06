@@ -1,5 +1,12 @@
 # Ideas
 
+
+## Custom Card Decks and Dealing to hands
+
+collaborative and online so everyone can see and play their cards
+
+Ability to load a deck and randomize it.
+
 ## Twitter Bot - Schedule Post
 
 Run on a local users machine

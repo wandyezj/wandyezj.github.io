@@ -15,6 +15,8 @@ A collection of tips for writing programming labs.
 
 ## Tips
 
+- Explain the purpose of the lab and how it will help the student.
+
 - Have clear done criteria
     - Explain the goal of the lab and the conditions under which a student should move on.
     - Lab tasks written in an open ended way can lead students to spend time on them beyond what is useful for their learning. Students should know when to get help and when to move on.
@@ -40,9 +42,9 @@ A collection of tips for writing programming labs.
 - If using Markdown avoid adding HTML tags to the markdown as not all markdown readers render it properly.
     - Instead of color, apply bold and italic to draw attention.
 
-- Do __NOT__ use the term `Whole Number`
-    - The term [Whole Number](https://en.wikipedia.org/wiki/Whole_number) is ambiguous.
-    - Instead use the term `Natural Number` or `Integer` depending on which you mean.
+- Use the term `Natural Number` or `Integer` depending on which you mean.
+    - Do __NOT__ use the term `Whole Number`
+        - The term [Whole Number](https://en.wikipedia.org/wiki/Whole_number) is ambiguous.
 
 - Teach [formatting string literals](https://docs.python.org/3/tutorial/inputoutput.html#formatted-string-literals) so students don't was time doing a bunch of plusses.
 
@@ -142,3 +144,37 @@ A collection of tips for writing programming labs.
     - Explaining code to peers and answering peer questions reinforces learning and builds explanation skills.
     - Seeing how other students approach can help students gain insights on their own practice.
     - Remember, there are many approaches, explain things in terms of tradeoffs.
+
+## Lab Markdown
+
+Consistently use Markdown tags to mean specific things
+
+- Use the same layout for all projects.
+    - This allows students to focus more time on the contents.
+- Use `-` for all bullets.
+- Use `_` for italic.
+- Use  `__` for bold.
+- Use backtick `` ` `` for referring to literal code inline. All code keywords, function names, method names, variable names when referring to literal code. Use backtick for specific pieces of code inline as well.
+- Place spaces between headers and content
+    No, Bad.
+
+    ```md
+    content
+    # Header
+    content
+    ```
+
+    Yes, Good!
+
+    ```md
+    content
+
+    # header
+
+    content
+    ```
+
+- Video Links use youtube `[]()`, Optional: place a picture of the video over the link.
+- Use code fences to display all code with the syntax.
+- Use the phrase `answer the following questions` for questions, and use numbers to refer to each question.
+

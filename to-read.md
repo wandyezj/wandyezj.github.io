@@ -18,6 +18,10 @@ https://en.wikipedia.org/wiki/Sequential_consistency
 
 https://github.com/microsoft/FluidFramework/blob/main/docs/content/docs/data-structures/sequences.md
 
+https://omegaup.com/
+
+http://usaco.org/
+
 https://daringfireball.net/projects/markdown/syntax#code
 
 Accessibility Standards

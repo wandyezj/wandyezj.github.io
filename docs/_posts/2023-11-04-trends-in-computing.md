@@ -78,7 +78,7 @@ Key Tech companies
 - Amazon
 - Apple
 
-I don't think it's likely a new big tech company will emerge. I think it's more likely (although still unlikely) one of these companies could stumble and become less significant. In my opinion Apple is the most likely to stumble as it is overly reliant on a single product line in which it has a minority market share, is too engrossed in its own ecosystem, and does not work well with it's competitors. The main think keeping Apple alive is the incompetence of it's competitors management teams, and it's brand reputation. As Apples competitors realign and it's main product line becomes a commodity, Apple will need to find new market segments - however this will be a difficult transition since it is a company designed to produce and align on a single product. That said, Apple has a ton of cash and can choose which new market segments to enter - it will just be difficult given it's focus on a single product line.
+I don't think it is likely a new big tech company will emerge. I think it is more likely (although still unlikely) one of these companies could stumble and become less significant. In my opinion Apple is the most likely to stumble as it is overly reliant on a single product line in which it has a minority market share, is too engrossed in its own ecosystem, and does not work well with its competitors. The main think keeping Apple alive is the incompetence of its competitors management teams, and its brand reputation. As Apples competitors realign and its main product line becomes a commodity, Apple will need to find new market segments - however this will be a difficult transition since it is a company designed to produce and align on a single product. That said, Apple has a ton of cash and can choose which new market segments to enter - it will just be difficult given its focus on a single product line.
 
 Each of these companies plays in both consumer and business segments and has developed their own membership programs that make it easy to use their services. The compatibility between ecosystems isn't so great as nearly all assets are stored in incompatible clouds.
 
@@ -122,11 +122,11 @@ Each of these companies is massive and can leverage more capital than smaller co
 
 ### Competition
 
-As these large companies dominant market positions there is increasing pressure (from smaller companies and each other) on governments to pass laws that limit 'anti-competitive' practices and curb abuse.
+As large companies dominate market positions, there is increasing pressure (from smaller companies and each other) on governments to pass laws that limit 'anti-competitive' practices and curb abuse.
 
 Potential abuses of market position:
 
-_note_: I use _potential_ because it's ultimately public opinion that determines what constitutes 'abuse'.
+_note_: I use _potential_ because it is ultimately public opinion that determines what constitutes 'abuse'.
 
 - Requiring customers to purchase everything from a single App Store, and not allowing 3rd party app stores.
     - Apple App Store.
@@ -135,37 +135,34 @@ _note_: I use _potential_ because it's ultimately public opinion that determines
     - Apple App Store, and Google App Store
 - Using market power to enforce restrictive contracts
     - Google forced bundling of Play Services with Android
-    - Amazon restrictive contracts on sellers between business segments - requiring warehouse usage fees.
-    - Amazon not allowing sellers to charge less on other sites.
+    - Amazon restricted contracts on sellers between business segments, requiring warehouse usage fees.
+    - Amazon did not allow sellers to charge less on other sites.
 - Locking out competitors
-    - Amazon not allow Walmart to sell their products through Amazon.
+    - Amazon did not allow Walmart to sell their products through Amazon.
 - Monopolizing defaults
-    - Apple in phone advertising of their own services.
-    - Google purchasing of all major browser defaults.
-- Creation of 1st party internal APIs that give an advantage to an unrelated business segments.
-- Deliberately making a competitors solution worse through incompatibility to increase market share.
-    - A key example here is iMessage, which is deliberately incompatible with Android, in order to degrade the Android experience with iPhone. Per Tim Cook (CEO of Apple), the solution to this deliberately introduced incompatibility is to buy an iPhone.
+    - Apple uses its hardware/software platform to advertise its own services.
+    - Google purchased the right to be the default search engine in all major browsers.
+- Creation of 1st party internal APIs that give an advantage to unrelated business segments.
+- Deliberately making a competitor's solution worse through incompatibility to increase market share.
+    - Apple iMessage is deliberately incompatible with Android in order to degrade the Android experience with iPhone. Per Tim Cook (CEO of Apple), the solution to this deliberately introduced incompatibility is to buy an iPhone.
 
-Competition can be increased by enforcing compatibility and allow 3rd parties to develop solutions that hook into existing solutions. In the case where monopolies naturally exist, it makes sense to regulate.
+Competition can be increased by enforcing compatibility and allow 3rd parties to develop solutions that hook into dominant platforms. In the case where monopolies naturally exist, it makes sense to regulate.
 
-Breaking up large tech companies probably won't happen. There are significant benefits to the large tech companies for businesses and consumers. Another reason these companies are unlikely to be broken up is they are all American companies and it's easier for the government to keep track of and regulate big companies verses smaller ones.
+Breaking up large tech companies probably won't happen. There are significant benefits large tech companies provide for businesses and consumers. Additionally, they are all American companies and it is easier for the government to track and regulate big companies verses many smaller ones.
 
-If the playing field were leveled, smaller niche companies could force large companies to invest further in their own services to stay competitive. However, Ultimately there is diminishing returns for the smaller companies since at some point the larger companies have the capability to invest massive resources to implement any innovative feature given enough time and they have the ability to run their services cheaper thanks to hardware at scale.
+If the playing field were leveled, smaller niche companies could force large companies to invest further in their own services to stay competitive. However, it is not possible to level the playing field entirely. Large companies will always retain the advantage of scale, especially with the more capital-intensive parts of the business, like hardware. They can use those excess profits to invest in research and development for future products, while knowing that not all efforts lead to successes. They can also choose to buy out the competition, or invest the extra funds in copying the successful features of other companies. Such risks and rewards are inaccessible to smaller players.
 
 ### Security
 
-The demand for increased security in software applications increases the cost to develop software and places a continual cost on companies to keep software secure. As software is increasingly used for everything it is a prime target for criminals and state actors. Increasing attacks prompt concern by the public and thus prompt government action. Consumers and businesses will want to get their software from companies they can trust with their security. This creates a large advantage for large tech companies that can afford to develop extensive security processes and practices.
-
-
-
+The demand for increased security in software applications increases the cost to develop and maintain software. As software is increasingly used for everything, it is a prime target for criminals and state actors. Increasing attacks prompt concern by the public and thus prompt government action. Consumers and businesses will want to get their software from companies they feel are secure. This creates a large advantage for large tech companies that can afford to develop extensive security processes and practices and have the capacity to handle PR incidents.
 
 ## Browser First Applications
 
-The browser as a runtime allows applications to be written once for all platforms. The Browser offers compatibility across the complex Operating Systems {Android, iOS, macOS, Windows, Linux} and hardware ecosystem { x64, ARM, RISC-V} reducing development cost. The browser acts as a common VM like the [JRE](https://en.wikipedia.org/wiki/Java_(software_platform)
+The browser as a runtime allows applications to be written once for all platforms. The browser offers compatibility across the complex operating systems {Android, iOS, macOS, Windows, Linux} and hardware ecosystem { x64, ARM, RISC-V} reducing development cost. The browser acts as a common VM like the [JRE](https://en.wikipedia.org/wiki/Java_(software_platform)
 
 Most applications can be handled by the browser, and the browser is being further developed to handle other cases as well.
 
-Browser engines are also becoming consolidated, it doesn't make business sense to develop a new engine and a successful new engine hasn't been developed since Chromium.
+Browser engines are also becoming consolidated. It doesn't make business sense to develop a new engine and a successful new engine hasn't been developed since Chromium.
 
 Browser Engines
 
@@ -173,10 +170,10 @@ Browser Engines
 - [Gecko](https://en.wikipedia.org/wiki/Gecko_(software))  - Firefox (Mozilla) - 1997
 - [Blink](https://en.wikipedia.org/wiki/Blink_(browser_engine)) - Chromium (Google) -  2013 WebKit fork
 
-Notably all of these engines are Open Source - this means it's easier to fork an exiting engine than it is to develop a new one from scratch. A new browser that adheres to web standards and works with most websites would be incredibly expensive to develop, even in 2013 it was too expensive and Google ended up forking an existing engine and building on it.
+Notably, all of these engines are open source. It is easier to fork an existing engine than it is to develop a new one from scratch. A new browser that adheres to web standards and works with most websites would be incredibly expensive to develop. Even in 2013, it was too expensive, and Google ended up forking an existing engine and building on it.
 
-Chromium has become the default engine used in application development, Chromium browsers have about 70% of the market, the only major exception is WebKit which has 15% however this is only due to Apples imposing a monopoly on their hardware products that prevents use of other engines.
+Chromium has become the default engine used in application development. Chromium browsers have about 70% of the market. Indeed, iOS is the only commonly-used platform where Chromium is not the default, due to Apple's monopolistic restriction of other browser engines on its platform.
 
-Chromium has become the standard library and browser. New web features are typically developed and experimented with in Chromium first. Chromium has the largest developer community, and has two Major tech companies using it as their primary engine (Google & Microsoft) this essentially ensures that chromium is the most compatible and innovative browser. Since Chromium is the default where innovation happens, other browser developers are constantly in catchup, and are not nearly so well funded. There isn't a strong business case for most companies to develop their own browsers engines or to pick a secondary browser that will be less compatible.
+Chromium has become the standard library and browser. New web features are typically developed and experimented with in Chromium first. With the backing of two major tech companies (Google and Microsoft) using it as their primary engine, Chromium has the largest developer community. This ensures that Chromium is the most compatible and innovative browser. Since Chromium is the default where innovation happens, other browser developers are constantly in catchup, and are not nearly so well funded. There isn't a strong business case for most companies to develop their own browser engines or to pick a secondary browser that will be less compatible.
 
-What this means is there is a standard browser that is readily available and consistently maintained that can be used to package and run any application across platforms.
+There already exists a standard browser that is freely available and consistently maintained that can be used to package and run any application across platforms. Why create another? This is great news for every developer who wants to write applications once that run everywhere.

@@ -1,12 +1,11 @@
 ---
 ---
 
-
 # Dashi
 
 ## Source
 
-[Sushi by Kunihiro](https://www.youtube.com/watch?v=FvTtJj9l9uw&ab_channel=SushiByKunihiro
+[Sushi by Kunihiro](https://www.youtube.com/watch?v=FvTtJj9l9uw&ab_channel=SushiByKunihiro)
 
 
 ## Ingredients
@@ -17,6 +16,7 @@ Dashi broth
 - 20g Dried Bonito Flakes
 - 1 liter of water
 
+## Directions
 
 - wipe off 10g Konbu  
 - let soak for 1 hour in 1 liter of water
@@ -34,6 +34,8 @@ Dashi broth
 - Left over Konbu and Bonito from Dashi broth
 - 1.5 Tbsp Soy sauce, 
 - 1Tbsp Mirin,
+
+## Directions
 
 tsukudani from use kinbu and bonito flakes
 

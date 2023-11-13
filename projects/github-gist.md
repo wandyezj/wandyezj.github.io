@@ -117,3 +117,5 @@ Security
 
 - client_secret needs to be kept on the server
 - CORS needs to be enforced so the server only accepts requests from specific websites, but really for this to be secure the server needs to have a session token that only it and the client know about
+
+An alternative for individual use is to keep the secret client side in local storage.

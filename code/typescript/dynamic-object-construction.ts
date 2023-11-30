@@ -23,9 +23,8 @@ function constructModel(model: string): AnyObject {
         }
     }
 
-    
     // But what should exist on the leaf? property or method?
-    // automatically add load property for properties, that adds the properties dynamically
+    // automatically add load property for properties, that adds the properties dynamically, then every leaf specified is a method.
 
     return o;
 }

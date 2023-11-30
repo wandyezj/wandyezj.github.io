@@ -1,6 +1,5 @@
 # Example Tic Tac Toe game for two players
 
-
 PLAYER_SYMBOL_ONE = 'X'
 PLAYER_SYMBOL_TWO = 'O'
 TOTAL_TURNS = 9
@@ -12,7 +11,7 @@ def get_player_symbol(turn):
     """
     return TURN_ORDER[turn % 2]
 
-board =  list(range(0, 10))
+board = list(range(0, 10))
 
 def print_board(board):
     print(f"""

@@ -1,4 +1,37 @@
 
+// Object
+
+// Describe a complete API layer in a single namespace and populate it with all nodes in the tree.
+
+/*
+Client
+    - contains only the type information and JavaScript abstraction layer to access the server.
+
+Server 
+    - contains actual implementation
+
+Allow dynamic population of the API layer in JavaScript as it is used.
+
+Specify which properties are needed and also receive information from server about what is supported.
+*/
+
+// Idea: All implementation and meaning remains on the server.
+
+/*
+- Class
+    - These are top level objects
+- method
+    - Called with an array of arguments
+    - These return values or instantiated Classes
+- Property Path
+    - use getter to populate to return the expected object
+    - but this needs to know which object to expect
+
+- Property Value
+
+- enum
+*/
+
 type AnyObject = {[key: string]: any}
 
 /**

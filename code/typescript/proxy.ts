@@ -1,5 +1,22 @@
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
 
+function getNewProxyProperty(chain: string): any {
+    function o() {
+        console.log(`call ${chain}`);
+    }
+
+    return new Proxy(o, {
+        get(target: any, prop: any, receiver: any) {
+            console.log(`Getting ${chain}.${prop}`);
+            return getNewProxyProperty(`${chain}.${prop}`);
+        },
+        set(target: any, prop: any, value: any, receiver: any) {
+            console.log(`Setting ${prop} to ${value}`);
+            return true;
+        },
+    });
+}
+
 const handler: ProxyHandler<any> = {
     get(target: any, prop: any, receiver: any) {
         console.log(`Getting ${prop}`);
@@ -7,7 +24,10 @@ const handler: ProxyHandler<any> = {
         // if this is a path property return the proxy
         // note: methods are also properties
         // how to differentiate method, from path, from property?
-        return target.proxy;
+        // Is it possible to return something that can track the call or the path?
+        return getNewProxyProperty(prop);
+        // return () => {console.log("calling");}
+        //return target.proxy;
     },
     set(target: any, prop: any, value: any, receiver: any) {
         console.log(`Setting ${prop} to ${value}`);

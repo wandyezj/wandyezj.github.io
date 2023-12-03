@@ -7,10 +7,9 @@ let data = `467..114..
 ..592.....
 ......755.
 ...$.*....
-.664.598..`;
+.664.598..
+`;
 
-// 6762441 high
-// 526341 low
 // How to approach?
 // parse out the numbers
 // parse out positions of the numbers
@@ -18,10 +17,8 @@ let data = `467..114..
 
 console.log(data);
 
-const grid = data
-    .trim()
-    .split("\n")
-    .map((line) => line.split(""));
+const lines = data.trim().split("\n");
+const grid = lines.map((line) => line.split(""));
 //console.log(lines);
 
 function isDigit(value) {
@@ -32,16 +29,16 @@ function isSymbol(value) {
     return value !== "." && !isDigit(value);
 }
 
-function isSymbolInGrid(x, y, grid) {
+function getItemInGrid(x, y, grid) {
     if (y >= grid.length || y < 0) {
-        return false;
+        return undefined;
     }
     let row = grid[y];
     if (x >= row.length || x < 0) {
-        return false;
+        return undefined;
     }
     const value = row[x];
-    return isSymbol(value);
+    return value;
 }
 
 function nextToSymbolInGrid(x, y, grid) {
@@ -50,18 +47,25 @@ function nextToSymbolInGrid(x, y, grid) {
         [1, 0], // right
         [-1, 0], // left
 
-        [0, 1], // above
-        [0, -1], // below
+        [0, 1], // below
+        [0, -1], // above
 
-        [1, 1], // right above
-        [-1, -1], // left below
-        [-1, 1], // left above
-        [1, -1], // right below
+        [1, 1], // right below
+        [-1, -1], // left above
+        [-1, 1], // left below
+        [1, -1], // right above
     ];
 
     for (const [dx, dy] of indices) {
-        const value = isSymbolInGrid(x + dx, y + dy, grid);
-        if (value) {
+        const value = getItemInGrid(x + dx, y + dy, grid);
+        if (value !== undefined && isSymbol(value)) {
+            return true;
+        }
+    }
+
+    for (const [dx, dy] of indices.slice(2)) {
+        const value = getItemInGrid(x + dx, y + dy, grid);
+        if (value !== undefined && isDigit(value)) {
             return true;
         }
     }
@@ -71,7 +75,6 @@ function nextToSymbolInGrid(x, y, grid) {
 // go through the grid getting all of the numbers
 
 let total = 0;
-const numbers = [];
 // go through each row
 for (let y = 0; y < grid.length; y++) {
     const row = grid[y];
@@ -83,18 +86,21 @@ for (let y = 0; y < grid.length; y++) {
         const value = row[x];
         if (isDigit(value)) {
             currentNumber += value;
-            symbolAdjacent |= nextToSymbolInGrid(x, y, grid);
+            symbolAdjacent = symbolAdjacent || nextToSymbolInGrid(x, y, grid);
         } else {
             if (currentNumber !== "" && symbolAdjacent) {
                 const n = parseInt(currentNumber);
-                numbers.push(n);
-                //console.log(n);
                 total += n;
             }
             currentNumber = "";
             symbolAdjacent = false;
         }
     }
+
+    if (currentNumber !== "" && symbolAdjacent) {
+        const n = parseInt(currentNumber);
+        total += n;
+    }
 }
-console.log(numbers);
+
 console.log(total);

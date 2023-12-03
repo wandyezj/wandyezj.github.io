@@ -63,12 +63,6 @@ function nextToSymbolInGrid(x, y, grid) {
         }
     }
 
-    for (const [dx, dy] of indices.slice(2)) {
-        const value = getItemInGrid(x + dx, y + dy, grid);
-        if (value !== undefined && isDigit(value)) {
-            return true;
-        }
-    }
     return false;
 }
 

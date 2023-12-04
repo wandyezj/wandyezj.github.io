@@ -134,6 +134,9 @@ scope
 - element
     - An element is an individual value in a list that is assigned a unique index.
 
+- initialize / construct
+    - Create and set the initial elements in the list.
+
 ## General
 
 - Multi-factor Authentication

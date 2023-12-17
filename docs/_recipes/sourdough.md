@@ -22,7 +22,7 @@
 1. every half hour for 2 hours stretch and fold the dough ball four times
 1. let bread sit for a few hours
 1. place bread on parchment paper in a roundish loaf
-1. place parchment paper with bread in a covered bowl in the freezer until next morning
+1. place parchment paper with bread in a covered bowl in the refrigerator until next morning
 1. place large tray of water on oven bottom rack to keep bread moist
 1. preheat oven to 425
 1. take parchment paper with bread out of bowl and place on pan

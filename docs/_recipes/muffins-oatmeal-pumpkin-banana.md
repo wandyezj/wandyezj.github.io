@@ -18,7 +18,6 @@
 
 
 - 1/4 cup avocado oil
-- 1/4 cup milk
 - 2 teaspoons vanilla extract
 - 15 oz can pumpkin puree
 - 4 medium ripe bananas - mashed
@@ -65,6 +64,6 @@
 
 ## Notes
 
-- add walnuts for more flavor.
+- add pecans or walnuts for more flavor.
 - do not use cassia cinnamon as it has a toxic substance in it
 - add semi sweet chocolate chips for a chocolate flavor or add on top

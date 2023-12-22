@@ -1,16 +1,22 @@
 ---
 layout: post
-title: "Family"
+title: "Influences"
 date: 2023-07-15
 00:00:00 -0700
 tags: reflection
 ---
 
-I think it's useful to reflect on where we come from, and the influences that lead us to our present selves.
+I think it's useful to reflect on the influences that lead us to our present selves.
 
-This is a rather long work in progress that attempts to critically evaluate the influence of my upbringing on my present self by taking a look at my parents influence.
+This is a long personal work in progress that attempts to evaluate the influences of my early years.
 
-My parents are one of my greatest influences. Many people have played a deep role shaping me: leaders in my scout troop, middle school teachers, wonderful teachers in High School, professors in college, authors I've read, strangers, close friends, and most importantly my partner. However, my interactions with these influences is fundamentally shaped by the influence of my parents.
+Many people have played a deep role shaping me: my parents, leaders in my scout troop, middle school teachers, wonderful teachers in high school, professors in college, authors I've read, strangers, close friends, and most importantly my partner.
+
+## Parents
+
+My interactions with other influences is fundamentally shaped by the influence of my parents.
+
+Viewpoints & Beliefs
 
 Most would probably not consider my parents or my upbringing 'normal', but growing up it was normal to me - it was other families that seemed odd. What's normal depends on where you are coming from.
 

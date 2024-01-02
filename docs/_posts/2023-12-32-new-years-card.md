@@ -43,6 +43,11 @@ There are several logistical pieces to getting the cards out:
 
 Pieces to optimize
 
+- Design for fold
+    - Design the letter for folding
+    - fold long ways then short ways with white on the outside
+    - Use thinner paper than 100 lb
+- At least 14 point font.
 - Adequate margin on print jobs
     - Make sure to leave plenty of margin on the print jobs
 - Writing out from and to Addresses

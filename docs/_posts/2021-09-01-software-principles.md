@@ -1,4 +1,9 @@
-# Software Principles
+---
+layout: post
+title: "Software Principles"
+date: 2021-09-01 00:00:00 -0700
+tags: software
+---
 
 ## Values
 

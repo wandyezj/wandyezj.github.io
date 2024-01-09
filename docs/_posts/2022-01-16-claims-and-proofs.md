@@ -1,8 +1,8 @@
 ---
 layout: post
-title:  "Claims and Proofs"
-date:   2022-01-16 12:00:00 -0700
-tags: software
+title: "Claims and Proofs"
+date: 2022-01-16 12:00:00 -0700
+tags: software essay
 ---
 
 Software program descriptions often make claims about functionality. Some claims of recent interest are around: data privacy, data security, and data integrity.

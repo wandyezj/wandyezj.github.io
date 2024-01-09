@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Welcome to Jekyll!"
-date:   2021-08-24 20:00:00 -0700
+title: "Welcome to Jekyll!"
+date: 2021-08-21 00:00:00 -0700
 tags: jekyll update
 ---
 

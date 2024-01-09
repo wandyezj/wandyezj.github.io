@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Cooking Principles"
-date:   2022-01-08 12:00:00 -0700
+title: "Cooking Principles"
+date: 2022-01-08 00:00:00 -0700
 tags: cook
 ---
 

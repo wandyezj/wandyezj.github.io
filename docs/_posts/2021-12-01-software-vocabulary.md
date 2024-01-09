@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Software Vocabulary"
-date:   2021-12-01 20:00:00 -0700
+title: "Software Vocabulary"
+date: 2021-12-01 00:00:00 -0700
 tags: software
 ---
 

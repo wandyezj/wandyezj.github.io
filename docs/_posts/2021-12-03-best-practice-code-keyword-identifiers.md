@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Code Best Practice - do not use language keywords as identifiers"
-date:   2021-12-03 12:00:00 -0700
+title: "Code Best Practice - do not use language keywords as identifiers"
+date: 2021-12-03 00:00:00 -0700
 tags: best-practice code
 ---
 

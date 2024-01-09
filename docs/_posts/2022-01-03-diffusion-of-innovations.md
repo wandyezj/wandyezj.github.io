@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Diffusion of Innovations"
-date:   2022-01-03 12:00:00 -0700
+title: "Diffusion of Innovations"
+date: 2022-01-03 00:00:00 -0700
 tags: software
 ---
 

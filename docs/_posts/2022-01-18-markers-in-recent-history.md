@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "markers in recent history"
-date:   2022-01-18 12:00:00 -0700
+title: "markers in recent history"
+date: 2022-01-18 00:00:00 -0700
 tags: history
 ---
 
@@ -54,7 +54,7 @@ _note_ Many people had opposed slavery long before the American Civil War, the A
 
 _note_ The [United Kingdom's Slavery Abolition Act of 1833](https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833) provided for the gradual abolition of slavery in many parts of the British Empire.
 
-The American Civil War was chosen because the path to war highlights how contentious the issue of slavery was and how tied slavery was into the global economic system. Slavery was so contentions that is caused a massive war, that killed between a half million to a million people.
+The American Civil War was chosen because the path to war highlights how contentious the issue of slavery was and how tied slavery was into the global economic system. Slavery was so contentions that it caused a massive war, that killed between a half million to a million people.
 
 The American Civil War also highlights many technological innovations of the era including: Mass Production, Repeating Rifles, Iron ships, Submarines, Railroads, Balloons,  Photography, Telegraph, and more.
 

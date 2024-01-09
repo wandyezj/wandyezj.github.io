@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Programming Languages - if token delimitation"
-date:   2022-01-09 12:00:00 -0700
+title: "Programming Languages - if token delimitation"
+date: 2022-01-09 00:00:00 -0700
 tags: software programming languages
 ---
 

@@ -6,7 +6,7 @@ date: 2023-06-04
 tags: story-games philosophy
 ---
 
-I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and my principles  of design.
+I've played Story Games for a long time and have often wondered, what makes a "Story Game" a "Story Game"? This essay explores my definition of "Story Game" and my principles of design.
 
 ## What is a Story Game?
 

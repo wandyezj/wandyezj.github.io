@@ -32,6 +32,10 @@ Microsoft violated settlement due to a genuine lack of test coverage and was fin
 - Rectification and erasure
 - Right to object and automated decisions
 
+## Practice
+
+- [Horizon System - British Post Office](https://en.wikipedia.org/wiki/British_Post_Office_scandal)
+
 ## Theory
 
 ### [Universal Declaration of Human Rights (1948)](https://en.wikipedia.org/wiki/Universal_Declaration_of_Human_Rights)
@@ -39,3 +43,4 @@ Microsoft violated settlement due to a genuine lack of test coverage and was fin
 Article 19 States
 
 > Everyone has the right to freedom of opinion and expression; the right includes freedom to hold opinions without interference and to seek, receive and impart information and ideas through any media regardless of frontiers.
+

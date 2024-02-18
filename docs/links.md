@@ -137,6 +137,11 @@ Other
 
 - Wide Spectrum Blocker
 
+[Textik](https://textik.com/)
+
+- Visual text block diagram tool 
+- [Textik GitHub](https://github.com/astashov/tixi)
+
 [Cirsim Circuit Simulator](https://www.npmjs.com/package/cirsim)
 
 [Shufflecake](https://shufflecake.net/)

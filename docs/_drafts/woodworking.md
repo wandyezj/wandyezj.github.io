@@ -20,3 +20,6 @@ Simple design with the least amount of parts and cuts to minimize cost.
 - Dado Grove
 - Dowel Joint
 
+There are some nice features that might require screws:
+
+- Soft close drawers

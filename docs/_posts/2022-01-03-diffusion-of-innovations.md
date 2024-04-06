@@ -70,3 +70,9 @@ Innovation Decisions
     - individual has no influence
 
 Generally, the fastest rate of adoption comes from authority decisions.
+
+
+## Diffusion in Action
+
+- [“How ‘The Gruffalo’ Went Global.” The Economist, March 26, 2024.](https://www.economist.com/culture/2024/03/26/how-the-gruffalo-went-global)
+    - An example of re-invention in translation. "Keep the mood, keep the rhyme, don't lose the humor."

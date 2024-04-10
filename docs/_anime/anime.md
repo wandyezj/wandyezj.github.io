@@ -1,3 +1,8 @@
+## Excellent
+
+Sousou no Frieren 
+
+Spy x Family
 
 ## good
 
@@ -6,8 +11,6 @@ Paripi Koumei
 Love Is War
 
 Majo no Tabitabi
-
-Spy x Family
 
 Baccano!
 

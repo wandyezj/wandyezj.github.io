@@ -83,6 +83,12 @@ _note_: `NAME` is the name of the remote branch.
 
 > git config --local user.email email@address.com
 
+### Set local preferred credentials
+
+> git config --local credential.https://github.com.username wandyezj
+
+[GitHub multiple users](https://github.com/git-ecosystem/git-credential-manager/blob/main/docs/multiple-users.md)
+
 ### Revert to commit
 
 see previous commit hashes

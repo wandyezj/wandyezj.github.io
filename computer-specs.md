@@ -87,7 +87,7 @@ Samsung SSD 990 Pro 1TB X 1
 
 ## Mouse
 
-[Logitec MX Master 3 Advanced Wireless Mouse - Graphite](https://www.logitech.com/en-us/products/mice/mx-master-3.910-005620.html)
+[Logitec MX Master 3S - Graphite](https://www.logitech.com/en-us/products/mice/mx-master-3s.910-006557.html)
 
 ## Keyboard
 

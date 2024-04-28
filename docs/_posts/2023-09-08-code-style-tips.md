@@ -5,6 +5,13 @@ date: 2023-09-08 00:00:00 -0700
 tags: code
 ---
 
+- [Avoid Ternaries within Ternaries](#avoid-ternaries-within-ternaries)
+- [CamelCase Acronyms in Identifiers](#camelcase-acronyms-in-identifiers)
+- [Place default last in a switch statement](#place-default-last-in-a-switch-statement)
+- [Define functions before use](#define-functions-before-use)
+- [Automatically run pipelines against any dependency changes](#enable-typescript-rules)
+- [Enable TypeScript Rules](#enable-typescript-rules)
+
 ## Avoid Ternaries within Ternaries
 
 Avoid nesting ternaries. Instead of nesting ternaries use if statements.

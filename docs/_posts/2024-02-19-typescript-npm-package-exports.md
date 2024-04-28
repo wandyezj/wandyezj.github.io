@@ -27,7 +27,7 @@ The structure described in the layout is informed by the following values:
 
 - Optimize for the reader over the writer. Software will be read and reviewed more times than it is written.
 - Optimize for consumption. Packages are intended for consumption in other pieces of software so they should be optimized for their intended purpose.
-- Optimize for maintenance. Packages often need to be updated, make it easy to update the package for the consumer of the package. 
+- Optimize for maintenance. Packages often need to be updated, make it easy to update the package for the consumer of the package.
 
 
 ## Scenarios

@@ -53,11 +53,11 @@ Finally, [Chiplets](https://en.wikipedia.org/wiki/Chiplet) offers a new way comb
 
 ## Specialized Hardware
 
-Increasingly I see a golden age for computer hardware development. Every application is power constrained. On mobile lower power usage means less battery is required or running for longer without charging, either saving money or a competitive advantage. In the cloud race to the bottom cost, lower power, reduces costs and increases profit for the same services.
+Increasingly I see a golden age for computer hardware development. Every application is power constrained. On mobile lower power usage means less battery is required or running for longer without charging, either saving money or a competitive advantage. In the cloud race to the bottom, lower power reduces costs and increases profit for the same services.
 
 As workloads become more specialized and are delivered at scale it makes more sense to develop custom hardware.
 
-Examples of custom hardware at scale used in on mobile and data centers
+Examples of custom hardware at scale used in mobile devices and data centers:
 
 - Search Engines
 - Networking
@@ -65,7 +65,7 @@ Examples of custom hardware at scale used in on mobile and data centers
 - Graphics Processing
 - AI
 
-As Privacy becomes more of a concern and privacy laws become more complex and server loads become more expensive, more software workloads are likely to shift to the client.
+As privacy becomes more of a concern and privacy laws become more complex and server loads become more expensive, more software workloads are likely to shift to the client.
 
 ## Big Tech Dominance
 
@@ -78,11 +78,13 @@ Key Tech companies
 - Amazon
 - Apple
 
-I don't think it is likely a new big tech company will emerge. I think it is more likely (although still unlikely) one of these companies could stumble and become less significant. In my opinion Apple is the most likely to stumble as it is overly reliant on a single product line in which it has a minority market share, is too engrossed in its own ecosystem, and does not work well with its competitors. The main think keeping Apple alive is the incompetence of its competitors management teams, and its brand reputation. As Apples competitors realign and its main product line becomes a commodity, Apple will need to find new market segments - however this will be a difficult transition since it is a company designed to produce and align on a single product. That said, Apple has a ton of cash and can choose which new market segments to enter - it will just be difficult given its focus on a single product line.
+I don't think it is likely a new big tech company will emerge. I think it is more likely (although still unlikely) one of these companies could stumble and become less significant.
+
+In my opinion Apple is the most likely to stumble as it is overly reliant on a single product line in which it has a minority market share, is too engrossed in its own ecosystem, and does not work well with its competitors. The main thing keeping Apple alive is its brand reputation, and the incompetence of its competitors management teams. As Apples competitors realign and its main product line becomes a commodity, Apple will need to find new market segments - however this will be a difficult transition since it is a company designed to produce and align on a single product. That said, Apple has a ton of cash and can choose which new market segments to enter.
 
 Each of these companies plays in both consumer and business segments and has developed their own membership programs that make it easy to use their services. The compatibility between ecosystems isn't so great as nearly all assets are stored in incompatible clouds.
 
-Each of these companies is massive and can leverage more capital than smaller companies. Small companies can still compete effectively in niche segments since they have a singular focus which these larger companies lack. However, these large companies can afford to invest over decades without turning any profit - something that is difficult for smaller competitors.
+Each of these companies is massive and can leverage more capital than smaller companies. Small companies can still compete effectively in niche segments since they have a singular focus which these larger companies lack. However, these large companies can afford to invest over decades without turning any profit - something that is required to develop platform software and difficult for smaller competitors.
 
 ### Business Segments
 
@@ -150,7 +152,7 @@ Competition can be increased by enforcing compatibility and allow 3rd parties to
 
 Breaking up large tech companies probably won't happen. There are significant benefits large tech companies provide for businesses and consumers. Additionally, they are all American companies and it is easier for the government to track and regulate big companies verses many smaller ones.
 
-If the playing field were leveled, smaller niche companies could force large companies to invest further in their own services to stay competitive. However, it is not possible to level the playing field entirely. Large companies will always retain the advantage of scale, especially with the more capital-intensive parts of the business, like hardware. They can use those excess profits to invest in research and development for future products, while knowing that not all efforts lead to successes. They can also choose to buy out the competition, or invest the extra funds in copying the successful features of other companies. Such risks and rewards are inaccessible to smaller players.
+If the playing field were leveled, smaller niche companies could force large companies to invest further in their own services to stay competitive. However, it is not possible to level the playing field entirely. Large companies will always retain the advantage of scale, especially with the more capital-intensive parts of the business, like hardware. They can invest large profits in research and development for future products, while knowing that not all efforts lead to successes. They can also choose to buy out the competition, or invest the extra funds in copying the successful features of other companies. Such risks and rewards are inaccessible to smaller players.
 
 ### Security
 
@@ -158,7 +160,7 @@ The demand for increased security in software applications increases the cost to
 
 ## Browser First Applications
 
-The browser as a runtime allows applications to be written once for all platforms. The browser offers compatibility across the complex operating systems {Android, iOS, macOS, Windows, Linux} and hardware ecosystem { x64, ARM, RISC-V} reducing development cost. The browser acts as a common VM like the [JRE](https://en.wikipedia.org/wiki/Java_(software_platform)
+The browser as a runtime allows applications to be written once for all platforms. The browser offers compatibility across the complex operating systems {Android, iOS, macOS, Windows, Linux} and hardware ecosystem { x64, ARM, RISC-V} reducing development cost. The browser acts as a common VM like the [JRE](https://en.wikipedia.org/wiki/Java_(software_platform))
 
 Most applications can be handled by the browser, and the browser is being further developed to handle other cases as well.
 

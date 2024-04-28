@@ -5,6 +5,12 @@ date: 2023-12-04 00:00:00 -0700
 tags: programming
 ---
 
+- [Initialize](#initialize)
+- [Access Element](#access-element)
+- [Change Element At Index](#change-element-at-index)
+- [Add Element to End](#add-element-to-end)
+- [Remove Element from End](#remove-element-from-end)
+
 ## Initialize
 
 Initialize list and assign to variable.

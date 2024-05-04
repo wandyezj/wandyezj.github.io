@@ -5,14 +5,15 @@ date: 2024-05-04 00:00:00 -0700
 tags: software
 ---
 
-When I use a new software program for the first time, I'm typically prompted by a "consent dialog" presenting a wall of text. I have a choice of agree and use the software or don't use the software. Of Course, I don't bother reading the text, and I click agree. I want to use the software. What exactly did I agree to?
+When I use a new software program for the first time, I'm typically prompted by a "consent dialog" presenting a wall of text. I have a choice of agree and use the software or not to use the software. I don't bother reading the text, and I click agree. I want to use the software. What exactly did I agree to?
 
 ## The Relationship between Developer and Consumer
 
 The relationship between software developers and consumers is unequal.
+
 Consumers want to use software, and typically lack the ability to assess or limit the software to only do what they want. Developers can pretty much do whatever they want in software, as long as it's useful - and isn't obviously bad - people will use it.
 
-It's difficult to assess a piece of softwares:
+It's difficult to assess softwares:
 
 - Trustworthiness
 - Security

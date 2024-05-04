@@ -10,7 +10,7 @@ When I use a new software program for the first time, I'm typically prompted by 
 ## The Relationship between Developer and Consumer
 
 The relationship between software developers and consumers is unequal.
-Consumers want to use software, and typically lack the ability to assess or limit the software to only do what they want. Developers can pretty much do whatever they want in software as long as it's useful and isn't obviously bad people will use it.
+Consumers want to use software, and typically lack the ability to assess or limit the software to only do what they want. Developers can pretty much do whatever they want in software, as long as it's useful - and isn't obviously bad - people will use it.
 
 It's difficult to assess a piece of softwares:
 
@@ -46,7 +46,7 @@ I can read statements provided by the developer.
 > The Build Add-In is provided as is with no guarantee of quality or support.
 
 
-For the Build Add-In these statements guarantee nothing - the EULA says it can be updated on demand without notification.
+For the Build Add-In these statements guarantee nothing - the EULA even says it can be updated on demand without notification!!!
 
 Even if there was an expressed guarantee, I as a consumer have no way of assessing if these statements are true, or enforcing these statements.
 
@@ -60,10 +60,13 @@ The Build Add-In depends on the office.js library published and hosted by Micros
 
 ## From Consent to Care
 
-The current Consent model is inadequate for software.
+Is the current consent model really consent?
 
-Few consumers can understand what they are consenting to. Developers when they take dependencies are consumers and also don't know what they are consenting to.
+Few consumers can understand what they are consenting to. Developers when they take dependencies are consumers - and also don't know what they are consenting to.
 
-Instead of a consent based model, it might be better to adopt a care based model, where developers write their software in a way that cares for their customer.
+Instead of a consent based model, it might be better to adopt a care based model, where developers try to write their software in a way that cares for their customer.
 
-With the Build Add-In, I try to care about the customer, however, it's really challenging to develop software that cares about everything the customer cares about - everything is a series of compromises. I try to be as up front as possible about the softwares limitations, I have to hope that's enough. 
+We try to do our best with care, but we don't always succeed in caring for the customer in the way they want to be cared for.
+
+With the Build Add-In, I try to care about the customer, however, it's really challenging to develop software that cares about everything the customer cares about - everything is a series of compromises. I try to be as up front as possible about the softwares limitations, I have to hope that's enough.
+

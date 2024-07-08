@@ -53,5 +53,7 @@ Steps to use the FanFicFare plugin.[^reddit-calibre]
     - Wait for things to download
     - When the download completes a dialog will say `FanFicFare download complete`, select `yes` to update your library
 
+note: The FanFicFare plugin occasionally needs updates, as sites update the download scripts also need to update.
+
 
 [^reddit-calibre]: [Reddit how to read royal road and more on a kindle](https://www.reddit.com/r/litrpg/comments/h8ev4o/how_to_read_royal_road_and_more_on_a_kindle/)

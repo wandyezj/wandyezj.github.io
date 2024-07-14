@@ -12,6 +12,7 @@
 - [Services](#services)
 - [Design](#design)
     - [Interior](#interior)
+    - [Sound](#sound)
 - [Business](#business)
     - [Management](#management)
     - [Equipment](#equipment)
@@ -24,6 +25,12 @@ A place to relax, ponder, and gather.
 
 - Explore
 - Build Community
+
+### Thoughts
+
+The experience of a bar at a coffee shop.
+
+Consider it a social house.
 
 ## Name
 
@@ -177,6 +184,13 @@ What kinds of activities can happen at the coffee shop?
 - Games
 - Internet
 
+### Social Groups
+
+- Social Dance (if there is enough clear space)
+- Movie Night
+- Philosophy
+- Story Games
+
 ## Location
 
 Want to be within walking distance of a large number of people to get foot traffic
@@ -293,6 +307,14 @@ Track every single item purchased, and any wastage of items to determine where t
 
 ## Business
 
+### Customers
+
+### Location
+
+A location with a sufficient population that within walking distance.
+
+If close to a university or college have a continual rotating set of students along with faculty.
+
 ### Management
 
 - have instructions for all menu items written down and explained with pictures to ease training and to maintain consistency
@@ -364,6 +386,11 @@ Laster cut pieces of wood that are laser engraved and hung on pegs. Color in las
 - Quiet
 - Nice Designs - repetitive yet interesting pattern on wall
 
+## Sound
+
+Speakers to play music throughout.
+
+Play chill music. Music without lyrics so people can concentrate or have conversations.
 
 ## Suppliers
 

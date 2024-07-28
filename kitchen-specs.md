@@ -37,6 +37,13 @@ King Arthur, Pre-Cut Baking Parchment Paper, Heavy Duty, Professional Grade, Non
 
 If you care large baking cups
 
+## Ladle
+
+Rösle Stainless Steel Hooked Handle Ladle with Pouring Rim, 8.0-Ounce
+
+- Single piece of stainless steel, super smooth and easy to clean.
+
+
 ## Other
 
 

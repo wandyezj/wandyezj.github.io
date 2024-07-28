@@ -50,11 +50,9 @@ These leaders movements while extremely impactful, were founded much earlier and
 
 Slavery. Signals significantly changing attitudes about slavery which had existed for much of previous history.
 
-_note_ Many people had opposed slavery long before the American Civil War, the American Civil War is simply a highlight of changing attitudes.
+Many people had opposed slavery long before the American Civil War. For example, the [United Kingdom's Slavery Abolition Act of 1833](https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833) provided for the gradual abolition of slavery in many parts of the British Empire.
 
-_note_ The [United Kingdom's Slavery Abolition Act of 1833](https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833) provided for the gradual abolition of slavery in many parts of the British Empire.
-
-The American Civil War was chosen because the path to war highlights how contentious the issue of slavery was and how tied slavery was into the global economic system. Slavery was so contentions that it caused a massive war, that killed between a half million to a million people.
+The American Civil War was chosen because the path to war emphasizes how contentious the issue of slavery was and how entrenched slavery was into the global economic system. Slavery was so contentions that it caused a massive war, that killed between a half million to a million people.
 
 The American Civil War also highlights many technological innovations of the era including: Mass Production, Repeating Rifles, Iron ships, Submarines, Railroads, Balloons,  Photography, Telegraph, and more.
 
@@ -62,11 +60,9 @@ The American Civil War also highlights many technological innovations of the era
 
 Women's Suffrage. Signals a change in the power possessed by women.
 
-The Women's suffrage and Women's rights movements highlight the changing role of women in society.
+The Women's suffrage and Women's rights movements highlight the changing role of women in society. Organization of women began far before the passage of women's suffrage laws. One example is the 1840 Seneca Falls Convention.
 
 The United States was not the first country to allow women to vote. Many European countries passed laws that gave women the right to vote in 1918 (Some countries passed laws before 1918).
-
-Organization of women began far before the passage of women's suffrage laws. One example is the 1840 Seneca Falls Convention.
 
 ### Why the Indian Independence Act?
 
@@ -82,6 +78,6 @@ Cold War. Technological Marvel. Television. Computing.
 
 ### Why iPhone?
 
-Exemplifies a new era of communication technology and instant access to information.
+Exemplifies a new era of communication technology and instant access to information. The networked mobile computing revolution has reshaped: banking, payment, shopping, delivery, media, and social interaction.
 
 

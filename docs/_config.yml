@@ -66,9 +66,13 @@ collections:
     output: false
     title: ""
     author: ""
+    # Year first published.
     year: ""
+    # Link to wikipedia of the work, or the author.
     wiki: ""
-    genre: ""
+    # {academic, literature, experience}
+    genre: "" 
+    # citation for original work
   papers:
     output: false
     title: ""

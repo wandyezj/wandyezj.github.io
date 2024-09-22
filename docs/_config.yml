@@ -103,6 +103,16 @@ collections:
     output: true
     title: ""
     tags: []
+  quotes:
+    output: false
+    # (required)
+    quote: ""
+    # (optional) author of the quote
+    author: ""
+    # (optional) citation of where the quote is from
+    citation: ""
+    # (optional) link to work
+    link: ""
 
 
 defaults:

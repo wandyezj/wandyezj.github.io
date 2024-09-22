@@ -1,4 +1,17 @@
-# Quotes
+---
+layout: page
+title: Quotes
+permalink: /quotes/
+---
+
+{% assign quotes = site.quotes %}
+{% for item in quotes %}
+{% assign text = item.quote | escape %}
+{% assign author = item.author | escape %}
+<p>
+{{ text }} - {{ author }}
+</p>
+{% endfor %}
 
 "A project without a timeline is a hobby."
 
@@ -112,3 +125,35 @@ Now entering party conventions, you have been warned!"
 "You can have everything in life you want, if you will just help other people get what they want." - Zig Ziglar
 
 "The most profound technologies are those that disappear. They weave themselves into the fabric of everyday life until they are indistinguishable from it." - Mark Weiser
+
+"granola is a thousand tiny cookies" - wandyezj 2024
+
+"Television’s advocacy of individual gratification through romance and consumption of material goods is not balanced by advocacy of thrift or of work." from Language in Thought and Action by Hayakawa
+
+"Architecture shouldn't be global; architecture needs to be local to respond to specific microclimates and social conditions." from Design for a Better World by Don Norman
+
+"We could, but we don’t have to, and maybe we shouldn’t" - wandyezj 2024
+
+"I did it for the pure joy of the thing. And if you can do it for joy, you can do it forever" - Stephen King
+
+"When you really look at something, and think about it, everything becomes funny." wandyezj 2024
+
+“To err is human, to forgive design.” from Designing Usable Electronic Text by Andrew Dillon
+
+"Engineers look for problems because fixing problems and making things better is their life’s work." wandyezj 2024
+
+"It’s best to eliminate problems permanently if possible. That way you can confidently move on to new problems." wandyezj 2024
+
+"English is my favorite programming language: it’s flexible, and you can blame the interpreter." wandyezj 2023
+
+“Does it spark joy or regret?” “Both” wandyezj 2023
+
+“Putting things away creates the illusion that the clutter problem has been solved” from the life-changing magic of tidying up by marie kondo
+
+"Stop waiting for people to give you a trophy. Make your own trophies to celebrate your accomplishments." wandyezj 2023
+
+“Concentrated power is not rendered harmless by the good intentions of those who create it” from Capitalism and Freedom by Milton Friedman
+
+“No society can be stable unless there is a basic core of value judgements that are unthinkably accepted by the bulk of its members” from Capitalism and Freedom by Milton Friedman
+
+"If you want control you need to be the one making things." wandyezj 2023

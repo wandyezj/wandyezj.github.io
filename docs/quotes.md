@@ -9,7 +9,7 @@ permalink: /quotes/
 {% assign text = item.quote | escape %}
 {% assign author = item.author | escape %}
 <p>
-{{ text }} - {{ author }}
+"{{ text }}" - {{ author }}
 </p>
 {% endfor %}
 

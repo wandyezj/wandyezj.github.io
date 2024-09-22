@@ -36,7 +36,7 @@ If you can't persuade the person, your feedback isn't useful. You are wasting yo
 
 You must be careful giving feedback.
 
-Poorly done, feedback can hurt your relationship with the person you are giving feedback to, make them less open to feedback from you in the future, and cause cause them a lot of distress.
+Poorly done, feedback can hurt your relationship with the person you are giving feedback to, cause them a lot of distress, and make them less open to feedback from you in the future.
 
 ## Feedback Methods
 
@@ -104,15 +104,19 @@ Write out a short paragraph containing the following.
 
 ### Observation
 
-The observation should be something obvious with little room for interpretation. For example, you took this observable action, or this thing happened.
-
+The observation should be something obvious with little room for interpretation: you took this observable action, or this thing happened. For example, you said you didn't read the book before coming to book club.
 
 ### Request
 
+The request should be some specific simple action they can directly take. For example, please read the book before coming to book club.
+
 ### Context
+
+The context is an explanation of why they should undertake the specific request. For example, reading the book beforehand will help you better participate in discussions and have more fun.
 
 ### Method
 
+The method is a description of the specific steps to accomplish the request. 
 
 
 [^communicate-quote]: [Cool Hand Luke on Wikipedia](https://en.wikipedia.org/wiki/Cool_Hand_Luke)

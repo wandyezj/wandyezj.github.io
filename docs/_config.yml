@@ -102,6 +102,7 @@ collections:
   thoughts:
     output: true
     title: ""
+    date: ""
     tags: []
   quotes:
     output: false
@@ -129,5 +130,5 @@ defaults:
   -
     scope:
       type: thoughts
-    value:
+    values:
       layout: post

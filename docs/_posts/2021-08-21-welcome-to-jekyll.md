@@ -58,11 +58,11 @@ Check Ubuntu version
 
 > lsb_release -a
 
-On Windows
+On Windows:
 
-Using WSL2 with ubuntu 20 follow [setup](#setup).
-
-[Using WSL2 with Ubuntu 22](#notes-for-ubuntu-22)
+- Using WSL2 with ubuntu 20 follow [setup](#setup).
+- [Using WSL2 with Ubuntu 22](#notes-for-ubuntu-22)
+- [Using WSL2 with Ubuntu 24](#notes-for-ubuntu-24)
 
 ### Setup
 
@@ -135,3 +135,52 @@ Ubuntu 22 comes with ruby 3 which is not compatible with the github-pages. Use r
     > ruby --version
 
 1. Follow [setup steps](#setup)
+
+## Notes for Ubuntu 24
+
+[Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
+
+(On Windows 11, open Powershell as administrator and run `wsl --install`)
+
+Get Ubuntu 24.04 LTS from the Microsoft Store.
+
+Ubuntu 24 comes with ruby 3.
+
+
+### Install ruby
+
+> gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
+\curl -sSL https://get.rvm.io | bash -s stable
+
+> rvm install "ruby-3.3.5"
+
+> rvm list known
+
+> rvm use ruby-3.3.5
+
+
+### Check Versions
+
+> ruby -v
+
+> gem -v
+
+> gcc -v
+
+> g++ -v
+
+> make -v
+
+### Install jekyll
+
+[Install Jekyll on Ubuntu](https://jekyllrb.com/docs/installation/ubuntu/)
+
+```text
+echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+> gem install jekyll bundler
+

@@ -60,9 +60,7 @@ Check Ubuntu version
 
 On Windows:
 
-- [Using WSL2 with Ubuntu 24](#notes-for-ubuntu-24)
-- [Using WSL2 with Ubuntu 22](#notes-for-ubuntu-22)
-- [Using WSL2 with ubuntu 20](#setup).
+[Using WSL2 with Ubuntu 24](#notes-for-ubuntu-24)
 
 
 ### Launch The Server
@@ -123,66 +121,3 @@ source ~/.bashrc
 ```
 
 > gem install jekyll bundler
-
-### Notes for Ubuntu 22
-
-[Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
-
-Before doing the setup
-
-Ubuntu 22 comes with ruby 3 which is not compatible with the github-pages. Use ruby 2 with rvm.
-
-1. Install RVM
-
-    https://rvm.io/rvm/install
-
-    > sudo apt install gnupg2
-
-    > gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
-
-    > \curl -sSL https://get.rvm.io | bash -s stable
-
-    After installing rvm restart WSL
-
-1. Install older ruby version
-
-    > rvm pkg install openssl
-
-    - Enter the password.
-
-    > rvm install "ruby-2.7.6" --with-openssl-dir=$HOME/.rvm/usr
-
-1. Check Installed Ruby Versions
-
-    > rvm list known
-
-1. Use Installed ruby versions
-
-    > rvm use ruby-2.7.6
-
-1. Check ruby version
-
-    > ruby --version
-
-1. Follow [setup steps](#setup)
-
-
-### Setup
-
-Packages have dependencies on multiple compilers:
-
-https://jekyllrb.com/docs/installation/
-
-> sudo apt-get install gcc -y
-
-> sudo apt install g++ -y
-
-> sudo apt-get update --fix-missing
-
-> sudo apt install make
-
-Once those compilers are installed:
-
-> sudo apt-get install ruby-full
-
-> sudo gem install jekyll bundler

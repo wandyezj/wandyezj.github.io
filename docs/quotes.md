@@ -6,18 +6,24 @@ permalink: /quotes/
 
 {% assign quotes = site.quotes %}
 {% for item in quotes %}
-{% assign text = item.quote | escape %}
-{% assign author = item.author | escape %}
-<p>
-"{{ text }}" - {{ author }}
-</p>
+{% assign quote = item.quote | strip | escape %}
+{% assign author = item.author | strip | escape %}
+{% assign from = item.from | strip | escape %}
+
+{% if author == empty %}
+"{{ quote }}"
+{% elsif from == empty %}
+"{{ quote }}" - {{ author }}
+{% else %}
+"{{ quote }}" - {{ author }} - {{ from }}
+{% endif %}
+
+
 {% endfor %}
 
-"A project without a timeline is a hobby."
+
 
 "Any telling of history is biased, for history is vast, sometimes unknown, and there is only so much time."
-
-"When graded, pupils put emphasis on the grade, not on learning." from The New Economics For Industry, Government, Education by W. Edwards Deming
 
 "With shared responsibility, no one is responsible." from The New Economics For Industry, Government, Education by W. Edwards Deming
 

@@ -160,6 +160,4 @@ Now entering party conventions, you have been warned!"
 
 “Concentrated power is not rendered harmless by the good intentions of those who create it” from Capitalism and Freedom by Milton Friedman
 
-“No society can be stable unless there is a basic core of value judgements that are unthinkably accepted by the bulk of its members” from Capitalism and Freedom by Milton Friedman
-
 "If you want control you need to be the one making things." wandyezj 2023

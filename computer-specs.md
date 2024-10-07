@@ -115,6 +115,10 @@ Samsung SSD 990 Pro 1TB X 1
 
 > Belkin 6-Outlet Commercial Power Strip Surge Protector with 8-Foot Cord and Rotating Plug, 720 Joules (BE106000-08R)
 
+## Security Key
+
+- Yubico - YubiKey 5C NFC
+
 ## Sideline
 
 [Bose Noise Canceling Headphones 700](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_black)

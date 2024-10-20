@@ -14,8 +14,8 @@ Story Games are a category of storytelling game [^storytelling-game-wikipedia], 
 
 How do I separate __Story Games__ from other storytelling games?
 
-- A focus on cooperative story telling where games rules give all players _equal narrative control_.
-- A player’s ability to affect what happens in the game is not dependent on a their character’s fictional ability to do those things. [^arsludi-defining-story-games]
+- A focus on cooperative story telling where games rules give all players _equal narrative control_. [^arsludi-our-ground-is-level]
+- A player’s ability to affect what happens in the game is not dependent on a their character’s fictional ability to do those things. [^arsludi-defining-story-games] 
 
 Different Story Games facilitate different kinds of stories.
 
@@ -147,6 +147,8 @@ A Story Game should strive to be about more than having fun. Games allow us to e
 [^storytelling-game-wikipedia]: [Storytelling Game on Wikipedia](https://en.wikipedia.org/wiki/Storytelling_game)
 
 [^arsludi-defining-story-games]: [Defining Story Games by Ben Robbins](https://arsludi.lamemage.com/index.php/460/defining-story-games/)
+
+[^arsludi-our-ground-is-level]: [Our Ground is Level and Our Table is Round by Ben Robbins](https://arsludi.lamemage.com/index.php/218/our-ground-is-level-and-our-table-is-round/)
 
 [^surround-the-fun]: [Sid Meier Alpha Centauri Development on Wikipedia](https://en.wikipedia.org/wiki/Sid_Meier%27s_Alpha_Centauri#Development)
 

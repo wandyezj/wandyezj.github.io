@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tags</title>
+  </head>
+  <body>
+    <script>
+      console.log("run");
+
+      const tags = [
+        { name: "something", color: "MediumSeaGreen" },
+        { name: "other", color: "Goldenrod" },
+        { name: "category", color: "LightSkyBlue" },
+        { name: "tag", color: "Seashell" },
+      ];
+
+      function capitalize(s) {
+        return s.charAt(0).toUpperCase() + s.slice(1);
+      }
+
+      /**
+       * @returns {HTMLElement}
+       */
+      function makeTagItem(tag) {
+        const { name, color } = tag;
+
+        const element = document.createElement("span");
+        element.innerText = capitalize(name);
+        element.style.backgroundColor = color;
+        element.style.borderRadius = "1em";
+        element.style.borderWidth = "10px";
+        element.style.margin = "0.25em";
+        element.style.padding = "0.5em";
+        //element.style.fontFamily = "Monospace";
+        element.style.font = "Monaco";
+
+        return element;
+      }
+
+      function load() {
+        console.log("load");
+
+        const elements = tags.map((name) => makeTagItem(name));
+
+        const elementTags = document.getElementById("tags");
+        elements.forEach((element) => {
+          elementTags.appendChild(element);
+        });
+      }
+
+      document.body.onload = load;
+    </script>
+    <h1>Heading</h1>
+    <p>paragraph</p>
+    <div id="tags"></div>
+  </body>
+</html>

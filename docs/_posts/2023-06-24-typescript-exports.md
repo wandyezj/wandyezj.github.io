@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript Exports"
 date: 2023-06-24
  00:00:00 -0700
-tags: typescript
+tags: software typescript
 ---
 
 There are multiple ways to export and import names[^name-identifier] in TypeScript. This post give a recommendation on how to import and export for general cases.

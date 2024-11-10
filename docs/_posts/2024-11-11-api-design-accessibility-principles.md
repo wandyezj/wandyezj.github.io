@@ -2,7 +2,7 @@
 layout: post
 title: "API Design Accessibility Principles"
 date: 2024-11-11 00:00:00 -0700
-tags: software
+tags: software API
 ---
 
 ## Abstract

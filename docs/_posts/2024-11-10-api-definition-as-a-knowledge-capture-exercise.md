@@ -2,7 +2,7 @@
 layout: post
 title: "API Definition as a knowledge capture exercise"
 date: 2024-11-10 00:00:00 -0700
-tags: software
+tags: software API
 ---
 
 The purpose of defining APIs is to capture as much information as possible as to how they should behave.

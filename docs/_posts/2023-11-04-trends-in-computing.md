@@ -2,7 +2,7 @@
 layout: post
 title: "Trends in Computing"
 date: 2023-11-04 00:00:00 -0700
-tags: business
+tags: software business
 ---
 
 This post focuses on what I see as trends in computing.

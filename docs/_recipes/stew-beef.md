@@ -46,7 +46,7 @@
 1. add beef broth, and bay leaves
 1. add beef back in and mushrooms
 1. bring to boil then reduce to low simmer.
-1. cover pot ant cook 1.5 hours
+1. cover pot and cook 1.5 hours
 1. add carrots and simmer for 10 minutes
 1. add potatoes and cook for 10 minutes
 1. salt and pepper to taste

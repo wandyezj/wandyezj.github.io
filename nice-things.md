@@ -156,6 +156,10 @@ Staub
 
 - Cast Iron Brasier with glass lid.
 
+### Muffin Cups
+
+- Bake Choice - Natural Tulip - Unbleached
+
 ### Containers
 
 Pyrex

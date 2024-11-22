@@ -161,3 +161,9 @@ Now entering party conventions, you have been warned!"
 “Concentrated power is not rendered harmless by the good intentions of those who create it” from Capitalism and Freedom by Milton Friedman
 
 "If you want control you need to be the one making things." wandyezj 2023
+
+“Tiger got to hunt, bird got to fly;
+Man got to sit and wonder 'why, why, why?'
+Tiger got to sleep, bird got to land;
+Man got to tell himself he understand.”
+― Kurt Vonnegut, Cat’s Cradle

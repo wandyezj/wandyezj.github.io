@@ -22,6 +22,8 @@ Developers frequently look up and ask about error messages online.
 
 If additional information is needed for a specific error message; place this information in separate fields from the main message. Make sure that this information does not contain customer content.
 
+Information about parameters passed to the API does not need to be reflected in the error message. This information is already available to the developer and they can log it if necessary.
+
 Providing a guarantee to developers using the API that the error message comes from a known list of fixed messages greatly reduces development costs and legal risks.
 
 

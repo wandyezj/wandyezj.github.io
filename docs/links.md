@@ -1,4 +1,8 @@
-# Links
+---
+layout: page
+title: Links
+permalink: /links/
+---
 
 ## Contents
 

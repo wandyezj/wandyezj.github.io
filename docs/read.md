@@ -1,5 +1,7 @@
 ---
 layout: page
+title: Read
+permalink: /read/
 ---
 
 ## Academic Books

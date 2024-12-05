@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Dynamic CSP</title>
+
+</head>
+
+<body>
+  <h1>Heading</h1>
+  <p id="color-me">paragraph</p>
+  <script>
+
+    async function getColor() {
+      // Call to retrieve external resource
+      const response = await fetch("https://raw.githubusercontent.com/wandyezj/data/refs/heads/master/lists/html-colors.list.txt")
+      const text = await response.text();
+      const colors = text.split("\n");
+      const index = Math.floor(Math.random() * 100) % colors.length;
+      const pick = colors[index]
+      console.log(pick);
+      document.getElementById("color-me").style.color = pick;
+    }
+
+    async function start() {
+      console.log("start");
+
+      // Call succeeds.
+      await getColor();
+
+      // Add meta element
+      const meta = document.createElement("meta");
+      meta.httpEquiv = "Content-Security-Policy";
+      meta.content = "default-src 'self'";
+      const head = document.getElementsByTagName("head")[0];
+      debugger;
+      head.appendChild(meta);
+
+      // Call blocked due to CSP.
+      await getColor();
+    }
+    start();
+
+  </script>
+</body>
+
+</html>

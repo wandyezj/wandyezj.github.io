@@ -3,7 +3,7 @@ layout: post
 title: "TypeScript Optional and Undefined"
 date: 2023-04-20
  00:00:00 -0700
-tags: typescript
+tags: software typescript API
 ---
 
 There is a slight difference between `property?: string` and `property: string | undefined`.[^typescript-optional-properties] [^3] [^4]

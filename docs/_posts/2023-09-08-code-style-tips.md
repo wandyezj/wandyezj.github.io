@@ -2,7 +2,7 @@
 layout: post
 title: "Code Style Tips"
 date: 2023-09-08 00:00:00 -0700
-tags: code
+tags: software code
 ---
 
 - [Avoid Ternaries within Ternaries](#avoid-ternaries-within-ternaries)

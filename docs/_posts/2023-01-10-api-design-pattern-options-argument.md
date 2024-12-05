@@ -3,7 +3,7 @@ layout: post
 title: "API Design Pattern Options Argument"
 date: 2023-01-10
  00:00:00 -0700
-tags: software architecture api design pattern
+tags: software API architecture design pattern
 ---
 
 The Options Argument Pattern:

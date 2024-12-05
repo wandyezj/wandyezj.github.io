@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tags</title>
+  </head>
+  <body>
+    <script>
+      console.log("run");
+
+      const tagsRaw = [
+        { name: "something", color: "MediumSeaGreen" },
+        { name: "other", color: "Goldenrod" },
+        { name: "category", color: "LightSkyBlue" },
+        { name: "tag", color: "Seashell" },
+      ];
+
+      function capitalize(s) {
+        return s.charAt(0).toUpperCase() + s.slice(1);
+      }
+
+      function removeDuplicates(items, prop) {
+        return items.filter(
+          (obj, index, self) =>
+            index === self.findIndex((t) => t[prop] === obj[prop])
+        );
+      }
+
+      function getTags(tags) {
+        const items = tags
+          .map(({ name, color }) => {
+            return {
+              name: capitalize(name),
+              color,
+              id: `tag-${name}`,
+            };
+          })
+
+          .sort((a, b) => {
+            return a.name > b.name;
+          });
+        const t = removeDuplicates(items, "name");
+        return t;
+      }
+
+      const tags = getTags(tagsRaw);
+
+      /**
+       * @returns {HTMLElement}
+       */
+      function makeTagItem(tag) {
+        const { name, color, id } = tag;
+
+        const element = document.createElement("span");
+        element.id = id;
+        element.innerText = capitalize(name);
+        element.style.backgroundColor = color;
+        element.style.borderRadius = "1em";
+        element.style.borderWidth = "10px";
+        element.style.margin = "0.25em";
+        element.style.padding = "0.5em";
+        //element.style.fontFamily = "Monospace";
+        element.style.font = "Monaco";
+
+        return element;
+      }
+
+      /**
+       * Add an element to the selected tags.
+       */
+      function getAddTagToSelected(tag) {
+        return function () {
+          const id = `selected-${tag.id}`;
+
+          // Avoid adding to selected if already selected
+          const present = document.getElementById(id);
+
+          if (present) {
+            return;
+          }
+
+          const item = makeTagItem({ ...tag, id });
+          const elementSelected = document.getElementById("tags-selected");
+          elementSelected.appendChild(item);
+        };
+      }
+
+      function load() {
+        console.log("load");
+
+        const elements = tags.map((tag) => {
+          const element = makeTagItem(tag);
+          element.onclick = getAddTagToSelected(tag);
+          return element;
+        });
+
+        const elementTags = document.getElementById("tags");
+        elements.forEach((element) => {
+          elementTags.appendChild(element);
+        });
+      }
+
+      document.body.onload = load;
+    </script>
+    <h1>Heading</h1>
+    <p>paragraph</p>
+    <div id="tags"></div>
+    <div id="tags-selected"></div>
+  </body>
+</html>

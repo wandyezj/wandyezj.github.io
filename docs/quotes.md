@@ -161,3 +161,21 @@ Now entering party conventions, you have been warned!"
 “Concentrated power is not rendered harmless by the good intentions of those who create it” from Capitalism and Freedom by Milton Friedman
 
 "If you want control you need to be the one making things." wandyezj 2023
+
+“Tiger got to hunt, bird got to fly;
+Man got to sit and wonder 'why, why, why?'
+Tiger got to sleep, bird got to land;
+Man got to tell himself he understand.”
+― Kurt Vonnegut, Cat’s Cradle
+
+"Look good. Feel good. Do good."
+
+"All people know the use of the useful, but nobody knows the use of the useless." - Zhuangzi
+
+"Nothing is difficult, everything is figuroutable"
+
+"The only way to get rid of a temptation is to yield to it. Resist it, and your soul grows sick with longing for the things it has forbidden to itself, with desire for what its monstrous laws have made monstrous and unlawful." - Oscar Wilde
+
+"The gross national product does not allow for the health of our children, the quality of their education, or the joy of their play … It measures neither our wit nor our courage, neither our wisdom nor our learning, neither our compassion nor our devotion to our country; it measures everything, in short, except that which makes life worthwhile." - Robert F. Kennedy
+
+“Convivial tools are even more powerful if instead of each tool being built in isolation of the others, it is built to follow some standard guidelines and principles, so that the knowledge of how to work one tool is readily transferred to others, thus amplifying the power of individual tools to empower everyone.” — Design for a Better World: Meaningful, Sustainable, Humanity Centered by Donald A. Norman

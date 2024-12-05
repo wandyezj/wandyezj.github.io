@@ -2,7 +2,7 @@
 layout: post
 title: "TypeScript NPM Package Exports"
 date: 2024-02-19 00:00:00 -0700
-tags: typescript
+tags: software typescript
 ---
 
 How should NPM packages exported things?

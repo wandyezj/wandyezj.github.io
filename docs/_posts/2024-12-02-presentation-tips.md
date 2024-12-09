@@ -16,10 +16,17 @@ Presentations should consist of the following pieces:
     - Introduce yourself
     - Introduce your topic
 - Empowerment Promise
+    - You will be able to...
 - Idea
     - Present one idea you want people to remember.
 - Examples
 - Show how it can be applied
+
+## Slides
+
+- __First Slide__ - include title and your name, introduce yourself.
+- __Remove Visual Clutter__ - logos, titles, bullets, etc...
+- __Big Font__ - have only a few words per slide, assume people will read the words and stop paying attention to what you are saying.
 
 ## Speaking
 
@@ -28,12 +35,6 @@ Presentations should consist of the following pieces:
 - __Vary Pitch and Volume__ - monotone puts people to sleep
 - __Express Passion__ - express your excitement about your subject - if you don't care how do you expect others to care?
 - __Interact with Audience__ - this is the main advantage of a live presenter - you can respond to your audience, you can ask them questions, and get a response.
-
-## Slides
-
-- __First Slide__ - include title and your name, introduce yourself.
-- __Remove Visual Clutter__ - logos, titles, bullets, etc...
-- __Big Font__ - have only a few words per slide, assume people will read the words and stop paying attention to what you are saying.s
 
 ## Reflect
 

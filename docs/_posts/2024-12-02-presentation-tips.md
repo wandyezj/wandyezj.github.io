@@ -25,7 +25,7 @@ Presentations should consist of the following pieces:
 ## Slides
 
 - __First Slide__ - include title and your name, introduce yourself.
-- __Remove Visual Clutter__ - logos, titles, bullets, etc...
+- __Remove Visual Clutter__ - logos, titles, bullets, backgrounds, etc...
 - __Big Font__ - have only a few words per slide, assume people will read the words and stop paying attention to what you are saying.
 
 ## Speaking

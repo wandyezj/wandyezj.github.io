@@ -16,3 +16,5 @@ Direct - tell me what you need - crisp clear
 When you say these words this is what I hear...
 Can you expand on what you are saying?
  
+
+write out a response, wait 10 seconds, re-read and then send.

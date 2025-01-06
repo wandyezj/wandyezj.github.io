@@ -60,6 +60,21 @@ console.log("Hello from script! ${id}")
       head.appendChild(script);
     }
 
+    function addWorker(options) {
+      const { code, } = options;
+
+      //const response = await fetch("worker.js");
+      //const code = await response.text();
+      const blob = new Blob([code]);
+      const worker = new Worker(URL.createObjectURL(blob));
+
+      worker.onmessage = (event) => {
+        console.log("Message from worker:", event.data);
+      }
+      worker.postMessage("Hello Worker!");
+
+    }
+
     function addMetaCsp(policy) {
       console.log(`Apply Policy: ${policy}`);
       // Add meta element to head
@@ -69,6 +84,7 @@ console.log("Hello from script! ${id}")
       const head = document.getElementsByTagName("head")[0];
       head.appendChild(meta);
     }
+
 
     async function start() {
       console.log("start");

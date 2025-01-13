@@ -19,6 +19,14 @@ Examples:
 
 > a lion ate a penguin
 
+## Take Characters Seriously
+
+The characters have to take themselves seriously. 
+
+## Actions have consequences
+
+Characters actions need to have consequences. The things characters do when they interact with each other have to have some meaningful consequence.
+
 
 
 [^specific-character-death]: [Reddit Tone Tricks Thread](https://www.reddit.com/r/gmless/comments/1fq57g5/tone_tricks/)

@@ -28,3 +28,15 @@ A more complex portfolio
 
 foreign - 25%
 small cap - 15%
+
+
+Trading
+
+Roth v 401k v Personal Investing Account
+
+Do you need to pay taxes for trading in the roth?
+
+Roth - do not need to pay taxes on gains, can only withdraw later
+
+
+HSA live off the dividend

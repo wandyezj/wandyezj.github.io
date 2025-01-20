@@ -166,6 +166,11 @@ What about cultural figures?
 - 1942 - 2016 [Muhammad Ali](https://en.wikipedia.org/wiki/Muhammad_Ali)
 - 1935 - 1977 [Elvis Presley](https://en.wikipedia.org/wiki/Elvis_Presley)
 
+### Movements
+
+- 1890 - 1910 [Art Nouveau](https://en.wikipedia.org/wiki/Art_Nouveau)
+- 1880 - 1920 [Arts and Crafts Movement](https://en.wikipedia.org/wiki/Arts_and_Crafts_movement)
+
 ### Wondrous Achievements
 
 - Financial Markets

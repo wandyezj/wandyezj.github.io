@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Inline Render"
-date: 2025-01-03 00:00:00 -0700
+date: 2025-01-04 00:00:00 -0700
 tags: markdown
 ---
 

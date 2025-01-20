@@ -1,5 +1,25 @@
 # Haikus
 
+## 2024
+
+```poems-haiku
+
+gears clink, planets spin
+circling around again
+ever in motion
+
+```
+
+```poems-haiku
+
+growing together
+tangling, climbing, supporting
+learning side by side
+
+```
+
+
+
 ## Ideas
 
 10 Commandment Haikus?

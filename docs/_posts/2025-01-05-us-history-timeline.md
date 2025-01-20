@@ -11,14 +11,43 @@ I believe history is worth studying to appreciate the complexity of issues and t
 
 Purpose can also be found in studying history, all aspects of humanity are on display, and it continues with every student. Where do students see themselves in the historical narrative?
 
+I believe the history of the United States is fundamental to understanding the modern world. The lessons in US History are an excellent starting point for anyone grappling with issues of the modern world: from  civil rights, to the environment.
+
+I believe the fundamental theme of America is freedom, this ideal has been constantly questioned and re-interpreted throughout American History. The history of the United States is one of people given the freedom to chart their destiny together.
+
+I believe history should be engaging. Tales, where people can put themselves in the shoes of those who lived it. Objects, that can be seen, touched, or played with get a feel for the time. People, who can become role models. Questions, to challenge and form your own beliefs.
+
+I want people to engage and grapple with the present with the knowledge of the past. I want people to be inspired by past achievements and have the ambition to top them. I want people to feel they have the freedom to believe, the freedom to choose, and the freedom to challenge quo.
+
+I want people to relate history to their own life, and use it as a practical tool. Fundamentally I seek to ignite curiosity and passion.
+
+All of this begins by asking questions, studying historical fact, and constructing narratives.
+
+## Questions
+
+- Why study history?
+
+Throughout American History we have revisited the following questions:
+
+- Who is a citizen?
+- Who can vote?
+- What is the role of government?
+- What rights do people have?
+- Where does each persons freedom begin and end?
+- What could be better? How? What worked?
+
+## Events
+
 This is a list of events in US History that show us progress towards American ideals.
 
+- 1787 [US Constitution Ratified](https://en.wikipedia.org/wiki/Constitution_of_the_United_States)
 - 1803 Louisiana Purchase
 - 1803 Marbury V. Madison
 - 1848 Mexico Cessation
+- 1861-1865 [Civil War](https://en.wikipedia.org/wiki/American_Civil_War)
 - 1862 [Morrill Act](https://en.wikipedia.org/wiki/Morrill_Land-Grant_Acts)
-- 1883 [Pendleton Civil Service Reform Act](https://en.wikipedia.org/wiki/Pendleton_Civil_Service_Reform_Act)
 - 1867 Alaska Purchase
+- 1883 [Pendleton Civil Service Reform Act](https://en.wikipedia.org/wiki/Pendleton_Civil_Service_Reform_Act)
 - 1906 [Pure Food and Drug Act](https://en.wikipedia.org/wiki/Pure_Food_and_Drug_Act)
 - 1938 [Fair Labor Standard Act](https://en.wikipedia.org/wiki/Fair_Labor_Standards_Act_of_1938)
 - 1914 [Panama Canal](https://en.wikipedia.org/wiki/Panama_Canal#United_States_construction_of_the_Panama_canal,_1904–1914)
@@ -42,13 +71,20 @@ This is a list of events in US History that show us progress towards American id
 - 1976 [Viking 1](https://en.wikipedia.org/wiki/Viking_1)
 - 1991 [Gulf War](https://en.wikipedia.org/wiki/Gulf_War)
 
+## Artifacts
+
 Along with important pieces of legislation, there are great works of American writing, speech, and art, that are emblematic of the American spirit.
+
+Art
 
 - [Uncle Sam](https://en.wikipedia.org/wiki/Uncle_Sam)
 - 1886 [Statue of Liberty](https://en.wikipedia.org/wiki/Statue_of_Liberty)
 - 1922 Lincoln Memorial
 - 1927 [Mount Rushmore](https://en.wikipedia.org/wiki/Mount_Rushmore)
 - 1933 [Detroit Industry Mural](https://en.wikipedia.org/wiki/Detroit_Industry_Murals)
+
+Literature
+
 - 1960 [To Kill a Mockingbird](https://en.wikipedia.org/wiki/To_Kill_a_Mockingbird)
 
 Speeches
@@ -60,24 +96,40 @@ Speeches
 Buildings
 
 - 1928 [Ford River Rouge Complex](https://en.wikipedia.org/wiki/Ford_River_Rouge_complex)
+- 1930 [Chrysler Building](https://en.wikipedia.org/wiki/Chrysler_Building)
+- 1937 [Fallingwater](https://en.wikipedia.org/wiki/Fallingwater)
 
-Tales
+## Tales
 
 - Columbus
 - Pilgrims
+- Louis & Clark
 - Edison & Tesla
 - Civil War
 - Voting Rights
+- Manufacturing
 - Labor Movement
 - Civil Rights Movement
+- Space Race
+- Internet
+- Families
 
-
-Institutions
+### Institutions
 
 - Companies
-    - Ford, US Steel, Boeing, GE, IBM, Microsoft
+    - Ford, US Steel, Boeing, GE, IBM, Microsoft, Hollywood
+- Railroads
+- Highways
+- Public Schools
+- Universities
+- State Governments
 
-Leaders - Scientists, Engineers, Judges - people who leave a lasting impact
+### Leaders
+
+People who leave a lasting impact. Leaders exist everywhere, I want students to see themselves as potential leaders. This means showing not just the faces of major leaders but also local leaders who leave and impact on the local community.
+
+Scientists, Engineers, Artists, Craftsmen, Judges
+
 
 - [Frank Lloyd Wright](https://en.wikipedia.org/wiki/Frank_Lloyd_Wright)
 - [Thomas J. Watson](https://en.wikipedia.org/wiki/Thomas_J._Watson)
@@ -103,9 +155,18 @@ Leaders - Scientists, Engineers, Judges - people who leave a lasting impact
 
 What about cultural figures?
 
-- Bruce Lee
+- Arnold Schwarzenegger
+- Jimi Hendrix
+- John Wayne
+- Humphrey Bogart
+- Shirley Temple
+- Alfred Hitchcock
+- Andy Warhol
+- 1940 - 1973 [Bruce Lee](https://en.wikipedia.org/wiki/Bruce_Lee)
+- 1942 - 2016 [Muhammad Ali](https://en.wikipedia.org/wiki/Muhammad_Ali)
+- 1935 - 1977 [Elvis Presley](https://en.wikipedia.org/wiki/Elvis_Presley)
 
-Wondrous Achievements
+### Wondrous Achievements
 
 - Financial Markets
 - Agriculture
@@ -118,13 +179,6 @@ Wondrous Achievements
 - United Nations
 
 
-Throughout American History we have revisited the following questions:
-
-- Who is a Citizen?
-- Who can vote?
-- What is the role of government?
-- What rights do people have?
-
 
 Notes
 
@@ -132,3 +186,4 @@ Notes
 
 [Wikipedia Photographs](https://en.wikipedia.org/wiki/List_of_photographs_considered_the_most_important)
 
+[Asianometry](https://www.youtube.com/asianometry)

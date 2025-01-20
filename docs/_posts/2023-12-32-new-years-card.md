@@ -141,6 +141,9 @@ Instead of writing this out every time get a stamp.
 - Customize
     - Include original artwork that was scanned in some of the cards for those that would appreciate it.
     - Possibly leave room for a custom note.
+    - Hand written note on nice card stock.
+        - What you enjoyed doing with them this year.
+        - What you are looking forward to.
 - Tracking - Storage of all card material in a single digital folder.
     - Addresses
     - Previous Cards per year

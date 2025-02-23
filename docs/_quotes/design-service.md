@@ -1,6 +1,6 @@
 ---
 quote: >
-    The most potent reason to study design history is to learn what _doesn’t work_ and _why_.
+    A chief service of a designer is helping clients discover what they want designed.
 author: Frederick P. Brooks
 from: >
     The Design of Design

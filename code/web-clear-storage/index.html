@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Title</title>
+
+  <script>
+    // What storage mechanisms exist in the browser? WebWorkers?
+    // How to ensure storage between sessions is cleaned out?
+
+
+    // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API
+
+    //
+    // Local Storage
+    //
+    // WebWorker - NOT Accessible
+    // https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+    // Partitioned by Origin
+    localStorage.clear();
+
+    //
+    // Session Storage
+    //
+    // WebWorker - API Accessible
+    // https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+    // Partitioned by Origin and by Browser Tab
+    // iframes are grouped by origin (i.e. iframes on same origin can access same localstorage)
+    sessionStorage.clear();
+
+    //
+    // IndexedDB
+    //
+    // WebWorker - API Accessible
+    //  - What happens if loaded inline?
+    // https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API
+    const results = indexedDB.databases().then((databases) => {
+      // wait for the confirmation the database is deleted.
+
+      const requests = databases.map(database => {
+        const name = database.name;
+        return new Promise((resolve, reject) => {
+          const request = indexedDB.deleteDatabase(name);
+          request.onsuccess = () => {
+            resolve({name, success: true});
+          };
+          request.onerror = () => {
+            resolve({name, success: false});
+          };
+          request.onblocked = () => {
+            resolve({name, success: false});
+          };
+        });
+      });
+
+      return Promise.all(requests)
+    });
+
+    //
+    // Cookies
+    //
+    // WebWorker - Blocked with addition of sandbox attributes
+    // The sandbox attribute on an iframe prevents it from reading and writing cookies
+    // https://developer.mozilla.org/en-US/docs/Web/HTML/Element/iframe#sandbox
+    // document.cookie =""
+    // Or sent via headers
+    // CookieStore
+    // - Experimental
+    // https://developer.mozilla.org/en-US/docs/Web/API/Cookie_Store_API
+
+    //
+    // Cache
+    //
+    // WebWorker - NOT Accessible
+    // https://developer.mozilla.org/en-US/docs/Web/API/Cache
+
+    // Shared Storage 
+    // - Experimental
+    // https://developer.mozilla.org/en-US/docs/Web/API/Shared_Storage_API
+    // Don't have to worry about this it requires enrollment.
+
+  </script>
+</head>
+
+<body>
+  <h1>Heading</h1>
+  <p>paragraph</p>
+</body>
+
+</html>

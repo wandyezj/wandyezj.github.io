@@ -48,13 +48,16 @@ Loose leaf is much tastier.
 
 - Lady Grey
 
+[trinitea](https://by-trinitea.com)
+
+- Honeybush
+
 [tealeaves](https://www.tealeaves.com/)
 
 - Vanilla Earl Grey
 - Eros
 - Silver Leaf
 
-### Teapot
 
 
 ### Biscotti
@@ -147,14 +150,25 @@ Grab Green Automatic Dishwashing Detergent Pods, Tangerine Lemongrass Scent
 
 [Consumer Report](https://www.consumerreports.org/)
 
+## Tile
+
+[Pewabic Pottery](https://www.pewabic.org/)
+    - The 4" x 4" flat tiles are nice coasters
 
 ## Kitchen
+
+### Teapot
+
+- Hario Glass Teapot
 
 ### Pans
 
 Staub 
 
 - Cast Iron Brasier with glass lid.
+
+Lodge - Cast Iron
+
 
 ### Muffin Cups
 

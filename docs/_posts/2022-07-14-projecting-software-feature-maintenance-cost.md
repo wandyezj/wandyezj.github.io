@@ -11,7 +11,7 @@ The maintenance of software consistently consumes developer resources.
 
 Understanding a features maintenance cost is important for determining the lifecycle cost for a feature.
 
-It is desireable to understand the lifecycle cost of a feature so it can be planned for and used to assess the financial tradeoffs of a feature.
+It is desirable to understand the lifecycle cost of a feature so it can be planned for and used to assess the financial tradeoffs of a feature.
 
 ## What leads to maintenance costs?
 
@@ -35,8 +35,8 @@ Change
 - Dependencies taken on the component by downstream dependencies.
 - Security vulnerabilities.
 - Bugs discovered through usage.
-- Request for new features
-- change of requirements
+- Requests for new features.
+- Change of requirements.
 
 ### Security Vulnerabilities
 
@@ -51,15 +51,15 @@ When people use the software they often begin to better understand their own req
 
 ## What factors increase the cost of change?
 
-- lack of expertise
-    - people have to implement software - people with less expertise take significantly more time.
+- Lack of expertise
+    - People have to implement software - people with less expertise take significantly more time.
     - Difficulty learning how to maintain a piece of softwares increases the costs.
     - Expertise includes knowledge of the specific software stack and tools used to implement the software, as well as knowledge about how the overall system is composed.
-- lack of documentation
-- lack of tests
+- Lack of documentation
+- Lack of tests
     - A lack of tests can cause a change to unknowingly break previous functionality. When existing functionality breaks and is shipped to customers this can cause a fire drill which consumed time to investigate, debug, and fix, that would otherwise go towards development.
-- lack of well specified interfaces
-- complex code
+- Lack of well specified interfaces
+- Complex code
 
 ## Why is projecting software feature maintenance cost difficult?
 
@@ -75,8 +75,8 @@ Leads to total costs being hard to predict.
 
 Increasing usage can increase:
 
-- the number of edge case behaviors encountered.
-- the number of changes people want to adapt the software to their needs.
+- The number of edge case behaviors encountered.
+- The number of changes people want to adapt the software to their needs.
 
 ### Dependency Changes
 

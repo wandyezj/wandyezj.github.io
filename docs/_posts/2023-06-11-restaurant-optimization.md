@@ -91,6 +91,7 @@ Provide silverware as needed. Minimize time spent providing silverware.
 - Use a password that consists of common easily remembered words.
     - A signature dish or drink is a nice touch for a password.
     - Do not use numbers or random letter combinations, this is hard for customers to remember.
+    - Do not use all capitol letters, this is hard to remember and distinguish.
 - Hide any networks customers cannot connect to from discovery.
     - This reduces the chance customers accidentally connect to the wrong wifi and ask staff for help.
 
@@ -98,3 +99,40 @@ Provide silverware as needed. Minimize time spent providing silverware.
 
 - Employees should work at a steady pace. Employees should not feel rushed, during peak times or during slow times.
 - Customers should be visibly served at a steady pace. Customers should have an accurate picture about how long they need to wait.
+
+-----
+
+## Employee Safety
+
+- Read and follow all OSHA standards and guidelines. Keeping employees safe and helping them avoid injuries is important for your business to do well.
+- Provide rubber mats underneath employee workstations where they are requires to stand for extended durations and provide seats where employees may sit to take a break.
+- Provide an extra positive experience to local officials responsible for your employees and customers safety. It's never a bad thing to have them close by
+
+## Employee Efficiency
+
+- A place for everything and everything in it's place. Provide clear places for every item in the establishment. This helps employees find items quickly and helps you keep track of what you are missing or low on at a glance.
+- Provide a secure place for employees personal items (Water bottle, coats, bags, lunch, etc..).
+- Mirrors placed well allow your employees to indirectly keep an eye on customers.
+
+## Noise Reduction
+
+- When making a latte by hand after foaming the milk, the vessel is tapped to settle bubbles. Tapping the metal vessel directly against the counter creates noise. One way to reduce this noise is to provide a cork pad on which to tap the vessel.
+
+## Look and Feel
+
+- Cups, Plates, and Mugs are a key piece of the restaurant experience. They communicate the places feel.
+- A glass water cup gives a more upscale feeling than plastic. A wide base on a glass cup helps keep the glass from being accidentally knocked over.
+- Keep service counters clear of clutter
+    - Provide clear convenient places for items that are frequently accessed.
+- Customers look at the ceiling. Many modern restaurants show the bare concrete ceiling with exposed wiring, ducts, and pipes. Consider if this is the feel you are going for or a drop down sub ceiling would be helpful. Sub ceilings can also help reduce noise by reducing the echo off hard surfaces.
+
+## Service
+
+- Accommodate customer requests when not overly burdensome. For example if customers want a specific mug and it's easy to do - make the accommodation.
+- Provide a convenient way for employees and customers to check ingredients of all products.
+    - Some customers are allergic to specific ingredients or have other specific dietary restrictions.
+    - For example: display the specific coffee brand, milk, and chocolate used. If you are uncomfortable displaying the product to your customers, then you probably shouldn't use it in your establishment.
+
+## Observations and Musings
+
+- In one coffee shop I saw different steaming vessels in use for different types of milk. Is this useful? This increases the complexity of the operation and training cost, but is a potential poke-yoke to ensure the right milk ise used for the right drink.

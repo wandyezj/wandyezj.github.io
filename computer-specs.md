@@ -75,7 +75,7 @@ Samsung SSD 990 Pro 1TB X 1
 
 ## Router
 
-[ASUS Whole Home Dual-Band AiMesh Router AC1900](https://www.asus.com/us/Commercial-Networking/AiMesh-AC1900-WiFi-System-RT-AC68U-2-Pack/)
+[ASUS RT-AXE7800](https://www.asus.com/us/networking-iot-servers/wifi-routers/asus-wifi-routers/rt-axe7800/)
 
 ## Monitors
 
@@ -126,5 +126,7 @@ Samsung SSD 990 Pro 1TB X 1
 [Microsoft LifeCam HD-3000](https://www.microsoft.com/accessories/en-us/products/webcams/lifecam-hd-3000/t3h-00011)
 
 [Microsoft Sculpt Ergonomic Mouse](https://www.microsoft.com/accessories/en-us/products/mice/sculpt-ergonomic-mouse/l6v-00001)
+
+[ASUS Whole Home Dual-Band AiMesh Router AC1900](https://www.asus.com/us/Commercial-Networking/AiMesh-AC1900-WiFi-System-RT-AC68U-2-Pack/)
 
 [PC Part Picker Link](https://pcpartpicker.com/list/JJN9Mv)

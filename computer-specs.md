@@ -119,6 +119,10 @@ Samsung SSD 990 Pro 1TB X 1
 
 - Yubico - YubiKey 5C NFC
 
+## Laptop
+
+Apple 2024 MacBook Air 13-inch Laptop: M3 chip, 3.6-inch Liquid Retina Display, 24GB Unified Memory, 512GB SSD Storage, Backlit Keyboard, Touch ID, Silver
+
 ## Sideline
 
 [Bose Noise Canceling Headphones 700](https://www.bose.com/en_us/products/headphones/noise_cancelling_headphones/noise-cancelling-headphones-700.html#v=noise_cancelling_headphones_700_black)

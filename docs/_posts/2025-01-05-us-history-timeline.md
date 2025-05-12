@@ -73,7 +73,7 @@ This is a list of events in US History that show us progress towards American id
 
 ## Artifacts
 
-Along with important pieces of legislation, there are great works of American writing, speech, and art, that are emblematic of the American spirit.
+Along with important pieces of legislation, there are exceptional works of American writing, speech, and art, emblematic of the American ethos.
 
 Art
 
@@ -108,6 +108,7 @@ Buildings
 - Civil War
 - Voting Rights
 - Manufacturing
+- Immigration
 - Labor Movement
 - Civil Rights Movement
 - Space Race
@@ -117,7 +118,7 @@ Buildings
 ### Institutions
 
 - Companies
-    - Ford, US Steel, Boeing, GE, IBM, Microsoft, Hollywood
+    - Ford, US Steel, Boeing, GE, IBM, Microsoft, Apple, Hollywood
 - Railroads
 - Highways
 - Public Schools
@@ -126,7 +127,7 @@ Buildings
 
 ### Leaders
 
-People who leave a lasting impact. Leaders exist everywhere, I want students to see themselves as potential leaders. This means showing not just the faces of major leaders but also local leaders who leave and impact on the local community.
+People who leave a lasting impact. Leaders exist everywhere, I want students to see themselves as potential leaders. This means showing not just the faces of major leaders but also local leaders who leave an impact on the local community.
 
 Scientists, Engineers, Artists, Craftsmen, Judges
 

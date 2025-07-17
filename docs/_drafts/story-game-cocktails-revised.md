@@ -160,10 +160,28 @@ In any order, give a brief vignette of your character that highlights how your c
 
 ## Action
 
-The action at the party will take place in rounds. Any player can start. Play then proceeds to the right
+The action at the party will take place in rounds. Any player can start. Play then proceeds to the player to your left.
 
-    - Rounds
-    - Enter
-    - Encounter
-    - Exit
-    - Epilog
+In the first round each player will narrate their character arriving at the party.
+
+### Entrance
+
+On your first turn describe your characters entrance to the party. How did they arrive? What are they wearing? How are they feeling?
+
+### Encounter
+
+On your turn, encounter others at the party.
+
+What's happening? Who's there? Role play the scene. You may include minor characters in the scene and have other players play them. Any player may have their character leave the scene at any time. End the scene when you've gotten what you want out of it.
+
+Reactions: When the scene is over any player may choose to narrate a brief reaction to the scene.
+
+### Exit
+
+You may choose to have your character exit the party as part of a scene or as a reaction. Describe your characters exit. How do they feel?
+
+When only one players character remains at the party cut to the epilog. The last character at the party does not narrate their exit.
+
+### Epilog
+
+In any order each player will narrate a final vignette describing their character after the party.

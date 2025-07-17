@@ -23,6 +23,7 @@
     - Exit
     - Epilog
 
+
 ## Thoughts
 
 - For questions, do we need agreement or can people pick which questions they want to answer until all main questions are answered?
@@ -31,11 +32,17 @@
     - You control what happens to your character
     - but only if
 
+## About
+
+I don't go to many parties, but I want to explore them through the safe lens of fiction.
+
 ## Introduction
 
 Cocktails is a game about party drama.
 
-What's the occasion? Who's the host? Who are the guests?
+What's the occasion? Who's the host?
+
+Who are the guests?
 
 Who's invited? Who's not, and shows up anyway?
 
@@ -49,11 +56,11 @@ What will guests walk away with?
 
 We will plan our party, invite our guests, and cut to the action.
 
-
-What happens when guests encounter each other? 
-
-
 ## Party Planning
+
+To plan our party we will decide on an occasion, setting, and host.
+
+We will then decide on the location, preparation, and invitation.
 
 ### Occasion
 
@@ -65,61 +72,98 @@ What's the occasion?
 - College Party
 - Coronation
 - Ball
+- Bachelor / Bachelorette Party
+- Retirement Party
+- Baby Shower
+- Holiday Office Party
+- Halloween Party
+- 4th of July Cookout
+- Block Party
+- Gallery Showing
+- After Party of High School Theater Production
+- Slumber Party
 
 What is this party like? vibes?
+Is it a formal occasion? Is it a gathering of friends?
 
-- Formal, Small Gathering
+### Setting
 
-What is the setting?
+What is our setting?
 
 - Real world
 - Sci Fi
 - Fantasy
 - Medieval
 
-### Location
-
-Where is the party?
-
-Describe the Location.
-Everyone describe one detail about the location. Do it again.
-
-House? Ballroom?
-
-### Events and Activities
-
-Everyone Describe one event or activity or object that takes place at the party.
-
-Is the activity planned or something that just happens?
-
 ### Host
 
-Who is hosting?
+Who is hosting? Who is throwing the party?
 
 - Name
 - Age
 - Pronouns
 - What do they look like?
+
+### Location
+
+Where is the party?
+
+Our party could take place at our parents house, or a space yachts grand ballroom.
+
+Decide on the location together.
+
+Describe the Location.
+Everyone, in any order, describe one detail about the location.
+
+### Preparation
+
+How is the location prepared for the party?
+
+Everyone, in any order, describe one detail of how the location is prepared for the party.
+
+What events or activities take place at the party?
+
+Everyone, in any order, describe an event, or activity that takes place at the party.
+
+Is the event or activity planned or something that just happens?
 
 ### Invitations
 
 How many guests are there?
 
-How are guests invited?
+How are guests invited? Is it a formal letter? A text message? A sign outside?
 
-Describe the invitation.
-
-Is it a letter? A text message?
+Describe the invitation together.
 
 ## Guests
 
-Create a list of character concepts. People who might be invited, might show up, might be at the party.
+Create a list of character concepts. People who might be invited, might show up, or might be at the party.
+
+Everyone, in any order, add one character concept of someone who might be at the party. Do it again.
 
 ## Create your character
 
-- Name
-- Age
-- Pronouns
-- What do they look like?
+Create the character concept you will play at the party.
+
+Describe their concept, looks, name, age, and pronouns.
+
+When you are done, share your character with everyone else though a brief vignette of your character finding out about the party. How does your character find out about the party? Where are they? How do they feel about the party?
+
+### Bonds
+
+Once everyone has shared their character, create bonds with the characters on your left and right.
+
+In any order, give a brief vignette of your character that highlights how your character feels about the characters on their right and left.
+
+- __Hope Left__ Why does your character _hope_ the character to your left is at the party?
+- __Dread Right__ Why does your character _dread_ the character to your right being at the party?
 
 ## Action
+
+The action at the party will take place in rounds. Any player can start. Play then proceeds to the right
+
+    - Rounds
+    - Enter
+    - Encounter
+    - Exit
+    - Epilog

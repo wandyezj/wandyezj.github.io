@@ -34,7 +34,7 @@
 
 ## About
 
-I don't go to many parties, but I want to explore them through the safe lens of fiction.
+"I don't go to many parties, but I want to explore them through the safe lens of fiction."
 
 ## Introduction
 
@@ -54,9 +54,11 @@ What happens when personalities clash?
 
 What will guests walk away with?
 
-We will plan our party, invite our guests, and cut to the action.
+In cocktails, we plan our party, invite our guests, and cut to the action.
 
 ## Party Planning
+
+
 
 To plan our party we will decide on an occasion, setting, and host.
 
@@ -137,19 +139,26 @@ Describe the invitation together.
 
 ## Guests
 
-Create a list of character concepts. People who might be invited, might show up, or might be at the party.
+We will first create guests and then pick these characters to play.
 
-Everyone, in any order, add one character concept of someone who might be at the party. Do it again.
+Create a list of guest. Guests who might be invited, might show up, or might be at the party.
 
-## Create your character
+Everyone, in any order, add one guest who might be at the party. Do it again.
+Give each guest a name and a one line description.
 
-Create the character concept you will play at the party.
+do names after creating characters
+
+### Create your character
+
+Create the character you will play at the party.
+
+It's ok to take the chracters and the host.
 
 Describe their concept, looks, name, age, and pronouns.
 
 When you are done, share your character with everyone else though a brief vignette of your character finding out about the party. How does your character find out about the party? Where are they? How do they feel about the party?
 
-### Bonds
+#### Bonds
 
 Once everyone has shared their character, create bonds with the characters on your left and right.
 
@@ -166,15 +175,19 @@ In the first round each player will narrate their character arriving at the part
 
 ### Entrance
 
+Popcorn
+
 On your first turn describe your characters entrance to the party. How did they arrive? What are they wearing? How are they feeling?
 
 ### Encounter
+
+
 
 On your turn, encounter others at the party.
 
 What's happening? Who's there? Role play the scene. You may include minor characters in the scene and have other players play them. Any player may have their character leave the scene at any time. End the scene when you've gotten what you want out of it.
 
-Reactions: When the scene is over any player may choose to narrate a brief reaction to the scene.
+Reactions: When the scene is over any player may choose to narrate a brief reaction to the scene. Eaves dropping, overheard, Across the room Hot Take
 
 ### Exit
 
@@ -185,3 +198,30 @@ When only one players character remains at the party cut to the epilog. The last
 ### Epilog
 
 In any order each player will narrate a final vignette describing their character after the party.
+
+
+
+## Revise
+
+### Outline
+
+Mesh more pieces together, instead have a specific list of questions.
+
+### Character Creation
+
+Concepts
+
+Main Characters
+
+Minor Characters - and what is their relationship with another players main character?
+
+Background Characters - boring
+
+### Scenes
+
+- better description of how to make a scene - your main character must be in the scene, and include any other characters you want.
+- Rename reactions to "Close Up" "Cut" "Cut" etc.. a brief moment on camera. The idea is overhearing, observing, the scean, What expression is on your characters face? What are they thinking? How do they feel?
+
+
+
+

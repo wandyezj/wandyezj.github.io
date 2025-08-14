@@ -138,7 +138,7 @@ The grape vines of Le Chateau are decorated with lights that are aglow in the ni
 
 We will brainstorm a list of character ideas, then create major characters, and minor characters.
 
-Major and Minor characters are owned by a single player for the duration of play. The player who owns a character has final say on what happens to their character.
+Major and Minor characters are owned by a single player for the duration of play. The player who owns a character plays that character in scenes and has final say on what happens to that character.
 
 ### Ideas
 
@@ -212,7 +212,9 @@ Example
 Character Name (Pronouns) (Player) - description
 ```
 
-You may add new minor characters as needed.
+You may add new minor characters as needed. Players may own multiple minor characters.
+The owning player role plays the character in all scenes.
+
 
 ## Scenes
 
@@ -224,7 +226,7 @@ Play take place in three phases:
 
 In the first phase: Entrances - players narrate their main characters entrance to the party.
 
-In the seconds phase: Encounters - player narrate or role play scenes of their character at the party.
+In the second phase: Encounters - players narrate or role play scenes of their character at the party.
 
 In the third phase: Epilogs - players narrate what happens to their character after the party.
 
@@ -243,29 +245,64 @@ In any order, describe your characters entrance to the party.
 
 Start with the first player, play rounds of encounters.
 
-- Who is there?
-- What are the characters doing? (see actions for inspiration)
-- Role play the scene.
-
-
-In subsequent rounds player will set encounters - scenes staring their main character and any other characters.
-
-Exit
-
-During any scene where a player main character is involved, a player may choose to have their main character exit the party.
-
-Rounds of Encounters continue until all but one main character has exited the party. Or when players decide it's the last round.
-
-If your main character has exited the party but other players main characters are still at the party set a scene with your minor character that involves
-
-Dictated Scenes - you may decide to narrate something your character does alone.
-
+In each round every player gets to set one scene.
 The next player is always the player to the left/down of the current player.
 
+Rounds of encounters continue until all but one main character has existed the party, or when players decide it's the final round.
+
+Each encounter is a scene set by the player whose turn it is.
+
+Players have two options:
+
+1. Dictate Scene
+1. Role Play Scene
+
+#### Exits
+
+During any scene where a player main character is involved, a player may choose to have their main character exit the party.
+Describe how the character exits the party. How do they feel?
+
+If your main character has exited the party but other players main characters are still at the party, set a scene with one of your minor characters that involves at least one main character still at the party.
+
+#### Dictate Scene
+
+In a dictated scene you dictate what happens.
+
+#### Role Play Scene
+
+In a Role Play scene you role play with other players to see what happens.
+
+Role Play scenes have three parts:
+
+1. Setup
+2. Action
+3. Close
+
+##### Setup
+
+Scenes should star main character of the player whose turn it is.
+
+Before starting a scene answer the following questions:
+
+- Who is there (besides your main character)
+- What is happening? What are the characters doing? (see actions for inspiration)
+- (optional) What happened previously that led to this scene?
+- (optional) What is your main character thinking?
+
+##### Action
+
+Role play the scene.
+
+##### Ending
+
+The player whose turn it is decides when to end the scene. Call "Scene" when you want the scene to end.
+
+It can be helpful for other players to suggest where to end the scene.
+Other players can suggest ending the scene by asking "Is that scene?".
 
 ### Epilogs
 
-In any order, narrate a final vignette describing their character after the party.
+In any order, narrate a final vignette describing your character after the party.
 
 
 ## FAQ

@@ -33,15 +33,15 @@
 ## Directions
 
 1. Preheat oven to 425 F
-1. place pealed bananas in another mixing bowel
+1. place pealed bananas in another mixing bowl
 1. smash up bananas
-1. pour wet ingredients into the bowel with the bananas
+1. pour wet ingredients into the bowl with the bananas
     - avocado oil
     - milk
     - vanilla
     - pumpkin puree
     - eggs
-1. place dry ingredients in one mixing bowel
+1. place dry ingredients in one mixing bowl
     - oats
     - flour
     - baking powder

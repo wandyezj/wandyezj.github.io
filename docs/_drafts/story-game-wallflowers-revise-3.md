@@ -1,3 +1,4 @@
+
 # Wallflowers
 
 ## Outline
@@ -99,17 +100,64 @@ Your wallflower sees someone at the party they recognize who - in their mind - f
 
 #### Scene
 
-Direct a scene for a wallflower to observe.
+Create a scene with another player for a wallflower to observe.
 
-You will set the scene, another player will narrate the action, and another player will describe their wallflowers reaction.
-
-1. Choose an observing wallflower. Pick a player whose wallflowers will observe the scene.
-2. Set the scene:
-    - Who is there (you may only use existing character concepts or named characters)?
-    - What is the situation?
-3. Choose a narrator. Pick a player to describe the outcome of the scene. They should be different player than the one controlling the observing wallflower.
-4. Wallflower impressions. What does the observing wallflowers reaction? Other players who did not direct or narrate may have their wallflowers observe as well.
+1. Roles
+    - Choose a observing wallflower.
+    - Choose a co-creator - another player to create the scene with.
+2. Characters
+    - First, the co-creator picks a character or stereotype to be part of the scene.
+    - Second, choose another character or stereotype to be part of the scene.
+3. Backdrop
+    - Describe the background activity that is occurring as the backdrop to this scene and where the characters are.
+4. Action
+    - Describe what the wallflower would reasonably see, hear, etc.. Don't describe anything the wallflower can't observe. For example: the wallflower can't observe what the characters or stereotypes are thinking or feeling.
+    - During the scene the wallflower should share their impression about what they observe.
+    - First, the co-creator describes the action their character or stereotype is taking
+    - Second, describe how your character of stereotype reacts.
+    - You may go back and forth a few times to narrate further action.
+    - Look away - the wallflower may choose to stop observing at any time to end the scene.
 5. Write down the scene under scenes. Give the scene a short name and description.
+
+Example
+
+```text
+The game has the following state.
+
+There are four players: Ace, Ben, Cal, Dan
+
+# Wallflowers
+
+- Azalea (Ace)
+- Begonia (Ben)
+- Camellia (Cal)
+- Dahlia (Dan)
+
+# Stereotypes
+
+- Alpha Xi Bros
+- Cheer Squad
+
+# Characters
+
+- Kirk - cheer squad - the base of the triangle
+
+It's Ace's turn. 
+
+Ace: I'm going to create a scene with Ben for Cal's wallflower Camellia to observe.
+Ben: I'm going to pick the stereotype of Alpha Xi Bros.
+Ace: Well, I'll pick Kirk.
+Ace: The backdrop is a frisbee game outside.
+Ben: Three Alpha Xi Bros are tossing the frisbee between themselves in a triangle.
+Ace: Kirk jumps into one of the passes and intercepts the frisbee.
+Cal: Camellia thinks, "I guess that guy really wanted to play, but what a jerk to interrupt"
+Ben: The bros laugh and widen their circle to make room for the new guy.
+Cal: Camellia looks away thinking "Ugh Bros, I'll never understand them"
+
+
+```
+
+
 
 #### Bloom
 

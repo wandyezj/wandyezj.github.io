@@ -144,7 +144,7 @@ Items that can be displayed and taken from a room temperature display case
     - Avocado, Tomato, Cheese
 - [Muesli](https://en.wikipedia.org/wiki/Muesli)
 - Yogurt Parfait
-    - Toppings (serve on side in small bowels) - Yogurt base, Dried Fruit, Granola, Nuts, Seeds, Honey, Fresh Fruit (Cherry, Blueberry, Raspberry)
+    - Toppings (serve on side in small bowls) - Yogurt base, Dried Fruit, Granola, Nuts, Seeds, Honey, Fresh Fruit (Cherry, Blueberry, Raspberry)
     - Serve in fancy glass
 
 #### Complex prepared food
@@ -163,7 +163,7 @@ Items that require some preparation and refrigeration or refrigerated display ca
 
 - Milk
 - Yogurt
-    - Toppings (serve on side in small bowels) - Dried Fruit, Granola, Yogurt base, Banana, Nuts, Seeds, Honey
+    - Toppings (serve on side in small bowls) - Dried Fruit, Granola, Yogurt base, Banana, Nuts, Seeds, Honey
 - Salad
 - Eggs
     - Hard Boiled

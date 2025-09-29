@@ -338,7 +338,7 @@ The owning player role plays the character in all scenes.
 
 ## Scenes
 
-Play take place in three phases:
+Play takes place in three phases:
 
 1. [Entrances](#entrances)
 2. [Encounters](#encounters)
@@ -351,7 +351,7 @@ In the second phase: Encounters - players narrate or role play scenes of their c
 In the third phase: Epilogs - players narrate what happens to their character after the party.
 
 At any time during a scene if a player thinks a characters action has consequence they can use ["But only if..."](#but-only-if)
-
+If you disagree about something or think there should be a consequence you can say but only if
 
 ### Entrances
 
@@ -368,7 +368,7 @@ Start with the first player, play rounds of encounters.
 In each round every player gets to set one scene.
 The next player is always the player to the left/down of the current player.
 
-Rounds of encounters continue until all but one main character has exited the party, or when players decide it's the final round.
+Rounds of encounters continue until all but one main character have exited the party, or when players decide it's the final round.
 
 Each encounter is a scene set by the player whose turn it is.
 
@@ -379,13 +379,14 @@ Players have two options:
 
 #### Exits
 
-During any scene where a player main character is involved, a player may choose to have their main character exit the party.
+During any scene where a players main character is involved, a player may choose to have their main character exit the party.
 Describe how the character exits the party. How do they feel?
 
 If your main character has exited the party but other players main characters are still at the party, set a scene with one of your minor characters that involves at least one main character still at the party.
 
-What if I still want to talk to someone who has left? You can't! Just like a ral party - things might not be resolved, prepare to be siappointed.
+What if I still want to talk to someone who has left? You can't! Just like a real party - things might not be resolved, prepare to be disappointed.
 
+It's polite to ask other players if they are done with your character, but you don't have to.
 Might want to ask cool if it leaves?
 
 #### Dictate Scene
@@ -565,9 +566,10 @@ There seem to be a few different scenarios:
 2. Specific Result - A player wants some result for their character or some change in the world
  - You can say - sure you can have that result - but only if... your character does this...
  - In this case - the player can pick if they want their character to do something
-   
+
 Feeling consequences are an interesting case - because it's still the player's character - so my thought is you could say that the other player's character realizes something - then see how the player has the character react.
 
 
 Describing the location before the party and then describing how it's prepared for the party.
 
+Do we need the host? Or is this a distraction?

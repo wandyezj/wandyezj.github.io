@@ -33,7 +33,7 @@ Wallflowers is a journey of self discovery. We reveal ourselves through our obse
 
 Who is your wallflower? Why are they here?
 
-Wallflowers don't interact with other guests at the party or with each other. The game is about the wallflowers: observations, impressions, thoughts, and memories. Critically, wallflowers never participate in scenes, they only observe.
+Wallflowers don't interact with other guests at the party or with each other. The game is about the wallflowers: observations, impressions, feelings, thoughts, and memories. Critically, wallflowers never participate in scenes, they only observe.
 
 How does it end? At some point your wallflower joins or leaves the party.
 
@@ -44,11 +44,7 @@ Write down the following sections
 ```text
 # Wallflowers
 
-# Stereotypes
-
 # Characters
-
-# Scenes
 
 # Turns
 ```
@@ -85,33 +81,55 @@ The game takes place in a series of rounds. Players take turns in order.
 
 On your turn you may do one of the following:
 
-- [__Stereotype__](#stereotype) - your wallflower stereotypes a group.
+- [__Glimpse__](#glimpse)
 - [__Recognize__](#recognize) - you wallflower recognizes someone.
+- [__Stereotype__](#stereotype) - your wallflower stereotypes a group.
 - [__Scene__](#scene) - create a scene for another wallflower to observe.
 - [__Bloom__](#bloom) - your wallflower joins or leaves the party.
 
-#### Stereotype
 
-Your wallflower sees a stereotype at the party. Have your wallflower observe an individual or a group. Name this stereotype. What does your wallflower think of them? Write down this stereotype under stereotypes along with the wallflowers impression.
+#### Glimpse
+
+Your wallflower glimpses someone at the party they don't know. What does this character look like?
+Name this character after an identifiable trait.
 
 #### Recognize
 
-Your wallflower sees someone at the party they recognize who - in their mind - fits into a previously named stereotype. Give this character a name. What does your wallflower think of this person?  Write them down under characters and which wallflower observed them along with the wallflowers impression.
+Your wallflower sees someone at the party they recognize.
+
+1. Give this character a name.
+2. Where does your wallflower know them from?
+3. What is your wallflowers gut feeling upon seeing this person? 
+4. Write them down under characters and which wallflower observed them along with the wallflowers impression.
+
+Example
+
+```text
+Oh Shit! It's Brad from Chemistry class, he's so nice. He let me borrow his text book, and I haven't given it back. I gotta
+```
+
+#### Stereotype
+
+Your wallflower observes an existing character a group at the party. How does  Name this stereotype. What does your wallflower think of them? Write down this stereotype under stereotypes along with the wallflowers impression.
+
 
 #### Scene
 
-Create a scene with another player for a wallflower to observe.
+Create a scene for one or more wallflowers to observe.
 
-1. Roles
-    - Choose a observing wallflower.
-    - Choose a co-creator - another player to create the scene with.
-2. Characters
-    - First, the co-creator picks a character or stereotype to be part of the scene.
-    - Second, choose another character or stereotype to be part of the scene.
+1. Observers
+    - Choose at least one observing wallflower. (You may not pick yours)
+2. Actors
+    - Who is there? Pick from already described characters.
 3. Backdrop
-    - Describe the background activity that is occurring as the backdrop to this scene and where the characters are.
+    - Describe the background activity to this scene and where the characters are.
 4. Action
+    - Action is done as a silent film.
     - Describe what the wallflower would reasonably see, hear, etc.. Don't describe anything the wallflower can't observe. For example: the wallflower can't observe what the characters or stereotypes are thinking or feeling.
+5. Impression
+    - Each observing wallflower must give at least one gut feeling reaction to the scene.
+
+
     - During the scene the wallflower should share their impression about what they observe.
     - First, the co-creator describes the action their character or stereotype is taking
     - Second, describe how your character of stereotype reacts.
@@ -192,6 +210,17 @@ The games ends when all wallflowers have bloomed or players decide to have a fin
 - Rose
 - Sunflower
 - Tulip
+- Violet
+
+### List of Feelings
+
+- Happy: Alive, Confident, Content, Delighted, Energized, Excited, Grateful, 
+- Sad: Alienated, Ashamed, Burdened, 
+condemned, Crushed, Defeated, Disappointed, Distressed, Drained, Agitated, Annoyed, Betrayed, Deceived, 
+- Angry: Frustrated, Furious, Afraid
+- Scared, Nervous, 
+- Confused, Awkward
+
 
 ### FAQ
 

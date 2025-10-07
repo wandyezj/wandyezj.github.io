@@ -43,7 +43,7 @@ How does it end? At some point your wallflower joins or leaves the party.
 
 ### Overview
 
-We will each play one wallflower.
+We will each play one wallflower at a large college party.
 
 The game takes place in a series of rounds. Players take turns in order.
 

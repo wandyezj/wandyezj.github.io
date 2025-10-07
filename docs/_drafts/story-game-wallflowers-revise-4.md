@@ -5,19 +5,19 @@
 
 - [Design Goals](#design-goals)
 - [Introduction](#introduction)
-- [Setup](#setup)
 - [Play](#play)
+    - [Overview](#overview)
+    - [Setup](#setup)
     - [On Your Turn](#on-your-turn)
         - [Glance](#glance)
         - [Recognize](#recognize)
         - [Scene](#scene)
         - [Bloom](#bloom)
-    - [Ending the Game](#ending-the-game)
     - [Conflict Resolution](#conflict-resolution)
 - [Appendix](#appendix)
     - [List of Flower Names](#list-of-flower-names)
-    - [Feelings Wheel](#feelings-wheel)
-    - [Feelings List](#feelings-list)
+    - [Feeling Wheel](#feeling-wheel)
+    - [Feeling List](#feeling-list)
     - [FAQ](#faq)
 
 ## Design Goals
@@ -39,7 +39,25 @@ Wallflowers don't interact with other guests at the party or with each other. Th
 
 How does it end? At some point your wallflower joins or leaves the party.
 
-## Setup
+## Play
+
+### Overview
+
+We will each play one wallflower.
+
+The game takes place in a series of rounds. Players take turns in order.
+
+[On your turn](#on-your-turn) you may do one of the following:
+
+- [__Glance__](#glance) - your wallower sees someone they don't know.
+- [__Recognize__](#recognize) - your wallflower sees someone they know.
+- [__Scene__](#scene) - create a scene for another players wallflower to observe.
+- [__Bloom__](#bloom) - your wallflower joins or leaves the party.
+
+The games ends when all wallflowers bloom or players decide to have a final round.
+
+
+### Setup
 
 Write down the following sections
 
@@ -75,18 +93,7 @@ Write down the following sections
 
     ```
 
-## Play
 
-The game takes place in a series of rounds. Players take turns in order.
-
-[On your turn](#on-your-turn) you may do one of the following:
-
-- [__Glance__](#glance) - your wallower sees someone they don't know.
-- [__Recognize__](#recognize) - your wallflower sees someone they know.
-- [__Scene__](#scene) - create a scene for another players wallflower to observe.
-- [__Bloom__](#bloom) - your wallflower joins or leaves the party.
-
-The games ends when all wallflowers bloom or players decide to have a final round.
 
 ### On Your Turn
 
@@ -94,7 +101,7 @@ The games ends when all wallflowers bloom or players decide to have a final roun
 
 Your wallflower glimpses someone at the party they don't know.
 
-0. What is your wallflowers gut reaction to this person? pick a feeling from the [feeling wheel](#feelings-wheel) or [feelings list](#feelings-list)
+0. What is your wallflowers gut reaction to this person? pick a feeling from the [feelin wheel](#feeling-wheel) or [feeling list](#feeling-list)
 1. What does this person look like? What are they wearing?
 2. Give this person a moniker. Example "Redhead with glasses"
 3. Write this person under characters and which wallflower observed them along with the wallflowers impression.
@@ -103,7 +110,7 @@ Your wallflower glimpses someone at the party they don't know.
 
 Your wallflower sees someone at the party they recognize.
 
-0. What is your wallflowers gut reaction to this person? Pick a feeling from the [feeling wheel](#feelings-wheel) or [feelings list](#feelings-list)
+0. What is your wallflowers gut reaction to this person? Pick a feeling from the [feeling wheel](#feeling-wheel) or [feeling list](#feelings-list)
 1. Give this person a name.
 2. Where does your wallflower know them from?
 3. What does this person look like? What are they wearing?
@@ -130,13 +137,13 @@ Create a scene for one or more wallflowers to observe.
     - Describe the action in terms of what the wallflower would observe. Don't describe anything the wallflower can't observe. For example: the wallflower can't observe what the characters are thinking or feeling.
 5. Impression
     - For each player observing:
-        - What is your wallflowers gut reaction to this scene? Pick a feeling from the [feeling wheel](#feelings-wheel) or [feelings list](#feelings-list)
+        - What is your wallflowers gut reaction to this scene? Pick a feeling from the [feeling wheel](#feeling-wheel) or [feeling list](#feelings-list)
 
 #### Bloom
 
 Describe your wallflower joining or leaving the party. Why did they stop being a wallflower?
 
-0. What is your wallflowers feeling? pick a feeling from the [feeling wheel](#feelings-wheel) or [feelings list](#feelings-list)
+0. What is your wallflowers feeling? pick a feeling from the [feeling wheel](#feeling-wheel) or [feeling list](#feeling-list)
 1. Narrate a short vignette of your wallflower joining or leaving the party.
 2. If your wallflower joined the party give your wallflower a name and write them under characters.
 
@@ -169,11 +176,11 @@ This wallflower may no longer be played. You may only play scenes on your turn g
 - Tulip
 - Violet
 
-### Feelings Wheel
+### Feeling Wheel
 
-![Feelings Wheel](https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Feeling_Wheel.png)
+![Feeling Wheel](https://upload.wikimedia.org/wikipedia/commons/c/c9/The_Feeling_Wheel.png)
 
-### Feelings List
+### Feeling List
 
 - Afraid
 - Agitated

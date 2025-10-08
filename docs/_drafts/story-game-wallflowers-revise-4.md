@@ -3,7 +3,6 @@
 
 ## Outline
 
-- [Design Goals](#design-goals)
 - [Introduction](#introduction)
 - [Play](#play)
     - [Overview](#overview)
@@ -18,20 +17,15 @@
     - [Flower List](#flower-list)
     - [Feeling Wheel](#feeling-wheel)
     - [Feeling List](#feeling-list)
+    - [Design Goals](#design-goals)
     - [FAQ](#faq)
 
-## Design Goals
-
-- Quick setup.
-- Give the experience of being a wallflower.
-- Play with perspective.
-- Reflect on how observation reveals the observer.
 
 ## Introduction
 
 __Read the following aloud to everyone__
 
-We are playing wallflowers at a large college party.
+We are playing wallflowers at a large high school party.
 
 Our game is about our wallflowers feelings and thoughts as they observe alone from the sidelines.
 
@@ -45,7 +39,7 @@ We find out when your wallflower blooms - joining or leaving the party.
 
 ### Overview
 
-We will each play one wallflower at a large college party.
+We will each play one wallflower at a large high school party in the present day.
 
 The game takes place in a series of rounds. Players take turns in order. see [On your turn](#on-your-turn).
 
@@ -222,14 +216,29 @@ This wallflower may no longer be played. You may only play scenes on your turn g
 - Rage
 - Scared
 
+### Design Goals
+
+- Quick setup.
+- Give the experience of being a wallflower.
+- Play with perspective.
+- Reflect on how observation reveals the observer.
+
 ### FAQ
 
 #### Can we play with other party contexts?
 
 Yes. However you will need to discuss and agree on that shared context first.
 
+Examples
+
+- College Party
+- Corporate Party
+
 #### Can wallflowers observe each other?
 
 No. Wallflowers are isolated and don't notice each other.
 
 Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
+
+
+

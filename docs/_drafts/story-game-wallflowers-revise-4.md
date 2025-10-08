@@ -15,7 +15,7 @@
         - [Bloom](#bloom)
     - [Conflict Resolution](#conflict-resolution)
 - [Appendix](#appendix)
-    - [List of Flower Names](#list-of-flower-names)
+    - [Flower List](#flower-list)
     - [Feeling Wheel](#feeling-wheel)
     - [Feeling List](#feeling-list)
     - [FAQ](#faq)
@@ -29,15 +29,17 @@
 
 ## Introduction
 
+__Read the following aloud to everyone__
+
 We are playing wallflowers at a large college party.
 
-Wallflowers is a journey of self discovery. We reveal ourselves through our observations and impressions of others.
+Our game is about our wallflowers feelings and thoughts as they observe alone from the sidelines.
+
+We reveal our wallflowers through their observations and impressions of others. In turn those impressions help our wallflowers discover themselves.
 
 Who is your wallflower? Why are they here?
 
-Wallflowers don't interact with other guests at the party or with each other. The game is about the wallflowers observations, feelings, and thoughts. Critically, wallflowers never participate in scenes, they only observe.
-
-How does it end? At some point your wallflower joins or leaves the party.
+We find out when your wallflower blooms - joining or leaving the party.
 
 ## Play
 
@@ -45,29 +47,21 @@ How does it end? At some point your wallflower joins or leaves the party.
 
 We will each play one wallflower at a large college party.
 
-The game takes place in a series of rounds. Players take turns in order.
-
-[On your turn](#on-your-turn) you may do one of the following:
-
-- [__Glance__](#glance) - your wallower sees someone they don't know.
-- [__Recognize__](#recognize) - your wallflower sees someone they know.
-- [__Scene__](#scene) - create a scene for another players wallflower to observe.
-- [__Bloom__](#bloom) - your wallflower joins or leaves the party.
+The game takes place in a series of rounds. Players take turns in order. see [On your turn](#on-your-turn).
 
 The games ends when all wallflowers bloom or players decide to have a final round.
 
-
 ### Setup
 
-Write down the following sections
+0. __Sections__ Write down the following sections:
 
-```text
-# Wallflowers
+    ```text
+    # Wallflowers
 
-# Characters
+    # Characters
 
-# Turns
-```
+    # Turns
+    ```
 
 1. __Turn order__ Decide on player turn order. Write down each players name in the wallflowers section. Turn order will be from first to last, then loop around.  
 
@@ -78,10 +72,11 @@ Write down the following sections
     - Ben
     - Cal
     - Dan
-
     ```
 
-2. __Aliases__ Give your wallflower an alias named after a flower. We will use this alias to refer to the wallflowers observations. Each player should pick out their own alias. Each flower alias should be a single word, and start with a different letter. Write down the aliases next to each player in the wallflowers section.
+2. __Aliases__ Give each wallflower an alias named after a flower. Each player should pick their own alias. See [Flower List](#flower-list).
+
+    Each flower alias should be a single word, and start with a different letter. Write down the aliases next to each player in the wallflowers section.
 
     ```text
     # Wallflowers
@@ -93,34 +88,46 @@ Write down the following sections
 
     ```
 
+3. __Stop__ We're done with setup! We don't know anything else about the wallflowers. We will discover everything about our wallflowers through play.
 
 
 ### On Your Turn
+
+On your turn you may do one of the following actions:
+
+- [__Glance__](#glance) - your wallower sees someone they don't know.
+- [__Recognize__](#recognize) - your wallflower sees someone they know.
+- [__Scene__](#scene) - create a scene for another players wallflower to observe.
+- [__Bloom__](#bloom) - your wallflower joins or leaves the party.
 
 #### Glance
 
 Your wallflower glimpses someone at the party they don't know.
 
-0. What is your wallflowers gut reaction to this person? pick a feeling from the [feelin wheel](#feeling-wheel) or [feeling list](#feeling-list)
+0. What is your wallflowers gut reaction to this person? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list). You may add additional feelings.
 1. What does this person look like? What are they wearing?
 2. Give this person a moniker. Example "Redhead with glasses"
 3. Write this person under characters and which wallflower observed them along with the wallflowers impression.
+
+note: multiple wallflowers may glance at the same character.
 
 #### Recognize
 
 Your wallflower sees someone at the party they recognize.
 
-0. What is your wallflowers gut reaction to this person? Pick a feeling from the [feeling wheel](#feeling-wheel) or [feeling list](#feelings-list)
-1. Give this person a name.
+0. What is your wallflowers gut reaction to this person? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list). You may add additional feelings.
+1. What is this persons name?
 2. Where does your wallflower know them from?
 3. What does this person look like? What are they wearing?
-4. Write this character under characters and which wallflower observed them along with the wallflowers impression.
+4. Write this character under characters along with which wallflower observed them and the wallflowers impression.
 
 Example
 
 ```text
-Oh Shit! It's Brad from Chemistry class, he's so nice. He let me borrow his text book, and I haven't given it back. I gotta
+(Fear and Guilt) Oh Shit! It's Brad from Chemistry class, he's so nice. He let me borrow his text book, and I haven't given it back.
 ```
+
+note: multiple wallflowers may recognize a character.
 
 #### Scene
 
@@ -134,18 +141,18 @@ Create a scene for one or more wallflowers to observe.
     - Describe the background activity to this scene and where the characters are.
 4. Action
     - Action is done as a silent film.
-    - Describe the action in terms of what the wallflower would observe. Don't describe anything the wallflower can't observe. For example: the wallflower can't observe what the characters are thinking or feeling.
+    - Describe the action in terms of what the wallflower would observe. What are the characters doing? Don't describe anything the wallflower can't observe. For example: the wallflower can't observe what the characters are thinking or feeling.
 5. Impression
     - For each player observing:
-        - What is your wallflowers gut reaction to this scene? Pick a feeling from the [feeling wheel](#feeling-wheel) or [feeling list](#feelings-list)
+        - What is your wallflowers gut reaction to this scene? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
 
 #### Bloom
 
 Describe your wallflower joining or leaving the party. Why did they stop being a wallflower?
 
-0. What is your wallflowers feeling? pick a feeling from the [feeling wheel](#feeling-wheel) or [feeling list](#feeling-list)
+0. What is your wallflowers feeling? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
 1. Narrate a short vignette of your wallflower joining or leaving the party.
-2. If your wallflower joined the party give your wallflower a name and write them under characters.
+2. If your wallflower joined the party name your wallflower and write them down under characters.
 
 This wallflower may no longer be played. You may only play scenes on your turn going forward.
 
@@ -159,7 +166,7 @@ This wallflower may no longer be played. You may only play scenes on your turn g
 
 ## Appendix
 
-### List of Flower Names
+### Flower List
 
 - Azalea
 - Begonia

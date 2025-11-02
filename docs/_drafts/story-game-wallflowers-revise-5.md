@@ -123,6 +123,8 @@ Describe a person or group at the party the wallflower notices.
 
 Does the wallflower recognize this person? From where?
 
+- __note__: The wallflower does NOT have a close connection to anyone at the party. This person may NOT be a family member, close friend, etc...
+
 What does this person look like?
 
 What are they doing?
@@ -293,7 +295,6 @@ Reason: This would contradict the design goal of the wallflowers observations re
 
 ## Notes
 
-
 - Your wallflowers reaction as the wallflwoer
 - What do you see
 - Fix large party of high school students
@@ -327,28 +328,3 @@ Tell them a thing and they react to it. Single Move
 - Order verses picking. picking takes too long verses dictated. then swap order
 
 - Person, Scene, Thing - describe an object at the party - you tell them what they see.
-
-
-## Revise
-
-On your turn describe something at the party: thing {space, sound, smell}, person, scene the wallflower observes. Or you may add a detail to something already described that the wallflower notices.
-
-You don't have a close connection to anyone at the party.
-
-
-The person above gives the wallflowers impression of that thing- then than person does the same.
-Mantra for wallflower impression
-I am [wallflower name]. I am a wallflower. Alone, I see... I think... I feel...
-No one knows me.
-
-If the players wallflower has bloomed then you may pick any remaining wallflower to observe.
-
-Just describe the action joining the crowd fade into anonymity.
-
-After 3 impressions then can bloom.
-
-No one 'knows' you, you don't 'know' anyone.
-
-Only describe don't allow blooming at all
-
-How many rounds? 3? 5?

@@ -3,16 +3,18 @@
 
 ## Outline
 
+- [Overview](#overview)
+- [Setup](#setup)
 - [Introduction](#introduction)
-- [Play](#play)
-    - [Overview](#overview)
-    - [Setup](#setup)
-    - [On Your Turn](#on-your-turn)
-        - [Glance](#glance)
-        - [Recognize](#recognize)
+- [On Your Turn](#on-your-turn)
+    - [Observation](#observation)
+        - [Object](#object)
+        - [People](#people)
         - [Scene](#scene)
-        - [Bloom](#bloom)
-    - [Conflict Resolution](#conflict-resolution)
+        - [Detail](#detail)
+    - [Impression](#impression)
+    - [Bloom](#bloom)
+- [Conflict Resolution](#conflict-resolution)
 - [Appendix](#appendix)
     - [Flower List](#flower-list)
     - [Feeling Wheel](#feeling-wheel)
@@ -20,39 +22,22 @@
     - [Design Goals](#design-goals)
     - [FAQ](#faq)
 
-
-## Introduction
-
-__Read the following aloud to everyone__
-
-We are playing wallflowers at a large high school party.
-
-Our game is about our wallflowers feelings and thoughts as they observe alone from the sidelines.
-
-We reveal our wallflowers through their observations and impressions of others. In turn those impressions help our wallflowers discover themselves.
-
-Who is your wallflower? Why are they here?
-
-We find out when your wallflower blooms - joining or leaving the party.
-
-## Play
-
-### Overview
+## Overview
 
 We will each play one wallflower at a large high school party in the present day.
 
-The game takes place in a series of rounds. Players take turns in order. see [On your turn](#on-your-turn).
+The game takes place in a series of six rounds. Players take turns in order. see [On your turn](#on-your-turn).
 
-The games ends when all wallflowers bloom or players decide to have a final round.
+After five rounds of observations and impressions, the game ends with a final round where all wallflowers bloom.
 
-### Setup
+## Setup
 
 0. __Sections__ Write down the following sections:
 
     ```text
     # Wallflowers
 
-    # Characters
+    # Party
 
     # Turns
     ```
@@ -85,70 +70,134 @@ The games ends when all wallflowers bloom or players decide to have a final roun
 3. __Stop__ We're done with setup! We don't know anything else about the wallflowers. We will discover everything about our wallflowers through play.
 
 
-### On Your Turn
+## Introduction
 
-On your turn you may do one of the following actions:
+Read the following aloud to everyone:
 
-- [__Glance__](#glance) - your wallower sees someone they don't know.
-- [__Recognize__](#recognize) - your wallflower sees someone they know.
-- [__Scene__](#scene) - create a scene for another players wallflower to observe.
-- [__Bloom__](#bloom) - your wallflower joins or leaves the party.
+> We are playing wallflowers - in high school - at a large house party.
+>
+> Our game is about our wallflowers observations, feelings, and thoughts as they observe alone from the sidelines.
+>
+> Who is your wallflower? Why are they here?
+>
+> We find out when your wallflower blooms - joining or leaving the party.
 
-#### Glance
 
-Your wallflower glimpses someone at the party they don't know.
+## On Your Turn
 
-0. What is your wallflowers gut reaction to this person? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list). You may add additional feelings.
-1. What does this person look like? What are they wearing?
-2. Give this person a moniker. Example "Redhead with glasses"
-3. Write this person under characters and which wallflower observed them along with the wallflowers impression.
+If you are the first player, announce each round `Round X`, When it is the fifth round add `Next round we bloom`.
 
-note: multiple wallflowers may glance at the same character.
+In the first five rounds a turn consist of two parts:
 
-#### Recognize
+1. [__Observation__](#observation) Describe something at the party the wallflower above you observes.
+2. [__Impression__](#impression) The wallflower describes their impression.
 
-Your wallflower sees someone at the party they recognize.
+In the final sixth round we close the game by having our wallflowers [Bloom](#bloom).
 
-0. What is your wallflowers gut reaction to this person? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list). You may add additional feelings.
-1. What is this persons name?
-2. Where does your wallflower know them from?
-3. What does this person look like? What are they wearing?
-4. Write this character under characters along with which wallflower observed them and the wallflowers impression.
 
-Example
+### Observation
 
-```text
-(Fear and Guilt) Oh Shit! It's Brad from Chemistry class, he's so nice. He let me borrow his text book, and I haven't given it back.
-```
+Describe something at the party the wallflower notices.
 
-note: multiple wallflowers may recognize a character.
+- Object
+- People
+- Scene
+- Detail
+
+Only describe what a wallflower sees, hears, or might reasonably know.
+Do NOT describe what the wallflower thinks or feels. Do NOT use any judgement words.
+
+#### Object
+
+Describe a thing at the party the wallflower notices.
+
+This could be a room, furniture, food, sound, smell.
+
+> The heavy oak front door opens briefly to let even more people in, then slams shut letting in a brief blast of freezing winter air.
+
+> There is a huge white couch with massive cushions.
+
+#### People
+
+Describe a person or group at the party the wallflower notices.
+
+Does the wallflower recognize this person? From where?
+
+What does this person look like?
+
+What are they doing?
+
+> A big guy with a scowl on his face shoves past you growling "Watch it". He reeks BO, and his slick sweat smears across your arms.
+
+> Matt from Math class walks by with a huge smile on his face, he's wearing his usual baseball cap with the High School Griffin mascot, a T-Shirt with that says "Rock Punks" in gigantic pink letters, along with his usual shorts paired with socks and sandals, showing off his incredibly smooth legs.
+
+> A group of girls from the cheer squad dressed in matching hoodies and sweat pants are in a circle in the corner laughing so loudly you can hear it across the room.
 
 #### Scene
 
-Create a scene for one or more wallflowers to observe.
+Describe a scene at the party the wallflower notices.
 
-1. Observers
-    - Choose one or more observing wallflowers. (You must pick another players wallflower)
-2. Actors
-    - Who is there? Pick only from already described characters.
-3. Backdrop
-    - Describe the background activity to this scene and where the characters are.
-4. Action
-    - Action is done as a silent film.
-    - Describe the action in terms of what the wallflower would observe. What are the characters doing? Don't describe anything the wallflower can't observe. For example: the wallflower can't observe what the characters are thinking or feeling.
-5. Impression
-    - For each player observing:
-        - What is your wallflowers gut reaction to this scene? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
+> A group of guys from the football team, squashed together on the while couch are staring at the TV, and suddenly jump up cheering, a bowl of popcorn tumbles onto the floor flinging popcorn everywhere.
 
-#### Bloom
+> A girl tightly griping a boys hand drags him to the front door. Her brows are furrowed she looks really annoyed.
+
+
+#### Detail
+
+You may add a detail the wallflower notices to something that has already been described.
+
+> The huge white couch has a wet stain on the right arm.
+
+
+### Impression
+
+Once something has been described the wallflower gives their impression.
+
+On your turn guide the wallflower through their impression.
+
+> So [player name], what is [wallflower names] impression?
+
+Have the wallflower recite the following and fill in each part between brackets `[]`
+
+> I am [wallflower name].
+>
+> I am a wallflower.
+>
+> Alone...
+>
+> I see... [see]
+
+- See
+    - Describe your wallflowers observation. Summarize what was described. Do NOT add anything new.
+
+> I think... [think]
+
+- Think
+    - What does your wallflower think about this?
+    - What thoughts go though your wallflowers head?
+
+> I feel... [feel]
+
+- Feel
+    - What is your wallflowers gut reaction?
+    - Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
+
+Example
+
+> I am Azalea. I am a wallflower. Alone...
+>
+> I see... the cheer squad laughing in the corner.
+>
+> I think... must be nice to fit in.
+>
+> I feel... awkward.
+
+### Bloom
 
 Describe your wallflower joining or leaving the party. Why did they stop being a wallflower?
 
-0. What is your wallflowers feeling? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
-1. Narrate a short vignette of your wallflower joining or leaving the party.
-2. If your wallflower joined the party name your wallflower and write them down under characters.
-
-This wallflower may no longer be played. You may only play scenes on your turn going forward.
+1. What is your wallflowers feeling? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
+2. Narrate a short vignette of your wallflower joining or leaving the party.
 
 
 ### Conflict Resolution
@@ -242,8 +291,8 @@ Reason: This would contradict the design goal of the wallflowers observations re
 
 
 
+## Notes
 
-##### Notes
 
 - Your wallflowers reaction as the wallflwoer
 - What do you see
@@ -278,3 +327,28 @@ Tell them a thing and they react to it. Single Move
 - Order verses picking. picking takes too long verses dictated. then swap order
 
 - Person, Scene, Thing - describe an object at the party - you tell them what they see.
+
+
+## Revise
+
+On your turn describe something at the party: thing {space, sound, smell}, person, scene the wallflower observes. Or you may add a detail to something already described that the wallflower notices.
+
+You don't have a close connection to anyone at the party.
+
+
+The person above gives the wallflowers impression of that thing- then than person does the same.
+Mantra for wallflower impression
+I am [wallflower name]. I am a wallflower. Alone, I see... I think... I feel...
+No one knows me.
+
+If the players wallflower has bloomed then you may pick any remaining wallflower to observe.
+
+Just describe the action joining the crowd fade into anonymity.
+
+After 3 impressions then can bloom.
+
+No one 'knows' you, you don't 'know' anyone.
+
+Only describe don't allow blooming at all
+
+How many rounds? 3? 5?

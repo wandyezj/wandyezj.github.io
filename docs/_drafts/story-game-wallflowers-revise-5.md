@@ -328,3 +328,10 @@ Tell them a thing and they react to it. Single Move
 - Order verses picking. picking takes too long verses dictated. then swap order
 
 - Person, Scene, Thing - describe an object at the party - you tell them what they see.
+
+
+Should there be a round where players just describe action at the party? Or what's happening?
+
+Should there be context
+
+"In the beginning of the night"

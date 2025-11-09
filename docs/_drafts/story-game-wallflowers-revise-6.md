@@ -1,11 +1,12 @@
 # Wallflowers
 
-Wallflowers is a game for 3-4 players.
+Wallflowers is a game for 3 - 4 players.
+
 Decide on a facilitator to lead everyone through the rules.
 
 Read the following aloud to everyone:
 
-> __!!!WARNING!!!__ This game can be emotionally intense. Watch yourself - let other players know if something makes you uncomfortable. Watch others - it's ok to ask if people are comfortable with something.
+> __!!!WARNING!!!__ This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's ok to ask if people are comfortable.
 
 ## Introduction
 
@@ -52,7 +53,7 @@ Violet
 
 (2) __Turn order__ Decide on player turn order.
 
-Write down each wallflower alias and players names in a section titles `Wallflowers`
+Write down each wallflower's alias and player's names in a section titled `Wallflowers`.
 
 Turn order will be from first to last, then loop around.  
 
@@ -69,15 +70,13 @@ Wallflowers
 
 (3) __Rounds__
 
-There are five rounds. Each round needs an opening phrase.
+The game has five rounds.
 
-Each opening phrase should establish when the round occurs, and what is generally happening at the party.
-
-Brainstorm opening phrases.
+Work together to craft opening phrases for each round. The opening phrase should establish when during the party it occurs, and what the party looks like overall.
 
 Assign one phrase to each round. You may repeat phrases.
 
-The final round is when your wallflowers join or leave the party. Prefix this opening with `(Bloom)`
+The final round is when your wallflowers joins or leaves the party - prefix this round with `(Bloom)`.
 
 Example
 
@@ -245,3 +244,8 @@ No. Wallflowers are isolated and don't notice each other.
 
 Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
 
+## Thoughts
+
+Would it be better to allow players to bloom when they want?
+
+Would it be better to let players repeat rounds if they want?

@@ -54,11 +54,11 @@ Violet
 ```
 
 
-(2) __Turn order__ Decide on player turn order.
+(2) __Turn order__
 
 Create the wallflower deck.
 
-Give each player a blank index card, and have then write down their name and wallflower alias on one side, leaving the back blank.
+Give each player a blank index card, and have them write down their name and wallflower alias on one side, leaving the back blank.
 
 ```text
 Wallflower Name
@@ -72,7 +72,7 @@ Azalea
 (Ace)
 ```
 
-Draw one card, that player goes first each round and play proceeds to the right.
+Draw one card, that player goes first each round, play proceeds to the right.
 
 
 ### For online play
@@ -108,7 +108,7 @@ The game takes place across five rounds.
 
 In the first four rounds players take turns describing something at the party and giving their wallflowers impression.
 
-In the final `(bloom)` round have your wallflower __Bloom__.
+In the final round have your wallflower __Bloom__.
 
 
 Each round has an opening line and rule for introducing something to the party.
@@ -125,10 +125,10 @@ Rounds
 (III) It's the middle of the night, the house is packed, the music is up.
     Party: Introduce something that builds on something another player has said.
 
-(IV) It's still the middle of the night, the energy
+(IV) It's still the middle of the night, the music and energy have shifted to be more relaxed.
     Party: Introduce something that builds on something another player has said.
 
-(V) (Bloom) It's late, the party is starting to wind down, some people ar starting to leave, others are settling into quieter conversations.
+(V) (Bloom) It's late, the party is starting to wind down, some people are starting to leave, others are settling into quieter conversations.
 ```
 
 At the beginning of each round:
@@ -136,6 +136,7 @@ At the beginning of each round:
 - Shuffle the wallflower deck, and deal one card to each player face down.
 - Read the opening line for the round.
 
+Have each player take their turn in order.
 
 ## Turn
 

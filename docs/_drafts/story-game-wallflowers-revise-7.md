@@ -6,7 +6,7 @@ Decide on a facilitator to lead everyone through the rules.
 
 Read the following aloud to everyone:
 
-> __!!!WARNING!!!__ This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's ok to ask if people are comfortable.
+> __!!!WARNING!!!__ This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's always ok to ask if people are comfortable.
 
 ## Introduction
 
@@ -16,11 +16,13 @@ Read the following aloud to everyone:
 >
 > Your wallflower showed up to the party by themselves, and is now watching the party alone from the sidelines.
 >
-> Who is your wallflower? Why are they here?
+> Initially, you know nothing about your wallflower except their alias.
 >
-> What do our wallflower see, think, and feel, as they observe the party unfold?
+> What does your wallflower see, think, and feel - as they watch the party unfold?
 >
 > Do they want to join the party or leave?
+>
+> Don't try to answer yet! You will discover everything about your wallflower through play.
 
 ## Setup
 
@@ -28,7 +30,7 @@ Read the following aloud to everyone:
 
 Each player will play one wallflower.
 
-> Pick out an alias for your wallflower named after a flower.
+> Pick an alias for your wallflower named after a flower.
 
 Each alias must be a single word flower name and start with a different letter.
 
@@ -51,15 +53,42 @@ Tulip
 Violet
 ```
 
+
 (2) __Turn order__ Decide on player turn order.
+
+Create the wallflower deck.
+
+Give each player a blank index card, and have then write down their name and wallflower alias on one side, leaving the back blank.
+
+```text
+Wallflower Name
+(Player Name)
+```
+
+Example
+
+```text
+Azalea
+(Ace)
+```
+
+Draw one card, that player goes first each round and play proceeds to the right.
+
+
+### For online play
+
+Write down each player's name in a section titles `Turn Order`. Play proceeds from first to last.
 
 Write down each wallflower's alias and player's names in a section titled `Wallflowers`.
 
-Turn order will be from first to last, then loop around.  
-
-Example:
-
 ```text
+Turn Order
+
+- Ace
+- Ben
+- Cal
+- Dan
+
 Wallflowers
 
 - Azalea (Ace)
@@ -73,44 +102,61 @@ Wallflowers
 
 > We're done with setup! We don't know anything else about the wallflowers. We will discover everything about our wallflowers through play.
 
-
 ## Rounds
 
 The game takes place across five rounds.
-
-Each round has an opening line.
-
-```text
-Rounds
-
-Early in the evening, not many people are here yet.
-
-It's still early in the evening, people are arriving and socializing.
-
-In the middle of the night, the house is packed, the music is up.
-
-It's still the middle of the night, the energy 
-
-(Bloom) It's late, the party is starting to wind down, some people ar starting to leave, others are settling into quieter conversations.
-```
-
 
 In the first four rounds players take turns describing something at the party and giving their wallflowers impression.
 
 In the final `(bloom)` round have your wallflower __Bloom__.
 
-At the beginning of each round, read the opening for the round.
+
+Each round has an opening line and rule for introducing something to the party.
+
+```text
+Rounds
+
+(I) It's early in the evening, not many people are here yet.
+    Party: Introduce something new.
+
+(II) It's still early in the evening, people are arriving and socializing.
+    Party: Introduce something new or something that builds on something another player has said.
+
+(III) It's the middle of the night, the house is packed, the music is up.
+    Party: Introduce something that builds on something another player has said.
+
+(IV) It's still the middle of the night, the energy
+    Party: Introduce something that builds on something another player has said.
+
+(V) (Bloom) It's late, the party is starting to wind down, some people ar starting to leave, others are settling into quieter conversations.
+```
+
+At the beginning of each round:
+
+- Shuffle the wallflower deck, and deal one card to each player face down.
+- Read the opening line for the round.
+
 
 ## Turn
 
 __Party__
 
-On your turn describe something at the party the wallflower above you notices. This might be an object, person, scene, or detail.
+On your turn:
+
+(1) Flip over the wallflower card in front of you.
+(2) Describe something at the party that wallflower notices. This might be an object, person, scene, or detail.
+
+In Round:
+
+- I - introduce something new.
+- II - introduce something new or you may build on something another player has introduced.
+- III & IV - build on something another player has introduced.
 
 Only describe what the wallflower can directly observe.
 
 - Do NOT use any judgement words.
 - Do NOT describe what the wallflower might know, think, or feel.
+- Do NOT describe any interaction with the wallflower.
 
 Examples
 
@@ -122,32 +168,32 @@ Examples
 
 > A group of girls from the cheer squad dressed in matching hoodies and sweat pants are in a circle in the corner laughing so loudly you can hear it across the room.
 
-> A big guy with a scowl on his face shoves past you growling "Watch it". He reeks of BO, and his slick sweat smears across your arms.
-
 
 __Impression__
 
-The player above you in the turn order now narrates their wallflowers impression in the 3rd person.
+The player on the wallflower card narrates their wallflowers impression in the 3rd person.
 
-Describe what your wallflower is pays attention to. What do they think and how do they feel about what the observed?
+Describe what your wallflower pays attention to. What do they think? How do they feel about what they observed?
 
 Based on your wallflower's reaction do they want to join or leave the party?
 
 
 > We see Azalea alone.
 >
-> Azalea sees... the cheer squad laughing in the corner. Must be nice to fit in, and feels awkward. 
+> Azalea sees... the cheer squad laughing in the corner. Must be nice to fit in, and feels awkward.
 >
 > Azalea wants to... join the party.
 
 
 ## Bloom
 
-On your turn ask the player above you if your wallflower joins or leaves the party.
+On your turn ask the other players if your wallflower joins or leaves the party. Why?
 
-Describe your wallflower joining or leaving the party. Why did they stop being a wallflower?
+Decide if your wallflower joins or leaves the party.
 
-1. What is your wallflowers feeling? Pick a feeling from the [wheel](#feeling-wheel) or [list](#feeling-list)
+Describe your wallflower joining or leaving. Why did they stop being a wallflower?
+
+1. What is your wallflowers feeling?
 2. Narrate a short vignette of your wallflower joining or leaving the party.
 
 
@@ -168,7 +214,7 @@ Narrating in the 1st person often increases the risk characters bleed.
 
 ### Can we play with other party contexts?
 
-Yes. However you will need to discuss and agree on that shared context first.
+Yes. However you will need to discuss and agree on that shared context with other players.
 
 Examples
 
@@ -181,8 +227,8 @@ No. Wallflowers are isolated and don't notice each other.
 
 Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
 
-## Thoughts
+### Why randomize the wallflower you narrate the party to?
 
-Would it be better to allow players to bloom when they want?
+Wallflowers don't get to choose what they see.
 
-Would it be better to let players repeat rounds if they want?
+I want different players to have a chance to narrate to other wallflowers.

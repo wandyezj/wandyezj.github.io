@@ -152,6 +152,10 @@ Other
 
 - hidden file systems for Linux
 
+[anydice](https://anydice.com/)
+
+- Dice outcome simulator
+
 ## Security
 
 ### Software Security

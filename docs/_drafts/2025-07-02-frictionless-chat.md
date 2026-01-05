@@ -24,3 +24,16 @@ Message: {message: {ps}, pseudonym: string,
 - [SubtleCrypto.digest](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/digest)
 - [SubtleCrypto.sign](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/sign)
 - [SubtleCrypto.verify](https://developer.mozilla.org/en-US/docs/Web/API/SubtleCrypto/verify)
+
+What about using GPG Keys?
+
+Protocol
+
+- Claim Pseudonym
+    - Client: Generate Key Pair
+    - Client -> Server: Get Pseudonym - Assigned by server - signed to show that it's from the server, returns the pseudonym
+    - Client: Sign Pseudonym
+    - Client -> Server : Claim Pseudonym - Upload Signed Pseudonym and Public Key
+- Get Pseudonyms
+- Post Message
+- Get Messages

@@ -185,10 +185,10 @@ On your turn:
 
 1. [Party](#party) - Describe something at the party a wallflower notices. This might be an object, person, scene, or detail.
 2. [Impression](#impression) Who's watching?
-    - Flip over the wallflower card in front of you. That wallflower narrates their impression.
+    - Flip over the wallflower card in front of you. The player that owns that wallflower narrates their wallflower's impression.
     - _Special_: If the wallflower alias is your wallflower: two wallflowers narrate their impression.
         1. Shuffle the player deck and draw a card (if you draw your own name - draw again). That player narrates their wallflowers impression.
-        2. Once the player has finished narrating their impression, narrate your wallflower's impression.
+        2. Once that player has finished narrating their impression, narrate your wallflower's impression.
 
 
 ### Party

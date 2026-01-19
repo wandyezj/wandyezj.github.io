@@ -18,7 +18,7 @@ __For in person play__
 __For online play__
 
 - A video chat client so everyone can see and hear each other.
-- A shared document everyone and view and edit.
+- A shared document everyone can view and edit.
 
 ## Introduction
 
@@ -118,7 +118,7 @@ Create the wallflower deck.
 
     ```text
     Wallflower Alias
-    ``
+    ```
 
     Example
 
@@ -142,7 +142,7 @@ Read the following out loud:
 
 The game takes place across five rounds.
 
-In the first four rounds players take turns describing something at the party that _all_ wallflowers notice. However, while all wallflowers notice what happens only one wallflower will be chosen to narrate their inner thoughts to all players. Every round, every player will narrate once, and give their wallflowers impression once.
+In the first four rounds players take turns describing something at the party that _all_ wallflowers notice. However, while all wallflowers notice what happens _only one_ wallflower will be chosen to narrate their inner thoughts to all players. Every round, every player will narrate once, and give their wallflowers impression once.
 
 In the final round all wallflowers __Bloom__.
 
@@ -179,7 +179,7 @@ Turns proceed clockwise
 
 On your turn:
 
-1. [Party](#party) - Describe something at the party a wallflower notices. This might be an object, person, scene, or detail.
+1. [Party](#party) - Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
 2. Read
     > Our wallflowers all saw this. What are your wallflower thoughts? What are they feeling?
 3. Pause
@@ -195,7 +195,7 @@ On your turn:
 
 ### Party
 
-Describe something at the party a wallflower notices. This might be an object, person, scene, or detail.
+Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
 
 In Round:
 
@@ -213,9 +213,9 @@ Examples
 
 > A buff guy with a huge smile on his face walks past. He's wearing a baseball cap with the high school Griffin mascot, a T-Shirt with that says "Rock Punks" in gigantic pink letters, and shorts paired with socks and sandals - showing off incredibly smooth legs.
 
-> A group of guys from the football team, squashed together on the while couch are staring at the TV, and suddenly jump up cheering, a bowl of popcorn tumbles onto the floor flinging popcorn everywhere.
+> A group of guys from the football team, squashed together on the white couch, are staring at the TV, and suddenly jump up cheering - a bowl of popcorn tumbles onto the floor, flinging popcorn everywhere.
 
-> A girl tightly griping a boys hand drags him to the front door. Her brows are furrowed and tears wet her cheeks.
+> A girl tightly gripping a boys hand drags him to the front door. Her brows are furrowed and tears wet her cheeks.
 
 > A group of girls from the cheer squad dressed in matching hoodies and sweat pants are in a circle in the corner laughing so loudly you can hear it across the room.
 
@@ -278,17 +278,31 @@ No. Wallflowers are isolated and don't notice each other.
 
 Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
 
-### Why randomize which player starts each round?
+### Why rotate which player starts each round?
 
 I want different players to take turns reading the rounds starting line.
 
-The first description of what is happening at the party can have a lot of influence on the rest of the round. I want to get different players ideas.
+The first description of what is happening at the party can have a lot of influence on the rest of the round. I want to get different players' ideas.
+
+Additionally, this balances out the wallflower desks draw probability.
+
+### Why have every wallflower see every narration?
+
+I want a shared story everyone builds on.
+
+The central thread is the party that every player contributes to. Each player weaves their wallflower's thread around this central thread. Each player sees their full wallflower thread, while other players only see a quarter of each wallflower's thread. This can make for surprising reveals at the end.
+
+It's much easier for players if every wallflower to sees everything at the party. It is far too hard for players to separate out what each wallflower knows.
+
+The narrator for each round isn't aware of which wallflower will give their impression. So every wallflower needs to be aware of what's going on.
 
 ### Why randomize wallflower impressions?
 
 Wallflowers don't get to choose what they see.
 
-I want different players to have a chance to narrate to other wallflowers.
+I want players to stay engaged - there is a possibility their wallflower will be called on.
+
+I want different players to have a chance to respond to other players narration.
 
 ### Why hide which wallflower has an impression from the narrator?
 
@@ -297,27 +311,3 @@ The party action is explicitly separate from the wallflowers.
 The wallflowers are on the sidelines, they should not be considered in a players narration of party events.
 
 I want the player doing narration to be free to narrate what happens at the party.
-
-### Why deal out the wallflowers face down to each player instead of drawing from the deck?
-
-Both drawing and dealing and flipping are equivalently random.
-
-I think there is a difference in feel.
-
-When you have the card that is the wallflower, I think people become more curious as to who it is, and there is a more anticipation when you get to flip it.
-
-It makes it easier for players to identify if the wallflower matches the player. Since the wallflower card should be in front of the player's identity card.
-
-### Changes
-
-Every wallflower sees everything, but only one response. Watching without engaging.
-
-Random deck i fyou draw your own draw agin,
-
-After each narration pause think about what your wallflowe is thinking before drawing.
-
-only draw the wallflower
-
-just rotate turn for the left
-
-just have wallflwoer name

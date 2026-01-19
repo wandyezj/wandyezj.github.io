@@ -6,4 +6,7 @@ Written in 2008, the paper describes a technique for more efficient accurate flo
 
 Notably the paper used the Coq proof assistant to prove their algorithm is correct.
 
-The paper had real world impact as this technique was applied to 
+The paper had real world impact as this technique was applied to:
+
+- A function in CRlibm which was able to see a 2% performance improvement.
+- [GCC applied the technique](https://www.exploringbinary.com/gcc-avoids-double-rounding-errors-with-round-to-odd/)

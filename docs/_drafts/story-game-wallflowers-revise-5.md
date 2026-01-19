@@ -334,4 +334,12 @@ Should there be a round where players just describe action at the party? Or what
 
 Should there be context
 
-"In the beginning of the night"
+"In the beginning of the night..."
+
+"In the middle of the night..."
+
+"Early in the evening..."
+
+"
+
+"Late at night..."

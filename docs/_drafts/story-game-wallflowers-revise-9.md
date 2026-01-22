@@ -69,7 +69,7 @@ Have each player write down their name and their wallflower's name.
 
 __For in person play:__
 
-Create an identity card.
+To help everyone keep track of who is playing which wallflower:
 
 1. Give each player an index card, and have them fold it in half to make a tent.
 2. Write your wallflower alias and player name on both sides.
@@ -189,7 +189,7 @@ On your turn:
 4. Select
     - One wallflower reveals their impression.
     - Draw a card from the wallflower deck. If you draw your own card, set it aside, draw again, then shuffle your own card back in.
-    - Hand the player their wallflower card, removing it from the deck for the rest of the round.
+    - Hand the player their wallflower card, removing it from the deck for the rest of the round. Each wallflower reacts only once per round
 5. [Impression](#impression) - Have the selected players wallflower 
 
 

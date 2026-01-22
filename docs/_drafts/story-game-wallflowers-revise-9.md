@@ -190,7 +190,7 @@ On your turn:
     - One wallflower reveals their impression.
     - Draw a card from the wallflower deck. If you draw your own card, set it aside, draw again, then shuffle your own card back in.
     - Hand the player their wallflower card, removing it from the deck for the rest of the round. Each wallflower reacts only once per round
-5. [Impression](#impression) - Have the selected players wallflower 
+5. [Impression](#impression) - Have the selected players wallflower give their impression.
 
 
 ### Party

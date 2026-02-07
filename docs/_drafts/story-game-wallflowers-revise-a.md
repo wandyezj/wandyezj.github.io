@@ -10,21 +10,15 @@ Wallflowers is a game for 3 - 4 players.
 
 One player to be a facilitator to lead everyone through the rules.
 
-__For in person play__
-
 - Blank Index cards
 - Pens
-
-__For online play__
-
-- A video chat client so everyone can see and hear each other.
-- A shared document everyone can view and edit.
+- (optional) Token to track whose turn it is.
 
 ## Introduction
 
-Read the following aloud to everyone:
+Read the following aloud:
 
-> We are playing wallflowers - in high school - at a large house party.
+> We are playing wallflowers at a large party.
 >
 > Your wallflower showed up to the party by themselves, and is now watching the party alone from the sidelines.
 >
@@ -40,13 +34,15 @@ Read the following aloud to everyone:
 
 ### (1) Aliases
 
-Each player will play one wallflower.
+Read the following aloud:
 
+> Each player will play one wallflower.
+>
 > Pick an alias for your wallflower named after a flower.
 >
 > Each alias must be a single word flower name and start with a different letter.
-
-Pick from the list below or create your own:
+>
+> Pick from the list below or create your own:
 
 ```text
 Azalea
@@ -62,63 +58,45 @@ Jasmine
 Kudzu
 Lotus
 Marigold
+Nerine
 Orchid
 Poppy
+Quince
 Rose
 Sage
 Tulip
+Ulmus
 Violet
+Willow
+Xanthium
 Yarrow
 Zenobia
 ```
-ENQUWX
 
-Have each player write down their name and their wallflower's name.
+To help everyone keep track of who is playing each wallflower:
 
-__For in person play:__
+Have each player write down their name and their wallflower's name on a folded index card and place it in front of them.
 
-To help everyone keep track of who is playing which wallflower:
-
-1. Give each player an index card, and have them fold it in half to make a tent.
-2. Write your wallflower alias and player name on both sides.
+1. Give each player an index card and a pen.
+2. > Fold your index card in half to make a tent.
+3. > Write down your _wallflower alias_ and your name on both sides:
 
     ```text
     Wallflower Alias
     (Player Name)
     ```
 
-3. Place the card in front of you so everyone can see.
+    Example:
 
+    ```text
+    Azalea
+    (Ace)
+    ```
 
-Example:
+4. > Place the card in front of you so everyone can see.
 
-```text
-Azalea
-(Ace)
-```
-
-__For online play:__
-
-In a shared document, write a list of each wallflower alias and player name in a section titled 'Wallflowers'.
-
-Example:
-
-```text
-Wallflowers
-
-- Azalea (Ace)
-- Begonia (Ben)
-- Camellia (Cal)
-- Dahlia (Dan)
-```
-
-Clockwise is considered down.
-
-After the last player in the list - loop back the the top.
 
 ### (2) Wallflower Deck
-
-__For in person play__
 
 Create the wallflower deck.
 
@@ -136,69 +114,104 @@ Create the wallflower deck.
 
 2. Collect these index cards.
 
-__For online play__
 
-The facilitator will create the deck of cards, they will shuffle and draw for everyone as required.
+### (3) Set the party
 
-### (3) Stop
+> What type of party are we playing?
 
-Read the following out loud:
+1. Pick an age range for our wallflowers:
+
+    - High School
+    - College
+
+2. Pick a setting:
+
+    - House party at a wealthy house
+    - Kegger in the woods
+    - Bonfire on the beach
+
+
+### (4) Stop
+
+Read the following aloud:
 
 > We're done with setup! We don't know anything else about the wallflowers. We will discover everything about our wallflowers through play.
 
-## Rounds
+## Round Overview
 
-The game takes place across five rounds.
+Wallflowers has three types of rounds:
 
-In the first four rounds players take turns describing something at the party that _all_ wallflowers notice. However, while all wallflowers notice what happens _only one_ wallflower will be chosen to narrate their inner thoughts to all players. Every round, every player will narrate once, and give their wallflowers impression once.
+- [Seed](#seed-round) - Each player describes their wallflower's thoughts about a specific person who they think might show up to the party.
+- [Grow](#grow-rounds) - Each player describes an event at the party all wallflowers witness, with one players wallflower being selected to share their thoughts.
+- [Bloom](#bloom-round) - Each player describes their wallflower joining or leaving the party.
 
-In the final round all wallflowers __Bloom__.
+## Seed Round
+
+1. Read the following aloud:
+
+    > Before your wallflower arrives at the party, they are thinking about someone else who might be there.
+    >
+    > Each wallflower is thinking about a different person.
+    >
+    > Who is your wallflower specifically thinking about?
+    >
+    > What do they think about this person? How do they feel about this person?
+
+2. Shuffle the wallflower deck.
+3. Draw each wallflower in turn, and have the player narrate their wallflower's thoughts.
+
+- The goal of this round is to create characters our wallflowers might see at the party.
+- Each player must have their wallflower think about a different person.
+
+## Grow Rounds
+
+In each grow round players take turns describing something at the party _all_ wallflowers notice. However, while all wallflowers notice,  _only one_ wallflower will be chosen to narrate their inner thoughts to all players. Every round, every player will narrate once, and give their wallflowers impression once.
 
 Each round has an opening line and rule for introducing something to the party.
-
-```text
-Rounds
-
-(I) It's early in the evening, not many people are here yet.
-    Party: Introduce something new.
-
-(II) It's still early in the evening, people are arriving and socializing.
-    Party: Introduce something new or something that builds on something another player has said.
-
-(III) It's the middle of the night, the house is packed, the music is up.
-    Party: Introduce something that builds on something another player has said.
-
-(IV) It's still the middle of the night, the music and energy have shifted to be more relaxed.
-    Party: Introduce something that builds on something another player has said.
-
-(V) (Bloom) It's late, the party is starting to wind down, some people are starting to leave, others are settling into quieter conversations.
-```
 
 At the beginning of each round:
 
 1. __Rotate Opening Player__
-    - Rotate the opening player clockwise. This way, in a four player game, everyone will get to open the round at least once.
+    - Rotate the opening player clockwise. This way, in a four player game, everyone opens the round once.
 2. __Opening Player__
     - Read the opening line for the round and narrate first.
 
-Turns proceed clockwise
+    ```text
+    In Round:
+
+    (I) It's early in the evening, not many people are here yet.
+
+    (II) It's still early in the evening, people are arriving and socializing.
+
+    (III) It's the middle of the night, the house is packed, the music is up.
+
+    (IV) It's still the middle of the night, the music and energy have shifted to be more relaxed.
+    ```
+
+3. Turns proceed clockwise.
+
 
 ## Turn
 
 On your turn:
 
-1. [Party](#party) - Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
+1. [Party](#party)
+    - Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
 2. Read
-    > Our wallflowers all saw this. What are your wallflower thoughts? What are they feeling?
+    > Our wallflowers all saw this. What is your wallflowers impression? What are they thinking? What are they feeling?
 3. Pause
-    - Give players time to think about their wallflower.
-    - Think about how your own wallflower feels.
-    - After a minute, ask if everyone is ready if they are selected.
-4. Select
-    - One wallflower reveals their impression.
-    - Draw a card from the wallflower deck. If you draw your own card, set it aside, draw again, then shuffle your own card back in.
-    - Hand the player their wallflower card, removing it from the deck for the rest of the round. Each wallflower reacts only once per round
-5. [Impression](#impression) - Have the selected players wallflower give their impression.
+    - Give players time to think in silence about their wallflower's impression.
+    - Think about how your own wallflower's impression.
+    - After at least a minute, ask if everyone is ready.
+4. Draw
+    - Select a wallflower to reveal their thoughts.
+        - The player who narrates should always be different from the player revealing their wallflower's impression.
+        - Draw from the wallflower deck.
+            - If you are the second to last player, check the deck to make sure the final player does not draw their own card.
+            - If you draw your own card, set it aside, draw again, then shuffle your own card back in.
+    - Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
+5. [Impression](#impression)
+    - Have the selected player give their wallflower's impression.
 
 
 ### Party
@@ -207,15 +220,15 @@ Describe something at the party the wallflowers notice. This might be an object,
 
 In Round:
 
-- I - introduce something new.
-- II - introduce something new or you may build on something another player has introduced.
-- III & IV - build on something another player has introduced.
+- I - Introduce something new.
+- II - Introduce something new or build on something another player has introduced.
+- III & IV - Build on something another player has introduced.
 
-Only describe what the wallflower can directly observe.
+Only describe what the wallflower's can directly observe.
 
 - Do NOT use any judgement words.
-- Do NOT describe what the wallflower might know, think, or feel.
-- Do NOT describe any interaction with the wallflower.
+- Do NOT describe any interaction with a wallflower.
+- Do NOT describe what a wallflower might know, think, or feel.
 
 Examples
 
@@ -230,12 +243,19 @@ Examples
 
 ### Impression
 
-The player who controls the selected wallflower narrates their wallflowers impression in the 3rd person.
+The player who controls the selected wallflower narrates their wallflower's impression in the 3rd person.
 
 Describe what your wallflower pays attention to. What do they think? How do they feel about what they observed?
 
 Based on your wallflower's reaction do they want to join or leave the party?
 
+Only describe what your wallflower is thinking or feeling.
+
+- Your wallflower may __NOT__ take action.
+- Your wallflower may __NOT__ join or leave the party.
+
+
+Example:
 
 > We see Azalea alone.
 >
@@ -244,7 +264,17 @@ Based on your wallflower's reaction do they want to join or leave the party?
 > Azalea wants to... join the party.
 
 
-## Bloom
+## Bloom Round
+
+1. Read the following aloud:
+
+    > It's late, the party is starting to wind down, some people are starting to leave, others are settling into quieter conversations.
+    >
+    > Does your wallflower join or leave the party?
+
+2. Shuffle the wallflower deck.
+3. Draw from the wallflower deck and have wallflower go as they are called.
+
 
 On your turn ask the other players if your wallflower joins or leaves the party. Why?
 
@@ -265,11 +295,32 @@ Describe your wallflower joining or leaving. Why did they stop being a wallflowe
 
 ## FAQ
 
-### Why narrate from the 3rd person?
+### What changes for online play?
 
-I think it helps player more safely explore their wallflower.
+For online play you will need:
 
-Narrating in the 1st person often increases the risk characters bleed.
+- A video chat client so everyone can see and hear each other.
+- A shared document everyone can view and edit.
+
+In the shared document, write a list of each wallflower alias and player name in a section titled 'Wallflowers'.
+
+Example:
+
+```text
+Wallflowers
+
+- Azalea (Ace)
+- Begonia (Ben)
+- Camellia (Cal)
+- Dahlia (Dan)
+```
+
+Clockwise is considered down.
+
+After the last player in the list - loop back the the top.
+
+The facilitator will create the deck of cards, they will shuffle and draw for everyone as required.
+
 
 ### Can we play with other party contexts?
 
@@ -286,23 +337,21 @@ No. Wallflowers are isolated and don't notice each other.
 
 Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
 
+
+### Why narrate from the 3rd person?
+
+I think it helps player more safely explore their wallflower.
+
+Narrating in the 1st person often increases the risk of character bleed.
+
 ### Why rotate which player starts each round?
 
 I want different players to take turns reading the rounds starting line.
 
 The first description of what is happening at the party can have a lot of influence on the rest of the round. I want to get different players' ideas.
 
-Additionally, this balances out the wallflower desks draw probability.
+Additionally, this balances the wallflower deck draw probability.
 
-### Why have every wallflower see every narration?
-
-I want a shared story everyone builds on.
-
-The central thread is the party that every player contributes to. Each player weaves their wallflower's thread around this central thread. Each player sees their full wallflower thread, while other players only see a quarter of each wallflower's thread. This can make for surprising reveals at the end.
-
-It's much easier for players if every wallflower to sees everything at the party. It is far too hard for players to separate out what each wallflower knows.
-
-The narrator for each round isn't aware of which wallflower will give their impression. So every wallflower needs to be aware of what's going on.
 
 ### Why randomize wallflower impressions?
 
@@ -319,6 +368,19 @@ The party action is explicitly separate from the wallflowers.
 The wallflowers are on the sidelines, they should not be considered in a players narration of party events.
 
 I want the player doing narration to be free to narrate what happens at the party.
+
+
+### Why have every wallflower see every narration?
+
+I want a shared story everyone builds on.
+
+The central thread is the party - which every player contributes to. Each player weaves their wallflower's thread around this central thread.
+
+Each player sees their wallflower's full thread, while other players only see a quarter of each wallflower's thread. This can make for surprising reveals at the end.
+
+It's much easier for players if every wallflower sees everything at the party. It is far too hard for players to separate out what each wallflower knows.
+
+The narrator for each round isn't aware of which wallflower will give their impression. So every wallflower needs to be aware of what's going on.
 
 
 ## Revisions
@@ -367,7 +429,6 @@ Possibly masculine flower names
 - Juniper
 - Cypress
 - Alder
-- 
 
 ## Layout
 
@@ -384,8 +445,11 @@ Decide on Layout of Left and Right pages
 - Left: Setup Pick Flower & Right: Flower Name list
 - Overview of play
 - Procedure
+- Left: Seed Steps & Right Seed Narration
 - Left: Rounds & Right: Opening lines
-- 
+    - This needs to be split across multiple pages
+    - Party
+    - Reaction
 
 
 - Example Play

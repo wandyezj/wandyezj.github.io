@@ -137,15 +137,7 @@ Read the following aloud:
 
 > We're done with setup! We don't know anything else about the wallflowers. We will discover everything about our wallflowers through play.
 
-## Round Overview
-
-Wallflowers has three types of rounds:
-
-- [Seed](#seed-round) - Each player describes their wallflower's thoughts about a specific person who they think might show up to the party.
-- [Grow](#grow-rounds) - Each player describes an event at the party all wallflowers witness, with one players wallflower being selected to share their thoughts.
-- [Bloom](#bloom-round) - Each player describes their wallflower joining or leaving the party.
-
-## Seed Round
+## Seed
 
 1. Read the following aloud:
 
@@ -153,31 +145,30 @@ Wallflowers has three types of rounds:
     >
     > Each wallflower is thinking about a different person.
     >
-    > Who is your wallflower specifically thinking about?
+    > Who is your wallflower thinking about?
     >
-    > What do they think about this person? How do they feel about this person?
+    > What do they think about this person? What do they feel?
 
 2. Shuffle the wallflower deck.
-3. Draw each wallflower in turn, and have the player narrate their wallflower's thoughts.
+3. Draw each wallflower in turn, and have the person playing the wallflower narrate their wallflower's thoughts.
 
 - The goal of this round is to create characters our wallflowers might see at the party.
 - Each player must have their wallflower think about a different person.
 
-## Grow Rounds
+## Grow
 
 In each grow round players take turns describing something at the party _all_ wallflowers notice. However, while all wallflowers notice,  _only one_ wallflower will be chosen to narrate their inner thoughts to all players. Every round, every player will narrate once, and give their wallflowers impression once.
 
-Each round has an opening line and rule for introducing something to the party.
-
 At the beginning of each round:
 
+0. Collect the wallflower cards and shuffle the wallflower deck.
 1. __Rotate Opening Player__
     - Rotate the opening player clockwise. This way, in a four player game, everyone opens the round once.
 2. __Opening Player__
     - Read the opening line for the round and narrate first.
 
     ```text
-    In Round:
+    Opening Lines:
 
     (I) It's early in the evening, not many people are here yet.
 
@@ -191,7 +182,7 @@ At the beginning of each round:
 3. Turns proceed clockwise.
 
 
-## Turn
+### Turn
 
 On your turn:
 
@@ -201,7 +192,7 @@ On your turn:
     > Our wallflowers all saw this. What is your wallflowers impression? What are they thinking? What are they feeling?
 3. Pause
     - Give players time to think in silence about their wallflower's impression.
-    - Think about how your own wallflower's impression.
+    - Think about your own wallflower's impression.
     - After at least a minute, ask if everyone is ready.
 4. Draw
     - Select a wallflower to reveal their thoughts.
@@ -209,6 +200,7 @@ On your turn:
         - Draw from the wallflower deck.
             - If you are the second to last player, check the deck to make sure the final player does not draw their own card.
             - If you draw your own card, set it aside, draw again, then shuffle your own card back in.
+            - If you are the last player and draw your own card - Oops! Narrate your own wallflower's impression.
     - Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
 5. [Impression](#impression)
     - Have the selected player give their wallflower's impression.
@@ -264,7 +256,7 @@ Example:
 > Azalea wants to... join the party.
 
 
-## Bloom Round
+## Bloom
 
 1. Read the following aloud:
 
@@ -276,14 +268,13 @@ Example:
 3. Draw from the wallflower deck and have wallflower go as they are called.
 
 
-On your turn ask the other players if your wallflower joins or leaves the party. Why?
+On your turn:
 
-Decide if your wallflower joins or leaves the party.
-
-Describe your wallflower joining or leaving. Why did they stop being a wallflower?
-
-1. What is your wallflowers feeling?
-2. Narrate a short vignette of your wallflower joining or leaving the party.
+1. Ask the other players if your wallflower joins or leaves the party. Why?
+2. Decide if your wallflower joins or leaves the party.
+3. Narrate a short vignette of your wallflower joining or leaving the party.
+    - Why did they stop being a wallflower?
+    - What is your wallflowers feeling?
 
 
 ## Conflict Resolution
@@ -383,7 +374,11 @@ It's much easier for players if every wallflower sees everything at the party. I
 The narrator for each round isn't aware of which wallflower will give their impression. So every wallflower needs to be aware of what's going on.
 
 
-## Revisions
+---
+
+## Scratch
+
+### Revisions
 
 From Playtest of 9
 
@@ -430,7 +425,7 @@ Possibly masculine flower names
 - Cypress
 - Alder
 
-## Layout
+### Layout
 
 Be able to print in booklet form - 8.5 x 11 paper folded and stapled zine style
 

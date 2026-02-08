@@ -1,0 +1,177 @@
+
+
+\documentclass[letterpaper, 12pt]{article}
+
+%
+% General Notes
+%
+
+% Only use OT1 fonts as these allow scaling via cm
+
+
+%
+%variables
+%
+
+\newcommand{\vtitle}{Wallflowers}
+\newcommand{\vauthor}{wandyezj}
+
+%
+% Commands
+% 
+
+\newcommand{\csetfontsize}[1]{
+	\fontsize{#1}{#1}
+	\selectfont
+}
+
+\newcommand{\csetfont}[1]{
+	\usefont{OT1}{#1}{x}{n}
+	\selectfont
+}
+
+%
+% Packages
+%
+
+% Fonts
+%\input Zallman.fd %\newcommand*\initfamily{\usefont{U}{Zallman}{xl}{n}}
+
+
+%\usepackage{almendra}
+\usepackage{lmodern} 
+%\usepackage[T1]{fontenc}
+% Scalable Font Sizes
+%\usepackage{lmodern} 
+%\usepackage{type1cm}
+%\usepackage[T1]{fontenc}
+
+% Other Packages
+\usepackage{geometry}
+
+\geometry{a4paper, margin=1in}
+
+%\usepackage{anyfontsize}
+%\usepackage{scrextend}
+%\changefontsizes{18pt}
+
+
+%
+% Setup
+%
+
+
+
+\title{\vtitle}
+\author{\vauthor}
+\date{}
+
+
+%
+% Macro Sections
+%
+
+\newcommand{\cpagetitle}{
+\begin{titlepage}
+	\centering
+	\vspace*{4cm}
+	{
+		\csetfontsize{2cm}
+		\usefont{OT1}{pag}{x}{n}
+		\vtitle
+	}
+	\vspace*{0.5cm}
+	
+	{\large by \vauthor}
+	\vspace*{\fill}
+\end{titlepage}
+\pagebreak
+}
+
+
+
+%\renewcommand{\familydefault}{cmssq}
+\begin{document}
+{
+% Global Font Control
+\csetfontsize{18pt}
+\csetfont{cmssq}
+\fontfamily{Times New Roman}\selectfont
+
+%
+% Title Page
+%
+
+%\cpagetitle
+
+
+%
+% Section Start
+%  Pitch
+%
+
+\section{Pitch}
+
+\begin{quote}
+TODO:
+
+How do I pitch wallflowers in a few sentences?
+
+Wallflowers is a game for 3 - 4 players.
+
+%!!WARNING!!! This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's always ok to ask if people are comfortable.
+
+\end{quote}
+%\pagebreak
+
+
+
+%
+% Section Start
+% Materials
+%
+
+\section{What you need to play}
+
+\begin{itemize}
+	\item 3-4 players.
+	\item One player to facilitate everyone through the rules.
+	\item Blank Index cards
+	\item Pens
+	\item (optional) Token to track whose turn it is.
+\end{itemize}
+
+
+
+%
+% Section Start
+% Introduction
+%
+
+
+\section{Introduction}
+
+%\pagebreak
+\section{Pitch}
+
+Read the following aloud:
+
+\begin{quote}
+	We are playing wallflowers at a large party.
+	
+	Your wallflower showed up to the party by themselves, and is now watching the party alone from the sidelines.
+	
+	Initially, you know nothing about your wallflower except their alias.
+	
+	What does your wallflower see, think, and feel - as they watch the party unfold?
+	
+	Do they want to join the party or leave?
+	
+	Don't try to answer yet!
+	
+	You will discover everything about your wallflower through play.
+\end{quote}
+
+
+}
+\end{document}

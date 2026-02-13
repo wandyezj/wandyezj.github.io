@@ -22,13 +22,13 @@ The card consists of:
 - Photo
     - The photo is a favorite of all those that were taken during the year.
 - Poem
-    - A thematic poem - usually a Haiku.
+    - A thematic Haiku.
 - Drawings
     - One or two black pen sketches on a white background scanned in to add to the letter and card.
 - Letter
     - An update letter about anything amusing that happened in the last year - the goal is to get a laugh. I print this in black and white.
 
-Creating the card contents usually takes a few days. The most time consuming piece is the letter. Creating a short one page letter that both updates the recipient and hopefully gets at least one laugh is tricky. I usually go through several drafts and play with it over several days to get the wording optimized for laughs - hopefully.
+Creating the card contents takes a few days. The most time consuming piece is the letter. Creating a short one page letter that both updates the recipient and hopefully gets at least one laugh is tricky. I usually go through several drafts and play with it over several days to optimize the wording.
 
 There are several logistical pieces to getting the cards out:
 
@@ -37,9 +37,9 @@ There are several logistical pieces to getting the cards out:
 - Sending the print to FedEx and picking it up
     - Make sure to check the entire print job in the store before accepting it. I've caught multiple defects that were luckily fixed at the store.
 - Keeping Track of Contact information and Addresses for all recipients
-    - I use an [Excel sheet](#tracking-excel-sheet) to track everyone's name and address.
+    - I use a [Spreadsheet](#tracking-spreadsheet) to track everyone's name and address.
 
-## Tracking Excel Sheet
+## Tracking Spreadsheet
 
 Keep track of everyone you want to send a card to. You don't want to accidentally miss anyone. It's far easier to have a checklist.
 
@@ -48,18 +48,19 @@ The rule is one card per address.
 
 Columns
 
-- Relation: Parent, Sibling, Grandparent Aunt, Cousin, Family, Friend, Work, Neighbor
+- Relation: Parent, Sibling, Grandparent Aunt, Cousin, Family, Friend, Neighbor, Work
 - Relation Details:
 - People: The people at the address.
 - Social: Contact on Social Media
 - Phone: Contact Phone Number
 - Email: Contact Email
 - Check Address: If the address should be checked.
-- To: The to line on the card
 - Sent YYYY: Track if previously sent a card (one per year)
+- To: The to line on the card
 - Address Name
 - Address Line 1
 - Address Line 2
+- Address Line 3
 
 ## Letter
 
@@ -69,8 +70,9 @@ Columns
 
 - Design for fold
     - Design the letter for folding
-    - fold long ways then short ways with white on the outside
-    - 60 lb paper (100 lb paper is too thick for the fold to look good)
+    - 32 lb paper (60 or 100 lb paper is too thick for the fold to look good)
+    - Fedex supports a single fold short way, then hand fold again
+    - (Manual) fold long ways then short ways with white on the outside
 - Adequate margin on print jobs
     - Make sure to leave plenty of margin on the print jobs.
     - Add a simple border to frame the letter
@@ -94,10 +96,14 @@ Instead of writing this out every time get a stamp.
     1. Select Photo
     1. Write Haiku
 1. Art
+    1. Looking for two different sketches.
+        - letter right bottom corner.
+        - photo insert back bottom center
     1. Pencil Sketch
     1. Pen Outline
     1. Erase Pencil
     1. Scan
+    1. Cleanup
 1. Add Art to letter and Insert
 1. Print
     1. Export Letter as PDF
@@ -116,6 +122,7 @@ Instead of writing this out every time get a stamp.
         - Check there are envelopes included
         - Check the paper is the weight ordered
 1. Pick out stamps
+    - Pick stamps that will appeal to the recipients
 1. Address Envelopes
     - Go through address Excel sheet
     - Check addresses - send a message if necessary
@@ -136,8 +143,10 @@ Instead of writing this out every time get a stamp.
         - Print out Avery Labels for the to addresses pulling from the Excel Spreadsheet (would this be classy?)
         - Fountain or Felt Tip pen (something that doesn't require pressing down)
 - Circle Embosser with art for the closing flap of the envelope
+- Stamp with nice pattern in single color ink for envelope front.
 - Optimize fitting the letter into card envelope
     - The 8.25 x 12 paper does not easily fold into the 5 x 7 envelopes I typically use for the cards.
+    - Fedex can fold one of the sides so only have to fold once.
 - Customize
     - Include original artwork that was scanned in some of the cards for those that would appreciate it.
     - Possibly leave room for a custom note.
@@ -147,4 +156,27 @@ Instead of writing this out every time get a stamp.
 - Tracking - Storage of all card material in a single digital folder.
     - Addresses
     - Previous Cards per year
-- QR Code is practical for linking to resources but presents an aesthetic challenge.
+- QR Code is practical for links to online resources but presents an aesthetic challenge.
+
+
+## General Advice
+
+- Make all writing easy to read.
+    - Short and to the point. One page max for a letter.
+    - Make it accessible.
+        - Use large font. 14pt minimum.
+        - Use simple wording.
+- Get a stamp for your return address.
+
+
+## Philosophy
+
+I am the primary audiance for my New Years Card.
+
+The purpose of making New Years Cards is to reflect upon the past year: reviewing photos, considering memories, telling a story.
+
+I save a copy of every New Years Card and every years I read them again.
+
+I am the audiance I need to satisfy. I want my cards to reflect the day to day feeling of the year.
+
+Part of the challenge and satisfaction of New Years Cards is to reflect the years feelings to others in an aesthetically satisfying way, and honing production methods to be more efficient with higher quality each year.

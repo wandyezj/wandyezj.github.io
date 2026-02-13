@@ -11,11 +11,11 @@ I believe history is worth studying to appreciate the complexity of issues and t
 
 Purpose can also be found in studying history, all aspects of humanity are on display, and it continues with every student. Where do students see themselves in the historical narrative?
 
-I believe the history of the United States is fundamental to understanding the modern world. The lessons in US History are an excellent starting point for anyone grappling with issues of the modern world: from  civil rights, to the environment.
+I believe the history of the United States is fundamental to understanding the modern world. The lessons in US History are an excellent starting point for anyone grappling with issues of today: from  civil rights, to the environment.
 
 I believe the fundamental theme of America is freedom, this ideal has been constantly questioned and re-interpreted throughout American History. The history of the United States is one of people given the freedom to chart their destiny together.
 
-I believe history should be engaging. Tales, where people can put themselves in the shoes of those who lived it. Objects, that can be seen, touched, or played with get a feel for the time. People, who can become role models. Questions, to challenge and form your own beliefs.
+I believe history should be engaging. Tales, where people can put themselves in the shoes of those who lived it. Objects, that can be seen, touched, or played with to get a feel for the time. People, who can become role models. Questions, to challenge and form your own beliefs.
 
 I want people to engage and grapple with the present with the knowledge of the past. I want people to be inspired by past achievements and have the ambition to top them. I want people to feel they have the freedom to believe, the freedom to choose, and the freedom to challenge quo.
 
@@ -131,7 +131,6 @@ People who leave a lasting impact. Leaders exist everywhere, I want students to 
 
 Scientists, Engineers, Artists, Craftsmen, Judges
 
-
 - [Frank Lloyd Wright](https://en.wikipedia.org/wiki/Frank_Lloyd_Wright)
 - [Thomas J. Watson](https://en.wikipedia.org/wiki/Thomas_J._Watson)
 - [Henry Ford](https://en.wikipedia.org/wiki/Henry_Ford)
@@ -139,10 +138,8 @@ Scientists, Engineers, Artists, Craftsmen, Judges
 - [Jonas Salk](https://en.wikipedia.org/wiki/Jonas_Salk) 1955 1st Effective Polio Vaccine - [](https://en.wikipedia.org/wiki/Polio_vaccine)
 - [John D. Rockefeller](https://en.wikipedia.org/wiki/John_D._Rockefeller) - 1882 [Standard Oil](https://en.wikipedia.org/wiki/Standard_Oil)
 - Andrew Carnegie
-
 - Edison - Industrial Lab
 - [Nikola Tesla](https://en.wikipedia.org/wiki/Nikola_Tesla) - AC & Induction Motor
-
 - The Wright brothers
 - [William Boeing](https://en.wikipedia.org/wiki/William_E._Boeing) - [History of Boeing](https://en.wikipedia.org/wiki/History_of_Boeing)
 - Walt Disney
@@ -151,7 +148,6 @@ Scientists, Engineers, Artists, Craftsmen, Judges
 - Richard Feynman
 - [John Marshal](https://en.wikipedia.org/wiki/John_Marshall)
 - Isaac Asimov
-
 - Steve Jobs
 
 What about cultural figures?
@@ -183,8 +179,8 @@ What about cultural figures?
 - Atomic Energy
 - Digital Age
 - United Nations
-
-
+- Public University System
+- Internet
 
 Notes
 

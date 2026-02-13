@@ -17,6 +17,7 @@ Educational Resources
 Software Resources
 
 - [Software](#software)
+- [Markup](#markup)
 - [Image Editing](#image-editing)
 - [Video Editing](#video-editing)
 - [Gif Creation](#gif-creation)
@@ -152,6 +153,53 @@ Other
 
 - hidden file systems for Linux
 
+[anydice](https://anydice.com/)
+- Dice outcome simulator
+
+### Image Editing
+
+[Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
+
+- Infinitely scalable image format
+
+[SVG edit](https://svg-edit.github.io/svgedit/releases/latest/editor/svg-editor-es.html)
+
+- Simple online SVG image editor
+
+[SVG Clipping and Masking](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
+
+[ImageMagick](https://imagemagick.org/)
+
+- https://github.com/ImageMagick/ImageMagick
+- Create edit and compose images
+
+### Gif Creation
+
+[Screen To Gif](https://www.screentogif.com/)
+
+### Video Editing
+
+[OBS Studio](https://obsproject.com/)
+
+[YouTube DL](https://youtube-dl.org/)
+
+- Download clips from YouTube to remix and create new art
+
+[FFmpeg](https://ffmpeg.org/)
+
+- A complete, cross-platform solution to record, convert and stream audio and video.
+
+### Markup
+
+[PIC](https://en.wikipedia.org/wiki/PIC_(markup_language))
+    - Language for making diagrams
+
+[Mermaid](https://mermaid.js.org/)
+    - Draw diagrams with JavaScript
+
+[LaTeX](https://www.latex-project.org)
+    - Markup language for creating documents.
+
 ## Security
 
 ### Software Security
@@ -208,7 +256,7 @@ Other
 
 - certify an open source projects is following best practices
 
-### JavaScript Libraries
+## JavaScript Libraries
 
 [chart js](https://www.chartjs.org/)
 
@@ -305,44 +353,12 @@ Other
 
 [Detective Kusto](https://detective.kusto.io/)
 
-### Information Technology
+## Information Technology
 
 [CompTIA](https://en.wikipedia.org/wiki/CompTIA)
 
 - Certification for IT professionals
 
-### Image Editing
-
-[Scalable Vector Graphics](https://en.wikipedia.org/wiki/Scalable_Vector_Graphics)
-
-- Infinitely scalable image format
-
-[SVG edit](https://svg-edit.github.io/svgedit/releases/latest/editor/svg-editor-es.html)
-
-- Simple online SVG image editor
-
-[SVG Clipping and Masking](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Clipping_and_masking)
-
-[ImageMagick](https://imagemagick.org/)
-
-- https://github.com/ImageMagick/ImageMagick
-- Create edit and compose images
-
-### Gif Creation
-
-[Screen To Gif](https://www.screentogif.com/)
-
-### Video Editing
-
-[OBS Studio](https://obsproject.com/)
-
-[YouTube DL](https://youtube-dl.org/)
-
-- Download clips from YouTube to remix and create new art
-
-[FFmpeg](https://ffmpeg.org/)
-
-- A complete, cross-platform solution to record, convert and stream audio and video.
 
 
 ### Data

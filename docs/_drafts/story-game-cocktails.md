@@ -97,6 +97,13 @@ Name concept and details
 Name details
 How do you know the host?
 
+Why did you show up?
+Who are you excited to see? Character, and why?
+Who do you hope doesn't show up? Character, and why?
+
+Figure it out.
+Like to the Left you pick the like relationship
+
 Why are you attending?
 
 Relationships of the list of major character one with a major won with a minor

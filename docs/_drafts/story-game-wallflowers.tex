@@ -6,7 +6,22 @@
 % General Notes
 %
 
-% Only use OT1 fonts as these allow scaling via cm
+% Only use T1 fonts as these allow scaling via cm
+% \usefont encoding family series shape size
+% encoding
+%	T1
+%family
+%	lmr
+%	cmr
+%	phv
+%series
+%	m - medium
+%	b - bold 
+%shape 
+%	n - normal upright
+%	it - italic
+%	sl - slanted
+%	sc - small caps
 
 
 %
@@ -16,9 +31,17 @@
 \newcommand{\vtitle}{Wallflowers}
 \newcommand{\vauthor}{wandyezj}
 
+\newcommand{\vreadsymbol}{$\triangleright$}
+
 %
 % Commands
 % 
+
+\newcommand{\ccard}[1] {
+	\begin{tikzpicture}
+		\node[draw,align=center,inner sep=0.5cm,minimum width=5.5cm] at (3,0) {#1};
+	\end{tikzpicture}
+}
 
 \newcommand{\csetfontsize}[1]{
 	\fontsize{#1}{#1}
@@ -26,20 +49,66 @@
 }
 
 \newcommand{\csetfont}[1]{
-	\usefont{OT1}{#1}{x}{n}
+	\usefont{T1}{#1}{x}{n}
 	\selectfont
 }
+
+% read commands are to format to indicate it should be read out loud
+\newcommand{\csetfontread}{
+	\usefont{T1}{lmr}{m}{sl}
+	\csetfontsize{0.5cm}
+	%\linespread{2}
+	\selectfont
+	\setlength{\parskip}{2mm} % Custom spacing
+	\setlength{\parindent}{0pt}
+}
+
+\newcommand{\cread}[1]{
+		%\fbox{
+			%\texttt{
+{\csetfontread \vreadsymbol #1}
+			%}
+		%}
+}
+
+\newenvironment{eboxed}
+{\begin{center}
+		\begin{tabular}{|p{0.95\textwidth}|}
+			\hline\\
+		}
+		{ 
+			\\\\\hline
+		\end{tabular} 
+	\end{center}
+}
+
+\newenvironment{eread}
+{
+	%\begin{quote}
+		
+		%\begin{eboxed}
+			\csetfontread
+			\setlength{\parindent}{0pt}
+			\vreadsymbol \linebreak
+		}
+		{
+		%\end{eboxed}
+%\end{quote}
+}
+
 
 %
 % Packages
 %
+
+
 
 % Fonts
 %\input Zallman.fd %\newcommand*\initfamily{\usefont{U}{Zallman}{xl}{n}}
 
 
 %\usepackage{almendra}
-\usepackage{lmodern} 
+%\usepackage{lmodern} 
 %\usepackage[T1]{fontenc}
 % Scalable Font Sizes
 %\usepackage{lmodern} 
@@ -51,9 +120,21 @@
 
 \geometry{a4paper, margin=1in}
 
+% Drawings
+\usepackage{tikz}
+
+% Paragraphs
+\usepackage{parskip}
+% Framing
+%\usepackage{framed}
+%\usepackage{mdframed}
+
+
 %\usepackage{anyfontsize}
 %\usepackage{scrextend}
 %\changefontsizes{18pt}
+
+
 
 
 %
@@ -119,6 +200,8 @@ How do I pitch wallflowers in a few sentences?
 
 Wallflowers is a game for 3 - 4 players.
 
+
+
 %!!WARNING!!! This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's always ok to ask if people are comfortable.
 
 \end{quote}
@@ -148,29 +231,135 @@ Wallflowers is a game for 3 - 4 players.
 % Introduction
 %
 
-
-\section{Introduction}
-
 %\pagebreak
 \section{Pitch}
 
 Read the following aloud:
 
-\begin{quote}
-	We are playing wallflowers at a large party.
+\begin{eread}
+We are playing wallflowers at a large party.
+
+Your wallflower showed up to the party by themselves, and is now watching the party alone from the sidelines.
+
+Initially, you know nothing about your wallflower except their alias.
+
+What does your wallflower see, think, and feel - as they watch the party unfold?
+
+Do they want to join the party or leave?
+
+Don't try to answer yet!
+
+You will discover everything about your wallflower through play.
+\end{eread}
+
+
+\section{Alias}
+
+
+Read the following aloud:
+
+
+\begin{eread}
+Each player will play one wallflower.
+
+Pick an alias for your wallflower named after a flower.
+
+Each alias must be a single word flower name and start with a different letter.
+
+Pick from the list below or create your own:
+\end{eread}
+
+\begin{verbatim}
+Azalea
+Begonia
+Camellia
+Dahlia
+Erysimum
+Foxglove
+Goldenrod
+Hyacinth
+Indigo
+Jasmine
+Kudzu
+Lotus
+Marigold
+Nerine
+Orchid
+Poppy
+Quince
+Rose
+Sage
+Tulip
+Ulmus
+Violet
+Willow
+Xanthium
+Yarrow
+Zenobia
+\end{verbatim}
+
+To help everyone keep track of who is playing each wallflower:
+\linebreak
+\linebreak
+Have each player write down their name and their wallflower's name on a folded index card and place it in front of them.
+
+\begin{enumerate}
+
+\item Give each player an index card and a pen.
+\item \cread{Fold your index card in half to make a tent.}
+\item \cread{Write down your \textit{wallflower alias} and your name on both sides.}
+
+
+Example:
+
+\ccard{Wallflower Alias\\ \\ (Player Name)}
+\ccard{Azalea\\ \\ (Ace)}
+
+\item \cread{Place the card in front of you so everyone can see.}
+
+\end{enumerate}
+
+
+\section{Wallflower Deck}
+
+Create the wallflower deck.
+
+\begin{enumerate}
+	\item Give each player a blank index card and have them write down their wallflower alias on one side, leaving the back blank.
+		
+	Example
 	
-	Your wallflower showed up to the party by themselves, and is now watching the party alone from the sidelines.
+	\ccard{\\Wallflower Alias\\}
+	\ccard{\\Azalea\\}
+
+
 	
-	Initially, you know nothing about your wallflower except their alias.
+	\item Collect these index cards.
 	
-	What does your wallflower see, think, and feel - as they watch the party unfold?
+\end{enumerate}
+
+
+\section{Set the party}
+
+What type of party are we playing?
+
+
+\begin{enumerate}
+	\item Pick an age range for our wallflowers and party attendees:
+		\begin{itemize}
+			\item High School
+			\item College
+		\end{itemize}
+	\item Pick a setting:
+		\begin{itemize}
+			\item House party at a wealthy house
+			\item Kegger in the woods
+			\item Bonfire on the beach
+		\end{itemize}
 	
-	Do they want to join the party or leave?
-	
-	Don't try to answer yet!
-	
-	You will discover everything about your wallflower through play.
-\end{quote}
+
+\end{enumerate}
+
 
 
 }

@@ -106,3 +106,23 @@ thoughts: Email is such a weird skill...
 - Add logo for certified emails.
 - Automatic categorization to trusted, and apply tags.
 - Allow automatic filtering and withdraw of emails from opted in clients - for example if an account was compromised.
+
+## Case Study Proton Mail
+
+[Proton Mail Wikipedia](https://en.wikipedia.org/wiki/Proton_Mail)
+
+Why do people pick proton mail?
+
+- Reputation for Security & Privacy
+
+- Client Side Encryption - between proton email addresses.
+- PGP
+- email aliases
+
+Why do people pay for it?
+
+## Many PGP registry sites
+
+- All of these are open source or university? Why is that?
+
+[Open PGP Key Registry](https://keys.openpgp.org/)

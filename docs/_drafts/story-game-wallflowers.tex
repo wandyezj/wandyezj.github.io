@@ -34,12 +34,16 @@
 
 \newcommand{\vtitle}{Wallflowers}
 \newcommand{\vauthor}{wandyezj}
+\newcommand{\vversion}{2026-04-23}
 
 % symbol - to read out loud
 \newcommand{\vreadsymbol}{$\triangleright$}
 
 % symbol - is an example
 \newcommand{\vsymbolexample}{$\in$}
+
+%Symbol - is a ref link to a section
+\newcommand{\vsymbolref}{$\cdots$}
 
 %
 % Commands
@@ -68,8 +72,8 @@
 
 % read commands are to format to indicate it should be read out loud
 \newcommand{\csetfontread}{
-	\usefont{T1}{lmr}{m}{sl}
-	\csetfontsize{0.5cm}
+	\usefont{T1}{lmr}{m}{n}
+	\csetfontsize{0.4cm}
 	%\linespread{2}
 	\selectfont
 	\setlength{\parskip}{2mm} % Custom spacing
@@ -138,7 +142,21 @@
 % Other Packages
 \usepackage{geometry}
 
-\geometry{a4paper, margin=1in}
+
+%\geometry{a4paper, margin=1in}
+
+\geometry{
+	paperwidth=4.375in,
+	paperheight=8.75in,
+	margin=0.25in,
+	bottom=0.5in
+	}
+
+% Control margines of enums with parameters
+\usepackage{enumitem}
+
+% font 12 pt
+
 
 % Drawings
 \usepackage{tikz}
@@ -154,8 +172,8 @@
 %\usepackage{scrextend}
 %\changefontsizes{18pt}
 
-
-
+% Clickable Links
+\usepackage{hyperref}
 
 %
 % Setup
@@ -177,13 +195,17 @@
 	\centering
 	\vspace*{4cm}
 	{
-		\csetfontsize{2cm}
+		\csetfontsize{1.8cm}
 		\usefont{OT1}{pag}{x}{n}
 		\vtitle
 	}
 	\vspace*{0.5cm}
 	
 	{\large by \vauthor}
+	\vspace*{0.5cm}
+	\linebreak
+	{\small \vversion }
+	
 	\vspace*{\fill}
 \end{titlepage}
 \pagebreak
@@ -195,7 +217,7 @@
 \begin{document}
 {
 % Global Font Control
-\csetfontsize{18pt}
+\csetfontsize{12pt}
 \csetfont{cmssq}
 \fontfamily{Times New Roman}\selectfont
 
@@ -203,30 +225,7 @@
 % Title Page
 %
 
-%\cpagetitle
-
-
-%
-% Section Start
-%  Pitch
-%
-
-\section{Pitch}
-
-\begin{quote}
-TODO:
-
-How do I pitch wallflowers in a few sentences?
-
-Wallflowers is a game for 3 - 4 players.
-
-
-
-%!!WARNING!!! This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's always ok to ask if people are comfortable.
-
-\end{quote}
-%\pagebreak
-
+\cpagetitle
 
 
 %
@@ -237,10 +236,9 @@ Wallflowers is a game for 3 - 4 players.
 \section{What you need to play}
 
 \begin{itemize}
-	\item 3-4 players.
-	\item One player to facilitate everyone through the rules.
+	\item Three or four players
 	\item Blank Index cards
-	\item Pens
+	\item Pens or pencils
 	\item (optional) Token to track whose turn it is.
 \end{itemize}
 
@@ -251,8 +249,8 @@ Wallflowers is a game for 3 - 4 players.
 % Introduction
 %
 
-%\pagebreak
-\section{Pitch}
+\pagebreak
+\section{Introduction}
 
 Read the following aloud:
 
@@ -273,7 +271,6 @@ You will discover everything about your wallflower through play.
 \end{eread}
 
 \pagebreak
-
 \section{Alias}
 
 
@@ -320,7 +317,7 @@ Yarrow
 Zenobia
 \end{verbatim}
 
-
+\pagebreak
 \section{Place Cards}
 
 To help everyone keep track of who is playing each wallflower:
@@ -338,13 +335,15 @@ Have each player write down their name and their wallflower's name on a folded i
 Example:
 
 \ccard{Wallflower Alias\\ \\ (Player Name)}
+\linebreak
+\linebreak
 \ccard{Azalea\\ \\ (Ace)}
 
 \item \cread{Place the card in front of you so everyone can see.}
 
 \end{enumerate}
 
-
+\pagebreak
 \section{Wallflower Deck}
 
 Create the wallflower deck.
@@ -355,6 +354,8 @@ Create the wallflower deck.
 	Example
 	
 	\ccard{\\Wallflower Alias\\}
+	\linebreak
+	\linebreak
 	\ccard{\\Azalea\\}
 
 
@@ -363,14 +364,14 @@ Create the wallflower deck.
 	
 \end{enumerate}
 
-
+\pagebreak
 \section{Setting}
 
 What type of party are we playing?
 
 
 \begin{enumerate}
-	\item Pick an age range for our wallflowers and party attendees:
+	\item Pick an age group for everyone at the party:
 		\begin{itemize}
 			\item High School
 			\item College
@@ -385,7 +386,7 @@ What type of party are we playing?
 
 \end{enumerate}
 
-
+\pagebreak
 \section{Attendees}
 
 Who shows up to the party?
@@ -405,9 +406,9 @@ The party takes place across four rounds. Each round takes place later in the pa
 
 In each round, each player will take one turn.
 
-On your turn you will narrate something at the party \ci{all} wallflowers notice. You will then draw \ci{one} wallflower from the wallflower deck to narrate their impression to all players.
+On your turn, narrate something at the party \ci{all} wallflowers notice. Then draw a wallflower from the wallflower deck to reveal their impression to all players.
 
-Every round, every player will narrate once, and give their wallflowers impression once.
+Each round, every player will narrate once, and reveal their wallflower's impression once.
 
 
 \subsection{At the beginning of each round}
@@ -424,7 +425,7 @@ Every round, every player will narrate once, and give their wallflowers impressi
 \subsection{Round Opening Lines}
 
 \begin{enumerate}
-	\renewcommand{\labelenumi}{(\Roman{enumi})}
+	\renewcommand{\labelenumi}{\Roman{enumi}.}
 	\item It's early in the evening, not many people are here yet.
 	
 	\item It's still early in the evening, people are arriving and socializing.
@@ -434,15 +435,15 @@ Every round, every player will narrate once, and give their wallflowers impressi
 	\item It's still the middle of the night, the music and energy have shifted to be more relaxed.
 \end{enumerate}
 
-
+\pagebreak
 \subsection{Turn}
 
 On your turn:
 
-\begin{enumerate}
-	\item Party
+\begin{enumerate}[leftmargin=*]
+	\item Party \hyperref[sec:party]{\vsymbolref}
 		\begin{itemize}
-			\item Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
+			\item Describe something at the party all wallflowers notice. This might be an object, person, scene, or detail.
 		\end{itemize}
 	\item Read
 		\begin{itemize}
@@ -451,9 +452,8 @@ On your turn:
 		
 	\item Pause
 		\begin{itemize}
-			\item Give players time to think in silence about their wallflower's impression.
+			\item Give players a minute to think in silence about their wallflower's impression.
 			\item Think about your own wallflower's impression.
-			\item After at least a minute, ask if everyone is ready.
 		\end{itemize}
 	
 	\item Draw
@@ -469,20 +469,19 @@ On your turn:
 			\item Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
 		\end{itemize}
 
-\item Impression
+\item Impression \hyperref[sec:impression]{\vsymbolref}
 	\begin{itemize}
-		\item Have the selected player give their wallflower's impression.
+		\item Have the player who owns the wallflower reveal their wallflower's impression.
 	\end{itemize}
 
 \end{enumerate}
 
 
-
-\subsubsection{Party}
-
+\pagebreak
+\subsubsection{Party} \label{sec:party}
 Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
 
-\vspace{5mm}
+\vspace{2mm}
 
 In Round:
 
@@ -499,8 +498,8 @@ In Round:
 Only describe what the wallflower's can directly observe.
 
 \begin{itemize}
-\item Do \cnot use any judgement words.
-\item Do \cnot describe any interaction with a wallflower.
+\item Do \cnot use judgement words.
+\item Do \cnot describe interaction with a wallflower.
 \item Do \cnot describe what a wallflower might know, think, or feel.
 \end{itemize}
 
@@ -521,9 +520,10 @@ Examples
 
 \end{itemize}
 
-\subsection{Impression}
+\pagebreak
+\subsubsection{Impression} \label{sec:impression}
 
-The player who controls the selected wallflower narrates their wallflower's impression in the 3rd person.
+The player who controls the drawn wallflower narrate their wallflower's impression in the 3rd person.
 
 Describe what your wallflower pays attention to. What do they think? How do they feel about what they observed?
 
@@ -543,11 +543,11 @@ Example:
 \renewcommand{\labelitemi}{\vsymbolexample}
 \item
 \begin{quote}
-	We see Azalea alone.
-	
-	Azalea sees... the cheer squad laughing in the corner. Must be nice to fit in, and feels awkward.
-	
-	Azalea wants to... join the party.
+We see Azalea alone. 
+
+Azalea sees... the cheer squad laughing in the corner. Must be nice to fit in, and feels awkward.
+
+Azalea wants to... join the party.
 \end{quote}
 \end{itemize}
 
@@ -559,8 +559,7 @@ This is the final round.
 
 Read the following aloud:
 
-\begin{eread}
-
+\begin{eread} 
 It's late, the party is starting to wind down, some people are starting to leave, others are settling into quieter conversations.
 
 Does your wallflower join or leave the party?

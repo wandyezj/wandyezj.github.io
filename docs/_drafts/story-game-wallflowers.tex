@@ -51,13 +51,16 @@
 % options
 % cmssq
 % pag
-% phv
+% phv .35cm
+% lmr
 
 % font - default
-\newcommand{\vfontdefault}{lmr}
+\newcommand{\vfontdefault}{cmssq}
+\newcommand{\vfontdefaultsize}{0.4cm}
 
 % font - read
 \newcommand{\vfontread}{lmr}
+\newcommand{\vfontreadsize}{0.4cm}
 
 %
 % Links
@@ -80,6 +83,13 @@
 % Create a link
 \newcommand{\clink}[1]{\hyperref[#1]{\vsymbolref}}
 
+
+
+%
+% Q & A
+%
+
+\newcommand{\cquestion}[1]{\subsection{#1}}
 
 %
 % Commands
@@ -110,7 +120,7 @@
 % read commands are to format to indicate it should be read out loud
 \newcommand{\csetfontread}{
 	\usefont{T1}{\vfontread}{m}{n}
-	\csetfontsize{0.4cm}
+	\csetfontsize{\vfontreadsize}
 	%\linespread{2}
 	\selectfont
 	\setlength{\parskip}{2mm} % Custom spacing
@@ -254,11 +264,13 @@
 \begin{document}
 {
 % Global Font Control
-\csetfontsize{12pt}
 \csetfont{\vfontdefault}
-%\fontfamily{Times New Roman}\selectfont
-%\fontfamily{Helvetica}\selectfont
+\csetfontsize{\vfontdefaultsize}
 \raggedright
+
+% Global Section Control
+% Remove numbers from subsections
+\setcounter{secnumdepth}{1}
 
 %
 % Title Page
@@ -388,7 +400,7 @@ Create the wallflower deck.
 \begin{enumerate}
 	\item Give each player a blank index card. 
 	
-	\item Have each player write down their wallflower alias on one side - leaving the back blank.
+	\item \cread{Write down your wallflower alias on one side - leaving the back blank.} 
 	
 	Example
 	
@@ -464,9 +476,9 @@ All wallflowers will bloom - joining or leaving the party.
 \subsubsection{At the beginning of each round}
 
 \begin{enumerate}
-	\item  Collect the wallflower cards and shuffle the wallflower deck.
-	\item Rotate Opening Player - Rotate the opening player clockwise. This way, in a four player game, everyone opens the round once.
-	\item Opening Player - Read the opening line for the round and narrate first.
+	\item Collect the wallflower cards and shuffle the wallflower deck.
+	\item Rotate the opening player clockwise. This way, in a four player game, everyone opens the round once.
+	\item The opening player reads the opening line for the round and narrates first.
 	\item Turns proceed clockwise.
 	
 	
@@ -491,9 +503,6 @@ On your turn:
 
 \begin{enumerate}[leftmargin=*]
 	\item Narrate \clink{\vlinkrefsectionpartynarrate}
-		\begin{itemize}
-			\item Describe something at the party all wallflowers notice. This might be an object, person, scene, or detail.
-		\end{itemize}
 	\item Read
 		\begin{itemize}
 			\item \cread{Our wallflowers all saw this. What is your wallflowers impression? What are they thinking? What are they feeling?}
@@ -520,7 +529,7 @@ On your turn:
 
 \item Impression \clink{\vlinkrefsectionpartyimpression}
 	\begin{itemize}
-		\item Have the player who controls the drawn wallflower reveal their wallflower's impression in the 3rd person.
+		\item Have the player who controls the drawn wallflower reveal their wallflower's impression.
 	\end{itemize}
 
 \end{enumerate}
@@ -636,6 +645,106 @@ Have one player:
 
 	
 \end{enumerate}
+
+
+\pagebreak
+\section{Q \& A}
+
+
+
+\cquestion{What changes for online play?}
+
+For online play you will need:
+
+\begin{itemize}
+	\item A video chat client so everyone can see and hear each other.
+	\item A shared document everyone can view and edit.
+\end{itemize}
+
+
+In the shared document, list each wallflower alias and player name in a section titled 'Wallflowers'.
+
+Example:
+
+\begin{verbatim}
+Wallflowers
+
+- Azalea (Ace)
+- Begonia (Ben)
+- Camellia (Cal)
+- Dahlia (Dan)
+\end{verbatim}
+
+
+Clockwise is considered down.
+
+After the last player in the list - loop back the the top.
+
+The facilitator will create the deck of cards, they will shuffle and draw for everyone as required.
+
+
+\cquestion{Can we play with other party contexts?}
+
+Yes. However you will need to discuss and agree on that shared context with other players.
+
+Examples
+
+\begin{itemize}
+	\item Corporate Party
+\end{itemize}
+
+
+\cquestion{Can wallflowers observe each other?}
+
+No. Wallflowers are isolated and don't notice each other.
+
+Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
+
+
+\cquestion{Why narrate from the 3rd person?}
+
+I think it helps player more safely explore their wallflower.
+
+Narrating in the 1st person often increases the risk of character bleed.
+
+\cquestion{Why rotate which player starts each round?}
+
+I want different players to take turns reading the rounds starting line.
+
+The first description of what is happening at the party can have a lot of influence on the rest of the round. I want to get different players' ideas.
+
+Additionally, this balances the draw probability of the wallflower deck.
+
+
+\cquestion{Why randomize wallflower impressions?}
+
+Wallflowers don't get to choose what they see.
+
+I want players to stay engaged - there is a possibility their wallflower will be called on.
+
+I want different players to have a chance to respond to other players narration.
+
+\cquestion{Why hide which wallflower has an impression from the narrator?}
+
+The party action is explicitly separate from the wallflowers.
+
+The wallflowers are on the sidelines, they should not be considered in a players narration of party events.
+
+I want the player doing narration to be free to narrate what happens at the party.
+
+\pagebreak
+\cquestion{Why have every wallflower see every narration?}
+
+I want a shared story everyone builds on.
+
+The central thread is the party - which every player contributes to. Each player weaves their wallflower's thread around this central thread.
+
+Each player sees their wallflower's full thread, while other players only see a quarter of each wallflower's thread. This can make for surprising reveals at the end.
+
+It's much easier for players if every wallflower sees everything at the party. It is far too hard for players to separate out what each wallflower knows.
+
+The narrator for each round isn't aware of which wallflower will give their impression. So every wallflower needs to be aware of what's going on.
+
 
 
 %\pagebreak

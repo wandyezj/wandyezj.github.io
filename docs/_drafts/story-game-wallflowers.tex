@@ -29,12 +29,12 @@
 
 
 %
-%variables
+% variables
 %
 
 \newcommand{\vtitle}{Wallflowers}
 \newcommand{\vauthor}{wandyezj}
-\newcommand{\vversion}{2026-04-23}
+\newcommand{\vversion}{2026-04-25}
 
 % symbol - to read out loud
 \newcommand{\vreadsymbol}{$\triangleright$}
@@ -42,18 +42,55 @@
 % symbol - is an example
 \newcommand{\vsymbolexample}{$\in$}
 
-%Symbol - is a ref link to a section
+% symbol - is a ref link to a section
 \newcommand{\vsymbolref}{$\cdots$}
+
+
+% Fonts
+
+% options
+% cmssq
+% pag
+% phv
+
+% font - default
+\newcommand{\vfontdefault}{lmr}
+
+% font - read
+\newcommand{\vfontread}{lmr}
+
+%
+% Links
+%
+
+% Specific Links
+\newcommand{\vlinkrefsectionpartynarrate}{section:partynarrate}
+\newcommand{\vlinkrefsectionpartyimpression}{section:partyimpression}
+
+\newcommand{\vlinkrefsectionpartynormalround}{section:partynormalround}
+\newcommand{\vlinkrefsectionpartybloom}{section:partybloom}
+
+\newcommand{\vlinkrefsectionpartyturn}{section:partyturn}
+
+% \clinkref
+% Create a reference for a link
+\newcommand{\clinkref}[1]{\label{#1}}
+
+% \clink
+% Create a link
+\newcommand{\clink}[1]{\hyperref[#1]{\vsymbolref}}
+
 
 %
 % Commands
 % 
 
+
 % \ccard
 % Denote a index card with text on it
 \newcommand{\ccard}[1] {
 	\begin{tikzpicture}
-		\node[draw,align=center,inner sep=0.5cm,minimum width=5.5cm] at (3,0) {#1};
+		\node[draw,align=center,inner sep=0.5cm,minimum width=4.5cm] at (3,0) {#1};
 	\end{tikzpicture}
 }
 
@@ -72,7 +109,7 @@
 
 % read commands are to format to indicate it should be read out loud
 \newcommand{\csetfontread}{
-	\usefont{T1}{lmr}{m}{n}
+	\usefont{T1}{\vfontread}{m}{n}
 	\csetfontsize{0.4cm}
 	%\linespread{2}
 	\selectfont
@@ -218,8 +255,10 @@
 {
 % Global Font Control
 \csetfontsize{12pt}
-\csetfont{cmssq}
-\fontfamily{Times New Roman}\selectfont
+\csetfont{\vfontdefault}
+%\fontfamily{Times New Roman}\selectfont
+%\fontfamily{Helvetica}\selectfont
+\raggedright
 
 %
 % Title Page
@@ -320,10 +359,10 @@ Zenobia
 \pagebreak
 \section{Place Cards}
 
-To help everyone keep track of who is playing each wallflower:
+Create place cards to help everyone keep track of who is playing each wallflower.
 \linebreak
 \linebreak
-Have each player write down their name and their wallflower's name on a folded index card and place it in front of them.
+Have each player write down their name and their \linebreak wallflower's alias on a folded index card and place it in front of them.
 
 \begin{enumerate}
 
@@ -331,12 +370,10 @@ Have each player write down their name and their wallflower's name on a folded i
 \item \cread{Fold your index card in half to make a tent.}
 \item \cread{Write down your \textit{wallflower alias} and your name on both sides.}
 
+Example
 
-Example:
+%\ccard{Wallflower Alias\\ \\ (Player Name)}
 
-\ccard{Wallflower Alias\\ \\ (Player Name)}
-\linebreak
-\linebreak
 \ccard{Azalea\\ \\ (Ace)}
 
 \item \cread{Place the card in front of you so everyone can see.}
@@ -349,13 +386,14 @@ Example:
 Create the wallflower deck.
 
 \begin{enumerate}
-	\item Give each player a blank index card and have them write down their wallflower alias on one side, leaving the back blank.
-		
+	\item Give each player a blank index card. 
+	
+	\item Have each player write down their wallflower alias on one side - leaving the back blank.
+	
 	Example
 	
-	\ccard{\\Wallflower Alias\\}
-	\linebreak
-	\linebreak
+	%\ccard{\\Wallflower Alias\\} 
+	
 	\ccard{\\Azalea\\}
 
 
@@ -391,7 +429,7 @@ What type of party are we playing?
 
 Who shows up to the party?
 
-We will each create one character that shows up to the party.
+We will each create one character our wallflowers  see at the party.
 
 In any order: Describe this character. What do they look like? What are they wearing?
 
@@ -399,30 +437,42 @@ In any order: Describe this character. What do they look like? What are they wea
 
 
 
-\section{Party Loop}
+\section{Party}
 
 \subsection{Overview}
-The party takes place across four rounds. Each round takes place later in the party.
+The party takes place across five rounds. Each round, every player takes one turn.
 
-In each round, each player will take one turn.
-
-On your turn, narrate something at the party \ci{all} wallflowers notice. Then draw a wallflower from the wallflower deck to reveal their impression to all players.
+\vspace{0.4cm}
+The first four rounds: \clink{\vlinkrefsectionpartynormalround}
+\vspace{0.4cm}
+\linebreak
+On your turn, narrate something at the party \ci{all} wallflowers notice. Then, another player will reveal their wallflower's impression.
 
 Each round, every player will narrate once, and reveal their wallflower's impression once.
 
+\vspace{0.4cm}
+The final bloom round: \clink{\vlinkrefsectionpartybloom} 
+\vspace{0.4cm}
+\linebreak
+All wallflowers will bloom - joining or leaving the party.
 
-\subsection{At the beginning of each round}
+
+\pagebreak
+\subsection{Normal Round} \clinkref{\vlinkrefsectionpartynormalround}
+
+
+\subsubsection{At the beginning of each round}
 
 \begin{enumerate}
 	\item  Collect the wallflower cards and shuffle the wallflower deck.
 	\item Rotate Opening Player - Rotate the opening player clockwise. This way, in a four player game, everyone opens the round once.
 	\item Opening Player - Read the opening line for the round and narrate first.
 	\item Turns proceed clockwise.
-		
-
+	
+	
 \end{enumerate}
 
-\subsection{Round Opening Lines}
+\subsubsection{Round Opening Lines}
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{\Roman{enumi}.}
@@ -436,12 +486,11 @@ Each round, every player will narrate once, and reveal their wallflower's impres
 \end{enumerate}
 
 \pagebreak
-\subsection{Turn}
-
+\subsubsection{On Your Turn}
 On your turn:
 
 \begin{enumerate}[leftmargin=*]
-	\item Party \hyperref[sec:party]{\vsymbolref}
+	\item Narrate \clink{\vlinkrefsectionpartynarrate}
 		\begin{itemize}
 			\item Describe something at the party all wallflowers notice. This might be an object, person, scene, or detail.
 		\end{itemize}
@@ -452,7 +501,7 @@ On your turn:
 		
 	\item Pause
 		\begin{itemize}
-			\item Give players a minute to think in silence about their wallflower's impression.
+			\item Everyone think in silence about your wallflower's impression. Hold up your hand when you are ready.
 			\item Think about your own wallflower's impression.
 		\end{itemize}
 	
@@ -469,17 +518,17 @@ On your turn:
 			\item Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
 		\end{itemize}
 
-\item Impression \hyperref[sec:impression]{\vsymbolref}
+\item Impression \clink{\vlinkrefsectionpartyimpression}
 	\begin{itemize}
-		\item Have the player who owns the wallflower reveal their wallflower's impression.
+		\item Have the player who controls the drawn wallflower reveal their wallflower's impression in the 3rd person.
 	\end{itemize}
 
 \end{enumerate}
 
 
 \pagebreak
-\subsubsection{Party} \label{sec:party}
-Describe something at the party the wallflowers notice. This might be an object, person, scene, or detail.
+\subsubsection{Narrate} \clinkref{\vlinkrefsectionpartynarrate}
+Describe something at the party all wallflowers notice. This might be an object, person, scene, or detail.
 
 \vspace{2mm}
 
@@ -521,9 +570,9 @@ Examples
 \end{itemize}
 
 \pagebreak
-\subsubsection{Impression} \label{sec:impression}
+\subsubsection{Impression} \clinkref{\vlinkrefsectionpartyimpression}
 
-The player who controls the drawn wallflower narrate their wallflower's impression in the 3rd person.
+Narrate your wallflower's impression in the 3rd person.
 
 Describe what your wallflower pays attention to. What do they think? How do they feel about what they observed?
 
@@ -531,7 +580,6 @@ Based on your wallflower's reaction do they want to join or leave the party?
 
 Only describe what your wallflower is thinking or feeling.
 
-\vspace{5mm}
 \begin{itemize}
 	\item Your wallflower may \emph{NOT} take action.
 	\item Your wallflower may \emph{NOT} join or leave the party.
@@ -553,7 +601,7 @@ Azalea wants to... join the party.
 
 
 \pagebreak
-\section{Bloom}
+\subsection{Bloom} \clinkref{\vlinkrefsectionpartybloom}
 
 This is the final round.
 
@@ -566,7 +614,7 @@ Does your wallflower join or leave the party?
 
 \end{eread}
 
-\subsection{Turn Order}
+\subsubsection{Turn Order}
 
 Have one player:
 
@@ -575,7 +623,7 @@ Have one player:
 	\item Draw from the wallflower deck and have each wallflower go as they are called.
 \end{enumerate}
 
-\subsection{On your turn}
+\subsubsection{On your turn}
 
 \begin{enumerate}
 	\item Ask the other players if your wallflower joins or leaves the party. Why?
@@ -590,6 +638,9 @@ Have one player:
 \end{enumerate}
 
 
+%\pagebreak
+%\section{Eratta}
+%\tableofcontents
 
 }
 \end{document}

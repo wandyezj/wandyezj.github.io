@@ -24,24 +24,88 @@
 %	sc - small caps
 
 
+% Change the numerals used in enumerate
+% \renewcommand{\labelenumi}{\Roman{enumi}.}
+
+
 %
-%variables
+% variables
 %
 
 \newcommand{\vtitle}{Wallflowers}
 \newcommand{\vauthor}{wandyezj}
+\newcommand{\vversion}{2026-04-25}
 
+% symbol - to read out loud
 \newcommand{\vreadsymbol}{$\triangleright$}
+
+% symbol - is an example
+\newcommand{\vsymbolexample}{$\in$}
+
+% symbol - is a ref link to a section
+\newcommand{\vsymbolref}{$\cdots$}
+
+
+% Fonts
+
+% options
+% cmssq
+% pag
+% phv .35cm
+% lmr
+
+% font - default
+\newcommand{\vfontdefault}{cmssq}
+\newcommand{\vfontdefaultsize}{0.4cm}
+
+% font - read
+\newcommand{\vfontread}{lmr}
+\newcommand{\vfontreadsize}{0.4cm}
+
+%
+% Links
+%
+
+% Specific Links
+\newcommand{\vlinkrefsectionpartynarrate}{section:partynarrate}
+\newcommand{\vlinkrefsectionpartyimpression}{section:partyimpression}
+
+\newcommand{\vlinkrefsectionpartynormalround}{section:partynormalround}
+\newcommand{\vlinkrefsectionpartybloom}{section:partybloom}
+
+\newcommand{\vlinkrefsectionpartyturn}{section:partyturn}
+
+% \clinkref
+% Create a reference for a link
+\newcommand{\clinkref}[1]{\label{#1}}
+
+% \clink
+% Create a link
+\newcommand{\clink}[1]{\hyperref[#1]{\vsymbolref}}
+
+
+
+%
+% Q & A
+%
+
+\newcommand{\cquestion}[1]{\subsection{#1}}
 
 %
 % Commands
 % 
 
+
+% \ccard
+% Denote a index card with text on it
 \newcommand{\ccard}[1] {
 	\begin{tikzpicture}
-		\node[draw,align=center,inner sep=0.5cm,minimum width=5.5cm] at (3,0) {#1};
+		\node[draw,align=center,inner sep=0.5cm,minimum width=4.5cm] at (3,0) {#1};
 	\end{tikzpicture}
 }
+
+%italic
+\newcommand{\ci}[1]{\textit{#1}}
 
 \newcommand{\csetfontsize}[1]{
 	\fontsize{#1}{#1}
@@ -49,20 +113,26 @@
 }
 
 \newcommand{\csetfont}[1]{
-	\usefont{T1}{#1}{x}{n}
+	\usefont{T1}{#1}{m}{n}
 	\selectfont
 }
 
 % read commands are to format to indicate it should be read out loud
 \newcommand{\csetfontread}{
-	\usefont{T1}{lmr}{m}{sl}
-	\csetfontsize{0.5cm}
+	\usefont{T1}{\vfontread}{m}{n}
+	\csetfontsize{\vfontreadsize}
 	%\linespread{2}
 	\selectfont
 	\setlength{\parskip}{2mm} % Custom spacing
 	\setlength{\parindent}{0pt}
 }
 
+% \cnot
+% Denote - NOT
+\newcommand{\cnot} {\emph{NOT} }
+
+% \cread 
+% Denote - this is something that should be read out loud
 \newcommand{\cread}[1]{
 		%\fbox{
 			%\texttt{
@@ -82,6 +152,7 @@
 	\end{center}
 }
 
+% Denote this is something to be read out loud
 \newenvironment{eread}
 {
 	%\begin{quote}
@@ -118,7 +189,21 @@
 % Other Packages
 \usepackage{geometry}
 
-\geometry{a4paper, margin=1in}
+
+%\geometry{a4paper, margin=1in}
+
+\geometry{
+	paperwidth=4.375in,
+	paperheight=8.75in,
+	margin=0.25in,
+	bottom=0.5in
+	}
+
+% Control margines of enums with parameters
+\usepackage{enumitem}
+
+% font 12 pt
+
 
 % Drawings
 \usepackage{tikz}
@@ -134,8 +219,8 @@
 %\usepackage{scrextend}
 %\changefontsizes{18pt}
 
-
-
+% Clickable Links
+\usepackage{hyperref}
 
 %
 % Setup
@@ -157,13 +242,17 @@
 	\centering
 	\vspace*{4cm}
 	{
-		\csetfontsize{2cm}
+		\csetfontsize{1.8cm}
 		\usefont{OT1}{pag}{x}{n}
 		\vtitle
 	}
 	\vspace*{0.5cm}
 	
 	{\large by \vauthor}
+	\vspace*{0.5cm}
+	\linebreak
+	{\small \vversion }
+	
 	\vspace*{\fill}
 \end{titlepage}
 \pagebreak
@@ -175,38 +264,19 @@
 \begin{document}
 {
 % Global Font Control
-\csetfontsize{18pt}
-\csetfont{cmssq}
-\fontfamily{Times New Roman}\selectfont
+\csetfont{\vfontdefault}
+\csetfontsize{\vfontdefaultsize}
+\raggedright
+
+% Global Section Control
+% Remove numbers from subsections
+\setcounter{secnumdepth}{1}
 
 %
 % Title Page
 %
 
-%\cpagetitle
-
-
-%
-% Section Start
-%  Pitch
-%
-
-\section{Pitch}
-
-\begin{quote}
-TODO:
-
-How do I pitch wallflowers in a few sentences?
-
-Wallflowers is a game for 3 - 4 players.
-
-
-
-%!!WARNING!!! This game can be emotionally intense. Watch yourself - let other players know if you are uncomfortable. Watch others - it's always ok to ask if people are comfortable.
-
-\end{quote}
-%\pagebreak
-
+\cpagetitle
 
 
 %
@@ -217,10 +287,9 @@ Wallflowers is a game for 3 - 4 players.
 \section{What you need to play}
 
 \begin{itemize}
-	\item 3-4 players.
-	\item One player to facilitate everyone through the rules.
+	\item Three or four players
 	\item Blank Index cards
-	\item Pens
+	\item Pens or pencils
 	\item (optional) Token to track whose turn it is.
 \end{itemize}
 
@@ -231,8 +300,8 @@ Wallflowers is a game for 3 - 4 players.
 % Introduction
 %
 
-%\pagebreak
-\section{Pitch}
+\pagebreak
+\section{Introduction}
 
 Read the following aloud:
 
@@ -252,7 +321,7 @@ Don't try to answer yet!
 You will discover everything about your wallflower through play.
 \end{eread}
 
-
+\pagebreak
 \section{Alias}
 
 
@@ -267,6 +336,7 @@ Pick an alias for your wallflower named after a flower.
 Each alias must be a single word flower name and start with a different letter.
 
 Pick from the list below or create your own:
+
 \end{eread}
 
 \begin{verbatim}
@@ -298,10 +368,13 @@ Yarrow
 Zenobia
 \end{verbatim}
 
-To help everyone keep track of who is playing each wallflower:
+\pagebreak
+\section{Place Cards}
+
+Create place cards to help everyone keep track of who is playing each wallflower.
 \linebreak
 \linebreak
-Have each player write down their name and their wallflower's name on a folded index card and place it in front of them.
+Have each player write down their name and their \linebreak wallflower's alias on a folded index card and place it in front of them.
 
 \begin{enumerate}
 
@@ -309,27 +382,30 @@ Have each player write down their name and their wallflower's name on a folded i
 \item \cread{Fold your index card in half to make a tent.}
 \item \cread{Write down your \textit{wallflower alias} and your name on both sides.}
 
+Example
 
-Example:
+%\ccard{Wallflower Alias\\ \\ (Player Name)}
 
-\ccard{Wallflower Alias\\ \\ (Player Name)}
 \ccard{Azalea\\ \\ (Ace)}
 
 \item \cread{Place the card in front of you so everyone can see.}
 
 \end{enumerate}
 
-
+\pagebreak
 \section{Wallflower Deck}
 
 Create the wallflower deck.
 
 \begin{enumerate}
-	\item Give each player a blank index card and have them write down their wallflower alias on one side, leaving the back blank.
-		
+	\item Give each player a blank index card. 
+	
+	\item \cread{Write down your wallflower alias on one side - leaving the back blank.} 
+	
 	Example
 	
-	\ccard{\\Wallflower Alias\\}
+	%\ccard{\\Wallflower Alias\\} 
+	
 	\ccard{\\Azalea\\}
 
 
@@ -338,14 +414,14 @@ Create the wallflower deck.
 	
 \end{enumerate}
 
-
-\section{Set the party}
+\pagebreak
+\section{Setting}
 
 What type of party are we playing?
 
 
 \begin{enumerate}
-	\item Pick an age range for our wallflowers and party attendees:
+	\item Pick an age group for everyone at the party:
 		\begin{itemize}
 			\item High School
 			\item College
@@ -360,7 +436,320 @@ What type of party are we playing?
 
 \end{enumerate}
 
+\pagebreak
+\section{Attendees}
 
+Who shows up to the party?
+
+We will each create one character our wallflowers  see at the party.
+
+In any order: Describe this character. What do they look like? What are they wearing?
+
+\pagebreak
+
+
+
+\section{Party}
+
+\subsection{Overview}
+The party takes place across five rounds. Each round, every player takes one turn.
+
+\vspace{0.4cm}
+The first four rounds: \clink{\vlinkrefsectionpartynormalround}
+\vspace{0.4cm}
+\linebreak
+On your turn, narrate something at the party \ci{all} wallflowers notice. Then, another player will reveal their wallflower's impression.
+
+Each round, every player will narrate once, and reveal their wallflower's impression once.
+
+\vspace{0.4cm}
+The final bloom round: \clink{\vlinkrefsectionpartybloom} 
+\vspace{0.4cm}
+\linebreak
+All wallflowers will bloom - joining or leaving the party.
+
+
+\pagebreak
+\subsection{Normal Round} \clinkref{\vlinkrefsectionpartynormalround}
+
+
+\subsubsection{At the beginning of each round}
+
+\begin{enumerate}
+	\item Collect the wallflower cards and shuffle the wallflower deck.
+	\item Rotate the opening player clockwise. This way, in a four player game, everyone opens the round once.
+	\item The opening player reads the opening line for the round and narrates first.
+	\item Turns proceed clockwise.
+	
+	
+\end{enumerate}
+
+\subsubsection{Round Opening Lines}
+
+\begin{enumerate}
+	\renewcommand{\labelenumi}{\Roman{enumi}.}
+	\item It's early in the evening, not many people are here yet.
+	
+	\item It's still early in the evening, people are arriving and socializing.
+	
+	\item It's the middle of the night, the party is packed, the music is up.
+	
+	\item It's still the middle of the night, the music and energy have shifted to be more relaxed.
+\end{enumerate}
+
+\pagebreak
+\subsubsection{On Your Turn}
+On your turn:
+
+\begin{enumerate}[leftmargin=*]
+	\item Narrate \clink{\vlinkrefsectionpartynarrate}
+	\item Read
+		\begin{itemize}
+			\item \cread{Our wallflowers all saw this. What is your wallflowers impression? What are they thinking? What are they feeling?}
+		\end{itemize}
+		
+	\item Pause
+		\begin{itemize}
+			\item Everyone think in silence about your wallflower's impression. Hold up your hand when you are ready.
+			\item Think about your own wallflower's impression.
+		\end{itemize}
+	
+	\item Draw
+		\begin{itemize}
+			\item Select a wallflower to reveal their thoughts.
+			\item The player who narrates should always be different from the player revealing their wallflower's impression.
+			\item Draw from the wallflower deck:
+			\begin{itemize}
+				\item If you are the second to last player, check the deck to make sure the final player does not draw their own card.
+				\item If you draw your own card, set it aside, draw again, then shuffle your own card back in.
+				\item If you are the last player and draw your own card - Oops! Narrate your own wallflower's impression.
+			\end{itemize}
+			\item Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
+		\end{itemize}
+
+\item Impression \clink{\vlinkrefsectionpartyimpression}
+	\begin{itemize}
+		\item Have the player who controls the drawn wallflower reveal their wallflower's impression.
+	\end{itemize}
+
+\end{enumerate}
+
+
+\pagebreak
+\subsubsection{Narrate} \clinkref{\vlinkrefsectionpartynarrate}
+Describe something at the party all wallflowers notice. This might be an object, person, scene, or detail.
+
+\vspace{2mm}
+
+In Round:
+
+\begin{enumerate}
+	\renewcommand{\labelenumi}{\Roman{enumi}.}
+	
+	\item Introduce something new.
+	\item Introduce something new or build on something another player has introduced.
+	\item Build on something another player has introduced.
+	\item Build on something another player has introduced.
+\end{enumerate}
+
+\vspace{5mm}
+Only describe what the wallflower's can directly observe.
+
+\begin{itemize}
+\item Do \cnot use judgement words.
+\item Do \cnot describe interaction with a wallflower.
+\item Do \cnot describe what a wallflower might know, think, or feel.
+\end{itemize}
+
+\vspace{5mm}
+Examples
+
+\begin{itemize}
+\renewcommand{\labelitemi}{\vsymbolexample}
+
+\item A buff guy with a huge smile on his face walks past. He's wearing a baseball cap with the high school Griffin mascot, a T-Shirt with that says "Rock Punks" in gigantic pink letters, and shorts paired with socks and sandals - showing off incredibly smooth legs.
+
+\item A group of guys from the football team, squashed together on the white couch, are staring at the TV, and suddenly jump up cheering - a bowl of popcorn tumbles onto the floor, flinging popcorn everywhere.
+
+\item A girl tightly gripping a boys hand drags him to the front door. Her brows are furrowed and tears wet her cheeks.
+
+\item A group of girls from the cheer squad dressed in matching hoodies and sweat pants are in a circle in the corner laughing so loudly you can hear it across the room.
+
+
+\end{itemize}
+
+\pagebreak
+\subsubsection{Impression} \clinkref{\vlinkrefsectionpartyimpression}
+
+Narrate your wallflower's impression in the 3rd person.
+
+Describe what your wallflower pays attention to. What do they think? How do they feel about what they observed?
+
+Based on your wallflower's reaction do they want to join or leave the party?
+
+Only describe what your wallflower is thinking or feeling.
+
+\begin{itemize}
+	\item Your wallflower may \emph{NOT} take action.
+	\item Your wallflower may \emph{NOT} join or leave the party.
+\end{itemize}
+
+\vspace{5mm}
+Example:
+\begin{itemize}
+\renewcommand{\labelitemi}{\vsymbolexample}
+\item
+\begin{quote}
+We see Azalea alone. 
+
+Azalea sees... the cheer squad laughing in the corner. Must be nice to fit in, and feels awkward.
+
+Azalea wants to... join the party.
+\end{quote}
+\end{itemize}
+
+
+\pagebreak
+\subsection{Bloom} \clinkref{\vlinkrefsectionpartybloom}
+
+This is the final round.
+
+Read the following aloud:
+
+\begin{eread} 
+It's late, the party is starting to wind down, some people are starting to leave, others are settling into quieter conversations.
+
+Does your wallflower join or leave the party?
+
+\end{eread}
+
+\subsubsection{Turn Order}
+
+Have one player:
+
+\begin{enumerate}
+	\item Shuffle the wallflower deck.
+	\item Draw from the wallflower deck and have each wallflower go as they are called.
+\end{enumerate}
+
+\subsubsection{On your turn}
+
+\begin{enumerate}
+	\item Ask the other players if your wallflower joins or leaves the party. Why?
+	\item Decide if your wallflower joins or leaves the party.
+	\item Narrate a short vignette of your wallflower joining or leaving the party. 
+	\begin{itemize}
+		\item Why did they stop being a wallflower?
+		\item What is your wallflowers feeling?
+	\end{itemize}
+
+	
+\end{enumerate}
+
+
+\pagebreak
+\section{Q \& A}
+
+
+
+\cquestion{What changes for online play?}
+
+For online play you will need:
+
+\begin{itemize}
+	\item A video chat client so everyone can see and hear each other.
+	\item A shared document everyone can view and edit.
+\end{itemize}
+
+
+In the shared document, list each wallflower alias and player name in a section titled 'Wallflowers'.
+
+Example:
+
+\begin{verbatim}
+Wallflowers
+
+- Azalea (Ace)
+- Begonia (Ben)
+- Camellia (Cal)
+- Dahlia (Dan)
+\end{verbatim}
+
+
+Clockwise is considered down.
+
+After the last player in the list - loop back the the top.
+
+The facilitator will create the deck of cards, they will shuffle and draw for everyone as required.
+
+
+\cquestion{Can we play with other party contexts?}
+
+Yes. However you will need to discuss and agree on that shared context with other players.
+
+Examples
+
+\begin{itemize}
+	\item Corporate Party
+\end{itemize}
+
+
+\cquestion{Can wallflowers observe each other?}
+
+No. Wallflowers are isolated and don't notice each other.
+
+Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
+
+
+\cquestion{Why narrate from the 3rd person?}
+
+I think it helps player more safely explore their wallflower.
+
+Narrating in the 1st person often increases the risk of character bleed.
+
+\cquestion{Why rotate which player starts each round?}
+
+I want different players to take turns reading the rounds starting line.
+
+The first description of what is happening at the party can have a lot of influence on the rest of the round. I want to get different players' ideas.
+
+Additionally, this balances the draw probability of the wallflower deck.
+
+
+\cquestion{Why randomize wallflower impressions?}
+
+Wallflowers don't get to choose what they see.
+
+I want players to stay engaged - there is a possibility their wallflower will be called on.
+
+I want different players to have a chance to respond to other players narration.
+
+\cquestion{Why hide which wallflower has an impression from the narrator?}
+
+The party action is explicitly separate from the wallflowers.
+
+The wallflowers are on the sidelines, they should not be considered in a players narration of party events.
+
+I want the player doing narration to be free to narrate what happens at the party.
+
+\pagebreak
+\cquestion{Why have every wallflower see every narration?}
+
+I want a shared story everyone builds on.
+
+The central thread is the party - which every player contributes to. Each player weaves their wallflower's thread around this central thread.
+
+Each player sees their wallflower's full thread, while other players only see a quarter of each wallflower's thread. This can make for surprising reveals at the end.
+
+It's much easier for players if every wallflower sees everything at the party. It is far too hard for players to separate out what each wallflower knows.
+
+The narrator for each round isn't aware of which wallflower will give their impression. So every wallflower needs to be aware of what's going on.
+
+
+
+%\pagebreak
+%\section{Eratta}
+%\tableofcontents
 
 }
 \end{document}

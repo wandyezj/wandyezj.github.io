@@ -3,7 +3,6 @@ layout: post
 title: "Emerging Technology Narrative"
 date: 2026-06-28 00:00:00 -0700
 tags: politics
-mermaid: true
 ---
 
 Have you heard about AI? It's latest and greatest technology and will solve every problem!
@@ -63,11 +62,11 @@ Usually this type of story telling is reserved to people highly trained in  engl
 
 Surprise! Engineers can tell stories - no fancy education required!
 
-I feel these prophetic visions of AI are described by Hanlon's Razor [^wikipedia-hanlons-razor]:
+I feel these prophetic visions of AI are all described by Hanlon's Razor [^wikipedia-hanlons-razor]:
 
 > Never attribute to malice that which is adequately explained by stupidity.
 
-Personally, I'm not afraid to say I don't know.
+Personally, I'm not afraid to say I don't know. People tend to want certainty though - so we listen to the prophets. Isn't it interesting our prophets are engineers?
 
 ## What story would you tell?
 

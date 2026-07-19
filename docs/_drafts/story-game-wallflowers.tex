@@ -27,6 +27,7 @@
 % Change the numerals used in enumerate
 % \renewcommand{\labelenumi}{\Roman{enumi}.}
 
+\usepackage{datetime2} % Format \today to yyyy-mm-dd 
 
 %
 % variables
@@ -34,7 +35,7 @@
 
 \newcommand{\vtitle}{Wallflowers}
 \newcommand{\vauthor}{wandyezj}
-\newcommand{\vversion}{2026-04-25}
+\newcommand{\vversion}{\today}
 
 % symbol - to read out loud
 \newcommand{\vreadsymbol}{$\triangleright$}
@@ -68,6 +69,7 @@
 
 % Specific Links
 \newcommand{\vlinkrefsectionpartynarrate}{section:partynarrate}
+\newcommand{\vlinkrefsectionpartydraw}{section:partydraw}
 \newcommand{\vlinkrefsectionpartyimpression}{section:partyimpression}
 
 \newcommand{\vlinkrefsectionpartynormalround}{section:partynormalround}
@@ -310,7 +312,7 @@ We are playing wallflowers at a large party.
 
 Your wallflower showed up to the party by themselves, and is now watching the party alone from the sidelines.
 
-Initially, you know nothing about your wallflower except their alias.
+Initially, you know nothing about your wallflower except their alias and feeling about the party.
 
 What does your wallflower see, think, and feel - as they watch the party unfold?
 
@@ -320,6 +322,44 @@ Don't try to answer yet!
 
 You will discover everything about your wallflower through play.
 \end{eread}
+
+\section{Setting}
+
+What type of party are we playing?
+
+
+\begin{enumerate}
+	\item Pick an age group for everyone at the party:
+	\begin{itemize}
+		\item High School
+		\item College
+	\end{itemize}
+	\item Pick a setting:
+	\begin{itemize}
+		\item House party at a wealthy house
+		\item Kegger in the woods
+		\item Bonfire on the beach
+	\end{itemize}
+	
+	
+\end{enumerate}
+
+\pagebreak
+\section{Attendees}
+
+Who shows up to the party?
+
+\subsubsection{Groups}
+
+Groups tend to attend or form at parties.
+
+In any order, name a group that appears during the party. What is this group like?
+
+
+\subsubsection{Individuals}
+
+In any order, name an individual our wallflowers see at the party. Describe this character. What do they look like? What are they wearing?
+
 
 \pagebreak
 \section{Alias}
@@ -368,8 +408,31 @@ Yarrow
 Zenobia
 \end{verbatim}
 
+
 \pagebreak
-\section{Place Cards}
+\subsection{Wallflower Deck}
+
+Create the wallflower deck.
+
+\begin{enumerate}
+	\item Give each player a blank index card. 
+	
+	\item \cread{Write down your wallflower alias on one side - leaving the back blank.} 
+	
+	Example
+	
+	%\ccard{\\Wallflower Alias\\} 
+	
+	\ccard{\\Azalea\\}
+	
+	
+	\item Collect these index cards.
+	
+\end{enumerate}
+
+
+\pagebreak
+\subsection{Place Cards}
 
 Create place cards to help everyone keep track of who is playing each wallflower.
 \linebreak
@@ -393,87 +456,49 @@ Example
 \end{enumerate}
 
 \pagebreak
-\section{Wallflower Deck}
-
-Create the wallflower deck.
-
-\begin{enumerate}
-	\item Give each player a blank index card. 
-	
-	\item \cread{Write down your wallflower alias on one side - leaving the back blank.} 
-	
-	Example
-	
-	%\ccard{\\Wallflower Alias\\} 
-	
-	\ccard{\\Azalea\\}
 
 
-	
-	\item Collect these index cards.
-	
-\end{enumerate}
+
+\section{Feel}
+
+What is your wallflower feeling before the party?
+
+In any order, pick a feeling from the list below.
+
+\begin{verbatim}
+Angry
+Bored
+Curious
+Dread
+Excited
+\end{verbatim}
 
 \pagebreak
-\section{Setting}
-
-What type of party are we playing?
-
-
-\begin{enumerate}
-	\item Pick an age group for everyone at the party:
-		\begin{itemize}
-			\item High School
-			\item College
-		\end{itemize}
-	\item Pick a setting:
-		\begin{itemize}
-			\item House party at a wealthy house
-			\item Kegger in the woods
-			\item Bonfire on the beach
-		\end{itemize}
-	
-
-\end{enumerate}
-
-\pagebreak
-\section{Attendees}
-
-Who shows up to the party?
-
-We will each create one character our wallflowers  see at the party.
-
-In any order: Describe this character. What do they look like? What are they wearing?
-
-\pagebreak
-
-
 
 \section{Party}
 
-\subsection{Overview}
 The party takes place across five rounds. Each round, every player takes one turn.
 
 \vspace{0.4cm}
-The first four rounds: \clink{\vlinkrefsectionpartynormalround}
+In the first four rounds: \clink{\vlinkrefsectionpartynormalround}
 \vspace{0.4cm}
 \linebreak
-On your turn, narrate something at the party \ci{all} wallflowers notice. Then, another player will reveal their wallflower's impression.
+On your turn, narrate something \ci{all} wallflowers notice. Then, another player will reveal their wallflower's impression.
 
 Each round, every player will narrate once, and reveal their wallflower's impression once.
 
 \vspace{0.4cm}
-The final bloom round: \clink{\vlinkrefsectionpartybloom} 
+In the final bloom round: \clink{\vlinkrefsectionpartybloom} 
 \vspace{0.4cm}
 \linebreak
-All wallflowers will bloom - joining or leaving the party.
+All wallflowers will choose to join or leave the party.
 
 
 \pagebreak
-\subsection{Normal Round} \clinkref{\vlinkrefsectionpartynormalround}
+\section{Normal Round} \clinkref{\vlinkrefsectionpartynormalround}
 
 
-\subsubsection{At the beginning of each round}
+\subsection{Beginning each round}
 
 \begin{enumerate}
 	\item Collect the wallflower cards and shuffle the wallflower deck.
@@ -481,56 +506,34 @@ All wallflowers will bloom - joining or leaving the party.
 	\item The opening player reads the opening line for the round and narrates first.
 	\item Turns proceed clockwise.
 	
-	
 \end{enumerate}
 
 \subsubsection{Round Opening Lines}
 
 \begin{enumerate}
 	\renewcommand{\labelenumi}{\Roman{enumi}.}
-	\item It's early in the evening, not many people are here yet.
+	\item It's early in the evening; not many people are here yet.
 	
-	\item It's still early in the evening, people are arriving and socializing.
+	\item It's still early in the evening; people are arriving and socializing.
+
+	\item It's the middle of the night; the party is packed, and the music is up.
 	
-	\item It's the middle of the night, the party is packed, the music is up.
-	
-	\item It's still the middle of the night, the music and energy have shifted to be more relaxed.
+	\item It's later in the night; the music and energy have shifted to be more relaxed.
 \end{enumerate}
 
 \pagebreak
-\subsubsection{On Your Turn}
+\subsection{Each Turn}
+
 On your turn:
 
 \begin{enumerate}[leftmargin=*]
 	\item Narrate \clink{\vlinkrefsectionpartynarrate}
-	\item Read
-		\begin{itemize}
-			\item \cread{Our wallflowers all saw this. What is your wallflowers impression? What are they thinking? What are they feeling?}
-		\end{itemize}
-		
-	\item Pause
-		\begin{itemize}
-			\item Everyone think in silence about your wallflower's impression. Hold up your hand when you are ready.
-			\item Think about your own wallflower's impression.
-		\end{itemize}
-	
-	\item Draw
-		\begin{itemize}
-			\item Select a wallflower to reveal their thoughts.
-			\item The player who narrates should always be different from the player revealing their wallflower's impression.
-			\item Draw from the wallflower deck:
-			\begin{itemize}
-				\item If you are the second to last player, check the deck to make sure the final player does not draw their own card.
-				\item If you draw your own card, set it aside, draw again, then shuffle your own card back in.
-				\item If you are the last player and draw your own card - Oops! Narrate your own wallflower's impression.
-			\end{itemize}
-			\item Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
-		\end{itemize}
+
+	\item Draw \clink{\vlinkrefsectionpartydraw}
+
 
 \item Impression \clink{\vlinkrefsectionpartyimpression}
-	\begin{itemize}
-		\item Have the player who controls the drawn wallflower reveal their wallflower's impression.
-	\end{itemize}
+
 
 \end{enumerate}
 
@@ -567,7 +570,7 @@ Examples
 \begin{itemize}
 \renewcommand{\labelitemi}{\vsymbolexample}
 
-\item A buff guy with a huge smile on his face walks past. He's wearing a baseball cap with the high school Griffin mascot, a T-Shirt with that says "Rock Punks" in gigantic pink letters, and shorts paired with socks and sandals - showing off incredibly smooth legs.
+\item A buff guy with a huge smile on his face walks past. He's wearing a baseball cap with the high school Griffin mascot, a T-Shirt that says "Rock Punks" in gigantic pink letters, and shorts paired with socks and sandals - showing off incredibly smooth legs.
 
 \item A group of guys from the football team, squashed together on the white couch, are staring at the TV, and suddenly jump up cheering - a bowl of popcorn tumbles onto the floor, flinging popcorn everywhere.
 
@@ -578,12 +581,41 @@ Examples
 
 \end{itemize}
 
+
+\pagebreak
+\subsubsection{Draw} \clinkref{\vlinkrefsectionpartydraw}
+
+Select a wallflower to reveal their impression.
+
+The player who narrates should always be different from the player revealing their wallflower's impression.
+
+\begin{enumerate}
+	\item Draw from the wallflower deck:
+	\begin{itemize}
+		\item If you are the second to last player, check the deck to make sure the final player does not draw their own card.
+		\item If you draw your own wallflower card:
+			\begin{itemize}
+				
+				\item If you are the last player - Oops! Narrate your own wallflower's impression.
+				\item Otherwise, draw again, then shuffle your wallflower back in.
+			\end{itemize}
+		
+		
+	\end{itemize}
+	\item Hand the player their wallflower card, remove it from the deck for the rest of the round. Each wallflower reacts only once per round.
+\end{enumerate}
+
+
 \pagebreak
 \subsubsection{Impression} \clinkref{\vlinkrefsectionpartyimpression}
 
-Narrate your wallflower's impression in the 3rd person.
+A wallflowers impression is their reaction to what they observed.
 
-Describe what your wallflower pays attention to. What do they think? How do they feel about what they observed?
+\begin{itemize}
+	\item What do they notice? 
+	\item What do they think? 
+	\item What are they feeling?
+\end{itemize}
 
 Based on your wallflower's reaction do they want to join or leave the party?
 
@@ -610,7 +642,7 @@ Azalea wants to... join the party.
 
 
 \pagebreak
-\subsection{Bloom} \clinkref{\vlinkrefsectionpartybloom}
+\section{Bloom Round} \clinkref{\vlinkrefsectionpartybloom}
 
 This is the final round.
 
@@ -635,8 +667,8 @@ Have one player:
 \subsubsection{On your turn}
 
 \begin{enumerate}
-	\item Ask the other players if your wallflower joins or leaves the party. Why?
-	\item Decide if your wallflower joins or leaves the party.
+	\item Ask other players, Does <<wallflower>>  join or leave the party? Why?
+	\item Decide, Does your wallflower join or leave the party?
 	\item Narrate a short vignette of your wallflower joining or leaving the party. 
 	\begin{itemize}
 		\item Why did they stop being a wallflower?
@@ -700,6 +732,9 @@ No. Wallflowers are isolated and don't notice each other.
 
 Reason: This would contradict the design goal of the wallflowers observations revealing themselves.
 
+
+\pagebreak
+\section{Design Notes}
 
 \cquestion{Why narrate from the 3rd person?}
 

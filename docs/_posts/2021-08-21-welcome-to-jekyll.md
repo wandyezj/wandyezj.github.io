@@ -74,7 +74,9 @@ With the following installed, launch the server
 > bundle exec jekyll serve
 
 
-## Notes for Ubuntu 24
+## Install Notes
+
+### Notes for Ubuntu 24
 
 [Install WSL](https://learn.microsoft.com/en-us/windows/wsl/install)
 
@@ -90,7 +92,12 @@ Ubuntu 24 comes with ruby 3.
 > gpg --keyserver keyserver.ubuntu.com --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3 7D2BAF1CF37B13E2069D6956105BD0E739499BDB
 \curl -sSL https://get.rvm.io | bash -s stable
 
-> rvm install "ruby-3.3.5"
+RVM Install:
+
+- For WSL
+    > rvm install "ruby-3.3.5"
+- For Mac
+    > rvm install 3.3.1 --with-openssl-dir=$(brew --prefix openssl@3)
 
 > rvm list known
 
@@ -113,11 +120,25 @@ Ubuntu 24 comes with ruby 3.
 
 [Install Jekyll on Ubuntu](https://jekyllrb.com/docs/installation/ubuntu/)
 
-```text
-echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
-echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
-echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
-source ~/.bashrc
-```
+Install
+
+- For Wsl
+
+    ```text
+    echo '# Install Ruby Gems to ~/gems' >> ~/.bashrc
+    echo 'export GEM_HOME="$HOME/gems"' >> ~/.bashrc
+    echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.bashrc
+    source ~/.bashrc
+    ```
+
+- For Mac
+
+    ```text
+    echo '# Install Ruby Gems to ~/gems' >> ~/.zshrc
+    echo 'export GEM_HOME="$HOME/gems"' >> ~/.zshrc
+    echo 'export PATH="$HOME/gems/bin:$PATH"' >> ~/.zshrc
+    source ~/.zshrc
+    ```
+
 
 > gem install jekyll bundler

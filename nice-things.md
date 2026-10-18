@@ -226,6 +226,19 @@ Electric Induction Stove.
 
 - [silverette](https://silveretteusa.com/)
 
+
+### Children's Books
+
+- The Way Things Work by David Macaulay
+- Stephen Biesty's - Cross Sections
+- DK Eyewitness
+- DK A Street Through Time
+
+
+
 ## Random
 
 - Hagoromo Chalk
+
+
+
